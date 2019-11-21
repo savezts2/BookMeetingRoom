@@ -1,0 +1,116 @@
+<div class="wrapper">
+
+  <nav id="sidebar">
+    <div class="sidebar-header">
+      <h3>BookMeetingRoom</h3>
+    </div>
+    <div>
+      <button mat-button class="sidebar-menu" routerLink="/selectDate">SelectRoom & Time</button><br>
+    </div>
+    <div class="sidebar-emp">
+
+    </div>
+  </nav>
+
+  <div class="card-header" >
+    <button mat-raised-button class="botton-login" *ngIf="!(isLoggedIn | async)" (click)="authService.callDialog()">Login</button>
+    <button mat-raised-button class="botton-login" *ngIf="(isLoggedIn | async)" (click)="authService.logout()">LogOut</button>
+
+    <div class="form-data" *ngIf="!(isLoggedIn | async)">
+      <h1>Please Login !</h1>
+    </div>
+
+
+    <div *ngIf="(isLoggedIn | async)">
+      <br><br>
+      <h2 style="text-align:center;">{{this.roomnameandtime.roomname}}</h2>
+
+        <div style="margin-left:25%;">
+        <label>From Time :
+          <mat-form-field>
+            <mat-select [(ngModel)]="fromtimeSelect" disabled>
+              <mat-option value="08.00" >08.00</mat-option>
+              <mat-option value="09.00">09.00</mat-option>
+              <mat-option value="10.00">10.00</mat-option>
+              <mat-option value="11.00">11.00</mat-option>
+              <mat-option value="12.00">12.00</mat-option>
+              <mat-option value="13.00">13.00</mat-option>
+              <mat-option value="14.00">14.00</mat-option>
+              <mat-option value="15.00">15.00</mat-option>
+              <mat-option value="16.00">16.00</mat-option>
+              <mat-option value="17.00">17.00</mat-option>
+            </mat-select>
+      </mat-form-field>
+          </label>
+      &nbsp; &nbsp; &nbsp; &nbsp;
+      <label>To Time :
+        <mat-form-field>
+          <mat-select [(ngModel)]="totime">
+            <mat-option value="08.00" *ngIf="this.fromtimeSelect < '08.00' ? true : false">08.00</mat-option>
+            <mat-option value="09.00" *ngIf="this.fromtimeSelect < '09.00' ? true : false">09.00</mat-option>
+            <mat-option value="10.00" *ngIf="this.fromtimeSelect < '10.00' ? true : false">10.00</mat-option>
+            <mat-option value="11.00" *ngIf="this.fromtimeSelect < '11.00' ? true : false">11.00</mat-option>
+            <mat-option value="12.00" *ngIf="this.fromtimeSelect < '12.00' ? true : false">12.00</mat-option>
+            <mat-option value="13.00" *ngIf="this.fromtimeSelect < '13.00' ? true : false">13.00</mat-option>
+            <mat-option value="14.00" *ngIf="this.fromtimeSelect < '14.00' ? true : false">14.00</mat-option>
+            <mat-option value="15.00" *ngIf="this.fromtimeSelect < '15.00' ? true : false">15.00</mat-option>
+            <mat-option value="16.00" *ngIf="this.fromtimeSelect < '16.00' ? true : false">16.00</mat-option>
+            <mat-option value="17.00" *ngIf="this.fromtimeSelect < '17.00' ? true : false">17.00</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </label></div>
+
+
+      <div style="margin-left:22.5%;">
+      <label>Tel. Booking By :
+      <mat-form-field>
+
+      <input matInput [(ngModel)]="tel">
+
+      </mat-form-field>
+      </label>
+      </div>
+
+      <div style="margin-left:28%;">
+      <label>Topic :
+        <mat-form-field>
+
+          <input matInput [(ngModel)]="topic">
+
+        </mat-form-field>
+      </label>
+      </div>
+
+      <div style="margin-left:25.5%;">
+      <label>Attendees :
+        <mat-form-field>
+
+          <input matInput [(ngModel)]="atten">
+
+        </mat-form-field>
+      </label>
+      </div>
+
+      <div style="margin-left:27%;">
+      <label>Remark :
+        <mat-form-field>
+
+          <input matInput [(ngModel)]="remark">
+
+        </mat-form-field>
+      </label>
+      </div>
+      <br/>
+      <div style="text-align:center;">
+        <button mat-raised-button color="primary" (click) = "SubmitData()">Submit</button>
+        &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
+        <button mat-raised-button color="primary">Reset</button>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+</div>

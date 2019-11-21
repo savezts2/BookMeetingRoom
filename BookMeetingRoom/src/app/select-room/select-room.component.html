@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div class="wrapper">
+
+  <nav id="sidebar">
+    <div class="sidebar-header">
+      <h3>BookMeetingRoom</h3>
+    </div>
+    <div>
+      <button mat-button class="sidebar-menu" routerLink="/selectDate">SelectRoom & Time</button><br>
+    </div>
+
+
+    <div class="sidebar-emp">
+
+    </div>
+  </nav>
+
+  <div class="card-header" >
+    <button mat-raised-button class="botton-login" *ngIf="!(isLoggedIn | async)" (click)="authService.callDialog()">Login</button>
+    <button mat-raised-button class="botton-login" *ngIf="(isLoggedIn | async)" (click)="authService.logout()">LogOut</button>
+
+    <div class="form-data" *ngIf="!(isLoggedIn | async)">
+      <h1>Please Login !</h1>
+    </div>
+
+    <br/><br/>
+
+    <div *ngIf="(isLoggedIn | async)">
+      <br/>
+      <h1 align="center">SelectRoom & Time</h1>
+      <h2 style="margin-left:5%;">{{datefull.datefull}}</h2>
+
+
+
+
+       <table border="1" align="center" bordercolor=black bgcolor="black">
+
+
+         <tr height="50" class="greentable">
+           <th colspan ="11">Booking Meeting Room</th>
+         </tr>
+
+
+         <tr class="yellowtable">
+           <th rowspan="2" height="50"> Meeting Room</th><th colspan="10">Time</th>
+         </tr>
+
+         <tr class="yellowtable">
+           <td>08.00 น</td><td>09.00 น</td><td>10.00 น</td><td>11.00 น</td><td>12.00 น</td><td>13.00 น</td><td>14.00 น</td><td>15.00 น</td>
+           <td>16.00 น</td><td>17.00 น</td>
+         </tr>
+
+
+         <tr height="70" class="whitetable">
+           <th>
+             Office TSP Second Floor 2
+           </th>
+           <td *ngFor="let time of timeofweekOTSF2" [attr.colspan]="time.id" [attr.bgcolor] = "time.color" (click)="selectTable(time.roomname,time.time)">
+              <div *ngIf="time.showlabel">
+                    <font color="white">
+                    Booking by. {{time.byname}}<br>
+                    Attendees<br>
+                    Topic<br>
+                    </font>
+              </div>
+           </td>
+         </tr>
+
+
+         <tr height="70" class="whitetable">
+           <th>
+             Room1 WH7 Second Floor 2
+           </th>
+           <td *ngFor="let time of timeofweekR1WH7F2" [attr.colspan]="time.id" [attr.bgcolor] = "time.color" (click)="selectTable(time.roomname,time.time)">
+             <div *ngIf="time.showlabel">
+               <font color="white">
+                 Booking by.<br>
+                 Attendees<br>
+                 Topic<br>
+               </font>
+             </div>
+           </td>
+         </tr>
+
+         <tr height="70" class="whitetable">
+           <th>
+             Room2 WH7 Second Floor 2
+           </th>
+           <td *ngFor="let time of timeofweekR2WH7F2" [attr.colspan]="time.id" [attr.bgcolor] = "time.color" (click)="selectTable(time.roomname,time.time)">
+             <div *ngIf="time.showlabel">
+               <font color="white">
+                 Booking by.<br>
+                 Attendees<br>
+                 Topic<br>
+               </font>
+             </div>
+           </td>
+         </tr>
+
+         <tr height="70" class="whitetable">
+           <th>
+             WH2 Second Floor 2
+           </th>
+           <td *ngFor="let time of timeofweekWH2F2" [attr.colspan]="time.id" [attr.bgcolor] = "time.color" (click)="selectTable(time.roomname,time.time)">
+             <div *ngIf="time.showlabel">
+               <font color="white">
+                 Booking by.<br>
+                 Attendees<br>
+                 Topic<br>
+               </font>
+             </div>
+           </td>
+         </tr>
+
+
+       </table>
+
+
+     </div>
+
+   </div>
+
+ </div>
+
+ </body>
+
+
+ </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <tr height="70" class="whitetable"><td>Office TSP Second Floor 2</td><td (click)="selectTable('Office TSP Second Floor 2','08.00');"></td>
+           <td (click)="selectTable('Office TSP Second Floor 2','09.00');"></td><td (click)="selectTable('Office TSP Second Floor 2','10.00');"></td>
+           <td (click)="selectTable('Office TSP Second Floor 2','11.00');"></td><td (click)="selectTable('Office TSP Second Floor 2','12.00');"></td>
+           <td (click)="selectTable('Office TSP Second Floor 2','13.00');"></td><td (click)="selectTable('Office TSP Second Floor 2','14.00');"></td>
+           <td (click)="selectTable('Office TSP Second Floor 2','15.00');"></td><td (click)="selectTable('Office TSP Second Floor 2','16.00');"></td>
+           <td (click)="selectTable('Office TSP Second Floor 2','17.00');"></td>
+         </tr>
+
+         <tr height="70" class="whitetable"><td>Room1 WH7 Second Floor 2</td><td (click)="selectTable('Room1 WH7 Second Floor 2','08.00');"></td>
+           <td (click)="selectTable('Room1 WH7 Second Floor 2','09.00');"></td><td (click)="selectTable('Room1 WH7 Second Floor 2','10.00');"></td>
+           <td (click)="selectTable('Room1 WH7 Second Floor 2','11.00');"></td><td (click)="selectTable('Room1 WH7 Second Floor 2','12.00');"></td>
+           <td (click)="selectTable('Room1 WH7 Second Floor 2','13.00');"></td><td (click)="selectTable('Room1 WH7 Second Floor 2','14.00');"></td>
+           <td (click)="selectTable('Room1 WH7 Second Floor 2','15.00');"></td><td (click)="selectTable('Room1 WH7 Second Floor 2','16.00');"></td>
+           <td (click)="selectTable('Room1 WH7 Second Floor 2','17.00');"></td>
+         </tr>
+
+
+         <tr height="70" class="whitetable"><td>Room2 WH7 Second Floor 2</td><td (click)="selectTable('Room2 WH7 Second Floor 2','08.00');"></td>
+           <td (click)="selectTable('Room2 WH7 Second Floor 2','09.00');"></td><td (click)="selectTable('Room2 WH7 Second Floor 2','10.00');"></td>
+           <td (click)="selectTable('Room2 WH7 Second Floor 2','11.00');"></td><td (click)="selectTable('Room2 WH7 Second Floor 2','12.00');"></td>
+           <td (click)="selectTable('Room2 WH7 Second Floor 2','13.00');"></td><td (click)="selectTable('Room2 WH7 Second Floor 2','14.00');"></td>
+           <td (click)="selectTable('Room2 WH7 Second Floor 2','15.00');"></td><td (click)="selectTable('Room2 WH7 Second Floor 2','16.00');"></td>
+           <td (click)="selectTable('Room2 WH7 Second Floor 2','17.00');"></td>
+         </tr>
+
+
+         <tr height="70" class="whitetable"><td>WH2 Second Floor 2</td><td (click)="selectTable('WH2 Second Floor 2','08.00');"></td>
+           <td (click)="selectTable('WH2 Second Floor 2','09.00');"></td><td (click)="selectTable('WH2 Second Floor 2','10.00');"></td>
+           <td (click)="selectTable('WH2 Second Floor 2','11.00');"></td><td (click)="selectTable('WH2 Second Floor 2','12.00');"></td>
+           <td (click)="selectTable('WH2 Second Floor 2','13.00');"></td><td (click)="selectTable('WH2 Second Floor 2','14.00');"></td>
+           <td (click)="selectTable('WH2 Second Floor 2','15.00');"></td><td (click)="selectTable('WH2 Second Floor 2','16.00');"></td>
+           <td (click)="selectTable('WH2 Second Floor 2','17.00');"></td>
+         </tr> -->

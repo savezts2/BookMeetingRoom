@@ -1,0 +1,28 @@
+<html>
+<body>
+<br/><br/>
+<div style = "margin-left:20%;">
+  <label>ID :
+    <mat-form-field>
+
+      <input matInput [(ngModel)]="id">
+
+    </mat-form-field>
+  </label>
+</div>
+
+<div style = "margin-left:5%;">
+  <label>Password :
+    <mat-form-field>
+
+      <input matInput  [(ngModel)]="password" type="password">
+
+    </mat-form-field>
+  </label>
+</div>
+
+<div align="center">
+<button mat-raised-button color="accent" (click)="login()">Login</button>&nbsp;&nbsp;&nbsp;<button mat-raised-button color="accent" (click)="onNoClick()">Cancel</button>
+</div>
+</body>
+</html>
