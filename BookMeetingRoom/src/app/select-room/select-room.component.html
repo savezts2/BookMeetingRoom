@@ -60,9 +60,12 @@
            <td *ngFor="let time of timeofweekOTSF2" [attr.colspan]="time.id" [attr.bgcolor] = "time.color" (click)="selectTable(time.roomname,time.time)">
               <div *ngIf="time.showlabel">
                     <font color="white">
-                    Booking by. {{time.byname}}<br>
-                    Attendees<br>
-                    Topic<br>
+                    Booking by: {{time.byname}}<br>
+                    Attendees: {{time.atten}}<br>
+                      Topic: {{time.topic}}<br>
+                      <div *ngIf="time.showremark">
+                        Remark: {{time.remark}}
+                      </div>
                     </font>
               </div>
            </td>
@@ -76,9 +79,12 @@
            <td *ngFor="let time of timeofweekR1WH7F2" [attr.colspan]="time.id" [attr.bgcolor] = "time.color" (click)="selectTable(time.roomname,time.time)">
              <div *ngIf="time.showlabel">
                <font color="white">
-                 Booking by.<br>
-                 Attendees<br>
-                 Topic<br>
+                 Booking by: {{time.byname}}<br>
+                 Attendees: {{time.atten}}<br>
+                 Topic: {{time.topic}}<br>
+                 <div *ngIf="time.showremark">
+                   Remark: {{time.remark}}
+                 </div>
                </font>
              </div>
            </td>
@@ -91,9 +97,12 @@
            <td *ngFor="let time of timeofweekR2WH7F2" [attr.colspan]="time.id" [attr.bgcolor] = "time.color" (click)="selectTable(time.roomname,time.time)">
              <div *ngIf="time.showlabel">
                <font color="white">
-                 Booking by.<br>
-                 Attendees<br>
-                 Topic<br>
+                 Booking by: {{time.byname}}<br>
+                 Attendees: {{time.atten}}<br>
+                 Topic: {{time.topic}}<br>
+                 <div *ngIf="time.showremark">
+                   Remark: {{time.remark}}
+                 </div>
                </font>
              </div>
            </td>
@@ -106,9 +115,12 @@
            <td *ngFor="let time of timeofweekWH2F2" [attr.colspan]="time.id" [attr.bgcolor] = "time.color" (click)="selectTable(time.roomname,time.time)">
              <div *ngIf="time.showlabel">
                <font color="white">
-                 Booking by.<br>
-                 Attendees<br>
-                 Topic<br>
+                 Booking by: {{time.byname}}<br>
+                 Attendees: {{time.atten}}<br>
+                 Topic: {{time.topic}}<br>
+                 <div *ngIf="time.showremark">
+                   Remark: {{time.remark}}
+                 </div>
                </font>
              </div>
            </td>

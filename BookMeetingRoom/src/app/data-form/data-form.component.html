@@ -17,6 +17,7 @@
     <button mat-raised-button class="botton-login" *ngIf="(isLoggedIn | async)" (click)="authService.logout()">LogOut</button>
 
     <div class="form-data" *ngIf="!(isLoggedIn | async)">
+      <br/>
       <h1>Please Login !</h1>
     </div>
 
@@ -46,16 +47,16 @@
       <label>To Time :
         <mat-form-field>
           <mat-select [(ngModel)]="totime">
-            <mat-option value="08.00" *ngIf="this.fromtimeSelect < '08.00' ? true : false">08.00</mat-option>
-            <mat-option value="09.00" *ngIf="this.fromtimeSelect < '09.00' ? true : false">09.00</mat-option>
-            <mat-option value="10.00" *ngIf="this.fromtimeSelect < '10.00' ? true : false">10.00</mat-option>
-            <mat-option value="11.00" *ngIf="this.fromtimeSelect < '11.00' ? true : false">11.00</mat-option>
-            <mat-option value="12.00" *ngIf="this.fromtimeSelect < '12.00' ? true : false">12.00</mat-option>
-            <mat-option value="13.00" *ngIf="this.fromtimeSelect < '13.00' ? true : false">13.00</mat-option>
-            <mat-option value="14.00" *ngIf="this.fromtimeSelect < '14.00' ? true : false">14.00</mat-option>
-            <mat-option value="15.00" *ngIf="this.fromtimeSelect < '15.00' ? true : false">15.00</mat-option>
-            <mat-option value="16.00" *ngIf="this.fromtimeSelect < '16.00' ? true : false">16.00</mat-option>
-            <mat-option value="17.00" *ngIf="this.fromtimeSelect < '17.00' ? true : false">17.00</mat-option>
+            <mat-option value="08.00" *ngIf="this.fromtimeSelect <= '08.00' ? true : false">08.00</mat-option>
+            <mat-option value="09.00" *ngIf="this.fromtimeSelect <= '09.00' ? true : false">09.00</mat-option>
+            <mat-option value="10.00" *ngIf="this.fromtimeSelect <= '10.00' ? true : false">10.00</mat-option>
+            <mat-option value="11.00" *ngIf="this.fromtimeSelect <= '11.00' ? true : false">11.00</mat-option>
+            <mat-option value="12.00" *ngIf="this.fromtimeSelect <= '12.00' ? true : false">12.00</mat-option>
+            <mat-option value="13.00" *ngIf="this.fromtimeSelect <= '13.00' ? true : false">13.00</mat-option>
+            <mat-option value="14.00" *ngIf="this.fromtimeSelect <= '14.00' ? true : false">14.00</mat-option>
+            <mat-option value="15.00" *ngIf="this.fromtimeSelect <= '15.00' ? true : false">15.00</mat-option>
+            <mat-option value="16.00" *ngIf="this.fromtimeSelect <= '16.00' ? true : false">16.00</mat-option>
+            <mat-option value="17.00" *ngIf="this.fromtimeSelect <= '17.00' ? true : false">17.00</mat-option>
           </mat-select>
         </mat-form-field>
       </label></div>
@@ -65,8 +66,7 @@
       <label>Tel. Booking By :
       <mat-form-field>
 
-      <input matInput [(ngModel)]="tel">
-
+      <input matInput [(ngModel)]="tel" maxlength="10">
       </mat-form-field>
       </label>
       </div>
@@ -104,7 +104,7 @@
       <div style="text-align:center;">
         <button mat-raised-button color="primary" (click) = "SubmitData()">Submit</button>
         &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
-        <button mat-raised-button color="primary">Reset</button>
+        <button mat-raised-button color="primary" (click)="reset()">Reset</button>
       </div>
 
     </div>

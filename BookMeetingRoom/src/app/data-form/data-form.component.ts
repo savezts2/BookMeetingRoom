@@ -18,11 +18,11 @@ isLoggedIn : Observable<boolean>;
 
 roomnameandtime:any={}
 fromtimeSelect : '';
-totime : '' ;
-tel : '';
-topic : '';
-atten : '';
-remark: '';
+totime : null ;
+tel : null;
+topic : null;
+atten : null;
+remark: null;
 roomname: '' ;
 date: '';
 userid3: String;
@@ -56,7 +56,19 @@ SubmitData(){
     //console.log(this.topic);
     //console.log(this.atten);
     //console.log(this.remark);
-
+      if(this.totime == null){
+        alert("Please Check field To time");
+      }
+      else if(this.tel == null){
+        alert("Please Check field Tel. Booking By");
+      }
+      else if(this.topic == null){
+        alert("Please Check field Topic");
+      }
+      else if(this.atten == null){
+        alert("Please Check field Attendees");
+      }
+     else{
      this.http.post(this.API + '/'+this.userid3 +'/' + this.fromtimeSelect +'/' + this.totime + '/' + this.tel
      + '/' + this.topic+ '/' + this.atten+ '/' + this.remark+ '/' + this.roomname+ '/' + this.date,{})
                              .subscribe(
@@ -70,11 +82,15 @@ SubmitData(){
                                }
                               );
 
-
+      }
    }
 
 reset(){
-
+    this.totime = null ;
+    this.tel = null;
+    this.topic = null;
+    this.atten = null;
+    this.remark = null;
 }
 
 }

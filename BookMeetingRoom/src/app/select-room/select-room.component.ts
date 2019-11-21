@@ -51,55 +51,55 @@ export class SelectRoomComponent implements OnInit {
 
 
   timeofweekOTSF2 = [
-    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false, byname: ''},
-    {roomid : 1,time:'09.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false, byname: ''},
-    {roomid : 2,time:'10.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false, byname: ''},
-    {roomid : 3,time:'11.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false, byname: ''},
-    {roomid : 4,time:'12.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false, byname: ''},
-    {roomid : 5,time:'13.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false, byname: ''},
-    {roomid : 6,time:'14.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false, byname: ''},
-    {roomid : 7,time:'15.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false, byname: ''},
-    {roomid : 8,time:'16.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false, byname: ''},
-    {roomid : 9,time:'17.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false, byname: ''}
+    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
+    {roomid : 1,time:'09.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
+    {roomid : 2,time:'10.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
+    {roomid : 3,time:'11.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
+    {roomid : 4,time:'12.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
+    {roomid : 5,time:'13.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
+    {roomid : 6,time:'14.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
+    {roomid : 7,time:'15.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
+    {roomid : 8,time:'16.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
+    {roomid : 9,time:'17.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false}
   ];
 
   timeofweekR1WH7F2 = [
-    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false, byname: ''},
-    {roomid : 1,time:'09.00',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false, byname: ''},
-    {roomid : 2,time:'10.00',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false, byname: ''},
-    {roomid : 3,time:'11.00',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false, byname: ''},
-    {roomid : 4,time:'12.00',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false, byname: ''},
-    {roomid : 5,time:'13.00',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false, byname: ''},
-    {roomid : 6,time:'14.00',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false, byname: ''},
-    {roomid : 7,time:'15.00',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false, byname: ''},
-    {roomid : 8,time:'16.00',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false, byname: ''},
-    {roomid : 9,time:'17.00',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false, byname: ''}
+    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
+    {roomid : 1,time:'09.00',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
+    {roomid : 2,time:'10.00',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
+    {roomid : 3,time:'11.00',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
+    {roomid : 4,time:'12.00',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
+    {roomid : 5,time:'13.00',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
+    {roomid : 6,time:'14.00',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
+    {roomid : 7,time:'15.00',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
+    {roomid : 8,time:'16.00',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
+    {roomid : 9,time:'17.00',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false}
   ];
 
   timeofweekR2WH7F2 = [
-    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false, byname: ''},
-    {roomid : 1,time:'09.00',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false, byname: ''},
-    {roomid : 2,time:'10.00',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false, byname: ''},
-    {roomid : 3,time:'11.00',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false, byname: ''},
-    {roomid : 4,time:'12.00',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false, byname: ''},
-    {roomid : 5,time:'13.00',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false, byname: ''},
-    {roomid : 6,time:'14.00',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false, byname: ''},
-    {roomid : 7,time:'15.00',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false, byname: ''},
-    {roomid : 8,time:'16.00',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false, byname: ''},
-    {roomid : 9,time:'17.00',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false, byname: ''}
+    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
+    {roomid : 1,time:'09.00',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
+    {roomid : 2,time:'10.00',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
+    {roomid : 3,time:'11.00',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
+    {roomid : 4,time:'12.00',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
+    {roomid : 5,time:'13.00',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
+    {roomid : 6,time:'14.00',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
+    {roomid : 7,time:'15.00',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
+    {roomid : 8,time:'16.00',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
+    {roomid : 9,time:'17.00',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false}
   ];
 
   timeofweekWH2F2 = [
-    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false, byname: ''},
-    {roomid : 1,time:'09.00',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false, byname: ''},
-    {roomid : 2,time:'10.00',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false, byname: ''},
-    {roomid : 3,time:'11.00',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false, byname: ''},
-    {roomid : 4,time:'12.00',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false, byname: ''},
-    {roomid : 5,time:'13.00',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false, byname: ''},
-    {roomid : 6,time:'14.00',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false, byname: ''},
-    {roomid : 7,time:'15.00',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false, byname: ''},
-    {roomid : 8,time:'16.00',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false, byname: ''},
-    {roomid : 9,time:'17.00',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false, byname: ''}
+    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
+    {roomid : 1,time:'09.00',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
+    {roomid : 2,time:'10.00',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
+    {roomid : 3,time:'11.00',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
+    {roomid : 4,time:'12.00',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
+    {roomid : 5,time:'13.00',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
+    {roomid : 6,time:'14.00',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
+    {roomid : 7,time:'15.00',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
+    {roomid : 8,time:'16.00',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
+    {roomid : 9,time:'17.00',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false}
   ];
 
 
@@ -115,15 +115,21 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekOTSF2[j].color = 'red' ;
               this.timeofweekOTSF2[j].showlabel = true;
               this.timeofweekOTSF2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekOTSF2[j].topic = this.report[i].bookMeetingRoom.topic ;
               if(this.timeofweekOTSF2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2[j].id   ; k++){
                       this.timeofweekOTSF2.splice(this.counting,1);
                    }
               }
-              break;
+              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekOTSF2[j].showremark = true;
+                this.timeofweekOTSF2[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
             }
           }
+
         }
         else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2'){
           for(let j =0 ; j < this.timeofweekOTSF2.length; j++){
@@ -132,13 +138,18 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekOTSF2[j].color = 'red' ;
               this.timeofweekOTSF2[j].showlabel = true;
               this.timeofweekOTSF2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekOTSF2[j].topic = this.report[i].bookMeetingRoom.topic ;
               if(this.timeofweekOTSF2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2[j].id   ; k++){
                       this.timeofweekOTSF2.splice(this.counting,1);
                    }
               }
-              break;
+               if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekOTSF2[j].showremark = true;
+                this.timeofweekOTSF2[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
             }
           }
         }
@@ -149,13 +160,18 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekOTSF2[j].color = 'red' ;
               this.timeofweekOTSF2[j].showlabel = true;
               this.timeofweekOTSF2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekOTSF2[j].topic = this.report[i].bookMeetingRoom.topic ;
               if(this.timeofweekOTSF2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2[j].id   ; k++){
                       this.timeofweekOTSF2.splice(this.counting,1);
                    }
               }
-              break;
+               if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekOTSF2[j].showremark = true;
+                this.timeofweekOTSF2[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
             }
           }
         }
@@ -166,13 +182,18 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekOTSF2[j].color = 'red' ;
               this.timeofweekOTSF2[j].showlabel = true;
               this.timeofweekOTSF2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekOTSF2[j].topic = this.report[i].bookMeetingRoom.topic ;
               if(this.timeofweekOTSF2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2[j].id   ; k++){
                       this.timeofweekOTSF2.splice(this.counting,1);
                    }
               }
-              break;
+               if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekOTSF2[j].showremark = true;
+                this.timeofweekOTSF2[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
             }
           }
         }
@@ -183,13 +204,18 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekOTSF2[j].color = 'red' ;
               this.timeofweekOTSF2[j].showlabel = true;
               this.timeofweekOTSF2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekOTSF2[j].topic = this.report[i].bookMeetingRoom.topic ;
               if(this.timeofweekOTSF2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2[j].id   ; k++){
                       this.timeofweekOTSF2.splice(this.counting,1);
                    }
               }
-              break;
+               if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekOTSF2[j].showremark = true;
+                this.timeofweekOTSF2[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
             }
           }
         }
@@ -200,13 +226,18 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekOTSF2[j].color = 'red' ;
               this.timeofweekOTSF2[j].showlabel = true;
               this.timeofweekOTSF2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekOTSF2[j].topic = this.report[i].bookMeetingRoom.topic ;
               if(this.timeofweekOTSF2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2[j].id   ; k++){
                       this.timeofweekOTSF2.splice(this.counting,1);
                    }
               }
-              break;
+               if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekOTSF2[j].showremark = true;
+                this.timeofweekOTSF2[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
             }
           }
         }
@@ -217,13 +248,18 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekOTSF2[j].color = 'red' ;
               this.timeofweekOTSF2[j].showlabel = true;
               this.timeofweekOTSF2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekOTSF2[j].topic = this.report[i].bookMeetingRoom.topic ;
               if(this.timeofweekOTSF2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2[j].id   ; k++){
                       this.timeofweekOTSF2.splice(this.counting,1);
                    }
               }
-              break;
+               if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekOTSF2[j].showremark = true;
+                this.timeofweekOTSF2[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
             }
           }
         }
@@ -234,13 +270,18 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekOTSF2[j].color = 'red' ;
               this.timeofweekOTSF2[j].showlabel = true;
               this.timeofweekOTSF2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekOTSF2[j].topic = this.report[i].bookMeetingRoom.topic ;
               if(this.timeofweekOTSF2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2[j].id   ; k++){
                       this.timeofweekOTSF2.splice(this.counting,1);
                    }
               }
-              break;
+               if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekOTSF2[j].showremark = true;
+                this.timeofweekOTSF2[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
             }
           }
         }
@@ -251,13 +292,18 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekOTSF2[j].color = 'red' ;
               this.timeofweekOTSF2[j].showlabel = true;
               this.timeofweekOTSF2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekOTSF2[j].topic = this.report[i].bookMeetingRoom.topic ;
               if(this.timeofweekOTSF2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2[j].id   ; k++){
                       this.timeofweekOTSF2.splice(this.counting,1);
                    }
               }
-              break;
+               if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekOTSF2[j].showremark = true;
+                this.timeofweekOTSF2[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
             }
           }
         }
@@ -268,13 +314,18 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekOTSF2[j].color = 'red' ;
               this.timeofweekOTSF2[j].showlabel = true;
               this.timeofweekOTSF2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekOTSF2[j].topic = this.report[i].bookMeetingRoom.topic ;
               if(this.timeofweekOTSF2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2[j].id   ; k++){
                       this.timeofweekOTSF2.splice(this.counting,1);
                    }
               }
-              break;
+               if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekOTSF2[j].showremark = true;
+                this.timeofweekOTSF2[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
             }
           }
         }
@@ -289,13 +340,18 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekR1WH7F2[j].color = 'red' ;
               this.timeofweekR1WH7F2[j].showlabel = true;
               this.timeofweekR1WH7F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekR1WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekR1WH7F2[j].topic = this.report[i].bookMeetingRoom.topic ;
               if(this.timeofweekR1WH7F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekR1WH7F2[j].id   ; k++){
                       this.timeofweekR1WH7F2.splice(this.counting,1);
                    }
               }
-              break;
+               if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekR1WH7F2[j].showremark = true;
+                this.timeofweekR1WH7F2[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
             }
           }
         }
@@ -306,13 +362,18 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekR1WH7F2[j].color = 'red' ;
               this.timeofweekR1WH7F2[j].showlabel = true;
               this.timeofweekR1WH7F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekR1WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekR1WH7F2[j].topic = this.report[i].bookMeetingRoom.topic ;
               if(this.timeofweekR1WH7F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekR1WH7F2[j].id   ; k++){
                       this.timeofweekR1WH7F2.splice(this.counting,1);
                    }
               }
-              break;
+               if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekR1WH7F2[j].showremark = true;
+                this.timeofweekR1WH7F2[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
             }
           }
         }
@@ -323,13 +384,18 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekR1WH7F2[j].color = 'red' ;
               this.timeofweekR1WH7F2[j].showlabel = true;
               this.timeofweekR1WH7F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekR1WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekR1WH7F2[j].topic = this.report[i].bookMeetingRoom.topic ;
               if(this.timeofweekR1WH7F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekR1WH7F2[j].id   ; k++){
                       this.timeofweekR1WH7F2.splice(this.counting,1);
                    }
               }
-              break;
+               if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekR1WH7F2[j].showremark = true;
+                this.timeofweekR1WH7F2[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
             }
           }
         }
@@ -340,13 +406,18 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekR1WH7F2[j].color = 'red' ;
               this.timeofweekR1WH7F2[j].showlabel = true;
               this.timeofweekR1WH7F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekR1WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekR1WH7F2[j].topic = this.report[i].bookMeetingRoom.topic ;
               if(this.timeofweekR1WH7F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekR1WH7F2[j].id   ; k++){
                       this.timeofweekR1WH7F2.splice(this.counting,1);
                    }
               }
-              break;
+               if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekR1WH7F2[j].showremark = true;
+                this.timeofweekR1WH7F2[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
             }
           }
         }
@@ -357,13 +428,18 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekR1WH7F2[j].color = 'red' ;
               this.timeofweekR1WH7F2[j].showlabel = true;
               this.timeofweekR1WH7F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekR1WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekR1WH7F2[j].topic = this.report[i].bookMeetingRoom.topic ;
               if(this.timeofweekR1WH7F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekR1WH7F2[j].id   ; k++){
                       this.timeofweekR1WH7F2.splice(this.counting,1);
                    }
               }
-              break;
+               if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekR1WH7F2[j].showremark = true;
+                this.timeofweekR1WH7F2[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
             }
           }
         }
@@ -374,13 +450,18 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekR1WH7F2[j].color = 'red' ;
               this.timeofweekR1WH7F2[j].showlabel = true;
               this.timeofweekR1WH7F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekR1WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekR1WH7F2[j].topic = this.report[i].bookMeetingRoom.topic ;
               if(this.timeofweekR1WH7F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekR1WH7F2[j].id   ; k++){
                       this.timeofweekR1WH7F2.splice(this.counting,1);
                    }
               }
-              break;
+               if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekR1WH7F2[j].showremark = true;
+                this.timeofweekR1WH7F2[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
             }
           }
         }
@@ -391,13 +472,18 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekR1WH7F2[j].color = 'red' ;
               this.timeofweekR1WH7F2[j].showlabel = true;
               this.timeofweekR1WH7F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekR1WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekR1WH7F2[j].topic = this.report[i].bookMeetingRoom.topic ;
               if(this.timeofweekR1WH7F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekR1WH7F2[j].id   ; k++){
                       this.timeofweekR1WH7F2.splice(this.counting,1);
                    }
               }
-              break;
+               if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekR1WH7F2[j].showremark = true;
+                this.timeofweekR1WH7F2[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
             }
           }
         }
@@ -408,13 +494,18 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekR1WH7F2[j].color = 'red' ;
               this.timeofweekR1WH7F2[j].showlabel = true;
               this.timeofweekR1WH7F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekR1WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekR1WH7F2[j].topic = this.report[i].bookMeetingRoom.topic ;
               if(this.timeofweekR1WH7F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekR1WH7F2[j].id   ; k++){
                       this.timeofweekR1WH7F2.splice(this.counting,1);
                    }
               }
-              break;
+               if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekR1WH7F2[j].showremark = true;
+                this.timeofweekR1WH7F2[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
             }
           }
         }
@@ -425,13 +516,18 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekR1WH7F2[j].color = 'red' ;
               this.timeofweekR1WH7F2[j].showlabel = true;
               this.timeofweekR1WH7F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekR1WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekR1WH7F2[j].topic = this.report[i].bookMeetingRoom.topic ;
               if(this.timeofweekR1WH7F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekR1WH7F2[j].id   ; k++){
                       this.timeofweekR1WH7F2.splice(this.counting,1);
                    }
               }
-              break;
+               if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekR1WH7F2[j].showremark = true;
+                this.timeofweekR1WH7F2[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
             }
           }
         }
@@ -442,13 +538,18 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekR1WH7F2[j].color = 'red' ;
               this.timeofweekR1WH7F2[j].showlabel = true;
               this.timeofweekR1WH7F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekR1WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekR1WH7F2[j].topic = this.report[i].bookMeetingRoom.topic ;
               if(this.timeofweekR1WH7F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekR1WH7F2[j].id   ; k++){
                       this.timeofweekR1WH7F2.splice(this.counting,1);
                    }
               }
-              break;
+               if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekR1WH7F2[j].showremark = true;
+                this.timeofweekR1WH7F2[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
             }
           }
         }
@@ -465,13 +566,18 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekR2WH7F2[j].color = 'red' ;
               this.timeofweekR2WH7F2[j].showlabel = true;
               this.timeofweekR2WH7F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekR2WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekR2WH7F2[j].topic = this.report[i].bookMeetingRoom.topic ;
               if(this.timeofweekR2WH7F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekR2WH7F2[j].id   ; k++){
                       this.timeofweekR2WH7F2.splice(this.counting,1);
                    }
               }
-              break;
+               if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekR2WH7F2[j].showremark = true;
+                this.timeofweekR2WH7F2[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
             }
           }
         }
@@ -482,13 +588,18 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekR2WH7F2[j].color = 'red' ;
               this.timeofweekR2WH7F2[j].showlabel = true;
               this.timeofweekR2WH7F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekR2WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekR2WH7F2[j].topic = this.report[i].bookMeetingRoom.topic ;
               if(this.timeofweekR2WH7F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekR2WH7F2[j].id   ; k++){
                       this.timeofweekR2WH7F2.splice(this.counting,1);
                    }
               }
-              break;
+               if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekR2WH7F2[j].showremark = true;
+                this.timeofweekR2WH7F2[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
             }
           }
         }
@@ -499,13 +610,18 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekR2WH7F2[j].color = 'red' ;
               this.timeofweekR2WH7F2[j].showlabel = true;
               this.timeofweekR2WH7F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekR2WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekR2WH7F2[j].topic = this.report[i].bookMeetingRoom.topic ;
               if(this.timeofweekR2WH7F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekR2WH7F2[j].id   ; k++){
                       this.timeofweekR2WH7F2.splice(this.counting,1);
                    }
               }
-              break;
+               if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekR2WH7F2[j].showremark = true;
+                this.timeofweekR2WH7F2[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
             }
           }
         }
@@ -516,13 +632,18 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekR2WH7F2[j].color = 'red' ;
               this.timeofweekR2WH7F2[j].showlabel = true;
               this.timeofweekR2WH7F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekR2WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekR2WH7F2[j].topic = this.report[i].bookMeetingRoom.topic ;
               if(this.timeofweekR2WH7F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekR2WH7F2[j].id   ; k++){
                       this.timeofweekR2WH7F2.splice(this.counting,1);
                    }
               }
-              break;
+               if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekR2WH7F2[j].showremark = true;
+                this.timeofweekR2WH7F2[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
             }
           }
         }
@@ -533,13 +654,18 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekR2WH7F2[j].color = 'red' ;
               this.timeofweekR2WH7F2[j].showlabel = true;
               this.timeofweekR2WH7F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekR2WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekR2WH7F2[j].topic = this.report[i].bookMeetingRoom.topic ;
               if(this.timeofweekR2WH7F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekR2WH7F2[j].id   ; k++){
                       this.timeofweekR2WH7F2.splice(this.counting,1);
                    }
               }
-              break;
+               if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekR2WH7F2[j].showremark = true;
+                this.timeofweekR2WH7F2[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
             }
           }
         }
@@ -550,13 +676,18 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekR2WH7F2[j].color = 'red' ;
               this.timeofweekR2WH7F2[j].showlabel = true;
               this.timeofweekR2WH7F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekR2WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekR2WH7F2[j].topic = this.report[i].bookMeetingRoom.topic ;
               if(this.timeofweekR2WH7F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekR2WH7F2[j].id   ; k++){
                       this.timeofweekR2WH7F2.splice(this.counting,1);
                    }
               }
-              break;
+               if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekR2WH7F2[j].showremark = true;
+                this.timeofweekR2WH7F2[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
             }
           }
         }
@@ -567,13 +698,18 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekR2WH7F2[j].color = 'red' ;
               this.timeofweekR2WH7F2[j].showlabel = true;
               this.timeofweekR2WH7F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekR2WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekR2WH7F2[j].topic = this.report[i].bookMeetingRoom.topic ;
               if(this.timeofweekR2WH7F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekR2WH7F2[j].id   ; k++){
                       this.timeofweekR2WH7F2.splice(this.counting,1);
                    }
               }
-              break;
+               if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekR2WH7F2[j].showremark = true;
+                this.timeofweekR2WH7F2[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
             }
           }
         }
@@ -584,13 +720,18 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekR2WH7F2[j].color = 'red' ;
               this.timeofweekR2WH7F2[j].showlabel = true;
               this.timeofweekR2WH7F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekR2WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekR2WH7F2[j].topic = this.report[i].bookMeetingRoom.topic ;
               if(this.timeofweekR2WH7F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekR2WH7F2[j].id   ; k++){
                       this.timeofweekR2WH7F2.splice(this.counting,1);
                    }
               }
-              break;
+               if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekR2WH7F2[j].showremark = true;
+                this.timeofweekR2WH7F2[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
             }
           }
         }
@@ -601,13 +742,18 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekR2WH7F2[j].color = 'red' ;
               this.timeofweekR2WH7F2[j].showlabel = true;
               this.timeofweekR2WH7F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekR2WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekR2WH7F2[j].topic = this.report[i].bookMeetingRoom.topic ;
               if(this.timeofweekR2WH7F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekR2WH7F2[j].id   ; k++){
                       this.timeofweekR2WH7F2.splice(this.counting,1);
                    }
               }
-              break;
+              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekR2WH7F2[j].showremark = true;
+                this.timeofweekR2WH7F2[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
             }
           }
         }
@@ -618,13 +764,18 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekR2WH7F2[j].color = 'red' ;
               this.timeofweekR2WH7F2[j].showlabel = true;
               this.timeofweekR2WH7F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekR2WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekR2WH7F2[j].topic = this.report[i].bookMeetingRoom.topic ;
               if(this.timeofweekR2WH7F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekR2WH7F2[j].id   ; k++){
                       this.timeofweekR2WH7F2.splice(this.counting,1);
                    }
               }
-              break;
+               if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekR2WH7F2[j].showremark = true;
+                this.timeofweekR2WH7F2[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
             }
           }
         }
@@ -638,13 +789,18 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekWH2F2[j].color = 'red' ;
               this.timeofweekWH2F2[j].showlabel = true;
               this.timeofweekWH2F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekWH2F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekWH2F2[j].topic = this.report[i].bookMeetingRoom.topic ;
               if(this.timeofweekWH2F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekWH2F2[j].id   ; k++){
                       this.timeofweekWH2F2.splice(this.counting,1);
                    }
               }
-              break;
+               if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekWH2F2[j].showremark = true;
+                this.timeofweekWH2F2[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
             }
           }
         }
@@ -656,13 +812,18 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekWH2F2[j].color = 'red' ;
               this.timeofweekWH2F2[j].showlabel = true;
               this.timeofweekWH2F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekWH2F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekWH2F2[j].topic = this.report[i].bookMeetingRoom.topic ;
               if(this.timeofweekWH2F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekWH2F2[j].id   ; k++){
                       this.timeofweekWH2F2.splice(this.counting,1);
                    }
               }
-              break;
+              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekWH2F2[j].showremark = true;
+                this.timeofweekWH2F2[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
             }
           }
         }
@@ -673,13 +834,18 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekWH2F2[j].color = 'red' ;
               this.timeofweekWH2F2[j].showlabel = true;
               this.timeofweekWH2F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekWH2F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekWH2F2[j].topic = this.report[i].bookMeetingRoom.topic ;
               if(this.timeofweekWH2F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekWH2F2[j].id   ; k++){
                       this.timeofweekWH2F2.splice(this.counting,1);
                    }
               }
-              break;
+              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekWH2F2[j].showremark = true;
+                this.timeofweekWH2F2[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
             }
           }
         }
@@ -690,13 +856,18 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekWH2F2[j].color = 'red' ;
               this.timeofweekWH2F2[j].showlabel = true;
               this.timeofweekWH2F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekWH2F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekWH2F2[j].topic = this.report[i].bookMeetingRoom.topic ;
               if(this.timeofweekWH2F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekWH2F2[j].id   ; k++){
                       this.timeofweekWH2F2.splice(this.counting,1);
                    }
               }
-              break;
+              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekWH2F2[j].showremark = true;
+                this.timeofweekWH2F2[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
             }
           }
         }
@@ -707,13 +878,18 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekWH2F2[j].color = 'red' ;
               this.timeofweekWH2F2[j].showlabel = true;
               this.timeofweekWH2F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekWH2F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekWH2F2[j].topic = this.report[i].bookMeetingRoom.topic ;
               if(this.timeofweekWH2F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekWH2F2[j].id   ; k++){
                       this.timeofweekWH2F2.splice(this.counting,1);
                    }
               }
-              break;
+              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekWH2F2[j].showremark = true;
+                this.timeofweekWH2F2[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
             }
           }
         }
@@ -724,13 +900,18 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekWH2F2[j].color = 'red' ;
               this.timeofweekWH2F2[j].showlabel = true;
               this.timeofweekWH2F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekWH2F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekWH2F2[j].topic = this.report[i].bookMeetingRoom.topic ;
               if(this.timeofweekWH2F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekWH2F2[j].id   ; k++){
                       this.timeofweekWH2F2.splice(this.counting,1);
                    }
               }
-              break;
+              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekWH2F2[j].showremark = true;
+                this.timeofweekWH2F2[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
             }
           }
         }
@@ -741,13 +922,18 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekWH2F2[j].color = 'red' ;
               this.timeofweekWH2F2[j].showlabel = true;
               this.timeofweekWH2F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekWH2F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekWH2F2[j].topic = this.report[i].bookMeetingRoom.topic ;
               if(this.timeofweekWH2F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekWH2F2[j].id   ; k++){
                       this.timeofweekWH2F2.splice(this.counting,1);
                    }
               }
-              break;
+              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekWH2F2[j].showremark = true;
+                this.timeofweekWH2F2[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
             }
           }
         }
@@ -758,13 +944,18 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekWH2F2[j].color = 'red' ;
               this.timeofweekWH2F2[j].showlabel = true;
               this.timeofweekWH2F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekWH2F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekWH2F2[j].topic = this.report[i].bookMeetingRoom.topic ;
               if(this.timeofweekWH2F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekWH2F2[j].id   ; k++){
                       this.timeofweekWH2F2.splice(this.counting,1);
                    }
               }
-              break;
+              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekWH2F2[j].showremark = true;
+                this.timeofweekWH2F2[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
             }
           }
         }
@@ -775,13 +966,18 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekWH2F2[j].color = 'red' ;
               this.timeofweekWH2F2[j].showlabel = true;
               this.timeofweekWH2F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekWH2F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekWH2F2[j].topic = this.report[i].bookMeetingRoom.topic ;
               if(this.timeofweekWH2F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekWH2F2[j].id   ; k++){
                       this.timeofweekWH2F2.splice(this.counting,1);
                    }
               }
-              break;
+              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekWH2F2[j].showremark = true;
+                this.timeofweekWH2F2[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
             }
           }
         }
@@ -792,13 +988,18 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekWH2F2[j].color = 'red' ;
               this.timeofweekWH2F2[j].showlabel = true;
               this.timeofweekWH2F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekWH2F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekWH2F2[j].topic = this.report[i].bookMeetingRoom.topic ;
               if(this.timeofweekWH2F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekWH2F2[j].id   ; k++){
                       this.timeofweekWH2F2.splice(this.counting,1);
                    }
               }
-              break;
+              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekWH2F2[j].showremark = true;
+                this.timeofweekWH2F2[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
             }
           }
         }
