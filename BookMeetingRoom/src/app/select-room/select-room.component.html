@@ -60,7 +60,7 @@
            <th>
              Office TSP Second Floor 2
            </th>
-           <td *ngFor="let time of timeofweekOTSF2" [attr.colspan]="time.id" [attr.bgcolor] = "time.color" (click)="selectTable(time.roomname,time.time)">
+           <td *ngFor="let time of timeofweekOTSF2" [attr.colspan]="time.id" [attr.bgcolor] = "time.color" (click)="time.checkReservations ? Reserved() : selectTable(time.roomname,time.time)">
               <div *ngIf="time.showlabel">
                     <font color="white">
                     Booking by: {{time.byname}}<br>

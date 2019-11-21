@@ -51,58 +51,61 @@ export class SelectRoomComponent implements OnInit {
 
 
   timeofweekOTSF2 = [
-    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
-    {roomid : 1,time:'09.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
-    {roomid : 2,time:'10.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
-    {roomid : 3,time:'11.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
-    {roomid : 4,time:'12.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
-    {roomid : 5,time:'13.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
-    {roomid : 6,time:'14.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
-    {roomid : 7,time:'15.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
-    {roomid : 8,time:'16.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
-    {roomid : 9,time:'17.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false}
+    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
+    {roomid : 1,time:'09.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
+    {roomid : 2,time:'10.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
+    {roomid : 3,time:'11.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
+    {roomid : 4,time:'12.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
+    {roomid : 5,time:'13.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
+    {roomid : 6,time:'14.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
+    {roomid : 7,time:'15.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
+    {roomid : 8,time:'16.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
+    {roomid : 9,time:'17.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false}
   ];
 
   timeofweekR1WH7F2 = [
-    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
-    {roomid : 1,time:'09.00',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
-    {roomid : 2,time:'10.00',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
-    {roomid : 3,time:'11.00',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
-    {roomid : 4,time:'12.00',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
-    {roomid : 5,time:'13.00',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
-    {roomid : 6,time:'14.00',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
-    {roomid : 7,time:'15.00',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
-    {roomid : 8,time:'16.00',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
-    {roomid : 9,time:'17.00',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false}
+    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
+    {roomid : 1,time:'09.00',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
+    {roomid : 2,time:'10.00',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
+    {roomid : 3,time:'11.00',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
+    {roomid : 4,time:'12.00',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
+    {roomid : 5,time:'13.00',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
+    {roomid : 6,time:'14.00',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
+    {roomid : 7,time:'15.00',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
+    {roomid : 8,time:'16.00',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
+    {roomid : 9,time:'17.00',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false}
   ];
 
   timeofweekR2WH7F2 = [
-    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
-    {roomid : 1,time:'09.00',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
-    {roomid : 2,time:'10.00',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
-    {roomid : 3,time:'11.00',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
-    {roomid : 4,time:'12.00',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
-    {roomid : 5,time:'13.00',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
-    {roomid : 6,time:'14.00',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
-    {roomid : 7,time:'15.00',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
-    {roomid : 8,time:'16.00',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
-    {roomid : 9,time:'17.00',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false}
+    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
+    {roomid : 1,time:'09.00',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
+    {roomid : 2,time:'10.00',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
+    {roomid : 3,time:'11.00',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
+    {roomid : 4,time:'12.00',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
+    {roomid : 5,time:'13.00',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
+    {roomid : 6,time:'14.00',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
+    {roomid : 7,time:'15.00',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
+    {roomid : 8,time:'16.00',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
+    {roomid : 9,time:'17.00',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false}
   ];
 
   timeofweekWH2F2 = [
-    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
-    {roomid : 1,time:'09.00',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
-    {roomid : 2,time:'10.00',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
-    {roomid : 3,time:'11.00',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
-    {roomid : 4,time:'12.00',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
-    {roomid : 5,time:'13.00',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
-    {roomid : 6,time:'14.00',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
-    {roomid : 7,time:'15.00',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
-    {roomid : 8,time:'16.00',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false},
-    {roomid : 9,time:'17.00',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false}
+    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
+    {roomid : 1,time:'09.00',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
+    {roomid : 2,time:'10.00',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
+    {roomid : 3,time:'11.00',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
+    {roomid : 4,time:'12.00',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
+    {roomid : 5,time:'13.00',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
+    {roomid : 6,time:'14.00',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
+    {roomid : 7,time:'15.00',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
+    {roomid : 8,time:'16.00',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
+    {roomid : 9,time:'17.00',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false}
   ];
 
 
+  Reserved(){
+    alert("ห้องไม่ว่างไม่สามารถจองได้");
+  }
 //show datatable
  public appendTime(){
     for(let i = 0 ; i < this.report.length ; i++){
@@ -117,6 +120,7 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekOTSF2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
               this.timeofweekOTSF2[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekOTSF2[j].checkReservations = true ;
               if(this.timeofweekOTSF2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2[j].id   ; k++){
@@ -140,6 +144,7 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekOTSF2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
               this.timeofweekOTSF2[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekOTSF2[j].checkReservations = true ;
               if(this.timeofweekOTSF2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2[j].id   ; k++){
@@ -162,6 +167,7 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekOTSF2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
               this.timeofweekOTSF2[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekOTSF2[j].checkReservations = true ;
               if(this.timeofweekOTSF2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2[j].id   ; k++){
@@ -184,6 +190,7 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekOTSF2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
               this.timeofweekOTSF2[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekOTSF2[j].checkReservations = true ;
               if(this.timeofweekOTSF2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2[j].id   ; k++){
@@ -206,6 +213,7 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekOTSF2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
               this.timeofweekOTSF2[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekOTSF2[j].checkReservations = true ;
               if(this.timeofweekOTSF2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2[j].id   ; k++){
@@ -228,6 +236,7 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekOTSF2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
               this.timeofweekOTSF2[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekOTSF2[j].checkReservations = true ;
               if(this.timeofweekOTSF2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2[j].id   ; k++){
@@ -250,6 +259,7 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekOTSF2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
               this.timeofweekOTSF2[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekOTSF2[j].checkReservations = true ;
               if(this.timeofweekOTSF2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2[j].id   ; k++){
@@ -272,6 +282,7 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekOTSF2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
               this.timeofweekOTSF2[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekOTSF2[j].checkReservations = true ;
               if(this.timeofweekOTSF2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2[j].id   ; k++){
@@ -294,6 +305,7 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekOTSF2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
               this.timeofweekOTSF2[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekOTSF2[j].checkReservations = true ;
               if(this.timeofweekOTSF2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2[j].id   ; k++){
@@ -316,6 +328,7 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekOTSF2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
               this.timeofweekOTSF2[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekOTSF2[j].checkReservations = true ;
               if(this.timeofweekOTSF2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2[j].id   ; k++){
@@ -342,6 +355,7 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekR1WH7F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
               this.timeofweekR1WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekR1WH7F2[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekR1WH7F2[j].checkReservations = true ;
               if(this.timeofweekR1WH7F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekR1WH7F2[j].id   ; k++){
@@ -364,6 +378,7 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekR1WH7F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
               this.timeofweekR1WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekR1WH7F2[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekR1WH7F2[j].checkReservations = true ;
               if(this.timeofweekR1WH7F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekR1WH7F2[j].id   ; k++){
@@ -386,6 +401,7 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekR1WH7F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
               this.timeofweekR1WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekR1WH7F2[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekR1WH7F2[j].checkReservations = true ;
               if(this.timeofweekR1WH7F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekR1WH7F2[j].id   ; k++){
@@ -408,6 +424,7 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekR1WH7F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
               this.timeofweekR1WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekR1WH7F2[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekR1WH7F2[j].checkReservations = true ;
               if(this.timeofweekR1WH7F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekR1WH7F2[j].id   ; k++){
@@ -430,6 +447,7 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekR1WH7F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
               this.timeofweekR1WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekR1WH7F2[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekR1WH7F2[j].checkReservations = true ;
               if(this.timeofweekR1WH7F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekR1WH7F2[j].id   ; k++){
@@ -452,6 +470,7 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekR1WH7F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
               this.timeofweekR1WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekR1WH7F2[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekR1WH7F2[j].checkReservations = true ;
               if(this.timeofweekR1WH7F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekR1WH7F2[j].id   ; k++){
@@ -474,6 +493,7 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekR1WH7F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
               this.timeofweekR1WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekR1WH7F2[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekR1WH7F2[j].checkReservations = true ;
               if(this.timeofweekR1WH7F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekR1WH7F2[j].id   ; k++){
@@ -496,6 +516,7 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekR1WH7F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
               this.timeofweekR1WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekR1WH7F2[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekR1WH7F2[j].checkReservations = true ;
               if(this.timeofweekR1WH7F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekR1WH7F2[j].id   ; k++){
@@ -518,6 +539,7 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekR1WH7F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
               this.timeofweekR1WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekR1WH7F2[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekR1WH7F2[j].checkReservations = true ;
               if(this.timeofweekR1WH7F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekR1WH7F2[j].id   ; k++){
@@ -540,6 +562,7 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekR1WH7F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
               this.timeofweekR1WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekR1WH7F2[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekR1WH7F2[j].checkReservations = true ;
               if(this.timeofweekR1WH7F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekR1WH7F2[j].id   ; k++){
@@ -568,6 +591,7 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekR2WH7F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
               this.timeofweekR2WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekR2WH7F2[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekR2WH7F2[j].checkReservations = true ;
               if(this.timeofweekR2WH7F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekR2WH7F2[j].id   ; k++){
@@ -590,6 +614,7 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekR2WH7F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
               this.timeofweekR2WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekR2WH7F2[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekR2WH7F2[j].checkReservations = true ;
               if(this.timeofweekR2WH7F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekR2WH7F2[j].id   ; k++){
@@ -612,6 +637,7 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekR2WH7F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
               this.timeofweekR2WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekR2WH7F2[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekR2WH7F2[j].checkReservations = true ;
               if(this.timeofweekR2WH7F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekR2WH7F2[j].id   ; k++){
@@ -634,6 +660,7 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekR2WH7F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
               this.timeofweekR2WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekR2WH7F2[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekR2WH7F2[j].checkReservations = true ;
               if(this.timeofweekR2WH7F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekR2WH7F2[j].id   ; k++){
@@ -656,6 +683,7 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekR2WH7F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
               this.timeofweekR2WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekR2WH7F2[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekR2WH7F2[j].checkReservations = true ;
               if(this.timeofweekR2WH7F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekR2WH7F2[j].id   ; k++){
@@ -678,6 +706,7 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekR2WH7F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
               this.timeofweekR2WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekR2WH7F2[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekR2WH7F2[j].checkReservations = true ;
               if(this.timeofweekR2WH7F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekR2WH7F2[j].id   ; k++){
@@ -700,6 +729,7 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekR2WH7F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
               this.timeofweekR2WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekR2WH7F2[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekR2WH7F2[j].checkReservations = true ;
               if(this.timeofweekR2WH7F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekR2WH7F2[j].id   ; k++){
@@ -722,6 +752,7 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekR2WH7F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
               this.timeofweekR2WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekR2WH7F2[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekR2WH7F2[j].checkReservations = true ;
               if(this.timeofweekR2WH7F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekR2WH7F2[j].id   ; k++){
@@ -744,6 +775,7 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekR2WH7F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
               this.timeofweekR2WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekR2WH7F2[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekR2WH7F2[j].checkReservations = true ;
               if(this.timeofweekR2WH7F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekR2WH7F2[j].id   ; k++){
@@ -766,6 +798,7 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekR2WH7F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
               this.timeofweekR2WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekR2WH7F2[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekR2WH7F2[j].checkReservations = true ;
               if(this.timeofweekR2WH7F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekR2WH7F2[j].id   ; k++){
@@ -791,6 +824,7 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekWH2F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
               this.timeofweekWH2F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekWH2F2[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekWH2F2[j].checkReservations = true ;
               if(this.timeofweekWH2F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekWH2F2[j].id   ; k++){
@@ -814,6 +848,7 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekWH2F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
               this.timeofweekWH2F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekWH2F2[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekWH2F2[j].checkReservations = true ;
               if(this.timeofweekWH2F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekWH2F2[j].id   ; k++){
@@ -836,6 +871,7 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekWH2F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
               this.timeofweekWH2F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekWH2F2[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekWH2F2[j].checkReservations = true ;
               if(this.timeofweekWH2F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekWH2F2[j].id   ; k++){
@@ -858,6 +894,7 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekWH2F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
               this.timeofweekWH2F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekWH2F2[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekWH2F2[j].checkReservations = true ;
               if(this.timeofweekWH2F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekWH2F2[j].id   ; k++){
@@ -880,6 +917,7 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekWH2F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
               this.timeofweekWH2F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekWH2F2[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekWH2F2[j].checkReservations = true ;
               if(this.timeofweekWH2F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekWH2F2[j].id   ; k++){
@@ -902,6 +940,7 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekWH2F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
               this.timeofweekWH2F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekWH2F2[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekWH2F2[j].checkReservations = true ;
               if(this.timeofweekWH2F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekWH2F2[j].id   ; k++){
@@ -924,6 +963,7 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekWH2F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
               this.timeofweekWH2F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekWH2F2[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekWH2F2[j].checkReservations = true ;
               if(this.timeofweekWH2F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekWH2F2[j].id   ; k++){
@@ -946,6 +986,7 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekWH2F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
               this.timeofweekWH2F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekWH2F2[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekWH2F2[j].checkReservations = true ;
               if(this.timeofweekWH2F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekWH2F2[j].id   ; k++){
@@ -968,6 +1009,7 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekWH2F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
               this.timeofweekWH2F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekWH2F2[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekWH2F2[j].checkReservations = true ;
               if(this.timeofweekWH2F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekWH2F2[j].id   ; k++){
@@ -990,6 +1032,7 @@ export class SelectRoomComponent implements OnInit {
               this.timeofweekWH2F2[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
               this.timeofweekWH2F2[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekWH2F2[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekWH2F2[j].checkReservations = true ;
               if(this.timeofweekWH2F2[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekWH2F2[j].id   ; k++){

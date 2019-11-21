@@ -76,8 +76,11 @@ if(this.splitted[1] == 'Jan'){
 }
 
 clicksearch(){
-    this.convertMonth(this.dateSelect.toString());
-
+    if(this.dateSelect == ''){
+      alert("โปรดเลือกวันที่");
+    }else{
+      this.convertMonth(this.dateSelect.toString());
+    }
 }
 
 
