@@ -22,13 +22,15 @@ import { SelectRoomComponent } from './select-room/select-room.component';
 import {MatDialogModule} from '@angular/material/dialog';
 
 import {DialogOverviewExampleDialog} from './auth.service';
+import { DashboardComponent } from './dashboard/dashboard.component';
 @NgModule({
   declarations: [
     AppComponent,
     BookMeetingRoom1Component,
     DataFormComponent,
     SelectRoomComponent,
-    DialogOverviewExampleDialog
+    DialogOverviewExampleDialog,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

@@ -13,6 +13,7 @@
       <button mat-button class="sidebar-menu" routerLink="/dashboard">Dashboard</button><br>
     </div>
 
+
     <div class="sidebar-emp">
 
     </div>
@@ -24,39 +25,46 @@
 
     <div class="form-data" *ngIf="!(isLoggedIn | async)">
       <br/><br/><br/><br/>
-        <h1>Please Login !</h1>
+      <h1>Please Login !</h1>
     </div>
 
     <br/><br/>
 
     <div *ngIf="(isLoggedIn | async)">
       <br/>
-      <h1 align="center">SelectDate</h1>
+      <h1 align="center">Dashboard</h1>
 
+      <div align="center">
+       <mat-form-field class="datepick">
+        <input matInput [matDatepicker]="picker1" placeholder="ToDate" [(ngModel)]="todateSelect">
+        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+        <mat-datepicker #picker1></mat-datepicker>
+      </mat-form-field>
 
       <mat-form-field class="datepick">
-        <input matInput [matDatepicker]="picker" placeholder="DD/MM/yyyy" [(ngModel)]="dateSelect">
-        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker>
+        <input matInput [matDatepicker]="picker2" placeholder="FromDate" [(ngModel)]="fromdateSelect">
+        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+        <mat-datepicker #picker2></mat-datepicker>
       </mat-form-field>
-      &nbsp;&nbsp;
+      &nbsp;&nbsp; &nbsp;&nbsp;
       <button mat-raised-button color="primary" (click) = "clicksearch()">Search</button>
+      </div>
 
 
       <br/><br/>
 
 
 
-     </div>
+    </div>
 
-   </div>
+  </div>
 
- </div>
-
-
-
- </body>
+</div>
 
 
- </html>
+
+</body>
+
+
+</html>
 

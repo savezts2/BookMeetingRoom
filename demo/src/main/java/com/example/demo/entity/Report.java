@@ -4,6 +4,8 @@ package com.example.demo.entity;
 import lombok.*;
 
 import javax.persistence.*;
+import java.time.LocalDate;
+import java.util.Date;
 
 @Entity
 @Data
@@ -23,6 +25,9 @@ public class Report {
 
     @ManyToOne
     private BookMeetingRoom bookMeetingRoom;
+
+    @Temporal(TemporalType.DATE)
+    private Date dateBook;
 
     private String date;
 
@@ -48,6 +53,14 @@ public class Report {
 
     public void setBookMeetingRoom(BookMeetingRoom bookMeetingRoom) {
         this.bookMeetingRoom = bookMeetingRoom;
+    }
+
+    public Date getDateBook() {
+        return dateBook;
+    }
+
+    public void setDateBook(Date dateBook) {
+        this.dateBook = dateBook;
     }
 
     public String getDate() {
