@@ -9,3 +9,8 @@
 > **npm install**
 
 > **ng serve**
+
+- [ ] Apple
+- [ ] Tree
+- [ ] Lemon
+- [x] Cup
