@@ -1,6 +1,8 @@
-# *ILS-BookMeetingRoom*
+# ILS-BookMeetingRoom
 
-Start
+## Maven
+
+**mvnw spring-boot:run
 
 cd BookMeetingRoom
 npm install
