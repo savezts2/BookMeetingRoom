@@ -49,7 +49,9 @@
           <th>
           01-{{dateFull.month}}-{{dateFull.year}}
           </th>
+
           <td> Office TSP Second Floor 2 </td>
+
           <td *ngFor="let time of timeofweekOTSF2Day01" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
             <div *ngIf="time.showlabel">
               <font color="white">

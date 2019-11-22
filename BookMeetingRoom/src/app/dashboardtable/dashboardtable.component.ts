@@ -20,6 +20,8 @@ dateStart: String;
 dateEnd: String;
 counting: number ;
 
+
+dateSelectMonth: Array<any>;
   constructor(public authService : AuthService , private router: Router, private service : ServiceService,
    private route:ActivatedRoute) {
         this.isLoggedIn = authService.isLoggedIn();
@@ -41,6 +43,9 @@ counting: number ;
        console.log(this.report);
       this.appendTime();
     })
+
+    this.dateSelectMonth = this.dateFull.dateStart.split("-");
+    //console.log('01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year);
 
   }
 
@@ -1558,12 +1563,675 @@ timeofweekWH2F2Day31 = [
 
 
 public appendTime(){
+    for(let i = 0 ; i < this.report.length ; i++){
+
+        if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+          for(let j =0 ; j < this.timeofweekOTSF2Day01.length; j++){
+            if(this.timeofweekOTSF2Day01[j].roomid == 0){
+              this.timeofweekOTSF2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+              this.timeofweekOTSF2Day01[j].color = 'red' ;
+              this.timeofweekOTSF2Day01[j].showlabel = true;
+              this.timeofweekOTSF2Day01[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day01[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekOTSF2Day01[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekOTSF2Day01[j].checkReservations = true ;
+              if(this.timeofweekOTSF2Day01[j].id > 1){
+                   this.counting = j+1 ;
+                   for(let k = 1 ; k < this.timeofweekOTSF2Day01[j].id   ; k++){
+                      this.timeofweekOTSF2Day01.splice(this.counting,1);
+                   }
+              }
+              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekOTSF2Day01[j].showremark = true;
+                this.timeofweekOTSF2Day01[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
+            }
+          }
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+          for(let j =0 ; j < this.timeofweekOTSF2Day01.length; j++){
+            if(this.timeofweekOTSF2Day01[j].roomid == 1){
+              this.timeofweekOTSF2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+              this.timeofweekOTSF2Day01[j].color = 'red' ;
+              this.timeofweekOTSF2Day01[j].showlabel = true;
+              this.timeofweekOTSF2Day01[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day01[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekOTSF2Day01[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekOTSF2Day01[j].checkReservations = true ;
+              if(this.timeofweekOTSF2Day01[j].id > 1){
+                   this.counting = j+1 ;
+                   for(let k = 1 ; k < this.timeofweekOTSF2Day02[j].id   ; k++){
+                      this.timeofweekOTSF2Day01.splice(this.counting,1);
+                   }
+              }
+              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekOTSF2Day01[j].showremark = true;
+                this.timeofweekOTSF2Day01[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
+            }
+          }
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+          for(let j =0 ; j < this.timeofweekOTSF2Day01.length; j++){
+            if(this.timeofweekOTSF2Day01[j].roomid == 2){
+              this.timeofweekOTSF2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+              this.timeofweekOTSF2Day01[j].color = 'red' ;
+              this.timeofweekOTSF2Day01[j].showlabel = true;
+              this.timeofweekOTSF2Day01[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day01[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekOTSF2Day01[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekOTSF2Day01[j].checkReservations = true ;
+              if(this.timeofweekOTSF2Day01[j].id > 1){
+                   this.counting = j+1 ;
+                   for(let k = 1 ; k < this.timeofweekOTSF2Day01[j].id   ; k++){
+                      this.timeofweekOTSF2Day01.splice(this.counting,1);
+                   }
+              }
+              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekOTSF2Day01[j].showremark = true;
+                this.timeofweekOTSF2Day01[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
+            }
+          }
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+          for(let j =0 ; j < this.timeofweekOTSF2Day01.length; j++){
+            if(this.timeofweekOTSF2Day01[j].roomid == 3){
+              this.timeofweekOTSF2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+              this.timeofweekOTSF2Day01[j].color = 'red' ;
+              this.timeofweekOTSF2Day01[j].showlabel = true;
+              this.timeofweekOTSF2Day01[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day01[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekOTSF2Day01[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekOTSF2Day01[j].checkReservations = true ;
+              if(this.timeofweekOTSF2Day01[j].id > 1){
+                   this.counting = j+1 ;
+                   for(let k = 1 ; k < this.timeofweekOTSF2Day01[j].id   ; k++){
+                      this.timeofweekOTSF2Day01.splice(this.counting,1);
+                   }
+              }
+              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekOTSF2Day01[j].showremark = true;
+                this.timeofweekOTSF2Day01[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
+            }
+          }
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+          for(let j =0 ; j < this.timeofweekOTSF2Day01.length; j++){
+            if(this.timeofweekOTSF2Day01[j].roomid == 4){
+              this.timeofweekOTSF2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+              this.timeofweekOTSF2Day01[j].color = 'red' ;
+              this.timeofweekOTSF2Day01[j].showlabel = true;
+              this.timeofweekOTSF2Day01[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day01[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekOTSF2Day01[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekOTSF2Day01[j].checkReservations = true ;
+              if(this.timeofweekOTSF2Day01[j].id > 1){
+                   this.counting = j+1 ;
+                   for(let k = 1 ; k < this.timeofweekOTSF2Day01[j].id   ; k++){
+                      this.timeofweekOTSF2Day01.splice(this.counting,1);
+                   }
+              }
+              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekOTSF2Day01[j].showremark = true;
+                this.timeofweekOTSF2Day01[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
+            }
+          }
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+          for(let j =0 ; j < this.timeofweekOTSF2Day01.length; j++){
+            if(this.timeofweekOTSF2Day01[j].roomid == 5){
+              this.timeofweekOTSF2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+              this.timeofweekOTSF2Day01[j].color = 'red' ;
+              this.timeofweekOTSF2Day01[j].showlabel = true;
+              this.timeofweekOTSF2Day01[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day01[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekOTSF2Day01[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekOTSF2Day01[j].checkReservations = true ;
+              if(this.timeofweekOTSF2Day01[j].id > 1){
+                   this.counting = j+1 ;
+                   for(let k = 1 ; k < this.timeofweekOTSF2Day01[j].id   ; k++){
+                      this.timeofweekOTSF2Day01.splice(this.counting,1);
+                   }
+              }
+              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekOTSF2Day01[j].showremark = true;
+                this.timeofweekOTSF2Day01[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
+            }
+          }
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+          for(let j =0 ; j < this.timeofweekOTSF2Day01.length; j++){
+            if(this.timeofweekOTSF2Day01[j].roomid == 6){
+              this.timeofweekOTSF2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+              this.timeofweekOTSF2Day01[j].color = 'red' ;
+              this.timeofweekOTSF2Day01[j].showlabel = true;
+              this.timeofweekOTSF2Day01[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day01[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekOTSF2Day01[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekOTSF2Day01[j].checkReservations = true ;
+              if(this.timeofweekOTSF2Day01[j].id > 1){
+                   this.counting = j+1 ;
+                   for(let k = 1 ; k < this.timeofweekOTSF2Day01[j].id   ; k++){
+                      this.timeofweekOTSF2Day01.splice(this.counting,1);
+                   }
+              }
+              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekOTSF2Day01[j].showremark = true;
+                this.timeofweekOTSF2Day01[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
+            }
+          }
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+          for(let j =0 ; j < this.timeofweekOTSF2Day01.length; j++){
+            if(this.timeofweekOTSF2Day01[j].roomid == 7){
+              this.timeofweekOTSF2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+              this.timeofweekOTSF2Day01[j].color = 'red' ;
+              this.timeofweekOTSF2Day01[j].showlabel = true;
+              this.timeofweekOTSF2Day01[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day01[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekOTSF2Day01[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekOTSF2Day01[j].checkReservations = true ;
+              if(this.timeofweekOTSF2Day01[j].id > 1){
+                   this.counting = j+1 ;
+                   for(let k = 1 ; k < this.timeofweekOTSF2Day01[j].id   ; k++){
+                      this.timeofweekOTSF2Day01.splice(this.counting,1);
+                   }
+              }
+              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekOTSF2Day01[j].showremark = true;
+                this.timeofweekOTSF2Day01[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
+            }
+          }
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+          for(let j =0 ; j < this.timeofweekOTSF2Day01.length; j++){
+            if(this.timeofweekOTSF2Day01[j].roomid == 8){
+              this.timeofweekOTSF2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+              this.timeofweekOTSF2Day01[j].color = 'red' ;
+              this.timeofweekOTSF2Day01[j].showlabel = true;
+              this.timeofweekOTSF2Day01[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day01[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekOTSF2Day01[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekOTSF2Day01[j].checkReservations = true ;
+              if(this.timeofweekOTSF2Day01[j].id > 1){
+                   this.counting = j+1 ;
+                   for(let k = 1 ; k < this.timeofweekOTSF2Day01[j].id   ; k++){
+                      this.timeofweekOTSF2Day01.splice(this.counting,1);
+                   }
+              }
+              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekOTSF2Day01[j].showremark = true;
+                this.timeofweekOTSF2Day01[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
+            }
+          }
+        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+          for(let j =0 ; j < this.timeofweekOTSF2Day01.length; j++){
+            if(this.timeofweekOTSF2Day01[j].roomid == 9){
+              this.timeofweekOTSF2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+              this.timeofweekOTSF2Day01[j].color = 'red' ;
+              this.timeofweekOTSF2Day01[j].showlabel = true;
+              this.timeofweekOTSF2Day01[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day01[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekOTSF2Day01[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekOTSF2Day01[j].checkReservations = true ;
+              if(this.timeofweekOTSF2Day01[j].id > 1){
+                   this.counting = j+1 ;
+                   for(let k = 1 ; k < this.timeofweekOTSF2Day01[j].id   ; k++){
+                      this.timeofweekOTSF2Day01.splice(this.counting,1);
+                   }
+              }
+              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekOTSF2Day01[j].showremark = true;
+                this.timeofweekOTSF2Day01[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
+            }
+          }
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekOTSF2Day02.length; j++){
+                 if(this.timeofweekOTSF2Day02[j].roomid == 0){
+                     this.timeofweekOTSF2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekOTSF2Day02[j].color = 'red' ;
+                     this.timeofweekOTSF2Day02[j].showlabel = true;
+                     this.timeofweekOTSF2Day02[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekOTSF2Day02[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekOTSF2Day02[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekOTSF2Day02[j].checkReservations = true ;
+                     if(this.timeofweekOTSF2Day02[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekOTSF2Day02[j].id   ; k++){
+                              this.timeofweekOTSF2Day02.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekOTSF2Day02[j].showremark = true;
+                         this.timeofweekOTSF2Day02[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekOTSF2Day02.length; j++){
+                 if(this.timeofweekOTSF2Day02[j].roomid == 1){
+                     this.timeofweekOTSF2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekOTSF2Day02[j].color = 'red' ;
+                     this.timeofweekOTSF2Day02[j].showlabel = true;
+                     this.timeofweekOTSF2Day02[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekOTSF2Day02[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekOTSF2Day02[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekOTSF2Day02[j].checkReservations = true ;
+                     if(this.timeofweekOTSF2Day02[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekOTSF2Day02[j].id   ; k++){
+                              this.timeofweekOTSF2Day02.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekOTSF2Day02[j].showremark = true;
+                         this.timeofweekOTSF2Day02[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekOTSF2Day02.length; j++){
+                 if(this.timeofweekOTSF2Day02[j].roomid == 2){
+                     this.timeofweekOTSF2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekOTSF2Day02[j].color = 'red' ;
+                     this.timeofweekOTSF2Day02[j].showlabel = true;
+                     this.timeofweekOTSF2Day02[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekOTSF2Day02[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekOTSF2Day02[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekOTSF2Day02[j].checkReservations = true ;
+                     if(this.timeofweekOTSF2Day02[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekOTSF2Day02[j].id   ; k++){
+                              this.timeofweekOTSF2Day02.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekOTSF2Day02[j].showremark = true;
+                         this.timeofweekOTSF2Day02[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekOTSF2Day02.length; j++){
+                 if(this.timeofweekOTSF2Day02[j].roomid == 3){
+                     this.timeofweekOTSF2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekOTSF2Day02[j].color = 'red' ;
+                     this.timeofweekOTSF2Day02[j].showlabel = true;
+                     this.timeofweekOTSF2Day02[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekOTSF2Day02[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekOTSF2Day02[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekOTSF2Day02[j].checkReservations = true ;
+                     if(this.timeofweekOTSF2Day02[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekOTSF2Day02[j].id   ; k++){
+                              this.timeofweekOTSF2Day02.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekOTSF2Day02[j].showremark = true;
+                         this.timeofweekOTSF2Day02[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekOTSF2Day02.length; j++){
+                 if(this.timeofweekOTSF2Day02[j].roomid == 4){
+                     this.timeofweekOTSF2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekOTSF2Day02[j].color = 'red' ;
+                     this.timeofweekOTSF2Day02[j].showlabel = true;
+                     this.timeofweekOTSF2Day02[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekOTSF2Day02[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekOTSF2Day02[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekOTSF2Day02[j].checkReservations = true ;
+                     if(this.timeofweekOTSF2Day02[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekOTSF2Day02[j].id   ; k++){
+                              this.timeofweekOTSF2Day02.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekOTSF2Day02[j].showremark = true;
+                         this.timeofweekOTSF2Day02[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekOTSF2Day02.length; j++){
+                 if(this.timeofweekOTSF2Day02[j].roomid == 5){
+                     this.timeofweekOTSF2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekOTSF2Day02[j].color = 'red' ;
+                     this.timeofweekOTSF2Day02[j].showlabel = true;
+                     this.timeofweekOTSF2Day02[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekOTSF2Day02[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekOTSF2Day02[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekOTSF2Day02[j].checkReservations = true ;
+                     if(this.timeofweekOTSF2Day02[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekOTSF2Day02[j].id   ; k++){
+                              this.timeofweekOTSF2Day02.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekOTSF2Day02[j].showremark = true;
+                         this.timeofweekOTSF2Day02[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekOTSF2Day02.length; j++){
+                 if(this.timeofweekOTSF2Day02[j].roomid == 6){
+                     this.timeofweekOTSF2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekOTSF2Day02[j].color = 'red' ;
+                     this.timeofweekOTSF2Day02[j].showlabel = true;
+                     this.timeofweekOTSF2Day02[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekOTSF2Day02[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekOTSF2Day02[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekOTSF2Day02[j].checkReservations = true ;
+                     if(this.timeofweekOTSF2Day02[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekOTSF2Day02[j].id   ; k++){
+                              this.timeofweekOTSF2Day02.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekOTSF2Day02[j].showremark = true;
+                         this.timeofweekOTSF2Day02[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekOTSF2Day02.length; j++){
+                 if(this.timeofweekOTSF2Day02[j].roomid == 7){
+                     this.timeofweekOTSF2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekOTSF2Day02[j].color = 'red' ;
+                     this.timeofweekOTSF2Day02[j].showlabel = true;
+                     this.timeofweekOTSF2Day02[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekOTSF2Day02[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekOTSF2Day02[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekOTSF2Day02[j].checkReservations = true ;
+                     if(this.timeofweekOTSF2Day02[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekOTSF2Day02[j].id   ; k++){
+                              this.timeofweekOTSF2Day02.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekOTSF2Day02[j].showremark = true;
+                         this.timeofweekOTSF2Day02[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekOTSF2Day02.length; j++){
+                 if(this.timeofweekOTSF2Day02[j].roomid == 8){
+                     this.timeofweekOTSF2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekOTSF2Day02[j].color = 'red' ;
+                     this.timeofweekOTSF2Day02[j].showlabel = true;
+                     this.timeofweekOTSF2Day02[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekOTSF2Day02[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekOTSF2Day02[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekOTSF2Day02[j].checkReservations = true ;
+                     if(this.timeofweekOTSF2Day02[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekOTSF2Day02[j].id   ; k++){
+                              this.timeofweekOTSF2Day02.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekOTSF2Day02[j].showremark = true;
+                         this.timeofweekOTSF2Day02[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekOTSF2Day02.length; j++){
+                 if(this.timeofweekOTSF2Day02[j].roomid == 9){
+                     this.timeofweekOTSF2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekOTSF2Day02[j].color = 'red' ;
+                     this.timeofweekOTSF2Day02[j].showlabel = true;
+                     this.timeofweekOTSF2Day02[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekOTSF2Day02[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekOTSF2Day02[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekOTSF2Day02[j].checkReservations = true ;
+                     if(this.timeofweekOTSF2Day02[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekOTSF2Day02[j].id   ; k++){
+                              this.timeofweekOTSF2Day02.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekOTSF2Day02[j].showremark = true;
+                         this.timeofweekOTSF2Day02[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekOTSF2Day03.length; j++){
+                 if(this.timeofweekOTSF2Day03[j].roomid == 0){
+                     this.timeofweekOTSF2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekOTSF2Day03[j].color = 'red' ;
+                     this.timeofweekOTSF2Day03[j].showlabel = true;
+                     this.timeofweekOTSF2Day03[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekOTSF2Day03[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekOTSF2Day03[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekOTSF2Day03[j].checkReservations = true ;
+                     if(this.timeofweekOTSF2Day03[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekOTSF2Day03[j].id   ; k++){
+                              this.timeofweekOTSF2Day03.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekOTSF2Day03[j].showremark = true;
+                         this.timeofweekOTSF2Day03[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekOTSF2Day03.length; j++){
+                 if(this.timeofweekOTSF2Day03[j].roomid == 1){
+                     this.timeofweekOTSF2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekOTSF2Day03[j].color = 'red' ;
+                     this.timeofweekOTSF2Day03[j].showlabel = true;
+                     this.timeofweekOTSF2Day03[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekOTSF2Day03[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekOTSF2Day03[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekOTSF2Day03[j].checkReservations = true ;
+                     if(this.timeofweekOTSF2Day03[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekOTSF2Day03[j].id   ; k++){
+                              this.timeofweekOTSF2Day03.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekOTSF2Day03[j].showremark = true;
+                         this.timeofweekOTSF2Day03[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekOTSF2Day03.length; j++){
+                 if(this.timeofweekOTSF2Day03[j].roomid == 2){
+                     this.timeofweekOTSF2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekOTSF2Day03[j].color = 'red' ;
+                     this.timeofweekOTSF2Day03[j].showlabel = true;
+                     this.timeofweekOTSF2Day03[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekOTSF2Day03[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekOTSF2Day03[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekOTSF2Day03[j].checkReservations = true ;
+                     if(this.timeofweekOTSF2Day03[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekOTSF2Day03[j].id   ; k++){
+                              this.timeofweekOTSF2Day03.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekOTSF2Day03[j].showremark = true;
+                         this.timeofweekOTSF2Day03[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekOTSF2Day03.length; j++){
+                 if(this.timeofweekOTSF2Day03[j].roomid == 3){
+                     this.timeofweekOTSF2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekOTSF2Day03[j].color = 'red' ;
+                     this.timeofweekOTSF2Day03[j].showlabel = true;
+                     this.timeofweekOTSF2Day03[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekOTSF2Day03[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekOTSF2Day03[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekOTSF2Day03[j].checkReservations = true ;
+                     if(this.timeofweekOTSF2Day03[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekOTSF2Day03[j].id   ; k++){
+                              this.timeofweekOTSF2Day03.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekOTSF2Day03[j].showremark = true;
+                         this.timeofweekOTSF2Day03[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekOTSF2Day03.length; j++){
+                 if(this.timeofweekOTSF2Day03[j].roomid == 4){
+                     this.timeofweekOTSF2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekOTSF2Day03[j].color = 'red' ;
+                     this.timeofweekOTSF2Day03[j].showlabel = true;
+                     this.timeofweekOTSF2Day03[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekOTSF2Day03[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekOTSF2Day03[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekOTSF2Day03[j].checkReservations = true ;
+                     if(this.timeofweekOTSF2Day03[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekOTSF2Day03[j].id   ; k++){
+                              this.timeofweekOTSF2Day03.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekOTSF2Day03[j].showremark = true;
+                         this.timeofweekOTSF2Day03[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekOTSF2Day03.length; j++){
+                 if(this.timeofweekOTSF2Day03[j].roomid == 5){
+                     this.timeofweekOTSF2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekOTSF2Day03[j].color = 'red' ;
+                     this.timeofweekOTSF2Day03[j].showlabel = true;
+                     this.timeofweekOTSF2Day03[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekOTSF2Day03[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekOTSF2Day03[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekOTSF2Day03[j].checkReservations = true ;
+                     if(this.timeofweekOTSF2Day03[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekOTSF2Day03[j].id   ; k++){
+                              this.timeofweekOTSF2Day03.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekOTSF2Day03[j].showremark = true;
+                         this.timeofweekOTSF2Day03[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekOTSF2Day03.length; j++){
+                 if(this.timeofweekOTSF2Day03[j].roomid == 6){
+                     this.timeofweekOTSF2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekOTSF2Day03[j].color = 'red' ;
+                     this.timeofweekOTSF2Day03[j].showlabel = true;
+                     this.timeofweekOTSF2Day03[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekOTSF2Day03[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekOTSF2Day03[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekOTSF2Day03[j].checkReservations = true ;
+                     if(this.timeofweekOTSF2Day03[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekOTSF2Day03[j].id   ; k++){
+                              this.timeofweekOTSF2Day03.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekOTSF2Day03[j].showremark = true;
+                         this.timeofweekOTSF2Day03[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekOTSF2Day03.length; j++){
+                 if(this.timeofweekOTSF2Day03[j].roomid == 7){
+                     this.timeofweekOTSF2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekOTSF2Day03[j].color = 'red' ;
+                     this.timeofweekOTSF2Day03[j].showlabel = true;
+                     this.timeofweekOTSF2Day03[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekOTSF2Day03[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekOTSF2Day03[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekOTSF2Day03[j].checkReservations = true ;
+                     if(this.timeofweekOTSF2Day03[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekOTSF2Day03[j].id   ; k++){
+                              this.timeofweekOTSF2Day03.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekOTSF2Day03[j].showremark = true;
+                         this.timeofweekOTSF2Day03[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekOTSF2Day03.length; j++){
+                 if(this.timeofweekOTSF2Day03[j].roomid == 8){
+                     this.timeofweekOTSF2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekOTSF2Day03[j].color = 'red' ;
+                     this.timeofweekOTSF2Day03[j].showlabel = true;
+                     this.timeofweekOTSF2Day03[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekOTSF2Day03[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekOTSF2Day03[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekOTSF2Day03[j].checkReservations = true ;
+                     if(this.timeofweekOTSF2Day03[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekOTSF2Day03[j].id   ; k++){
+                              this.timeofweekOTSF2Day03.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekOTSF2Day03[j].showremark = true;
+                         this.timeofweekOTSF2Day03[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekOTSF2Day03.length; j++){
+                 if(this.timeofweekOTSF2Day03[j].roomid == 9){
+                     this.timeofweekOTSF2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekOTSF2Day03[j].color = 'red' ;
+                     this.timeofweekOTSF2Day03[j].showlabel = true;
+                     this.timeofweekOTSF2Day03[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekOTSF2Day03[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekOTSF2Day03[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekOTSF2Day03[j].checkReservations = true ;
+                     if(this.timeofweekOTSF2Day03[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekOTSF2Day03[j].id   ; k++){
+                              this.timeofweekOTSF2Day03.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekOTSF2Day03[j].showremark = true;
+                         this.timeofweekOTSF2Day03[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }
 
 
 
-  }
+    } //close loop
 
 
+} //close function
 
-
-}
+} // close class
