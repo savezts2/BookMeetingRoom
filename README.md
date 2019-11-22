@@ -10,7 +10,3 @@
 
 > **ng serve**
 
-- [ ] Apple
-- [ ] Tree
-- [ ] Lemon
-- [x] Cup
