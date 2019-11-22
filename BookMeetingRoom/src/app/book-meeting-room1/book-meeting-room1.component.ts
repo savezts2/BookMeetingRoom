@@ -30,7 +30,7 @@ export class BookMeetingRoom1Component implements OnInit {
     month : String;
     splitted : Array<any>;
     dateFull : String ;
-
+    nameLogin: String ;
 
 constructor(public authService : AuthService , private router: Router , private service : ServiceService) {
     this.isLoggedIn = authService.isLoggedIn();
@@ -38,7 +38,9 @@ constructor(public authService : AuthService , private router: Router , private 
   }
 
 
-  ngOnInit(){}
+  ngOnInit(){
+      this.nameLogin = localStorage.getItem('nameid');
+  }
 
 
 convertMonth(month : String ){

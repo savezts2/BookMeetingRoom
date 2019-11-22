@@ -16,4 +16,7 @@ public interface ReportRepository extends JpaRepository<Report,Long> {
 
     @Query(value = "SELECT * FROM report WHERE date = :date",nativeQuery = true)
     Collection<Report> getDateReport(@Param("date") String date );
+
+    @Query(value = "SELECT * FROM report WHERE date_book BETWEEN :datestart AND :dateend",nativeQuery = true)
+    Collection<Report> getDateDashBoard(@Param("datestart") String datestart , @Param("dateend") String dateend );
 }

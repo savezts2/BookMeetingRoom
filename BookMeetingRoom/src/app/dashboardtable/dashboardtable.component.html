@@ -1,0 +1,2497 @@
+<html>
+<body>
+<div class="wrapper">
+
+  <nav id="sidebar">
+    <div class="sidebar-header">
+      <h4>BookMeetingRoom</h4>
+    </div>
+    <div>
+      <button mat-button class="sidebar-menu" routerLink="/selectDate">SelectRoom & Time</button><br>
+    </div>
+    <div>
+      <button mat-button class="sidebar-menu" routerLink="/dashboard">Dashboard</button><br>
+    </div>
+
+
+    <div class="sidebar-emp">
+
+    </div>
+  </nav>
+
+  <div class="card-header" >
+    <button mat-raised-button class="botton-lDashboardogin" *ngIf="!(isLoggedIn | async)" (click)="authService.callDialog()">Login</button>
+    <button mat-raised-button class="botton-login" *ngIf="(isLoggedIn | async)" (click)="authService.logout()">LogOut</button>
+
+    <div class="form-data" *ngIf="!(isLoggedIn | async)">
+      <br/><br/><br/><br/>
+      <h1 style="color:#6d7fcc;">Please Login !</h1>
+    </div>
+
+    <br/><br/>
+
+    <div *ngIf="(isLoggedIn | async)">
+      <br/>
+      <h1 align="center" style="color:#6d7fcc;">DashBoard</h1>
+      <h2 style="color:#6d7fcc; margin-left:5%;">{{dateFull.month}}  {{dateFull.year}}</h2>
+
+      <table border="1" align="center" bordercolor=black bgcolor="black">
+
+      <tr class="greentable"><th rowspan="2">Date</th><th rowspan="2">MeetingRoom</th><th colspan="10">Time</th></tr>
+
+
+        <tr class="yellowtable"><th>08.00</th><th>09.00</th><th>10.00</th><th>11.00</th><th>12.00</th><th>13.00</th><th>14.00</th>
+          <th>15.00</th><th>16.00</th><th>17.00</th>
+        </tr>
+
+
+        <tr height="70" class="whitetable">
+          <th>
+          01-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Office TSP Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekOTSF2Day01" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            01-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room1 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR1WH7F2Day01" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            01-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room2 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR2WH7F2Day01" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            01-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> WH2 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekWH2F2Day01" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+
+
+        <tr height="70" class="whitetable">
+          <th>
+            02-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Office TSP Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekOTSF2Day02" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            02-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room1 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR1WH7F2Day02" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            02-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room2 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR2WH7F2Day02" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            02-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> WH2 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekWH2F2Day02" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+
+
+
+        <tr height="70" class="whitetable">
+          <th>
+            03-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Office TSP Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekOTSF2Day03" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            03-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room1 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR1WH7F2Day03" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            03-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room2 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR2WH7F2Day03" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            03-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> WH2 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekWH2F2Day03" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+
+
+
+
+        <tr height="70" class="whitetable">
+          <th>
+            04-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Office TSP Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekOTSF2Day04" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            04-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room1 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR1WH7F2Day04" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            04-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room2 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR2WH7F2Day04" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            04-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> WH2 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekWH2F2Day04" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+
+
+        <tr height="70" class="whitetable">
+          <th>
+            05-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Office TSP Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekOTSF2Day05" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            05-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room1 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR1WH7F2Day05" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            05-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room2 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR2WH7F2Day05" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            05-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> WH2 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekWH2F2Day05" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+
+
+
+
+        <tr height="70" class="whitetable">
+          <th>
+            06-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Office TSP Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekOTSF2Day06" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            06-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room1 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR1WH7F2Day06" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            06-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room2 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR2WH7F2Day06" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            06-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> WH2 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekWH2F2Day06" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+
+
+
+
+
+        <tr height="70" class="whitetable">
+          <th>
+            07-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Office TSP Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekOTSF2Day07" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            07-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room1 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR1WH7F2Day07" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            07-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room2 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR2WH7F2Day07" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            07-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> WH2 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekWH2F2Day07" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+
+
+
+        <tr height="70" class="whitetable">
+          <th>
+            08-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Office TSP Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekOTSF2Day08" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            08-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room1 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR1WH7F2Day08" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            08-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room2 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR2WH7F2Day08" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            08-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> WH2 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekWH2F2Day08" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+
+
+
+
+
+        <tr height="70" class="whitetable">
+          <th>
+            09-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Office TSP Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekOTSF2Day09" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            09-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room1 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR1WH7F2Day09" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            09-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room2 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR2WH7F2Day09" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            09-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> WH2 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekWH2F2Day09" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+
+
+        <tr height="70" class="whitetable">
+          <th>
+            10-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Office TSP Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekOTSF2Day10" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            10-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room1 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR1WH7F2Day10" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            10-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room2 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR2WH7F2Day10" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            10-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> WH2 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekWH2F2Day10" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+
+
+
+        <tr height="70" class="whitetable">
+          <th>
+            11-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Office TSP Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekOTSF2Day11" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            11-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room1 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR1WH7F2Day11" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            11-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room2 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR2WH7F2Day11" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            11-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> WH2 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekWH2F2Day11" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+
+        <tr height="70" class="whitetable">
+          <th>
+            12-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Office TSP Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekOTSF2Day12" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            12-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room1 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR1WH7F2Day12" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            12-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room2 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR2WH7F2Day12" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            12-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> WH2 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekWH2F2Day12" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+
+        <tr height="70" class="whitetable">
+          <th>
+            13-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Office TSP Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekOTSF2Day13" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            13-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room1 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR1WH7F2Day13" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            13-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room2 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR2WH7F2Day13" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            13-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> WH2 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekWH2F2Day13" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+
+
+
+        <tr height="70" class="whitetable">
+          <th>
+            14-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Office TSP Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekOTSF2Day14" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            14-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room1 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR1WH7F2Day14" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            14-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room2 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR2WH7F2Day14" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            14-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> WH2 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekWH2F2Day14" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+
+
+
+        <tr height="70" class="whitetable">
+          <th>
+            15-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Office TSP Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekOTSF2Day15" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            15-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room1 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR1WH7F2Day15" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            15-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room2 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR2WH7F2Day15" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            15-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> WH2 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekWH2F2Day15" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+
+
+        <tr height="70" class="whitetable">
+          <th>
+            16-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Office TSP Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekOTSF2Day16" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            16-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room1 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR1WH7F2Day16" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            16-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room2 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR2WH7F2Day16" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            16-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> WH2 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekWH2F2Day16" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+
+        <tr height="70" class="whitetable">
+          <th>
+            17-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Office TSP Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekOTSF2Day17" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            17-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room1 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR1WH7F2Day17" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            17-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room2 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR2WH7F2Day17" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            17-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> WH2 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekWH2F2Day17" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+
+
+        <tr height="70" class="whitetable">
+          <th>
+            18-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Office TSP Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekOTSF2Day18" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            18-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room1 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR1WH7F2Day18" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            18-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room2 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR2WH7F2Day18" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            18-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> WH2 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekWH2F2Day18" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+
+
+        <tr height="70" class="whitetable">
+          <th>
+            19-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Office TSP Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekOTSF2Day19" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            19-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room1 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR1WH7F2Day19" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            19-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room2 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR2WH7F2Day19" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            19-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> WH2 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekWH2F2Day19" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+
+
+
+
+        <tr height="70" class="whitetable">
+          <th>
+            20-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Office TSP Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekOTSF2Day20" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            20-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room1 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR1WH7F2Day20" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            20-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room2 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR2WH7F2Day20" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            20-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> WH2 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekWH2F2Day20" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+
+
+        <tr height="70" class="whitetable">
+          <th>
+            21-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Office TSP Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekOTSF2Day21" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            21-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room1 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR1WH7F2Day21" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            21-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room2 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR2WH7F2Day21" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            21-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> WH2 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekWH2F2Day21" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+
+
+
+
+        <tr height="70" class="whitetable">
+          <th>
+            22-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Office TSP Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekOTSF2Day22" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            22-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room1 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR1WH7F2Day22" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            22-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room2 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR2WH7F2Day22" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            22-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> WH2 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekWH2F2Day22" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+
+
+
+        <tr height="70" class="whitetable">
+          <th>
+            23-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Office TSP Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekOTSF2Day23" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            23-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room1 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR1WH7F2Day23" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            23-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room2 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR2WH7F2Day23" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            23-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> WH2 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekWH2F2Day23" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+
+
+        <tr height="70" class="whitetable">
+          <th>
+            24-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Office TSP Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekOTSF2Day24" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            24-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room1 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR1WH7F2Day24" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            24-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room2 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR2WH7F2Day24" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            24-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> WH2 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekWH2F2Day24" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+
+
+
+        <tr height="70" class="whitetable">
+          <th>
+            25-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Office TSP Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekOTSF2Day25" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            25-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room1 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR1WH7F2Day25" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            25-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room2 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR2WH7F2Day25" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            25-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> WH2 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekWH2F2Day25" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+
+        <tr height="70" class="whitetable">
+          <th>
+            26-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Office TSP Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekOTSF2Day26" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            26-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room1 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR1WH7F2Day26" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            26-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room2 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR2WH7F2Day26" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            26-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> WH2 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekWH2F2Day26" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+
+
+        <tr height="70" class="whitetable">
+          <th>
+            27-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Office TSP Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekOTSF2Day27" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            27-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room1 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR1WH7F2Day27" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            27-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room2 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR2WH7F2Day27" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            27-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> WH2 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekWH2F2Day27" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+
+        <tr height="70" class="whitetable">
+          <th>
+            28-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Office TSP Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekOTSF2Day28" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            28-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room1 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR1WH7F2Day28" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            28-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room2 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR2WH7F2Day28" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            28-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> WH2 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekWH2F2Day28" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+
+
+
+
+        <tr height="70" class="whitetable">
+          <th>
+            29-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Office TSP Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekOTSF2Day29" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            29-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room1 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR1WH7F2Day29" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            29-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room2 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR2WH7F2Day29" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            29-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> WH2 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekWH2F2Day29" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+
+
+        <tr height="70" class="whitetable">
+          <th>
+            30-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Office TSP Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekOTSF2Day30" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            30-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room1 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR1WH7F2Day30" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            30-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room2 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR2WH7F2Day30" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            30-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> WH2 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekWH2F2Day30" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+
+
+        <tr height="70" class="whitetable">
+          <th>
+            31-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Office TSP Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekOTSF2Day31" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            31-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room1 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR1WH7F2Day31" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            31-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> Room2 WH7 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekR2WH7F2Day31" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+        <tr height="70" class="whitetable">
+          <th>
+            31-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+          <td> WH2 Second Floor 2 </td>
+          <td *ngFor="let time of timeofweekWH2F2Day31" [attr.colspan]="time.id" [attr.bgcolor] = "time.color">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
+
+
+      </table>
+
+      <br/><br/>
+
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+
+
+</html>
+

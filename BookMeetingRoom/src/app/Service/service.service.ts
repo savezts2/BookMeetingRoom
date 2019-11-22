@@ -21,5 +21,10 @@ export class ServiceService {
   }
 
 
+  getDateDashBoard(startdate : String , enddate: String) : Observable<any>{
+      return this.http.post(this.API+'/Report/'+startdate+'/'+enddate,{})
+  }
+
+
 
 }

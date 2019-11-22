@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,ElementRef, ViewChild} from '@angular/core';
 import { BehaviorSubject } from 'rxjs/Rx';
 import { AuthService } from '../auth.service';
 import { Observable } from "rxjs";
@@ -7,33 +7,22 @@ import {MatDatepickerInputEvent} from '@angular/material/datepicker';
 import { AppDateAdapter, APP_DATE_FORMATS} from '../book-meeting-room1/date.adapter';
 import { NativeDateAdapter, DateAdapter, MAT_DATE_FORMATS } from "@angular/material";
 import { ServiceService } from '../Service/service.service';
+import * as XLSX from 'xlsx';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css'],
-  providers: [{
-      provide: DateAdapter, useClass: AppDateAdapter
-      },
-  {
-      provide: MAT_DATE_FORMATS, useValue: APP_DATE_FORMATS
-  }
-]
+  styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+
 isLoggedIn : Observable<boolean>;
-
-todateSelect : String = '' ;
-fromdateSelect : String = '';
-
-tosplit : Array<any>;
-fromsplit : Array<any>;
-
-toconvert : String;
-fromconvert : String ;
-
-todatefull : String ;
-fromdatefull : String ;
+MonthSelect: String;
+YearSelect: String;
+dateEnd: String ;
+DateEndDashboard: String;
+DateStartDashboard: String;
+month: String;
   constructor(public authService : AuthService , private router: Router , private service : ServiceService) {
       this.isLoggedIn = authService.isLoggedIn();
    }
@@ -41,72 +30,54 @@ fromdatefull : String ;
   ngOnInit() {
   }
 
-
-
-convertMonth(to : String , from: String){
-
-this.tosplit = to.split(" ");
-this.fromsplit= from.split(" ");
-  if(this.tosplit[1] == 'Jan'){
-  this.toconvert='01';
-  }else if(this.tosplit[1] == 'Feb'){
-  this.toconvert='02';
-  }else if(this.tosplit[1] == 'Mar'){
-  this.toconvert='03';
-  }else if(this.tosplit[1] == 'Apr'){
-  this.toconvert='04';
-  }else if(this.tosplit[1] == 'May'){
-  this.toconvert='05';
-  }else if(this.tosplit[1] == 'Jun'){
-  this.toconvert='06';
-  }else if(this.tosplit[1] == 'Jul'){
-  this.toconvert='07';
-  }else if(this.tosplit[1] == 'Aug'){
-  this.toconvert='08';
-  }else if(this.tosplit[1] == 'Sep'){
-  this.toconvert='09';
-  }else if(this.tosplit[1] == 'Oct'){
-  this.toconvert='10';
-  }else if(this.tosplit[1] == 'Nov'){
-  this.toconvert='11';
-  }else if(this.tosplit[1] == 'Dec'){
-  this.toconvert='12';
+SearchDashBoard(){
+  if(this.MonthSelect == null){
+      alert("Please Select Month");
+  }else if(this.YearSelect == null){
+      alert("Please Select Year");
+  }else{
+  if(this.MonthSelect == 'January' || this.MonthSelect == 'March' ||this.MonthSelect == 'May' ||this.MonthSelect == 'July' ||
+  this.MonthSelect == 'August' ||this.MonthSelect == 'October' ||this.MonthSelect == 'December' ){
+    if(this.MonthSelect == 'January'){
+      this.month = '01' ;
+    }else if(this.MonthSelect == 'March'){
+      this.month = '03' ;
+    }else if(this.MonthSelect == 'May'){
+      this.month = '05' ;
+    }else if(this.MonthSelect == 'July'){
+      this.month = '07' ;
+    }else if(this.MonthSelect == 'August'){
+      this.month = '08' ;
+    }else if(this.MonthSelect == 'October'){
+      this.month = '10' ;
+    }else if(this.MonthSelect == 'December'){
+      this.month = '12' ;
+    }
+    this.dateEnd = '31';
+  }else if(this.MonthSelect == 'February'){
+    this.dateEnd = '29';
+    this.month = '02' ;
+  }else{
+     if(this.MonthSelect == 'April'){
+      this.month = '04' ;
+    }else if(this.MonthSelect == 'June'){
+      this.month = '06' ;
+    }else if(this.MonthSelect == 'September'){
+      this.month = '09' ;
+    }else if(this.MonthSelect == 'November'){
+      this.month = '11' ;
+    }
+     this.dateEnd = '30';
   }
-
-  if(this.fromsplit[1] == 'Jan'){
-  this.fromconvert='01';
-  }else if(this.fromsplit[1] == 'Feb'){
-  this.fromconvert='02';
-  }else if(this.fromsplit[1] == 'Mar'){
-  this.fromconvert='03';
-  }else if(this.fromsplit[1] == 'Apr'){
-  this.fromconvert='04';
-  }else if(this.fromsplit[1] == 'May'){
-  this.fromconvert='05';
-  }else if(this.fromsplit[1] == 'Jun'){
-  this.fromconvert='06';
-  }else if(this.fromsplit[1] == 'Jul'){
-  this.fromconvert='07';
-  }else if(this.fromsplit[1] == 'Aug'){
-  this.fromconvert='08';
-  }else if(this.fromsplit[1] == 'Sep'){
-  this.fromconvert='09';
-  }else if(this.fromsplit[1] == 'Oct'){
-  this.fromconvert='10';
-  }else if(this.fromsplit[1] == 'Nov'){
-  this.fromconvert='11';
-  }else if(this.fromsplit[1] == 'Dec'){
-  this.fromconvert='12';
+  this.DateEndDashboard =  this.YearSelect + '-' +this.month + '-' +this.dateEnd;
+  this.DateStartDashboard = this.YearSelect+'-' + this.month + '-01' ;
+   this.router.navigate(['dashboardTable',{dateStart : this.DateStartDashboard , dateEnd: this.DateEndDashboard , month: this.MonthSelect, year: this.YearSelect}]);
+  //console.log(this.DateEndDashboard);
+  //console.log(this.DateStartDashboard);
   }
-
-  this.todatefull = this.tosplit[2]+'-'+this.toconvert+'-'+this.tosplit[3];
-  this.fromdatefull = this.fromsplit[2]+'-'+this.fromconvert+'-'+this.fromsplit[3];
-  console.log(this.todatefull);
-  console.log(this.fromdatefull);
 }
 
-clicksearch(){
-    this.convertMonth(this.todateSelect.toString(),this.fromdateSelect.toString());
-  }
+
+
 
 }

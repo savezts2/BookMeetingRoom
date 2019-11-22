@@ -23,6 +23,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 
 import {DialogOverviewExampleDialog} from './auth.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { DashboardtableComponent } from './dashboardtable/dashboardtable.component';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +32,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     DataFormComponent,
     SelectRoomComponent,
     DialogOverviewExampleDialog,
-    DashboardComponent
+    DashboardComponent,
+    DashboardtableComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +49,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     MatNativeDateModule,
     FormsModule,
     HttpClientModule,
-    MatDialogModule
+    MatDialogModule,
+    MatProgressSpinnerModule
   ],
     entryComponents: [ DialogOverviewExampleDialog ],
   providers: [],

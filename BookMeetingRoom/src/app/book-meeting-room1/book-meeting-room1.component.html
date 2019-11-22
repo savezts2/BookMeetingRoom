@@ -4,7 +4,7 @@
 
   <nav id="sidebar">
     <div class="sidebar-header">
-      <h3>BookMeetingRoom</h3>
+      <h4>BookMeetingRoom</h4>
     </div>
     <div>
       <button mat-button class="sidebar-menu" routerLink="/selectDate">SelectRoom & Time</button><br>
@@ -19,20 +19,25 @@
   </nav>
 
   <div class="card-header" >
+    <div>
+
     <button mat-raised-button class="botton-login" *ngIf="!(isLoggedIn | async)" (click)="authService.callDialog()">Login</button>
     <button mat-raised-button class="botton-login" *ngIf="(isLoggedIn | async)" (click)="authService.logout()">LogOut</button>
 
+    </div>
+
     <div class="form-data" *ngIf="!(isLoggedIn | async)">
       <br/><br/><br/><br/>
-        <h1>Please Login !</h1>
+        <h1 style="color:#6d7fcc;">Please Login !</h1>
     </div>
 
     <br/><br/>
 
     <div *ngIf="(isLoggedIn | async)">
       <br/>
-      <h1 align="center">SelectDate</h1>
 
+      <h1 style="margin-left: 130px; color:#6d7fcc;">Hello! {{nameLogin}} Please SelectDate</h1>
+      <br/>
 
       <mat-form-field class="datepick">
         <input matInput [matDatepicker]="picker" placeholder="DD/MM/yyyy" [(ngModel)]="dateSelect">

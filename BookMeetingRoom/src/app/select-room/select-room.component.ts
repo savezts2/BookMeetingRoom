@@ -34,7 +34,7 @@ export class SelectRoomComponent implements OnInit {
 
     this.service.findDate(this.datefull.datefull).subscribe(data=>{
     this.report = data;
-    console.log(data);
+    //console.log(data);
     this.appendTime();
     })
 
@@ -1047,10 +1047,10 @@ export class SelectRoomComponent implements OnInit {
           }
         }
     }
-console.log(this.timeofweekOTSF2);
-console.log(this.timeofweekR1WH7F2);
-console.log(this.timeofweekR2WH7F2);
-console.log(this.timeofweekWH2F2);
+//console.log(this.timeofweekOTSF2);
+//console.log(this.timeofweekR1WH7F2);
+//console.log(this.timeofweekR2WH7F2);
+//console.log(this.timeofweekWH2F2);
  }
 
 }

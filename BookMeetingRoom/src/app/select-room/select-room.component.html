@@ -5,7 +5,7 @@
 
   <nav id="sidebar">
     <div class="sidebar-header">
-      <h3>BookMeetingRoom</h3>
+      <h4>BookMeetingRoom</h4>
     </div>
     <div>
       <button mat-button class="sidebar-menu" routerLink="/selectDate">SelectRoom & Time</button><br>
@@ -25,15 +25,15 @@
     <button mat-raised-button class="botton-login" *ngIf="(isLoggedIn | async)" (click)="authService.logout()">LogOut</button>
 
     <div class="form-data" *ngIf="!(isLoggedIn | async)">
-      <h1>Please Login !</h1>
+      <h1 style="color:#6d7fcc;">Please Login !</h1>
     </div>
 
     <br/><br/>
 
     <div *ngIf="(isLoggedIn | async)">
       <br/>
-      <h1 align="center">SelectRoom & Time</h1>
-      <h2 style="margin-left:5%;">{{datefull.datefull}}</h2>
+      <h1 align="center" style="color:#6d7fcc;">SelectRoom & Time</h1>
+      <h2 style="color:#6d7fcc; margin-left:5%;">Date: {{datefull.datefull}}</h2>
 
 
 

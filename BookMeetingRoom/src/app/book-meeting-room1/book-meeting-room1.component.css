@@ -15,7 +15,7 @@
 }
 
 #sidebar .sidebar-header {
-    padding: 12px;
+    padding: 24px;
     background: #6d7fcc;
 }
 
@@ -71,3 +71,5 @@ table{
 .whitetable{
     background-color: white;
 }
+
+

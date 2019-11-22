@@ -32,7 +32,7 @@ counting: number ;
 fromtimesplited : Array<any>;
 totimesplited : Array<any>;
 countTime : number;
-
+spiner : boolean = false;
 public API = '//localhost:8080/BookMeetingRoom';   //for test
 //public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
 
@@ -54,7 +54,7 @@ private router: Router) {
     this.userid3 = localStorage.getItem('userid');
     this.service.findDate(this.date).subscribe(data=>{
     this.report = data;
-    console.log(data);
+    //console.log(data);
     this.appendTime();
     })
   }
@@ -85,11 +85,12 @@ SubmitData(){
         this.totime = null ;
       }
      else{
+      this.spiner = true;
      this.http.post(this.API + '/'+this.userid3 +'/' + this.fromtimeSelect +'/' + this.totime + '/' + this.tel
      + '/' + this.topic+ '/' + this.atten+ '/' + this.remark+ '/' + this.roomname+ '/' + this.date,{})
                              .subscribe(
                                data => {
-                                   console.log('PUT Request is successful', data);
+                                   console.log('PUT Request is successful');
                                    alert("จองสำเร็จ");
                                    this.router.navigate(['selectRoom',{datefull: this.date}]);
                                },
@@ -1162,10 +1163,10 @@ public appendTime(){
           }
         }
     }
-console.log(this.timeofweekOTSF2);
-console.log(this.timeofweekR1WH7F2);
-console.log(this.timeofweekR2WH7F2);
-console.log(this.timeofweekWH2F2);
+//console.log(this.timeofweekOTSF2);
+//console.log(this.timeofweekR1WH7F2);
+//console.log(this.timeofweekR2WH7F2);
+//console.log(this.timeofweekWH2F2);
 }
 
 }

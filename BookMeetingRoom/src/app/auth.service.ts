@@ -3,7 +3,7 @@ import { BehaviorSubject, Observable } from "rxjs";
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import {Component, Inject} from '@angular/core';
 import { ServiceService } from './Service/service.service';
-
+import { Router } from '@angular/router';
 export interface DialogData {
 animal: string;
 name: string;
@@ -36,14 +36,16 @@ isLoggedIn() : Observable<boolean> {
   login(id: String, password: String) : void {
 
     this.service.getUserPassword(id,password).subscribe(data=>{
-          console.log(data)
+          console.log('Login Success!');
               if(data!=null){
 
                   alert("Login Success !");
                   localStorage.setItem('tokenid', 'JWT');
                   this.isLoginSubject.next(true);
                   localStorage.setItem('userid', data.userid);
+                  localStorage.setItem('nameid', data.username);
                   //console.log(localStorage.getItem('userid'));
+                  window.location.reload(true);
               }
               else{
                 alert("id/password incorrect !");
@@ -57,7 +59,7 @@ isLoggedIn() : Observable<boolean> {
   callDialog() : void{
       const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
       width: '400px',
-      height: '300px'
+      height: '350px'
     });
   }
 
@@ -67,7 +69,9 @@ isLoggedIn() : Observable<boolean> {
   logout() : void {
     localStorage.removeItem('tokenid');
     localStorage.removeItem('userid');
+    localStorage.removeItem('nameid');
     this.isLoginSubject.next(false);
+    this.router.navigate(['']);
   }
 
   /**
@@ -81,7 +85,7 @@ isLoggedIn() : Observable<boolean> {
 
 
 
-  constructor(public dialog: MatDialog , private service : ServiceService) { }
+  constructor(public dialog: MatDialog , private service : ServiceService, private router: Router) { }
 }
 
 

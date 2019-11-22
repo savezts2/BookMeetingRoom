@@ -6,12 +6,13 @@ import { BookMeetingRoom1Component } from './book-meeting-room1/book-meeting-roo
 import { DataFormComponent } from './data-form/data-form.component';
 import { SelectRoomComponent } from './select-room/select-room.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-
+import { DashboardtableComponent } from './dashboardtable/dashboardtable.component';
 const routes: Routes = [
     { path: 'selectRoom', component: SelectRoomComponent },
     { path: 'selectDate', component: BookMeetingRoom1Component },
     { path: 'data-form', component: DataFormComponent },
     { path: 'dashboard', component: DashboardComponent },
+{ path: 'dashboardTable', component: DashboardtableComponent },
     { path: '', redirectTo: '/selectDate', pathMatch: 'full' }
 ];
 

@@ -14,6 +14,7 @@ import java.util.Collection;
 public interface UsersRepository extends JpaRepository<Users,Long> {
 
     Users findByuseridAndPassword(String userid, String password);
+
     Users findByuserid(String userid);
 
 }
