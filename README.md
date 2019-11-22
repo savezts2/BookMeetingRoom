@@ -2,11 +2,9 @@
 
 ## Maven
 
-**mvnw spring-boot:run
+**mvnw spring-boot:run**
 
-cd BookMeetingRoom
-npm install
+## Angular
 
-cd ..
-cd demo
-mvnw spring-boot:run
+**npm install**
+**ng serve**
