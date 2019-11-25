@@ -39,7 +39,7 @@ export class SelectRoomComponent implements OnInit {
 
     this.service.findDate(this.datefull.datefull).subscribe(data=>{
     this.report = data;
-    //console.log(data);
+    console.log(data);
     this.appendTime();
     })
 
@@ -114,7 +114,7 @@ export class SelectRoomComponent implements OnInit {
 //show datatable
  public appendTime(){
     for(let i = 0 ; i < this.report.length ; i++){
-
+      if(this.report[i].isActive == "1"){
         // Office TSP Second Floor 2
         if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2'){
           for(let j =0 ; j < this.timeofweekOTSF2.length; j++){
@@ -1057,5 +1057,5 @@ export class SelectRoomComponent implements OnInit {
 //console.log(this.timeofweekR2WH7F2);
 //console.log(this.timeofweekWH2F2);
  }
-
+}
 }

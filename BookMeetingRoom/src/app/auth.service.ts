@@ -104,6 +104,7 @@ isLoggedInHR() : Observable<boolean> {
    * Log out the user then tell all the subscribers about the new status
    */
   logout() : void {
+    this.router.navigate(['selectDate']);
     localStorage.removeItem('tokenid');
     localStorage.removeItem('tokenidadmin');
     localStorage.removeItem('tokenidhr');
@@ -114,7 +115,6 @@ isLoggedInHR() : Observable<boolean> {
     this.isLoginHR.next(false);
     this.isLoginAdmin.next(false);
 
-    this.router.navigate(['selectDate']);
     window.location.reload(true);
   }
 

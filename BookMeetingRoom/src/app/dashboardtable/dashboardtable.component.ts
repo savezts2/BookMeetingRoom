@@ -1571,7 +1571,7 @@ timeofweekWH2F2Day31 = [
 
 public appendTime(){
     for(let i = 0 ; i < this.report.length ; i++){
-
+      if(this.report[i].isActive == "1"){
         if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day01.length; j++){
             if(this.timeofweekOTSF2Day01[j].roomid == 0){
@@ -29751,7 +29751,7 @@ public appendTime(){
            }
 
 
-
+    }
 
     } //close loop
 
