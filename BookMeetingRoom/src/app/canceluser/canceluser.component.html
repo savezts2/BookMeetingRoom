@@ -13,9 +13,7 @@
     <div  *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)">
       <button mat-button class="sidebar-menu" routerLink="/dashboard">Dashboard</button><br>
     </div>
-    <div  *ngIf="(isLoggedInAdmin | async) || (isLoggedInHR | async)" >
-      <button mat-button class="sidebar-menu" routerLink="/cancelbooking">CancelBooking</button><br>
-    </div>
+
     <div  *ngIf="(isLoggedInAdmin | async)">
       <button mat-button class="sidebar-menu" routerLink="/adduserbyadmin">AddUser</button><br>
     </div>

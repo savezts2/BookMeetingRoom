@@ -4,7 +4,7 @@ import { Observable } from "rxjs";
 import { Router } from '@angular/router';
 import { ServiceService } from '../Service/service.service';
 import {ActivatedRoute} from "@angular/router";
-
+import { HttpClient} from '@angular/common/http';
 @Component({
   selector: 'app-select-room',
   templateUrl: './select-room.component.html',
@@ -22,8 +22,10 @@ export class SelectRoomComponent implements OnInit {
 
 
     datefull :any={}
+public API = '//localhost:8080/BookMeetingRoom';   //for test
+//public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
 
-   constructor(public authService : AuthService , private router: Router, private service : ServiceService,
+   constructor(public authService : AuthService , private router: Router, private service : ServiceService,private http: HttpClient,
    private route:ActivatedRoute) {
       this.isLoggedIn = authService.isLoggedIn();
       this.isLoggedInAdmin = authService.isLoggedInAdmin();
@@ -51,6 +53,32 @@ export class SelectRoomComponent implements OnInit {
     //console.log(time);
       //console.log(this.datefull.datefull);
     this.router.navigate(['data-form',{roomname:room,roomtime:time,date:this.datefull.datefull}]);
+  }
+
+   Reserved(room,time){
+    if(localStorage.getItem('tokenidadmin') == "JWT" || localStorage.getItem('tokenidhr') == "JWT"){
+
+     this.http.post(this.API + '/CancelBooking/'+this.datefull.datefull +'/' + room +'/' + time ,{})
+                             .subscribe(
+                               data => {
+                                   console.log('PUT Request is successful');
+                                   alert("Cancel Success");
+                                    window.location.reload();
+                               },
+                               error => {
+                                   console.log('Error', error);
+                               }
+                              );
+      //console.log(this.datefull.datefull);
+      //console.log(room);
+      //console.log(time);
+    }else{
+      alert("This room cannot be reserved.");
+    }
+  }
+
+  CancelBooking(){
+
   }
 
 
@@ -108,9 +136,9 @@ export class SelectRoomComponent implements OnInit {
   ];
 
 
-  Reserved(){
-    alert("ห้องไม่ว่างไม่สามารถจองได้");
-  }
+
+
+
 //show datatable
  public appendTime(){
     for(let i = 0 ; i < this.report.length ; i++){
@@ -1052,10 +1080,10 @@ export class SelectRoomComponent implements OnInit {
           }
         }
     }
-//console.log(this.timeofweekOTSF2);
-//console.log(this.timeofweekR1WH7F2);
-//console.log(this.timeofweekR2WH7F2);
-//console.log(this.timeofweekWH2F2);
+console.log(this.timeofweekOTSF2);
+console.log(this.timeofweekR1WH7F2);
+console.log(this.timeofweekR2WH7F2);
+console.log(this.timeofweekWH2F2);
  }
 }
 }

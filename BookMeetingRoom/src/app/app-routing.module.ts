@@ -8,7 +8,7 @@ import { SelectRoomComponent } from './select-room/select-room.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DashboardtableComponent } from './dashboardtable/dashboardtable.component';
 import { AdduserbyadminComponent } from './adduserbyadmin/adduserbyadmin.component';
-import { CancelbookingComponent } from './cancelbooking/cancelbooking.component';
+
 import { CanceluserComponent } from './canceluser/canceluser.component';
 const routes: Routes = [
     { path: 'selectRoom', component: SelectRoomComponent },
@@ -17,7 +17,6 @@ const routes: Routes = [
     { path: 'dashboard', component: DashboardComponent },
     { path: 'dashboardTable', component: DashboardtableComponent },
     { path: 'adduserbyadmin', component: AdduserbyadminComponent },
-    { path: 'cancelbooking', component: CancelbookingComponent },
     { path: 'canceluser', component: CanceluserComponent },
     { path: '', redirectTo: '/selectDate', pathMatch: 'full' }
 ];

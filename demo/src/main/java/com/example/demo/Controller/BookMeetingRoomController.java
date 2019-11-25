@@ -34,6 +34,19 @@ public class BookMeetingRoomController {
         return this.bookMeetingRoomRepository.getBookmaster(date);
     }
 
+    @PostMapping(path = "/BookMeetingRoom/CancelBooking/{dateBookMeetingRoom}/{roomname}/{starttime}")
+    public BookMeetingRoom bookMeetingRoom2(@PathVariable String dateBookMeetingRoom, @PathVariable String roomname, @PathVariable String starttime) {
+        BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findByDateBookMeetingRoomAndRoomnameAndStarttimeAndIsActive(dateBookMeetingRoom,roomname,starttime,"1");
+        bookMeetingRoom.setIsActive("0");
+        bookMeetingRoomRepository.save(bookMeetingRoom);
+        Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
+        report.setIsActive("0");
+        reportRepository.save(report);
+        return bookMeetingRoom;
+    }
+
+
+
 
     @PostMapping(path = "/BookMeetingRoom/{userid}/{fromtime}/{totime}/{tel}/{topic}/{atten}/{remark}/{roomname}/{date}")
     public BookMeetingRoom bookMeetingRoom(@PathVariable String userid, @PathVariable String fromtime, @PathVariable String totime,

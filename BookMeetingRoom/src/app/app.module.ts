@@ -26,7 +26,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { DashboardtableComponent } from './dashboardtable/dashboardtable.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { AdduserbyadminComponent } from './adduserbyadmin/adduserbyadmin.component';
-import { CancelbookingComponent } from './cancelbooking/cancelbooking.component';
+
 import { CanceluserComponent } from './canceluser/canceluser.component';
 @NgModule({
   declarations: [
@@ -38,7 +38,6 @@ import { CanceluserComponent } from './canceluser/canceluser.component';
     DashboardComponent,
     DashboardtableComponent,
     AdduserbyadminComponent,
-    CancelbookingComponent,
     CanceluserComponent
   ],
   imports: [

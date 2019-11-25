@@ -13,9 +13,7 @@
     <div  *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)">
       <button mat-button class="sidebar-menu" routerLink="/dashboard">Dashboard</button><br>
     </div>
-    <div  *ngIf="(isLoggedInAdmin | async) || (isLoggedInHR | async)" >
-      <button mat-button class="sidebar-menu" routerLink="/cancelbooking">CancelBooking</button><br>
-    </div>
+
     <div  *ngIf="(isLoggedInAdmin | async)">
       <button mat-button class="sidebar-menu" routerLink="/adduserbyadmin">AddUser</button><br>
     </div>
@@ -73,7 +71,7 @@
            <th>
              Office TSP Second Floor 2
            </th>
-           <td *ngFor="let time of timeofweekOTSF2" [attr.colspan]="time.id" [attr.bgcolor] = "time.color" (click)="time.checkReservations ? Reserved() : selectTable(time.roomname,time.time)">
+           <td *ngFor="let time of timeofweekOTSF2" [attr.colspan]="time.id" [attr.bgcolor] = "time.color" (click)="time.checkReservations ? Reserved(time.roomname,time.time) : selectTable(time.roomname,time.time)">
               <div *ngIf="time.showlabel">
                     <font color="white">
                     Booking by: {{time.byname}}<br>
@@ -92,7 +90,7 @@
            <th>
              Room1 WH7 Second Floor 2
            </th>
-           <td *ngFor="let time of timeofweekR1WH7F2" [attr.colspan]="time.id" [attr.bgcolor] = "time.color" (click)="selectTable(time.roomname,time.time)">
+           <td *ngFor="let time of timeofweekR1WH7F2" [attr.colspan]="time.id" [attr.bgcolor] = "time.color" (click)="time.checkReservations ? Reserved(time.roomname,time.time) : selectTable(time.roomname,time.time)">
              <div *ngIf="time.showlabel">
                <font color="white">
                  Booking by: {{time.byname}}<br>
@@ -110,7 +108,7 @@
            <th>
              Room2 WH7 Second Floor 2
            </th>
-           <td *ngFor="let time of timeofweekR2WH7F2" [attr.colspan]="time.id" [attr.bgcolor] = "time.color" (click)="selectTable(time.roomname,time.time)">
+           <td *ngFor="let time of timeofweekR2WH7F2" [attr.colspan]="time.id" [attr.bgcolor] = "time.color" (click)="time.checkReservations ? Reserved(time.roomname,time.time) : selectTable(time.roomname,time.time)">
              <div *ngIf="time.showlabel">
                <font color="white">
                  Booking by: {{time.byname}}<br>
@@ -128,7 +126,7 @@
            <th>
              WH2 Second Floor 2
            </th>
-           <td *ngFor="let time of timeofweekWH2F2" [attr.colspan]="time.id" [attr.bgcolor] = "time.color" (click)="selectTable(time.roomname,time.time)">
+           <td *ngFor="let time of timeofweekWH2F2" [attr.colspan]="time.id" [attr.bgcolor] = "time.color" (click)="time.checkReservations ? Reserved(time.roomname,time.time) : selectTable(time.roomname,time.time)">
              <div *ngIf="time.showlabel">
                <font color="white">
                  Booking by: {{time.byname}}<br>

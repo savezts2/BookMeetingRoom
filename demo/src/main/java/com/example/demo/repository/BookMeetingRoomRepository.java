@@ -19,4 +19,6 @@ public interface BookMeetingRoomRepository extends JpaRepository<BookMeetingRoom
     @Query(value = "SELECT * FROM book_meeting_room WHERE date_book_meeting_room = :date_book_meeting_room",nativeQuery = true)
     Collection<BookMeetingRoom> getBookmaster(@Param("date_book_meeting_room") String date_book_meeting_room );
     //BookMeetingRoom findByDateBookMeetingRoom(String dateBookMeetingRoom);
+
+    BookMeetingRoom findByDateBookMeetingRoomAndRoomnameAndStarttimeAndIsActive(String dateBookMeetingRoom , String roomname, String starttime, String IsActive);
 }
