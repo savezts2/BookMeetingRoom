@@ -25,6 +25,10 @@ export class ServiceService {
       return this.http.post(this.API+'/Report/'+startdate+'/'+enddate,{})
   }
 
+findUserid(userid : String){
+    return this.http.post(this.API+'/Userid/'+userid,{})
+}
+
 
 
 }

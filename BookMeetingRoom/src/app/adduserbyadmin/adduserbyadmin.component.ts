@@ -37,8 +37,18 @@ constructor( public authService : AuthService,private router: Router , private s
   }
 
 submit(){
-    this.http.post(this.API + '/Adduser/'+this.username +'/' + this.lastname +'/' + this.department + '/' + this.position
-     + '/' + this.userid+ '/' + this.password+ '/' + this.status,{})
+     this.service.findUserid(this.userid).subscribe(data=>{
+        if(data != null){
+          alert("This userid already exists in the system.");
+          this.userid = null ;
+        }else{
+            if(this.username == null || this.lastname == null || this.department == null || this.position == null ||
+                this.userid == null || this.password == null || this. status == null){
+                alert("Please fill out all information.");
+            }else{
+
+                this.http.post(this.API + '/Adduser/'+this.username +'/' + this.lastname +'/' + this.department + '/' + this.position
+                  + '/' + this.userid+ '/' + this.password+ '/' + this.status,{})
                              .subscribe(
                                data => {
                                    console.log('PUT Request is successful');
@@ -49,6 +59,10 @@ submit(){
                                    console.log('Error', error);
                                }
                               );
+            }
+        }
+    })
+
 
 }
 

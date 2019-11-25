@@ -25,6 +25,11 @@ public class UsersController {
         return this.usersRepository.findByuseridAndPassword(userid,password);
     }
 
+    @PostMapping("/BookMeetingRoom/Userid/{userid}")
+    public  Users users(@PathVariable String userid){
+        return this.usersRepository.findByuserid(userid);
+    }
+
     @PostMapping(path = "/BookMeetingRoom/Adduser/{username}/{lastname}/{department}/{position}/{userid}/{password}/{status}")
     public Users users(@PathVariable String username, @PathVariable String lastname, @PathVariable String department, @PathVariable String position,
                        @PathVariable String userid,@PathVariable String password,@PathVariable String status) {
