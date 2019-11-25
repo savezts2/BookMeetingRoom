@@ -66,7 +66,7 @@ public class BookMeetingRoomController {
         bookMeetingRoom.setIsActive("1");
         bookMeetingRoomRepository.save(bookMeetingRoom);
 
-        Users users = usersRepository.findByuserid(userid);
+        Users users = usersRepository.findByUsername(userid);
 
 
         Report report = new Report();

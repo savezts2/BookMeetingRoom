@@ -18,11 +18,11 @@ public class Users {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_seq")
     private Long user_id;
 
-    private String Username;
+    private String firstname;
 
     private String Lastname;
 
-    private String userid;
+    private String username;
 
     private String password;
 
@@ -34,6 +34,22 @@ public class Users {
 
     private String status;
 
+
+    public String getFirstname() {
+        return firstname;
+    }
+
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
     public String getDepartment() {
         return department;
@@ -75,13 +91,7 @@ public class Users {
         this.user_id = user_id;
     }
 
-    public String getUsername() {
-        return Username;
-    }
 
-    public void setUsername(String username) {
-        Username = username;
-    }
 
     public String getLastname() {
         return Lastname;
@@ -92,13 +102,7 @@ public class Users {
     }
 
 
-    public String getUserid() {
-        return userid;
-    }
 
-    public void setUserid(String userid) {
-        this.userid = userid;
-    }
 
     public String getPassword() {
         return password;

@@ -29,6 +29,10 @@ findUserid(userid : String){
     return this.http.post(this.API+'/Userid/'+userid,{})
 }
 
+public getUserid(userid : String): Observable<any> {
+                 return this.http.post(this.API + '/Userid/'+userid,{});
+               }
+
 
 
 }

@@ -13,8 +13,8 @@ import java.util.Collection;
 @CrossOrigin(origins = "*")
 public interface UsersRepository extends JpaRepository<Users,Long> {
 
-    Users findByuseridAndPassword(String userid, String password);
+    Users findByUsernameAndPassword(String username, String password);
 
-    Users findByuserid(String userid);
+    Users findByUsername(String username);
 
 }

@@ -38,10 +38,70 @@
       <h1 style="color:#6d7fcc;">Please Login !</h1>
     </div>
 
-    <br/><br/>
+    <br/><br/><br/>
 
     <div *ngIf="(isLoggedInAdmin | async)">
-      asdsad
+
+      <h1 style="color:#6d7fcc; margin-left:5%;">Cancel User</h1>
+
+      <div align="center">
+
+      <mat-form-field>
+        <input matInput placeholder="Userid" [(ngModel)]="userid">
+      </mat-form-field>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <button mat-raised-button color="primary" (click)="search()">Search</button>
+      </div>
+
+
+     <table border="1" bgcolor="black" align="center">
+       <tr class="greentable">
+         <th>User_id</th><th>Firstname</th><th>Lastname</th><th>Username</th><th>Department</th><th>Position</th><th>Status</th><th>IsActive</th>
+       </tr>
+       <tr class="whitetable">
+        <td>
+          {{user_id}}
+        </td>
+         <td>
+           {{username}}
+         </td>
+         <td>
+           {{lastname}}
+         </td>
+         <td>
+           {{useridbase}}
+         </td>
+         <td>
+           {{department}}
+         </td>
+         <td>
+           {{position}}
+         </td>
+         <td>
+           {{status}}
+         </td>
+         <td>
+           {{isactive}}
+         </td>
+       </tr>
+     </table>
+      <br/><br/>
+
+        <div align="center">
+
+      <mat-radio-group [(ngModel)]="func">
+        <mat-radio-button value="IsActive">Active</mat-radio-button>&nbsp;&nbsp;&nbsp;&nbsp;
+        <mat-radio-button value="Don't Active">UnActive</mat-radio-button>
+      </mat-radio-group>
+
+        </div>
+
+      <br/><br/>
+      <div align="center">
+      <button mat-raised-button color="primary" (click)="submit()">Submit</button>&nbsp;&nbsp;
+      <button mat-raised-button color="primary" (click)="reset()">reset</button>
+
+      </div>
     </div>
 
   </div>

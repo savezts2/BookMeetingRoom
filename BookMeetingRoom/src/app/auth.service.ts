@@ -59,8 +59,8 @@ isLoggedInHR() : Observable<boolean> {
                       alert("Login Success !");
                       localStorage.setItem('tokenidadmin', 'JWT');
                       this.isLoginAdmin.next(true);
-                      localStorage.setItem('userid', data.userid);
-                      localStorage.setItem('nameid', data.username);
+                      localStorage.setItem('userid', data.username);
+                      localStorage.setItem('nameid', data.firstname);
                       window.location.reload(true);
                      // console.log("admin");
 
@@ -68,8 +68,8 @@ isLoggedInHR() : Observable<boolean> {
                       alert("Login Success !");
                       localStorage.setItem('tokenidhr', 'JWT');
                       this.isLoginHR.next(true);
-                      localStorage.setItem('userid', data.userid);
-                      localStorage.setItem('nameid', data.username);
+                      localStorage.setItem('userid', data.username);
+                      localStorage.setItem('nameid', data.firstname);
                       window.location.reload(true);
                     //  console.log("HR");
                   }
@@ -77,8 +77,8 @@ isLoggedInHR() : Observable<boolean> {
                     alert("Login Success !");
                      localStorage.setItem('tokenid', 'JWT');
                      this.isLoginSubject.next(true);
-                     localStorage.setItem('userid', data.userid);
-                     localStorage.setItem('nameid', data.username);
+                     localStorage.setItem('userid', data.username);
+                     localStorage.setItem('nameid', data.firstname);
                      window.location.reload(true);
                   //   console.log("user");
                   }
@@ -115,7 +115,7 @@ isLoggedInHR() : Observable<boolean> {
     this.isLoginHR.next(false);
     this.isLoginAdmin.next(false);
 
-    window.location.reload(true);
+
   }
 
   /**
