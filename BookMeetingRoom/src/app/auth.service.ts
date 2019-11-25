@@ -3,6 +3,7 @@ import { BehaviorSubject, Observable } from "rxjs";
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import {Component, Inject} from '@angular/core';
 import { ServiceService } from './Service/service.service';
+
 import { Router } from '@angular/router';
 export interface DialogData {
 animal: string;
@@ -14,18 +15,32 @@ name: string;
 })
 
 export class AuthService {
-isLoginSubject = new BehaviorSubject<boolean>(this.hasTokenId());
 
+isLoginSubject = new BehaviorSubject<boolean>(this.hasTokenId());
+isLoginHR = new BehaviorSubject<boolean>(this.hasTokenIdHR());
+isLoginAdmin = new BehaviorSubject<boolean>(this.hasTokenIdAdmin());
+isLoginUser = new BehaviorSubject<boolean>(this.hasTokenIdUser());
 /**
 *
 * @returns {Observable<T>}
 */
+
+isLoggedInAdmin() : Observable<boolean> {
+    return this.isLoginAdmin.asObservable();
+  }
 
 isLoggedIn() : Observable<boolean> {
     return this.isLoginSubject.asObservable();
   }
 
 
+isLoggedInHR() : Observable<boolean> {
+    return this.isLoginHR.asObservable();
+  }
+
+isLoggedInUser() : Observable<boolean> {
+    return this.isLoginUser.asObservable();
+  }
 
   /**
    *  Login the user then tell all the subscribers about the new status
@@ -36,16 +51,32 @@ isLoggedIn() : Observable<boolean> {
   login(id: String, password: String) : void {
 
     this.service.getUserPassword(id,password).subscribe(data=>{
-          console.log('Login Success!');
+              console.log(data);
               if(data!=null){
+                  if(data.isActive == "0"){
+                      alert("this id hasn't active please contact IT Support");
+                  }
+                  else{
+                  if(data.status == "admin"){
+                      alert("Login Success !");
+                      localStorage.setItem('tokenidadmin', 'JWT');
+                      this.isLoginAdmin.next(true);
+                      localStorage.setItem('userid', data.userid);
+                      localStorage.setItem('nameid', data.username);
+                      window.location.reload(true);
+                      console.log("admin");
 
-                  alert("Login Success !");
-                  localStorage.setItem('tokenid', 'JWT');
-                  this.isLoginSubject.next(true);
-                  localStorage.setItem('userid', data.userid);
-                  localStorage.setItem('nameid', data.username);
-                  //console.log(localStorage.getItem('userid'));
-                  window.location.reload(true);
+                  }
+                  else{
+                    alert("Login Success !");
+                     localStorage.setItem('tokenid', 'JWT');
+                     this.isLoginSubject.next(true);
+                     localStorage.setItem('userid', data.userid);
+                     localStorage.setItem('nameid', data.username);
+                     window.location.reload(true);
+                     console.log("user");
+                  }
+                  }
               }
               else{
                 alert("id/password incorrect !");
@@ -68,9 +99,15 @@ isLoggedIn() : Observable<boolean> {
    */
   logout() : void {
     localStorage.removeItem('tokenid');
+    localStorage.removeItem('tokenidadmin');
+    localStorage.removeItem('tokenidhr');
+    localStorage.removeItem('tokeniduser');
     localStorage.removeItem('userid');
     localStorage.removeItem('nameid');
     this.isLoginSubject.next(false);
+    this.isLoginHR.next(false);
+    this.isLoginAdmin.next(false);
+    this.isLoginUser.next(false);
     this.router.navigate(['']);
   }
 
@@ -81,6 +118,18 @@ isLoggedIn() : Observable<boolean> {
 
   private hasTokenId() : boolean {
     return !!localStorage.getItem('tokenid');
+  }
+
+private hasTokenIdAdmin() : boolean {
+    return !!localStorage.getItem('tokenidadmin');
+  }
+
+private hasTokenIdHR() : boolean {
+    return !!localStorage.getItem('tokenidhr');
+  }
+
+private hasTokenIdUser() : boolean {
+    return !!localStorage.getItem('tokeniduser');
   }
 
 

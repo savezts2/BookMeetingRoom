@@ -31,6 +31,16 @@ public class Report {
 
     private String date;
 
+    private String isActive;
+
+    public String getIsActive() {
+        return isActive;
+    }
+
+    public void setIsActive(String isActive) {
+        this.isActive = isActive;
+    }
+
     public Long getReport_id() {
         return report_id;
     }
@@ -70,4 +80,5 @@ public class Report {
     public void setDate(String date) {
         this.date = date;
     }
+
 }

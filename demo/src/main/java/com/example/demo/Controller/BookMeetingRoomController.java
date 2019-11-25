@@ -50,6 +50,7 @@ public class BookMeetingRoomController {
         bookMeetingRoom.setLengthtime(length);
         bookMeetingRoom.setRoomname(roomname);
         bookMeetingRoom.setDateBookMeetingRoom(date);
+        bookMeetingRoom.setIsActive("1");
         bookMeetingRoomRepository.save(bookMeetingRoom);
 
         Users users = usersRepository.findByuserid(userid);
@@ -66,6 +67,7 @@ public class BookMeetingRoomController {
         String fullPatternyear = dateSplit[0] + '-' + dateSplit[1] + '-' + String.valueOf(yearSplit);
         Date date2=formatter2.parse(fullPatternyear);
         report.setDateBook(date2);
+        report.setIsActive("1");
         reportRepository.save(report);
 
         return bookMeetingRoom;

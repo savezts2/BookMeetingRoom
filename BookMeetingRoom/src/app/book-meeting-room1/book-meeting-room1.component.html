@@ -6,10 +6,11 @@
     <div class="sidebar-header">
       <h4>BookMeetingRoom</h4>
     </div>
-    <div>
+
+    <div *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async)" >
       <button mat-button class="sidebar-menu" routerLink="/selectDate">SelectRoom & Time</button><br>
     </div>
-    <div>
+    <div  *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async)">
       <button mat-button class="sidebar-menu" routerLink="/dashboard">Dashboard</button><br>
     </div>
 
@@ -21,19 +22,19 @@
   <div class="card-header" >
     <div>
 
-    <button mat-raised-button class="botton-login" *ngIf="!(isLoggedIn | async)" (click)="authService.callDialog()">Login</button>
-    <button mat-raised-button class="botton-login" *ngIf="(isLoggedIn | async)" (click)="authService.logout()">LogOut</button>
+    <button mat-raised-button class="botton-login" *ngIf="!(isLoggedIn | async) && !(isLoggedInAdmin | async)" (click)="authService.callDialog()">Login</button>
+    <button mat-raised-button class="botton-login" *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async)" (click)="authService.logout()">LogOut</button>
 
     </div>
 
-    <div class="form-data" *ngIf="!(isLoggedIn | async)">
+    <div class="form-data" *ngIf="!(isLoggedIn | async) && !(isLoggedInAdmin | async)">
       <br/><br/><br/><br/>
         <h1 style="color:#6d7fcc;">Please Login !</h1>
     </div>
 
     <br/><br/>
 
-    <div *ngIf="(isLoggedIn | async)">
+    <div *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async)">
       <br/>
 
       <h1 style="margin-left: 130px; color:#6d7fcc;">Hello! {{nameLogin}} Please SelectDate</h1>

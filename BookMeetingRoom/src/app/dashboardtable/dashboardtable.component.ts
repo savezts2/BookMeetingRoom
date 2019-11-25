@@ -3,12 +3,13 @@ import { AuthService } from '../auth.service';
 import { Observable } from "rxjs";
 import { Router } from '@angular/router';
 import { ServiceService } from '../Service/service.service';
+import { DashboardService } from './dashboard.service';
 import {ActivatedRoute} from "@angular/router";
 
 @Component({
-  selector: 'app-dashboardtable',
-  templateUrl: './dashboardtable.component.html',
-  styleUrls: ['./dashboardtable.component.css']
+selector: 'app-dashboardtable',
+templateUrl: './dashboardtable.component.html',
+styleUrls: ['./dashboardtable.component.css']
 })
 export class DashboardtableComponent implements OnInit {
 
@@ -22,8 +23,8 @@ counting: number ;
 
 
 dateSelectMonth: Array<any>;
-  constructor(public authService : AuthService , private router: Router, private service : ServiceService,
-   private route:ActivatedRoute) {
+constructor(public authService : AuthService , private router: Router, private service : ServiceService,
+   private route:ActivatedRoute , private dashboardService : DashboardService) {
         this.isLoggedIn = authService.isLoggedIn();
    }
 
@@ -22698,9 +22699,7058 @@ public appendTime(){
 
 
 
+
+
+
+      ///Room4//
+
+
+
+
+
+
+
+
+            else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+          for(let j =0 ; j < this.timeofweekWH2F2Day01.length; j++){
+            if(this.timeofweekWH2F2Day01[j].roomid == 0){
+              this.timeofweekWH2F2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+              this.timeofweekWH2F2Day01[j].color = 'red' ;
+              this.timeofweekWH2F2Day01[j].showlabel = true;
+              this.timeofweekWH2F2Day01[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekWH2F2Day01[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekWH2F2Day01[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekWH2F2Day01[j].checkReservations = true ;
+              if(this.timeofweekWH2F2Day01[j].id > 1){
+                   this.counting = j+1 ;
+                   for(let k = 1 ; k < this.timeofweekWH2F2Day01[j].id   ; k++){
+                      this.timeofweekWH2F2Day01.splice(this.counting,1);
+                   }
+              }
+              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekWH2F2Day01[j].showremark = true;
+                this.timeofweekWH2F2Day01[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
+            }
+          }
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+          for(let j =0 ; j < this.timeofweekWH2F2Day01.length; j++){
+            if(this.timeofweekWH2F2Day01[j].roomid == 1){
+              this.timeofweekWH2F2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+              this.timeofweekWH2F2Day01[j].color = 'red' ;
+              this.timeofweekWH2F2Day01[j].showlabel = true;
+              this.timeofweekWH2F2Day01[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekWH2F2Day01[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekWH2F2Day01[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekWH2F2Day01[j].checkReservations = true ;
+              if(this.timeofweekWH2F2Day01[j].id > 1){
+                   this.counting = j+1 ;
+                   for(let k = 1 ; k < this.timeofweekWH2F2Day01[j].id   ; k++){
+                      this.timeofweekWH2F2Day01.splice(this.counting,1);
+                   }
+              }
+              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekWH2F2Day01[j].showremark = true;
+                this.timeofweekWH2F2Day01[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
+            }
+          }
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+          for(let j =0 ; j < this.timeofweekWH2F2Day01.length; j++){
+            if(this.timeofweekWH2F2Day01[j].roomid == 2){
+              this.timeofweekWH2F2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+              this.timeofweekWH2F2Day01[j].color = 'red' ;
+              this.timeofweekWH2F2Day01[j].showlabel = true;
+              this.timeofweekWH2F2Day01[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekWH2F2Day01[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekWH2F2Day01[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekWH2F2Day01[j].checkReservations = true ;
+              if(this.timeofweekWH2F2Day01[j].id > 1){
+                   this.counting = j+1 ;
+                   for(let k = 1 ; k < this.timeofweekWH2F2Day01[j].id   ; k++){
+                      this.timeofweekWH2F2Day01.splice(this.counting,1);
+                   }
+              }
+              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekWH2F2Day01[j].showremark = true;
+                this.timeofweekWH2F2Day01[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
+            }
+          }
+
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+          for(let j =0 ; j < this.timeofweekWH2F2Day01.length; j++){
+            if(this.timeofweekWH2F2Day01[j].roomid == 3){
+              this.timeofweekWH2F2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+              this.timeofweekWH2F2Day01[j].color = 'red' ;
+              this.timeofweekWH2F2Day01[j].showlabel = true;
+              this.timeofweekWH2F2Day01[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekWH2F2Day01[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekWH2F2Day01[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekWH2F2Day01[j].checkReservations = true ;
+              if(this.timeofweekWH2F2Day01[j].id > 1){
+                   this.counting = j+1 ;
+                   for(let k = 1 ; k < this.timeofweekWH2F2Day01[j].id   ; k++){
+                      this.timeofweekWH2F2Day01.splice(this.counting,1);
+                   }
+              }
+              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekWH2F2Day01[j].showremark = true;
+                this.timeofweekWH2F2Day01[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
+            }
+          }
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+          for(let j =0 ; j < this.timeofweekWH2F2Day01.length; j++){
+            if(this.timeofweekWH2F2Day01[j].roomid == 4){
+              this.timeofweekWH2F2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+              this.timeofweekWH2F2Day01[j].color = 'red' ;
+              this.timeofweekWH2F2Day01[j].showlabel = true;
+              this.timeofweekWH2F2Day01[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekWH2F2Day01[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekWH2F2Day01[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekWH2F2Day01[j].checkReservations = true ;
+              if(this.timeofweekWH2F2Day01[j].id > 1){
+                   this.counting = j+1 ;
+                   for(let k = 1 ; k < this.timeofweekWH2F2Day01[j].id   ; k++){
+                      this.timeofweekWH2F2Day01.splice(this.counting,1);
+                   }
+              }
+              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekWH2F2Day01[j].showremark = true;
+                this.timeofweekWH2F2Day01[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
+            }
+          }
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+          for(let j =0 ; j < this.timeofweekWH2F2Day01.length; j++){
+            if(this.timeofweekWH2F2Day01[j].roomid == 5){
+              this.timeofweekWH2F2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+              this.timeofweekWH2F2Day01[j].color = 'red' ;
+              this.timeofweekWH2F2Day01[j].showlabel = true;
+              this.timeofweekWH2F2Day01[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekWH2F2Day01[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekWH2F2Day01[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekWH2F2Day01[j].checkReservations = true ;
+              if(this.timeofweekWH2F2Day01[j].id > 1){
+                   this.counting = j+1 ;
+                   for(let k = 1 ; k < this.timeofweekWH2F2Day01[j].id   ; k++){
+                      this.timeofweekWH2F2Day01.splice(this.counting,1);
+                   }
+              }
+              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekWH2F2Day01[j].showremark = true;
+                this.timeofweekWH2F2Day01[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
+            }
+          }
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+          for(let j =0 ; j < this.timeofweekWH2F2Day01.length; j++){
+            if(this.timeofweekWH2F2Day01[j].roomid == 6){
+              this.timeofweekWH2F2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+              this.timeofweekWH2F2Day01[j].color = 'red' ;
+              this.timeofweekWH2F2Day01[j].showlabel = true;
+              this.timeofweekWH2F2Day01[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekWH2F2Day01[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekWH2F2Day01[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekWH2F2Day01[j].checkReservations = true ;
+              if(this.timeofweekWH2F2Day01[j].id > 1){
+                   this.counting = j+1 ;
+                   for(let k = 1 ; k < this.timeofweekWH2F2Day01[j].id   ; k++){
+                      this.timeofweekWH2F2Day01.splice(this.counting,1);
+                   }
+              }
+              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekWH2F2Day01[j].showremark = true;
+                this.timeofweekWH2F2Day01[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
+            }
+          }
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+          for(let j =0 ; j < this.timeofweekWH2F2Day01.length; j++){
+            if(this.timeofweekWH2F2Day01[j].roomid == 7){
+              this.timeofweekWH2F2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+              this.timeofweekWH2F2Day01[j].color = 'red' ;
+              this.timeofweekWH2F2Day01[j].showlabel = true;
+              this.timeofweekWH2F2Day01[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekWH2F2Day01[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekWH2F2Day01[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekWH2F2Day01[j].checkReservations = true ;
+              if(this.timeofweekWH2F2Day01[j].id > 1){
+                   this.counting = j+1 ;
+                   for(let k = 1 ; k < this.timeofweekWH2F2Day01[j].id   ; k++){
+                      this.timeofweekWH2F2Day01.splice(this.counting,1);
+                   }
+              }
+              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekWH2F2Day01[j].showremark = true;
+                this.timeofweekWH2F2Day01[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
+            }
+          }
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+          for(let j =0 ; j < this.timeofweekWH2F2Day01.length; j++){
+            if(this.timeofweekWH2F2Day01[j].roomid == 8){
+              this.timeofweekWH2F2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+              this.timeofweekWH2F2Day01[j].color = 'red' ;
+              this.timeofweekWH2F2Day01[j].showlabel = true;
+              this.timeofweekWH2F2Day01[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekWH2F2Day01[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekWH2F2Day01[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekWH2F2Day01[j].checkReservations = true ;
+              if(this.timeofweekWH2F2Day01[j].id > 1){
+                   this.counting = j+1 ;
+                   for(let k = 1 ; k < this.timeofweekWH2F2Day01[j].id   ; k++){
+                      this.timeofweekWH2F2Day01.splice(this.counting,1);
+                   }
+              }
+              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekWH2F2Day01[j].showremark = true;
+                this.timeofweekWH2F2Day01[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
+            }
+          }
+        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+          for(let j =0 ; j < this.timeofweekWH2F2Day01.length; j++){
+            if(this.timeofweekWH2F2Day01[j].roomid == 9){
+              this.timeofweekWH2F2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+              this.timeofweekWH2F2Day01[j].color = 'red' ;
+              this.timeofweekWH2F2Day01[j].showlabel = true;
+              this.timeofweekWH2F2Day01[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekWH2F2Day01[j].atten = this.report[i].bookMeetingRoom.attendees ;
+              this.timeofweekWH2F2Day01[j].topic = this.report[i].bookMeetingRoom.topic ;
+              this.timeofweekWH2F2Day01[j].checkReservations = true ;
+              if(this.timeofweekWH2F2Day01[j].id > 1){
+                   this.counting = j+1 ;
+                   for(let k = 1 ; k < this.timeofweekWH2F2Day01[j].id   ; k++){
+                      this.timeofweekWH2F2Day01.splice(this.counting,1);
+                   }
+              }
+              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                this.timeofweekR1WH7F2Day01[j].showremark = true;
+                this.timeofweekR1WH7F2Day01[j].remark = this.report[i].bookMeetingRoom.remark;
+               }
+            }
+          }
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day02.length; j++){
+                 if(this.timeofweekWH2F2Day02[j].roomid == 0){
+                     this.timeofweekWH2F2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day02[j].color = 'red' ;
+                     this.timeofweekWH2F2Day02[j].showlabel = true;
+                     this.timeofweekWH2F2Day02[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day02[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day02[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day02[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day02[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day02[j].id   ; k++){
+                              this.timeofweekWH2F2Day02.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day02[j].showremark = true;
+                         this.timeofweekWH2F2Day02[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day02.length; j++){
+                 if(this.timeofweekWH2F2Day02[j].roomid == 1){
+                     this.timeofweekWH2F2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day02[j].color = 'red' ;
+                     this.timeofweekWH2F2Day02[j].showlabel = true;
+                     this.timeofweekWH2F2Day02[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day02[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day02[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day02[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day02[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day02[j].id   ; k++){
+                              this.timeofweekWH2F2Day02.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day02[j].showremark = true;
+                         this.timeofweekWH2F2Day02[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day02.length; j++){
+                 if(this.timeofweekWH2F2Day02[j].roomid == 2){
+                     this.timeofweekWH2F2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day02[j].color = 'red' ;
+                     this.timeofweekWH2F2Day02[j].showlabel = true;
+                     this.timeofweekWH2F2Day02[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day02[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day02[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day02[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day02[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day02[j].id   ; k++){
+                              this.timeofweekWH2F2Day02.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day02[j].showremark = true;
+                         this.timeofweekWH2F2Day02[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day02.length; j++){
+                 if(this.timeofweekWH2F2Day02[j].roomid == 3){
+                     this.timeofweekWH2F2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day02[j].color = 'red' ;
+                     this.timeofweekWH2F2Day02[j].showlabel = true;
+                     this.timeofweekWH2F2Day02[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day02[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day02[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day02[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day02[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day02[j].id   ; k++){
+                              this.timeofweekWH2F2Day02.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day02[j].showremark = true;
+                         this.timeofweekWH2F2Day02[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day02.length; j++){
+                 if(this.timeofweekWH2F2Day02[j].roomid == 4){
+                     this.timeofweekWH2F2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day02[j].color = 'red' ;
+                     this.timeofweekWH2F2Day02[j].showlabel = true;
+                     this.timeofweekWH2F2Day02[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day02[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day02[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day02[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day02[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day02[j].id   ; k++){
+                              this.timeofweekWH2F2Day02.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day02[j].showremark = true;
+                         this.timeofweekWH2F2Day02[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day02.length; j++){
+                 if(this.timeofweekWH2F2Day02[j].roomid == 5){
+                     this.timeofweekWH2F2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day02[j].color = 'red' ;
+                     this.timeofweekWH2F2Day02[j].showlabel = true;
+                     this.timeofweekWH2F2Day02[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day02[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day02[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day02[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day02[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day02[j].id   ; k++){
+                              this.timeofweekWH2F2Day02.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day02[j].showremark = true;
+                         this.timeofweekWH2F2Day02[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day02.length; j++){
+                 if(this.timeofweekWH2F2Day02[j].roomid == 6){
+                     this.timeofweekWH2F2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day02[j].color = 'red' ;
+                     this.timeofweekWH2F2Day02[j].showlabel = true;
+                     this.timeofweekWH2F2Day02[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day02[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day02[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day02[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day02[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day02[j].id   ; k++){
+                              this.timeofweekWH2F2Day02.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day02[j].showremark = true;
+                         this.timeofweekWH2F2Day02[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day02.length; j++){
+                 if(this.timeofweekWH2F2Day02[j].roomid == 7){
+                     this.timeofweekWH2F2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day02[j].color = 'red' ;
+                     this.timeofweekWH2F2Day02[j].showlabel = true;
+                     this.timeofweekWH2F2Day02[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day02[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day02[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day02[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day02[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day02[j].id   ; k++){
+                              this.timeofweekWH2F2Day02.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day02[j].showremark = true;
+                         this.timeofweekWH2F2Day02[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day02.length; j++){
+                 if(this.timeofweekWH2F2Day02[j].roomid == 8){
+                     this.timeofweekWH2F2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day02[j].color = 'red' ;
+                     this.timeofweekWH2F2Day02[j].showlabel = true;
+                     this.timeofweekWH2F2Day02[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day02[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day02[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day02[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day02[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day02[j].id   ; k++){
+                              this.timeofweekWH2F2Day02.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day02[j].showremark = true;
+                         this.timeofweekWH2F2Day02[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day02.length; j++){
+                 if(this.timeofweekWH2F2Day02[j].roomid == 9){
+                     this.timeofweekWH2F2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day02[j].color = 'red' ;
+                     this.timeofweekWH2F2Day02[j].showlabel = true;
+                     this.timeofweekWH2F2Day02[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day02[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day02[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day02[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day02[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day02[j].id   ; k++){
+                              this.timeofweekWH2F2Day02.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day02[j].showremark = true;
+                         this.timeofweekWH2F2Day02[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day03.length; j++){
+                 if(this.timeofweekWH2F2Day03[j].roomid == 0){
+                     this.timeofweekWH2F2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day03[j].color = 'red' ;
+                     this.timeofweekWH2F2Day03[j].showlabel = true;
+                     this.timeofweekWH2F2Day03[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day03[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day03[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day03[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day03[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day03[j].id   ; k++){
+                              this.timeofweekWH2F2Day03.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day03[j].showremark = true;
+                         this.timeofweekWH2F2Day03[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day03.length; j++){
+                 if(this.timeofweekWH2F2Day03[j].roomid == 1){
+                     this.timeofweekWH2F2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day03[j].color = 'red' ;
+                     this.timeofweekWH2F2Day03[j].showlabel = true;
+                     this.timeofweekWH2F2Day03[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day03[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day03[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day03[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day03[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day03[j].id   ; k++){
+                              this.timeofweekWH2F2Day03.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day03[j].showremark = true;
+                         this.timeofweekWH2F2Day03[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day03.length; j++){
+                 if(this.timeofweekWH2F2Day03[j].roomid == 2){
+                     this.timeofweekWH2F2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day03[j].color = 'red' ;
+                     this.timeofweekWH2F2Day03[j].showlabel = true;
+                     this.timeofweekWH2F2Day03[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day03[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day03[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day03[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day03[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day03[j].id   ; k++){
+                              this.timeofweekWH2F2Day03.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day03[j].showremark = true;
+                         this.timeofweekWH2F2Day03[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day03.length; j++){
+                 if(this.timeofweekWH2F2Day03[j].roomid == 3){
+                     this.timeofweekWH2F2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day03[j].color = 'red' ;
+                     this.timeofweekWH2F2Day03[j].showlabel = true;
+                     this.timeofweekWH2F2Day03[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day03[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day03[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day03[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day03[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day03[j].id   ; k++){
+                              this.timeofweekWH2F2Day03.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day03[j].showremark = true;
+                         this.timeofweekWH2F2Day03[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day03.length; j++){
+                 if(this.timeofweekWH2F2Day03[j].roomid == 4){
+                     this.timeofweekWH2F2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day03[j].color = 'red' ;
+                     this.timeofweekWH2F2Day03[j].showlabel = true;
+                     this.timeofweekWH2F2Day03[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day03[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day03[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day03[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day03[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day03[j].id   ; k++){
+                              this.timeofweekWH2F2Day03.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day03[j].showremark = true;
+                         this.timeofweekWH2F2Day03[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day03.length; j++){
+                 if(this.timeofweekWH2F2Day03[j].roomid == 5){
+                     this.timeofweekWH2F2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day03[j].color = 'red' ;
+                     this.timeofweekWH2F2Day03[j].showlabel = true;
+                     this.timeofweekWH2F2Day03[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day03[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day03[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day03[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day03[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day03[j].id   ; k++){
+                              this.timeofweekWH2F2Day03.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day03[j].showremark = true;
+                         this.timeofweekWH2F2Day03[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day03.length; j++){
+                 if(this.timeofweekWH2F2Day03[j].roomid == 6){
+                     this.timeofweekWH2F2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day03[j].color = 'red' ;
+                     this.timeofweekWH2F2Day03[j].showlabel = true;
+                     this.timeofweekWH2F2Day03[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day03[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day03[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day03[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day03[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day03[j].id   ; k++){
+                              this.timeofweekWH2F2Day03.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day03[j].showremark = true;
+                         this.timeofweekWH2F2Day03[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day03.length; j++){
+                 if(this.timeofweekWH2F2Day03[j].roomid == 7){
+                     this.timeofweekWH2F2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day03[j].color = 'red' ;
+                     this.timeofweekWH2F2Day03[j].showlabel = true;
+                     this.timeofweekWH2F2Day03[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day03[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day03[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day03[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day03[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day03[j].id   ; k++){
+                              this.timeofweekWH2F2Day03.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day03[j].showremark = true;
+                         this.timeofweekWH2F2Day03[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day03.length; j++){
+                 if(this.timeofweekWH2F2Day03[j].roomid == 8){
+                     this.timeofweekWH2F2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day03[j].color = 'red' ;
+                     this.timeofweekWH2F2Day03[j].showlabel = true;
+                     this.timeofweekWH2F2Day03[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day03[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day03[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day03[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day03[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day03[j].id   ; k++){
+                              this.timeofweekWH2F2Day03.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day03[j].showremark = true;
+                         this.timeofweekWH2F2Day03[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day03.length; j++){
+                 if(this.timeofweekWH2F2Day03[j].roomid == 9){
+                     this.timeofweekWH2F2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day03[j].color = 'red' ;
+                     this.timeofweekWH2F2Day03[j].showlabel = true;
+                     this.timeofweekWH2F2Day03[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day03[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day03[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day03[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day03[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day03[j].id   ; k++){
+                              this.timeofweekWH2F2Day03.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day03[j].showremark = true;
+                         this.timeofweekWH2F2Day03[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '04-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day04.length; j++){
+                 if(this.timeofweekWH2F2Day04[j].roomid == 0){
+                     this.timeofweekWH2F2Day04[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day04[j].color = 'red' ;
+                     this.timeofweekWH2F2Day04[j].showlabel = true;
+                     this.timeofweekWH2F2Day04[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day04[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day04[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day04[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day04[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day04[j].id   ; k++){
+                              this.timeofweekWH2F2Day04.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day04[j].showremark = true;
+                         this.timeofweekWH2F2Day04[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '04-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day04.length; j++){
+                 if(this.timeofweekWH2F2Day04[j].roomid == 1){
+                     this.timeofweekWH2F2Day04[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day04[j].color = 'red' ;
+                     this.timeofweekWH2F2Day04[j].showlabel = true;
+                     this.timeofweekWH2F2Day04[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day04[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day04[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day04[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day04[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day04[j].id   ; k++){
+                              this.timeofweekWH2F2Day04.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day04[j].showremark = true;
+                         this.timeofweekWH2F2Day04[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '04-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day04.length; j++){
+                 if(this.timeofweekWH2F2Day04[j].roomid == 2){
+                     this.timeofweekWH2F2Day04[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day04[j].color = 'red' ;
+                     this.timeofweekWH2F2Day04[j].showlabel = true;
+                     this.timeofweekWH2F2Day04[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day04[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day04[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day04[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day04[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day04[j].id   ; k++){
+                              this.timeofweekWH2F2Day04.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day04[j].showremark = true;
+                         this.timeofweekWH2F2Day04[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '04-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day04.length; j++){
+                 if(this.timeofweekWH2F2Day04[j].roomid == 3){
+                     this.timeofweekWH2F2Day04[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day04[j].color = 'red' ;
+                     this.timeofweekWH2F2Day04[j].showlabel = true;
+                     this.timeofweekWH2F2Day04[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day04[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day04[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day04[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day04[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day04[j].id   ; k++){
+                              this.timeofweekWH2F2Day04.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day04[j].showremark = true;
+                         this.timeofweekWH2F2Day04[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '04-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day04.length; j++){
+                 if(this.timeofweekWH2F2Day04[j].roomid == 4){
+                     this.timeofweekWH2F2Day04[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day04[j].color = 'red' ;
+                     this.timeofweekWH2F2Day04[j].showlabel = true;
+                     this.timeofweekWH2F2Day04[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day04[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day04[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day04[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day04[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day04[j].id   ; k++){
+                              this.timeofweekWH2F2Day04.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day04[j].showremark = true;
+                         this.timeofweekWH2F2Day04[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '04-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day04.length; j++){
+                 if(this.timeofweekWH2F2Day04[j].roomid == 5){
+                     this.timeofweekWH2F2Day04[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day04[j].color = 'red' ;
+                     this.timeofweekWH2F2Day04[j].showlabel = true;
+                     this.timeofweekWH2F2Day04[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day04[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day04[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day04[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day04[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day04[j].id   ; k++){
+                              this.timeofweekWH2F2Day04.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day04[j].showremark = true;
+                         this.timeofweekWH2F2Day04[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '04-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day04.length; j++){
+                 if(this.timeofweekWH2F2Day04[j].roomid == 6){
+                     this.timeofweekWH2F2Day04[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day04[j].color = 'red' ;
+                     this.timeofweekWH2F2Day04[j].showlabel = true;
+                     this.timeofweekWH2F2Day04[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day04[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day04[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day04[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day04[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day04[j].id   ; k++){
+                              this.timeofweekWH2F2Day04.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day04[j].showremark = true;
+                         this.timeofweekWH2F2Day04[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '04-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day04.length; j++){
+                 if(this.timeofweekWH2F2Day04[j].roomid == 7){
+                     this.timeofweekWH2F2Day04[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day04[j].color = 'red' ;
+                     this.timeofweekWH2F2Day04[j].showlabel = true;
+                     this.timeofweekWH2F2Day04[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day04[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day04[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day04[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day04[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day04[j].id   ; k++){
+                              this.timeofweekWH2F2Day04.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day04[j].showremark = true;
+                         this.timeofweekWH2F2Day04[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '04-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day04.length; j++){
+                 if(this.timeofweekWH2F2Day04[j].roomid == 8){
+                     this.timeofweekWH2F2Day04[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day04[j].color = 'red' ;
+                     this.timeofweekWH2F2Day04[j].showlabel = true;
+                     this.timeofweekWH2F2Day04[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day04[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day04[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day04[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day04[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day04[j].id   ; k++){
+                              this.timeofweekWH2F2Day04.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day04[j].showremark = true;
+                         this.timeofweekWH2F2Day04[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '04-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day04.length; j++){
+                 if(this.timeofweekWH2F2Day04[j].roomid == 9){
+                     this.timeofweekWH2F2Day04[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day04[j].color = 'red' ;
+                     this.timeofweekWH2F2Day04[j].showlabel = true;
+                     this.timeofweekWH2F2Day04[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day04[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day04[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day04[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day04[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day04[j].id   ; k++){
+                              this.timeofweekWH2F2Day04.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day04[j].showremark = true;
+                         this.timeofweekWH2F2Day04[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '05-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day05.length; j++){
+                 if(this.timeofweekWH2F2Day05[j].roomid == 0){
+                     this.timeofweekWH2F2Day05[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day05[j].color = 'red' ;
+                     this.timeofweekWH2F2Day05[j].showlabel = true;
+                     this.timeofweekWH2F2Day05[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day05[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day05[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day05[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day05[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day05[j].id   ; k++){
+                              this.timeofweekWH2F2Day05.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day05[j].showremark = true;
+                         this.timeofweekWH2F2Day05[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '05-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day05.length; j++){
+                 if(this.timeofweekWH2F2Day05[j].roomid == 1){
+                     this.timeofweekWH2F2Day05[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day05[j].color = 'red' ;
+                     this.timeofweekWH2F2Day05[j].showlabel = true;
+                     this.timeofweekWH2F2Day05[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day05[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day05[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day05[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day05[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day05[j].id   ; k++){
+                              this.timeofweekWH2F2Day05.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day05[j].showremark = true;
+                         this.timeofweekWH2F2Day05[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '05-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day05.length; j++){
+                 if(this.timeofweekWH2F2Day05[j].roomid == 2){
+                     this.timeofweekWH2F2Day05[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day05[j].color = 'red' ;
+                     this.timeofweekWH2F2Day05[j].showlabel = true;
+                     this.timeofweekWH2F2Day05[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day05[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day05[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day05[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day05[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day05[j].id   ; k++){
+                              this.timeofweekWH2F2Day05.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day05[j].showremark = true;
+                         this.timeofweekWH2F2Day05[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '05-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day05.length; j++){
+                 if(this.timeofweekWH2F2Day05[j].roomid == 3){
+                     this.timeofweekWH2F2Day05[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day05[j].color = 'red' ;
+                     this.timeofweekWH2F2Day05[j].showlabel = true;
+                     this.timeofweekWH2F2Day05[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day05[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day05[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day05[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day05[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day05[j].id   ; k++){
+                              this.timeofweekWH2F2Day05.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day05[j].showremark = true;
+                         this.timeofweekWH2F2Day05[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '05-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day05.length; j++){
+                 if(this.timeofweekWH2F2Day05[j].roomid == 4){
+                     this.timeofweekWH2F2Day05[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day05[j].color = 'red' ;
+                     this.timeofweekWH2F2Day05[j].showlabel = true;
+                     this.timeofweekWH2F2Day05[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day05[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day05[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day05[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day05[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day05[j].id   ; k++){
+                              this.timeofweekWH2F2Day05.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day05[j].showremark = true;
+                         this.timeofweekWH2F2Day05[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '05-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day05.length; j++){
+                 if(this.timeofweekWH2F2Day05[j].roomid == 5){
+                     this.timeofweekWH2F2Day05[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day05[j].color = 'red' ;
+                     this.timeofweekWH2F2Day05[j].showlabel = true;
+                     this.timeofweekWH2F2Day05[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day05[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day05[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day05[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day05[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day05[j].id   ; k++){
+                              this.timeofweekWH2F2Day05.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day05[j].showremark = true;
+                         this.timeofweekWH2F2Day05[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '05-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day05.length; j++){
+                 if(this.timeofweekWH2F2Day05[j].roomid == 6){
+                     this.timeofweekWH2F2Day05[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day05[j].color = 'red' ;
+                     this.timeofweekWH2F2Day05[j].showlabel = true;
+                     this.timeofweekWH2F2Day05[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day05[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day05[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day05[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day05[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day05[j].id   ; k++){
+                              this.timeofweekWH2F2Day05.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day05[j].showremark = true;
+                         this.timeofweekWH2F2Day05[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '05-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day05.length; j++){
+                 if(this.timeofweekWH2F2Day05[j].roomid == 7){
+                     this.timeofweekWH2F2Day05[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day05[j].color = 'red' ;
+                     this.timeofweekWH2F2Day05[j].showlabel = true;
+                     this.timeofweekWH2F2Day05[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day05[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day05[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day05[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day05[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day05[j].id   ; k++){
+                              this.timeofweekWH2F2Day05.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day05[j].showremark = true;
+                         this.timeofweekWH2F2Day05[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '05-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day05.length; j++){
+                 if(this.timeofweekWH2F2Day05[j].roomid == 8){
+                     this.timeofweekWH2F2Day05[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day05[j].color = 'red' ;
+                     this.timeofweekWH2F2Day05[j].showlabel = true;
+                     this.timeofweekWH2F2Day05[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day05[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day05[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day05[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day05[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day05[j].id   ; k++){
+                              this.timeofweekWH2F2Day05.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day05[j].showremark = true;
+                         this.timeofweekWH2F2Day05[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '05-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day05.length; j++){
+                 if(this.timeofweekWH2F2Day05[j].roomid == 9){
+                     this.timeofweekWH2F2Day05[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day05[j].color = 'red' ;
+                     this.timeofweekWH2F2Day05[j].showlabel = true;
+                     this.timeofweekWH2F2Day05[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day05[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day05[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day05[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day05[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day05[j].id   ; k++){
+                              this.timeofweekWH2F2Day05.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day05[j].showremark = true;
+                         this.timeofweekWH2F2Day05[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '06-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day06.length; j++){
+                 if(this.timeofweekWH2F2Day06[j].roomid == 0){
+                     this.timeofweekWH2F2Day06[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day06[j].color = 'red' ;
+                     this.timeofweekWH2F2Day06[j].showlabel = true;
+                     this.timeofweekWH2F2Day06[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day06[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day06[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day06[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day06[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day06[j].id   ; k++){
+                              this.timeofweekWH2F2Day06.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day06[j].showremark = true;
+                         this.timeofweekWH2F2Day06[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '06-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day06.length; j++){
+                 if(this.timeofweekWH2F2Day06[j].roomid == 1){
+                     this.timeofweekWH2F2Day06[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day06[j].color = 'red' ;
+                     this.timeofweekWH2F2Day06[j].showlabel = true;
+                     this.timeofweekWH2F2Day06[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day06[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day06[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day06[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day06[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day06[j].id   ; k++){
+                              this.timeofweekWH2F2Day06.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day06[j].showremark = true;
+                         this.timeofweekWH2F2Day06[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '06-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day06.length; j++){
+                 if(this.timeofweekWH2F2Day06[j].roomid == 2){
+                     this.timeofweekWH2F2Day06[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day06[j].color = 'red' ;
+                     this.timeofweekWH2F2Day06[j].showlabel = true;
+                     this.timeofweekWH2F2Day06[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day06[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day06[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day06[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day06[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day06[j].id   ; k++){
+                              this.timeofweekWH2F2Day06.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day06[j].showremark = true;
+                         this.timeofweekWH2F2Day06[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '06-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day06.length; j++){
+                 if(this.timeofweekWH2F2Day06[j].roomid == 3){
+                     this.timeofweekWH2F2Day06[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day06[j].color = 'red' ;
+                     this.timeofweekWH2F2Day06[j].showlabel = true;
+                     this.timeofweekWH2F2Day06[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day06[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day06[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day06[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day06[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day06[j].id   ; k++){
+                              this.timeofweekWH2F2Day06.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day06[j].showremark = true;
+                         this.timeofweekWH2F2Day06[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '06-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day06.length; j++){
+                 if(this.timeofweekWH2F2Day06[j].roomid == 4){
+                     this.timeofweekWH2F2Day06[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day06[j].color = 'red' ;
+                     this.timeofweekWH2F2Day06[j].showlabel = true;
+                     this.timeofweekWH2F2Day06[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day06[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day06[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day06[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day06[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day06[j].id   ; k++){
+                              this.timeofweekWH2F2Day06.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day06[j].showremark = true;
+                         this.timeofweekWH2F2Day06[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '06-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day06.length; j++){
+                 if(this.timeofweekWH2F2Day06[j].roomid == 5){
+                     this.timeofweekWH2F2Day06[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day06[j].color = 'red' ;
+                     this.timeofweekWH2F2Day06[j].showlabel = true;
+                     this.timeofweekWH2F2Day06[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day06[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day06[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day06[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day06[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day06[j].id   ; k++){
+                              this.timeofweekWH2F2Day06.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day06[j].showremark = true;
+                         this.timeofweekWH2F2Day06[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '06-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day06.length; j++){
+                 if(this.timeofweekWH2F2Day06[j].roomid == 6){
+                     this.timeofweekWH2F2Day06[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day06[j].color = 'red' ;
+                     this.timeofweekWH2F2Day06[j].showlabel = true;
+                     this.timeofweekWH2F2Day06[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day06[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day06[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day06[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day06[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day06[j].id   ; k++){
+                              this.timeofweekWH2F2Day06.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day06[j].showremark = true;
+                         this.timeofweekWH2F2Day06[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '06-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day06.length; j++){
+                 if(this.timeofweekWH2F2Day06[j].roomid == 7){
+                     this.timeofweekWH2F2Day06[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day06[j].color = 'red' ;
+                     this.timeofweekWH2F2Day06[j].showlabel = true;
+                     this.timeofweekWH2F2Day06[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day06[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day06[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day06[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day06[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day06[j].id   ; k++){
+                              this.timeofweekWH2F2Day06.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day06[j].showremark = true;
+                         this.timeofweekWH2F2Day06[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '06-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day06.length; j++){
+                 if(this.timeofweekWH2F2Day06[j].roomid == 8){
+                     this.timeofweekWH2F2Day06[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day06[j].color = 'red' ;
+                     this.timeofweekWH2F2Day06[j].showlabel = true;
+                     this.timeofweekWH2F2Day06[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day06[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day06[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day06[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day06[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day06[j].id   ; k++){
+                              this.timeofweekWH2F2Day06.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day06[j].showremark = true;
+                         this.timeofweekWH2F2Day06[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '06-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day06.length; j++){
+                 if(this.timeofweekWH2F2Day06[j].roomid == 9){
+                     this.timeofweekWH2F2Day06[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day06[j].color = 'red' ;
+                     this.timeofweekWH2F2Day06[j].showlabel = true;
+                     this.timeofweekWH2F2Day06[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day06[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day06[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day06[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day06[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day06[j].id   ; k++){
+                              this.timeofweekWH2F2Day06.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day06[j].showremark = true;
+                         this.timeofweekWH2F2Day06[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '07-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day07.length; j++){
+                 if(this.timeofweekWH2F2Day07[j].roomid == 0){
+                     this.timeofweekWH2F2Day07[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day07[j].color = 'red' ;
+                     this.timeofweekWH2F2Day07[j].showlabel = true;
+                     this.timeofweekWH2F2Day07[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day07[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day07[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day07[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day07[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day07[j].id   ; k++){
+                              this.timeofweekWH2F2Day07.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day07[j].showremark = true;
+                         this.timeofweekWH2F2Day07[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '07-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day07.length; j++){
+                 if(this.timeofweekWH2F2Day07[j].roomid == 1){
+                     this.timeofweekWH2F2Day07[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day07[j].color = 'red' ;
+                     this.timeofweekWH2F2Day07[j].showlabel = true;
+                     this.timeofweekWH2F2Day07[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day07[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day07[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day07[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day07[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day07[j].id   ; k++){
+                              this.timeofweekWH2F2Day07.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day07[j].showremark = true;
+                         this.timeofweekWH2F2Day07[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '07-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day07.length; j++){
+                 if(this.timeofweekWH2F2Day07[j].roomid == 2){
+                     this.timeofweekWH2F2Day07[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day07[j].color = 'red' ;
+                     this.timeofweekWH2F2Day07[j].showlabel = true;
+                     this.timeofweekWH2F2Day07[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day07[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day07[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day07[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day07[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day07[j].id   ; k++){
+                              this.timeofweekWH2F2Day07.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day07[j].showremark = true;
+                         this.timeofweekWH2F2Day07[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '07-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day07.length; j++){
+                 if(this.timeofweekWH2F2Day07[j].roomid == 3){
+                     this.timeofweekWH2F2Day07[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day07[j].color = 'red' ;
+                     this.timeofweekWH2F2Day07[j].showlabel = true;
+                     this.timeofweekWH2F2Day07[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day07[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day07[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day07[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day07[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day07[j].id   ; k++){
+                              this.timeofweekWH2F2Day07.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day07[j].showremark = true;
+                         this.timeofweekWH2F2Day07[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '07-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day07.length; j++){
+                 if(this.timeofweekWH2F2Day07[j].roomid == 4){
+                     this.timeofweekWH2F2Day07[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day07[j].color = 'red' ;
+                     this.timeofweekWH2F2Day07[j].showlabel = true;
+                     this.timeofweekWH2F2Day07[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day07[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day07[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day07[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day07[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day07[j].id   ; k++){
+                              this.timeofweekWH2F2Day07.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day07[j].showremark = true;
+                         this.timeofweekWH2F2Day07[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '07-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day07.length; j++){
+                 if(this.timeofweekWH2F2Day07[j].roomid == 5){
+                     this.timeofweekWH2F2Day07[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day07[j].color = 'red' ;
+                     this.timeofweekWH2F2Day07[j].showlabel = true;
+                     this.timeofweekWH2F2Day07[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day07[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day07[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day07[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day07[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day07[j].id   ; k++){
+                              this.timeofweekWH2F2Day07.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day07[j].showremark = true;
+                         this.timeofweekWH2F2Day07[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '07-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day07.length; j++){
+                 if(this.timeofweekWH2F2Day07[j].roomid == 6){
+                     this.timeofweekWH2F2Day07[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day07[j].color = 'red' ;
+                     this.timeofweekWH2F2Day07[j].showlabel = true;
+                     this.timeofweekWH2F2Day07[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day07[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day07[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day07[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day07[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day07[j].id   ; k++){
+                              this.timeofweekWH2F2Day07.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day07[j].showremark = true;
+                         this.timeofweekWH2F2Day07[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '07-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day07.length; j++){
+                 if(this.timeofweekWH2F2Day07[j].roomid == 7){
+                     this.timeofweekWH2F2Day07[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day07[j].color = 'red' ;
+                     this.timeofweekWH2F2Day07[j].showlabel = true;
+                     this.timeofweekWH2F2Day07[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day07[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day07[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day07[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day07[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day07[j].id   ; k++){
+                              this.timeofweekWH2F2Day07.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day07[j].showremark = true;
+                         this.timeofweekWH2F2Day07[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '07-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day07.length; j++){
+                 if(this.timeofweekWH2F2Day07[j].roomid == 8){
+                     this.timeofweekWH2F2Day07[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day07[j].color = 'red' ;
+                     this.timeofweekWH2F2Day07[j].showlabel = true;
+                     this.timeofweekWH2F2Day07[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day07[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day07[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day07[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day07[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day07[j].id   ; k++){
+                              this.timeofweekWH2F2Day07.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day07[j].showremark = true;
+                         this.timeofweekWH2F2Day07[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '07-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day07.length; j++){
+                 if(this.timeofweekWH2F2Day07[j].roomid == 9){
+                     this.timeofweekWH2F2Day07[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day07[j].color = 'red' ;
+                     this.timeofweekWH2F2Day07[j].showlabel = true;
+                     this.timeofweekWH2F2Day07[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day07[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day07[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day07[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day07[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day07[j].id   ; k++){
+                              this.timeofweekWH2F2Day07.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day07[j].showremark = true;
+                         this.timeofweekWH2F2Day07[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '08-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day08.length; j++){
+                 if(this.timeofweekWH2F2Day08[j].roomid == 0){
+                     this.timeofweekWH2F2Day08[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day08[j].color = 'red' ;
+                     this.timeofweekWH2F2Day08[j].showlabel = true;
+                     this.timeofweekWH2F2Day08[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day08[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day08[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day08[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day08[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day08[j].id   ; k++){
+                              this.timeofweekWH2F2Day08.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day08[j].showremark = true;
+                         this.timeofweekWH2F2Day08[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '08-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day08.length; j++){
+                 if(this.timeofweekWH2F2Day08[j].roomid == 1){
+                     this.timeofweekWH2F2Day08[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day08[j].color = 'red' ;
+                     this.timeofweekWH2F2Day08[j].showlabel = true;
+                     this.timeofweekWH2F2Day08[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day08[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day08[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day08[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day08[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day08[j].id   ; k++){
+                              this.timeofweekWH2F2Day08.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day08[j].showremark = true;
+                         this.timeofweekWH2F2Day08[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '08-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day08.length; j++){
+                 if(this.timeofweekWH2F2Day08[j].roomid == 2){
+                     this.timeofweekWH2F2Day08[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day08[j].color = 'red' ;
+                     this.timeofweekWH2F2Day08[j].showlabel = true;
+                     this.timeofweekWH2F2Day08[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day08[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day08[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day08[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day08[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day08[j].id   ; k++){
+                              this.timeofweekWH2F2Day08.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day08[j].showremark = true;
+                         this.timeofweekWH2F2Day08[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '08-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day08.length; j++){
+                 if(this.timeofweekWH2F2Day08[j].roomid == 3){
+                     this.timeofweekWH2F2Day08[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day08[j].color = 'red' ;
+                     this.timeofweekWH2F2Day08[j].showlabel = true;
+                     this.timeofweekWH2F2Day08[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day08[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day08[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day08[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day08[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day08[j].id   ; k++){
+                              this.timeofweekWH2F2Day08.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day08[j].showremark = true;
+                         this.timeofweekWH2F2Day08[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '08-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day08.length; j++){
+                 if(this.timeofweekWH2F2Day08[j].roomid == 4){
+                     this.timeofweekWH2F2Day08[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day08[j].color = 'red' ;
+                     this.timeofweekWH2F2Day08[j].showlabel = true;
+                     this.timeofweekWH2F2Day08[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day08[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day08[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day08[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day08[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day08[j].id   ; k++){
+                              this.timeofweekWH2F2Day08.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day08[j].showremark = true;
+                         this.timeofweekWH2F2Day08[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '08-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day08.length; j++){
+                 if(this.timeofweekWH2F2Day08[j].roomid == 5){
+                     this.timeofweekWH2F2Day08[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day08[j].color = 'red' ;
+                     this.timeofweekWH2F2Day08[j].showlabel = true;
+                     this.timeofweekWH2F2Day08[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day08[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day08[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day08[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day08[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day08[j].id   ; k++){
+                              this.timeofweekWH2F2Day08.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day08[j].showremark = true;
+                         this.timeofweekWH2F2Day08[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '08-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day08.length; j++){
+                 if(this.timeofweekWH2F2Day08[j].roomid == 6){
+                     this.timeofweekWH2F2Day08[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day08[j].color = 'red' ;
+                     this.timeofweekWH2F2Day08[j].showlabel = true;
+                     this.timeofweekWH2F2Day08[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day08[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day08[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day08[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day08[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day08[j].id   ; k++){
+                              this.timeofweekWH2F2Day08.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day08[j].showremark = true;
+                         this.timeofweekWH2F2Day08[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '08-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day08.length; j++){
+                 if(this.timeofweekWH2F2Day08[j].roomid == 7){
+                     this.timeofweekWH2F2Day08[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day08[j].color = 'red' ;
+                     this.timeofweekWH2F2Day08[j].showlabel = true;
+                     this.timeofweekWH2F2Day08[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day08[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day08[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day08[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day08[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day08[j].id   ; k++){
+                              this.timeofweekWH2F2Day08.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day08[j].showremark = true;
+                         this.timeofweekWH2F2Day08[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '08-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day08.length; j++){
+                 if(this.timeofweekWH2F2Day08[j].roomid == 8){
+                     this.timeofweekWH2F2Day08[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day08[j].color = 'red' ;
+                     this.timeofweekWH2F2Day08[j].showlabel = true;
+                     this.timeofweekWH2F2Day08[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day08[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day08[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day08[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day08[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day08[j].id   ; k++){
+                              this.timeofweekWH2F2Day08.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day08[j].showremark = true;
+                         this.timeofweekWH2F2Day08[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '08-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day08.length; j++){
+                 if(this.timeofweekWH2F2Day08[j].roomid == 9){
+                     this.timeofweekWH2F2Day08[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day08[j].color = 'red' ;
+                     this.timeofweekWH2F2Day08[j].showlabel = true;
+                     this.timeofweekWH2F2Day08[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day08[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day08[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day08[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day08[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day08[j].id   ; k++){
+                              this.timeofweekWH2F2Day08.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day08[j].showremark = true;
+                         this.timeofweekWH2F2Day08[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '09-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day09.length; j++){
+                 if(this.timeofweekWH2F2Day09[j].roomid == 0){
+                     this.timeofweekWH2F2Day09[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day09[j].color = 'red' ;
+                     this.timeofweekWH2F2Day09[j].showlabel = true;
+                     this.timeofweekWH2F2Day09[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day09[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day09[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day09[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day09[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day09[j].id   ; k++){
+                              this.timeofweekWH2F2Day09.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day09[j].showremark = true;
+                         this.timeofweekWH2F2Day09[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '09-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day09.length; j++){
+                 if(this.timeofweekWH2F2Day09[j].roomid == 1){
+                     this.timeofweekWH2F2Day09[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day09[j].color = 'red' ;
+                     this.timeofweekWH2F2Day09[j].showlabel = true;
+                     this.timeofweekWH2F2Day09[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day09[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day09[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day09[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day09[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day09[j].id   ; k++){
+                              this.timeofweekWH2F2Day09.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day09[j].showremark = true;
+                         this.timeofweekWH2F2Day09[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '09-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day09.length; j++){
+                 if(this.timeofweekWH2F2Day09[j].roomid == 2){
+                     this.timeofweekWH2F2Day09[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day09[j].color = 'red' ;
+                     this.timeofweekWH2F2Day09[j].showlabel = true;
+                     this.timeofweekWH2F2Day09[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day09[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day09[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day09[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day09[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day09[j].id   ; k++){
+                              this.timeofweekWH2F2Day09.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day09[j].showremark = true;
+                         this.timeofweekWH2F2Day09[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '09-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day09.length; j++){
+                 if(this.timeofweekWH2F2Day09[j].roomid == 3){
+                     this.timeofweekWH2F2Day09[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day09[j].color = 'red' ;
+                     this.timeofweekWH2F2Day09[j].showlabel = true;
+                     this.timeofweekWH2F2Day09[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day09[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day09[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day09[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day09[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day09[j].id   ; k++){
+                              this.timeofweekWH2F2Day09.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day09[j].showremark = true;
+                         this.timeofweekWH2F2Day09[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '09-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day09.length; j++){
+                 if(this.timeofweekWH2F2Day09[j].roomid == 4){
+                     this.timeofweekWH2F2Day09[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day09[j].color = 'red' ;
+                     this.timeofweekWH2F2Day09[j].showlabel = true;
+                     this.timeofweekWH2F2Day09[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day09[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day09[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day09[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day09[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day09[j].id   ; k++){
+                              this.timeofweekWH2F2Day09.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day09[j].showremark = true;
+                         this.timeofweekWH2F2Day09[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '09-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day09.length; j++){
+                 if(this.timeofweekWH2F2Day09[j].roomid == 5){
+                     this.timeofweekWH2F2Day09[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day09[j].color = 'red' ;
+                     this.timeofweekWH2F2Day09[j].showlabel = true;
+                     this.timeofweekWH2F2Day09[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day09[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day09[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day09[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day09[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day09[j].id   ; k++){
+                              this.timeofweekWH2F2Day09.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day09[j].showremark = true;
+                         this.timeofweekWH2F2Day09[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '09-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day09.length; j++){
+                 if(this.timeofweekWH2F2Day09[j].roomid == 6){
+                     this.timeofweekWH2F2Day09[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day09[j].color = 'red' ;
+                     this.timeofweekWH2F2Day09[j].showlabel = true;
+                     this.timeofweekWH2F2Day09[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day09[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day09[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day09[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day09[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day09[j].id   ; k++){
+                              this.timeofweekWH2F2Day09.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day09[j].showremark = true;
+                         this.timeofweekWH2F2Day09[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '09-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day09.length; j++){
+                 if(this.timeofweekWH2F2Day09[j].roomid == 7){
+                     this.timeofweekWH2F2Day09[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day09[j].color = 'red' ;
+                     this.timeofweekWH2F2Day09[j].showlabel = true;
+                     this.timeofweekWH2F2Day09[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day09[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day09[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day09[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day09[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day09[j].id   ; k++){
+                              this.timeofweekWH2F2Day09.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day09[j].showremark = true;
+                         this.timeofweekWH2F2Day09[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '09-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day09.length; j++){
+                 if(this.timeofweekWH2F2Day09[j].roomid == 8){
+                     this.timeofweekWH2F2Day09[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day09[j].color = 'red' ;
+                     this.timeofweekWH2F2Day09[j].showlabel = true;
+                     this.timeofweekWH2F2Day09[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day09[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day09[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day09[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day09[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day09[j].id   ; k++){
+                              this.timeofweekWH2F2Day09.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day09[j].showremark = true;
+                         this.timeofweekWH2F2Day09[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '09-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day09.length; j++){
+                 if(this.timeofweekWH2F2Day09[j].roomid == 9){
+                     this.timeofweekWH2F2Day09[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day09[j].color = 'red' ;
+                     this.timeofweekWH2F2Day09[j].showlabel = true;
+                     this.timeofweekWH2F2Day09[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day09[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day09[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day09[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day09[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day09[j].id   ; k++){
+                              this.timeofweekWH2F2Day09.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day09[j].showremark = true;
+                         this.timeofweekWH2F2Day09[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '10-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day10.length; j++){
+                 if(this.timeofweekWH2F2Day10[j].roomid == 0){
+                     this.timeofweekWH2F2Day10[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day10[j].color = 'red' ;
+                     this.timeofweekWH2F2Day10[j].showlabel = true;
+                     this.timeofweekWH2F2Day10[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day10[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day10[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day10[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day10[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day10[j].id   ; k++){
+                              this.timeofweekWH2F2Day10.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day10[j].showremark = true;
+                         this.timeofweekWH2F2Day10[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '10-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day10.length; j++){
+                 if(this.timeofweekWH2F2Day10[j].roomid == 1){
+                     this.timeofweekWH2F2Day10[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day10[j].color = 'red' ;
+                     this.timeofweekWH2F2Day10[j].showlabel = true;
+                     this.timeofweekWH2F2Day10[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day10[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day10[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day10[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day10[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day10[j].id   ; k++){
+                              this.timeofweekWH2F2Day10.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day10[j].showremark = true;
+                         this.timeofweekWH2F2Day10[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '10-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day10.length; j++){
+                 if(this.timeofweekWH2F2Day10[j].roomid == 2){
+                     this.timeofweekWH2F2Day10[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day10[j].color = 'red' ;
+                     this.timeofweekWH2F2Day10[j].showlabel = true;
+                     this.timeofweekWH2F2Day10[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day10[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day10[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day10[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day10[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day10[j].id   ; k++){
+                              this.timeofweekWH2F2Day10.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day10[j].showremark = true;
+                         this.timeofweekWH2F2Day10[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '10-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day10.length; j++){
+                 if(this.timeofweekWH2F2Day10[j].roomid == 3){
+                     this.timeofweekWH2F2Day10[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day10[j].color = 'red' ;
+                     this.timeofweekWH2F2Day10[j].showlabel = true;
+                     this.timeofweekWH2F2Day10[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day10[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day10[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day10[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day10[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day10[j].id   ; k++){
+                              this.timeofweekWH2F2Day10.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day10[j].showremark = true;
+                         this.timeofweekWH2F2Day10[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '10-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day10.length; j++){
+                 if(this.timeofweekWH2F2Day10[j].roomid == 4){
+                     this.timeofweekWH2F2Day10[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day10[j].color = 'red' ;
+                     this.timeofweekWH2F2Day10[j].showlabel = true;
+                     this.timeofweekWH2F2Day10[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day10[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day10[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day10[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day10[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day10[j].id   ; k++){
+                              this.timeofweekWH2F2Day10.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day10[j].showremark = true;
+                         this.timeofweekWH2F2Day10[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '10-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day10.length; j++){
+                 if(this.timeofweekWH2F2Day10[j].roomid == 5){
+                     this.timeofweekWH2F2Day10[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day10[j].color = 'red' ;
+                     this.timeofweekWH2F2Day10[j].showlabel = true;
+                     this.timeofweekWH2F2Day10[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day10[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day10[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day10[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day10[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day10[j].id   ; k++){
+                              this.timeofweekWH2F2Day10.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day10[j].showremark = true;
+                         this.timeofweekWH2F2Day10[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '10-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day10.length; j++){
+                 if(this.timeofweekWH2F2Day10[j].roomid == 6){
+                     this.timeofweekWH2F2Day10[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day10[j].color = 'red' ;
+                     this.timeofweekWH2F2Day10[j].showlabel = true;
+                     this.timeofweekWH2F2Day10[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day10[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day10[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day10[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day10[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day10[j].id   ; k++){
+                              this.timeofweekWH2F2Day10.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day10[j].showremark = true;
+                         this.timeofweekWH2F2Day10[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '10-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day10.length; j++){
+                 if(this.timeofweekWH2F2Day10[j].roomid == 7){
+                     this.timeofweekWH2F2Day10[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day10[j].color = 'red' ;
+                     this.timeofweekWH2F2Day10[j].showlabel = true;
+                     this.timeofweekWH2F2Day10[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day10[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day10[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day10[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day10[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day10[j].id   ; k++){
+                              this.timeofweekWH2F2Day10.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day10[j].showremark = true;
+                         this.timeofweekWH2F2Day10[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '10-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day10.length; j++){
+                 if(this.timeofweekWH2F2Day10[j].roomid == 8){
+                     this.timeofweekWH2F2Day10[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day10[j].color = 'red' ;
+                     this.timeofweekWH2F2Day10[j].showlabel = true;
+                     this.timeofweekWH2F2Day10[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day10[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day10[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day10[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day10[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day10[j].id   ; k++){
+                              this.timeofweekWH2F2Day10.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day10[j].showremark = true;
+                         this.timeofweekWH2F2Day10[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' && this.report[i].date== '10-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day10.length; j++){
+                 if(this.timeofweekWH2F2Day10[j].roomid == 9){
+                     this.timeofweekWH2F2Day10[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day10[j].color = 'red' ;
+                     this.timeofweekWH2F2Day10[j].showlabel = true;
+                     this.timeofweekWH2F2Day10[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day10[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day10[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day10[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day10[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day10[j].id   ; k++){
+                              this.timeofweekWH2F2Day10.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day10[j].showremark = true;
+                         this.timeofweekWH2F2Day10[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '11-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day11.length; j++){
+                 if(this.timeofweekWH2F2Day11[j].roomid == 0){
+                     this.timeofweekWH2F2Day11[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day11[j].color = 'red' ;
+                     this.timeofweekWH2F2Day11[j].showlabel = true;
+                     this.timeofweekWH2F2Day11[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day11[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day11[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day11[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day11[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day11[j].id   ; k++){
+                              this.timeofweekWH2F2Day11.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day11[j].showremark = true;
+                         this.timeofweekWH2F2Day11[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '11-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day11.length; j++){
+                 if(this.timeofweekWH2F2Day11[j].roomid == 1){
+                     this.timeofweekWH2F2Day11[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day11[j].color = 'red' ;
+                     this.timeofweekWH2F2Day11[j].showlabel = true;
+                     this.timeofweekWH2F2Day11[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day11[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day11[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day11[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day11[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day11[j].id   ; k++){
+                              this.timeofweekWH2F2Day11.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day11[j].showremark = true;
+                         this.timeofweekWH2F2Day11[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '11-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day11.length; j++){
+                 if(this.timeofweekWH2F2Day11[j].roomid == 2){
+                     this.timeofweekWH2F2Day11[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day11[j].color = 'red' ;
+                     this.timeofweekWH2F2Day11[j].showlabel = true;
+                     this.timeofweekWH2F2Day11[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day11[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day11[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day11[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day11[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day11[j].id   ; k++){
+                              this.timeofweekWH2F2Day11.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day11[j].showremark = true;
+                         this.timeofweekWH2F2Day11[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '11-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day11.length; j++){
+                 if(this.timeofweekWH2F2Day11[j].roomid == 3){
+                     this.timeofweekWH2F2Day11[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day11[j].color = 'red' ;
+                     this.timeofweekWH2F2Day11[j].showlabel = true;
+                     this.timeofweekWH2F2Day11[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day11[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day11[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day11[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day11[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day11[j].id   ; k++){
+                              this.timeofweekWH2F2Day11.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day11[j].showremark = true;
+                         this.timeofweekWH2F2Day11[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '11-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day11.length; j++){
+                 if(this.timeofweekWH2F2Day11[j].roomid == 4){
+                     this.timeofweekWH2F2Day11[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day11[j].color = 'red' ;
+                     this.timeofweekWH2F2Day11[j].showlabel = true;
+                     this.timeofweekWH2F2Day11[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day11[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day11[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day11[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day11[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day11[j].id   ; k++){
+                              this.timeofweekWH2F2Day11.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day11[j].showremark = true;
+                         this.timeofweekWH2F2Day11[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '11-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day11.length; j++){
+                 if(this.timeofweekWH2F2Day11[j].roomid == 5){
+                     this.timeofweekWH2F2Day11[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day11[j].color = 'red' ;
+                     this.timeofweekWH2F2Day11[j].showlabel = true;
+                     this.timeofweekWH2F2Day11[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day11[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day11[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day11[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day11[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day11[j].id   ; k++){
+                              this.timeofweekWH2F2Day11.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day11[j].showremark = true;
+                         this.timeofweekWH2F2Day11[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '11-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day11.length; j++){
+                 if(this.timeofweekWH2F2Day11[j].roomid == 6){
+                     this.timeofweekWH2F2Day11[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day11[j].color = 'red' ;
+                     this.timeofweekWH2F2Day11[j].showlabel = true;
+                     this.timeofweekWH2F2Day11[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day11[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day11[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day11[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day11[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day11[j].id   ; k++){
+                              this.timeofweekWH2F2Day11.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day11[j].showremark = true;
+                         this.timeofweekWH2F2Day11[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '11-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day11.length; j++){
+                 if(this.timeofweekWH2F2Day11[j].roomid == 7){
+                     this.timeofweekWH2F2Day11[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day11[j].color = 'red' ;
+                     this.timeofweekWH2F2Day11[j].showlabel = true;
+                     this.timeofweekWH2F2Day11[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day11[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day11[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day11[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day11[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day11[j].id   ; k++){
+                              this.timeofweekWH2F2Day11.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day11[j].showremark = true;
+                         this.timeofweekWH2F2Day11[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '11-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day11.length; j++){
+                 if(this.timeofweekWH2F2Day11[j].roomid == 8){
+                     this.timeofweekWH2F2Day11[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day11[j].color = 'red' ;
+                     this.timeofweekWH2F2Day11[j].showlabel = true;
+                     this.timeofweekWH2F2Day11[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day11[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day11[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day11[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day11[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day11[j].id   ; k++){
+                              this.timeofweekWH2F2Day11.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day11[j].showremark = true;
+                         this.timeofweekWH2F2Day11[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '11-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day11.length; j++){
+                 if(this.timeofweekWH2F2Day11[j].roomid == 9){
+                     this.timeofweekWH2F2Day11[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day11[j].color = 'red' ;
+                     this.timeofweekWH2F2Day11[j].showlabel = true;
+                     this.timeofweekWH2F2Day11[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day11[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day11[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day11[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day11[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day11[j].id   ; k++){
+                              this.timeofweekWH2F2Day11.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day11[j].showremark = true;
+                         this.timeofweekWH2F2Day11[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '12-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day12.length; j++){
+                 if(this.timeofweekWH2F2Day12[j].roomid == 0){
+                     this.timeofweekWH2F2Day12[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day12[j].color = 'red' ;
+                     this.timeofweekWH2F2Day12[j].showlabel = true;
+                     this.timeofweekWH2F2Day12[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day12[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day12[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day12[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day12[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day12[j].id   ; k++){
+                              this.timeofweekWH2F2Day12.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day12[j].showremark = true;
+                         this.timeofweekWH2F2Day12[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '12-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day12.length; j++){
+                 if(this.timeofweekWH2F2Day12[j].roomid == 1){
+                     this.timeofweekWH2F2Day12[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day12[j].color = 'red' ;
+                     this.timeofweekWH2F2Day12[j].showlabel = true;
+                     this.timeofweekWH2F2Day12[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day12[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day12[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day12[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day12[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day12[j].id   ; k++){
+                              this.timeofweekWH2F2Day12.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day12[j].showremark = true;
+                         this.timeofweekWH2F2Day12[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '12-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day12.length; j++){
+                 if(this.timeofweekWH2F2Day12[j].roomid == 2){
+                     this.timeofweekWH2F2Day12[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day12[j].color = 'red' ;
+                     this.timeofweekWH2F2Day12[j].showlabel = true;
+                     this.timeofweekWH2F2Day12[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day12[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day12[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day12[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day12[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day12[j].id   ; k++){
+                              this.timeofweekWH2F2Day12.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day12[j].showremark = true;
+                         this.timeofweekWH2F2Day12[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '12-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day12.length; j++){
+                 if(this.timeofweekWH2F2Day12[j].roomid == 3){
+                     this.timeofweekWH2F2Day12[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day12[j].color = 'red' ;
+                     this.timeofweekWH2F2Day12[j].showlabel = true;
+                     this.timeofweekWH2F2Day12[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day12[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day12[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day12[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day12[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day12[j].id   ; k++){
+                              this.timeofweekWH2F2Day12.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day12[j].showremark = true;
+                         this.timeofweekWH2F2Day12[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '12-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day12.length; j++){
+                 if(this.timeofweekWH2F2Day12[j].roomid == 4){
+                     this.timeofweekWH2F2Day12[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day12[j].color = 'red' ;
+                     this.timeofweekWH2F2Day12[j].showlabel = true;
+                     this.timeofweekWH2F2Day12[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day12[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day12[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day12[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day12[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day12[j].id   ; k++){
+                              this.timeofweekWH2F2Day12.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day12[j].showremark = true;
+                         this.timeofweekWH2F2Day12[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '12-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day12.length; j++){
+                 if(this.timeofweekWH2F2Day12[j].roomid == 5){
+                     this.timeofweekWH2F2Day12[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day12[j].color = 'red' ;
+                     this.timeofweekWH2F2Day12[j].showlabel = true;
+                     this.timeofweekWH2F2Day12[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day12[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day12[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day12[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day12[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day12[j].id   ; k++){
+                              this.timeofweekWH2F2Day12.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day12[j].showremark = true;
+                         this.timeofweekWH2F2Day12[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '12-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day12.length; j++){
+                 if(this.timeofweekWH2F2Day12[j].roomid == 6){
+                     this.timeofweekWH2F2Day12[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day12[j].color = 'red' ;
+                     this.timeofweekWH2F2Day12[j].showlabel = true;
+                     this.timeofweekWH2F2Day12[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day12[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day12[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day12[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day12[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day12[j].id   ; k++){
+                              this.timeofweekWH2F2Day12.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day12[j].showremark = true;
+                         this.timeofweekWH2F2Day12[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '12-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day12.length; j++){
+                 if(this.timeofweekWH2F2Day12[j].roomid == 7){
+                     this.timeofweekWH2F2Day12[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day12[j].color = 'red' ;
+                     this.timeofweekWH2F2Day12[j].showlabel = true;
+                     this.timeofweekWH2F2Day12[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day12[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day12[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day12[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day12[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day12[j].id   ; k++){
+                              this.timeofweekWH2F2Day12.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day12[j].showremark = true;
+                         this.timeofweekWH2F2Day12[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '12-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day12.length; j++){
+                 if(this.timeofweekWH2F2Day12[j].roomid == 8){
+                     this.timeofweekWH2F2Day12[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day12[j].color = 'red' ;
+                     this.timeofweekWH2F2Day12[j].showlabel = true;
+                     this.timeofweekWH2F2Day12[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day12[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day12[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day12[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day12[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day12[j].id   ; k++){
+                              this.timeofweekWH2F2Day12.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day12[j].showremark = true;
+                         this.timeofweekWH2F2Day12[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '12-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day12.length; j++){
+                 if(this.timeofweekWH2F2Day12[j].roomid == 9){
+                     this.timeofweekWH2F2Day12[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day12[j].color = 'red' ;
+                     this.timeofweekWH2F2Day12[j].showlabel = true;
+                     this.timeofweekWH2F2Day12[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day12[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day12[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day12[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day12[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day12[j].id   ; k++){
+                              this.timeofweekWH2F2Day12.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day12[j].showremark = true;
+                         this.timeofweekWH2F2Day12[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '13-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day13.length; j++){
+                 if(this.timeofweekWH2F2Day13[j].roomid == 0){
+                     this.timeofweekWH2F2Day13[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day13[j].color = 'red' ;
+                     this.timeofweekWH2F2Day13[j].showlabel = true;
+                     this.timeofweekWH2F2Day13[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day13[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day13[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day13[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day13[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day13[j].id   ; k++){
+                              this.timeofweekWH2F2Day13.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day13[j].showremark = true;
+                         this.timeofweekWH2F2Day13[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '13-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day13.length; j++){
+                 if(this.timeofweekWH2F2Day13[j].roomid == 1){
+                     this.timeofweekWH2F2Day13[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day13[j].color = 'red' ;
+                     this.timeofweekWH2F2Day13[j].showlabel = true;
+                     this.timeofweekWH2F2Day13[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day13[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day13[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day13[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day13[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day13[j].id   ; k++){
+                              this.timeofweekWH2F2Day13.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day13[j].showremark = true;
+                         this.timeofweekWH2F2Day13[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '13-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day13.length; j++){
+                 if(this.timeofweekWH2F2Day13[j].roomid == 2){
+                     this.timeofweekWH2F2Day13[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day13[j].color = 'red' ;
+                     this.timeofweekWH2F2Day13[j].showlabel = true;
+                     this.timeofweekWH2F2Day13[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day13[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day13[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day13[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day13[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day13[j].id   ; k++){
+                              this.timeofweekWH2F2Day13.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day13[j].showremark = true;
+                         this.timeofweekWH2F2Day13[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '13-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day13.length; j++){
+                 if(this.timeofweekWH2F2Day13[j].roomid == 3){
+                     this.timeofweekWH2F2Day13[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day13[j].color = 'red' ;
+                     this.timeofweekWH2F2Day13[j].showlabel = true;
+                     this.timeofweekWH2F2Day13[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day13[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day13[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day13[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day13[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day13[j].id   ; k++){
+                              this.timeofweekWH2F2Day13.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day13[j].showremark = true;
+                         this.timeofweekWH2F2Day13[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '13-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day13.length; j++){
+                 if(this.timeofweekWH2F2Day13[j].roomid == 4){
+                     this.timeofweekWH2F2Day13[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day13[j].color = 'red' ;
+                     this.timeofweekWH2F2Day13[j].showlabel = true;
+                     this.timeofweekWH2F2Day13[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day13[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day13[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day13[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day13[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day13[j].id   ; k++){
+                              this.timeofweekWH2F2Day13.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day13[j].showremark = true;
+                         this.timeofweekWH2F2Day13[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '13-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day13.length; j++){
+                 if(this.timeofweekWH2F2Day13[j].roomid == 5){
+                     this.timeofweekWH2F2Day13[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day13[j].color = 'red' ;
+                     this.timeofweekWH2F2Day13[j].showlabel = true;
+                     this.timeofweekWH2F2Day13[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day13[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day13[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day13[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day13[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day13[j].id   ; k++){
+                              this.timeofweekWH2F2Day13.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day13[j].showremark = true;
+                         this.timeofweekWH2F2Day13[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '13-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day13.length; j++){
+                 if(this.timeofweekWH2F2Day13[j].roomid == 6){
+                     this.timeofweekWH2F2Day13[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day13[j].color = 'red' ;
+                     this.timeofweekWH2F2Day13[j].showlabel = true;
+                     this.timeofweekWH2F2Day13[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day13[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day13[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day13[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day13[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day13[j].id   ; k++){
+                              this.timeofweekWH2F2Day13.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day13[j].showremark = true;
+                         this.timeofweekWH2F2Day13[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '13-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day13.length; j++){
+                 if(this.timeofweekWH2F2Day13[j].roomid == 7){
+                     this.timeofweekWH2F2Day13[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day13[j].color = 'red' ;
+                     this.timeofweekWH2F2Day13[j].showlabel = true;
+                     this.timeofweekWH2F2Day13[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day13[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day13[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day13[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day13[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day13[j].id   ; k++){
+                              this.timeofweekWH2F2Day13.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day13[j].showremark = true;
+                         this.timeofweekWH2F2Day13[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '13-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day13.length; j++){
+                 if(this.timeofweekWH2F2Day13[j].roomid == 8){
+                     this.timeofweekWH2F2Day13[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day13[j].color = 'red' ;
+                     this.timeofweekWH2F2Day13[j].showlabel = true;
+                     this.timeofweekWH2F2Day13[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day13[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day13[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day13[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day13[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day13[j].id   ; k++){
+                              this.timeofweekWH2F2Day13.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day13[j].showremark = true;
+                         this.timeofweekWH2F2Day13[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '13-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day13.length; j++){
+                 if(this.timeofweekWH2F2Day13[j].roomid == 9){
+                     this.timeofweekWH2F2Day13[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day13[j].color = 'red' ;
+                     this.timeofweekWH2F2Day13[j].showlabel = true;
+                     this.timeofweekWH2F2Day13[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day13[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day13[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day13[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day13[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day13[j].id   ; k++){
+                              this.timeofweekWH2F2Day13.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day13[j].showremark = true;
+                         this.timeofweekWH2F2Day13[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '14-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day14.length; j++){
+                 if(this.timeofweekWH2F2Day14[j].roomid == 0){
+                     this.timeofweekWH2F2Day14[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day14[j].color = 'red' ;
+                     this.timeofweekWH2F2Day14[j].showlabel = true;
+                     this.timeofweekWH2F2Day14[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day14[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day14[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day14[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day14[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day14[j].id   ; k++){
+                              this.timeofweekWH2F2Day14.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day14[j].showremark = true;
+                         this.timeofweekWH2F2Day14[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '14-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day14.length; j++){
+                 if(this.timeofweekWH2F2Day14[j].roomid == 1){
+                     this.timeofweekWH2F2Day14[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day14[j].color = 'red' ;
+                     this.timeofweekWH2F2Day14[j].showlabel = true;
+                     this.timeofweekWH2F2Day14[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day14[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day14[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day14[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day14[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day14[j].id   ; k++){
+                              this.timeofweekWH2F2Day14.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day14[j].showremark = true;
+                         this.timeofweekWH2F2Day14[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '14-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day14.length; j++){
+                 if(this.timeofweekWH2F2Day14[j].roomid == 2){
+                     this.timeofweekWH2F2Day14[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day14[j].color = 'red' ;
+                     this.timeofweekWH2F2Day14[j].showlabel = true;
+                     this.timeofweekWH2F2Day14[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day14[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day14[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day14[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day14[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day14[j].id   ; k++){
+                              this.timeofweekWH2F2Day14.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day14[j].showremark = true;
+                         this.timeofweekWH2F2Day14[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '14-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day14.length; j++){
+                 if(this.timeofweekWH2F2Day14[j].roomid == 3){
+                     this.timeofweekWH2F2Day14[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day14[j].color = 'red' ;
+                     this.timeofweekWH2F2Day14[j].showlabel = true;
+                     this.timeofweekWH2F2Day14[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day14[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day14[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day14[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day14[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day14[j].id   ; k++){
+                              this.timeofweekWH2F2Day14.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day14[j].showremark = true;
+                         this.timeofweekWH2F2Day14[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '14-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day14.length; j++){
+                 if(this.timeofweekWH2F2Day14[j].roomid == 4){
+                     this.timeofweekWH2F2Day14[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day14[j].color = 'red' ;
+                     this.timeofweekWH2F2Day14[j].showlabel = true;
+                     this.timeofweekWH2F2Day14[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day14[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day14[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day14[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day14[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day14[j].id   ; k++){
+                              this.timeofweekWH2F2Day14.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day14[j].showremark = true;
+                         this.timeofweekWH2F2Day14[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '14-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day14.length; j++){
+                 if(this.timeofweekWH2F2Day14[j].roomid == 5){
+                     this.timeofweekWH2F2Day14[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day14[j].color = 'red' ;
+                     this.timeofweekWH2F2Day14[j].showlabel = true;
+                     this.timeofweekWH2F2Day14[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day14[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day14[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day14[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day14[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day14[j].id   ; k++){
+                              this.timeofweekWH2F2Day14.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day14[j].showremark = true;
+                         this.timeofweekWH2F2Day14[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '14-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day14.length; j++){
+                 if(this.timeofweekWH2F2Day14[j].roomid == 6){
+                     this.timeofweekWH2F2Day14[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day14[j].color = 'red' ;
+                     this.timeofweekWH2F2Day14[j].showlabel = true;
+                     this.timeofweekWH2F2Day14[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day14[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day14[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day14[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day14[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day14[j].id   ; k++){
+                              this.timeofweekWH2F2Day14.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day14[j].showremark = true;
+                         this.timeofweekWH2F2Day14[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '14-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day14.length; j++){
+                 if(this.timeofweekWH2F2Day14[j].roomid == 7){
+                     this.timeofweekWH2F2Day14[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day14[j].color = 'red' ;
+                     this.timeofweekWH2F2Day14[j].showlabel = true;
+                     this.timeofweekWH2F2Day14[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day14[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day14[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day14[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day14[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day14[j].id   ; k++){
+                              this.timeofweekWH2F2Day14.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day14[j].showremark = true;
+                         this.timeofweekWH2F2Day14[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '14-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day14.length; j++){
+                 if(this.timeofweekWH2F2Day14[j].roomid == 8){
+                     this.timeofweekWH2F2Day14[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day14[j].color = 'red' ;
+                     this.timeofweekWH2F2Day14[j].showlabel = true;
+                     this.timeofweekWH2F2Day14[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day14[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day14[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day14[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day14[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day14[j].id   ; k++){
+                              this.timeofweekWH2F2Day14.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day14[j].showremark = true;
+                         this.timeofweekWH2F2Day14[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '14-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day14.length; j++){
+                 if(this.timeofweekWH2F2Day14[j].roomid == 9){
+                     this.timeofweekWH2F2Day14[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day14[j].color = 'red' ;
+                     this.timeofweekWH2F2Day14[j].showlabel = true;
+                     this.timeofweekWH2F2Day14[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day14[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day14[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day14[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day14[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day14[j].id   ; k++){
+                              this.timeofweekWH2F2Day14.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day14[j].showremark = true;
+                         this.timeofweekWH2F2Day14[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '15-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day15.length; j++){
+                 if(this.timeofweekWH2F2Day15[j].roomid == 0){
+                     this.timeofweekWH2F2Day15[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day15[j].color = 'red' ;
+                     this.timeofweekWH2F2Day15[j].showlabel = true;
+                     this.timeofweekWH2F2Day15[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day15[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day15[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day15[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day15[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day15[j].id   ; k++){
+                              this.timeofweekWH2F2Day15.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day15[j].showremark = true;
+                         this.timeofweekWH2F2Day15[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '15-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day15.length; j++){
+                 if(this.timeofweekWH2F2Day15[j].roomid == 1){
+                     this.timeofweekWH2F2Day15[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day15[j].color = 'red' ;
+                     this.timeofweekWH2F2Day15[j].showlabel = true;
+                     this.timeofweekWH2F2Day15[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day15[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day15[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day15[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day15[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day15[j].id   ; k++){
+                              this.timeofweekWH2F2Day15.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day15[j].showremark = true;
+                         this.timeofweekWH2F2Day15[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '15-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day15.length; j++){
+                 if(this.timeofweekWH2F2Day15[j].roomid == 2){
+                     this.timeofweekWH2F2Day15[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day15[j].color = 'red' ;
+                     this.timeofweekWH2F2Day15[j].showlabel = true;
+                     this.timeofweekWH2F2Day15[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day15[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day15[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day15[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day15[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day15[j].id   ; k++){
+                              this.timeofweekWH2F2Day15.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day15[j].showremark = true;
+                         this.timeofweekWH2F2Day15[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '15-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day15.length; j++){
+                 if(this.timeofweekWH2F2Day15[j].roomid == 3){
+                     this.timeofweekWH2F2Day15[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day15[j].color = 'red' ;
+                     this.timeofweekWH2F2Day15[j].showlabel = true;
+                     this.timeofweekWH2F2Day15[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day15[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day15[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day15[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day15[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day15[j].id   ; k++){
+                              this.timeofweekWH2F2Day15.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day15[j].showremark = true;
+                         this.timeofweekWH2F2Day15[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '15-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day15.length; j++){
+                 if(this.timeofweekWH2F2Day15[j].roomid == 4){
+                     this.timeofweekWH2F2Day15[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day15[j].color = 'red' ;
+                     this.timeofweekWH2F2Day15[j].showlabel = true;
+                     this.timeofweekWH2F2Day15[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day15[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day15[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day15[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day15[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day15[j].id   ; k++){
+                              this.timeofweekWH2F2Day15.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day15[j].showremark = true;
+                         this.timeofweekWH2F2Day15[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '15-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day15.length; j++){
+                 if(this.timeofweekWH2F2Day15[j].roomid == 5){
+                     this.timeofweekWH2F2Day15[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day15[j].color = 'red' ;
+                     this.timeofweekWH2F2Day15[j].showlabel = true;
+                     this.timeofweekWH2F2Day15[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day15[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day15[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day15[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day15[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day15[j].id   ; k++){
+                              this.timeofweekWH2F2Day15.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day15[j].showremark = true;
+                         this.timeofweekWH2F2Day15[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '15-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day15.length; j++){
+                 if(this.timeofweekWH2F2Day15[j].roomid == 6){
+                     this.timeofweekWH2F2Day15[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day15[j].color = 'red' ;
+                     this.timeofweekWH2F2Day15[j].showlabel = true;
+                     this.timeofweekWH2F2Day15[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day15[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day15[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day15[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day15[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day15[j].id   ; k++){
+                              this.timeofweekWH2F2Day15.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day15[j].showremark = true;
+                         this.timeofweekWH2F2Day15[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '15-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day15.length; j++){
+                 if(this.timeofweekWH2F2Day15[j].roomid == 7){
+                     this.timeofweekWH2F2Day15[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day15[j].color = 'red' ;
+                     this.timeofweekWH2F2Day15[j].showlabel = true;
+                     this.timeofweekWH2F2Day15[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day15[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day15[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day15[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day15[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day15[j].id   ; k++){
+                              this.timeofweekWH2F2Day15.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day15[j].showremark = true;
+                         this.timeofweekWH2F2Day15[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '15-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day15.length; j++){
+                 if(this.timeofweekWH2F2Day15[j].roomid == 8){
+                     this.timeofweekWH2F2Day15[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day15[j].color = 'red' ;
+                     this.timeofweekWH2F2Day15[j].showlabel = true;
+                     this.timeofweekWH2F2Day15[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day15[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day15[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day15[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day15[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day15[j].id   ; k++){
+                              this.timeofweekWH2F2Day15.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day15[j].showremark = true;
+                         this.timeofweekWH2F2Day15[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '15-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day15.length; j++){
+                 if(this.timeofweekWH2F2Day15[j].roomid == 9){
+                     this.timeofweekWH2F2Day15[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day15[j].color = 'red' ;
+                     this.timeofweekWH2F2Day15[j].showlabel = true;
+                     this.timeofweekWH2F2Day15[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day15[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day15[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day15[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day15[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day15[j].id   ; k++){
+                              this.timeofweekWH2F2Day15.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day15[j].showremark = true;
+                         this.timeofweekWH2F2Day15[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '16-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day16.length; j++){
+                 if(this.timeofweekWH2F2Day16[j].roomid == 0){
+                     this.timeofweekWH2F2Day16[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day16[j].color = 'red' ;
+                     this.timeofweekWH2F2Day16[j].showlabel = true;
+                     this.timeofweekWH2F2Day16[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day16[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day16[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day16[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day16[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day16[j].id   ; k++){
+                              this.timeofweekWH2F2Day16.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day16[j].showremark = true;
+                         this.timeofweekWH2F2Day16[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '16-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day16.length; j++){
+                 if(this.timeofweekWH2F2Day16[j].roomid == 1){
+                     this.timeofweekWH2F2Day16[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day16[j].color = 'red' ;
+                     this.timeofweekWH2F2Day16[j].showlabel = true;
+                     this.timeofweekWH2F2Day16[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day16[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day16[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day16[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day16[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day16[j].id   ; k++){
+                              this.timeofweekWH2F2Day16.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day16[j].showremark = true;
+                         this.timeofweekWH2F2Day16[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '16-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day16.length; j++){
+                 if(this.timeofweekWH2F2Day16[j].roomid == 2){
+                     this.timeofweekWH2F2Day16[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day16[j].color = 'red' ;
+                     this.timeofweekWH2F2Day16[j].showlabel = true;
+                     this.timeofweekWH2F2Day16[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day16[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day16[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day16[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day16[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day16[j].id   ; k++){
+                              this.timeofweekWH2F2Day16.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day16[j].showremark = true;
+                         this.timeofweekWH2F2Day16[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '16-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day16.length; j++){
+                 if(this.timeofweekWH2F2Day16[j].roomid == 3){
+                     this.timeofweekWH2F2Day16[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day16[j].color = 'red' ;
+                     this.timeofweekWH2F2Day16[j].showlabel = true;
+                     this.timeofweekWH2F2Day16[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day16[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day16[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day16[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day16[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day16[j].id   ; k++){
+                              this.timeofweekWH2F2Day16.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day16[j].showremark = true;
+                         this.timeofweekWH2F2Day16[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '16-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day16.length; j++){
+                 if(this.timeofweekWH2F2Day16[j].roomid == 4){
+                     this.timeofweekWH2F2Day16[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day16[j].color = 'red' ;
+                     this.timeofweekWH2F2Day16[j].showlabel = true;
+                     this.timeofweekWH2F2Day16[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day16[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day16[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day16[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day16[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day16[j].id   ; k++){
+                              this.timeofweekWH2F2Day16.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day16[j].showremark = true;
+                         this.timeofweekWH2F2Day16[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '16-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day16.length; j++){
+                 if(this.timeofweekWH2F2Day16[j].roomid == 5){
+                     this.timeofweekWH2F2Day16[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day16[j].color = 'red' ;
+                     this.timeofweekWH2F2Day16[j].showlabel = true;
+                     this.timeofweekWH2F2Day16[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day16[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day16[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day16[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day16[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day16[j].id   ; k++){
+                              this.timeofweekWH2F2Day16.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day16[j].showremark = true;
+                         this.timeofweekWH2F2Day16[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '16-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day16.length; j++){
+                 if(this.timeofweekWH2F2Day16[j].roomid == 6){
+                     this.timeofweekWH2F2Day16[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day16[j].color = 'red' ;
+                     this.timeofweekWH2F2Day16[j].showlabel = true;
+                     this.timeofweekWH2F2Day16[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day16[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day16[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day16[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day16[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day16[j].id   ; k++){
+                              this.timeofweekWH2F2Day16.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day16[j].showremark = true;
+                         this.timeofweekWH2F2Day16[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '16-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day16.length; j++){
+                 if(this.timeofweekWH2F2Day16[j].roomid == 7){
+                     this.timeofweekWH2F2Day16[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day16[j].color = 'red' ;
+                     this.timeofweekWH2F2Day16[j].showlabel = true;
+                     this.timeofweekWH2F2Day16[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day16[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day16[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day16[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day16[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day16[j].id   ; k++){
+                              this.timeofweekWH2F2Day16.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day16[j].showremark = true;
+                         this.timeofweekWH2F2Day16[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '16-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day16.length; j++){
+                 if(this.timeofweekWH2F2Day16[j].roomid == 8){
+                     this.timeofweekWH2F2Day16[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day16[j].color = 'red' ;
+                     this.timeofweekWH2F2Day16[j].showlabel = true;
+                     this.timeofweekWH2F2Day16[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day16[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day16[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day16[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day16[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day16[j].id   ; k++){
+                              this.timeofweekWH2F2Day16.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day16[j].showremark = true;
+                         this.timeofweekWH2F2Day16[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '16-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day16.length; j++){
+                 if(this.timeofweekWH2F2Day16[j].roomid == 9){
+                     this.timeofweekWH2F2Day16[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day16[j].color = 'red' ;
+                     this.timeofweekWH2F2Day16[j].showlabel = true;
+                     this.timeofweekWH2F2Day16[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day16[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day16[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day16[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day16[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day16[j].id   ; k++){
+                              this.timeofweekWH2F2Day16.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day16[j].showremark = true;
+                         this.timeofweekWH2F2Day16[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '17-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day17.length; j++){
+                 if(this.timeofweekWH2F2Day17[j].roomid == 0){
+                     this.timeofweekWH2F2Day17[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day17[j].color = 'red' ;
+                     this.timeofweekWH2F2Day17[j].showlabel = true;
+                     this.timeofweekWH2F2Day17[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day17[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day17[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day17[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day17[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day17[j].id   ; k++){
+                              this.timeofweekWH2F2Day17.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day17[j].showremark = true;
+                         this.timeofweekWH2F2Day17[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '17-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day17.length; j++){
+                 if(this.timeofweekWH2F2Day17[j].roomid == 1){
+                     this.timeofweekWH2F2Day17[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day17[j].color = 'red' ;
+                     this.timeofweekWH2F2Day17[j].showlabel = true;
+                     this.timeofweekWH2F2Day17[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day17[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day17[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day17[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day17[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day17[j].id   ; k++){
+                              this.timeofweekWH2F2Day17.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day17[j].showremark = true;
+                         this.timeofweekWH2F2Day17[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '17-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day17.length; j++){
+                 if(this.timeofweekWH2F2Day17[j].roomid == 2){
+                     this.timeofweekWH2F2Day17[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day17[j].color = 'red' ;
+                     this.timeofweekWH2F2Day17[j].showlabel = true;
+                     this.timeofweekWH2F2Day17[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day17[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day17[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day17[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day17[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day17[j].id   ; k++){
+                              this.timeofweekWH2F2Day17.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day17[j].showremark = true;
+                         this.timeofweekWH2F2Day17[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '17-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day17.length; j++){
+                 if(this.timeofweekWH2F2Day17[j].roomid == 3){
+                     this.timeofweekWH2F2Day17[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day17[j].color = 'red' ;
+                     this.timeofweekWH2F2Day17[j].showlabel = true;
+                     this.timeofweekWH2F2Day17[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day17[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day17[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day17[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day17[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day17[j].id   ; k++){
+                              this.timeofweekWH2F2Day17.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day17[j].showremark = true;
+                         this.timeofweekWH2F2Day17[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '17-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day17.length; j++){
+                 if(this.timeofweekWH2F2Day17[j].roomid == 4){
+                     this.timeofweekWH2F2Day17[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day17[j].color = 'red' ;
+                     this.timeofweekWH2F2Day17[j].showlabel = true;
+                     this.timeofweekWH2F2Day17[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day17[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day17[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day17[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day17[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day17[j].id   ; k++){
+                              this.timeofweekWH2F2Day17.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day17[j].showremark = true;
+                         this.timeofweekWH2F2Day17[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '17-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day17.length; j++){
+                 if(this.timeofweekWH2F2Day17[j].roomid == 5){
+                     this.timeofweekWH2F2Day17[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day17[j].color = 'red' ;
+                     this.timeofweekWH2F2Day17[j].showlabel = true;
+                     this.timeofweekWH2F2Day17[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day17[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day17[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day17[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day17[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day17[j].id   ; k++){
+                              this.timeofweekWH2F2Day17.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day17[j].showremark = true;
+                         this.timeofweekWH2F2Day17[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '17-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day17.length; j++){
+                 if(this.timeofweekWH2F2Day17[j].roomid == 6){
+                     this.timeofweekWH2F2Day17[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day17[j].color = 'red' ;
+                     this.timeofweekWH2F2Day17[j].showlabel = true;
+                     this.timeofweekWH2F2Day17[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day17[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day17[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day17[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day17[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day17[j].id   ; k++){
+                              this.timeofweekWH2F2Day17.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day17[j].showremark = true;
+                         this.timeofweekWH2F2Day17[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '17-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day17.length; j++){
+                 if(this.timeofweekWH2F2Day17[j].roomid == 7){
+                     this.timeofweekWH2F2Day17[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day17[j].color = 'red' ;
+                     this.timeofweekWH2F2Day17[j].showlabel = true;
+                     this.timeofweekWH2F2Day17[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day17[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day17[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day17[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day17[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day17[j].id   ; k++){
+                              this.timeofweekWH2F2Day17.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day17[j].showremark = true;
+                         this.timeofweekWH2F2Day17[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '17-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day17.length; j++){
+                 if(this.timeofweekWH2F2Day17[j].roomid == 8){
+                     this.timeofweekWH2F2Day17[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day17[j].color = 'red' ;
+                     this.timeofweekWH2F2Day17[j].showlabel = true;
+                     this.timeofweekWH2F2Day17[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day17[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day17[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day17[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day17[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day17[j].id   ; k++){
+                              this.timeofweekWH2F2Day17.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day17[j].showremark = true;
+                         this.timeofweekWH2F2Day17[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '17-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day17.length; j++){
+                 if(this.timeofweekWH2F2Day17[j].roomid == 9){
+                     this.timeofweekWH2F2Day17[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day17[j].color = 'red' ;
+                     this.timeofweekWH2F2Day17[j].showlabel = true;
+                     this.timeofweekWH2F2Day17[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day17[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day17[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day17[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day17[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day17[j].id   ; k++){
+                              this.timeofweekWH2F2Day17.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day17[j].showremark = true;
+                         this.timeofweekWH2F2Day17[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '18-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day18.length; j++){
+                 if(this.timeofweekWH2F2Day18[j].roomid == 0){
+                     this.timeofweekWH2F2Day18[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day18[j].color = 'red' ;
+                     this.timeofweekWH2F2Day18[j].showlabel = true;
+                     this.timeofweekWH2F2Day18[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day18[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day18[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day18[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day18[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day18[j].id   ; k++){
+                              this.timeofweekWH2F2Day18.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day18[j].showremark = true;
+                         this.timeofweekWH2F2Day18[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '18-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day18.length; j++){
+                 if(this.timeofweekWH2F2Day18[j].roomid == 1){
+                     this.timeofweekWH2F2Day18[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day18[j].color = 'red' ;
+                     this.timeofweekWH2F2Day18[j].showlabel = true;
+                     this.timeofweekWH2F2Day18[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day18[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day18[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day18[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day18[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day18[j].id   ; k++){
+                              this.timeofweekWH2F2Day18.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day18[j].showremark = true;
+                         this.timeofweekWH2F2Day18[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '18-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day18.length; j++){
+                 if(this.timeofweekWH2F2Day18[j].roomid == 2){
+                     this.timeofweekWH2F2Day18[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day18[j].color = 'red' ;
+                     this.timeofweekWH2F2Day18[j].showlabel = true;
+                     this.timeofweekWH2F2Day18[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day18[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day18[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day18[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day18[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day18[j].id   ; k++){
+                              this.timeofweekWH2F2Day18.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day18[j].showremark = true;
+                         this.timeofweekWH2F2Day18[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '18-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day18.length; j++){
+                 if(this.timeofweekWH2F2Day18[j].roomid == 3){
+                     this.timeofweekWH2F2Day18[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day18[j].color = 'red' ;
+                     this.timeofweekWH2F2Day18[j].showlabel = true;
+                     this.timeofweekWH2F2Day18[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day18[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day18[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day18[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day18[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day18[j].id   ; k++){
+                              this.timeofweekWH2F2Day18.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day18[j].showremark = true;
+                         this.timeofweekWH2F2Day18[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '18-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day18.length; j++){
+                 if(this.timeofweekWH2F2Day18[j].roomid == 4){
+                     this.timeofweekWH2F2Day18[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day18[j].color = 'red' ;
+                     this.timeofweekWH2F2Day18[j].showlabel = true;
+                     this.timeofweekWH2F2Day18[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day18[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day18[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day18[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day18[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day18[j].id   ; k++){
+                              this.timeofweekWH2F2Day18.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day18[j].showremark = true;
+                         this.timeofweekWH2F2Day18[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '18-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day18.length; j++){
+                 if(this.timeofweekWH2F2Day18[j].roomid == 5){
+                     this.timeofweekWH2F2Day18[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day18[j].color = 'red' ;
+                     this.timeofweekWH2F2Day18[j].showlabel = true;
+                     this.timeofweekWH2F2Day18[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day18[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day18[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day18[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day18[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day18[j].id   ; k++){
+                              this.timeofweekWH2F2Day18.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day18[j].showremark = true;
+                         this.timeofweekWH2F2Day18[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '18-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day18.length; j++){
+                 if(this.timeofweekWH2F2Day18[j].roomid == 6){
+                     this.timeofweekWH2F2Day18[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day18[j].color = 'red' ;
+                     this.timeofweekWH2F2Day18[j].showlabel = true;
+                     this.timeofweekWH2F2Day18[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day18[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day18[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day18[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day18[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day18[j].id   ; k++){
+                              this.timeofweekWH2F2Day18.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day18[j].showremark = true;
+                         this.timeofweekWH2F2Day18[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '18-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day18.length; j++){
+                 if(this.timeofweekWH2F2Day18[j].roomid == 7){
+                     this.timeofweekWH2F2Day18[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day18[j].color = 'red' ;
+                     this.timeofweekWH2F2Day18[j].showlabel = true;
+                     this.timeofweekWH2F2Day18[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day18[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day18[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day18[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day18[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day18[j].id   ; k++){
+                              this.timeofweekWH2F2Day18.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day18[j].showremark = true;
+                         this.timeofweekWH2F2Day18[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '18-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day18.length; j++){
+                 if(this.timeofweekWH2F2Day18[j].roomid == 8){
+                     this.timeofweekWH2F2Day18[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day18[j].color = 'red' ;
+                     this.timeofweekWH2F2Day18[j].showlabel = true;
+                     this.timeofweekWH2F2Day18[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day18[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day18[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day18[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day18[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day18[j].id   ; k++){
+                              this.timeofweekWH2F2Day18.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day18[j].showremark = true;
+                         this.timeofweekWH2F2Day18[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '18-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day18.length; j++){
+                 if(this.timeofweekWH2F2Day18[j].roomid == 9){
+                     this.timeofweekWH2F2Day18[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day18[j].color = 'red' ;
+                     this.timeofweekWH2F2Day18[j].showlabel = true;
+                     this.timeofweekWH2F2Day18[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day18[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day18[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day18[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day18[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day18[j].id   ; k++){
+                              this.timeofweekWH2F2Day18.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day18[j].showremark = true;
+                         this.timeofweekWH2F2Day18[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '19-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day19.length; j++){
+                 if(this.timeofweekWH2F2Day19[j].roomid == 0){
+                     this.timeofweekWH2F2Day19[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day19[j].color = 'red' ;
+                     this.timeofweekWH2F2Day19[j].showlabel = true;
+                     this.timeofweekWH2F2Day19[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day19[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day19[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day19[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day19[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day19[j].id   ; k++){
+                              this.timeofweekWH2F2Day19.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day19[j].showremark = true;
+                         this.timeofweekWH2F2Day19[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '19-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day19.length; j++){
+                 if(this.timeofweekWH2F2Day19[j].roomid == 1){
+                     this.timeofweekWH2F2Day19[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day19[j].color = 'red' ;
+                     this.timeofweekWH2F2Day19[j].showlabel = true;
+                     this.timeofweekWH2F2Day19[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day19[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day19[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day19[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day19[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day19[j].id   ; k++){
+                              this.timeofweekWH2F2Day19.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day19[j].showremark = true;
+                         this.timeofweekWH2F2Day19[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '19-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day19.length; j++){
+                 if(this.timeofweekWH2F2Day19[j].roomid == 2){
+                     this.timeofweekWH2F2Day19[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day19[j].color = 'red' ;
+                     this.timeofweekWH2F2Day19[j].showlabel = true;
+                     this.timeofweekWH2F2Day19[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day19[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day19[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day19[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day19[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day19[j].id   ; k++){
+                              this.timeofweekWH2F2Day19.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day19[j].showremark = true;
+                         this.timeofweekWH2F2Day19[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '19-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day19.length; j++){
+                 if(this.timeofweekWH2F2Day19[j].roomid == 3){
+                     this.timeofweekWH2F2Day19[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day19[j].color = 'red' ;
+                     this.timeofweekWH2F2Day19[j].showlabel = true;
+                     this.timeofweekWH2F2Day19[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day19[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day19[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day19[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day19[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day19[j].id   ; k++){
+                              this.timeofweekWH2F2Day19.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day19[j].showremark = true;
+                         this.timeofweekWH2F2Day19[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '19-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day19.length; j++){
+                 if(this.timeofweekWH2F2Day19[j].roomid == 4){
+                     this.timeofweekWH2F2Day19[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day19[j].color = 'red' ;
+                     this.timeofweekWH2F2Day19[j].showlabel = true;
+                     this.timeofweekWH2F2Day19[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day19[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day19[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day19[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day19[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day19[j].id   ; k++){
+                              this.timeofweekWH2F2Day19.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day19[j].showremark = true;
+                         this.timeofweekWH2F2Day19[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '19-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day19.length; j++){
+                 if(this.timeofweekWH2F2Day19[j].roomid == 5){
+                     this.timeofweekWH2F2Day19[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day19[j].color = 'red' ;
+                     this.timeofweekWH2F2Day19[j].showlabel = true;
+                     this.timeofweekWH2F2Day19[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day19[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day19[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day19[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day19[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day19[j].id   ; k++){
+                              this.timeofweekWH2F2Day19.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day19[j].showremark = true;
+                         this.timeofweekWH2F2Day19[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '19-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day19.length; j++){
+                 if(this.timeofweekWH2F2Day19[j].roomid == 6){
+                     this.timeofweekWH2F2Day19[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day19[j].color = 'red' ;
+                     this.timeofweekWH2F2Day19[j].showlabel = true;
+                     this.timeofweekWH2F2Day19[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day19[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day19[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day19[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day19[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day19[j].id   ; k++){
+                              this.timeofweekWH2F2Day19.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day19[j].showremark = true;
+                         this.timeofweekWH2F2Day19[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '19-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day19.length; j++){
+                 if(this.timeofweekWH2F2Day19[j].roomid == 7){
+                     this.timeofweekWH2F2Day19[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day19[j].color = 'red' ;
+                     this.timeofweekWH2F2Day19[j].showlabel = true;
+                     this.timeofweekWH2F2Day19[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day19[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day19[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day19[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day19[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day19[j].id   ; k++){
+                              this.timeofweekWH2F2Day19.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day19[j].showremark = true;
+                         this.timeofweekWH2F2Day19[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '19-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day19.length; j++){
+                 if(this.timeofweekWH2F2Day19[j].roomid == 8){
+                     this.timeofweekWH2F2Day19[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day19[j].color = 'red' ;
+                     this.timeofweekWH2F2Day19[j].showlabel = true;
+                     this.timeofweekWH2F2Day19[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day19[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day19[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day19[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day19[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day19[j].id   ; k++){
+                              this.timeofweekWH2F2Day19.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day19[j].showremark = true;
+                         this.timeofweekWH2F2Day19[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '19-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day19.length; j++){
+                 if(this.timeofweekWH2F2Day19[j].roomid == 9){
+                     this.timeofweekWH2F2Day19[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day19[j].color = 'red' ;
+                     this.timeofweekWH2F2Day19[j].showlabel = true;
+                     this.timeofweekWH2F2Day19[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day19[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day19[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day19[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day19[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day19[j].id   ; k++){
+                              this.timeofweekWH2F2Day19.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day19[j].showremark = true;
+                         this.timeofweekWH2F2Day19[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '20-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day20.length; j++){
+                 if(this.timeofweekWH2F2Day20[j].roomid == 0){
+                     this.timeofweekWH2F2Day20[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day20[j].color = 'red' ;
+                     this.timeofweekWH2F2Day20[j].showlabel = true;
+                     this.timeofweekWH2F2Day20[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day20[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day20[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day20[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day20[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day20[j].id   ; k++){
+                              this.timeofweekWH2F2Day20.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day20[j].showremark = true;
+                         this.timeofweekWH2F2Day20[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '20-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day20.length; j++){
+                 if(this.timeofweekWH2F2Day20[j].roomid == 1){
+                     this.timeofweekWH2F2Day20[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day20[j].color = 'red' ;
+                     this.timeofweekWH2F2Day20[j].showlabel = true;
+                     this.timeofweekWH2F2Day20[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day20[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day20[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day20[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day20[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day20[j].id   ; k++){
+                              this.timeofweekWH2F2Day20.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day20[j].showremark = true;
+                         this.timeofweekWH2F2Day20[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '20-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day20.length; j++){
+                 if(this.timeofweekWH2F2Day20[j].roomid == 2){
+                     this.timeofweekWH2F2Day20[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day20[j].color = 'red' ;
+                     this.timeofweekWH2F2Day20[j].showlabel = true;
+                     this.timeofweekWH2F2Day20[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day20[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day20[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day20[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day20[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day20[j].id   ; k++){
+                              this.timeofweekWH2F2Day20.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day20[j].showremark = true;
+                         this.timeofweekWH2F2Day20[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '20-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day20.length; j++){
+                 if(this.timeofweekWH2F2Day20[j].roomid == 3){
+                     this.timeofweekWH2F2Day20[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day20[j].color = 'red' ;
+                     this.timeofweekWH2F2Day20[j].showlabel = true;
+                     this.timeofweekWH2F2Day20[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day20[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day20[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day20[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day20[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day20[j].id   ; k++){
+                              this.timeofweekWH2F2Day20.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day20[j].showremark = true;
+                         this.timeofweekWH2F2Day20[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '20-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day20.length; j++){
+                 if(this.timeofweekWH2F2Day20[j].roomid == 4){
+                     this.timeofweekWH2F2Day20[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day20[j].color = 'red' ;
+                     this.timeofweekWH2F2Day20[j].showlabel = true;
+                     this.timeofweekWH2F2Day20[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day20[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day20[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day20[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day20[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day20[j].id   ; k++){
+                              this.timeofweekWH2F2Day20.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day20[j].showremark = true;
+                         this.timeofweekWH2F2Day20[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '20-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day20.length; j++){
+                 if(this.timeofweekWH2F2Day20[j].roomid == 5){
+                     this.timeofweekWH2F2Day20[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day20[j].color = 'red' ;
+                     this.timeofweekWH2F2Day20[j].showlabel = true;
+                     this.timeofweekWH2F2Day20[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day20[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day20[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day20[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day20[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day20[j].id   ; k++){
+                              this.timeofweekWH2F2Day20.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day20[j].showremark = true;
+                         this.timeofweekWH2F2Day20[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '20-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day20.length; j++){
+                 if(this.timeofweekWH2F2Day20[j].roomid == 6){
+                     this.timeofweekWH2F2Day20[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day20[j].color = 'red' ;
+                     this.timeofweekWH2F2Day20[j].showlabel = true;
+                     this.timeofweekWH2F2Day20[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day20[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day20[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day20[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day20[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day20[j].id   ; k++){
+                              this.timeofweekWH2F2Day20.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day20[j].showremark = true;
+                         this.timeofweekWH2F2Day20[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '20-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day20.length; j++){
+                 if(this.timeofweekWH2F2Day20[j].roomid == 7){
+                     this.timeofweekWH2F2Day20[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day20[j].color = 'red' ;
+                     this.timeofweekWH2F2Day20[j].showlabel = true;
+                     this.timeofweekWH2F2Day20[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day20[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day20[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day20[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day20[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day20[j].id   ; k++){
+                              this.timeofweekWH2F2Day20.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day20[j].showremark = true;
+                         this.timeofweekWH2F2Day20[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '20-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day20.length; j++){
+                 if(this.timeofweekWH2F2Day20[j].roomid == 8){
+                     this.timeofweekWH2F2Day20[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day20[j].color = 'red' ;
+                     this.timeofweekWH2F2Day20[j].showlabel = true;
+                     this.timeofweekWH2F2Day20[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day20[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day20[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day20[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day20[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day20[j].id   ; k++){
+                              this.timeofweekWH2F2Day20.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day20[j].showremark = true;
+                         this.timeofweekWH2F2Day20[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '20-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day20.length; j++){
+                 if(this.timeofweekWH2F2Day20[j].roomid == 9){
+                     this.timeofweekWH2F2Day20[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day20[j].color = 'red' ;
+                     this.timeofweekWH2F2Day20[j].showlabel = true;
+                     this.timeofweekWH2F2Day20[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day20[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day20[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day20[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day20[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day20[j].id   ; k++){
+                              this.timeofweekWH2F2Day20.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day20[j].showremark = true;
+                         this.timeofweekWH2F2Day20[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '21-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day21.length; j++){
+                 if(this.timeofweekWH2F2Day21[j].roomid == 0){
+                     this.timeofweekWH2F2Day21[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day21[j].color = 'red' ;
+                     this.timeofweekWH2F2Day21[j].showlabel = true;
+                     this.timeofweekWH2F2Day21[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day21[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day21[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day21[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day21[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day21[j].id   ; k++){
+                              this.timeofweekWH2F2Day21.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day21[j].showremark = true;
+                         this.timeofweekWH2F2Day21[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '21-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day21.length; j++){
+                 if(this.timeofweekWH2F2Day21[j].roomid == 1){
+                     this.timeofweekWH2F2Day21[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day21[j].color = 'red' ;
+                     this.timeofweekWH2F2Day21[j].showlabel = true;
+                     this.timeofweekWH2F2Day21[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day21[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day21[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day21[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day21[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day21[j].id   ; k++){
+                              this.timeofweekWH2F2Day21.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day21[j].showremark = true;
+                         this.timeofweekWH2F2Day21[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '21-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day21.length; j++){
+                 if(this.timeofweekWH2F2Day21[j].roomid == 2){
+                     this.timeofweekWH2F2Day21[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day21[j].color = 'red' ;
+                     this.timeofweekWH2F2Day21[j].showlabel = true;
+                     this.timeofweekWH2F2Day21[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day21[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day21[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day21[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day21[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day21[j].id   ; k++){
+                              this.timeofweekWH2F2Day21.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day21[j].showremark = true;
+                         this.timeofweekWH2F2Day21[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '21-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day21.length; j++){
+                 if(this.timeofweekWH2F2Day21[j].roomid == 3){
+                     this.timeofweekWH2F2Day21[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day21[j].color = 'red' ;
+                     this.timeofweekWH2F2Day21[j].showlabel = true;
+                     this.timeofweekWH2F2Day21[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day21[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day21[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day21[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day21[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day21[j].id   ; k++){
+                              this.timeofweekWH2F2Day21.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day21[j].showremark = true;
+                         this.timeofweekWH2F2Day21[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '21-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day21.length; j++){
+                 if(this.timeofweekWH2F2Day21[j].roomid == 4){
+                     this.timeofweekWH2F2Day21[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day21[j].color = 'red' ;
+                     this.timeofweekWH2F2Day21[j].showlabel = true;
+                     this.timeofweekWH2F2Day21[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day21[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day21[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day21[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day21[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day21[j].id   ; k++){
+                              this.timeofweekWH2F2Day21.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day21[j].showremark = true;
+                         this.timeofweekWH2F2Day21[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '21-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day21.length; j++){
+                 if(this.timeofweekWH2F2Day21[j].roomid == 5){
+                     this.timeofweekWH2F2Day21[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day21[j].color = 'red' ;
+                     this.timeofweekWH2F2Day21[j].showlabel = true;
+                     this.timeofweekWH2F2Day21[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day21[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day21[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day21[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day21[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day21[j].id   ; k++){
+                              this.timeofweekWH2F2Day21.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day21[j].showremark = true;
+                         this.timeofweekWH2F2Day21[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '21-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day21.length; j++){
+                 if(this.timeofweekWH2F2Day21[j].roomid == 6){
+                     this.timeofweekWH2F2Day21[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day21[j].color = 'red' ;
+                     this.timeofweekWH2F2Day21[j].showlabel = true;
+                     this.timeofweekWH2F2Day21[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day21[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day21[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day21[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day21[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day21[j].id   ; k++){
+                              this.timeofweekWH2F2Day21.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day21[j].showremark = true;
+                         this.timeofweekWH2F2Day21[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '21-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day21.length; j++){
+                 if(this.timeofweekWH2F2Day21[j].roomid == 7){
+                     this.timeofweekWH2F2Day21[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day21[j].color = 'red' ;
+                     this.timeofweekWH2F2Day21[j].showlabel = true;
+                     this.timeofweekWH2F2Day21[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day21[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day21[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day21[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day21[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day21[j].id   ; k++){
+                              this.timeofweekWH2F2Day21.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day21[j].showremark = true;
+                         this.timeofweekWH2F2Day21[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '21-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day21.length; j++){
+                 if(this.timeofweekWH2F2Day21[j].roomid == 8){
+                     this.timeofweekWH2F2Day21[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day21[j].color = 'red' ;
+                     this.timeofweekWH2F2Day21[j].showlabel = true;
+                     this.timeofweekWH2F2Day21[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day21[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day21[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day21[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day21[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day21[j].id   ; k++){
+                              this.timeofweekWH2F2Day21.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day21[j].showremark = true;
+                         this.timeofweekWH2F2Day21[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '21-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day21.length; j++){
+                 if(this.timeofweekWH2F2Day21[j].roomid == 9){
+                     this.timeofweekWH2F2Day21[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day21[j].color = 'red' ;
+                     this.timeofweekWH2F2Day21[j].showlabel = true;
+                     this.timeofweekWH2F2Day21[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day21[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day21[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day21[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day21[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day21[j].id   ; k++){
+                              this.timeofweekWH2F2Day21.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day21[j].showremark = true;
+                         this.timeofweekWH2F2Day21[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '22-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day22.length; j++){
+                 if(this.timeofweekWH2F2Day22[j].roomid == 0){
+                     this.timeofweekWH2F2Day22[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day22[j].color = 'red' ;
+                     this.timeofweekWH2F2Day22[j].showlabel = true;
+                     this.timeofweekWH2F2Day22[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day22[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day22[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day22[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day22[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day22[j].id   ; k++){
+                              this.timeofweekWH2F2Day22.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day22[j].showremark = true;
+                         this.timeofweekWH2F2Day22[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '22-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day22.length; j++){
+                 if(this.timeofweekWH2F2Day22[j].roomid == 1){
+                     this.timeofweekWH2F2Day22[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day22[j].color = 'red' ;
+                     this.timeofweekWH2F2Day22[j].showlabel = true;
+                     this.timeofweekWH2F2Day22[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day22[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day22[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day22[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day22[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day22[j].id   ; k++){
+                              this.timeofweekWH2F2Day22.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day22[j].showremark = true;
+                         this.timeofweekWH2F2Day22[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '22-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day22.length; j++){
+                 if(this.timeofweekWH2F2Day22[j].roomid == 2){
+                     this.timeofweekWH2F2Day22[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day22[j].color = 'red' ;
+                     this.timeofweekWH2F2Day22[j].showlabel = true;
+                     this.timeofweekWH2F2Day22[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day22[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day22[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day22[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day22[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day22[j].id   ; k++){
+                              this.timeofweekWH2F2Day22.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day22[j].showremark = true;
+                         this.timeofweekWH2F2Day22[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '22-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day22.length; j++){
+                 if(this.timeofweekWH2F2Day22[j].roomid == 3){
+                     this.timeofweekWH2F2Day22[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day22[j].color = 'red' ;
+                     this.timeofweekWH2F2Day22[j].showlabel = true;
+                     this.timeofweekWH2F2Day22[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day22[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day22[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day22[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day22[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day22[j].id   ; k++){
+                              this.timeofweekWH2F2Day22.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day22[j].showremark = true;
+                         this.timeofweekWH2F2Day22[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '22-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day22.length; j++){
+                 if(this.timeofweekWH2F2Day22[j].roomid == 4){
+                     this.timeofweekWH2F2Day22[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day22[j].color = 'red' ;
+                     this.timeofweekWH2F2Day22[j].showlabel = true;
+                     this.timeofweekWH2F2Day22[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day22[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day22[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day22[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day22[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day22[j].id   ; k++){
+                              this.timeofweekWH2F2Day22.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day22[j].showremark = true;
+                         this.timeofweekWH2F2Day22[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '22-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day22.length; j++){
+                 if(this.timeofweekWH2F2Day22[j].roomid == 5){
+                     this.timeofweekWH2F2Day22[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day22[j].color = 'red' ;
+                     this.timeofweekWH2F2Day22[j].showlabel = true;
+                     this.timeofweekWH2F2Day22[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day22[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day22[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day22[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day22[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day22[j].id   ; k++){
+                              this.timeofweekWH2F2Day22.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day22[j].showremark = true;
+                         this.timeofweekWH2F2Day22[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '22-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day22.length; j++){
+                 if(this.timeofweekWH2F2Day22[j].roomid == 6){
+                     this.timeofweekWH2F2Day22[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day22[j].color = 'red' ;
+                     this.timeofweekWH2F2Day22[j].showlabel = true;
+                     this.timeofweekWH2F2Day22[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day22[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day22[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day22[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day22[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day22[j].id   ; k++){
+                              this.timeofweekWH2F2Day22.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day22[j].showremark = true;
+                         this.timeofweekWH2F2Day22[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '22-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day22.length; j++){
+                 if(this.timeofweekWH2F2Day22[j].roomid == 7){
+                     this.timeofweekWH2F2Day22[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day22[j].color = 'red' ;
+                     this.timeofweekWH2F2Day22[j].showlabel = true;
+                     this.timeofweekWH2F2Day22[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day22[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day22[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day22[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day22[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day22[j].id   ; k++){
+                              this.timeofweekWH2F2Day22.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day22[j].showremark = true;
+                         this.timeofweekWH2F2Day22[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '22-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day22.length; j++){
+                 if(this.timeofweekWH2F2Day22[j].roomid == 8){
+                     this.timeofweekWH2F2Day22[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day22[j].color = 'red' ;
+                     this.timeofweekWH2F2Day22[j].showlabel = true;
+                     this.timeofweekWH2F2Day22[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day22[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day22[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day22[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day22[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day22[j].id   ; k++){
+                              this.timeofweekWH2F2Day22.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day22[j].showremark = true;
+                         this.timeofweekWH2F2Day22[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '22-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekWH2F2Day22.length; j++){
+                 if(this.timeofweekWH2F2Day22[j].roomid == 9){
+                     this.timeofweekWH2F2Day22[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekWH2F2Day22[j].color = 'red' ;
+                     this.timeofweekWH2F2Day22[j].showlabel = true;
+                     this.timeofweekWH2F2Day22[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekWH2F2Day22[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekWH2F2Day22[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekWH2F2Day22[j].checkReservations = true ;
+                     if(this.timeofweekWH2F2Day22[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekWH2F2Day22[j].id   ; k++){
+                              this.timeofweekWH2F2Day22.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekWH2F2Day22[j].showremark = true;
+                         this.timeofweekWH2F2Day22[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '23-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day23.length; j++){
+                 if(this.timeofweekR2WH7F2Day23[j].roomid == 0){
+                     this.timeofweekR2WH7F2Day23[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day23[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day23[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day23[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day23[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day23[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day23[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day23[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day23[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day23.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day23[j].showremark = true;
+                         this.timeofweekR2WH7F2Day23[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '23-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day23.length; j++){
+                 if(this.timeofweekR2WH7F2Day23[j].roomid == 1){
+                     this.timeofweekR2WH7F2Day23[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day23[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day23[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day23[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day23[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day23[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day23[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day23[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day23[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day23.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day23[j].showremark = true;
+                         this.timeofweekR2WH7F2Day23[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '23-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day23.length; j++){
+                 if(this.timeofweekR2WH7F2Day23[j].roomid == 2){
+                     this.timeofweekR2WH7F2Day23[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day23[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day23[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day23[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day23[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day23[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day23[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day23[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day23[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day23.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day23[j].showremark = true;
+                         this.timeofweekR2WH7F2Day23[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '23-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day23.length; j++){
+                 if(this.timeofweekR2WH7F2Day23[j].roomid == 3){
+                     this.timeofweekR2WH7F2Day23[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day23[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day23[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day23[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day23[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day23[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day23[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day23[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day23[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day23.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day23[j].showremark = true;
+                         this.timeofweekR2WH7F2Day23[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '23-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day23.length; j++){
+                 if(this.timeofweekR2WH7F2Day23[j].roomid == 4){
+                     this.timeofweekR2WH7F2Day23[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day23[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day23[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day23[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day23[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day23[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day23[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day23[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day23[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day23.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day23[j].showremark = true;
+                         this.timeofweekR2WH7F2Day23[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '23-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day23.length; j++){
+                 if(this.timeofweekR2WH7F2Day23[j].roomid == 5){
+                     this.timeofweekR2WH7F2Day23[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day23[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day23[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day23[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day23[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day23[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day23[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day23[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day23[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day23.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day23[j].showremark = true;
+                         this.timeofweekR2WH7F2Day23[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '23-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day23.length; j++){
+                 if(this.timeofweekR2WH7F2Day23[j].roomid == 6){
+                     this.timeofweekR2WH7F2Day23[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day23[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day23[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day23[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day23[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day23[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day23[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day23[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day23[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day23.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day23[j].showremark = true;
+                         this.timeofweekR2WH7F2Day23[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '23-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day23.length; j++){
+                 if(this.timeofweekR2WH7F2Day23[j].roomid == 7){
+                     this.timeofweekR2WH7F2Day23[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day23[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day23[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day23[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day23[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day23[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day23[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day23[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day23[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day23.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day23[j].showremark = true;
+                         this.timeofweekR2WH7F2Day23[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '23-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day23.length; j++){
+                 if(this.timeofweekR2WH7F2Day23[j].roomid == 8){
+                     this.timeofweekR2WH7F2Day23[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day23[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day23[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day23[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day23[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day23[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day23[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day23[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day23[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day23.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day23[j].showremark = true;
+                         this.timeofweekR2WH7F2Day23[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '23-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day23.length; j++){
+                 if(this.timeofweekR2WH7F2Day23[j].roomid == 9){
+                     this.timeofweekR2WH7F2Day23[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day23[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day23[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day23[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day23[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day23[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day23[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day23[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day23[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day23.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day23[j].showremark = true;
+                         this.timeofweekR2WH7F2Day23[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '24-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day24.length; j++){
+                 if(this.timeofweekR2WH7F2Day24[j].roomid == 0){
+                     this.timeofweekR2WH7F2Day24[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day24[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day24[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day24[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day24[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day24[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day24[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day24[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day24[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day24.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day24[j].showremark = true;
+                         this.timeofweekR2WH7F2Day24[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '24-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day24.length; j++){
+                 if(this.timeofweekR2WH7F2Day24[j].roomid == 1){
+                     this.timeofweekR2WH7F2Day24[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day24[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day24[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day24[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day24[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day24[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day24[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day24[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day24[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day24.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day24[j].showremark = true;
+                         this.timeofweekR2WH7F2Day24[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '24-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day24.length; j++){
+                 if(this.timeofweekR2WH7F2Day24[j].roomid == 2){
+                     this.timeofweekR2WH7F2Day24[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day24[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day24[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day24[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day24[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day24[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day24[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day24[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day24[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day24.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day24[j].showremark = true;
+                         this.timeofweekR2WH7F2Day24[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '24-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day24.length; j++){
+                 if(this.timeofweekR2WH7F2Day24[j].roomid == 3){
+                     this.timeofweekR2WH7F2Day24[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day24[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day24[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day24[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day24[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day24[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day24[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day24[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day24[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day24.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day24[j].showremark = true;
+                         this.timeofweekR2WH7F2Day24[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '24-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day24.length; j++){
+                 if(this.timeofweekR2WH7F2Day24[j].roomid == 4){
+                     this.timeofweekR2WH7F2Day24[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day24[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day24[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day24[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day24[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day24[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day24[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day24[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day24[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day24.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day24[j].showremark = true;
+                         this.timeofweekR2WH7F2Day24[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '24-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day24.length; j++){
+                 if(this.timeofweekR2WH7F2Day24[j].roomid == 5){
+                     this.timeofweekR2WH7F2Day24[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day24[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day24[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day24[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day24[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day24[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day24[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day24[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day24[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day24.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day24[j].showremark = true;
+                         this.timeofweekR2WH7F2Day24[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '24-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day24.length; j++){
+                 if(this.timeofweekR2WH7F2Day24[j].roomid == 6){
+                     this.timeofweekR2WH7F2Day24[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day24[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day24[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day24[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day24[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day24[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day24[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day24[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day24[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day24.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day24[j].showremark = true;
+                         this.timeofweekR2WH7F2Day24[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '24-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day24.length; j++){
+                 if(this.timeofweekR2WH7F2Day24[j].roomid == 7){
+                     this.timeofweekR2WH7F2Day24[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day24[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day24[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day24[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day24[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day24[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day24[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day24[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day24[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day24.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day24[j].showremark = true;
+                         this.timeofweekR2WH7F2Day24[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '24-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day24.length; j++){
+                 if(this.timeofweekR2WH7F2Day24[j].roomid == 8){
+                     this.timeofweekR2WH7F2Day24[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day24[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day24[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day24[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day24[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day24[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day24[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day24[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day24[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day24.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day24[j].showremark = true;
+                         this.timeofweekR2WH7F2Day24[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '24-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day24.length; j++){
+                 if(this.timeofweekR2WH7F2Day24[j].roomid == 9){
+                     this.timeofweekR2WH7F2Day24[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day24[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day24[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day24[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day24[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day24[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day24[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day24[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day24[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day24.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day24[j].showremark = true;
+                         this.timeofweekR2WH7F2Day24[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '25-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day25.length; j++){
+                 if(this.timeofweekR2WH7F2Day25[j].roomid == 0){
+                     this.timeofweekR2WH7F2Day25[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day25[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day25[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day25[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day25[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day25[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day25[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day25[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day25[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day25.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day25[j].showremark = true;
+                         this.timeofweekR2WH7F2Day25[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '25-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day25.length; j++){
+                 if(this.timeofweekR2WH7F2Day25[j].roomid == 1){
+                     this.timeofweekR2WH7F2Day25[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day25[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day25[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day25[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day25[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day25[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day25[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day25[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day25[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day25.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day25[j].showremark = true;
+                         this.timeofweekR2WH7F2Day25[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '25-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day25.length; j++){
+                 if(this.timeofweekR2WH7F2Day25[j].roomid == 2){
+                     this.timeofweekR2WH7F2Day25[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day25[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day25[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day25[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day25[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day25[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day25[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day25[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day25[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day25.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day25[j].showremark = true;
+                         this.timeofweekR2WH7F2Day25[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '25-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day25.length; j++){
+                 if(this.timeofweekR2WH7F2Day25[j].roomid == 3){
+                     this.timeofweekR2WH7F2Day25[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day25[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day25[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day25[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day25[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day25[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day25[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day25[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day25[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day25.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day25[j].showremark = true;
+                         this.timeofweekR2WH7F2Day25[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '25-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day25.length; j++){
+                 if(this.timeofweekR2WH7F2Day25[j].roomid == 4){
+                     this.timeofweekR2WH7F2Day25[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day25[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day25[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day25[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day25[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day25[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day25[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day25[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day25[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day25.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day25[j].showremark = true;
+                         this.timeofweekR2WH7F2Day25[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '25-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day25.length; j++){
+                 if(this.timeofweekR2WH7F2Day25[j].roomid == 5){
+                     this.timeofweekR2WH7F2Day25[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day25[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day25[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day25[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day25[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day25[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day25[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day25[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day25[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day25.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day25[j].showremark = true;
+                         this.timeofweekR2WH7F2Day25[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '25-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day25.length; j++){
+                 if(this.timeofweekR2WH7F2Day25[j].roomid == 6){
+                     this.timeofweekR2WH7F2Day25[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day25[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day25[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day25[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day25[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day25[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day25[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day25[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day25[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day25.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day25[j].showremark = true;
+                         this.timeofweekR2WH7F2Day25[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '25-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day25.length; j++){
+                 if(this.timeofweekR2WH7F2Day25[j].roomid == 7){
+                     this.timeofweekR2WH7F2Day25[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day25[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day25[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day25[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day25[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day25[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day25[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day25[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day25[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day25.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day25[j].showremark = true;
+                         this.timeofweekR2WH7F2Day25[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '25-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day25.length; j++){
+                 if(this.timeofweekR2WH7F2Day25[j].roomid == 8){
+                     this.timeofweekR2WH7F2Day25[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day25[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day25[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day25[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day25[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day25[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day25[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day25[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day25[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day25.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day25[j].showremark = true;
+                         this.timeofweekR2WH7F2Day25[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '25-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day25.length; j++){
+                 if(this.timeofweekR2WH7F2Day25[j].roomid == 9){
+                     this.timeofweekR2WH7F2Day25[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day25[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day25[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day25[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day25[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day25[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day25[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day25[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day25[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day25.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day25[j].showremark = true;
+                         this.timeofweekR2WH7F2Day25[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '26-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day26.length; j++){
+                 if(this.timeofweekR2WH7F2Day26[j].roomid == 0){
+                     this.timeofweekR2WH7F2Day26[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day26[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day26[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day26[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day26[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day26[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day26[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day26[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day26[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day26.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day26[j].showremark = true;
+                         this.timeofweekR2WH7F2Day26[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '26-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day26.length; j++){
+                 if(this.timeofweekR2WH7F2Day26[j].roomid == 1){
+                     this.timeofweekR2WH7F2Day26[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day26[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day26[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day26[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day26[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day26[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day26[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day26[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day26[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day26.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day26[j].showremark = true;
+                         this.timeofweekR2WH7F2Day26[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '26-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day26.length; j++){
+                 if(this.timeofweekR2WH7F2Day26[j].roomid == 2){
+                     this.timeofweekR2WH7F2Day26[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day26[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day26[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day26[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day26[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day26[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day26[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day26[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day26[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day26.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day26[j].showremark = true;
+                         this.timeofweekR2WH7F2Day26[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '26-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day26.length; j++){
+                 if(this.timeofweekR2WH7F2Day26[j].roomid == 3){
+                     this.timeofweekR2WH7F2Day26[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day26[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day26[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day26[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day26[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day26[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day26[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day26[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day26[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day26.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day26[j].showremark = true;
+                         this.timeofweekR2WH7F2Day26[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '26-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day26.length; j++){
+                 if(this.timeofweekR2WH7F2Day26[j].roomid == 4){
+                     this.timeofweekR2WH7F2Day26[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day26[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day26[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day26[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day26[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day26[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day26[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day26[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day26[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day26.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day26[j].showremark = true;
+                         this.timeofweekR2WH7F2Day26[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '26-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day26.length; j++){
+                 if(this.timeofweekR2WH7F2Day26[j].roomid == 5){
+                     this.timeofweekR2WH7F2Day26[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day26[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day26[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day26[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day26[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day26[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day26[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day26[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day26[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day26.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day26[j].showremark = true;
+                         this.timeofweekR2WH7F2Day26[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '26-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day26.length; j++){
+                 if(this.timeofweekR2WH7F2Day26[j].roomid == 6){
+                     this.timeofweekR2WH7F2Day26[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day26[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day26[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day26[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day26[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day26[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day26[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day26[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day26[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day26.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day26[j].showremark = true;
+                         this.timeofweekR2WH7F2Day26[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '26-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day26.length; j++){
+                 if(this.timeofweekR2WH7F2Day26[j].roomid == 7){
+                     this.timeofweekR2WH7F2Day26[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day26[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day26[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day26[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day26[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day26[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day26[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day26[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day26[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day26.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day26[j].showremark = true;
+                         this.timeofweekR2WH7F2Day26[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '26-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day26.length; j++){
+                 if(this.timeofweekR2WH7F2Day26[j].roomid == 8){
+                     this.timeofweekR2WH7F2Day26[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day26[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day26[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day26[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day26[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day26[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day26[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day26[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day26[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day26.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day26[j].showremark = true;
+                         this.timeofweekR2WH7F2Day26[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '26-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day26.length; j++){
+                 if(this.timeofweekR2WH7F2Day26[j].roomid == 9){
+                     this.timeofweekR2WH7F2Day26[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day26[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day26[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day26[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day26[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day26[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day26[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day26[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day26[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day26.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day26[j].showremark = true;
+                         this.timeofweekR2WH7F2Day26[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '27-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day27.length; j++){
+                 if(this.timeofweekR2WH7F2Day27[j].roomid == 0){
+                     this.timeofweekR2WH7F2Day27[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day27[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day27[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day27[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day27[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day27[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day27[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day27[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day27[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day27.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day27[j].showremark = true;
+                         this.timeofweekR2WH7F2Day27[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '27-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day27.length; j++){
+                 if(this.timeofweekR2WH7F2Day27[j].roomid == 1){
+                     this.timeofweekR2WH7F2Day27[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day27[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day27[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day27[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day27[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day27[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day27[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day27[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day27[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day27.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day27[j].showremark = true;
+                         this.timeofweekR2WH7F2Day27[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '27-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day27.length; j++){
+                 if(this.timeofweekR2WH7F2Day27[j].roomid == 2){
+                     this.timeofweekR2WH7F2Day27[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day27[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day27[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day27[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day27[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day27[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day27[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day27[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day27[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day27.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day27[j].showremark = true;
+                         this.timeofweekR2WH7F2Day27[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '27-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day27.length; j++){
+                 if(this.timeofweekR2WH7F2Day27[j].roomid == 3){
+                     this.timeofweekR2WH7F2Day27[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day27[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day27[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day27[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day27[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day27[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day27[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day27[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day27[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day27.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day27[j].showremark = true;
+                         this.timeofweekR2WH7F2Day27[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '27-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day27.length; j++){
+                 if(this.timeofweekR2WH7F2Day27[j].roomid == 4){
+                     this.timeofweekR2WH7F2Day27[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day27[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day27[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day27[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day27[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day27[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day27[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day27[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day27[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day27.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day27[j].showremark = true;
+                         this.timeofweekR2WH7F2Day27[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '27-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day27.length; j++){
+                 if(this.timeofweekR2WH7F2Day27[j].roomid == 5){
+                     this.timeofweekR2WH7F2Day27[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day27[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day27[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day27[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day27[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day27[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day27[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day27[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day27[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day27.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day27[j].showremark = true;
+                         this.timeofweekR2WH7F2Day27[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '27-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day27.length; j++){
+                 if(this.timeofweekR2WH7F2Day27[j].roomid == 6){
+                     this.timeofweekR2WH7F2Day27[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day27[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day27[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day27[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day27[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day27[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day27[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day27[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day27[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day27.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day27[j].showremark = true;
+                         this.timeofweekR2WH7F2Day27[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '27-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day27.length; j++){
+                 if(this.timeofweekR2WH7F2Day27[j].roomid == 7){
+                     this.timeofweekR2WH7F2Day27[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day27[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day27[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day27[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day27[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day27[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day27[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day27[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day27[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day27.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day27[j].showremark = true;
+                         this.timeofweekR2WH7F2Day27[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '27-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day27.length; j++){
+                 if(this.timeofweekR2WH7F2Day27[j].roomid == 8){
+                     this.timeofweekR2WH7F2Day27[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day27[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day27[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day27[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day27[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day27[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day27[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day27[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day27[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day27.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day27[j].showremark = true;
+                         this.timeofweekR2WH7F2Day27[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '27-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day27.length; j++){
+                 if(this.timeofweekR2WH7F2Day27[j].roomid == 9){
+                     this.timeofweekR2WH7F2Day27[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day27[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day27[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day27[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day27[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day27[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day27[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day27[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day27[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day27.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day27[j].showremark = true;
+                         this.timeofweekR2WH7F2Day27[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '28-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day28.length; j++){
+                 if(this.timeofweekR2WH7F2Day28[j].roomid == 0){
+                     this.timeofweekR2WH7F2Day28[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day28[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day28[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day28[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day28[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day28[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day28[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day28[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day28[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day28.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day28[j].showremark = true;
+                         this.timeofweekR2WH7F2Day28[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '28-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day28.length; j++){
+                 if(this.timeofweekR2WH7F2Day28[j].roomid == 1){
+                     this.timeofweekR2WH7F2Day28[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day28[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day28[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day28[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day28[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day28[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day28[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day28[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day28[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day28.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day28[j].showremark = true;
+                         this.timeofweekR2WH7F2Day28[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '28-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day28.length; j++){
+                 if(this.timeofweekR2WH7F2Day28[j].roomid == 2){
+                     this.timeofweekR2WH7F2Day28[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day28[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day28[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day28[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day28[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day28[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day28[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day28[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day28[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day28.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day28[j].showremark = true;
+                         this.timeofweekR2WH7F2Day28[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '28-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day28.length; j++){
+                 if(this.timeofweekR2WH7F2Day28[j].roomid == 3){
+                     this.timeofweekR2WH7F2Day28[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day28[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day28[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day28[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day28[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day28[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day28[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day28[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day28[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day28.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day28[j].showremark = true;
+                         this.timeofweekR2WH7F2Day28[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '28-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day28.length; j++){
+                 if(this.timeofweekR2WH7F2Day28[j].roomid == 4){
+                     this.timeofweekR2WH7F2Day28[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day28[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day28[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day28[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day28[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day28[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day28[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day28[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day28[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day28.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day28[j].showremark = true;
+                         this.timeofweekR2WH7F2Day28[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '28-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day28.length; j++){
+                 if(this.timeofweekR2WH7F2Day28[j].roomid == 5){
+                     this.timeofweekR2WH7F2Day28[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day28[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day28[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day28[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day28[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day28[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day28[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day28[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day28[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day28.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day28[j].showremark = true;
+                         this.timeofweekR2WH7F2Day28[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '28-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day28.length; j++){
+                 if(this.timeofweekR2WH7F2Day28[j].roomid == 6){
+                     this.timeofweekR2WH7F2Day28[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day28[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day28[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day28[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day28[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day28[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day28[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day28[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day28[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day28.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day28[j].showremark = true;
+                         this.timeofweekR2WH7F2Day28[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '28-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day28.length; j++){
+                 if(this.timeofweekR2WH7F2Day28[j].roomid == 7){
+                     this.timeofweekR2WH7F2Day28[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day28[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day28[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day28[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day28[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day28[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day28[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day28[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day28[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day28.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day28[j].showremark = true;
+                         this.timeofweekR2WH7F2Day28[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '28-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day28.length; j++){
+                 if(this.timeofweekR2WH7F2Day28[j].roomid == 8){
+                     this.timeofweekR2WH7F2Day28[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day28[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day28[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day28[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day28[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day28[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day28[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day28[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day28[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day28.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day28[j].showremark = true;
+                         this.timeofweekR2WH7F2Day28[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '28-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day28.length; j++){
+                 if(this.timeofweekR2WH7F2Day28[j].roomid == 9){
+                     this.timeofweekR2WH7F2Day28[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day28[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day28[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day28[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day28[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day28[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day28[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day28[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day28[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day28.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day28[j].showremark = true;
+                         this.timeofweekR2WH7F2Day28[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '29-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day29.length; j++){
+                 if(this.timeofweekR2WH7F2Day29[j].roomid == 0){
+                     this.timeofweekR2WH7F2Day29[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day29[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day29[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day29[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day29[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day29[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day29[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day29[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day29[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day29.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day29[j].showremark = true;
+                         this.timeofweekR2WH7F2Day29[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '29-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day29.length; j++){
+                 if(this.timeofweekR2WH7F2Day29[j].roomid == 1){
+                     this.timeofweekR2WH7F2Day29[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day29[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day29[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day29[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day29[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day29[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day29[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day29[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day29[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day29.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day29[j].showremark = true;
+                         this.timeofweekR2WH7F2Day29[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '29-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day29.length; j++){
+                 if(this.timeofweekR2WH7F2Day29[j].roomid == 2){
+                     this.timeofweekR2WH7F2Day29[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day29[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day29[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day29[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day29[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day29[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day29[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day29[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day29[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day29.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day29[j].showremark = true;
+                         this.timeofweekR2WH7F2Day29[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '29-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day29.length; j++){
+                 if(this.timeofweekR2WH7F2Day29[j].roomid == 2){
+                     this.timeofweekR2WH7F2Day29[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day29[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day29[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day29[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day29[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day29[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day29[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day29[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day29[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day29.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day29[j].showremark = true;
+                         this.timeofweekR2WH7F2Day29[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '29-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day29.length; j++){
+                 if(this.timeofweekR2WH7F2Day29[j].roomid == 4){
+                     this.timeofweekR2WH7F2Day29[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day29[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day29[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day29[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day29[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day29[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day29[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day29[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day29[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day29.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day29[j].showremark = true;
+                         this.timeofweekR2WH7F2Day29[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '29-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day29.length; j++){
+                 if(this.timeofweekR2WH7F2Day29[j].roomid == 5){
+                     this.timeofweekR2WH7F2Day29[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day29[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day29[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day29[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day29[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day29[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day29[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day29[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day29[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day29.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day29[j].showremark = true;
+                         this.timeofweekR2WH7F2Day29[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '29-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day29.length; j++){
+                 if(this.timeofweekR2WH7F2Day29[j].roomid == 6){
+                     this.timeofweekR2WH7F2Day29[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day29[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day29[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day29[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day29[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day29[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day29[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day29[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day29[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day29.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day29[j].showremark = true;
+                         this.timeofweekR2WH7F2Day29[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '29-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day29.length; j++){
+                 if(this.timeofweekR2WH7F2Day29[j].roomid == 7){
+                     this.timeofweekR2WH7F2Day29[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day29[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day29[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day29[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day29[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day29[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day29[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day29[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day29[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day29.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day29[j].showremark = true;
+                         this.timeofweekR2WH7F2Day29[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '29-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day29.length; j++){
+                 if(this.timeofweekR2WH7F2Day29[j].roomid == 8){
+                     this.timeofweekR2WH7F2Day29[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day29[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day29[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day29[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day29[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day29[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day29[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day29[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day29[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day29.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day29[j].showremark = true;
+                         this.timeofweekR2WH7F2Day29[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '29-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day29.length; j++){
+                 if(this.timeofweekR2WH7F2Day29[j].roomid == 9){
+                     this.timeofweekR2WH7F2Day29[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day29[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day29[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day29[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day29[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day29[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day29[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day29[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day29[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day29.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day29[j].showremark = true;
+                         this.timeofweekR2WH7F2Day29[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '30-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day30.length; j++){
+                 if(this.timeofweekR2WH7F2Day30[j].roomid == 0){
+                     this.timeofweekR2WH7F2Day30[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day30[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day30[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day30[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day30[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day30[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day30[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day30[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day30[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day30.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day30[j].showremark = true;
+                         this.timeofweekR2WH7F2Day30[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '30-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day30.length; j++){
+                 if(this.timeofweekR2WH7F2Day30[j].roomid == 1){
+                     this.timeofweekR2WH7F2Day30[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day30[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day30[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day30[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day30[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day30[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day30[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day30[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day30[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day30.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day30[j].showremark = true;
+                         this.timeofweekR2WH7F2Day30[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '30-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day30.length; j++){
+                 if(this.timeofweekR2WH7F2Day30[j].roomid == 2){
+                     this.timeofweekR2WH7F2Day30[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day30[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day30[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day30[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day30[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day30[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day30[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day30[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day30[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day30.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day30[j].showremark = true;
+                         this.timeofweekR2WH7F2Day30[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '30-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day30.length; j++){
+                 if(this.timeofweekR2WH7F2Day30[j].roomid == 3){
+                     this.timeofweekR2WH7F2Day30[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day30[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day30[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day30[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day30[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day30[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day30[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day30[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day30[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day30.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day30[j].showremark = true;
+                         this.timeofweekR2WH7F2Day30[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '30-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day30.length; j++){
+                 if(this.timeofweekR2WH7F2Day30[j].roomid ==4){
+                     this.timeofweekR2WH7F2Day30[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day30[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day30[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day30[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day30[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day30[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day30[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day30[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day30[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day30.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day30[j].showremark = true;
+                         this.timeofweekR2WH7F2Day30[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '30-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day30.length; j++){
+                 if(this.timeofweekR2WH7F2Day30[j].roomid == 5){
+                     this.timeofweekR2WH7F2Day30[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day30[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day30[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day30[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day30[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day30[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day30[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day30[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day30[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day30.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day30[j].showremark = true;
+                         this.timeofweekR2WH7F2Day30[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '30-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day30.length; j++){
+                 if(this.timeofweekR2WH7F2Day30[j].roomid == 6){
+                     this.timeofweekR2WH7F2Day30[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day30[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day30[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day30[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day30[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day30[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day30[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day30[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day30[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day30.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day30[j].showremark = true;
+                         this.timeofweekR2WH7F2Day30[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '30-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day30.length; j++){
+                 if(this.timeofweekR2WH7F2Day30[j].roomid == 7){
+                     this.timeofweekR2WH7F2Day30[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day30[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day30[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day30[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day30[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day30[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day30[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day30[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day30[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day30.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day30[j].showremark = true;
+                         this.timeofweekR2WH7F2Day30[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '30-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day30.length; j++){
+                 if(this.timeofweekR2WH7F2Day30[j].roomid == 8){
+                     this.timeofweekR2WH7F2Day30[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day30[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day30[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day30[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day30[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day30[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day30[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day30[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day30[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day30.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day30[j].showremark = true;
+                         this.timeofweekR2WH7F2Day30[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '30-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day30.length; j++){
+                 if(this.timeofweekR2WH7F2Day30[j].roomid == 9){
+                     this.timeofweekR2WH7F2Day30[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day30[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day30[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day30[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day30[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day30[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day30[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day30[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day30[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day30.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day30[j].showremark = true;
+                         this.timeofweekR2WH7F2Day30[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '31-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day31.length; j++){
+                 if(this.timeofweekR2WH7F2Day31[j].roomid == 0){
+                     this.timeofweekR2WH7F2Day31[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day31[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day31[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day31[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day31[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day31[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day31[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day31[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day31[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day31.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day31[j].showremark = true;
+                         this.timeofweekR2WH7F2Day31[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '31-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day31.length; j++){
+                 if(this.timeofweekR2WH7F2Day31[j].roomid == 1){
+                     this.timeofweekR2WH7F2Day31[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day31[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day31[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day31[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day31[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day31[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day31[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day31[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day31[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day31.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day31[j].showremark = true;
+                         this.timeofweekR2WH7F2Day31[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '31-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day31.length; j++){
+                 if(this.timeofweekR2WH7F2Day31[j].roomid == 2){
+                     this.timeofweekR2WH7F2Day31[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day31[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day31[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day31[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day31[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day31[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day31[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day31[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day31[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day31.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day31[j].showremark = true;
+                         this.timeofweekR2WH7F2Day31[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '31-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day31.length; j++){
+                 if(this.timeofweekR2WH7F2Day31[j].roomid == 3){
+                     this.timeofweekR2WH7F2Day31[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day31[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day31[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day31[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day31[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day31[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day31[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day31[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day31[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day31.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day31[j].showremark = true;
+                         this.timeofweekR2WH7F2Day31[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '31-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day31.length; j++){
+                 if(this.timeofweekR2WH7F2Day31[j].roomid == 4){
+                     this.timeofweekR2WH7F2Day31[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day31[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day31[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day31[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day31[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day31[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day31[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day31[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day31[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day31.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day31[j].showremark = true;
+                         this.timeofweekR2WH7F2Day31[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '31-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day31.length; j++){
+                 if(this.timeofweekR2WH7F2Day31[j].roomid == 5){
+                     this.timeofweekR2WH7F2Day31[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day31[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day31[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day31[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day31[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day31[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day31[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day31[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day31[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day31.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day31[j].showremark = true;
+                         this.timeofweekR2WH7F2Day31[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '31-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day31.length; j++){
+                 if(this.timeofweekR2WH7F2Day31[j].roomid == 6){
+                     this.timeofweekR2WH7F2Day31[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day31[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day31[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day31[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day31[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day31[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day31[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day31[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day31[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day31.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day31[j].showremark = true;
+                         this.timeofweekR2WH7F2Day31[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '31-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day31.length; j++){
+                 if(this.timeofweekR2WH7F2Day31[j].roomid == 7){
+                     this.timeofweekR2WH7F2Day31[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day31[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day31[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day31[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day31[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day31[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day31[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day31[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day31[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day31.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day31[j].showremark = true;
+                         this.timeofweekR2WH7F2Day31[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '31-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day31.length; j++){
+                 if(this.timeofweekR2WH7F2Day31[j].roomid == 8){
+                     this.timeofweekR2WH7F2Day31[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day31[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day31[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day31[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day31[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day31[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day31[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day31[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day31[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day31.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day31[j].showremark = true;
+                         this.timeofweekR2WH7F2Day31[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2' &&
+           this.report[i].date== '31-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+             for(let j =0 ; j < this.timeofweekR2WH7F2Day31.length; j++){
+                 if(this.timeofweekR2WH7F2Day31[j].roomid == 9){
+                     this.timeofweekR2WH7F2Day31[j].id = this.report[i].bookMeetingRoom.lengthtime ;
+                     this.timeofweekR2WH7F2Day31[j].color = 'red' ;
+                     this.timeofweekR2WH7F2Day31[j].showlabel = true;
+                     this.timeofweekR2WH7F2Day31[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+                     this.timeofweekR2WH7F2Day31[j].atten = this.report[i].bookMeetingRoom.attendees ;
+                     this.timeofweekR2WH7F2Day31[j].topic = this.report[i].bookMeetingRoom.topic ;
+                     this.timeofweekR2WH7F2Day31[j].checkReservations = true ;
+                     if(this.timeofweekR2WH7F2Day31[j].id > 1){
+                         this.counting = j+1 ;
+                           for(let k = 1 ; k < this.timeofweekR2WH7F2Day31[j].id   ; k++){
+                              this.timeofweekR2WH7F2Day31.splice(this.counting,1);
+                            }
+                      }
+                     if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+                         this.timeofweekR2WH7F2Day31[j].showremark = true;
+                         this.timeofweekR2WH7F2Day31[j].remark = this.report[i].bookMeetingRoom.remark;
+                      }
+                 }
+             }
+           }
+
+
+
+
     } //close loop
 
 
 } //close function
+
 
 } // close class

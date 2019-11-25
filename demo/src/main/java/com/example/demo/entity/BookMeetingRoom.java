@@ -37,6 +37,16 @@ public class BookMeetingRoom {
 
     private int lengthtime;
 
+    private String isActive;
+
+
+    public String getIsActive() {
+        return isActive;
+    }
+
+    public void setIsActive(String isActive) {
+        this.isActive = isActive;
+    }
 
     public Long getBook_id() {
         return book_id;
@@ -117,4 +127,6 @@ public class BookMeetingRoom {
     public void setLengthtime(int lengthtime) {
         this.lengthtime = lengthtime;
     }
+
+
 }

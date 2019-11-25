@@ -25,7 +25,15 @@ import { ServiceService } from '../Service/service.service';
 
 export class BookMeetingRoom1Component implements OnInit {
     isLoggedIn : Observable<boolean>;
+    isLoggedInAdmin : Observable<boolean>;
+    isLoggedInHR : Observable<boolean>;
+    isLoggedInUser : Observable<boolean>;
+
     isLoginSubject = new BehaviorSubject<boolean>(false);
+    isLoginSubjectAdmin = new BehaviorSubject<boolean>(false);
+    isLoginSubjectHR = new BehaviorSubject<boolean>(false);
+    isLoginSubjectUser = new BehaviorSubject<boolean>(false);
+
     dateSelect : String = '' ;
     month : String;
     splitted : Array<any>;
@@ -34,12 +42,18 @@ export class BookMeetingRoom1Component implements OnInit {
 
 constructor(public authService : AuthService , private router: Router , private service : ServiceService) {
     this.isLoggedIn = authService.isLoggedIn();
-
+    this.isLoggedInAdmin = authService.isLoggedInAdmin();
+    this.isLoggedInHR = authService.isLoggedInHR();
+    this.isLoggedInUser = authService.isLoggedInUser();
   }
 
 
   ngOnInit(){
       this.nameLogin = localStorage.getItem('nameid');
+      console.log(this.isLoggedIn );
+      console.log(this.isLoggedInAdmin );
+      console.log(this.isLoggedInHR );
+      console.log(this.isLoggedInUser );
   }
 
 
