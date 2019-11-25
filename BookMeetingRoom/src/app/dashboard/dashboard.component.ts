@@ -17,6 +17,9 @@ import * as XLSX from 'xlsx';
 export class DashboardComponent implements OnInit {
 
 isLoggedIn : Observable<boolean>;
+isLoggedInAdmin : Observable<boolean>;
+isLoggedInHR : Observable<boolean>;
+
 MonthSelect: String;
 YearSelect: String;
 dateEnd: String ;
@@ -25,6 +28,8 @@ DateStartDashboard: String;
 month: String;
   constructor(public authService : AuthService , private router: Router , private service : ServiceService) {
       this.isLoggedIn = authService.isLoggedIn();
+      this.isLoggedInAdmin = authService.isLoggedInAdmin();
+      this.isLoggedInHR = authService.isLoggedInHR();
    }
 
   ngOnInit() {

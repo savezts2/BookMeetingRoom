@@ -29,7 +29,7 @@
 #sidebar .sidebar-emp {
         width: 100%;
         padding: 20px;
-        min-height: 72vh;
+        min-height: 200vh;
         transition: all 0.3s;
 }
 

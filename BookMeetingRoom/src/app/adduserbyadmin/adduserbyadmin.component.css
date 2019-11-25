@@ -15,7 +15,7 @@
 }
 
 #sidebar .sidebar-header {
-     padding: 24px;
+    padding: 24px;
     background: #6d7fcc;
 }
 
@@ -51,7 +51,7 @@
 }
 
 table{
-  width:100%;
+  width:90%;
   text-align:center;
 
 }
@@ -71,3 +71,5 @@ table{
 .whitetable{
     background-color: white;
 }
+
+

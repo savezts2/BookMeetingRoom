@@ -12,6 +12,9 @@ import {ActivatedRoute} from "@angular/router";
 })
 export class SelectRoomComponent implements OnInit {
     isLoggedIn : Observable<boolean>;
+    isLoggedInAdmin : Observable<boolean>;
+    isLoggedInHR : Observable<boolean>;
+
     report : Array<any>;
     starttime : Array<any> = [];
     counting: number ;
@@ -22,7 +25,9 @@ export class SelectRoomComponent implements OnInit {
 
    constructor(public authService : AuthService , private router: Router, private service : ServiceService,
    private route:ActivatedRoute) {
-       this.isLoggedIn = authService.isLoggedIn();
+      this.isLoggedIn = authService.isLoggedIn();
+      this.isLoggedInAdmin = authService.isLoggedInAdmin();
+      this.isLoggedInHR = authService.isLoggedInHR();
 
    }
 

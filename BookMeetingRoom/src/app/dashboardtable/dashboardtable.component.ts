@@ -15,6 +15,10 @@ export class DashboardtableComponent implements OnInit {
 
 
 isLoggedIn : Observable<boolean>;
+isLoggedInAdmin : Observable<boolean>;
+isLoggedInHR : Observable<boolean>;
+
+
 dateFull:any={}
 report : Array<any>;
 dateStart: String;
@@ -26,6 +30,8 @@ dateSelectMonth: Array<any>;
 constructor(public authService : AuthService , private router: Router, private service : ServiceService,
    private route:ActivatedRoute , private dashboardService : DashboardService) {
         this.isLoggedIn = authService.isLoggedIn();
+        this.isLoggedInAdmin = authService.isLoggedInAdmin();
+        this.isLoggedInHR = authService.isLoggedInHR();
    }
 
   ngOnInit() {

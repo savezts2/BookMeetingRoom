@@ -19,7 +19,7 @@ export class AuthService {
 isLoginSubject = new BehaviorSubject<boolean>(this.hasTokenId());
 isLoginHR = new BehaviorSubject<boolean>(this.hasTokenIdHR());
 isLoginAdmin = new BehaviorSubject<boolean>(this.hasTokenIdAdmin());
-isLoginUser = new BehaviorSubject<boolean>(this.hasTokenIdUser());
+
 /**
 *
 * @returns {Observable<T>}
@@ -38,9 +38,7 @@ isLoggedInHR() : Observable<boolean> {
     return this.isLoginHR.asObservable();
   }
 
-isLoggedInUser() : Observable<boolean> {
-    return this.isLoginUser.asObservable();
-  }
+
 
   /**
    *  Login the user then tell all the subscribers about the new status
@@ -51,7 +49,7 @@ isLoggedInUser() : Observable<boolean> {
   login(id: String, password: String) : void {
 
     this.service.getUserPassword(id,password).subscribe(data=>{
-              console.log(data);
+              //console.log(data);
               if(data!=null){
                   if(data.isActive == "0"){
                       alert("this id hasn't active please contact IT Support");
@@ -64,8 +62,16 @@ isLoggedInUser() : Observable<boolean> {
                       localStorage.setItem('userid', data.userid);
                       localStorage.setItem('nameid', data.username);
                       window.location.reload(true);
-                      console.log("admin");
+                     // console.log("admin");
 
+                  }else if(data.status == "hr"){
+                      alert("Login Success !");
+                      localStorage.setItem('tokenidhr', 'JWT');
+                      this.isLoginHR.next(true);
+                      localStorage.setItem('userid', data.userid);
+                      localStorage.setItem('nameid', data.username);
+                      window.location.reload(true);
+                    //  console.log("HR");
                   }
                   else{
                     alert("Login Success !");
@@ -74,7 +80,7 @@ isLoggedInUser() : Observable<boolean> {
                      localStorage.setItem('userid', data.userid);
                      localStorage.setItem('nameid', data.username);
                      window.location.reload(true);
-                     console.log("user");
+                  //   console.log("user");
                   }
                   }
               }
@@ -101,14 +107,15 @@ isLoggedInUser() : Observable<boolean> {
     localStorage.removeItem('tokenid');
     localStorage.removeItem('tokenidadmin');
     localStorage.removeItem('tokenidhr');
-    localStorage.removeItem('tokeniduser');
+
     localStorage.removeItem('userid');
     localStorage.removeItem('nameid');
     this.isLoginSubject.next(false);
     this.isLoginHR.next(false);
     this.isLoginAdmin.next(false);
-    this.isLoginUser.next(false);
-    this.router.navigate(['']);
+
+    this.router.navigate(['selectDate']);
+    window.location.reload(true);
   }
 
   /**
@@ -128,9 +135,7 @@ private hasTokenIdHR() : boolean {
     return !!localStorage.getItem('tokenidhr');
   }
 
-private hasTokenIdUser() : boolean {
-    return !!localStorage.getItem('tokeniduser');
-  }
+
 
 
 
@@ -148,8 +153,8 @@ private hasTokenIdUser() : boolean {
     templateUrl: 'login-dialog.html',
   })
   export class DialogOverviewExampleDialog {
-    id : String = '';
-    password : String = '' ;
+    id : String = null;
+    password : String = null ;
     constructor(
       public dialogRef: MatDialogRef<DialogOverviewExampleDialog> , public authService : AuthService){}
 
@@ -158,9 +163,13 @@ private hasTokenIdUser() : boolean {
     }
 
     login() : void {
-        this.authService.login(this.id,this.password);
+        if(this.id == null || this.password == null){
+          alert("Please fill out all information.");
+        }else{
+          this.authService.login(this.id,this.password);
 
-        this.dialogRef.close();
+           this.dialogRef.close();
+        }
 
 
     }

@@ -1,14 +1,23 @@
+<html>
+<body>
 <div class="wrapper">
 
   <nav id="sidebar">
     <div class="sidebar-header">
       <h4>BookMeetingRoom</h4>
     </div>
-    <div>
+
+    <div *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)" >
       <button mat-button class="sidebar-menu" routerLink="/selectDate">SelectRoom & Time</button><br>
     </div>
-    <div>
+    <div  *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)">
       <button mat-button class="sidebar-menu" routerLink="/dashboard">Dashboard</button><br>
+    </div>
+    <div  *ngIf="(isLoggedInAdmin | async) || (isLoggedInHR | async)" >
+      <button mat-button class="sidebar-menu" routerLink="/cancelbooking">CancelBooking</button><br>
+    </div>
+    <div  *ngIf="(isLoggedInAdmin | async)">
+      <button mat-button class="sidebar-menu" routerLink="/adduserbyadmin">AddUser</button><br>
     </div>
     <div class="sidebar-emp">
 
@@ -16,16 +25,19 @@
   </nav>
 
   <div class="card-header" >
-    <button mat-raised-button class="botton-login" *ngIf="!(isLoggedIn | async)" (click)="authService.callDialog()">Login</button>
-    <button mat-raised-button class="botton-login" *ngIf="(isLoggedIn | async)" (click)="authService.logout()">LogOut</button>
+    <div>
 
-    <div class="form-data" *ngIf="!(isLoggedIn | async)">
-      <br/>
+      <button mat-raised-button class="botton-login" *ngIf="!(isLoggedIn | async) && !(isLoggedInAdmin | async) && !(isLoggedInHR | async)" (click)="authService.callDialog()">Login</button>
+      <button mat-raised-button class="botton-login" *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)" (click)="authService.logout()">LogOut</button>
+
+    </div>
+
+    <div class="form-data" *ngIf="!(isLoggedIn | async) && !(isLoggedInAdmin | async) && !(isLoggedInHR | async)">
+      <br/><br/><br/><br/>
       <h1 style="color:#6d7fcc;">Please Login !</h1>
     </div>
 
-
-    <div *ngIf="(isLoggedIn | async)">
+    <div *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)">
       <br><br>
       <h2 style="text-align:center; color:#6d7fcc;">{{this.roomnameandtime.roomname}}</h2>
 

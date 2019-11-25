@@ -25,6 +25,8 @@ import {DialogOverviewExampleDialog} from './auth.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DashboardtableComponent } from './dashboardtable/dashboardtable.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { AdduserbyadminComponent } from './adduserbyadmin/adduserbyadmin.component';
+import { CancelbookingComponent } from './cancelbooking/cancelbooking.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +35,9 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     SelectRoomComponent,
     DialogOverviewExampleDialog,
     DashboardComponent,
-    DashboardtableComponent
+    DashboardtableComponent,
+    AdduserbyadminComponent,
+    CancelbookingComponent
   ],
   imports: [
     BrowserModule,

@@ -6,31 +6,39 @@
     <div class="sidebar-header">
       <h4>BookMeetingRoom</h4>
     </div>
-    <div>
+
+    <div *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)" >
       <button mat-button class="sidebar-menu" routerLink="/selectDate">SelectRoom & Time</button><br>
     </div>
-    <div>
+    <div  *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)">
       <button mat-button class="sidebar-menu" routerLink="/dashboard">Dashboard</button><br>
     </div>
-
-
+    <div  *ngIf="(isLoggedInAdmin | async) || (isLoggedInHR | async)" >
+      <button mat-button class="sidebar-menu" routerLink="/cancelbooking">CancelBooking</button><br>
+    </div>
+    <div  *ngIf="(isLoggedInAdmin | async)">
+      <button mat-button class="sidebar-menu" routerLink="/adduserbyadmin">AddUser</button><br>
+    </div>
     <div class="sidebar-emp">
 
     </div>
   </nav>
 
   <div class="card-header" >
-    <button mat-raised-button class="botton-lDashboardogin" *ngIf="!(isLoggedIn | async)" (click)="authService.callDialog()">Login</button>
-    <button mat-raised-button class="botton-login" *ngIf="(isLoggedIn | async)" (click)="authService.logout()">LogOut</button>
+    <div>
 
-    <div class="form-data" *ngIf="!(isLoggedIn | async)">
+      <button mat-raised-button class="botton-login" *ngIf="!(isLoggedIn | async) && !(isLoggedInAdmin | async) && !(isLoggedInHR | async)" (click)="authService.callDialog()">Login</button>
+      <button mat-raised-button class="botton-login" *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)" (click)="authService.logout()">LogOut</button>
+
+    </div>
+
+    <div class="form-data" *ngIf="!(isLoggedIn | async) && !(isLoggedInAdmin | async) && !(isLoggedInHR | async)">
       <br/><br/><br/><br/>
       <h1 style="color:#6d7fcc;">Please Login !</h1>
     </div>
-
     <br/><br/>
 
-    <div *ngIf="(isLoggedIn | async)">
+    <div *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)">
       <br/>
       <h1 align="center" style="color:#6d7fcc;">DashBoard</h1>
       <h2 style="color:#6d7fcc; margin-left:5%;">{{dateFull.month}}  {{dateFull.year}}</h2>

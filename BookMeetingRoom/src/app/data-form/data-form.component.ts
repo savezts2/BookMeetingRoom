@@ -15,6 +15,9 @@ import { Router } from '@angular/router';
 export class DataFormComponent implements OnInit {
 
 isLoggedIn : Observable<boolean>;
+isLoggedInAdmin : Observable<boolean>;
+isLoggedInHR : Observable<boolean>;
+
 
 roomnameandtime:any={}
 fromtimeSelect : '';
@@ -40,6 +43,8 @@ public API = '//localhost:8080/BookMeetingRoom';   //for test
 constructor(public authService : AuthService, private route:ActivatedRoute, private service : ServiceService,private http: HttpClient,
 private router: Router) {
     this.isLoggedIn = authService.isLoggedIn();
+    this.isLoggedInAdmin = authService.isLoggedInAdmin();
+    this.isLoggedInHR = authService.isLoggedInHR();
   }
 
   ngOnInit() {

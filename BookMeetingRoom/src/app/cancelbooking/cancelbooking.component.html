@@ -19,6 +19,7 @@
     <div  *ngIf="(isLoggedInAdmin | async)">
       <button mat-button class="sidebar-menu" routerLink="/adduserbyadmin">AddUser</button><br>
     </div>
+
     <div class="sidebar-emp">
 
     </div>
@@ -27,47 +28,26 @@
   <div class="card-header" >
     <div>
 
-    <button mat-raised-button class="botton-login" *ngIf="!(isLoggedIn | async) && !(isLoggedInAdmin | async) && !(isLoggedInHR | async)" (click)="authService.callDialog()">Login</button>
-    <button mat-raised-button class="botton-login" *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)" (click)="authService.logout()">LogOut</button>
+      <button mat-raised-button class="botton-login" *ngIf="!(isLoggedIn | async) && !(isLoggedInAdmin | async) && !(isLoggedInHR | async)" (click)="authService.callDialog()">Login</button>
+      <button mat-raised-button class="botton-login" *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)" (click)="authService.logout()">LogOut</button>
 
     </div>
 
     <div class="form-data" *ngIf="!(isLoggedIn | async) && !(isLoggedInAdmin | async) && !(isLoggedInHR | async)">
       <br/><br/><br/><br/>
-        <h1 style="color:#6d7fcc;">Please Login !</h1>
+      <h1 style="color:#6d7fcc;">Please Login !</h1>
     </div>
 
     <br/><br/>
 
-    <div *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)">
-      <br/>
+    <div *ngIf="(isLoggedInAdmin | async) || (isLoggedInHR | async)">
+      asdsad
+    </div>
 
-      <h1 style="margin-left: 130px; color:#6d7fcc;">Hello! {{nameLogin}} Please SelectDate</h1>
-      <br/>
+  </div>
 
-      <mat-form-field class="datepick">
-        <input matInput [matDatepicker]="picker" placeholder="DD/MM/yyyy" [(ngModel)]="dateSelect">
-        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker>
-      </mat-form-field>
-      &nbsp;&nbsp;
-      <button mat-raised-button color="primary" (click) = "clicksearch()">Search</button>
+</div>
 
+</body>
 
-      <br/><br/>
-
-
-
-     </div>
-
-   </div>
-
- </div>
-
-
-
- </body>
-
-
- </html>
-
+</html>
