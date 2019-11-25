@@ -19,6 +19,9 @@
     <div  *ngIf="(isLoggedInAdmin | async)">
       <button mat-button class="sidebar-menu" routerLink="/adduserbyadmin">AddUser</button><br>
     </div>
+    <div  *ngIf="(isLoggedInAdmin | async)">
+      <button mat-button class="sidebar-menu" routerLink="/canceluser">CancelUser</button><br>
+    </div>
     <div class="sidebar-emp">
 
     </div>
@@ -37,10 +40,82 @@
       <h1 style="color:#6d7fcc;">Please Login !</h1>
     </div>
 
-    <br/><br/>
+    <br/><br/><br/>
 
     <div *ngIf="(isLoggedInAdmin | async)">
-      asdsad
+      <h1 style="color:#6d7fcc; margin-left: 130px;">Add User By Admin</h1>
+
+      <div align="center">
+      <mat-form-field>
+        <input matInput placeholder="Username" [(ngModel)]="username">
+      </mat-form-field>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <mat-form-field>
+        <input matInput placeholder="Lastname" [(ngModel)]="lastname">
+      </mat-form-field>
+      </div>
+      <br/>
+      <div align="center">
+        <mat-form-field>
+          <mat-select placeholder="Department" [(ngModel)]="department">
+            <mat-option value="Account Executive" >Account Executive</mat-option>
+            <mat-option value="Analyst" >Analyst</mat-option>
+            <mat-option value="Business Development" >Business Development</mat-option>
+            <mat-option value="Human Resource" >Human Resource</mat-option>
+            <mat-option value="Inventory Management Control" >Inventory Management Control</mat-option>
+            <mat-option value="Information Technology" >Information Technology</mat-option>
+            <mat-option value="Operation" >Operation</mat-option>
+            <mat-option value="Safety" >Safety</mat-option>
+            <mat-option value="Trainee" >Trainee</mat-option>
+            <mat-option value="Transport" >Transport</mat-option>
+          </mat-select>
+        </mat-form-field>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <mat-form-field>
+          <mat-select placeholder="Position" [(ngModel)]="position">
+            <mat-option value="Admin-AccountExcutive" >Admin-AccountExcutive</mat-option>
+            <mat-option value="Admin-HumanResource" >Admin-HumanResource</mat-option>
+            <mat-option value="Admin-InventoryManagementControl" >Admin-InventoryManagementControl</mat-option>
+            <mat-option value="Admin-Transport" >Admin-Transport</mat-option>
+            <mat-option value="DC-Manager" >DC-Manager</mat-option>
+            <mat-option value="Manager" >Manager</mat-option>
+            <mat-option value="Safety" >Safety</mat-option>
+            <mat-option value="Supervisor" >Supervisor</mat-option>
+            <mat-option value="Support" >Support</mat-option>
+            <mat-option value="Trainee" >Trainee</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <br/>
+      <div align="center">
+
+
+        <mat-form-field>
+          <input matInput placeholder="Userid" [(ngModel)]="userid">
+        </mat-form-field>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <mat-form-field>
+          <input matInput placeholder="Enter your password" [type]="hide ? 'text' : 'password'" [(ngModel)]="password">
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+          </button>
+        </mat-form-field>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <mat-form-field>
+          <mat-select placeholder="Status" [(ngModel)]="status">
+            <mat-option value="admin" >Admin</mat-option>
+            <mat-option value="hr" >HR</mat-option>
+            <mat-option value="user" >User</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+      </div>
+      <br/>
+      <div align="center">
+        <button mat-raised-button color="primary" (click)="submit()">Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button mat-raised-button color="primary" (click)="reset()">Reset</button>
+      </div>
+
     </div>
 
   </div>

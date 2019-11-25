@@ -10,7 +10,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSelectModule} from '@angular/material/select';
 import { BookMeetingRoom1Component } from './book-meeting-room1/book-meeting-room1.component';
-
+import {MatIconModule} from '@angular/material/icon';
 import {MatTableModule} from '@angular/material/table';
 import { DataFormComponent } from './data-form/data-form.component';
 import {MatInputModule} from '@angular/material/input';
@@ -27,6 +27,7 @@ import { DashboardtableComponent } from './dashboardtable/dashboardtable.compone
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { AdduserbyadminComponent } from './adduserbyadmin/adduserbyadmin.component';
 import { CancelbookingComponent } from './cancelbooking/cancelbooking.component';
+import { CanceluserComponent } from './canceluser/canceluser.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +38,8 @@ import { CancelbookingComponent } from './cancelbooking/cancelbooking.component'
     DashboardComponent,
     DashboardtableComponent,
     AdduserbyadminComponent,
-    CancelbookingComponent
+    CancelbookingComponent,
+    CanceluserComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +56,8 @@ import { CancelbookingComponent } from './cancelbooking/cancelbooking.component'
     FormsModule,
     HttpClientModule,
     MatDialogModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatIconModule
   ],
     entryComponents: [ DialogOverviewExampleDialog ],
   providers: [],
