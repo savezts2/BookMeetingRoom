@@ -7,6 +7,7 @@ import {MatDatepickerInputEvent} from '@angular/material/datepicker';
 import { AppDateAdapter, APP_DATE_FORMATS} from './date.adapter';
 import { NativeDateAdapter, DateAdapter, MAT_DATE_FORMATS } from "@angular/material";
 import { ServiceService } from '../Service/service.service';
+import {FormControl} from '@angular/forms';
 
 @Component({
   selector: 'app-book-meeting-room1',
@@ -33,17 +34,20 @@ export class BookMeetingRoom1Component implements OnInit {
     isLoginSubjectAdmin = new BehaviorSubject<boolean>(false);
     isLoginSubjectHR = new BehaviorSubject<boolean>(false);
 
-    dateSelect : String = '' ;
+    dateSelect : String ='';
     month : String;
     splitted : Array<any>;
     dateFull : String ;
     nameLogin: String ;
+    serializedDate = new FormControl((new Date()).toISOString());
 
 constructor(public authService : AuthService , private router: Router , private service : ServiceService) {
     this.isLoggedIn = authService.isLoggedIn();
     this.isLoggedInAdmin = authService.isLoggedInAdmin();
     this.isLoggedInHR = authService.isLoggedInHR();
   }
+
+
 
 
   ngOnInit(){
@@ -57,7 +61,12 @@ constructor(public authService : AuthService , private router: Router , private 
 convertMonth(month : String ){
 
 this.splitted = month.split(" ");
-if(this.splitted[1] == 'Jan'){
+if(this.splitted.length == 1){
+  this.splitted = month.split("-");
+  this.dateFull = this.splitted[2].substring(0,2)+'-'+this.splitted[1]+'-'+this.splitted[0]
+  this.router.navigate(['selectRoom',{datefull : this.dateFull}]);
+}else{
+  if(this.splitted[1] == 'Jan'){
   this.month='01';
   }else if(this.splitted[1] == 'Feb'){
   this.month='02';
@@ -83,12 +92,15 @@ if(this.splitted[1] == 'Jan'){
   this.month='12';
   }
   this.dateFull = this.splitted[2]+'-'+this.month+'-'+this.splitted[3];
-
+  //console.log(this.dateFull);
   this.router.navigate(['selectRoom',{datefull : this.dateFull}]);
+}
+
 
 }
 
 clicksearch(){
+    this.dateSelect = this.serializedDate.value;
     if(this.dateSelect == ''){
       alert("Please Select Date");
     }else{

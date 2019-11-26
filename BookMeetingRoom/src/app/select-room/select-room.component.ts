@@ -1135,7 +1135,7 @@ export class DialogCancel {
                                    console.log('Error', error);
                                }
                               );
-
+      this.dialogRef.close();
   }
 
 }

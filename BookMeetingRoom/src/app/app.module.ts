@@ -16,7 +16,7 @@ import { DataFormComponent } from './data-form/data-form.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule ,ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SelectRoomComponent , DialogCancel} from './select-room/select-room.component';
 import {MatDialogModule} from '@angular/material/dialog';
@@ -58,7 +58,8 @@ import { CanceluserComponent } from './canceluser/canceluser.component';
     MatDialogModule,
     MatProgressSpinnerModule,
     MatIconModule,
-    MatRadioModule
+    MatRadioModule,
+    ReactiveFormsModule
   ],
     entryComponents: [ DialogOverviewExampleDialog , DialogCancel],
   providers: [],
