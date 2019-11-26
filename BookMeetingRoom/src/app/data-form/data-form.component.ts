@@ -22,7 +22,7 @@ isLoggedInHR : Observable<boolean>;
 roomnameandtime:any={}
 fromtimeSelect : '';
 totime : null ;
-tel : null;
+tel : String = null;
 topic : null;
 atten : null;
 remark: null;
@@ -91,7 +91,8 @@ SubmitData(){
       }
      else{
       this.spiner = true;
-     this.http.post(this.API + '/'+this.userid3 +'/' + this.fromtimeSelect +'/' + this.totime + '/' + this.tel
+
+     this.http.post(this.API + '/'+this.userid3 +'/' + this.fromtimeSelect +'/' + this.totime + '/0' + this.tel
      + '/' + this.topic+ '/' + this.atten+ '/' + this.remark+ '/' + this.roomname+ '/' + this.date,{})
                              .subscribe(
                                data => {

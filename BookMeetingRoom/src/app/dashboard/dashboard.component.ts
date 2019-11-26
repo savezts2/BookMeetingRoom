@@ -60,8 +60,13 @@ SearchDashBoard(){
     }
     this.dateEnd = '31';
   }else if(this.MonthSelect == 'February'){
-    this.dateEnd = '29';
-    this.month = '02' ;
+    if(this.YearSelect == '2019' || this.YearSelect == '2021' || this.YearSelect == '2022' || this.YearSelect == '2025' || this.YearSelect == '2026' || this.YearSelect == '2027' || this.YearSelect == '2029'){
+       this.dateEnd = '28';
+       this.month = '02' ;
+    }else{
+       this.dateEnd = '29';
+       this.month = '02' ;
+    }
   }else{
      if(this.MonthSelect == 'April'){
       this.month = '04' ;

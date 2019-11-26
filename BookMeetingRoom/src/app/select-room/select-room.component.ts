@@ -1,10 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,Inject} from '@angular/core';
 import { AuthService } from '../auth.service';
 import { Observable } from "rxjs";
 import { Router } from '@angular/router';
 import { ServiceService } from '../Service/service.service';
 import {ActivatedRoute} from "@angular/router";
 import { HttpClient} from '@angular/common/http';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+
+export interface DialogData {
+room: string;
+time: string;
+date: String;
+}
+
+
 @Component({
   selector: 'app-select-room',
   templateUrl: './select-room.component.html',
@@ -26,7 +35,7 @@ public API = '//localhost:8080/BookMeetingRoom';   //for test
 //public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
 
    constructor(public authService : AuthService , private router: Router, private service : ServiceService,private http: HttpClient,
-   private route:ActivatedRoute) {
+   private route:ActivatedRoute, public dialog: MatDialog) {
       this.isLoggedIn = authService.isLoggedIn();
       this.isLoggedInAdmin = authService.isLoggedInAdmin();
       this.isLoggedInHR = authService.isLoggedInHR();
@@ -47,6 +56,14 @@ public API = '//localhost:8080/BookMeetingRoom';   //for test
 
   }
 
+ openDialog(room,time,date): void {
+    const dialogRef = this.dialog.open(DialogCancel, {
+      width: '280px',
+      data: {room: room, time: time, date:date}
+    });
+
+  }
+
 
   selectTable(room,time){
     //console.log(room);
@@ -58,7 +75,7 @@ public API = '//localhost:8080/BookMeetingRoom';   //for test
    Reserved(room,time){
     if(localStorage.getItem('tokenidadmin') == "JWT" || localStorage.getItem('tokenidhr') == "JWT"){
 
-     this.http.post(this.API + '/CancelBooking/'+this.datefull.datefull +'/' + room +'/' + time ,{})
+     /*this.http.post(this.API + '/CancelBooking/'+this.datefull.datefull +'/' + room +'/' + time ,{})
                              .subscribe(
                                data => {
                                    console.log('PUT Request is successful');
@@ -68,7 +85,9 @@ public API = '//localhost:8080/BookMeetingRoom';   //for test
                                error => {
                                    console.log('Error', error);
                                }
-                              );
+                              );*/
+
+      this.openDialog(room,time,this.datefull.datefull);
       //console.log(this.datefull.datefull);
       //console.log(room);
       //console.log(time);
@@ -77,11 +96,9 @@ public API = '//localhost:8080/BookMeetingRoom';   //for test
     }
   }
 
-  CancelBooking(){
+cancelBooking(room,time){
 
-  }
-
-
+}
 
   timeofweekOTSF2 = [
     {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false, byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
@@ -1080,10 +1097,45 @@ public API = '//localhost:8080/BookMeetingRoom';   //for test
           }
         }
     }
-console.log(this.timeofweekOTSF2);
-console.log(this.timeofweekR1WH7F2);
-console.log(this.timeofweekR2WH7F2);
-console.log(this.timeofweekWH2F2);
+//console.log(this.timeofweekOTSF2);
+//console.log(this.timeofweekR1WH7F2);
+//console.log(this.timeofweekR2WH7F2);
+//console.log(this.timeofweekWH2F2);
  }
 }
+}
+
+
+
+@Component({
+  selector: 'dialog-cancel',
+  templateUrl: 'dialog-cancel.html',
+})
+export class DialogCancel {
+  public API = '//localhost:8080/BookMeetingRoom';   //for test
+//public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
+  constructor(
+    public dialogRef: MatDialogRef<DialogCancel>,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData , private http: HttpClient) {}
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+
+  submit(){
+
+      this.http.post(this.API + '/CancelBooking/'+this.data.date +'/' + this.data.room +'/' +this.data.time ,{})
+                             .subscribe(
+                               data => {
+                                   console.log('PUT Request is successful');
+                                   alert("Cancel Success");
+                                    window.location.reload();
+                               },
+                               error => {
+                                   console.log('Error', error);
+                               }
+                              );
+
+  }
+
 }

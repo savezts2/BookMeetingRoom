@@ -24,7 +24,8 @@ report : Array<any>;
 dateStart: String;
 dateEnd: String;
 counting: number ;
-
+dayofmonth30 : boolean;
+dayofmonth28 : boolean;
 
 dateSelectMonth: Array<any>;
 constructor(public authService : AuthService , private router: Router, private service : ServiceService,
@@ -52,7 +53,18 @@ constructor(public authService : AuthService , private router: Router, private s
     })
 
     this.dateSelectMonth = this.dateFull.dateStart.split("-");
-    //console.log('01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year);
+
+    if( this.dateSelectMonth[1] == '02'){
+        this.dayofmonth28 = false;
+        this.dayofmonth30 = false;
+    }
+    else if(this.dateSelectMonth[1] == '01' || this.dateSelectMonth[1] == '03' ||  this.dateSelectMonth[1] == '05' || this.dateSelectMonth[1] == '07' || this.dateSelectMonth[1] == '08' || this.dateSelectMonth[1] == '10' || this.dateSelectMonth[1] == '12'){
+        this.dayofmonth30 = true;
+        this.dayofmonth28 = false;
+    }else{
+        this.dayofmonth30 = false;
+        this.dayofmonth28 = true;
+    }
 
   }
 

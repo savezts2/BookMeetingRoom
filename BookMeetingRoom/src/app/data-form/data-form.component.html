@@ -62,7 +62,7 @@
       &nbsp; &nbsp; &nbsp; &nbsp;
       <label>To Time :
         <mat-form-field>
-          <mat-select [(ngModel)]="totime">
+          <mat-select [(ngModel)]="totime" required placeholder=" ">
             <mat-option value="08.00" *ngIf="this.fromtimeSelect <= '08.00' ? true : false">08.00</mat-option>
             <mat-option value="09.00" *ngIf="this.fromtimeSelect <= '09.00' ? true : false">09.00</mat-option>
             <mat-option value="10.00" *ngIf="this.fromtimeSelect <= '10.00' ? true : false">10.00</mat-option>
@@ -82,7 +82,9 @@
       <label>Tel. Booking By :
       <mat-form-field>
 
-      <input matInput [(ngModel)]="tel" maxlength="10">
+      <input matInput [(ngModel)]="tel" required placeholder=" " pattern="[0-9]{9}" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+             type = "number"
+             maxlength = "10">
       </mat-form-field>
       </label>
       </div>
@@ -91,7 +93,7 @@
       <label>Topic :
         <mat-form-field>
 
-          <input matInput [(ngModel)]="topic">
+          <input matInput [(ngModel)]="topic" required placeholder=" ">
 
         </mat-form-field>
       </label>
@@ -101,7 +103,7 @@
       <label>Attendees :
         <mat-form-field>
 
-          <input matInput [(ngModel)]="atten">
+          <input matInput [(ngModel)]="atten" required placeholder=" ">
 
         </mat-form-field>
       </label>
@@ -111,7 +113,7 @@
       <label>Remark :
         <mat-form-field>
 
-          <input matInput [(ngModel)]="remark">
+          <input matInput [(ngModel)]="remark" >
 
         </mat-form-field>
       </label>

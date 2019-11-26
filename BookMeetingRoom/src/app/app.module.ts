@@ -18,7 +18,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { SelectRoomComponent } from './select-room/select-room.component';
+import { SelectRoomComponent , DialogCancel} from './select-room/select-room.component';
 import {MatDialogModule} from '@angular/material/dialog';
 
 import {DialogOverviewExampleDialog} from './auth.service';
@@ -38,7 +38,8 @@ import { CanceluserComponent } from './canceluser/canceluser.component';
     DashboardComponent,
     DashboardtableComponent,
     AdduserbyadminComponent,
-    CanceluserComponent
+    CanceluserComponent,
+    DialogCancel
   ],
   imports: [
     BrowserModule,
@@ -59,7 +60,7 @@ import { CanceluserComponent } from './canceluser/canceluser.component';
     MatIconModule,
     MatRadioModule
   ],
-    entryComponents: [ DialogOverviewExampleDialog ],
+    entryComponents: [ DialogOverviewExampleDialog , DialogCancel],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -62,6 +62,12 @@ isLoggedInHR() : Observable<boolean> {
                       localStorage.setItem('userid', data.username);
                       localStorage.setItem('nameid', data.firstname);
                       window.location.reload(true);
+                      localStorage.removeItem('tokenid');
+                      localStorage.removeItem('tokenidhr');
+                      this.isLoginSubject.next(false);
+                      this.isLoginHR.next(false);
+
+
                      // console.log("admin");
 
                   }else if(data.status == "hr"){
@@ -71,6 +77,10 @@ isLoggedInHR() : Observable<boolean> {
                       localStorage.setItem('userid', data.username);
                       localStorage.setItem('nameid', data.firstname);
                       window.location.reload(true);
+                      localStorage.removeItem('tokenid');
+                      localStorage.removeItem('tokenidadmin');
+                      this.isLoginSubject.next(false);
+                      this.isLoginAdmin.next(false);
                     //  console.log("HR");
                   }
                   else{
@@ -80,6 +90,10 @@ isLoggedInHR() : Observable<boolean> {
                      localStorage.setItem('userid', data.username);
                      localStorage.setItem('nameid', data.firstname);
                      window.location.reload(true);
+                      localStorage.removeItem('tokenidadmin');
+                      localStorage.removeItem('tokenidhr');
+                      this.isLoginHR.next(false);
+                      this.isLoginAdmin.next(false);
                   //   console.log("user");
                   }
                   }
