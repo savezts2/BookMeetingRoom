@@ -25,6 +25,8 @@ import {FormControl} from '@angular/forms';
 
 
 export class BookMeetingRoom1Component implements OnInit {
+
+
     isLoggedIn : Observable<boolean>;
     isLoggedInAdmin : Observable<boolean>;
     isLoggedInHR : Observable<boolean>;
@@ -40,6 +42,12 @@ export class BookMeetingRoom1Component implements OnInit {
     dateFull : String ;
     nameLogin: String ;
     serializedDate = new FormControl((new Date()).toISOString());
+    today=new Date();
+myFilter = (d: Date): boolean => {
+const day = d.getDay();
+// Prevent Saturday and Sunday from being selected.
+return day !== 0 ;
+}
 
 constructor(public authService : AuthService , private router: Router , private service : ServiceService) {
     this.isLoggedIn = authService.isLoggedIn();

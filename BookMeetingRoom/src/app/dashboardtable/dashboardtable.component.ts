@@ -47,11 +47,12 @@ constructor(public authService : AuthService , private router: Router, private s
                 this.dateFull = prams;
                 this.dateStart = this.dateFull.dateStart;
                 this.dateEnd = this.dateFull.dateEnd;
-
+                console.log(this.dateFull);
               })
 
     this.service.getDateDashBoard(this.dateStart , this.dateEnd).subscribe(data=>{
        this.report = data;
+      console.log(data,this.dateStart,this.dateEnd);
       this.appendTime();
     })
 
