@@ -31,8 +31,8 @@ export class SelectRoomComponent implements OnInit {
 
 
     datefull :any={}
-public API = '//localhost:8080/BookMeetingRoom';   //for test
-//public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
+//public API = '//localhost:8080/BookMeetingRoom';   //for test
+public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
 
    constructor(public authService : AuthService , private router: Router, private service : ServiceService,private http: HttpClient,
    private route:ActivatedRoute, public dialog: MatDialog) {
@@ -50,7 +50,6 @@ public API = '//localhost:8080/BookMeetingRoom';   //for test
 
     this.service.findDate(this.datefull.datefull).subscribe(data=>{
     this.report = data;
-    console.log(data);
     this.appendTime();
     })
 
@@ -1112,8 +1111,8 @@ cancelBooking(room,time){
   templateUrl: 'dialog-cancel.html',
 })
 export class DialogCancel {
-  public API = '//localhost:8080/BookMeetingRoom';   //for test
-//public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
+ // public API = '//localhost:8080/BookMeetingRoom';   //for test
+public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
   constructor(
     public dialogRef: MatDialogRef<DialogCancel>,
     @Inject(MAT_DIALOG_DATA) public data: DialogData , private http: HttpClient) {}

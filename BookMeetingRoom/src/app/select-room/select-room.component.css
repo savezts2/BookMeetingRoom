@@ -41,8 +41,8 @@
 
 
 .botton-login{
-  margin-left: 1150px;
-  margin-top: 22px;
+  float: right;
+  margin-top: 14px;
   color: #7386D5;
 }
 

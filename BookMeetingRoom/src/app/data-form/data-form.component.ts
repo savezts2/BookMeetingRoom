@@ -36,8 +36,8 @@ fromtimesplited : Array<any>;
 totimesplited : Array<any>;
 countTime : number;
 spiner : boolean = false;
-public API = '//localhost:8080/BookMeetingRoom';   //for test
-//public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
+//public API = '//localhost:8080/BookMeetingRoom';   //for test
+public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
 
 
 constructor(public authService : AuthService, private route:ActivatedRoute, private service : ServiceService,private http: HttpClient,

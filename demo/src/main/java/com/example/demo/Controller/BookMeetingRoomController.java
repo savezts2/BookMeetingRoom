@@ -8,6 +8,7 @@ import com.example.demo.repository.BookMeetingRoomRepository;
 import com.example.demo.repository.ReportRepository;
 import com.example.demo.repository.UsersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.text.ParseException;
@@ -19,7 +20,8 @@ import java.util.stream.Collectors;
 
 
 @RestController
-@CrossOrigin(origins = "*")
+@CrossOrigin("*")
+
 public class BookMeetingRoomController {
 
     @Autowired
@@ -29,12 +31,14 @@ public class BookMeetingRoomController {
     @Autowired
     private ReportRepository reportRepository;
 
-    @PostMapping("/BookMeetingRoom/Bookmaster/{date}")
+    @GetMapping("/BookMeetingRoom/{date}")
     public Iterable<BookMeetingRoom> Bookmaster(@PathVariable String date) {
         return this.bookMeetingRoomRepository.getBookmaster(date);
     }
 
-    @PostMapping(path = "/BookMeetingRoom/CancelBooking/{dateBookMeetingRoom}/{roomname}/{starttime}")
+
+
+    @PostMapping(path = "/CancelBooking/{dateBookMeetingRoom}/{roomname}/{starttime}")
     public BookMeetingRoom bookMeetingRoom2(@PathVariable String dateBookMeetingRoom, @PathVariable String roomname, @PathVariable String starttime) {
         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findByDateBookMeetingRoomAndRoomnameAndStarttimeAndIsActive(dateBookMeetingRoom,roomname,starttime,"1");
         bookMeetingRoom.setIsActive("0");
@@ -48,7 +52,7 @@ public class BookMeetingRoomController {
 
 
 
-    @PostMapping(path = "/BookMeetingRoom/{userid}/{fromtime}/{totime}/{tel}/{topic}/{atten}/{remark}/{roomname}/{date}")
+    @PostMapping(path = "/{userid}/{fromtime}/{totime}/{tel}/{topic}/{atten}/{remark}/{roomname}/{date}")
     public BookMeetingRoom bookMeetingRoom(@PathVariable String userid, @PathVariable String fromtime, @PathVariable String totime,
                                      @PathVariable String  tel, @PathVariable String topic,@PathVariable String atten,@PathVariable String remark
             ,@PathVariable String roomname ,@PathVariable String date) throws Exception {

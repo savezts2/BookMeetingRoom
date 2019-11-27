@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,ElementRef, ViewChild} from '@angular/core';
 import { AuthService } from '../auth.service';
 import { Observable } from "rxjs";
 import { Router } from '@angular/router';
@@ -28,12 +28,17 @@ dayofmonth30 : boolean;
 dayofmonth28 : boolean;
 
 dateSelectMonth: Array<any>;
+
+
+
+
 constructor(public authService : AuthService , private router: Router, private service : ServiceService,
    private route:ActivatedRoute , private dashboardService : DashboardService) {
         this.isLoggedIn = authService.isLoggedIn();
         this.isLoggedInAdmin = authService.isLoggedInAdmin();
         this.isLoggedInHR = authService.isLoggedInHR();
    }
+
 
   ngOnInit() {
 
@@ -43,12 +48,10 @@ constructor(public authService : AuthService , private router: Router, private s
                 this.dateStart = this.dateFull.dateStart;
                 this.dateEnd = this.dateFull.dateEnd;
 
-                console.log(this.dateFull);
               })
 
     this.service.getDateDashBoard(this.dateStart , this.dateEnd).subscribe(data=>{
        this.report = data;
-       console.log(this.report);
       this.appendTime();
     })
 

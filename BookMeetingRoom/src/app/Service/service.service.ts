@@ -7,30 +7,30 @@ import { Observable } from 'rxjs';
 })
 export class ServiceService {
 
-  public API = '//localhost:8080/BookMeetingRoom';   //for test
-  //public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
+ // public API = '//localhost:8080/BookMeetingRoom';   //for test
+  public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
 
   constructor( private http: HttpClient ) { }
 
   findDate(date : String) : Observable<any>{
-      return this.http.post(this.API+'/Report/'+date,{})
+      return this.http.get(this.API+'/Report/'+date,{})
   }
 
   getUserPassword(id: String , password : String): Observable<any>{
-      return this.http.post(this.API+'/Users/'+id+/Password/+password,{})
+      return this.http.get(this.API+'/Users/'+id+/Password/+password,{})
   }
 
 
   getDateDashBoard(startdate : String , enddate: String) : Observable<any>{
-      return this.http.post(this.API+'/Report/'+startdate+'/'+enddate,{})
+      return this.http.get(this.API+'/Report/'+startdate+'/'+enddate,{})
   }
 
 findUserid(userid : String){
-    return this.http.post(this.API+'/Userid/'+userid,{})
+    return this.http.get(this.API+'/Userid/'+userid,{})
 }
 
 public getUserid(userid : String): Observable<any> {
-                 return this.http.post(this.API + '/Userid/'+userid,{});
+                 return this.http.get(this.API + '/Userid/'+userid,{});
                }
 
 

@@ -8,8 +8,10 @@ import { SelectRoomComponent } from './select-room/select-room.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DashboardtableComponent } from './dashboardtable/dashboardtable.component';
 import { AdduserbyadminComponent } from './adduserbyadmin/adduserbyadmin.component';
-
+import { ModuleWithProviders } from '@angular/core';
 import { CanceluserComponent } from './canceluser/canceluser.component';
+
+
 const routes: Routes = [
     { path: 'selectRoom', component: SelectRoomComponent },
     { path: 'selectDate', component: BookMeetingRoom1Component },
@@ -22,7 +24,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{useHash:true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+

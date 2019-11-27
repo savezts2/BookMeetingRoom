@@ -18,8 +18,8 @@ isLoggedIn : Observable<boolean>;
 isLoggedInAdmin : Observable<boolean>;
 isLoggedInHR : Observable<boolean>;
 userid : String = null;
-public API = '//localhost:8080/BookMeetingRoom';   //for test
-//public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
+//public API = '//localhost:8080/BookMeetingRoom';   //for test
+public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
 user_id : null;
 username: null;
 lastname: null;
