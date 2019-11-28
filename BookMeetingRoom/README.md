@@ -1,10 +1,24 @@
-
-
-## Angular
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+# ILS-BookMeetingRoom
 
 ## Maven
 
-Run `mvnw spring-boot:run` with `port 8080`
+> **mvnw spring-boot:run**
+
+## Angular
+
+> **npm install**
+
+> **ng serve**
+
+## How to Deploy to war file
+
+## Angular
+
+> **ng build --prod --base-href=/${project.name}/**
+
+**Move file in /dist in Angular to /static in Maven**
+
+> **mvnw clean package**
+
+
 
