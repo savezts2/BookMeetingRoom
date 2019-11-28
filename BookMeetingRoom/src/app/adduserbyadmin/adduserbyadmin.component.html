@@ -45,11 +45,11 @@
 
       <div align="center">
       <mat-form-field>
-        <input matInput placeholder="Firstname" [(ngModel)]="username">
+        <input matInput placeholder="Firstname" [(ngModel)]="username" (keydown.enter)="submit()">
       </mat-form-field>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <mat-form-field>
-        <input matInput placeholder="Lastname" [(ngModel)]="lastname">
+        <input matInput placeholder="Lastname" [(ngModel)]="lastname" (keydown.enter)="submit()">
       </mat-form-field>
       </div>
       <br/>
@@ -89,11 +89,11 @@
 
 
         <mat-form-field>
-          <input matInput placeholder="Username" [(ngModel)]="userid">
+          <input matInput placeholder="Username" [(ngModel)]="userid" (keydown.enter)="submit()">
         </mat-form-field>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <mat-form-field>
-          <input matInput placeholder="Enter your password" [type]="hide ? 'text' : 'password'" [(ngModel)]="password">
+          <input matInput placeholder="Enter your password" [type]="hide ? 'text' : 'password'" [(ngModel)]="password" (keydown.enter)="submit()">
           <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
             <mat-icon>{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
           </button>

@@ -47,7 +47,7 @@
       <div align="center">
 
       <mat-form-field>
-        <input matInput placeholder="Userid" [(ngModel)]="userid">
+        <input matInput placeholder="Userid" [(ngModel)]="userid" (keydown.enter)="search()">
       </mat-form-field>
         &nbsp;&nbsp;&nbsp;&nbsp;
         <button mat-raised-button color="primary" (click)="search()">Search</button>

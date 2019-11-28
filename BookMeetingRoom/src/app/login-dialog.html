@@ -15,14 +15,14 @@
   <label>Password :
     <mat-form-field>
 
-      <input matInput  [(ngModel)]="password" type="password">
+      <input matInput  [(ngModel)]="password" type="password" (keydown.enter)="login()">
 
     </mat-form-field>
   </label>
 </div>
 
 <div align="center">
-<button mat-raised-button color="primary" (click)="login()">Login</button>&nbsp;&nbsp;&nbsp;<button mat-raised-button color="primary" (click)="onNoClick()">Cancel</button>
+<button mat-raised-button color="primary" (click)="login()" >Login</button>&nbsp;&nbsp;&nbsp;<button mat-raised-button color="primary" (click)="onNoClick()">Cancel</button>
 </div>
 </body>
 </html>

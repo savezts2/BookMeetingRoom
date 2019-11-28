@@ -49,7 +49,7 @@ search(){
     if(data == null)
       alert("This userid does not exist in the system.");
     else{
-     console.log(data);
+     //console.log(data);
      this.user_id = data.user_id;
      this.username = data.firstname;
      this.lastname = data.lastname;

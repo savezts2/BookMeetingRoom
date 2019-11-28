@@ -84,7 +84,7 @@
 
       <input matInput [(ngModel)]="tel" required placeholder=" " pattern="[0-9]{9}" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
              type = "number"
-             maxlength = "10">
+             maxlength = "10" (keydown.enter)="SubmitData()">
       </mat-form-field>
       </label>
       </div>
@@ -93,7 +93,7 @@
       <label>Topic :
         <mat-form-field>
 
-          <input matInput [(ngModel)]="topic" required placeholder=" ">
+          <input matInput [(ngModel)]="topic" required placeholder=" " (keydown.enter)="SubmitData()">
 
         </mat-form-field>
       </label>
@@ -103,7 +103,7 @@
       <label>Attendees :
         <mat-form-field>
 
-          <input matInput [(ngModel)]="atten" required placeholder=" " type = "number">
+          <input matInput [(ngModel)]="atten" required placeholder=" " type = "number" (keydown.enter)="SubmitData()">
 
         </mat-form-field>
       </label>
@@ -113,7 +113,7 @@
       <label>Remark :
         <mat-form-field>
 
-          <input matInput [(ngModel)]="remark" >
+          <input matInput [(ngModel)]="remark" (keydown.enter)="SubmitData()">
 
         </mat-form-field>
       </label>
