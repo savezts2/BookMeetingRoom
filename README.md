@@ -18,7 +18,7 @@
 
 **Move file in /dist in Angular to /static in Maven**
 
-> **mvnw clean package**
+> **mvnw clean install package**
 
 
 
