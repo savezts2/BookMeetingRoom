@@ -28,7 +28,37 @@ dayofmonth30 : boolean;
 dayofmonth28 : boolean;
 
 dateSelectMonth: Array<any>;
-
+day1 : String ;
+day2 : String ;
+day3 : String ;
+day4 : String ;
+day5 : String ;
+day6 : String ;
+day7 : String ;
+day8 : String ;
+day9: String ;
+day10 : String ;
+day11 : String ;
+day12 : String ;
+day13 : String ;
+day14 : String ;
+day15 : String ;
+day16 : String ;
+day17 : String ;
+day18 : String ;
+day19 : String ;
+day20 : String ;
+day21 : String ;
+day22 : String ;
+day23 : String ;
+day24 : String ;
+day25 : String ;
+day26 : String ;
+day27 : String ;
+day28 : String ;
+day29 : String ;
+day30 : String ;
+day31 : String ;
 
 
 
@@ -47,12 +77,12 @@ constructor(public authService : AuthService , private router: Router, private s
                 this.dateFull = prams;
                 this.dateStart = this.dateFull.dateStart;
                 this.dateEnd = this.dateFull.dateEnd;
-                console.log(this.dateFull);
+                //console.log(this.dateFull);
               })
 
     this.service.getDateDashBoard(this.dateStart , this.dateEnd).subscribe(data=>{
        this.report = data;
-      console.log(data,this.dateStart,this.dateEnd);
+     // console.log(data,this.dateStart,this.dateEnd);
       this.appendTime();
     })
 
@@ -69,6 +99,174 @@ constructor(public authService : AuthService , private router: Router, private s
         this.dayofmonth30 = false;
         this.dayofmonth28 = true;
     }
+
+   // console.log(this.dateFull);
+     const date1 = new Date(this.dateFull.year+'/'+this.dateFull.month+'/01');
+     const date2 = new Date(this.dateFull.year+'/'+this.dateFull.month+'/02');
+     const date3 = new Date(this.dateFull.year+'/'+this.dateFull.month+'/03');
+     const date4 = new Date(this.dateFull.year+'/'+this.dateFull.month+'/04');
+     const date5 = new Date(this.dateFull.year+'/'+this.dateFull.month+'/05');
+     const date6 = new Date(this.dateFull.year+'/'+this.dateFull.month+'/06');
+     const date7 = new Date(this.dateFull.year+'/'+this.dateFull.month+'/07');
+     const date8 = new Date(this.dateFull.year+'/'+this.dateFull.month+'/08');
+     const date9 = new Date(this.dateFull.year+'/'+this.dateFull.month+'/09');
+     const date10 = new Date(this.dateFull.year+'/'+this.dateFull.month+'/10');
+     const date11 = new Date(this.dateFull.year+'/'+this.dateFull.month+'/11');
+     const date12 = new Date(this.dateFull.year+'/'+this.dateFull.month+'/12');
+     const date13 = new Date(this.dateFull.year+'/'+this.dateFull.month+'/13');
+     const date14 = new Date(this.dateFull.year+'/'+this.dateFull.month+'/14');
+     const date15 = new Date(this.dateFull.year+'/'+this.dateFull.month+'/15');
+     const date16 = new Date(this.dateFull.year+'/'+this.dateFull.month+'/16');
+     const date17 = new Date(this.dateFull.year+'/'+this.dateFull.month+'/17');
+     const date18 = new Date(this.dateFull.year+'/'+this.dateFull.month+'/18');
+     const date19 = new Date(this.dateFull.year+'/'+this.dateFull.month+'/19');
+     const date20 = new Date(this.dateFull.year+'/'+this.dateFull.month+'/20');
+     const date21 = new Date(this.dateFull.year+'/'+this.dateFull.month+'/21');
+     const date22 = new Date(this.dateFull.year+'/'+this.dateFull.month+'/22');
+     const date23 = new Date(this.dateFull.year+'/'+this.dateFull.month+'/23');
+     const date24 = new Date(this.dateFull.year+'/'+this.dateFull.month+'/24');
+     const date25 = new Date(this.dateFull.year+'/'+this.dateFull.month+'/25');
+     const date26 = new Date(this.dateFull.year+'/'+this.dateFull.month+'/26');
+     const date27 = new Date(this.dateFull.year+'/'+this.dateFull.month+'/27');
+     const date28 = new Date(this.dateFull.year+'/'+this.dateFull.month+'/28');
+     const date29 = new Date(this.dateFull.year+'/'+this.dateFull.month+'/29');
+     const date30 = new Date(this.dateFull.year+'/'+this.dateFull.month+'/30');
+     const date31 = new Date(this.dateFull.year+'/'+this.dateFull.month+'/31');
+      this.day1 = date1.getDay().toString();
+      if(this.day1 == '0')this.day1='Sunday';else if(this.day1 == '1')this.day1='Monday';else if(this.day1 == '2')this.day1='Tuesday';else if(this.day1 == '3')this.day1='Wednesday';
+      else if(this.day1 == '4')this.day1='Thursday';else if(this.day1 == '5')this.day1='Friday';else this.day1='Saturday';
+
+      this.day2 = date2.getDay().toString();
+      if(this.day2 == '0')this.day2='Sunday';else if(this.day2 == '1')this.day2='Monday';else if(this.day2 == '2')this.day2='Tuesday';else if(this.day2 == '3')this.day2='Wednesday';
+      else if(this.day2 == '4')this.day2='Thursday';else if(this.day2 == '5')this.day2='Friday';else this.day2='Saturday';
+
+      this.day3 = date3.getDay().toString();
+      if(this.day3 == '0')this.day3='Sunday';else if(this.day3 == '1')this.day3='Monday';else if(this.day3 == '2')this.day3='Tuesday';else if(this.day3 == '3')this.day3='Wednesday';
+      else if(this.day3 == '4')this.day3='Thursday';else if(this.day3 == '5')this.day3='Friday';else this.day3='Saturday';
+
+      this.day4 = date4.getDay().toString();
+      if(this.day4 == '0')this.day4='Sunday';else if(this.day4 == '1')this.day4='Monday';else if(this.day4 == '2')this.day4='Tuesday';else if(this.day4 == '3')this.day4='Wednesday';
+      else if(this.day4 == '4')this.day4='Thursday';else if(this.day4 == '5')this.day4='Friday';else this.day4='Saturday';
+
+      this.day5 = date5.getDay().toString();
+      if(this.day5 == '0')this.day5='Sunday';else if(this.day5 == '1')this.day5='Monday';else if(this.day5 == '2')this.day5='Tuesday';else if(this.day5 == '3')this.day5='Wednesday';
+      else if(this.day5 == '4')this.day5='Thursday';else if(this.day5 == '5')this.day5='Friday';else this.day5='Saturday';
+
+      this.day6 = date6.getDay().toString();
+      if(this.day6 == '0')this.day6='Sunday';else if(this.day6 == '1')this.day6='Monday';else if(this.day6 == '2')this.day6='Tuesday';else if(this.day6 == '3')this.day6='Wednesday';
+      else if(this.day6 == '4')this.day6='Thursday';else if(this.day6 == '5')this.day6='Friday';else this.day6='Saturday';
+
+
+      this.day7 = date7.getDay().toString();
+      if(this.day7 == '0')this.day7='Sunday';else if(this.day7 == '1')this.day7='Monday';else if(this.day7 == '2')this.day7='Tuesday';else if(this.day7 == '3')this.day7='Wednesday';
+      else if(this.day7 == '4')this.day7='Thursday';else if(this.day7 == '5')this.day7='Friday';else this.day7='Saturday';
+
+      this.day8 = date8.getDay().toString();
+      if(this.day8 == '0')this.day8='Sunday';else if(this.day8 == '1')this.day8='Monday';else if(this.day8 == '2')this.day8='Tuesday';else if(this.day8 == '3')this.day8='Wednesday';
+      else if(this.day8 == '4')this.day8='Thursday';else if(this.day8 == '5')this.day8='Friday';else this.day8='Saturday';
+
+      this.day9 = date9.getDay().toString();
+      if(this.day9 == '0')this.day9='Sunday';else if(this.day9 == '1')this.day9='Monday';else if(this.day9 == '2')this.day9='Tuesday';else if(this.day9 == '3')this.day9='Wednesday';
+      else if(this.day9 == '4')this.day9='Thursday';else if(this.day9 == '5')this.day9='Friday';else this.day9='Saturday';
+
+      this.day10 = date10.getDay().toString();
+      if(this.day10 == '0')this.day10='Sunday';else if(this.day10 == '1')this.day10='Monday';else if(this.day10 == '2')this.day10='Tuesday';else if(this.day10 == '3')this.day10='Wednesday';
+      else if(this.day10 == '4')this.day10='Thursday';else if(this.day10 == '5')this.day10='Friday';else this.day10='Saturday';
+
+      this.day11 = date11.getDay().toString();
+      if(this.day11 == '0')this.day11='Sunday';else if(this.day11 == '1')this.day11='Monday';else if(this.day11 == '2')this.day11='Tuesday';else if(this.day11 == '3')this.day11='Wednesday';
+      else if(this.day11 == '4')this.day11='Thursday';else if(this.day11 == '5')this.day11='Friday';else this.day10='Saturday';
+
+      this.day12 = date12.getDay().toString();
+      if(this.day12 == '0')this.day12='Sunday';else if(this.day12 == '1')this.day12='Monday';else if(this.day12 == '2')this.day12='Tuesday';else if(this.day12 == '3')this.day12='Wednesday';
+      else if(this.day12 == '4')this.day12='Thursday';else if(this.day12 == '5')this.day12='Friday';else this.day12='Saturday';
+
+      this.day13 = date13.getDay().toString();
+      if(this.day13 == '0')this.day13='Sunday';else if(this.day13 == '1')this.day13='Monday';else if(this.day13 == '2')this.day13='Tuesday';else if(this.day13 == '3')this.day13='Wednesday';
+      else if(this.day13 == '4')this.day13='Thursday';else if(this.day13 == '5')this.day13='Friday';else this.day13='Saturday';
+
+      this.day14 = date14.getDay().toString();
+      if(this.day14 == '0')this.day14='Sunday';else if(this.day14 == '1')this.day14='Monday';else if(this.day14 == '2')this.day14='Tuesday';else if(this.day14 == '3')this.day14='Wednesday';
+      else if(this.day14 == '4')this.day14='Thursday';else if(this.day14 == '5')this.day14='Friday';else this.day14='Saturday';
+
+      this.day15 = date15.getDay().toString();
+      if(this.day15 == '0')this.day15='Sunday';else if(this.day15 == '1')this.day15='Monday';else if(this.day15 == '2')this.day15='Tuesday';else if(this.day15 == '3')this.day15='Wednesday';
+      else if(this.day15 == '4')this.day15='Thursday';else if(this.day15 == '5')this.day15='Friday';else this.day15='Saturday';
+
+      this.day16 = date16.getDay().toString();
+      if(this.day16 == '0')this.day16='Sunday';else if(this.day16 == '1')this.day16='Monday';else if(this.day16 == '2')this.day16='Tuesday';else if(this.day16 == '3')this.day16='Wednesday';
+      else if(this.day16 == '4')this.day16='Thursday';else if(this.day16 == '5')this.day16='Friday';else this.day16='Saturday';
+
+      this.day17 = date17.getDay().toString();
+      if(this.day17 == '0')this.day17='Sunday';else if(this.day17 == '1')this.day17='Monday';else if(this.day17 == '2')this.day17='Tuesday';else if(this.day17 == '3')this.day17='Wednesday';
+      else if(this.day17 == '4')this.day17='Thursday';else if(this.day17 == '5')this.day17='Friday';else this.day17='Saturday';
+
+      this.day18 = date18.getDay().toString();
+      if(this.day18 == '0')this.day18='Sunday';else if(this.day18 == '1')this.day18='Monday';else if(this.day18 == '2')this.day18='Tuesday';else if(this.day18 == '3')this.day18='Wednesday';
+      else if(this.day18 == '4')this.day18='Thursday';else if(this.day18 == '5')this.day18='Friday';else this.day18='Saturday';
+
+      this.day19 = date19.getDay().toString();
+      if(this.day19 == '0')this.day19='Sunday';else if(this.day19 == '1')this.day19='Monday';else if(this.day19 == '2')this.day19='Tuesday';else if(this.day19 == '3')this.day19='Wednesday';
+      else if(this.day19 == '4')this.day19='Thursday';else if(this.day19 == '5')this.day19='Friday';else this.day19='Saturday';
+
+      this.day20 = date20.getDay().toString();
+      if(this.day20 == '0')this.day20='Sunday';else if(this.day20 == '1')this.day20='Monday';else if(this.day20 == '2')this.day20='Tuesday';else if(this.day20 == '3')this.day20='Wednesday';
+      else if(this.day20 == '4')this.day20='Thursday';else if(this.day20 == '5')this.day20='Friday';else this.day20='Saturday';
+
+      this.day21 = date21.getDay().toString();
+      if(this.day21 == '0')this.day21='Sunday';else if(this.day21 == '1')this.day21='Monday';
+      else if(this.day21 == '2')this.day21='Tuesday';else if(this.day21 == '3')this.day21='Wednesday';
+      else if(this.day21 == '4')this.day21='Thursday';else if(this.day21 == '5')this.day21='Friday';else this.day21='Saturday';
+
+      this.day22 = date22.getDay().toString();
+      if(this.day22 == '0')this.day22='Sunday';else if(this.day22 == '1')this.day22='Monday';
+      else if(this.day22 == '2')this.day22='Tuesday';else if(this.day22 == '3')this.day22='Wednesday';
+      else if(this.day22 == '4')this.day22='Thursday';else if(this.day22 == '5')this.day22='Friday';else this.day22='Saturday';
+
+      this.day23 = date23.getDay().toString();
+      if(this.day23 == '0')this.day23='Sunday';else if(this.day23 == '1')this.day23='Monday';
+      else if(this.day23 == '2')this.day23='Tuesday';else if(this.day23 == '3')this.day23='Wednesday';
+      else if(this.day23 == '4')this.day23='Thursday';else if(this.day23 == '5')this.day23='Friday';else this.day23='Saturday';
+
+      this.day24 = date24.getDay().toString();
+      if(this.day24 == '0')this.day24='Sunday';else if(this.day24 == '1')this.day24='Monday';
+      else if(this.day24 == '2')this.day24='Tuesday';else if(this.day24 == '3')this.day24='Wednesday';
+      else if(this.day24 == '4')this.day24='Thursday';else if(this.day24 == '5')this.day24='Friday';else this.day24='Saturday';
+
+      this.day25 = date25.getDay().toString();
+      if(this.day25 == '0')this.day25='Sunday';else if(this.day25 == '1')this.day25='Monday';
+      else if(this.day25 == '2')this.day25='Tuesday';else if(this.day25 == '3')this.day25='Wednesday';
+      else if(this.day25 == '4')this.day25='Thursday';else if(this.day25 == '5')this.day25='Friday';else this.day25='Saturday';
+
+      this.day26 = date26.getDay().toString();
+      if(this.day26 == '0')this.day26='Sunday';else if(this.day26 == '1')this.day26='Monday';
+      else if(this.day26 == '2')this.day26='Tuesday';else if(this.day26 == '3')this.day26='Wednesday';
+      else if(this.day26 == '4')this.day26='Thursday';else if(this.day26 == '5')this.day26='Friday';else this.day26='Saturday';
+
+      this.day27 = date27.getDay().toString();
+      if(this.day27 == '0')this.day27='Sunday';else if(this.day27 == '1')this.day27='Monday';
+      else if(this.day27 == '2')this.day27='Tuesday';else if(this.day27 == '3')this.day27='Wednesday';
+      else if(this.day27 == '4')this.day27='Thursday';else if(this.day27 == '5')this.day27='Friday';else this.day27='Saturday';
+
+      this.day28 = date28.getDay().toString();
+      if(this.day28 == '0')this.day28='Sunday';else if(this.day28 == '1')this.day28='Monday';
+      else if(this.day28 == '2')this.day28='Tuesday';else if(this.day28 == '3')this.day28='Wednesday';
+      else if(this.day28 == '4')this.day28='Thursday';else if(this.day28 == '5')this.day28='Friday';else this.day28='Saturday';
+
+      this.day29 = date29.getDay().toString();
+      if(this.day29 == '0')this.day29='Sunday';else if(this.day29 == '1')this.day29='Monday';
+      else if(this.day29 == '2')this.day29='Tuesday';else if(this.day29 == '3')this.day29='Wednesday';
+      else if(this.day29 == '4')this.day29='Thursday';else if(this.day29 == '5')this.day29='Friday';else this.day29='Saturday';
+
+      this.day30 = date30.getDay().toString();
+      if(this.day30 == '0')this.day30='Sunday';else if(this.day30 == '1')this.day30='Monday';
+      else if(this.day30 == '2')this.day30='Tuesday';else if(this.day30 == '3')this.day30='Wednesday';
+      else if(this.day30 == '4')this.day30='Thursday';else if(this.day30 == '5')this.day30='Friday';else this.day30='Saturday';
+
+      this.day31 = date31.getDay().toString();
+      if(this.day31 == '0')this.day31='Sunday';else if(this.day31 == '1')this.day31='Monday';
+      else if(this.day31 == '2')this.day31='Tuesday';else if(this.day31 == '3')this.day31='Wednesday';
+      else if(this.day31 == '4')this.day31='Thursday';else if(this.day31 == '5')this.day31='Friday';else this.day31='Saturday';
 
   }
 
