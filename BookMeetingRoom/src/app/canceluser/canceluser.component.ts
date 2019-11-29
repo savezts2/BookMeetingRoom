@@ -1,22 +1,22 @@
-import { Component, OnInit } from '@angular/core';
-import { BehaviorSubject } from 'rxjs/Rx';
-import { AuthService } from '../auth.service';
-import { Observable } from "rxjs";
-import { Router } from '@angular/router';
-import { HttpClient} from '@angular/common/http';
-import { ServiceService } from '../Service/service.service';
+import{Component, OnInit}from '@angular/core';
+import {BehaviorSubject}from 'rxjs/Rx';
+import {AuthService}from '../auth.service';
+import { Observable}from "rxjs";
+import { Router}from '@angular/router';
+import {HttpClient}from '@angular/common/http';
+import {ServiceService} from '../Service/service.service';
 
 
 @Component({
-  selector: 'app-canceluser',
-  templateUrl: './canceluser.component.html',
-  styleUrls: ['./canceluser.component.css']
+selector: 'app-canceluser',
+templateUrl: './canceluser.component.html',
+styleUrls: ['./canceluser.component.css']
 })
 export class CanceluserComponent implements OnInit {
 
-isLoggedIn : Observable<boolean>;
-isLoggedInAdmin : Observable<boolean>;
-isLoggedInHR : Observable<boolean>;
+isLoggedIn : Observable < boolean>;
+isLoggedInAdmin : Observable < boolean>;
+isLoggedInHR : Observable < boolean>;
 userid : String = null;
 //public API = '//localhost:8080/BookMeetingRoom';   //for test
 public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
@@ -29,7 +29,7 @@ position: null;
 status: null;
 isactive: null;
 func : null;
-  constructor(  public authService : AuthService,private router: Router , private service : ServiceService,private http: HttpClient) {
+constructor(  public authService : AuthService,private router: Router , private service : ServiceService,private http: HttpClient) {
 
    this.isLoggedIn = authService.isLoggedIn();
     this.isLoggedInAdmin = authService.isLoggedInAdmin();

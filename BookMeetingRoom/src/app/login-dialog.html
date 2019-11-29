@@ -1,7 +1,8 @@
 <html>
 <body>
-<br/><h2 align="center" style="color:#6d7fcc;">Login BookMeetingRoom</h2>
-<div style = "margin-left:20%;">
+<br/>
+<h2 align="center" style="color:#6d7fcc;">Login BookMeetingRoom</h2>
+<div style="margin-left:20%;">
   <label>ID :
     <mat-form-field>
 
@@ -11,18 +12,22 @@
   </label>
 </div>
 
-<div style = "margin-left:5%;">
+<div style="margin-left:5%;">
   <label>Password :
     <mat-form-field>
 
-      <input matInput  [(ngModel)]="password" type="password" (keydown.enter)="login()">
+      <input matInput [(ngModel)]="password" type="password" (keydown.enter)="login()">
 
     </mat-form-field>
   </label>
 </div>
 
 <div align="center">
-<button mat-raised-button color="primary" (click)="login()" >Login</button>&nbsp;&nbsp;&nbsp;<button mat-raised-button color="primary" (click)="onNoClick()">Cancel</button>
+  <button mat-raised-button color="primary" (click)="login()">Login</button>&nbsp;&nbsp;&nbsp;<button mat-raised-button
+                                                                                                      color="primary"
+                                                                                                      (click)="onNoClick()">
+  Cancel
+</button>
 </div>
 </body>
 </html>

@@ -1,19 +1,16 @@
 package com.example.demo;
-import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
-import com.example.demo.repository.BookMeetingRoomRepository;
-import org.springframework.boot.ApplicationRunner;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class DemoApplication extends SpringBootServletInitializer{
+public class DemoApplication extends SpringBootServletInitializer {
 
-	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
-		System.out.println("\nConnect Complete !!!\n");
-	}
-
+    public static void main(String[] args) {
+        SpringApplication.run(DemoApplication.class, args);
+        System.out.println("\nConnect Complete !!!\n");
+    }
 
 
 }

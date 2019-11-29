@@ -7,29 +7,39 @@
       <h4>BookMeetingRoom</h4>
     </div>
 
-    <div *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)" >
-      <button mat-button class="sidebar-menu" routerLink="/selectDate">SelectRoom & Time</button><br>
+    <div *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)">
+      <button mat-button class="sidebar-menu" routerLink="/selectDate">SelectRoom & Time</button>
+      <br>
     </div>
-    <div  *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)">
-      <button mat-button class="sidebar-menu" routerLink="/dashboard">Dashboard</button><br>
+    <div *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)">
+      <button mat-button class="sidebar-menu" routerLink="/dashboard">Dashboard</button>
+      <br>
     </div>
 
-    <div  *ngIf="(isLoggedInAdmin | async)">
-      <button mat-button class="sidebar-menu" routerLink="/adduserbyadmin">AddUser</button><br>
+    <div *ngIf="(isLoggedInAdmin | async)">
+      <button mat-button class="sidebar-menu" routerLink="/adduserbyadmin">AddUser</button>
+      <br>
     </div>
-    <div  *ngIf="(isLoggedInAdmin | async)">
-      <button mat-button class="sidebar-menu" routerLink="/canceluser">CancelUser</button><br>
+    <div *ngIf="(isLoggedInAdmin | async)">
+      <button mat-button class="sidebar-menu" routerLink="/canceluser">CancelUser</button>
+      <br>
     </div>
     <div class="sidebar-emp">
 
     </div>
   </nav>
 
-  <div class="card-header" >
+  <div class="card-header">
     <div>
 
-      <button mat-raised-button class="botton-login" *ngIf="!(isLoggedIn | async) && !(isLoggedInAdmin | async) && !(isLoggedInHR | async)" (click)="authService.callDialog()">Login</button>
-      <button mat-raised-button class="botton-login" *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)" (click)="authService.logout()">LogOut</button>
+      <button mat-raised-button class="botton-login"
+              *ngIf="!(isLoggedIn | async) && !(isLoggedInAdmin | async) && !(isLoggedInHR | async)"
+              (click)="authService.callDialog()">Login
+      </button>
+      <button mat-raised-button class="botton-login"
+              *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)"
+              (click)="authService.logout()">LogOut
+      </button>
 
     </div>
 
@@ -47,136 +57,133 @@
       <h2 style="color:#6d7fcc; margin-left:5%;">Date: {{datefull.datefull}}</h2>
 
 
+      <table border="1" align="center" bordercolor=black bgcolor="black">
 
 
-       <table border="1" align="center" bordercolor=black bgcolor="black">
+        <tr height="50" class="greentable">
+          <th colspan="20">Booking Meeting Room</th>
+        </tr>
 
 
-         <tr height="50" class="greentable">
-           <th colspan ="20">Booking Meeting Room</th>
-         </tr>
+        <tr class="yellowtable">
+          <th rowspan="2" height="50"> Meeting Room</th>
+          <th colspan="19">Time</th>
+        </tr>
+
+        <tr class="yellowtable">
+          <th>08.00</th>
+          <th>08.30</th>
+          <th>09.00</th>
+          <th>09.30</th>
+          <th>10.00</th>
+          <th>10.30</th>
+          <th>11.00</th>
+          <th>11.30</th>
+          <th>12.00</th>
+          <th>12.30</th>
+          <th>13.00</th>
+          <th>13.30</th>
+          <th>14.00</th>
+          <th>14.30</th>
+          <th>15.00</th>
+          <th>15.30</th>
+          <th>16.00</th>
+          <th>16.30</th>
+          <th>17.00</th>
+        </tr>
 
 
-         <tr class="yellowtable">
-           <th rowspan="2" height="50"> Meeting Room</th><th colspan="19">Time</th>
-         </tr>
-
-         <tr class="yellowtable">
-           <td>08.00 น</td><td>08.30 น</td><td>09.00 น</td><td>09.30 น</td><td>10.00 น</td><td>10.30 น</td><td>11.00 น</td><td>11.30 น</td>
-           <td>12.00 น</td><td>12.30 น</td><td>13.00 น</td><td>13.30 น</td><td>14.00 น</td><td>14.30 น</td><td>15.00 น</td><td>15.30 น</td><td>16.00 น</td>
-           <td>16.30 น</td><td>17.00 น</td>
-         </tr>
-
-
-         <tr height="70" class="whitetable">
-           <th>
-             Office TSP Second Floor 2
-           </th>
-           <td *ngFor="let time of timeofweekOTSF2" [attr.colspan]="time.id" [attr.bgcolor] = "time.color" (click)="time.checkReservations ? Reserved(time.roomname,time.time) : selectTable(time.roomname,time.time)">
-              <div *ngIf="time.showlabel">
-                    <font color="white">
-                    Booking by: {{time.byname}}<br>
-                    Attendees: {{time.atten}}<br>
-                      Topic: {{time.topic}}<br>
-                      <div *ngIf="time.showremark">
-                        Remark: {{time.remark}}
-                      </div>
-                    </font>
-              </div>
-           </td>
-         </tr>
+        <tr height="70" class="whitetable">
+          <th>
+            Office TSP Second Floor 2
+          </th>
+          <td *ngFor="let time of timeofweekOTSF2" [attr.colspan]="time.id" [attr.bgcolor]="time.color"
+              (click)="time.checkReservations ? Reserved(time.roomname,time.time) : selectTable(time.roomname,time.time)">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
 
 
-         <tr height="70" class="whitetable">
-           <th>
-             Room1 WH7 Second Floor 2
-           </th>
-           <td *ngFor="let time of timeofweekR1WH7F2" [attr.colspan]="time.id" [attr.bgcolor] = "time.color" (click)="time.checkReservations ? Reserved(time.roomname,time.time) : selectTable(time.roomname,time.time)">
-             <div *ngIf="time.showlabel">
-               <font color="white">
-                 Booking by: {{time.byname}}<br>
-                 Attendees: {{time.atten}}<br>
-                 Topic: {{time.topic}}<br>
-                 <div *ngIf="time.showremark">
-                   Remark: {{time.remark}}
-                 </div>
-               </font>
-             </div>
-           </td>
-         </tr>
+        <tr height="70" class="whitetable">
+          <th>
+            Room1 WH7 Second Floor 2
+          </th>
+          <td *ngFor="let time of timeofweekR1WH7F2" [attr.colspan]="time.id" [attr.bgcolor]="time.color"
+              (click)="time.checkReservations ? Reserved(time.roomname,time.time) : selectTable(time.roomname,time.time)">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
 
-         <tr height="70" class="whitetable">
-           <th>
-             Room2 WH7 Second Floor 2
-           </th>
-           <td *ngFor="let time of timeofweekR2WH7F2" [attr.colspan]="time.id" [attr.bgcolor] = "time.color" (click)="time.checkReservations ? Reserved(time.roomname,time.time) : selectTable(time.roomname,time.time)">
-             <div *ngIf="time.showlabel">
-               <font color="white">
-                 Booking by: {{time.byname}}<br>
-                 Attendees: {{time.atten}}<br>
-                 Topic: {{time.topic}}<br>
-                 <div *ngIf="time.showremark">
-                   Remark: {{time.remark}}
-                 </div>
-               </font>
-             </div>
-           </td>
-         </tr>
+        <tr height="70" class="whitetable">
+          <th>
+            Room2 WH7 Second Floor 2
+          </th>
+          <td *ngFor="let time of timeofweekR2WH7F2" [attr.colspan]="time.id" [attr.bgcolor]="time.color"
+              (click)="time.checkReservations ? Reserved(time.roomname,time.time) : selectTable(time.roomname,time.time)">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
 
-         <tr height="70" class="whitetable">
-           <th>
-             WH2 Second Floor 2
-           </th>
-           <td *ngFor="let time of timeofweekWH2F2" [attr.colspan]="time.id" [attr.bgcolor] = "time.color" (click)="time.checkReservations ? Reserved(time.roomname,time.time) : selectTable(time.roomname,time.time)">
-             <div *ngIf="time.showlabel">
-               <font color="white">
-                 Booking by: {{time.byname}}<br>
-                 Attendees: {{time.atten}}<br>
-                 Topic: {{time.topic}}<br>
-                 <div *ngIf="time.showremark">
-                   Remark: {{time.remark}}
-                 </div>
-               </font>
-             </div>
-           </td>
-         </tr>
-
-
-       </table>
-
-
-     </div>
-
-   </div>
-
- </div>
-
- </body>
+        <tr height="70" class="whitetable">
+          <th>
+            WH2 Second Floor 2
+          </th>
+          <td *ngFor="let time of timeofweekWH2F2" [attr.colspan]="time.id" [attr.bgcolor]="time.color"
+              (click)="time.checkReservations ? Reserved(time.roomname,time.time) : selectTable(time.roomname,time.time)">
+            <div *ngIf="time.showlabel">
+              <font color="white">
+                Booking by: {{time.byname}}<br>
+                Attendees: {{time.atten}}<br>
+                Topic: {{time.topic}}<br>
+                <div *ngIf="time.showremark">
+                  Remark: {{time.remark}}
+                </div>
+              </font>
+            </div>
+          </td>
+        </tr>
 
 
- </html>
+      </table>
 
 
+    </div>
+
+  </div>
+
+</div>
+
+</body>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</html>
 
 
 <!-- <tr height="70" class="whitetable"><td>Office TSP Second Floor 2</td><td (click)="selectTable('Office TSP Second Floor 2','08.00');"></td>

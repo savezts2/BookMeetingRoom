@@ -1,12 +1,9 @@
 package com.example.demo.Controller;
 
 
-
 import com.example.demo.entity.Users;
 import com.example.demo.repository.UsersRepository;
-import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

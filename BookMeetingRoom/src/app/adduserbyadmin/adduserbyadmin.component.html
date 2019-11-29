@@ -7,29 +7,39 @@
       <h4>BookMeetingRoom</h4>
     </div>
 
-    <div *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)" >
-      <button mat-button class="sidebar-menu" routerLink="/selectDate">SelectRoom & Time</button><br>
+    <div *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)">
+      <button mat-button class="sidebar-menu" routerLink="/selectDate">SelectRoom & Time</button>
+      <br>
     </div>
-    <div  *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)">
-      <button mat-button class="sidebar-menu" routerLink="/dashboard">Dashboard</button><br>
+    <div *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)">
+      <button mat-button class="sidebar-menu" routerLink="/dashboard">Dashboard</button>
+      <br>
     </div>
 
-    <div  *ngIf="(isLoggedInAdmin | async)">
-      <button mat-button class="sidebar-menu" routerLink="/adduserbyadmin">AddUser</button><br>
+    <div *ngIf="(isLoggedInAdmin | async)">
+      <button mat-button class="sidebar-menu" routerLink="/adduserbyadmin">AddUser</button>
+      <br>
     </div>
-    <div  *ngIf="(isLoggedInAdmin | async)">
-      <button mat-button class="sidebar-menu" routerLink="/canceluser">CancelUser</button><br>
+    <div *ngIf="(isLoggedInAdmin | async)">
+      <button mat-button class="sidebar-menu" routerLink="/canceluser">CancelUser</button>
+      <br>
     </div>
     <div class="sidebar-emp">
 
     </div>
   </nav>
 
-  <div class="card-header" >
+  <div class="card-header">
     <div>
 
-      <button mat-raised-button class="botton-login" *ngIf="!(isLoggedIn | async) && !(isLoggedInAdmin | async) && !(isLoggedInHR | async)" (click)="authService.callDialog()">Login</button>
-      <button mat-raised-button class="botton-login" *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)" (click)="authService.logout()">LogOut</button>
+      <button mat-raised-button class="botton-login"
+              *ngIf="!(isLoggedIn | async) && !(isLoggedInAdmin | async) && !(isLoggedInHR | async)"
+              (click)="authService.callDialog()">Login
+      </button>
+      <button mat-raised-button class="botton-login"
+              *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)"
+              (click)="authService.logout()">LogOut
+      </button>
 
     </div>
 
@@ -44,43 +54,43 @@
       <h1 style="color:#6d7fcc; margin-left: 130px;">Add User By Admin</h1>
 
       <div align="center">
-      <mat-form-field>
-        <input matInput placeholder="Firstname" [(ngModel)]="username" (keydown.enter)="submit()">
-      </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Firstname" [(ngModel)]="username" (keydown.enter)="submit()">
+        </mat-form-field>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <mat-form-field>
-        <input matInput placeholder="Lastname" [(ngModel)]="lastname" (keydown.enter)="submit()">
-      </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Lastname" [(ngModel)]="lastname" (keydown.enter)="submit()">
+        </mat-form-field>
       </div>
       <br/>
       <div align="center">
         <mat-form-field>
           <mat-select placeholder="Department" [(ngModel)]="department">
-            <mat-option value="Account Executive" >Account Executive</mat-option>
-            <mat-option value="Analyst" >Analyst</mat-option>
-            <mat-option value="Business Development" >Business Development</mat-option>
-            <mat-option value="Human Resource" >Human Resource</mat-option>
-            <mat-option value="Inventory Management Control" >Inventory Management Control</mat-option>
-            <mat-option value="Information Technology" >Information Technology</mat-option>
-            <mat-option value="Operation" >Operation</mat-option>
-            <mat-option value="Safety" >Safety</mat-option>
-            <mat-option value="Trainee" >Trainee</mat-option>
-            <mat-option value="Transport" >Transport</mat-option>
+            <mat-option value="Account Executive">Account Executive</mat-option>
+            <mat-option value="Analyst">Analyst</mat-option>
+            <mat-option value="Business Development">Business Development</mat-option>
+            <mat-option value="Human Resource">Human Resource</mat-option>
+            <mat-option value="Inventory Management Control">Inventory Management Control</mat-option>
+            <mat-option value="Information Technology">Information Technology</mat-option>
+            <mat-option value="Operation">Operation</mat-option>
+            <mat-option value="Safety">Safety</mat-option>
+            <mat-option value="Trainee">Trainee</mat-option>
+            <mat-option value="Transport">Transport</mat-option>
           </mat-select>
         </mat-form-field>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <mat-form-field>
           <mat-select placeholder="Position" [(ngModel)]="position">
-            <mat-option value="Admin-AccountExcutive" >Admin-AccountExcutive</mat-option>
-            <mat-option value="Admin-HumanResource" >Admin-HumanResource</mat-option>
-            <mat-option value="Admin-InventoryManagementControl" >Admin-InventoryManagementControl</mat-option>
-            <mat-option value="Admin-Transport" >Admin-Transport</mat-option>
-            <mat-option value="DC-Manager" >DC-Manager</mat-option>
-            <mat-option value="Manager" >Manager</mat-option>
-            <mat-option value="Safety" >Safety</mat-option>
-            <mat-option value="Supervisor" >Supervisor</mat-option>
-            <mat-option value="Support" >Support</mat-option>
-            <mat-option value="Trainee" >Trainee</mat-option>
+            <mat-option value="Admin-AccountExcutive">Admin-AccountExcutive</mat-option>
+            <mat-option value="Admin-HumanResource">Admin-HumanResource</mat-option>
+            <mat-option value="Admin-InventoryManagementControl">Admin-InventoryManagementControl</mat-option>
+            <mat-option value="Admin-Transport">Admin-Transport</mat-option>
+            <mat-option value="DC-Manager">DC-Manager</mat-option>
+            <mat-option value="Manager">Manager</mat-option>
+            <mat-option value="Safety">Safety</mat-option>
+            <mat-option value="Supervisor">Supervisor</mat-option>
+            <mat-option value="Support">Support</mat-option>
+            <mat-option value="Trainee">Trainee</mat-option>
           </mat-select>
         </mat-form-field>
       </div>
@@ -93,17 +103,19 @@
         </mat-form-field>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <mat-form-field>
-          <input matInput placeholder="Enter your password" [type]="hide ? 'text' : 'password'" [(ngModel)]="password" (keydown.enter)="submit()">
-          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <input matInput placeholder="Enter your password" [type]="hide ? 'text' : 'password'" [(ngModel)]="password"
+                 (keydown.enter)="submit()">
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                  [attr.aria-pressed]="hide">
             <mat-icon>{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
           </button>
         </mat-form-field>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <mat-form-field>
           <mat-select placeholder="Status" [(ngModel)]="status">
-            <mat-option value="admin" >Admin</mat-option>
-            <mat-option value="hr" >HR</mat-option>
-            <mat-option value="user" >User</mat-option>
+            <mat-option value="admin">Admin</mat-option>
+            <mat-option value="hr">HR</mat-option>
+            <mat-option value="user">User</mat-option>
           </mat-select>
         </mat-form-field>
 

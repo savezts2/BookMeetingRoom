@@ -8,15 +8,10 @@ import com.example.demo.repository.BookMeetingRoomRepository;
 import com.example.demo.repository.ReportRepository;
 import com.example.demo.repository.UsersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.util.Collection;
 import java.util.Date;
-import java.util.stream.Collectors;
 
 
 @RestController
@@ -117,7 +112,7 @@ public class BookMeetingRoomController {
                 length = 3 ;
             }else if(fromback.equals("00") && toback.equals("30")){
                 length = 4 ;
-            }else if(fromback.equals("30") && toback.equals("0")){
+            }else if(fromback.equals("30") && toback.equals("00")){
                 length = 2;
             }else{
                 length = 3;
@@ -127,7 +122,7 @@ public class BookMeetingRoomController {
                 length = 5 ;
             }else if(fromback.equals("00") && toback.equals("30")){
                 length = 6 ;
-            }else if(fromback.equals("30") && toback.equals("0")){
+            }else if(fromback.equals("30") && toback.equals("00")){
                 length = 4;
             }else{
                 length = 5;
@@ -221,7 +216,7 @@ public class BookMeetingRoomController {
                 length = 5 ;
             }else if(fromback.equals("00") && toback.equals("30")){
                 length = 6 ;
-            }else if(fromback.equals("30") && toback.equals("0")){
+            }else if(fromback.equals("30") && toback.equals("00")){
                 length = 4;
             }else{
                 length = 5;
@@ -305,7 +300,7 @@ public class BookMeetingRoomController {
                 length = 5 ;
             }else if(fromback.equals("00") && toback.equals("30")){
                 length = 6 ;
-            }else if(fromback.equals("30") && toback.equals("0")){
+            }else if(fromback.equals("30") && toback.equals("00")){
                 length = 4;
             }else{
                 length = 5;
@@ -379,7 +374,7 @@ public class BookMeetingRoomController {
                 length = 5 ;
             }else if(fromback.equals("00") && toback.equals("30")){
                 length = 6 ;
-            }else if(fromback.equals("30") && toback.equals("0")){
+            }else if(fromback.equals("30") && toback.equals("00")){
                 length = 4;
             }else{
                 length = 5;
@@ -443,7 +438,7 @@ public class BookMeetingRoomController {
                 length = 5 ;
             }else if(fromback.equals("00") && toback.equals("30")){
                 length = 6 ;
-            }else if(fromback.equals("30") && toback.equals("0")){
+            }else if(fromback.equals("30") && toback.equals("00")){
                 length = 4;
             }else{
                 length = 5;
@@ -497,7 +492,7 @@ public class BookMeetingRoomController {
                 length = 5 ;
             }else if(fromback.equals("00") && toback.equals("30")){
                 length = 6 ;
-            }else if(fromback.equals("30") && toback.equals("0")){
+            }else if(fromback.equals("30") && toback.equals("00")){
                 length = 4;
             }else{
                 length = 5;
@@ -541,7 +536,7 @@ public class BookMeetingRoomController {
                 length = 5 ;
             }else if(fromback.equals("00") && toback.equals("30")){
                 length = 6 ;
-            }else if(fromback.equals("30") && toback.equals("0")){
+            }else if(fromback.equals("30") && toback.equals("00")){
                 length = 4;
             }else{
                 length = 5;

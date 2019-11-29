@@ -7,35 +7,45 @@
       <h4>BookMeetingRoom</h4>
     </div>
 
-    <div *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)" >
-      <button mat-button class="sidebar-menu" routerLink="/selectDate">SelectRoom & Time</button><br>
+    <div *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)">
+      <button mat-button class="sidebar-menu" routerLink="/selectDate">SelectRoom & Time</button>
+      <br>
     </div>
-    <div  *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)">
-      <button mat-button class="sidebar-menu" routerLink="/dashboard">Dashboard</button><br>
+    <div *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)">
+      <button mat-button class="sidebar-menu" routerLink="/dashboard">Dashboard</button>
+      <br>
     </div>
 
-    <div  *ngIf="(isLoggedInAdmin | async)">
-      <button mat-button class="sidebar-menu" routerLink="/adduserbyadmin">AddUser</button><br>
+    <div *ngIf="(isLoggedInAdmin | async)">
+      <button mat-button class="sidebar-menu" routerLink="/adduserbyadmin">AddUser</button>
+      <br>
     </div>
-    <div  *ngIf="(isLoggedInAdmin | async)">
-      <button mat-button class="sidebar-menu" routerLink="/canceluser">CancelUser</button><br>
+    <div *ngIf="(isLoggedInAdmin | async)">
+      <button mat-button class="sidebar-menu" routerLink="/canceluser">CancelUser</button>
+      <br>
     </div>
     <div class="sidebar-emp">
 
     </div>
   </nav>
 
-  <div class="card-header" >
+  <div class="card-header">
     <div>
 
-    <button mat-raised-button class="botton-login" *ngIf="!(isLoggedIn | async) && !(isLoggedInAdmin | async) && !(isLoggedInHR | async)" (click)="authService.callDialog()">Login</button>
-    <button mat-raised-button class="botton-login" *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)" (click)="authService.logout()">LogOut</button>
+      <button mat-raised-button class="botton-login"
+              *ngIf="!(isLoggedIn | async) && !(isLoggedInAdmin | async) && !(isLoggedInHR | async)"
+              (click)="authService.callDialog()">Login
+      </button>
+      <button mat-raised-button class="botton-login"
+              *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)"
+              (click)="authService.logout()">LogOut
+      </button>
 
     </div>
 
     <div class="form-data" *ngIf="!(isLoggedIn | async) && !(isLoggedInAdmin | async) && !(isLoggedInHR | async)">
       <br/><br/><br/><br/>
-        <h1 style="color:#6d7fcc;">Please Login !</h1>
+      <h1 style="color:#6d7fcc;">Please Login !</h1>
     </div>
 
     <br/><br/>
@@ -47,28 +57,27 @@
       <br/>
 
       <mat-form-field class="datepick">
-        <input matInput [matDatepickerFilter]="myFilter" [min]="today" [matDatepicker]="picker" placeholder="DD/MM/yyyy" [formControl]="serializedDate">
+        <input matInput [matDatepickerFilter]="myFilter" [min]="today" [matDatepicker]="picker" placeholder="DD/MM/yyyy"
+               [formControl]="serializedDate">
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
       &nbsp;&nbsp;
-      <button mat-raised-button color="primary" (click) = "clicksearch()">Search</button>
+      <button mat-raised-button color="primary" (click)="clicksearch()">Search</button>
 
 
       <br/><br/>
 
 
+    </div>
 
-     </div>
+  </div>
 
-   </div>
-
- </div>
-
+</div>
 
 
- </body>
+</body>
 
 
- </html>
+</html>
 

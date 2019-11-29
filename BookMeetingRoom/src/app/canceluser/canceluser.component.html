@@ -7,29 +7,39 @@
       <h4>BookMeetingRoom</h4>
     </div>
 
-    <div *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)" >
-      <button mat-button class="sidebar-menu" routerLink="/selectDate">SelectRoom & Time</button><br>
+    <div *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)">
+      <button mat-button class="sidebar-menu" routerLink="/selectDate">SelectRoom & Time</button>
+      <br>
     </div>
-    <div  *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)">
-      <button mat-button class="sidebar-menu" routerLink="/dashboard">Dashboard</button><br>
+    <div *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)">
+      <button mat-button class="sidebar-menu" routerLink="/dashboard">Dashboard</button>
+      <br>
     </div>
 
-    <div  *ngIf="(isLoggedInAdmin | async)">
-      <button mat-button class="sidebar-menu" routerLink="/adduserbyadmin">AddUser</button><br>
+    <div *ngIf="(isLoggedInAdmin | async)">
+      <button mat-button class="sidebar-menu" routerLink="/adduserbyadmin">AddUser</button>
+      <br>
     </div>
-    <div  *ngIf="(isLoggedInAdmin | async)">
-      <button mat-button class="sidebar-menu" routerLink="/canceluser">CancelUser</button><br>
+    <div *ngIf="(isLoggedInAdmin | async)">
+      <button mat-button class="sidebar-menu" routerLink="/canceluser">CancelUser</button>
+      <br>
     </div>
     <div class="sidebar-emp">
 
     </div>
   </nav>
 
-  <div class="card-header" >
+  <div class="card-header">
     <div>
 
-      <button mat-raised-button class="botton-login" *ngIf="!(isLoggedIn | async) && !(isLoggedInAdmin | async) && !(isLoggedInHR | async)" (click)="authService.callDialog()">Login</button>
-      <button mat-raised-button class="botton-login" *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)" (click)="authService.logout()">LogOut</button>
+      <button mat-raised-button class="botton-login"
+              *ngIf="!(isLoggedIn | async) && !(isLoggedInAdmin | async) && !(isLoggedInHR | async)"
+              (click)="authService.callDialog()">Login
+      </button>
+      <button mat-raised-button class="botton-login"
+              *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)"
+              (click)="authService.logout()">LogOut
+      </button>
 
     </div>
 
@@ -46,60 +56,67 @@
 
       <div align="center">
 
-      <mat-form-field>
-        <input matInput placeholder="Userid" [(ngModel)]="userid" (keydown.enter)="search()">
-      </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Userid" [(ngModel)]="userid" (keydown.enter)="search()">
+        </mat-form-field>
         &nbsp;&nbsp;&nbsp;&nbsp;
         <button mat-raised-button color="primary" (click)="search()">Search</button>
       </div>
 
 
-     <table border="1" bgcolor="black" align="center">
-       <tr class="greentable">
-         <th>User_id</th><th>Firstname</th><th>Lastname</th><th>Username</th><th>Department</th><th>Position</th><th>Status</th><th>IsActive</th>
-       </tr>
-       <tr class="whitetable">
-        <td>
-          {{user_id}}
-        </td>
-         <td>
-           {{username}}
-         </td>
-         <td>
-           {{lastname}}
-         </td>
-         <td>
-           {{useridbase}}
-         </td>
-         <td>
-           {{department}}
-         </td>
-         <td>
-           {{position}}
-         </td>
-         <td>
-           {{status}}
-         </td>
-         <td>
-           {{isactive}}
-         </td>
-       </tr>
-     </table>
+      <table border="1" bgcolor="black" align="center">
+        <tr class="greentable">
+          <th>User_id</th>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Username</th>
+          <th>Department</th>
+          <th>Position</th>
+          <th>Status</th>
+          <th>IsActive</th>
+        </tr>
+        <tr class="whitetable">
+          <td>
+            {{user_id}}
+          </td>
+          <td>
+            {{username}}
+          </td>
+          <td>
+            {{lastname}}
+          </td>
+          <td>
+            {{useridbase}}
+          </td>
+          <td>
+            {{department}}
+          </td>
+          <td>
+            {{position}}
+          </td>
+          <td>
+            {{status}}
+          </td>
+          <td>
+            {{isactive}}
+          </td>
+        </tr>
+      </table>
       <br/><br/>
 
-        <div align="center">
+      <div align="center">
 
-      <mat-radio-group [(ngModel)]="func">
-        <mat-radio-button value="IsActive">Active</mat-radio-button>&nbsp;&nbsp;&nbsp;&nbsp;
-        <mat-radio-button value="Don't Active">UnActive</mat-radio-button>
-      </mat-radio-group>
+        <mat-radio-group [(ngModel)]="func">
+          <mat-radio-button value="IsActive">Active</mat-radio-button>&nbsp;&nbsp;&nbsp;&nbsp;
+          <mat-radio-button value="Don't Active">UnActive</mat-radio-button>
+        </mat-radio-group>
 
-        </div>
+      </div>
 
       <br/><br/>
       <div align="center">
-      <button mat-raised-button color="primary" (click)="submit()">Submit</button>&nbsp;&nbsp;
-      <button mat-raised-button color="primary" (click)="reset()">reset</button>
+        <button mat-raised-button color="primary" (click)="submit()">Submit</button>&nbsp;&nbsp;
+        <button mat-raised-button color="primary" (click)="reset()">reset</button>
 
       </div>
     </div>
