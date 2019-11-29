@@ -114,6 +114,7 @@ isLoggedInHR() : Observable<boolean> {
     });
   }
 
+
   /**
    * Log out the user then tell all the subscribers about the new status
    */
@@ -150,10 +151,9 @@ private hasTokenIdHR() : boolean {
   }
 
 
+  constructor(public dialog: MatDialog , private service : ServiceService, private router: Router) {
 
-
-
-  constructor(public dialog: MatDialog , private service : ServiceService, private router: Router) { }
+  }
 }
 
 
@@ -170,7 +170,10 @@ private hasTokenIdHR() : boolean {
     id : String = null;
     password : String = null ;
     constructor(
-      public dialogRef: MatDialogRef<DialogOverviewExampleDialog> , public authService : AuthService){}
+      public dialogRef: MatDialogRef<DialogOverviewExampleDialog> , public authService : AuthService){
+          dialogRef.disableClose = true;
+
+      }
 
     onNoClick(): void {
       this.dialogRef.close();

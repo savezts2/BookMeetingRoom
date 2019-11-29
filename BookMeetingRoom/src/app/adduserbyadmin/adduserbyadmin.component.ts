@@ -25,8 +25,8 @@ userid : String = null;
 password : String = null;
 status : String = null;
 hide : boolean;
-//public API = '//localhost:8080/BookMeetingRoom';   //for test
-public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
+public API = '//localhost:8080/';   //for test
+//public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
 
 constructor( public authService : AuthService,private router: Router , private service : ServiceService, private http: HttpClient) {
     this.isLoggedIn = authService.isLoggedIn();
