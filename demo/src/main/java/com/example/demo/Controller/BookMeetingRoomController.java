@@ -78,7 +78,7 @@ public class BookMeetingRoomController {
         String[] dateSplit;
         dateSplit = date.split("-");
         int yearSplit = Integer.valueOf(dateSplit[2]) + 543 ;
-        String fullPatternyear = dateSplit[0] + '-' + dateSplit[1] + '-' + dateSplit[2];
+        String fullPatternyear = dateSplit[0] + '-' + dateSplit[1] + '-' + String.valueOf(yearSplit);//dateSplit[2];
         Date date2=formatter2.parse(fullPatternyear);
         report.setDateBook(date2);
         report.setIsActive("1");
