@@ -1,15 +1,21 @@
 <html>
 <body>
 <br/>
-<h2 align="center" style="color:#6d7fcc;">Login BookMeetingRoom</h2>
+<h2 align="center" style=" color:black;">Login <i class="material-icons" style="color:green;">
+  verified_user
+</i></h2>
 <div style="margin-left:20%;">
   <label>ID :
     <mat-form-field>
 
-      <input matInput [(ngModel)]="id">
+      <input matInput [(ngModel)]="id" >
+
+
 
     </mat-form-field>
+
   </label>
+
 </div>
 
 <div style="margin-left:5%;">
@@ -20,9 +26,11 @@
 
     </mat-form-field>
   </label>
+
 </div>
 
 <div align="center">
+
   <button mat-raised-button color="primary" (click)="login()">Login</button>&nbsp;&nbsp;&nbsp;<button mat-raised-button
                                                                                                       color="primary"
                                                                                                       (click)="onNoClick()">
