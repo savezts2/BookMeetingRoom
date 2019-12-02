@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,ViewChild} from '@angular/core';
 import { BehaviorSubject } from 'rxjs/Rx';
 import { AuthService } from '../auth.service';
 import { Observable } from "rxjs";
@@ -6,26 +6,23 @@ import {ActivatedRoute} from "@angular/router";
 import { ServiceService } from '../Service/service.service';
 import { HttpClient} from '@angular/common/http';
 import { Router } from '@angular/router';
-
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {MatSidenav} from '@angular/material/sidenav';
 @Component({
   selector: 'app-data-form',
   templateUrl: './data-form.component.html',
   styleUrls: ['./data-form.component.css']
 })
 export class DataFormComponent implements OnInit {
-
+@ViewChild('sidenav', {static: false}) sidenav: MatSidenav;
 isLoggedIn : Observable<boolean>;
 isLoggedInAdmin : Observable<boolean>;
 isLoggedInHR : Observable<boolean>;
 
 
 roomnameandtime:any={}
-fromtimeSelect : '';
-totime : null ;
-tel : String = null;
-topic : null;
-atten : null;
-remark: null;
+fromtimeSelect: null;
+
 roomname: '' ;
 date: '';
 userid3: String;
@@ -36,16 +33,21 @@ fromtimesplited : Array<any>;
 totimesplited : Array<any>;
 countTime : number;
 spiner : boolean = false;
-public API = '//localhost:8080/';  //for test
+public API = '//localhost:8080';  //for test
 //public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
+firstFormGroup: FormGroup;
+secondFormGroup: FormGroup;
+
 
 
 constructor(public authService : AuthService, private route:ActivatedRoute, private service : ServiceService,private http: HttpClient,
-private router: Router) {
+private router: Router,private _formBuilder: FormBuilder) {
     this.isLoggedIn = authService.isLoggedIn();
     this.isLoggedInAdmin = authService.isLoggedInAdmin();
     this.isLoggedInHR = authService.isLoggedInHR();
   }
+
+
 
   ngOnInit() {
 
@@ -62,38 +64,35 @@ private router: Router) {
     //console.log(data);
     this.appendTime();
     })
+
+    this.firstFormGroup = this._formBuilder.group({
+      totime: [null, Validators.required]
+    });
+
+     this.secondFormGroup = this._formBuilder.group({
+      tel: [null, Validators.required],
+      topic: [null, Validators.required],
+      atten: [null, Validators.required],
+      remark: null
+    });
   }
 
+close() {
+    this.sidenav.close();
+  }
+
+
 SubmitData(){
-    //console.log(localStorage.getItem('userid'));
-    //console.log(this.userid3);
-    //console.log(this.fromtimeSelect);
-    //console.log(this.totime);
-    //console.log(this.tel);
-    //console.log(this.topic);
-    //console.log(this.atten);
-    //console.log(this.remark);
-      if(this.totime == null){
-        alert("Please Check field To time");
-      }
-      else if(this.tel == null){
-        alert("Please Check field Tel. Booking By");
-      }
-      else if(this.topic == null){
-        alert("Please Check field Topic");
-      }
-      else if(this.atten == null){
-        alert("Please Check field Attendees");
-      }
-      else if(this.checkReserved(this.fromtimeSelect,this.totime,this.roomname)){
-        alert("มีคนจองช่วงเวลานี้แล้ว");
-        this.totime = null ;
-      }
-     else{
+
       this.spiner = true;
 
-     this.http.post(this.API + '/'+this.userid3 +'/' + this.fromtimeSelect +'/' + this.totime + '/0' + this.tel
-     + '/' + this.topic+ '/' + this.atten+ '/' + this.remark+ '/' + this.roomname+ '/' + this.date,{})
+      if(this.checkReserved (this.fromtimeSelect , this.firstFormGroup.get('totime').value , this.roomname)){
+          alert("Cannot book this time period");
+          window.location.reload(true);
+      }else{
+
+     this.http.post(this.API + '/'+this.userid3 +'/' + this.fromtimeSelect +'/' + this.firstFormGroup.get('totime').value +'/'+ this.secondFormGroup.get('tel').value
+     + '/' + this.secondFormGroup.get('topic').value+ '/' + this.secondFormGroup.get('atten').value+ '/' + this.secondFormGroup.get('remark').value+ '/' + this.roomname+ '/' + this.date,{})
                              .subscribe(
                                data => {
                                    console.log('PUT Request is successful');
@@ -115,7 +114,7 @@ checkReserved (fromtime: String , totime: String , roomname:String){
     this.totimesplited = totime.split(".");
 
     this.countTime = this.convertlengthTime(this.fromtimesplited[0],this.fromtimesplited[1],this.totimesplited[0],this.totimesplited[1]);
-    if(roomname == "Office TSP Second Floor 2"){
+    if(roomname == "Meeting Room1(TSP)"){
       for(let i = 0 ; i < this.timeofweekOTSF2.length ; i++){
         if(this.timeofweekOTSF2[i].time == fromtime){
           if(this.countTime > 1)
@@ -136,7 +135,7 @@ checkReserved (fromtime: String , totime: String , roomname:String){
 
     }
 
-    else if(roomname == "Room1 WH7 Second Floor 2"){
+    else if(roomname == "Meeting Room2(WH7)"){
       for(let i = 0 ; i < this.timeofweekR1WH7F2.length ; i++){
         if(this.timeofweekR1WH7F2[i].time == fromtime){
           if(this.countTime > 1)
@@ -156,7 +155,7 @@ checkReserved (fromtime: String , totime: String , roomname:String){
 
     }
 
-     else if(roomname == "Room2 WH7 Second Floor 2"){
+     else if(roomname == "Meeting Room3(WH7)"){
       for(let i = 0 ; i < this.timeofweekR2WH7F2.length ; i++){
         if(this.timeofweekR2WH7F2[i].time == fromtime){
           if(this.countTime > 1)
@@ -177,7 +176,7 @@ checkReserved (fromtime: String , totime: String , roomname:String){
     }
 
 
-    else if(roomname == "WH2 Second Floor 2"){
+    else if(roomname == "Meeting Room4(WH2)"){
       for(let i = 0 ; i < this.timeofweekWH2F2.length ; i++){
         if(this.timeofweekWH2F2[i].time == fromtime){
           if(this.countTime > 1)
@@ -696,191 +695,183 @@ convertlengthTime(from , fromback , to , toback){
       }
 
 
-reset(){
-    this.totime = null ;
-    this.tel = null;
-    this.topic = null;
-    this.atten = null;
-    this.remark = null;
-}
-
 timeofweekOTSF2 = [
-    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false}
   ];
 
 
 
   timeofweekR1WH7F2 = [
-    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false,
+    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Meeting Room2(WH7)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false,
+    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Meeting Room2(WH7)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false,
+    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Meeting Room2(WH7)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false,
+    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Meeting Room2(WH7)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false,
+    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Meeting Room2(WH7)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false,
+    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Meeting Room2(WH7)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false,
+    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Meeting Room2(WH7)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false,
+    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Meeting Room2(WH7)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false,
+    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Meeting Room2(WH7)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false,
+    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Meeting Room2(WH7)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false,
+    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Meeting Room2(WH7)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false,
+    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Meeting Room2(WH7)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false,
+    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Meeting Room2(WH7)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false,
+    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Meeting Room2(WH7)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false,
+    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Meeting Room2(WH7)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false,
+    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Meeting Room2(WH7)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false,
+    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Meeting Room2(WH7)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false,
+    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Meeting Room2(WH7)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Room1 WH7 Second Floor 2',showlabel:false,
+    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Meeting Room2(WH7)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false}
   ];
 
 
 timeofweekR2WH7F2 = [
-    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false,
+    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Meeting Room3(WH7)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false,
+    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Meeting Room3(WH7)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false,
+    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Meeting Room3(WH7)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false,
+    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Meeting Room3(WH7)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false,
+    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Meeting Room3(WH7)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false,
+    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Meeting Room3(WH7)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false,
+    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Meeting Room3(WH7)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false,
+    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Meeting Room3(WH7)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false,
+    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Meeting Room3(WH7)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false,
+    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Meeting Room3(WH7)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false,
+    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Meeting Room3(WH7)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false,
+    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Meeting Room3(WH7)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false,
+    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Meeting Room3(WH7)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false,
+    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Meeting Room3(WH7)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false,
+    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Meeting Room3(WH7)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false,
+    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Meeting Room3(WH7)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false,
+    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Meeting Room3(WH7)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false,
+    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Meeting Room3(WH7)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Room2 WH7 Second Floor 2',showlabel:false,
+    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Meeting Room3(WH7)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false}
   ];
 
@@ -889,61 +880,61 @@ timeofweekR2WH7F2 = [
 
 
 timeofweekWH2F2 = [
-    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false,
+    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Meeting Room4(WH2)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false,
+    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Meeting Room4(WH2)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false,
+    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Meeting Room4(WH2)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false,
+    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Meeting Room4(WH2)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false,
+    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Meeting Room4(WH2)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false,
+    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Meeting Room4(WH2)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false,
+    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Meeting Room4(WH2)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false,
+    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Meeting Room4(WH2)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false,
+    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Meeting Room4(WH2)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false,
+    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Meeting Room4(WH2)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false,
+    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Meeting Room4(WH2)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false,
+    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Meeting Room4(WH2)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false,
+    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Meeting Room4(WH2)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false,
+    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Meeting Room4(WH2)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false,
+    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Meeting Room4(WH2)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false,
+    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Meeting Room4(WH2)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false,
+    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Meeting Room4(WH2)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false,
+    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Meeting Room4(WH2)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'WH2 Second Floor 2',showlabel:false,
+    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Meeting Room4(WH2)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false}
   ];
 
@@ -953,8 +944,8 @@ timeofweekWH2F2 = [
  public appendTime(){
     for(let i = 0 ; i < this.report.length ; i++){
       if(this.report[i].isActive == "1"){
-        // Office TSP Second Floor 2
-        if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2'){
+        // Meeting Room1(TSP)
+        if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)'){
           for(let j =0 ; j < this.timeofweekOTSF2.length; j++){
             if(this.timeofweekOTSF2[j].roomid == 0){
               this.timeofweekOTSF2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -978,7 +969,7 @@ timeofweekWH2F2 = [
           }
 
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)'){
           for(let j =0 ; j < this.timeofweekOTSF2.length; j++){
             if(this.timeofweekOTSF2[j].roomid == 1){
               this.timeofweekOTSF2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -1001,7 +992,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)'){
           for(let j =0 ; j < this.timeofweekOTSF2.length; j++){
             if(this.timeofweekOTSF2[j].roomid == 2){
               this.timeofweekOTSF2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -1024,7 +1015,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)'){
           for(let j =0 ; j < this.timeofweekOTSF2.length; j++){
             if(this.timeofweekOTSF2[j].roomid == 3){
               this.timeofweekOTSF2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -1047,7 +1038,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)'){
           for(let j =0 ; j < this.timeofweekOTSF2.length; j++){
             if(this.timeofweekOTSF2[j].roomid == 4){
               this.timeofweekOTSF2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -1070,7 +1061,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)'){
           for(let j =0 ; j < this.timeofweekOTSF2.length; j++){
             if(this.timeofweekOTSF2[j].roomid == 5){
               this.timeofweekOTSF2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -1093,7 +1084,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)'){
           for(let j =0 ; j < this.timeofweekOTSF2.length; j++){
             if(this.timeofweekOTSF2[j].roomid == 6){
               this.timeofweekOTSF2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -1116,7 +1107,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)'){
           for(let j =0 ; j < this.timeofweekOTSF2.length; j++){
             if(this.timeofweekOTSF2[j].roomid == 7){
               this.timeofweekOTSF2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -1139,7 +1130,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)'){
           for(let j =0 ; j < this.timeofweekOTSF2.length; j++){
             if(this.timeofweekOTSF2[j].roomid == 8){
               this.timeofweekOTSF2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -1162,7 +1153,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)'){
           for(let j =0 ; j < this.timeofweekOTSF2.length; j++){
             if(this.timeofweekOTSF2[j].roomid == 9){
               this.timeofweekOTSF2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -1185,7 +1176,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)'){
           for(let j =0 ; j < this.timeofweekOTSF2.length; j++){
             if(this.timeofweekOTSF2[j].roomid == 10){
               this.timeofweekOTSF2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -1208,7 +1199,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)'){
           for(let j =0 ; j < this.timeofweekOTSF2.length; j++){
             if(this.timeofweekOTSF2[j].roomid == 11){
               this.timeofweekOTSF2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -1231,7 +1222,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)'){
           for(let j =0 ; j < this.timeofweekOTSF2.length; j++){
             if(this.timeofweekOTSF2[j].roomid == 12){
               this.timeofweekOTSF2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -1254,7 +1245,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)'){
           for(let j =0 ; j < this.timeofweekOTSF2.length; j++){
             if(this.timeofweekOTSF2[j].roomid == 13){
               this.timeofweekOTSF2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -1277,7 +1268,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)'){
           for(let j =0 ; j < this.timeofweekOTSF2.length; j++){
             if(this.timeofweekOTSF2[j].roomid == 14){
               this.timeofweekOTSF2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -1300,7 +1291,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)'){
           for(let j =0 ; j < this.timeofweekOTSF2.length; j++){
             if(this.timeofweekOTSF2[j].roomid == 15){
               this.timeofweekOTSF2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -1323,7 +1314,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)'){
           for(let j =0 ; j < this.timeofweekOTSF2.length; j++){
             if(this.timeofweekOTSF2[j].roomid == 16){
               this.timeofweekOTSF2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -1346,7 +1337,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)'){
           for(let j =0 ; j < this.timeofweekOTSF2.length; j++){
             if(this.timeofweekOTSF2[j].roomid == 17){
               this.timeofweekOTSF2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -1369,7 +1360,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)'){
           for(let j =0 ; j < this.timeofweekOTSF2.length; j++){
             if(this.timeofweekOTSF2[j].roomid == 18){
               this.timeofweekOTSF2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -1398,7 +1389,7 @@ timeofweekWH2F2 = [
 
 
 
-        else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Room1 WH7 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room2(WH7)'){
           for(let j =0 ; j < this.timeofweekR1WH7F2.length; j++){
             if(this.timeofweekR1WH7F2[j].roomid == 0){
               this.timeofweekR1WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -1422,7 +1413,7 @@ timeofweekWH2F2 = [
           }
 
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Room1 WH7 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room2(WH7)'){
           for(let j =0 ; j < this.timeofweekR1WH7F2.length; j++){
             if(this.timeofweekR1WH7F2[j].roomid == 1){
               this.timeofweekR1WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -1445,7 +1436,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Room1 WH7 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room2(WH7)'){
           for(let j =0 ; j < this.timeofweekR1WH7F2.length; j++){
             if(this.timeofweekR1WH7F2[j].roomid == 2){
               this.timeofweekR1WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -1468,7 +1459,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Room1 WH7 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room2(WH7)'){
           for(let j =0 ; j < this.timeofweekR1WH7F2.length; j++){
             if(this.timeofweekR1WH7F2[j].roomid == 3){
               this.timeofweekR1WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -1491,7 +1482,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Room1 WH7 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room2(WH7)'){
           for(let j =0 ; j < this.timeofweekR1WH7F2.length; j++){
             if(this.timeofweekR1WH7F2[j].roomid == 4){
               this.timeofweekR1WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -1514,7 +1505,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Room1 WH7 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room2(WH7)'){
           for(let j =0 ; j < this.timeofweekR1WH7F2.length; j++){
             if(this.timeofweekR1WH7F2[j].roomid == 5){
               this.timeofweekR1WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -1537,7 +1528,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Room1 WH7 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room2(WH7)'){
           for(let j =0 ; j < this.timeofweekR1WH7F2.length; j++){
             if(this.timeofweekR1WH7F2[j].roomid == 6){
               this.timeofweekR1WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -1560,7 +1551,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Room1 WH7 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room2(WH7)'){
           for(let j =0 ; j < this.timeofweekR1WH7F2.length; j++){
             if(this.timeofweekR1WH7F2[j].roomid == 7){
               this.timeofweekR1WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -1583,7 +1574,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Room1 WH7 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room2(WH7)'){
           for(let j =0 ; j < this.timeofweekR1WH7F2.length; j++){
             if(this.timeofweekR1WH7F2[j].roomid == 8){
               this.timeofweekR1WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -1606,7 +1597,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Room1 WH7 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room2(WH7)'){
           for(let j =0 ; j < this.timeofweekR1WH7F2.length; j++){
             if(this.timeofweekR1WH7F2[j].roomid == 9){
               this.timeofweekR1WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -1629,7 +1620,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Room1 WH7 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room2(WH7)'){
           for(let j =0 ; j < this.timeofweekR1WH7F2.length; j++){
             if(this.timeofweekR1WH7F2[j].roomid == 10){
               this.timeofweekR1WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -1652,7 +1643,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Room1 WH7 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room2(WH7)'){
           for(let j =0 ; j < this.timeofweekR1WH7F2.length; j++){
             if(this.timeofweekR1WH7F2[j].roomid == 11){
               this.timeofweekR1WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -1675,7 +1666,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Room1 WH7 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room2(WH7)'){
           for(let j =0 ; j < this.timeofweekR1WH7F2.length; j++){
             if(this.timeofweekR1WH7F2[j].roomid == 12){
               this.timeofweekR1WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -1698,7 +1689,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Room1 WH7 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room2(WH7)'){
           for(let j =0 ; j < this.timeofweekR1WH7F2.length; j++){
             if(this.timeofweekR1WH7F2[j].roomid == 13){
               this.timeofweekR1WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -1721,7 +1712,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Room1 WH7 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room2(WH7)'){
           for(let j =0 ; j < this.timeofweekR1WH7F2.length; j++){
             if(this.timeofweekR1WH7F2[j].roomid == 14){
               this.timeofweekR1WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -1744,7 +1735,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Room1 WH7 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room2(WH7)'){
           for(let j =0 ; j < this.timeofweekR1WH7F2.length; j++){
             if(this.timeofweekR1WH7F2[j].roomid == 15){
               this.timeofweekR1WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -1767,7 +1758,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Room1 WH7 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room2(WH7)'){
           for(let j =0 ; j < this.timeofweekR1WH7F2.length; j++){
             if(this.timeofweekR1WH7F2[j].roomid == 16){
               this.timeofweekR1WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -1790,7 +1781,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Room1 WH7 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room2(WH7)'){
           for(let j =0 ; j < this.timeofweekR1WH7F2.length; j++){
             if(this.timeofweekR1WH7F2[j].roomid == 17){
               this.timeofweekR1WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -1813,7 +1804,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Room1 WH7 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room2(WH7)'){
           for(let j =0 ; j < this.timeofweekR1WH7F2.length; j++){
             if(this.timeofweekR1WH7F2[j].roomid == 18){
               this.timeofweekR1WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -1841,7 +1832,7 @@ timeofweekWH2F2 = [
 
 
 
-        else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Room2 WH7 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room3(WH7)'){
           for(let j =0 ; j < this.timeofweekR2WH7F2.length; j++){
             if(this.timeofweekR2WH7F2[j].roomid == 0){
               this.timeofweekR2WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -1865,7 +1856,7 @@ timeofweekWH2F2 = [
           }
 
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Room2 WH7 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room3(WH7)'){
           for(let j =0 ; j < this.timeofweekR2WH7F2.length; j++){
             if(this.timeofweekR2WH7F2[j].roomid == 1){
               this.timeofweekR2WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -1888,7 +1879,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Room2 WH7 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room3(WH7)'){
           for(let j =0 ; j < this.timeofweekR2WH7F2.length; j++){
             if(this.timeofweekR2WH7F2[j].roomid == 2){
               this.timeofweekR2WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -1911,7 +1902,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Room2 WH7 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room3(WH7)'){
           for(let j =0 ; j < this.timeofweekR2WH7F2.length; j++){
             if(this.timeofweekR2WH7F2[j].roomid == 3){
               this.timeofweekR2WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -1934,7 +1925,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Room2 WH7 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room3(WH7)'){
           for(let j =0 ; j < this.timeofweekR2WH7F2.length; j++){
             if(this.timeofweekR2WH7F2[j].roomid == 4){
               this.timeofweekR2WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -1957,7 +1948,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Room2 WH7 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room3(WH7)'){
           for(let j =0 ; j < this.timeofweekR2WH7F2.length; j++){
             if(this.timeofweekR2WH7F2[j].roomid == 5){
               this.timeofweekR2WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -1980,7 +1971,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Room2 WH7 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room3(WH7)'){
           for(let j =0 ; j < this.timeofweekR2WH7F2.length; j++){
             if(this.timeofweekR2WH7F2[j].roomid == 6){
               this.timeofweekR2WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -2003,7 +1994,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Room2 WH7 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room3(WH7)'){
           for(let j =0 ; j < this.timeofweekR2WH7F2.length; j++){
             if(this.timeofweekR2WH7F2[j].roomid == 7){
               this.timeofweekR2WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -2026,7 +2017,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Room2 WH7 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room3(WH7)'){
           for(let j =0 ; j < this.timeofweekR2WH7F2.length; j++){
             if(this.timeofweekR2WH7F2[j].roomid == 8){
               this.timeofweekR2WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -2049,7 +2040,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Room2 WH7 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room3(WH7)'){
           for(let j =0 ; j < this.timeofweekR2WH7F2.length; j++){
             if(this.timeofweekR2WH7F2[j].roomid == 9){
               this.timeofweekR2WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -2072,7 +2063,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Room2 WH7 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room3(WH7)'){
           for(let j =0 ; j < this.timeofweekR2WH7F2.length; j++){
             if(this.timeofweekR2WH7F2[j].roomid == 10){
               this.timeofweekR2WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -2095,7 +2086,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Room2 WH7 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room3(WH7)'){
           for(let j =0 ; j < this.timeofweekR2WH7F2.length; j++){
             if(this.timeofweekR2WH7F2[j].roomid == 11){
               this.timeofweekR2WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -2118,7 +2109,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Room2 WH7 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room3(WH7)'){
           for(let j =0 ; j < this.timeofweekR2WH7F2.length; j++){
             if(this.timeofweekR2WH7F2[j].roomid == 12){
               this.timeofweekR2WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -2141,7 +2132,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Room2 WH7 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room3(WH7)'){
           for(let j =0 ; j < this.timeofweekR2WH7F2.length; j++){
             if(this.timeofweekR2WH7F2[j].roomid == 13){
               this.timeofweekR2WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -2164,7 +2155,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Room2 WH7 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room3(WH7)'){
           for(let j =0 ; j < this.timeofweekR2WH7F2.length; j++){
             if(this.timeofweekR2WH7F2[j].roomid == 14){
               this.timeofweekR2WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -2187,7 +2178,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Room2 WH7 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room3(WH7)'){
           for(let j =0 ; j < this.timeofweekR2WH7F2.length; j++){
             if(this.timeofweekR2WH7F2[j].roomid == 15){
               this.timeofweekR2WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -2210,7 +2201,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Room2 WH7 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room3(WH7)'){
           for(let j =0 ; j < this.timeofweekR2WH7F2.length; j++){
             if(this.timeofweekR2WH7F2[j].roomid == 16){
               this.timeofweekR2WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -2233,7 +2224,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Room2 WH7 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room3(WH7)'){
           for(let j =0 ; j < this.timeofweekR2WH7F2.length; j++){
             if(this.timeofweekR2WH7F2[j].roomid == 17){
               this.timeofweekR2WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -2256,7 +2247,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Room2 WH7 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room3(WH7)'){
           for(let j =0 ; j < this.timeofweekR2WH7F2.length; j++){
             if(this.timeofweekR2WH7F2[j].roomid == 18){
               this.timeofweekR2WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -2282,7 +2273,7 @@ timeofweekWH2F2 = [
 
       //WH2F2
 
-        else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room4(WH2)'){
           for(let j =0 ; j < this.timeofweekWH2F2.length; j++){
             if(this.timeofweekWH2F2[j].roomid == 0){
               this.timeofweekWH2F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -2306,7 +2297,7 @@ timeofweekWH2F2 = [
           }
 
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room4(WH2)'){
           for(let j =0 ; j < this.timeofweekWH2F2.length; j++){
             if(this.timeofweekWH2F2[j].roomid == 1){
               this.timeofweekWH2F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -2329,7 +2320,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room4(WH2)'){
           for(let j =0 ; j < this.timeofweekWH2F2.length; j++){
             if(this.timeofweekWH2F2[j].roomid == 2){
               this.timeofweekWH2F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -2352,7 +2343,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room4(WH2)'){
           for(let j =0 ; j < this.timeofweekWH2F2.length; j++){
             if(this.timeofweekWH2F2[j].roomid == 3){
               this.timeofweekWH2F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -2375,7 +2366,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room4(WH2)'){
           for(let j =0 ; j < this.timeofweekWH2F2.length; j++){
             if(this.timeofweekWH2F2[j].roomid == 4){
               this.timeofweekWH2F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -2398,7 +2389,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room4(WH2)'){
           for(let j =0 ; j < this.timeofweekWH2F2.length; j++){
             if(this.timeofweekWH2F2[j].roomid == 5){
               this.timeofweekWH2F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -2421,7 +2412,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room4(WH2)'){
           for(let j =0 ; j < this.timeofweekWH2F2.length; j++){
             if(this.timeofweekWH2F2[j].roomid == 6){
               this.timeofweekWH2F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -2444,7 +2435,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room4(WH2)'){
           for(let j =0 ; j < this.timeofweekWH2F2.length; j++){
             if(this.timeofweekWH2F2[j].roomid == 7){
               this.timeofweekWH2F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -2467,7 +2458,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room4(WH2)'){
           for(let j =0 ; j < this.timeofweekWH2F2.length; j++){
             if(this.timeofweekWH2F2[j].roomid == 8){
               this.timeofweekWH2F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -2490,7 +2481,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room4(WH2)'){
           for(let j =0 ; j < this.timeofweekWH2F2.length; j++){
             if(this.timeofweekWH2F2[j].roomid == 9){
               this.timeofweekWH2F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -2513,7 +2504,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room4(WH2)'){
           for(let j =0 ; j < this.timeofweekWH2F2.length; j++){
             if(this.timeofweekWH2F2[j].roomid == 10){
               this.timeofweekWH2F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -2536,7 +2527,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room4(WH2)'){
           for(let j =0 ; j < this.timeofweekWH2F2.length; j++){
             if(this.timeofweekWH2F2[j].roomid == 11){
               this.timeofweekWH2F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -2559,7 +2550,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room4(WH2)'){
           for(let j =0 ; j < this.timeofweekWH2F2.length; j++){
             if(this.timeofweekWH2F2[j].roomid == 12){
               this.timeofweekWH2F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -2582,7 +2573,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room4(WH2)'){
           for(let j =0 ; j < this.timeofweekWH2F2.length; j++){
             if(this.timeofweekWH2F2[j].roomid == 13){
               this.timeofweekWH2F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -2605,7 +2596,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room4(WH2)'){
           for(let j =0 ; j < this.timeofweekWH2F2.length; j++){
             if(this.timeofweekWH2F2[j].roomid == 14){
               this.timeofweekWH2F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -2628,7 +2619,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room4(WH2)'){
           for(let j =0 ; j < this.timeofweekWH2F2.length; j++){
             if(this.timeofweekWH2F2[j].roomid == 15){
               this.timeofweekWH2F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -2651,7 +2642,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room4(WH2)'){
           for(let j =0 ; j < this.timeofweekWH2F2.length; j++){
             if(this.timeofweekWH2F2[j].roomid == 16){
               this.timeofweekWH2F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -2674,7 +2665,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room4(WH2)'){
           for(let j =0 ; j < this.timeofweekWH2F2.length; j++){
             if(this.timeofweekWH2F2[j].roomid == 17){
               this.timeofweekWH2F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -2697,7 +2688,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-        else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'WH2 Second Floor 2'){
+        else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room4(WH2)'){
           for(let j =0 ; j < this.timeofweekWH2F2.length; j++){
             if(this.timeofweekWH2F2[j].roomid == 18){
               this.timeofweekWH2F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -2720,10 +2711,7 @@ timeofweekWH2F2 = [
             }
           }
         }
-console.log(this.timeofweekOTSF2);
-console.log(this.timeofweekR1WH7F2);
-console.log(this.timeofweekR2WH7F2);
-console.log(this.timeofweekWH2F2);
+
  }
 }
 }

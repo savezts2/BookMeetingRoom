@@ -1,0 +1,7 @@
+.bgimg{
+  background-image:url(src/app/img/ILS-LOGO.jpg);
+    border: thin silver solid;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+
+}

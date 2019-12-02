@@ -1,0 +1,22 @@
+<mat-toolbar class="header">
+  <i class="material-icons" style="color:white;">
+    menu_book
+  </i>
+  &nbsp;&nbsp;&nbsp;
+  <h1><font color="white">Book MeetingRoom</font></h1>
+  <div class="wel" *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)" >
+    <h4>Welcome {{nameuser}}</h4>
+  </div>
+
+  <div class="botton">
+
+    <button mat-raised-button
+            *ngIf="!(isLoggedIn | async) && !(isLoggedInAdmin | async) && !(isLoggedInHR | async)"
+            (click)="authService.callDialog()">Login
+    </button>
+    <button mat-raised-button
+            *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)"
+            (click)="authService.logout()">LogOut
+    </button>
+  </div>
+</mat-toolbar>

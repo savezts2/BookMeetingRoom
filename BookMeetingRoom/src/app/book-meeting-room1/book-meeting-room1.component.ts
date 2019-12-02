@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,ViewChild} from '@angular/core';
 import { BehaviorSubject } from 'rxjs/Rx';
 import { AuthService } from '../auth.service';
 import { Observable } from "rxjs";
@@ -8,6 +8,7 @@ import { AppDateAdapter, APP_DATE_FORMATS} from './date.adapter';
 import { NativeDateAdapter, DateAdapter, MAT_DATE_FORMATS } from "@angular/material";
 import { ServiceService } from '../Service/service.service';
 import {FormControl} from '@angular/forms';
+import {MatSidenav} from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-book-meeting-room1',
@@ -25,7 +26,7 @@ import {FormControl} from '@angular/forms';
 
 
 export class BookMeetingRoom1Component implements OnInit {
-
+    @ViewChild('sidenav', {static: false}) sidenav: MatSidenav;
 
     isLoggedIn : Observable<boolean>;
     isLoggedInAdmin : Observable<boolean>;
@@ -43,11 +44,19 @@ export class BookMeetingRoom1Component implements OnInit {
     nameLogin: String ;
     serializedDate = new FormControl((new Date()).toISOString());
     today=new Date();
+
+
 myFilter = (d: Date): boolean => {
 const day = d.getDay();
 // Prevent Saturday and Sunday from being selected.
 return day !== 0 ;
 }
+
+
+
+close() {
+    this.sidenav.close();
+  }
 
 constructor(public authService : AuthService , private router: Router , private service : ServiceService) {
     this.isLoggedIn = authService.isLoggedIn();

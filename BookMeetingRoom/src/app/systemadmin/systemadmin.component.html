@@ -1,0 +1,125 @@
+
+<body class="bgimg">
+
+
+
+<mat-sidenav-container *ngIf="(isLoggedInAdmin | async)"
+                       class="card" (backdropClick)="close()">
+  <mat-sidenav #sidenav (keydown.escape)="close()">
+    <button mat-button (click)="close()" routerLink="/selectDate" class="botton">Book MeetingRoom</button><br>
+    <button mat-button (click)="close()" routerLink="/dashboard" class="botton">Dashboard</button>
+
+    <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Admin
+          </mat-panel-title>
+
+        </mat-expansion-panel-header>
+
+        <button mat-button (click)="close()" routerLink="/systemadmin" class="botton">System Admin</button>
+
+      </mat-expansion-panel>
+
+    </mat-accordion>
+
+
+  </mat-sidenav>
+
+
+  <mat-sidenav-content>
+
+    <button type="button" mat-button (click)="sidenav.open()">
+      <mat-icon aria-hidden="false" aria-label="Example home icon" class="mat-icon2">list
+      </mat-icon><p>Menu</p>
+    </button>
+
+
+    <h1 align ="center">System Admin</h1>
+
+    <button mat-flat-button class="bottonadd" (click)="onAdduser()">Create User +</button>
+    <br/><br/>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" align="center">
+
+      <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+
+      <!-- Position Column -->
+      <ng-container matColumnDef="user_id" >
+        <th mat-header-cell *matHeaderCellDef> No. </th>
+        <td mat-cell *matCellDef="let element"> {{element.user_id}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="firstname">
+        <th mat-header-cell *matHeaderCellDef> Firstname </th>
+        <td mat-cell *matCellDef="let element"> {{element.firstname}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="lastname">
+        <th mat-header-cell *matHeaderCellDef> Lastname </th>
+        <td mat-cell *matCellDef="let element"> {{element.lastname}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="department">
+        <th mat-header-cell *matHeaderCellDef> Department </th>
+        <td mat-cell *matCellDef="let element"> {{element.department}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="position">
+        <th mat-header-cell *matHeaderCellDef> Position </th>
+        <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="username">
+        <th mat-header-cell *matHeaderCellDef> Username </th>
+        <td mat-cell *matCellDef="let element"> {{element.username}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef> Status </th>
+        <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+      </ng-container>
+
+
+      <ng-container matColumnDef="is_active">
+        <th mat-header-cell *matHeaderCellDef> isActive </th>
+        <td mat-cell *matCellDef="let element"> {{element.isActive}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="edit">
+        <th mat-header-cell *matHeaderCellDef> Edit </th>
+        <td mat-cell *matCellDef="let element">
+          <button mat-icon-button matTooltipPosition="left" (click)="onEdituser(element)">
+          <mat-icon>edit</mat-icon>
+        </button>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="delete" stickyEnd>
+        <th mat-header-cell *matHeaderCellDef> Delete </th>
+        <td mat-cell *matCellDef="let element"> <button mat-icon-button matTooltipPosition="left" (click)="onDeleteuser(element)">
+          <mat-icon>delete_forever</mat-icon>
+        </button> </td>
+      </ng-container>
+
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns" ></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="example-element-row"></tr>
+    </table>
+
+
+
+
+
+  </mat-sidenav-content>
+
+
+</mat-sidenav-container>
+
+
+
+
+
+
+</body>

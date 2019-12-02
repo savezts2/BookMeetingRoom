@@ -9,9 +9,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { DashboardtableComponent } from './dashboardtable/dashboardtable.component';
 import { AdduserbyadminComponent } from './adduserbyadmin/adduserbyadmin.component';
 import { ModuleWithProviders } from '@angular/core';
-import { CanceluserComponent } from './canceluser/canceluser.component';
 
-
+import { SystemadminComponent } from './systemadmin/systemadmin.component';
+import { EdituserbyadminComponent } from './edituserbyadmin/edituserbyadmin.component';
+import { DeleteuserbyadminComponent } from './deleteuserbyadmin/deleteuserbyadmin.component';
 const routes: Routes = [
     { path: 'selectRoom', component: SelectRoomComponent },
     { path: 'selectDate', component: BookMeetingRoom1Component },
@@ -19,7 +20,9 @@ const routes: Routes = [
     { path: 'dashboard', component: DashboardComponent },
     { path: 'dashboardTable', component: DashboardtableComponent },
     { path: 'adduserbyadmin', component: AdduserbyadminComponent },
-    { path: 'canceluser', component: CanceluserComponent },
+    { path: 'systemadmin', component: SystemadminComponent },
+    { path: 'edituserbyadmin', component: EdituserbyadminComponent },
+    { path: 'deleteuserbyadmin', component: DeleteuserbyadminComponent },
     { path: '', redirectTo: '/selectDate', pathMatch: 'full' }
 ];
 

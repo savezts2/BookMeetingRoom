@@ -120,15 +120,11 @@ isLoggedInHR() : Observable<boolean> {
    */
   logout() : void {
     this.router.navigate(['selectDate']);
-    localStorage.removeItem('tokenid');
-    localStorage.removeItem('tokenidadmin');
-    localStorage.removeItem('tokenidhr');
-
-    localStorage.removeItem('userid');
-    localStorage.removeItem('nameid');
     this.isLoginSubject.next(false);
     this.isLoginHR.next(false);
     this.isLoginAdmin.next(false);
+
+    localStorage.clear()
 
 
   }

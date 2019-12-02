@@ -82,7 +82,7 @@ constructor(public authService : AuthService , private router: Router, private s
 
     this.service.getDateDashBoard(this.dateStart , this.dateEnd).subscribe(data=>{
        this.report = data;
-      console.log(data,this.dateStart,this.dateEnd);
+
       this.appendTime();
     })
 

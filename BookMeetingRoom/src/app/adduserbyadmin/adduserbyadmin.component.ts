@@ -5,7 +5,7 @@ import { Observable } from "rxjs";
 import { Router } from '@angular/router';
 import { HttpClient} from '@angular/common/http';
 import { ServiceService } from '../Service/service.service';
-
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 @Component({
   selector: 'app-adduserbyadmin',
   templateUrl: './adduserbyadmin.component.html',
@@ -25,56 +25,90 @@ userid : String = null;
 password : String = null;
 status : String = null;
 hide : boolean;
-public API = '//localhost:8080/';   //for test
+active: String = null;
+public API = '//localhost:8080';   //for test
 //public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
+firstFormGroup: FormGroup;
 
-constructor( public authService : AuthService,private router: Router , private service : ServiceService, private http: HttpClient) {
+constructor( public authService : AuthService,private router: Router , private service : ServiceService, private http: HttpClient,private  _formBuilder: FormBuilder) {
     this.isLoggedIn = authService.isLoggedIn();
     this.isLoggedInAdmin = authService.isLoggedInAdmin();
     this.isLoggedInHR = authService.isLoggedInHR();
  }
 
   ngOnInit() {
+
+     this.firstFormGroup = this._formBuilder.group({
+      username: ['', Validators.required],
+      lastname: ['', Validators.required],
+      department: ['', Validators.required],
+      position: ['', Validators.required],
+      userid: ['', Validators.required],
+      password: ['', Validators.required],
+      status: ['', Validators.required]
+    });
+
   }
 
-submit(){
-     this.service.findUserid(this.userid).subscribe(data=>{
-        if(data != null){
-          alert("This userid already exists in the system.");
-          this.userid = null ;
-        }else{
-            if(this.username == null || this.lastname == null || this.department == null || this.position == null ||
-                this.userid == null || this.password == null || this. status == null){
-                alert("Please fill out all information.");
-            }else{
+reset(){
+    this.firstFormGroup.setValue({
+       username: '',
+      lastname: '',
+      department: '',
+      position: '',
+      userid: '',
+      password: '',
+      status: ''
+    });
+}
 
-                this.http.post(this.API + '/Adduser/'+this.username +'/' + this.lastname +'/' + this.department + '/' + this.position
-                  + '/' + this.userid+ '/' + this.password+ '/' + this.status,{})
+submit(){
+
+      if(this.firstFormGroup.get('username').value == '' || this.firstFormGroup.get('lastname').value == '' || this.firstFormGroup.get('department').value == '' ||
+          this.firstFormGroup.get('position').value == '' ||  this.firstFormGroup.get('userid').value == '' || this.firstFormGroup.get('password').value == ''
+           || this.firstFormGroup.get('status').value == ''){
+
+          alert("Please Check your filled");
+
+      }else{
+
+          this.service.findUserid(this.firstFormGroup.get('userid').value).subscribe(data=>{
+              if(data!=null){
+                alert("This username already exists in the system.");
+
+                 this.firstFormGroup.setValue({
+
+                    username: this.firstFormGroup.get('username').value,
+                    lastname: this.firstFormGroup.get('lastname').value,
+                    department: this.firstFormGroup.get('department').value,
+                    position: this.firstFormGroup.get('position').value,
+                    userid: '',
+                    password: this.firstFormGroup.get('password').value,
+                    status: this.firstFormGroup.get('status').value
+
+                 });
+
+              }else{
+
+                  this.http.post(this.API + '/Adduser/'+this.firstFormGroup.get('username').value +'/' + this.firstFormGroup.get('lastname').value +'/' +
+                 this.firstFormGroup.get('department').value + '/' + this.firstFormGroup.get('position').value + '/' + this.firstFormGroup.get('userid').value+ '/' + this.firstFormGroup.get('password').value+ '/' + this.firstFormGroup.get('status').value,{})
                              .subscribe(
                                data => {
                                    console.log('PUT Request is successful');
-                                   alert("Add User Success!");
+                                   alert("Add Success!");
                                    window.location.reload(true);
                                },
                                error => {
                                    console.log('Error', error);
                                }
                               );
-            }
-        }
-    })
 
+              }
 
+       })
+      }
 }
 
-reset(){
-this.username=null;
-this.lastname=null;
-this.department=null;
-this.position=null;
-this.userid=null;
-this.password=null;
-this.status=null;
-}
+
 
 }

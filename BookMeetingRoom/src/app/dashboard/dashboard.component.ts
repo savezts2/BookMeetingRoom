@@ -7,7 +7,7 @@ import {MatDatepickerInputEvent} from '@angular/material/datepicker';
 import { AppDateAdapter, APP_DATE_FORMATS} from '../book-meeting-room1/date.adapter';
 import { NativeDateAdapter, DateAdapter, MAT_DATE_FORMATS } from "@angular/material";
 import { ServiceService } from '../Service/service.service';
-
+import {MatSidenav} from '@angular/material/sidenav';
 import {FormControl} from '@angular/forms';
 
 @Component({
@@ -16,7 +16,7 @@ templateUrl: './dashboard.component.html',
 styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-
+@ViewChild('sidenav', {static: false}) sidenav: MatSidenav;
 isLoggedIn : Observable<boolean>;
 isLoggedInAdmin : Observable<boolean>;
 isLoggedInHR : Observable<boolean>;
@@ -45,6 +45,10 @@ convertyear(selectedyear){
     this.splittedDate = this.serializedDate.value.split("-");
     return this.splittedDate[0];
 }
+
+close() {
+    this.sidenav.close();
+  }
 
 convertmonth(selectedmonth){
     this.splittedDate = this.serializedDate.value.split("-");

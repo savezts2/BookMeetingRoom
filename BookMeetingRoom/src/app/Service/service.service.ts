@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class ServiceService {
 
-public API = '//localhost:8080/';   //for test
+public API = '//localhost:8080';   //for test
   //public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
 
   constructor( private http: HttpClient ) { }
@@ -18,6 +18,11 @@ public API = '//localhost:8080/';   //for test
 
   getUserPassword(id: String , password : String): Observable<any>{
       return this.http.get(this.API+'/Users/'+id+/Password/+password,{})
+  }
+
+
+getUsers(): Observable<any>{
+      return this.http.get(this.API+'/Users',{})
   }
 
 

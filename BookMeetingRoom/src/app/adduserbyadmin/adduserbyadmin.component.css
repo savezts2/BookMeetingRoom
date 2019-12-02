@@ -29,7 +29,7 @@
 #sidebar .sidebar-emp {
         width: 100%;
         padding: 20px;
-        min-height: 200vh;
+        min-height: 100%;
         transition: all 0.3s;
 }
 
@@ -70,6 +70,15 @@ table{
 
 .whitetable{
     background-color: white;
+}
+
+
+.bgimg{
+  background-image:url(src/app/img/ILS-LOGO.jpg);
+    border: thin silver solid;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+
 }
 
 

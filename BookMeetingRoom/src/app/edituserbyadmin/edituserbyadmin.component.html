@@ -2,13 +2,15 @@
 <body class="bgimg">
 
 
-    <div *ngIf="(isLoggedInAdmin | async)">
-      <h1 align="center" style="background-color: rgb(0, 176, 80); color:white;">Add User</h1>
 
-      <form [formGroup]="firstFormGroup">
+
+  <div *ngIf="(isLoggedInAdmin | async)">
+    <h1 align="center" style="background-color: rgb(0, 176, 80); color:white;">Edit</h1>
+
+    <form [formGroup]="firstFormGroup">
       <div align="center">
         <mat-form-field>
-          <input matInput placeholder="Firstname" formControlName="username" (keydown.enter)="submit()" required>
+          <input matInput placeholder="Firstname" formControlName="firstname" (keydown.enter)="submit()"  required>
         </mat-form-field>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <mat-form-field>
@@ -52,7 +54,7 @@
 
 
         <mat-form-field>
-          <input matInput placeholder="Username" formControlName="userid" (keydown.enter)="submit()" required>
+          <input matInput placeholder="Username" [(ngModel)]="username" [ngModelOptions]="{standalone: true}" (keydown.enter)="submit()" disabled>
         </mat-form-field>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <mat-form-field>
@@ -72,15 +74,14 @@
           </mat-select>
         </mat-form-field>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
       </div>
       <br/>
       <div align="center">
-        <button mat-raised-button color="primary" (click)="submit()">Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <button mat-raised-button color="primary" (click)="reset()">Reset</button>
+        <button mat-raised-button color="primary" (click)="editUser()">Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button mat-raised-button color="primary" (click)="closed()">Cancel</button>
       </div>
-      </form>
-    </div>
+    </form>
+  </div>
 
 
 

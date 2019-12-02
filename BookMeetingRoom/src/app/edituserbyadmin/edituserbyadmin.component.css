@@ -15,7 +15,7 @@
 }
 
 #sidebar .sidebar-header {
-     padding: 24px;
+    padding: 24px;
     background: #6d7fcc;
 }
 
@@ -56,9 +56,8 @@ table{
 
 }
 
-.datepick{
-    margin-left:126px;
-}
+
+
 
 .greentable{
   background-color: rgb(0, 176, 80);
@@ -143,4 +142,17 @@ h1.example-app-name {
 
 .botton{
   width:100%;
+}
+
+
+
+
+
+
+.bgimg{
+  background-image:url(src/app/img/ILS-LOGO.jpg);
+    border: thin silver solid;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+
 }

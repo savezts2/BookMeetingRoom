@@ -1,59 +1,42 @@
-<html>
-<body>
-<div class="wrapper">
 
-  <nav id="sidebar">
-    <div class="sidebar-header">
-      <h4>BookMeetingRoom</h4>
-    </div>
 
-    <div *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)">
-      <button mat-button class="sidebar-menu" routerLink="/selectDate">SelectRoom & Time</button>
-      <br>
-    </div>
-    <div *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)">
-      <button mat-button class="sidebar-menu" routerLink="/dashboard">Dashboard</button>
-      <br>
-    </div>
+<body class="bgimg">
 
-    <div *ngIf="(isLoggedInAdmin | async)">
-      <button mat-button class="sidebar-menu" routerLink="/adduserbyadmin">AddUser</button>
-      <br>
-    </div>
-    <div *ngIf="(isLoggedInAdmin | async)">
-      <button mat-button class="sidebar-menu" routerLink="/canceluser">CancelUser</button>
-      <br>
-    </div>
-    <div class="sidebar-emp">
 
-    </div>
-  </nav>
 
-  <div class="card-header">
-    <div>
+<mat-sidenav-container *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)"
+                       class="card" (backdropClick)="close()">
+  <mat-sidenav #sidenav (keydown.escape)="close()">
+    <button mat-button (click)="close()" routerLink="/selectDate" class="botton">Book MeetingRoom</button><br>
+    <button mat-button (click)="close()" routerLink="/dashboard" class="botton">Dashboard</button>
 
-      <button mat-raised-button class="botton-login"
-              *ngIf="!(isLoggedIn | async) && !(isLoggedInAdmin | async) && !(isLoggedInHR | async)"
-              (click)="authService.callDialog()">Login
-      </button>
-      <button mat-raised-button class="botton-login"
-              *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)"
-              (click)="authService.logout()">LogOut
-      </button>
+    <mat-accordion *ngIf="(isLoggedInAdmin | async)">
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Admin
+          </mat-panel-title>
 
-    </div>
+        </mat-expansion-panel-header>
 
-    <div class="form-data" *ngIf="!(isLoggedIn | async) && !(isLoggedInAdmin | async) && !(isLoggedInHR | async)">
-      <br/><br/><br/><br/>
-      <h1 style="color:#6d7fcc;">Please Login !</h1>
-    </div>
+        <button mat-button (click)="close()" routerLink="/systemadmin" class="botton">System Admin</button>
 
-    <br/><br/>
+      </mat-expansion-panel>
 
-    <div *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)">
+    </mat-accordion>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+
+    <button type="button" mat-button (click)="sidenav.open()">
+      <mat-icon aria-hidden="false" aria-label="Example home icon" class="icon">list
+      </mat-icon><p>Menu</p>
+    </button>
+
+
+
+      <h1 align="center">Dashboard</h1>
       <br/>
-      <h1 align="center" style="color:#6d7fcc;">Select Month && Year</h1>
-
       <div align="center">
 
         <mat-form-field>
@@ -100,18 +83,23 @@
       </div>
 
 
-      <br/><br/>
 
 
-    </div>
 
-  </div>
 
-</div>
+
+
+
+  </mat-sidenav-content>
+
+
+</mat-sidenav-container>
+
+
+
+
 
 
 </body>
 
-
-</html>
 

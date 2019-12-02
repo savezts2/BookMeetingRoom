@@ -1,0 +1,10 @@
+<body class="bgimg">
+
+<div *ngIf="(isLoggedInAdmin | async)">
+<h1 align="center" style="background-color: rgb(0, 176, 80); color:white;">Delete</h1>
+<h4>Delete : {{data.username}} ?</h4>
+<button mat-raised-button color="primary" (click)="deleteUser()">Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button mat-raised-button color="primary" (click)="closed()">Cancel</button>
+
+</div>
+</body>

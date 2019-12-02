@@ -15,7 +15,7 @@
 }
 
 #sidebar .sidebar-header {
-     padding: 24px;
+    padding: 24px;
     background: #6d7fcc;
 }
 
@@ -50,15 +50,57 @@
     text-align : center;
 }
 
-table{
-  width:90%;
-  text-align:center;
-
+table {
+  width: 90%;
 }
 
-.datepick{
-    margin-left:126px;
+tr.example-detail-row {
+  height: 0;
 }
+
+tr.example-element-row:not(.example-expanded-row):hover {
+  background: #EEFF5A;
+}
+
+tr.example-element-row:not(.example-expanded-row):active {
+  background: #EEFF5A;
+}
+
+.example-element-row td {
+  border-bottom-width: 0;
+}
+
+.example-element-detail {
+  overflow: hidden;
+  display: flex;
+}
+
+.example-element-diagram {
+  min-width: 80px;
+  border: 2px solid black;
+  padding: 8px;
+  font-weight: lighter;
+  margin: 8px 0;
+  height: 104px;
+}
+
+.example-element-symbol {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: normal;
+}
+
+.example-element-description {
+  padding: 16px;
+}
+
+.example-element-description-attribution {
+  opacity: 0.5;
+}
+
+
+
+
 
 .greentable{
   background-color: rgb(0, 176, 80);
@@ -137,10 +179,25 @@ h1.example-app-name {
 }
 
 .mat-icon{
-  font-size: 50px;
-  width: 50px;
+  font-size: 25px;
+  width: 25px;
 }
+
+.mat-icon2{
+    font-size: 50px;
+      width: 50px;
+}
+
 
 .botton{
   width:100%;
 }
+
+.bottonadd{
+  background-color: rgb(0, 176, 80);
+  color: white;
+  margin-left: 5%;
+}
+
+
+

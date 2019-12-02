@@ -27,7 +27,17 @@ import { DashboardtableComponent } from './dashboardtable/dashboardtable.compone
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { AdduserbyadminComponent } from './adduserbyadmin/adduserbyadmin.component';
 
-import { CanceluserComponent } from './canceluser/canceluser.component';
+
+import {MatCardModule} from '@angular/material/card';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import { HeaderComponent } from './header/header.component';
+import {MatStepperModule} from '@angular/material/stepper';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { SystemadminComponent } from './systemadmin/systemadmin.component';
+import { EdituserbyadminComponent } from './edituserbyadmin/edituserbyadmin.component';
+import { DeleteuserbyadminComponent } from './deleteuserbyadmin/deleteuserbyadmin.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,8 +48,11 @@ import { CanceluserComponent } from './canceluser/canceluser.component';
     DashboardComponent,
     DashboardtableComponent,
     AdduserbyadminComponent,
-    CanceluserComponent,
-    DialogCancel
+    DialogCancel,
+    HeaderComponent,
+    SystemadminComponent,
+    EdituserbyadminComponent,
+    DeleteuserbyadminComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +72,13 @@ import { CanceluserComponent } from './canceluser/canceluser.component';
     MatProgressSpinnerModule,
     MatIconModule,
     MatRadioModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSidenavModule,
+    MatListModule,
+    MatCardModule,
+    MatStepperModule,
+    MatProgressBarModule,
+    MatExpansionModule
   ],
     entryComponents: [ DialogOverviewExampleDialog , DialogCancel],
   providers: [],

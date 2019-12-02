@@ -13,7 +13,7 @@ import java.util.Collection;
 @Repository
 public interface ReportRepository extends JpaRepository<Report,Long> {
 
-    @Query(value = "SELECT * FROM report WHERE date = :date",nativeQuery = true)
+    @Query(value = "SELECT * FROM report WHERE date = :date AND is_active = '1'",nativeQuery = true)
     Collection<Report> getDateReport(@Param("date") String date );
 
     @Query(value = "SELECT * FROM report WHERE date_book BETWEEN :datestart AND :dateend",nativeQuery = true)
