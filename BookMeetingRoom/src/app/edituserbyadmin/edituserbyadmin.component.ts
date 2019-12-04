@@ -37,7 +37,7 @@ isLoggedIn : Observable<boolean>;
 isLoggedInAdmin : Observable<boolean>;
 isLoggedInHR : Observable<boolean>;
 firstFormGroup: FormGroup;
-
+hide : boolean;
 public API = '//localhost:8080/';   //for test
 //public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
 

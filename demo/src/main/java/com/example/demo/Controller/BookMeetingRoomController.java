@@ -26,7 +26,7 @@ public class BookMeetingRoomController {
     @Autowired
     private ReportRepository reportRepository;
 
-    @GetMapping("/BookMeetingRoom/{date}")
+    @GetMapping("/{date}")
     public Iterable<BookMeetingRoom> Bookmaster(@PathVariable String date) {
         return this.bookMeetingRoomRepository.getBookmaster(date);
     }

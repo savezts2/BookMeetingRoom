@@ -93,15 +93,23 @@ THE SOFTWARE.
 
 @angular/material/dialog
 
+@angular/material/expansion
+
 @angular/material/form-field
 
 @angular/material/icon
 
-@angular/material/progress-spinner
-
-@angular/material/radio
+@angular/material/progress-bar
 
 @angular/material/select
+
+@angular/material/sidenav
+
+@angular/material/stepper
+
+@angular/material/table
+
+@angular/material/toolbar
 
 @angular/platform-browser
 MIT

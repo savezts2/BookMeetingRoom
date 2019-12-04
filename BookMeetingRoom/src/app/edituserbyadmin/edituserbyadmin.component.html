@@ -10,11 +10,11 @@
     <form [formGroup]="firstFormGroup">
       <div align="center">
         <mat-form-field>
-          <input matInput placeholder="Firstname" formControlName="firstname" (keydown.enter)="submit()"  required>
+          <input matInput placeholder="Firstname" formControlName="firstname" (keydown.enter)="editUser()"  required>
         </mat-form-field>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <mat-form-field>
-          <input matInput placeholder="Lastname" formControlName="lastname" (keydown.enter)="submit()" required>
+          <input matInput placeholder="Lastname" formControlName="lastname" (keydown.enter)="editUser()" required>
         </mat-form-field>
       </div>
       <br/>
@@ -54,12 +54,12 @@
 
 
         <mat-form-field>
-          <input matInput placeholder="Username" [(ngModel)]="username" [ngModelOptions]="{standalone: true}" (keydown.enter)="submit()" disabled>
+          <input matInput placeholder="Username" [(ngModel)]="username" [ngModelOptions]="{standalone: true}" (keydown.enter)="editUser()" disabled>
         </mat-form-field>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <mat-form-field>
           <input matInput placeholder="Enter your password" [type]="hide ? 'text' : 'password'" formControlName="password" required
-                 (keydown.enter)="submit()">
+                 (keydown.enter)="editUser()">
           <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
                   [attr.aria-pressed]="hide">
             <mat-icon>{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
