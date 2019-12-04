@@ -45,6 +45,7 @@
   fromtimesplited : Array<any>;
   totimesplited : Array<any>;
   lengthtime : number ;
+  spiner : boolean = false;
   public API = '//localhost:8080';   //for test
   //public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
 
@@ -95,11 +96,11 @@
 
         if(this.firstFormGroup.get('tel').value == '' || this.firstFormGroup.get('topic').value == '' || this.firstFormGroup.get('atten').value == null || (this.firstFormGroup.get('time').value <= this.firstFormGroup.get('totime').value) ? false : true){
             alert("Please check your filled.");
-        }else if(this.checkReserved (this.firstFormGroup.get('time').value , this.firstFormGroup.get('totime').value , this.data.room)){
+        }else if(this.checkReserved(this.firstFormGroup.get('time').value , this.firstFormGroup.get('totime').value , this.data.room)){
             alert("This time can't book");
         }else{
-            alert("sucw");
-                /*this.http.post(this.API + '/Editbook/'+this.data.date+'/'+this.data.room+'/'+this.data.time+'/'+this.firstFormGroup.get('time').value+'/'+this.firstFormGroup.get('totime').value
+              this.spiner = true;
+                this.http.post(this.API + '/Editbook/'+this.data.date+'/'+this.data.room+'/'+this.data.time+'/'+this.firstFormGroup.get('time').value+'/'+this.firstFormGroup.get('totime').value
             +'/'+this.firstFormGroup.get('atten').value+'/'+this.firstFormGroup.get('topic').value+'/null/'+this.firstFormGroup.get('tel').value,{})
                                .subscribe(
                                  data => {
@@ -110,7 +111,7 @@
                                  error => {
                                      console.log('Error', error);
                                  }
-                                );*/
+                                );
 
         }
       }
@@ -123,6 +124,9 @@
         }else if(this.checkReserved (this.firstFormGroup.get('time').value , this.firstFormGroup.get('totime').value , this.data.room)){
             alert("This time can't book");
         }else{
+
+        this.spiner = true;
+
       this.http.post(this.API + '/Editbook/'+this.data.date+'/'+this.data.room+'/'+this.data.time+'/'+this.firstFormGroup.get('time').value+'/'+this.firstFormGroup.get('totime').value
      +'/'+this.firstFormGroup.get('atten').value+'/'+this.firstFormGroup.get('topic').value+'/'+this.firstFormGroup.get('remark').value+'/'+this.firstFormGroup.get('tel').value,{})
                                .subscribe(
@@ -140,82 +144,200 @@
   }
 
 
-
+countRow: number = 0;
 
 checkReserved (fromtime , totime , roomname){
     this.fromtimesplited = fromtime.split(".");
     this.totimesplited = totime.split(".");
 
     this.countTime = this.convertlengthTime(this.fromtimesplited[0],this.fromtimesplited[1],this.totimesplited[0],this.totimesplited[1]);
-
+    console.log(this.countTime);
 
     if(roomname == "Meeting Room1(TSP)"){
       for(let i = 0 ; i < this.timeofweekOTSF2.length ; i++){
-        if(this.timeofweekOTSF2[i].time == fromtime){
-          if(this.countTime > 1)
-             for(let j = i+1 ; j < this.countTime + i ; j++){
-                 if(this.timeofweekOTSF2[j].checkReservations == true){
 
-                     return true;
+        if(this.timeofweekOTSF2[i].time == fromtime){
+          this.countRow = this.countRow + 1 ;
+          if(this.countTime > 1){
+                if(this.timeofweekOTSF2[i].checkReservations == true && this.firstFormGroup.get('time').value != this.data.time){
+                  console.log('if4');
+                    return true;
+
+                     break;
+                }
+             for(let j = i+1 ; j < this.countTime + i - this.timeofweekOTSF2[i].id + 1 ; j++){
+
+                  if(this.timeofweekOTSF2[j].roomid == 18 && this.timeofweekOTSF2[j].checkReservations == false){
+                        console.log('if1');
+                        return false;
+                        break;
+                  }else if(this.timeofweekOTSF2[j].checkReservations == true && this.data.time == this.timeofweekOTSF2[j].time){
+                    console.log('if2');
+                      return false;
+                        break;
+                  }
+                 else if(this.timeofweekOTSF2[j].checkReservations == true){
+                      console.log('if3');
+                      return true;
 
                      break;
                   }
              }
+           }else{
+              if(this.timeofweekOTSF2[i].checkReservations == true){
+                  return true;
 
-          }
-       }
-          return false;
+                     break;
+              }
+           }
+
+         }
+      }
+          if(this.countRow > 0){
+              return false;
+          }else{
+          return true;}
     }
 
     else if(roomname == "Meeting Room2(WH7)"){
-      for(let i = 0 ; i < this.timeofweekR1WH7F2.length ; i++){
+
+
+              for(let i = 0 ; i < this.timeofweekR1WH7F2.length ; i++){
+
         if(this.timeofweekR1WH7F2[i].time == fromtime){
-          if(this.countTime > 1)
-             for(let j = i+1 ; j < this.countTime + i ; j++){
-                 if(this.timeofweekR1WH7F2[j].checkReservations == true){
-                     return true;
+          this.countRow = this.countRow + 1 ;
+          if(this.countTime > 1){
+                if(this.timeofweekR1WH7F2[i].checkReservations == true && this.firstFormGroup.get('time').value != this.data.time){
+                  console.log('if4');
+                    return true;
+
+                     break;
+                }
+             for(let j = i+1 ; j < this.countTime + i - this.timeofweekR1WH7F2[i].id + 1 ; j++){
+
+                  if(this.timeofweekR1WH7F2[j].roomid == 18 && this.timeofweekR1WH7F2[j].checkReservations == false){
+                        console.log('if1');
+                        return false;
+                        break;
+                  }else if(this.timeofweekR1WH7F2[j].checkReservations == true && this.data.time == this.timeofweekR1WH7F2[j].time){
+                    console.log('if2');
+                      return false;
+                        break;
+                  }
+                 else if(this.timeofweekR1WH7F2[j].checkReservations == true){
+                      console.log('if3');
+                      return true;
+
                      break;
                   }
-
              }
+           }else{
+              if(this.timeofweekR1WH7F2[i].checkReservations == true){
+                  return true;
 
-        }
+                     break;
+              }
+           }
+
+         }
       }
-    return false;
+          if(this.countRow > 0){
+              return false;
+          }else{
+          return true;}
     }
 
      else if(roomname == "Meeting Room3(WH7)"){
       for(let i = 0 ; i < this.timeofweekR2WH7F2.length ; i++){
+
         if(this.timeofweekR2WH7F2[i].time == fromtime){
-          if(this.countTime > 1)
-             for(let j = i+1 ; j < this.countTime + i ; j++){
-                 if(this.timeofweekR2WH7F2[j].checkReservations == true){
-                     return true;
+          this.countRow = this.countRow + 1 ;
+          if(this.countTime > 1){
+                if(this.timeofweekR2WH7F2[i].checkReservations == true && this.firstFormGroup.get('time').value != this.data.time){
+                  console.log('if4');
+                    return true;
+
+                     break;
+                }
+             for(let j = i+1 ; j < this.countTime + i - this.timeofweekR2WH7F2[i].id + 1 ; j++){
+
+                  if(this.timeofweekR2WH7F2[j].roomid == 18 && this.timeofweekR2WH7F2[j].checkReservations == false){
+                        console.log('if1');
+                        return false;
+                        break;
+                  }else if(this.timeofweekR2WH7F2[j].checkReservations == true && this.data.time == this.timeofweekR2WH7F2[j].time){
+                    console.log('if2');
+                      return false;
+                        break;
+                  }
+                 else if(this.timeofweekR2WH7F2[j].checkReservations == true){
+                      console.log('if3');
+                      return true;
+
                      break;
                   }
-
              }
+           }else{
+              if(this.timeofweekR2WH7F2[i].checkReservations == true){
+                  return true;
 
-        }
+                     break;
+              }
+           }
+
+         }
       }
-    return false;
+          if(this.countRow > 0){
+              return false;
+          }else{
+          return true;}
     }
 
 
     else if(roomname == "Meeting Room4(WH2)"){
       for(let i = 0 ; i < this.timeofweekWH2F2.length ; i++){
+
         if(this.timeofweekWH2F2[i].time == fromtime){
-          if(this.countTime > 1)
-             for(let j = i+1 ; j < this.countTime + i ; j++){
-                 if(this.timeofweekWH2F2[j].checkReservations == true){
-                   return true;
+          this.countRow = this.countRow + 1 ;
+          if(this.countTime > 1){
+                if(this.timeofweekWH2F2[i].checkReservations == true && this.firstFormGroup.get('time').value != this.data.time){
+                  console.log('if4');
+                    return true;
+
+                     break;
+                }
+             for(let j = i+1 ; j < this.countTime + i - this.timeofweekWH2F2[i].id + 1 ; j++){
+
+                  if(this.timeofweekWH2F2[j].roomid == 18 && this.timeofweekWH2F2[j].checkReservations == false){
+                        console.log('if1');
+                        return false;
+                        break;
+                  }else if(this.timeofweekWH2F2[j].checkReservations == true && this.data.time == this.timeofweekWH2F2[j].time){
+                    console.log('if2');
+                      return false;
+                        break;
+                  }
+                 else if(this.timeofweekWH2F2[j].checkReservations == true){
+                      console.log('if3');
+                      return true;
+
                      break;
                   }
              }
+           }else{
+              if(this.timeofweekWH2F2[i].checkReservations == true){
+                  return true;
 
-        }
+                     break;
+              }
+           }
+
+         }
       }
-      return false;
+          if(this.countRow > 0){
+              return false;
+          }else{
+          return true;}
     }
 
 }

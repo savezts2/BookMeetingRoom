@@ -92,7 +92,7 @@ SubmitData(){
 
       if(this.checkReserved (this.fromtimeSelect , this.firstFormGroup.get('totime').value , this.roomname)){
           alert("Cannot book this time period");
-          window.location.reload(true);
+          //window.location.reload(true);
       }else{
 
      this.http.post(this.API + '/'+this.userid3 +'/' + this.fromtimeSelect +'/' + this.firstFormGroup.get('totime').value +'/'+ this.secondFormGroup.get('tel').value

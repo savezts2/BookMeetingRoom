@@ -6,7 +6,7 @@
 
 <mat-sidenav-container *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)"
                        class="card" (backdropClick)="close()">
-  <mat-sidenav #sidenav (keydown.escape)="close()">
+  <mat-sidenav #sidenav (keydown.escape)="close()" class="sidenavs">
     <button mat-button (click)="close()" routerLink="/selectDate" class="botton">Book MeetingRoom</button><br>
     <button mat-button (click)="close()" routerLink="/dashboard" class="botton">Dashboard</button>
 

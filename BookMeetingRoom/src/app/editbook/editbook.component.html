@@ -103,7 +103,9 @@
   <button mat-fab mat-button color="primary" class="material-cust-large-button" (click)="edit()">Save</button>
 
   &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
-  <button mat-fab mat-button color="primary" class="material-cust-large-button" (click)="cancel()">Cancel</button>
-
+  <button mat-fab mat-button color="primary" class="material-cust-large-button" (click)="cancel()">Cancel</button><br/>
+  <div align="center" *ngIf="spiner">
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+  </div>
 </div>
 </form>

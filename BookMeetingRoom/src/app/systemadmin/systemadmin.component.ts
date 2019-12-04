@@ -43,6 +43,10 @@ users : Array<any>;
 
 dataSource = new MatTableDataSource<PeriodicElement>(this.users);
 
+applyFilter(filterValue: string) {
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
+
   constructor(public authService : AuthService , private router: Router , private service : ServiceService,public dialog: MatDialog) {
       this.isLoggedIn = authService.isLoggedIn();
     this.isLoggedInAdmin = authService.isLoggedInAdmin();

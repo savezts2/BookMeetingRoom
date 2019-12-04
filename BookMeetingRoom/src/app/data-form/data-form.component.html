@@ -4,7 +4,7 @@
 
 <mat-sidenav-container *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)"
                        class="card" (backdropClick)="close()">
-  <mat-sidenav #sidenav (keydown.escape)="close()">
+  <mat-sidenav #sidenav (keydown.escape)="close()" class="sidenavs">
     <button mat-button (click)="close()" routerLink="/selectDate" class="botton">Book MeetingRoom</button><br>
     <button mat-button (click)="close()" routerLink="/dashboard" class="botton">Dashboard</button>
 
@@ -43,7 +43,7 @@
           <div style="margin-left:25%;">
             <label>From Time :
               <mat-form-field>
-                <mat-select [(ngModel)]="fromtimeSelect" [ngModelOptions]="{standalone: true}">
+                <mat-select [(ngModel)]="fromtimeSelect" [ngModelOptions]="{standalone: true}" [disabled]="true">
                   <mat-option value="08.00">08.00</mat-option>
                   <mat-option value="08.30">08.30</mat-option>
                   <mat-option value="09.00">09.00</mat-option>

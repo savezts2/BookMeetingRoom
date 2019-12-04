@@ -60,8 +60,37 @@ day29 : String ;
 day30 : String ;
 day31 : String ;
 
-
-
+showday1: boolean = false;
+showday2: boolean = false;
+showday3: boolean = false;
+showday4: boolean = false;
+showday5: boolean = false;
+showday6: boolean = false;
+showday7: boolean = false;
+showday8: boolean = false;
+showday9: boolean = false;
+showday10: boolean = false;
+showday11: boolean = false;
+showday12: boolean = false;
+showday13: boolean = false;
+showday14: boolean = false;
+showday15: boolean = false;
+showday16: boolean = false;
+showday17: boolean = false;
+showday18: boolean = false;
+showday19: boolean = false;
+showday20: boolean = false;
+showday21: boolean = false;
+showday22: boolean = false;
+showday23: boolean = false;
+showday24: boolean = false;
+showday25: boolean = false;
+showday26: boolean = false;
+showday27: boolean = false;
+showday28: boolean = false;
+showday29: boolean = false;
+showday30: boolean = false;
+showday31: boolean = false;
 constructor(public authService : AuthService , private router: Router, private service : ServiceService,
    private route:ActivatedRoute , private dashboardService : DashboardService) {
         this.isLoggedIn = authService.isLoggedIn();
@@ -7498,12 +7527,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day01.length; j++){
             if(this.timeofweekOTSF2Day01[j].roomid == 0){
               this.timeofweekOTSF2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day01[j].color = 'red' ;
+              this.timeofweekOTSF2Day01[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day01[j].showlabel = true;
-              this.timeofweekOTSF2Day01[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day01[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day01[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day01[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day01[j].checkReservations = true ;
+              this.timeofweekOTSF2Day01[j].checkReservations = true ; this.showday1 = true;
               if(this.timeofweekOTSF2Day01[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day01[j].id   ; k++){
@@ -7520,12 +7549,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day01.length; j++){
             if(this.timeofweekOTSF2Day01[j].roomid == 1){
               this.timeofweekOTSF2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day01[j].color = 'red' ;
+              this.timeofweekOTSF2Day01[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day01[j].showlabel = true;
-              this.timeofweekOTSF2Day01[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day01[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day01[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day01[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day01[j].checkReservations = true ;
+              this.timeofweekOTSF2Day01[j].checkReservations = true ; this.showday1 = true;
               if(this.timeofweekOTSF2Day01[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day02[j].id   ; k++){
@@ -7542,12 +7571,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day01.length; j++){
             if(this.timeofweekOTSF2Day01[j].roomid == 2){
               this.timeofweekOTSF2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day01[j].color = 'red' ;
+              this.timeofweekOTSF2Day01[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day01[j].showlabel = true;
-              this.timeofweekOTSF2Day01[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day01[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day01[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day01[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day01[j].checkReservations = true ;
+              this.timeofweekOTSF2Day01[j].checkReservations = true ; this.showday1 = true;
               if(this.timeofweekOTSF2Day01[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day01[j].id   ; k++){
@@ -7564,12 +7593,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day01.length; j++){
             if(this.timeofweekOTSF2Day01[j].roomid == 3){
               this.timeofweekOTSF2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day01[j].color = 'red' ;
+              this.timeofweekOTSF2Day01[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day01[j].showlabel = true;
-              this.timeofweekOTSF2Day01[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day01[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day01[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day01[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day01[j].checkReservations = true ;
+              this.timeofweekOTSF2Day01[j].checkReservations = true ; this.showday1 = true;
               if(this.timeofweekOTSF2Day01[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day01[j].id   ; k++){
@@ -7586,12 +7615,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day01.length; j++){
             if(this.timeofweekOTSF2Day01[j].roomid == 4){
               this.timeofweekOTSF2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day01[j].color = 'red' ;
+              this.timeofweekOTSF2Day01[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day01[j].showlabel = true;
-              this.timeofweekOTSF2Day01[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day01[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day01[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day01[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day01[j].checkReservations = true ;
+              this.timeofweekOTSF2Day01[j].checkReservations = true ; this.showday1 = true;
               if(this.timeofweekOTSF2Day01[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day01[j].id   ; k++){
@@ -7608,12 +7637,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day01.length; j++){
             if(this.timeofweekOTSF2Day01[j].roomid == 5){
               this.timeofweekOTSF2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day01[j].color = 'red' ;
+              this.timeofweekOTSF2Day01[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day01[j].showlabel = true;
-              this.timeofweekOTSF2Day01[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day01[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day01[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day01[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day01[j].checkReservations = true ;
+              this.timeofweekOTSF2Day01[j].checkReservations = true ; this.showday1 = true;
               if(this.timeofweekOTSF2Day01[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day01[j].id   ; k++){
@@ -7630,12 +7659,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day01.length; j++){
             if(this.timeofweekOTSF2Day01[j].roomid == 6){
               this.timeofweekOTSF2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day01[j].color = 'red' ;
+              this.timeofweekOTSF2Day01[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day01[j].showlabel = true;
-              this.timeofweekOTSF2Day01[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day01[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day01[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day01[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day01[j].checkReservations = true ;
+              this.timeofweekOTSF2Day01[j].checkReservations = true ; this.showday1 = true;
               if(this.timeofweekOTSF2Day01[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day01[j].id   ; k++){
@@ -7652,12 +7681,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day01.length; j++){
             if(this.timeofweekOTSF2Day01[j].roomid == 7){
               this.timeofweekOTSF2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day01[j].color = 'red' ;
+              this.timeofweekOTSF2Day01[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day01[j].showlabel = true;
-              this.timeofweekOTSF2Day01[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day01[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day01[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day01[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day01[j].checkReservations = true ;
+              this.timeofweekOTSF2Day01[j].checkReservations = true ; this.showday1 = true;
               if(this.timeofweekOTSF2Day01[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day01[j].id   ; k++){
@@ -7674,12 +7703,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day01.length; j++){
             if(this.timeofweekOTSF2Day01[j].roomid == 8){
               this.timeofweekOTSF2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day01[j].color = 'red' ;
+              this.timeofweekOTSF2Day01[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day01[j].showlabel = true;
-              this.timeofweekOTSF2Day01[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day01[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day01[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day01[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day01[j].checkReservations = true ;
+              this.timeofweekOTSF2Day01[j].checkReservations = true ; this.showday1 = true;
               if(this.timeofweekOTSF2Day01[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day01[j].id   ; k++){
@@ -7696,12 +7725,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day01.length; j++){
             if(this.timeofweekOTSF2Day01[j].roomid == 9){
               this.timeofweekOTSF2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day01[j].color = 'red' ;
+              this.timeofweekOTSF2Day01[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day01[j].showlabel = true;
-              this.timeofweekOTSF2Day01[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day01[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day01[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day01[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day01[j].checkReservations = true ;
+              this.timeofweekOTSF2Day01[j].checkReservations = true ; this.showday1 = true;
               if(this.timeofweekOTSF2Day01[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day01[j].id   ; k++){
@@ -7718,12 +7747,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day01.length; j++){
             if(this.timeofweekOTSF2Day01[j].roomid == 10){
               this.timeofweekOTSF2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day01[j].color = 'red' ;
+              this.timeofweekOTSF2Day01[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day01[j].showlabel = true;
-              this.timeofweekOTSF2Day01[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day01[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day01[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day01[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day01[j].checkReservations = true ;
+              this.timeofweekOTSF2Day01[j].checkReservations = true ; this.showday1 = true;
               if(this.timeofweekOTSF2Day01[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day01[j].id   ; k++){
@@ -7740,12 +7769,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day01.length; j++){
             if(this.timeofweekOTSF2Day01[j].roomid == 11){
               this.timeofweekOTSF2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day01[j].color = 'red' ;
+              this.timeofweekOTSF2Day01[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day01[j].showlabel = true;
-              this.timeofweekOTSF2Day01[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day01[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day01[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day01[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day01[j].checkReservations = true ;
+              this.timeofweekOTSF2Day01[j].checkReservations = true ; this.showday1 = true;
               if(this.timeofweekOTSF2Day01[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day01[j].id   ; k++){
@@ -7762,12 +7791,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day01.length; j++){
             if(this.timeofweekOTSF2Day01[j].roomid == 12){
               this.timeofweekOTSF2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day01[j].color = 'red' ;
+              this.timeofweekOTSF2Day01[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day01[j].showlabel = true;
-              this.timeofweekOTSF2Day01[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day01[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day01[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day01[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day01[j].checkReservations = true ;
+              this.timeofweekOTSF2Day01[j].checkReservations = true ; this.showday1 = true;
               if(this.timeofweekOTSF2Day01[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day01[j].id   ; k++){
@@ -7784,12 +7813,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day01.length; j++){
             if(this.timeofweekOTSF2Day01[j].roomid == 13){
               this.timeofweekOTSF2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day01[j].color = 'red' ;
+              this.timeofweekOTSF2Day01[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day01[j].showlabel = true;
-              this.timeofweekOTSF2Day01[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day01[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day01[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day01[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day01[j].checkReservations = true ;
+              this.timeofweekOTSF2Day01[j].checkReservations = true ; this.showday1 = true;
               if(this.timeofweekOTSF2Day01[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day01[j].id   ; k++){
@@ -7806,12 +7835,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day01.length; j++){
             if(this.timeofweekOTSF2Day01[j].roomid == 14){
               this.timeofweekOTSF2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day01[j].color = 'red' ;
+              this.timeofweekOTSF2Day01[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day01[j].showlabel = true;
-              this.timeofweekOTSF2Day01[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day01[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day01[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day01[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day01[j].checkReservations = true ;
+              this.timeofweekOTSF2Day01[j].checkReservations = true ; this.showday1 = true;
               if(this.timeofweekOTSF2Day01[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day01[j].id   ; k++){
@@ -7828,12 +7857,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day01.length; j++){
             if(this.timeofweekOTSF2Day01[j].roomid == 15){
               this.timeofweekOTSF2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day01[j].color = 'red' ;
+              this.timeofweekOTSF2Day01[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day01[j].showlabel = true;
-              this.timeofweekOTSF2Day01[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day01[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day01[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day01[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day01[j].checkReservations = true ;
+              this.timeofweekOTSF2Day01[j].checkReservations = true ; this.showday1 = true;
               if(this.timeofweekOTSF2Day01[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day01[j].id   ; k++){
@@ -7850,12 +7879,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day01.length; j++){
             if(this.timeofweekOTSF2Day01[j].roomid == 16){
               this.timeofweekOTSF2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day01[j].color = 'red' ;
+              this.timeofweekOTSF2Day01[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day01[j].showlabel = true;
-              this.timeofweekOTSF2Day01[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day01[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day01[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day01[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day01[j].checkReservations = true ;
+              this.timeofweekOTSF2Day01[j].checkReservations = true ; this.showday1 = true;
               if(this.timeofweekOTSF2Day01[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day01[j].id   ; k++){
@@ -7872,12 +7901,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day01.length; j++){
             if(this.timeofweekOTSF2Day01[j].roomid == 17){
               this.timeofweekOTSF2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day01[j].color = 'red' ;
+              this.timeofweekOTSF2Day01[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day01[j].showlabel = true;
-              this.timeofweekOTSF2Day01[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day01[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day01[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day01[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day01[j].checkReservations = true ;
+              this.timeofweekOTSF2Day01[j].checkReservations = true ; this.showday1 = true;
               if(this.timeofweekOTSF2Day01[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day01[j].id   ; k++){
@@ -7894,12 +7923,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day01.length; j++){
             if(this.timeofweekOTSF2Day01[j].roomid == 18){
               this.timeofweekOTSF2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day01[j].color = 'red' ;
+              this.timeofweekOTSF2Day01[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day01[j].showlabel = true;
-              this.timeofweekOTSF2Day01[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day01[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day01[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day01[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day01[j].checkReservations = true ;
+              this.timeofweekOTSF2Day01[j].checkReservations = true ; this.showday1 = true;
               if(this.timeofweekOTSF2Day01[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day01[j].id   ; k++){
@@ -7916,12 +7945,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day02.length; j++){
             if(this.timeofweekOTSF2Day02[j].roomid == 0){
               this.timeofweekOTSF2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day02[j].color = 'red' ;
+              this.timeofweekOTSF2Day02[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day02[j].showlabel = true;
-              this.timeofweekOTSF2Day02[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day02[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day02[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day02[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day02[j].checkReservations = true ;
+              this.timeofweekOTSF2Day02[j].checkReservations = true ; this.showday2 = true;
               if(this.timeofweekOTSF2Day02[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day02[j].id   ; k++){
@@ -7938,12 +7967,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day02.length; j++){
             if(this.timeofweekOTSF2Day02[j].roomid == 1){
               this.timeofweekOTSF2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day02[j].color = 'red' ;
+              this.timeofweekOTSF2Day02[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day02[j].showlabel = true;
-              this.timeofweekOTSF2Day02[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day02[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day02[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day02[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day02[j].checkReservations = true ;
+              this.timeofweekOTSF2Day02[j].checkReservations = true ; this.showday2 = true;
               if(this.timeofweekOTSF2Day02[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day02[j].id   ; k++){
@@ -7960,12 +7989,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day02.length; j++){
             if(this.timeofweekOTSF2Day02[j].roomid == 2){
               this.timeofweekOTSF2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day02[j].color = 'red' ;
+              this.timeofweekOTSF2Day02[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day02[j].showlabel = true;
-              this.timeofweekOTSF2Day02[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day02[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day02[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day02[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day02[j].checkReservations = true ;
+              this.timeofweekOTSF2Day02[j].checkReservations = true ; this.showday2 = true;
               if(this.timeofweekOTSF2Day02[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day02[j].id   ; k++){
@@ -7982,12 +8011,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day02.length; j++){
             if(this.timeofweekOTSF2Day02[j].roomid == 3){
               this.timeofweekOTSF2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day02[j].color = 'red' ;
+              this.timeofweekOTSF2Day02[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day02[j].showlabel = true;
-              this.timeofweekOTSF2Day02[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day02[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day02[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day02[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day02[j].checkReservations = true ;
+              this.timeofweekOTSF2Day02[j].checkReservations = true ; this.showday2 = true;
               if(this.timeofweekOTSF2Day02[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day02[j].id   ; k++){
@@ -8004,12 +8033,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day02.length; j++){
             if(this.timeofweekOTSF2Day02[j].roomid == 4){
               this.timeofweekOTSF2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day02[j].color = 'red' ;
+              this.timeofweekOTSF2Day02[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day02[j].showlabel = true;
-              this.timeofweekOTSF2Day02[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day02[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day02[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day02[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day02[j].checkReservations = true ;
+              this.timeofweekOTSF2Day02[j].checkReservations = true ; this.showday2 = true;
               if(this.timeofweekOTSF2Day02[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day02[j].id   ; k++){
@@ -8026,12 +8055,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day02.length; j++){
             if(this.timeofweekOTSF2Day02[j].roomid == 5){
               this.timeofweekOTSF2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day02[j].color = 'red' ;
+              this.timeofweekOTSF2Day02[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day02[j].showlabel = true;
-              this.timeofweekOTSF2Day02[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day02[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day02[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day02[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day02[j].checkReservations = true ;
+              this.timeofweekOTSF2Day02[j].checkReservations = true ; this.showday2 = true;
               if(this.timeofweekOTSF2Day02[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day02[j].id   ; k++){
@@ -8048,12 +8077,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day02.length; j++){
             if(this.timeofweekOTSF2Day02[j].roomid == 6){
               this.timeofweekOTSF2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day02[j].color = 'red' ;
+              this.timeofweekOTSF2Day02[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day02[j].showlabel = true;
-              this.timeofweekOTSF2Day02[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day02[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day02[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day02[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day02[j].checkReservations = true ;
+              this.timeofweekOTSF2Day02[j].checkReservations = true ; this.showday2 = true;
               if(this.timeofweekOTSF2Day02[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day02[j].id   ; k++){
@@ -8070,12 +8099,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day02.length; j++){
             if(this.timeofweekOTSF2Day02[j].roomid == 7){
               this.timeofweekOTSF2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day02[j].color = 'red' ;
+              this.timeofweekOTSF2Day02[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day02[j].showlabel = true;
-              this.timeofweekOTSF2Day02[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day02[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day02[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day02[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day02[j].checkReservations = true ;
+              this.timeofweekOTSF2Day02[j].checkReservations = true ; this.showday2 = true;
               if(this.timeofweekOTSF2Day02[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day02[j].id   ; k++){
@@ -8092,12 +8121,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day02.length; j++){
             if(this.timeofweekOTSF2Day02[j].roomid == 8){
               this.timeofweekOTSF2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day02[j].color = 'red' ;
+              this.timeofweekOTSF2Day02[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day02[j].showlabel = true;
-              this.timeofweekOTSF2Day02[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day02[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day02[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day02[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day02[j].checkReservations = true ;
+              this.timeofweekOTSF2Day02[j].checkReservations = true ; this.showday2 = true;
               if(this.timeofweekOTSF2Day02[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day02[j].id   ; k++){
@@ -8114,12 +8143,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day02.length; j++){
             if(this.timeofweekOTSF2Day02[j].roomid == 9){
               this.timeofweekOTSF2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day02[j].color = 'red' ;
+              this.timeofweekOTSF2Day02[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day02[j].showlabel = true;
-              this.timeofweekOTSF2Day02[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day02[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day02[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day02[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day02[j].checkReservations = true ;
+              this.timeofweekOTSF2Day02[j].checkReservations = true ; this.showday2 = true;
               if(this.timeofweekOTSF2Day02[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day02[j].id   ; k++){
@@ -8136,12 +8165,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day02.length; j++){
             if(this.timeofweekOTSF2Day02[j].roomid == 10){
               this.timeofweekOTSF2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day02[j].color = 'red' ;
+              this.timeofweekOTSF2Day02[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day02[j].showlabel = true;
-              this.timeofweekOTSF2Day02[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day02[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day02[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day02[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day02[j].checkReservations = true ;
+              this.timeofweekOTSF2Day02[j].checkReservations = true ; this.showday2 = true;
               if(this.timeofweekOTSF2Day02[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day02[j].id   ; k++){
@@ -8158,12 +8187,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day02.length; j++){
             if(this.timeofweekOTSF2Day02[j].roomid == 11){
               this.timeofweekOTSF2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day02[j].color = 'red' ;
+              this.timeofweekOTSF2Day02[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day02[j].showlabel = true;
-              this.timeofweekOTSF2Day02[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day02[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day02[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day02[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day02[j].checkReservations = true ;
+              this.timeofweekOTSF2Day02[j].checkReservations = true ; this.showday2 = true;
               if(this.timeofweekOTSF2Day02[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day02[j].id   ; k++){
@@ -8180,12 +8209,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day02.length; j++){
             if(this.timeofweekOTSF2Day02[j].roomid == 12){
               this.timeofweekOTSF2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day02[j].color = 'red' ;
+              this.timeofweekOTSF2Day02[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day02[j].showlabel = true;
-              this.timeofweekOTSF2Day02[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day02[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day02[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day02[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day02[j].checkReservations = true ;
+              this.timeofweekOTSF2Day02[j].checkReservations = true ; this.showday2 = true;
               if(this.timeofweekOTSF2Day02[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day02[j].id   ; k++){
@@ -8202,12 +8231,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day02.length; j++){
             if(this.timeofweekOTSF2Day02[j].roomid == 13){
               this.timeofweekOTSF2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day02[j].color = 'red' ;
+              this.timeofweekOTSF2Day02[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day02[j].showlabel = true;
-              this.timeofweekOTSF2Day02[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day02[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day02[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day02[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day02[j].checkReservations = true ;
+              this.timeofweekOTSF2Day02[j].checkReservations = true ; this.showday2 = true;
               if(this.timeofweekOTSF2Day02[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day02[j].id   ; k++){
@@ -8224,12 +8253,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day02.length; j++){
             if(this.timeofweekOTSF2Day02[j].roomid == 14){
               this.timeofweekOTSF2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day02[j].color = 'red' ;
+              this.timeofweekOTSF2Day02[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day02[j].showlabel = true;
-              this.timeofweekOTSF2Day02[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day02[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day02[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day02[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day02[j].checkReservations = true ;
+              this.timeofweekOTSF2Day02[j].checkReservations = true ; this.showday2 = true;
               if(this.timeofweekOTSF2Day02[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day02[j].id   ; k++){
@@ -8246,12 +8275,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day02.length; j++){
             if(this.timeofweekOTSF2Day02[j].roomid == 15){
               this.timeofweekOTSF2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day02[j].color = 'red' ;
+              this.timeofweekOTSF2Day02[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day02[j].showlabel = true;
-              this.timeofweekOTSF2Day02[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day02[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day02[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day02[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day02[j].checkReservations = true ;
+              this.timeofweekOTSF2Day02[j].checkReservations = true ; this.showday2 = true;
               if(this.timeofweekOTSF2Day02[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day02[j].id   ; k++){
@@ -8268,12 +8297,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day02.length; j++){
             if(this.timeofweekOTSF2Day02[j].roomid == 16){
               this.timeofweekOTSF2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day02[j].color = 'red' ;
+              this.timeofweekOTSF2Day02[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day02[j].showlabel = true;
-              this.timeofweekOTSF2Day02[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day02[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day02[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day02[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day02[j].checkReservations = true ;
+              this.timeofweekOTSF2Day02[j].checkReservations = true ; this.showday2 = true;
               if(this.timeofweekOTSF2Day02[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day02[j].id   ; k++){
@@ -8290,12 +8319,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day02.length; j++){
             if(this.timeofweekOTSF2Day02[j].roomid == 17){
               this.timeofweekOTSF2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day02[j].color = 'red' ;
+              this.timeofweekOTSF2Day02[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day02[j].showlabel = true;
-              this.timeofweekOTSF2Day02[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day02[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day02[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day02[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day02[j].checkReservations = true ;
+              this.timeofweekOTSF2Day02[j].checkReservations = true ; this.showday2 = true;
               if(this.timeofweekOTSF2Day02[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day02[j].id   ; k++){
@@ -8312,12 +8341,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day02.length; j++){
             if(this.timeofweekOTSF2Day02[j].roomid == 18){
               this.timeofweekOTSF2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day02[j].color = 'red' ;
+              this.timeofweekOTSF2Day02[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day02[j].showlabel = true;
-              this.timeofweekOTSF2Day02[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day02[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day02[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day02[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day02[j].checkReservations = true ;
+              this.timeofweekOTSF2Day02[j].checkReservations = true ; this.showday2 = true;
               if(this.timeofweekOTSF2Day02[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day02[j].id   ; k++){
@@ -8334,12 +8363,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day03.length; j++){
             if(this.timeofweekOTSF2Day03[j].roomid == 0){
               this.timeofweekOTSF2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day03[j].color = 'red' ;
+              this.timeofweekOTSF2Day03[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day03[j].showlabel = true;
-              this.timeofweekOTSF2Day03[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day03[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day03[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day03[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day03[j].checkReservations = true ;
+              this.timeofweekOTSF2Day03[j].checkReservations = true ; this.showday3 = true;
               if(this.timeofweekOTSF2Day03[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day03[j].id   ; k++){
@@ -8356,12 +8385,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day03.length; j++){
             if(this.timeofweekOTSF2Day03[j].roomid == 1){
               this.timeofweekOTSF2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day03[j].color = 'red' ;
+              this.timeofweekOTSF2Day03[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day03[j].showlabel = true;
-              this.timeofweekOTSF2Day03[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day03[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day03[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day03[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day03[j].checkReservations = true ;
+              this.timeofweekOTSF2Day03[j].checkReservations = true ; this.showday3 = true;
               if(this.timeofweekOTSF2Day03[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day03[j].id   ; k++){
@@ -8378,12 +8407,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day03.length; j++){
             if(this.timeofweekOTSF2Day03[j].roomid == 2){
               this.timeofweekOTSF2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day03[j].color = 'red' ;
+              this.timeofweekOTSF2Day03[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day03[j].showlabel = true;
-              this.timeofweekOTSF2Day03[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day03[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day03[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day03[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day03[j].checkReservations = true ;
+              this.timeofweekOTSF2Day03[j].checkReservations = true ; this.showday3 = true;
               if(this.timeofweekOTSF2Day03[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day03[j].id   ; k++){
@@ -8400,12 +8429,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day03.length; j++){
             if(this.timeofweekOTSF2Day03[j].roomid == 3){
               this.timeofweekOTSF2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day03[j].color = 'red' ;
+              this.timeofweekOTSF2Day03[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day03[j].showlabel = true;
-              this.timeofweekOTSF2Day03[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day03[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day03[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day03[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day03[j].checkReservations = true ;
+              this.timeofweekOTSF2Day03[j].checkReservations = true ; this.showday3 = true;
               if(this.timeofweekOTSF2Day03[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day03[j].id   ; k++){
@@ -8422,12 +8451,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day03.length; j++){
             if(this.timeofweekOTSF2Day03[j].roomid == 4){
               this.timeofweekOTSF2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day03[j].color = 'red' ;
+              this.timeofweekOTSF2Day03[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day03[j].showlabel = true;
-              this.timeofweekOTSF2Day03[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day03[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day03[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day03[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day03[j].checkReservations = true ;
+              this.timeofweekOTSF2Day03[j].checkReservations = true ; this.showday3 = true;
               if(this.timeofweekOTSF2Day03[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day03[j].id   ; k++){
@@ -8444,12 +8473,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day03.length; j++){
             if(this.timeofweekOTSF2Day03[j].roomid == 5){
               this.timeofweekOTSF2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day03[j].color = 'red' ;
+              this.timeofweekOTSF2Day03[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day03[j].showlabel = true;
-              this.timeofweekOTSF2Day03[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day03[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day03[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day03[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day03[j].checkReservations = true ;
+              this.timeofweekOTSF2Day03[j].checkReservations = true ; this.showday3 = true;
               if(this.timeofweekOTSF2Day03[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day03[j].id   ; k++){
@@ -8466,12 +8495,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day03.length; j++){
             if(this.timeofweekOTSF2Day03[j].roomid == 6){
               this.timeofweekOTSF2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day03[j].color = 'red' ;
+              this.timeofweekOTSF2Day03[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day03[j].showlabel = true;
-              this.timeofweekOTSF2Day03[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day03[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day03[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day03[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day03[j].checkReservations = true ;
+              this.timeofweekOTSF2Day03[j].checkReservations = true ; this.showday3 = true;
               if(this.timeofweekOTSF2Day03[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day03[j].id   ; k++){
@@ -8488,12 +8517,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day03.length; j++){
             if(this.timeofweekOTSF2Day03[j].roomid == 7){
               this.timeofweekOTSF2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day03[j].color = 'red' ;
+              this.timeofweekOTSF2Day03[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day03[j].showlabel = true;
-              this.timeofweekOTSF2Day03[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day03[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day03[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day03[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day03[j].checkReservations = true ;
+              this.timeofweekOTSF2Day03[j].checkReservations = true ; this.showday3 = true;
               if(this.timeofweekOTSF2Day03[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day03[j].id   ; k++){
@@ -8510,12 +8539,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day03.length; j++){
             if(this.timeofweekOTSF2Day03[j].roomid == 8){
               this.timeofweekOTSF2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day03[j].color = 'red' ;
+              this.timeofweekOTSF2Day03[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day03[j].showlabel = true;
-              this.timeofweekOTSF2Day03[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day03[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day03[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day03[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day03[j].checkReservations = true ;
+              this.timeofweekOTSF2Day03[j].checkReservations = true ; this.showday3 = true;
               if(this.timeofweekOTSF2Day03[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day03[j].id   ; k++){
@@ -8532,12 +8561,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day03.length; j++){
             if(this.timeofweekOTSF2Day03[j].roomid == 9){
               this.timeofweekOTSF2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day03[j].color = 'red' ;
+              this.timeofweekOTSF2Day03[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day03[j].showlabel = true;
-              this.timeofweekOTSF2Day03[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day03[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day03[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day03[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day03[j].checkReservations = true ;
+              this.timeofweekOTSF2Day03[j].checkReservations = true ; this.showday3 = true;
               if(this.timeofweekOTSF2Day03[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day03[j].id   ; k++){
@@ -8554,12 +8583,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day03.length; j++){
             if(this.timeofweekOTSF2Day03[j].roomid == 10){
               this.timeofweekOTSF2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day03[j].color = 'red' ;
+              this.timeofweekOTSF2Day03[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day03[j].showlabel = true;
-              this.timeofweekOTSF2Day03[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day03[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day03[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day03[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day03[j].checkReservations = true ;
+              this.timeofweekOTSF2Day03[j].checkReservations = true ; this.showday3 = true;
               if(this.timeofweekOTSF2Day03[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day03[j].id   ; k++){
@@ -8576,12 +8605,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day03.length; j++){
             if(this.timeofweekOTSF2Day03[j].roomid == 11){
               this.timeofweekOTSF2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day03[j].color = 'red' ;
+              this.timeofweekOTSF2Day03[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day03[j].showlabel = true;
-              this.timeofweekOTSF2Day03[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day03[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day03[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day03[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day03[j].checkReservations = true ;
+              this.timeofweekOTSF2Day03[j].checkReservations = true ; this.showday3 = true;
               if(this.timeofweekOTSF2Day03[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day03[j].id   ; k++){
@@ -8598,12 +8627,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day03.length; j++){
             if(this.timeofweekOTSF2Day03[j].roomid == 12){
               this.timeofweekOTSF2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day03[j].color = 'red' ;
+              this.timeofweekOTSF2Day03[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day03[j].showlabel = true;
-              this.timeofweekOTSF2Day03[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day03[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day03[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day03[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day03[j].checkReservations = true ;
+              this.timeofweekOTSF2Day03[j].checkReservations = true ; this.showday3 = true;
               if(this.timeofweekOTSF2Day03[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day03[j].id   ; k++){
@@ -8620,12 +8649,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day03.length; j++){
             if(this.timeofweekOTSF2Day03[j].roomid == 13){
               this.timeofweekOTSF2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day03[j].color = 'red' ;
+              this.timeofweekOTSF2Day03[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day03[j].showlabel = true;
-              this.timeofweekOTSF2Day03[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day03[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day03[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day03[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day03[j].checkReservations = true ;
+              this.timeofweekOTSF2Day03[j].checkReservations = true ; this.showday3 = true;
               if(this.timeofweekOTSF2Day03[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day03[j].id   ; k++){
@@ -8642,12 +8671,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day03.length; j++){
             if(this.timeofweekOTSF2Day03[j].roomid == 14){
               this.timeofweekOTSF2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day03[j].color = 'red' ;
+              this.timeofweekOTSF2Day03[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day03[j].showlabel = true;
-              this.timeofweekOTSF2Day03[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day03[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day03[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day03[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day03[j].checkReservations = true ;
+              this.timeofweekOTSF2Day03[j].checkReservations = true ; this.showday3 = true;
               if(this.timeofweekOTSF2Day03[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day03[j].id   ; k++){
@@ -8664,12 +8693,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day03.length; j++){
             if(this.timeofweekOTSF2Day03[j].roomid == 15){
               this.timeofweekOTSF2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day03[j].color = 'red' ;
+              this.timeofweekOTSF2Day03[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day03[j].showlabel = true;
-              this.timeofweekOTSF2Day03[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day03[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day03[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day03[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day03[j].checkReservations = true ;
+              this.timeofweekOTSF2Day03[j].checkReservations = true ; this.showday3 = true;
               if(this.timeofweekOTSF2Day03[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day03[j].id   ; k++){
@@ -8686,12 +8715,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day03.length; j++){
             if(this.timeofweekOTSF2Day03[j].roomid == 16){
               this.timeofweekOTSF2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day03[j].color = 'red' ;
+              this.timeofweekOTSF2Day03[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day03[j].showlabel = true;
-              this.timeofweekOTSF2Day03[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day03[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day03[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day03[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day03[j].checkReservations = true ;
+              this.timeofweekOTSF2Day03[j].checkReservations = true ; this.showday3 = true;
               if(this.timeofweekOTSF2Day03[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day03[j].id   ; k++){
@@ -8708,12 +8737,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day03.length; j++){
             if(this.timeofweekOTSF2Day03[j].roomid == 17){
               this.timeofweekOTSF2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day03[j].color = 'red' ;
+              this.timeofweekOTSF2Day03[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day03[j].showlabel = true;
-              this.timeofweekOTSF2Day03[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day03[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day03[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day03[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day03[j].checkReservations = true ;
+              this.timeofweekOTSF2Day03[j].checkReservations = true ; this.showday3 = true;
               if(this.timeofweekOTSF2Day03[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day03[j].id   ; k++){
@@ -8730,12 +8759,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day03.length; j++){
             if(this.timeofweekOTSF2Day03[j].roomid == 18){
               this.timeofweekOTSF2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day03[j].color = 'red' ;
+              this.timeofweekOTSF2Day03[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day03[j].showlabel = true;
-              this.timeofweekOTSF2Day03[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day03[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day03[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day03[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day03[j].checkReservations = true ;
+              this.timeofweekOTSF2Day03[j].checkReservations = true ; this.showday3 = true;
               if(this.timeofweekOTSF2Day03[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day03[j].id   ; k++){
@@ -8752,12 +8781,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day04.length; j++){
             if(this.timeofweekOTSF2Day04[j].roomid == 0){
               this.timeofweekOTSF2Day04[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day04[j].color = 'red' ;
+              this.timeofweekOTSF2Day04[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day04[j].showlabel = true;
-              this.timeofweekOTSF2Day04[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day04[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day04[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day04[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day04[j].checkReservations = true ;
+              this.timeofweekOTSF2Day04[j].checkReservations = true ; this.showday4 = true;
               if(this.timeofweekOTSF2Day04[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day04[j].id   ; k++){
@@ -8774,12 +8803,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day04.length; j++){
             if(this.timeofweekOTSF2Day04[j].roomid == 1){
               this.timeofweekOTSF2Day04[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day04[j].color = 'red' ;
+              this.timeofweekOTSF2Day04[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day04[j].showlabel = true;
-              this.timeofweekOTSF2Day04[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day04[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day04[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day04[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day04[j].checkReservations = true ;
+              this.timeofweekOTSF2Day04[j].checkReservations = true ; this.showday4 = true;
               if(this.timeofweekOTSF2Day04[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day04[j].id   ; k++){
@@ -8796,12 +8825,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day04.length; j++){
             if(this.timeofweekOTSF2Day04[j].roomid == 2){
               this.timeofweekOTSF2Day04[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day04[j].color = 'red' ;
+              this.timeofweekOTSF2Day04[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day04[j].showlabel = true;
-              this.timeofweekOTSF2Day04[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day04[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day04[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day04[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day04[j].checkReservations = true ;
+              this.timeofweekOTSF2Day04[j].checkReservations = true ; this.showday4 = true;
               if(this.timeofweekOTSF2Day04[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day04[j].id   ; k++){
@@ -8818,12 +8847,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day04.length; j++){
             if(this.timeofweekOTSF2Day04[j].roomid == 3){
               this.timeofweekOTSF2Day04[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day04[j].color = 'red' ;
+              this.timeofweekOTSF2Day04[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day04[j].showlabel = true;
-              this.timeofweekOTSF2Day04[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day04[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day04[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day04[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day04[j].checkReservations = true ;
+              this.timeofweekOTSF2Day04[j].checkReservations = true ; this.showday4 = true;
               if(this.timeofweekOTSF2Day04[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day04[j].id   ; k++){
@@ -8840,12 +8869,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day04.length; j++){
             if(this.timeofweekOTSF2Day04[j].roomid == 4){
               this.timeofweekOTSF2Day04[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day04[j].color = 'red' ;
+              this.timeofweekOTSF2Day04[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day04[j].showlabel = true;
-              this.timeofweekOTSF2Day04[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day04[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day04[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day04[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day04[j].checkReservations = true ;
+              this.timeofweekOTSF2Day04[j].checkReservations = true ; this.showday4 = true;
               if(this.timeofweekOTSF2Day04[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day04[j].id   ; k++){
@@ -8862,12 +8891,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day04.length; j++){
             if(this.timeofweekOTSF2Day04[j].roomid == 5){
               this.timeofweekOTSF2Day04[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day04[j].color = 'red' ;
+              this.timeofweekOTSF2Day04[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day04[j].showlabel = true;
-              this.timeofweekOTSF2Day04[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day04[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day04[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day04[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day04[j].checkReservations = true ;
+              this.timeofweekOTSF2Day04[j].checkReservations = true ; this.showday4 = true;
               if(this.timeofweekOTSF2Day04[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day04[j].id   ; k++){
@@ -8884,12 +8913,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day04.length; j++){
             if(this.timeofweekOTSF2Day04[j].roomid == 6){
               this.timeofweekOTSF2Day04[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day04[j].color = 'red' ;
+              this.timeofweekOTSF2Day04[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day04[j].showlabel = true;
-              this.timeofweekOTSF2Day04[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day04[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day04[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day04[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day04[j].checkReservations = true ;
+              this.timeofweekOTSF2Day04[j].checkReservations = true ; this.showday4 = true;
               if(this.timeofweekOTSF2Day04[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day04[j].id   ; k++){
@@ -8906,12 +8935,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day04.length; j++){
             if(this.timeofweekOTSF2Day04[j].roomid == 7){
               this.timeofweekOTSF2Day04[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day04[j].color = 'red' ;
+              this.timeofweekOTSF2Day04[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day04[j].showlabel = true;
-              this.timeofweekOTSF2Day04[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day04[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day04[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day04[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day04[j].checkReservations = true ;
+              this.timeofweekOTSF2Day04[j].checkReservations = true ; this.showday4 = true;
               if(this.timeofweekOTSF2Day04[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day04[j].id   ; k++){
@@ -8928,12 +8957,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day04.length; j++){
             if(this.timeofweekOTSF2Day04[j].roomid == 8){
               this.timeofweekOTSF2Day04[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day04[j].color = 'red' ;
+              this.timeofweekOTSF2Day04[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day04[j].showlabel = true;
-              this.timeofweekOTSF2Day04[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day04[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day04[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day04[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day04[j].checkReservations = true ;
+              this.timeofweekOTSF2Day04[j].checkReservations = true ; this.showday4 = true;
               if(this.timeofweekOTSF2Day04[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day04[j].id   ; k++){
@@ -8950,12 +8979,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day04.length; j++){
             if(this.timeofweekOTSF2Day04[j].roomid == 9){
               this.timeofweekOTSF2Day04[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day04[j].color = 'red' ;
+              this.timeofweekOTSF2Day04[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day04[j].showlabel = true;
-              this.timeofweekOTSF2Day04[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day04[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day04[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day04[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day04[j].checkReservations = true ;
+              this.timeofweekOTSF2Day04[j].checkReservations = true ; this.showday4 = true;
               if(this.timeofweekOTSF2Day04[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day04[j].id   ; k++){
@@ -8972,12 +9001,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day04.length; j++){
             if(this.timeofweekOTSF2Day04[j].roomid == 10){
               this.timeofweekOTSF2Day04[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day04[j].color = 'red' ;
+              this.timeofweekOTSF2Day04[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day04[j].showlabel = true;
-              this.timeofweekOTSF2Day04[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day04[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day04[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day04[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day04[j].checkReservations = true ;
+              this.timeofweekOTSF2Day04[j].checkReservations = true ; this.showday4 = true;
               if(this.timeofweekOTSF2Day04[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day04[j].id   ; k++){
@@ -8994,12 +9023,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day04.length; j++){
             if(this.timeofweekOTSF2Day04[j].roomid == 11){
               this.timeofweekOTSF2Day04[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day04[j].color = 'red' ;
+              this.timeofweekOTSF2Day04[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day04[j].showlabel = true;
-              this.timeofweekOTSF2Day04[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day04[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day04[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day04[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day04[j].checkReservations = true ;
+              this.timeofweekOTSF2Day04[j].checkReservations = true ; this.showday4 = true;
               if(this.timeofweekOTSF2Day04[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day04[j].id   ; k++){
@@ -9016,12 +9045,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day04.length; j++){
             if(this.timeofweekOTSF2Day04[j].roomid == 12){
               this.timeofweekOTSF2Day04[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day04[j].color = 'red' ;
+              this.timeofweekOTSF2Day04[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day04[j].showlabel = true;
-              this.timeofweekOTSF2Day04[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day04[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day04[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day04[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day04[j].checkReservations = true ;
+              this.timeofweekOTSF2Day04[j].checkReservations = true ; this.showday4 = true;
               if(this.timeofweekOTSF2Day04[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day04[j].id   ; k++){
@@ -9038,12 +9067,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day04.length; j++){
             if(this.timeofweekOTSF2Day04[j].roomid == 13){
               this.timeofweekOTSF2Day04[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day04[j].color = 'red' ;
+              this.timeofweekOTSF2Day04[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day04[j].showlabel = true;
-              this.timeofweekOTSF2Day04[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day04[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day04[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day04[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day04[j].checkReservations = true ;
+              this.timeofweekOTSF2Day04[j].checkReservations = true ; this.showday4 = true;
               if(this.timeofweekOTSF2Day04[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day04[j].id   ; k++){
@@ -9060,12 +9089,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day04.length; j++){
             if(this.timeofweekOTSF2Day04[j].roomid == 14){
               this.timeofweekOTSF2Day04[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day04[j].color = 'red' ;
+              this.timeofweekOTSF2Day04[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day04[j].showlabel = true;
-              this.timeofweekOTSF2Day04[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day04[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day04[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day04[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day04[j].checkReservations = true ;
+              this.timeofweekOTSF2Day04[j].checkReservations = true ; this.showday4 = true;
               if(this.timeofweekOTSF2Day04[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day04[j].id   ; k++){
@@ -9082,12 +9111,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day04.length; j++){
             if(this.timeofweekOTSF2Day04[j].roomid == 15){
               this.timeofweekOTSF2Day04[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day04[j].color = 'red' ;
+              this.timeofweekOTSF2Day04[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day04[j].showlabel = true;
-              this.timeofweekOTSF2Day04[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day04[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day04[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day04[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day04[j].checkReservations = true ;
+              this.timeofweekOTSF2Day04[j].checkReservations = true ; this.showday4 = true;
               if(this.timeofweekOTSF2Day04[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day04[j].id   ; k++){
@@ -9104,12 +9133,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day04.length; j++){
             if(this.timeofweekOTSF2Day04[j].roomid == 16){
               this.timeofweekOTSF2Day04[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day04[j].color = 'red' ;
+              this.timeofweekOTSF2Day04[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day04[j].showlabel = true;
-              this.timeofweekOTSF2Day04[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day04[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day04[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day04[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day04[j].checkReservations = true ;
+              this.timeofweekOTSF2Day04[j].checkReservations = true ; this.showday4 = true;
               if(this.timeofweekOTSF2Day04[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day04[j].id   ; k++){
@@ -9126,12 +9155,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day04.length; j++){
             if(this.timeofweekOTSF2Day04[j].roomid == 17){
               this.timeofweekOTSF2Day04[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day04[j].color = 'red' ;
+              this.timeofweekOTSF2Day04[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day04[j].showlabel = true;
-              this.timeofweekOTSF2Day04[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day04[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day04[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day04[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day04[j].checkReservations = true ;
+              this.timeofweekOTSF2Day04[j].checkReservations = true ; this.showday4 = true;
               if(this.timeofweekOTSF2Day04[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day04[j].id   ; k++){
@@ -9148,12 +9177,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day04.length; j++){
             if(this.timeofweekOTSF2Day04[j].roomid == 18){
               this.timeofweekOTSF2Day04[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day04[j].color = 'red' ;
+              this.timeofweekOTSF2Day04[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day04[j].showlabel = true;
-              this.timeofweekOTSF2Day04[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day04[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day04[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day04[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day04[j].checkReservations = true ;
+              this.timeofweekOTSF2Day04[j].checkReservations = true ; this.showday4 = true;
               if(this.timeofweekOTSF2Day04[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day04[j].id   ; k++){
@@ -9170,12 +9199,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day05.length; j++){
             if(this.timeofweekOTSF2Day05[j].roomid == 0){
               this.timeofweekOTSF2Day05[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day05[j].color = 'red' ;
+              this.timeofweekOTSF2Day05[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day05[j].showlabel = true;
-              this.timeofweekOTSF2Day05[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day05[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day05[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day05[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day05[j].checkReservations = true ;
+              this.timeofweekOTSF2Day05[j].checkReservations = true ; this.showday5 = true;
               if(this.timeofweekOTSF2Day05[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day05[j].id   ; k++){
@@ -9192,12 +9221,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day05.length; j++){
             if(this.timeofweekOTSF2Day05[j].roomid == 1){
               this.timeofweekOTSF2Day05[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day05[j].color = 'red' ;
+              this.timeofweekOTSF2Day05[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day05[j].showlabel = true;
-              this.timeofweekOTSF2Day05[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day05[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day05[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day05[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day05[j].checkReservations = true ;
+              this.timeofweekOTSF2Day05[j].checkReservations = true ; this.showday5 = true;
               if(this.timeofweekOTSF2Day05[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day05[j].id   ; k++){
@@ -9214,12 +9243,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day05.length; j++){
             if(this.timeofweekOTSF2Day05[j].roomid == 2){
               this.timeofweekOTSF2Day05[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day05[j].color = 'red' ;
+              this.timeofweekOTSF2Day05[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day05[j].showlabel = true;
-              this.timeofweekOTSF2Day05[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day05[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day05[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day05[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day05[j].checkReservations = true ;
+              this.timeofweekOTSF2Day05[j].checkReservations = true ; this.showday5 = true;
               if(this.timeofweekOTSF2Day05[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day05[j].id   ; k++){
@@ -9236,12 +9265,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day05.length; j++){
             if(this.timeofweekOTSF2Day05[j].roomid == 3){
               this.timeofweekOTSF2Day05[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day05[j].color = 'red' ;
+              this.timeofweekOTSF2Day05[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day05[j].showlabel = true;
-              this.timeofweekOTSF2Day05[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day05[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day05[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day05[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day05[j].checkReservations = true ;
+              this.timeofweekOTSF2Day05[j].checkReservations = true ; this.showday5 = true;
               if(this.timeofweekOTSF2Day05[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day05[j].id   ; k++){
@@ -9258,12 +9287,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day05.length; j++){
             if(this.timeofweekOTSF2Day05[j].roomid == 4){
               this.timeofweekOTSF2Day05[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day05[j].color = 'red' ;
+              this.timeofweekOTSF2Day05[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day05[j].showlabel = true;
-              this.timeofweekOTSF2Day05[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day05[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day05[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day05[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day05[j].checkReservations = true ;
+              this.timeofweekOTSF2Day05[j].checkReservations = true ; this.showday5 = true;
               if(this.timeofweekOTSF2Day05[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day05[j].id   ; k++){
@@ -9280,12 +9309,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day05.length; j++){
             if(this.timeofweekOTSF2Day05[j].roomid == 5){
               this.timeofweekOTSF2Day05[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day05[j].color = 'red' ;
+              this.timeofweekOTSF2Day05[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day05[j].showlabel = true;
-              this.timeofweekOTSF2Day05[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day05[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day05[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day05[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day05[j].checkReservations = true ;
+              this.timeofweekOTSF2Day05[j].checkReservations = true ; this.showday5 = true;
               if(this.timeofweekOTSF2Day05[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day05[j].id   ; k++){
@@ -9302,12 +9331,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day05.length; j++){
             if(this.timeofweekOTSF2Day05[j].roomid == 6){
               this.timeofweekOTSF2Day05[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day05[j].color = 'red' ;
+              this.timeofweekOTSF2Day05[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day05[j].showlabel = true;
-              this.timeofweekOTSF2Day05[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day05[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day05[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day05[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day05[j].checkReservations = true ;
+              this.timeofweekOTSF2Day05[j].checkReservations = true ; this.showday5 = true;
               if(this.timeofweekOTSF2Day05[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day05[j].id   ; k++){
@@ -9324,12 +9353,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day05.length; j++){
             if(this.timeofweekOTSF2Day05[j].roomid == 7){
               this.timeofweekOTSF2Day05[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day05[j].color = 'red' ;
+              this.timeofweekOTSF2Day05[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day05[j].showlabel = true;
-              this.timeofweekOTSF2Day05[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day05[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day05[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day05[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day05[j].checkReservations = true ;
+              this.timeofweekOTSF2Day05[j].checkReservations = true ; this.showday5 = true;
               if(this.timeofweekOTSF2Day05[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day05[j].id   ; k++){
@@ -9346,12 +9375,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day05.length; j++){
             if(this.timeofweekOTSF2Day05[j].roomid == 8){
               this.timeofweekOTSF2Day05[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day05[j].color = 'red' ;
+              this.timeofweekOTSF2Day05[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day05[j].showlabel = true;
-              this.timeofweekOTSF2Day05[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day05[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day05[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day05[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day05[j].checkReservations = true ;
+              this.timeofweekOTSF2Day05[j].checkReservations = true ; this.showday5 = true;
               if(this.timeofweekOTSF2Day05[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day05[j].id   ; k++){
@@ -9368,12 +9397,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day05.length; j++){
             if(this.timeofweekOTSF2Day05[j].roomid == 9){
               this.timeofweekOTSF2Day05[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day05[j].color = 'red' ;
+              this.timeofweekOTSF2Day05[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day05[j].showlabel = true;
-              this.timeofweekOTSF2Day05[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day05[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day05[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day05[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day05[j].checkReservations = true ;
+              this.timeofweekOTSF2Day05[j].checkReservations = true ; this.showday5 = true;
               if(this.timeofweekOTSF2Day05[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day05[j].id   ; k++){
@@ -9390,12 +9419,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day05.length; j++){
             if(this.timeofweekOTSF2Day05[j].roomid == 10){
               this.timeofweekOTSF2Day05[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day05[j].color = 'red' ;
+              this.timeofweekOTSF2Day05[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day05[j].showlabel = true;
-              this.timeofweekOTSF2Day05[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day05[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day05[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day05[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day05[j].checkReservations = true ;
+              this.timeofweekOTSF2Day05[j].checkReservations = true ; this.showday5 = true;
               if(this.timeofweekOTSF2Day05[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day05[j].id   ; k++){
@@ -9412,12 +9441,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day05.length; j++){
             if(this.timeofweekOTSF2Day05[j].roomid == 11){
               this.timeofweekOTSF2Day05[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day05[j].color = 'red' ;
+              this.timeofweekOTSF2Day05[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day05[j].showlabel = true;
-              this.timeofweekOTSF2Day05[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day05[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day05[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day05[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day05[j].checkReservations = true ;
+              this.timeofweekOTSF2Day05[j].checkReservations = true ; this.showday5 = true;
               if(this.timeofweekOTSF2Day05[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day05[j].id   ; k++){
@@ -9434,12 +9463,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day05.length; j++){
             if(this.timeofweekOTSF2Day05[j].roomid == 12){
               this.timeofweekOTSF2Day05[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day05[j].color = 'red' ;
+              this.timeofweekOTSF2Day05[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day05[j].showlabel = true;
-              this.timeofweekOTSF2Day05[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day05[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day05[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day05[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day05[j].checkReservations = true ;
+              this.timeofweekOTSF2Day05[j].checkReservations = true ; this.showday5 = true;
               if(this.timeofweekOTSF2Day05[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day05[j].id   ; k++){
@@ -9456,12 +9485,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day05.length; j++){
             if(this.timeofweekOTSF2Day05[j].roomid == 13){
               this.timeofweekOTSF2Day05[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day05[j].color = 'red' ;
+              this.timeofweekOTSF2Day05[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day05[j].showlabel = true;
-              this.timeofweekOTSF2Day05[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day05[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day05[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day05[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day05[j].checkReservations = true ;
+              this.timeofweekOTSF2Day05[j].checkReservations = true ; this.showday5 = true;
               if(this.timeofweekOTSF2Day05[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day05[j].id   ; k++){
@@ -9478,12 +9507,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day05.length; j++){
             if(this.timeofweekOTSF2Day05[j].roomid == 14){
               this.timeofweekOTSF2Day05[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day05[j].color = 'red' ;
+              this.timeofweekOTSF2Day05[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day05[j].showlabel = true;
-              this.timeofweekOTSF2Day05[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day05[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day05[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day05[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day05[j].checkReservations = true ;
+              this.timeofweekOTSF2Day05[j].checkReservations = true ; this.showday5 = true;
               if(this.timeofweekOTSF2Day05[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day05[j].id   ; k++){
@@ -9500,12 +9529,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day05.length; j++){
             if(this.timeofweekOTSF2Day05[j].roomid == 15){
               this.timeofweekOTSF2Day05[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day05[j].color = 'red' ;
+              this.timeofweekOTSF2Day05[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day05[j].showlabel = true;
-              this.timeofweekOTSF2Day05[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day05[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day05[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day05[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day05[j].checkReservations = true ;
+              this.timeofweekOTSF2Day05[j].checkReservations = true ; this.showday5 = true;
               if(this.timeofweekOTSF2Day05[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day05[j].id   ; k++){
@@ -9522,12 +9551,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day05.length; j++){
             if(this.timeofweekOTSF2Day05[j].roomid == 16){
               this.timeofweekOTSF2Day05[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day05[j].color = 'red' ;
+              this.timeofweekOTSF2Day05[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day05[j].showlabel = true;
-              this.timeofweekOTSF2Day05[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day05[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day05[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day05[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day05[j].checkReservations = true ;
+              this.timeofweekOTSF2Day05[j].checkReservations = true ; this.showday5 = true;
               if(this.timeofweekOTSF2Day05[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day05[j].id   ; k++){
@@ -9544,12 +9573,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day05.length; j++){
             if(this.timeofweekOTSF2Day05[j].roomid == 17){
               this.timeofweekOTSF2Day05[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day05[j].color = 'red' ;
+              this.timeofweekOTSF2Day05[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day05[j].showlabel = true;
-              this.timeofweekOTSF2Day05[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day05[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day05[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day05[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day05[j].checkReservations = true ;
+              this.timeofweekOTSF2Day05[j].checkReservations = true ; this.showday5 = true;
               if(this.timeofweekOTSF2Day05[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day05[j].id   ; k++){
@@ -9566,12 +9595,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day05.length; j++){
             if(this.timeofweekOTSF2Day05[j].roomid == 18){
               this.timeofweekOTSF2Day05[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day05[j].color = 'red' ;
+              this.timeofweekOTSF2Day05[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day05[j].showlabel = true;
-              this.timeofweekOTSF2Day05[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day05[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day05[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day05[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day05[j].checkReservations = true ;
+              this.timeofweekOTSF2Day05[j].checkReservations = true ; this.showday5 = true;
               if(this.timeofweekOTSF2Day05[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day05[j].id   ; k++){
@@ -9588,12 +9617,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day06.length; j++){
             if(this.timeofweekOTSF2Day06[j].roomid == 0){
               this.timeofweekOTSF2Day06[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day06[j].color = 'red' ;
+              this.timeofweekOTSF2Day06[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day06[j].showlabel = true;
-              this.timeofweekOTSF2Day06[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day06[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day06[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day06[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day06[j].checkReservations = true ;
+              this.timeofweekOTSF2Day06[j].checkReservations = true ; this.showday6 = true;
               if(this.timeofweekOTSF2Day06[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day06[j].id   ; k++){
@@ -9610,12 +9639,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day06.length; j++){
             if(this.timeofweekOTSF2Day06[j].roomid == 1){
               this.timeofweekOTSF2Day06[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day06[j].color = 'red' ;
+              this.timeofweekOTSF2Day06[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day06[j].showlabel = true;
-              this.timeofweekOTSF2Day06[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day06[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day06[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day06[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day06[j].checkReservations = true ;
+              this.timeofweekOTSF2Day06[j].checkReservations = true ; this.showday6 = true;
               if(this.timeofweekOTSF2Day06[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day06[j].id   ; k++){
@@ -9632,12 +9661,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day06.length; j++){
             if(this.timeofweekOTSF2Day06[j].roomid == 2){
               this.timeofweekOTSF2Day06[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day06[j].color = 'red' ;
+              this.timeofweekOTSF2Day06[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day06[j].showlabel = true;
-              this.timeofweekOTSF2Day06[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day06[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day06[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day06[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day06[j].checkReservations = true ;
+              this.timeofweekOTSF2Day06[j].checkReservations = true ; this.showday6 = true;
               if(this.timeofweekOTSF2Day06[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day06[j].id   ; k++){
@@ -9654,12 +9683,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day06.length; j++){
             if(this.timeofweekOTSF2Day06[j].roomid == 3){
               this.timeofweekOTSF2Day06[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day06[j].color = 'red' ;
+              this.timeofweekOTSF2Day06[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day06[j].showlabel = true;
-              this.timeofweekOTSF2Day06[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day06[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day06[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day06[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day06[j].checkReservations = true ;
+              this.timeofweekOTSF2Day06[j].checkReservations = true ; this.showday6 = true;
               if(this.timeofweekOTSF2Day06[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day06[j].id   ; k++){
@@ -9676,12 +9705,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day06.length; j++){
             if(this.timeofweekOTSF2Day06[j].roomid == 4){
               this.timeofweekOTSF2Day06[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day06[j].color = 'red' ;
+              this.timeofweekOTSF2Day06[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day06[j].showlabel = true;
-              this.timeofweekOTSF2Day06[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day06[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day06[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day06[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day06[j].checkReservations = true ;
+              this.timeofweekOTSF2Day06[j].checkReservations = true ; this.showday6 = true;
               if(this.timeofweekOTSF2Day06[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day06[j].id   ; k++){
@@ -9698,12 +9727,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day06.length; j++){
             if(this.timeofweekOTSF2Day06[j].roomid == 5){
               this.timeofweekOTSF2Day06[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day06[j].color = 'red' ;
+              this.timeofweekOTSF2Day06[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day06[j].showlabel = true;
-              this.timeofweekOTSF2Day06[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day06[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day06[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day06[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day06[j].checkReservations = true ;
+              this.timeofweekOTSF2Day06[j].checkReservations = true ; this.showday6 = true;
               if(this.timeofweekOTSF2Day06[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day06[j].id   ; k++){
@@ -9720,12 +9749,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day06.length; j++){
             if(this.timeofweekOTSF2Day06[j].roomid == 6){
               this.timeofweekOTSF2Day06[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day06[j].color = 'red' ;
+              this.timeofweekOTSF2Day06[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day06[j].showlabel = true;
-              this.timeofweekOTSF2Day06[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day06[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day06[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day06[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day06[j].checkReservations = true ;
+              this.timeofweekOTSF2Day06[j].checkReservations = true ; this.showday6 = true;
               if(this.timeofweekOTSF2Day06[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day06[j].id   ; k++){
@@ -9742,12 +9771,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day06.length; j++){
             if(this.timeofweekOTSF2Day06[j].roomid == 7){
               this.timeofweekOTSF2Day06[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day06[j].color = 'red' ;
+              this.timeofweekOTSF2Day06[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day06[j].showlabel = true;
-              this.timeofweekOTSF2Day06[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day06[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day06[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day06[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day06[j].checkReservations = true ;
+              this.timeofweekOTSF2Day06[j].checkReservations = true ; this.showday6 = true;
               if(this.timeofweekOTSF2Day06[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day06[j].id   ; k++){
@@ -9764,12 +9793,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day06.length; j++){
             if(this.timeofweekOTSF2Day06[j].roomid == 8){
               this.timeofweekOTSF2Day06[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day06[j].color = 'red' ;
+              this.timeofweekOTSF2Day06[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day06[j].showlabel = true;
-              this.timeofweekOTSF2Day06[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day06[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day06[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day06[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day06[j].checkReservations = true ;
+              this.timeofweekOTSF2Day06[j].checkReservations = true ; this.showday6 = true;
               if(this.timeofweekOTSF2Day06[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day06[j].id   ; k++){
@@ -9786,12 +9815,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day06.length; j++){
             if(this.timeofweekOTSF2Day06[j].roomid == 9){
               this.timeofweekOTSF2Day06[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day06[j].color = 'red' ;
+              this.timeofweekOTSF2Day06[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day06[j].showlabel = true;
-              this.timeofweekOTSF2Day06[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day06[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day06[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day06[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day06[j].checkReservations = true ;
+              this.timeofweekOTSF2Day06[j].checkReservations = true ; this.showday6 = true;
               if(this.timeofweekOTSF2Day06[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day06[j].id   ; k++){
@@ -9808,12 +9837,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day06.length; j++){
             if(this.timeofweekOTSF2Day06[j].roomid == 10){
               this.timeofweekOTSF2Day06[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day06[j].color = 'red' ;
+              this.timeofweekOTSF2Day06[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day06[j].showlabel = true;
-              this.timeofweekOTSF2Day06[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day06[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day06[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day06[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day06[j].checkReservations = true ;
+              this.timeofweekOTSF2Day06[j].checkReservations = true ; this.showday6 = true;
               if(this.timeofweekOTSF2Day06[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day06[j].id   ; k++){
@@ -9830,12 +9859,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day06.length; j++){
             if(this.timeofweekOTSF2Day06[j].roomid == 11){
               this.timeofweekOTSF2Day06[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day06[j].color = 'red' ;
+              this.timeofweekOTSF2Day06[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day06[j].showlabel = true;
-              this.timeofweekOTSF2Day06[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day06[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day06[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day06[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day06[j].checkReservations = true ;
+              this.timeofweekOTSF2Day06[j].checkReservations = true ; this.showday6 = true;
               if(this.timeofweekOTSF2Day06[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day06[j].id   ; k++){
@@ -9852,12 +9881,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day06.length; j++){
             if(this.timeofweekOTSF2Day06[j].roomid == 12){
               this.timeofweekOTSF2Day06[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day06[j].color = 'red' ;
+              this.timeofweekOTSF2Day06[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day06[j].showlabel = true;
-              this.timeofweekOTSF2Day06[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day06[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day06[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day06[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day06[j].checkReservations = true ;
+              this.timeofweekOTSF2Day06[j].checkReservations = true ; this.showday6 = true;
               if(this.timeofweekOTSF2Day06[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day06[j].id   ; k++){
@@ -9874,12 +9903,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day06.length; j++){
             if(this.timeofweekOTSF2Day06[j].roomid == 13){
               this.timeofweekOTSF2Day06[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day06[j].color = 'red' ;
+              this.timeofweekOTSF2Day06[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day06[j].showlabel = true;
-              this.timeofweekOTSF2Day06[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day06[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day06[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day06[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day06[j].checkReservations = true ;
+              this.timeofweekOTSF2Day06[j].checkReservations = true ; this.showday6 = true;
               if(this.timeofweekOTSF2Day06[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day06[j].id   ; k++){
@@ -9896,12 +9925,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day06.length; j++){
             if(this.timeofweekOTSF2Day06[j].roomid == 14){
               this.timeofweekOTSF2Day06[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day06[j].color = 'red' ;
+              this.timeofweekOTSF2Day06[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day06[j].showlabel = true;
-              this.timeofweekOTSF2Day06[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day06[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day06[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day06[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day06[j].checkReservations = true ;
+              this.timeofweekOTSF2Day06[j].checkReservations = true ; this.showday6 = true;
               if(this.timeofweekOTSF2Day06[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day06[j].id   ; k++){
@@ -9918,12 +9947,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day06.length; j++){
             if(this.timeofweekOTSF2Day06[j].roomid == 15){
               this.timeofweekOTSF2Day06[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day06[j].color = 'red' ;
+              this.timeofweekOTSF2Day06[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day06[j].showlabel = true;
-              this.timeofweekOTSF2Day06[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day06[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day06[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day06[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day06[j].checkReservations = true ;
+              this.timeofweekOTSF2Day06[j].checkReservations = true ; this.showday6 = true;
               if(this.timeofweekOTSF2Day06[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day06[j].id   ; k++){
@@ -9940,12 +9969,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day06.length; j++){
             if(this.timeofweekOTSF2Day06[j].roomid == 16){
               this.timeofweekOTSF2Day06[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day06[j].color = 'red' ;
+              this.timeofweekOTSF2Day06[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day06[j].showlabel = true;
-              this.timeofweekOTSF2Day06[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day06[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day06[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day06[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day06[j].checkReservations = true ;
+              this.timeofweekOTSF2Day06[j].checkReservations = true ; this.showday6 = true;
               if(this.timeofweekOTSF2Day06[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day06[j].id   ; k++){
@@ -9962,12 +9991,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day06.length; j++){
             if(this.timeofweekOTSF2Day06[j].roomid == 17){
               this.timeofweekOTSF2Day06[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day06[j].color = 'red' ;
+              this.timeofweekOTSF2Day06[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day06[j].showlabel = true;
-              this.timeofweekOTSF2Day06[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day06[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day06[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day06[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day06[j].checkReservations = true ;
+              this.timeofweekOTSF2Day06[j].checkReservations = true ; this.showday6 = true;
               if(this.timeofweekOTSF2Day06[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day06[j].id   ; k++){
@@ -9984,12 +10013,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day06.length; j++){
             if(this.timeofweekOTSF2Day06[j].roomid == 18){
               this.timeofweekOTSF2Day06[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day06[j].color = 'red' ;
+              this.timeofweekOTSF2Day06[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day06[j].showlabel = true;
-              this.timeofweekOTSF2Day06[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day06[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day06[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day06[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day06[j].checkReservations = true ;
+              this.timeofweekOTSF2Day06[j].checkReservations = true ; this.showday6 = true;
               if(this.timeofweekOTSF2Day06[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day06[j].id   ; k++){
@@ -10006,12 +10035,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day07.length; j++){
             if(this.timeofweekOTSF2Day07[j].roomid == 0){
               this.timeofweekOTSF2Day07[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day07[j].color = 'red' ;
+              this.timeofweekOTSF2Day07[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day07[j].showlabel = true;
-              this.timeofweekOTSF2Day07[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day07[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day07[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day07[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day07[j].checkReservations = true ;
+              this.timeofweekOTSF2Day07[j].checkReservations = true ; this.showday7 = true;
               if(this.timeofweekOTSF2Day07[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day07[j].id   ; k++){
@@ -10028,12 +10057,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day07.length; j++){
             if(this.timeofweekOTSF2Day07[j].roomid == 1){
               this.timeofweekOTSF2Day07[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day07[j].color = 'red' ;
+              this.timeofweekOTSF2Day07[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day07[j].showlabel = true;
-              this.timeofweekOTSF2Day07[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day07[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day07[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day07[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day07[j].checkReservations = true ;
+              this.timeofweekOTSF2Day07[j].checkReservations = true ; this.showday7 = true;
               if(this.timeofweekOTSF2Day07[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day07[j].id   ; k++){
@@ -10050,12 +10079,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day07.length; j++){
             if(this.timeofweekOTSF2Day07[j].roomid == 2){
               this.timeofweekOTSF2Day07[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day07[j].color = 'red' ;
+              this.timeofweekOTSF2Day07[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day07[j].showlabel = true;
-              this.timeofweekOTSF2Day07[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day07[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day07[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day07[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day07[j].checkReservations = true ;
+              this.timeofweekOTSF2Day07[j].checkReservations = true ; this.showday7 = true;
               if(this.timeofweekOTSF2Day07[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day07[j].id   ; k++){
@@ -10072,12 +10101,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day07.length; j++){
             if(this.timeofweekOTSF2Day07[j].roomid == 3){
               this.timeofweekOTSF2Day07[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day07[j].color = 'red' ;
+              this.timeofweekOTSF2Day07[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day07[j].showlabel = true;
-              this.timeofweekOTSF2Day07[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day07[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day07[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day07[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day07[j].checkReservations = true ;
+              this.timeofweekOTSF2Day07[j].checkReservations = true ; this.showday7 = true;
               if(this.timeofweekOTSF2Day07[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day07[j].id   ; k++){
@@ -10094,12 +10123,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day07.length; j++){
             if(this.timeofweekOTSF2Day07[j].roomid == 4){
               this.timeofweekOTSF2Day07[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day07[j].color = 'red' ;
+              this.timeofweekOTSF2Day07[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day07[j].showlabel = true;
-              this.timeofweekOTSF2Day07[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day07[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day07[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day07[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day07[j].checkReservations = true ;
+              this.timeofweekOTSF2Day07[j].checkReservations = true ; this.showday7 = true;
               if(this.timeofweekOTSF2Day07[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day07[j].id   ; k++){
@@ -10116,12 +10145,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day07.length; j++){
             if(this.timeofweekOTSF2Day07[j].roomid == 5){
               this.timeofweekOTSF2Day07[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day07[j].color = 'red' ;
+              this.timeofweekOTSF2Day07[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day07[j].showlabel = true;
-              this.timeofweekOTSF2Day07[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day07[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day07[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day07[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day07[j].checkReservations = true ;
+              this.timeofweekOTSF2Day07[j].checkReservations = true ; this.showday7 = true;
               if(this.timeofweekOTSF2Day07[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day07[j].id   ; k++){
@@ -10138,12 +10167,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day07.length; j++){
             if(this.timeofweekOTSF2Day07[j].roomid == 6){
               this.timeofweekOTSF2Day07[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day07[j].color = 'red' ;
+              this.timeofweekOTSF2Day07[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day07[j].showlabel = true;
-              this.timeofweekOTSF2Day07[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day07[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day07[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day07[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day07[j].checkReservations = true ;
+              this.timeofweekOTSF2Day07[j].checkReservations = true ; this.showday7 = true;
               if(this.timeofweekOTSF2Day07[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day07[j].id   ; k++){
@@ -10160,12 +10189,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day07.length; j++){
             if(this.timeofweekOTSF2Day07[j].roomid == 7){
               this.timeofweekOTSF2Day07[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day07[j].color = 'red' ;
+              this.timeofweekOTSF2Day07[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day07[j].showlabel = true;
-              this.timeofweekOTSF2Day07[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day07[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day07[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day07[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day07[j].checkReservations = true ;
+              this.timeofweekOTSF2Day07[j].checkReservations = true ; this.showday7 = true;
               if(this.timeofweekOTSF2Day07[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day07[j].id   ; k++){
@@ -10182,12 +10211,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day07.length; j++){
             if(this.timeofweekOTSF2Day07[j].roomid == 8){
               this.timeofweekOTSF2Day07[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day07[j].color = 'red' ;
+              this.timeofweekOTSF2Day07[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day07[j].showlabel = true;
-              this.timeofweekOTSF2Day07[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day07[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day07[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day07[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day07[j].checkReservations = true ;
+              this.timeofweekOTSF2Day07[j].checkReservations = true ; this.showday7 = true;
               if(this.timeofweekOTSF2Day07[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day07[j].id   ; k++){
@@ -10204,12 +10233,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day07.length; j++){
             if(this.timeofweekOTSF2Day07[j].roomid == 9){
               this.timeofweekOTSF2Day07[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day07[j].color = 'red' ;
+              this.timeofweekOTSF2Day07[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day07[j].showlabel = true;
-              this.timeofweekOTSF2Day07[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day07[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day07[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day07[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day07[j].checkReservations = true ;
+              this.timeofweekOTSF2Day07[j].checkReservations = true ; this.showday7 = true;
               if(this.timeofweekOTSF2Day07[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day07[j].id   ; k++){
@@ -10226,12 +10255,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day07.length; j++){
             if(this.timeofweekOTSF2Day07[j].roomid == 10){
               this.timeofweekOTSF2Day07[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day07[j].color = 'red' ;
+              this.timeofweekOTSF2Day07[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day07[j].showlabel = true;
-              this.timeofweekOTSF2Day07[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day07[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day07[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day07[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day07[j].checkReservations = true ;
+              this.timeofweekOTSF2Day07[j].checkReservations = true ; this.showday7 = true;
               if(this.timeofweekOTSF2Day07[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day07[j].id   ; k++){
@@ -10248,12 +10277,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day07.length; j++){
             if(this.timeofweekOTSF2Day07[j].roomid == 11){
               this.timeofweekOTSF2Day07[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day07[j].color = 'red' ;
+              this.timeofweekOTSF2Day07[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day07[j].showlabel = true;
-              this.timeofweekOTSF2Day07[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day07[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day07[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day07[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day07[j].checkReservations = true ;
+              this.timeofweekOTSF2Day07[j].checkReservations = true ; this.showday7 = true;
               if(this.timeofweekOTSF2Day07[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day07[j].id   ; k++){
@@ -10270,12 +10299,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day07.length; j++){
             if(this.timeofweekOTSF2Day07[j].roomid == 12){
               this.timeofweekOTSF2Day07[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day07[j].color = 'red' ;
+              this.timeofweekOTSF2Day07[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day07[j].showlabel = true;
-              this.timeofweekOTSF2Day07[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day07[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day07[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day07[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day07[j].checkReservations = true ;
+              this.timeofweekOTSF2Day07[j].checkReservations = true ; this.showday7 = true;
               if(this.timeofweekOTSF2Day07[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day07[j].id   ; k++){
@@ -10292,12 +10321,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day07.length; j++){
             if(this.timeofweekOTSF2Day07[j].roomid == 13){
               this.timeofweekOTSF2Day07[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day07[j].color = 'red' ;
+              this.timeofweekOTSF2Day07[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day07[j].showlabel = true;
-              this.timeofweekOTSF2Day07[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day07[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day07[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day07[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day07[j].checkReservations = true ;
+              this.timeofweekOTSF2Day07[j].checkReservations = true ; this.showday7 = true;
               if(this.timeofweekOTSF2Day07[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day07[j].id   ; k++){
@@ -10314,12 +10343,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day07.length; j++){
             if(this.timeofweekOTSF2Day07[j].roomid == 14){
               this.timeofweekOTSF2Day07[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day07[j].color = 'red' ;
+              this.timeofweekOTSF2Day07[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day07[j].showlabel = true;
-              this.timeofweekOTSF2Day07[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day07[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day07[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day07[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day07[j].checkReservations = true ;
+              this.timeofweekOTSF2Day07[j].checkReservations = true ; this.showday7 = true;
               if(this.timeofweekOTSF2Day07[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day07[j].id   ; k++){
@@ -10336,12 +10365,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day07.length; j++){
             if(this.timeofweekOTSF2Day07[j].roomid == 15){
               this.timeofweekOTSF2Day07[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day07[j].color = 'red' ;
+              this.timeofweekOTSF2Day07[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day07[j].showlabel = true;
-              this.timeofweekOTSF2Day07[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day07[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day07[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day07[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day07[j].checkReservations = true ;
+              this.timeofweekOTSF2Day07[j].checkReservations = true ; this.showday7 = true;
               if(this.timeofweekOTSF2Day07[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day07[j].id   ; k++){
@@ -10358,12 +10387,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day07.length; j++){
             if(this.timeofweekOTSF2Day07[j].roomid == 16){
               this.timeofweekOTSF2Day07[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day07[j].color = 'red' ;
+              this.timeofweekOTSF2Day07[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day07[j].showlabel = true;
-              this.timeofweekOTSF2Day07[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day07[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day07[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day07[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day07[j].checkReservations = true ;
+              this.timeofweekOTSF2Day07[j].checkReservations = true ; this.showday7 = true;
               if(this.timeofweekOTSF2Day07[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day07[j].id   ; k++){
@@ -10380,12 +10409,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day07.length; j++){
             if(this.timeofweekOTSF2Day07[j].roomid == 17){
               this.timeofweekOTSF2Day07[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day07[j].color = 'red' ;
+              this.timeofweekOTSF2Day07[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day07[j].showlabel = true;
-              this.timeofweekOTSF2Day07[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day07[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day07[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day07[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day07[j].checkReservations = true ;
+              this.timeofweekOTSF2Day07[j].checkReservations = true ; this.showday7 = true;
               if(this.timeofweekOTSF2Day07[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day07[j].id   ; k++){
@@ -10402,12 +10431,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day07.length; j++){
             if(this.timeofweekOTSF2Day07[j].roomid == 18){
               this.timeofweekOTSF2Day07[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day07[j].color = 'red' ;
+              this.timeofweekOTSF2Day07[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day07[j].showlabel = true;
-              this.timeofweekOTSF2Day07[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day07[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day07[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day07[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day07[j].checkReservations = true ;
+              this.timeofweekOTSF2Day07[j].checkReservations = true ; this.showday7 = true;
               if(this.timeofweekOTSF2Day07[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day07[j].id   ; k++){
@@ -10424,12 +10453,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day08.length; j++){
             if(this.timeofweekOTSF2Day08[j].roomid == 0){
               this.timeofweekOTSF2Day08[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day08[j].color = 'red' ;
+              this.timeofweekOTSF2Day08[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day08[j].showlabel = true;
-              this.timeofweekOTSF2Day08[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day08[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day08[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day08[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day08[j].checkReservations = true ;
+              this.timeofweekOTSF2Day08[j].checkReservations = true ; this.showday8 = true;
               if(this.timeofweekOTSF2Day08[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day08[j].id   ; k++){
@@ -10446,12 +10475,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day08.length; j++){
             if(this.timeofweekOTSF2Day08[j].roomid == 1){
               this.timeofweekOTSF2Day08[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day08[j].color = 'red' ;
+              this.timeofweekOTSF2Day08[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day08[j].showlabel = true;
-              this.timeofweekOTSF2Day08[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day08[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day08[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day08[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day08[j].checkReservations = true ;
+              this.timeofweekOTSF2Day08[j].checkReservations = true ; this.showday8 = true;
               if(this.timeofweekOTSF2Day08[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day08[j].id   ; k++){
@@ -10468,12 +10497,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day08.length; j++){
             if(this.timeofweekOTSF2Day08[j].roomid == 2){
               this.timeofweekOTSF2Day08[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day08[j].color = 'red' ;
+              this.timeofweekOTSF2Day08[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day08[j].showlabel = true;
-              this.timeofweekOTSF2Day08[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day08[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day08[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day08[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day08[j].checkReservations = true ;
+              this.timeofweekOTSF2Day08[j].checkReservations = true ; this.showday8 = true;
               if(this.timeofweekOTSF2Day08[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day08[j].id   ; k++){
@@ -10490,12 +10519,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day08.length; j++){
             if(this.timeofweekOTSF2Day08[j].roomid == 3){
               this.timeofweekOTSF2Day08[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day08[j].color = 'red' ;
+              this.timeofweekOTSF2Day08[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day08[j].showlabel = true;
-              this.timeofweekOTSF2Day08[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day08[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day08[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day08[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day08[j].checkReservations = true ;
+              this.timeofweekOTSF2Day08[j].checkReservations = true ; this.showday8 = true;
               if(this.timeofweekOTSF2Day08[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day08[j].id   ; k++){
@@ -10512,12 +10541,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day08.length; j++){
             if(this.timeofweekOTSF2Day08[j].roomid == 4){
               this.timeofweekOTSF2Day08[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day08[j].color = 'red' ;
+              this.timeofweekOTSF2Day08[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day08[j].showlabel = true;
-              this.timeofweekOTSF2Day08[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day08[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day08[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day08[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day08[j].checkReservations = true ;
+              this.timeofweekOTSF2Day08[j].checkReservations = true ; this.showday8 = true;
               if(this.timeofweekOTSF2Day08[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day08[j].id   ; k++){
@@ -10534,12 +10563,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day08.length; j++){
             if(this.timeofweekOTSF2Day08[j].roomid == 5){
               this.timeofweekOTSF2Day08[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day08[j].color = 'red' ;
+              this.timeofweekOTSF2Day08[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day08[j].showlabel = true;
-              this.timeofweekOTSF2Day08[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day08[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day08[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day08[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day08[j].checkReservations = true ;
+              this.timeofweekOTSF2Day08[j].checkReservations = true ; this.showday8 = true;
               if(this.timeofweekOTSF2Day08[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day08[j].id   ; k++){
@@ -10556,12 +10585,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day08.length; j++){
             if(this.timeofweekOTSF2Day08[j].roomid == 6){
               this.timeofweekOTSF2Day08[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day08[j].color = 'red' ;
+              this.timeofweekOTSF2Day08[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day08[j].showlabel = true;
-              this.timeofweekOTSF2Day08[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day08[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day08[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day08[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day08[j].checkReservations = true ;
+              this.timeofweekOTSF2Day08[j].checkReservations = true ; this.showday8 = true;
               if(this.timeofweekOTSF2Day08[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day08[j].id   ; k++){
@@ -10578,12 +10607,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day08.length; j++){
             if(this.timeofweekOTSF2Day08[j].roomid == 7){
               this.timeofweekOTSF2Day08[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day08[j].color = 'red' ;
+              this.timeofweekOTSF2Day08[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day08[j].showlabel = true;
-              this.timeofweekOTSF2Day08[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day08[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day08[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day08[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day08[j].checkReservations = true ;
+              this.timeofweekOTSF2Day08[j].checkReservations = true ; this.showday8 = true;
               if(this.timeofweekOTSF2Day08[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day08[j].id   ; k++){
@@ -10600,12 +10629,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day08.length; j++){
             if(this.timeofweekOTSF2Day08[j].roomid == 8){
               this.timeofweekOTSF2Day08[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day08[j].color = 'red' ;
+              this.timeofweekOTSF2Day08[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day08[j].showlabel = true;
-              this.timeofweekOTSF2Day08[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day08[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day08[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day08[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day08[j].checkReservations = true ;
+              this.timeofweekOTSF2Day08[j].checkReservations = true ; this.showday8 = true;
               if(this.timeofweekOTSF2Day08[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day08[j].id   ; k++){
@@ -10622,12 +10651,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day08.length; j++){
             if(this.timeofweekOTSF2Day08[j].roomid == 9){
               this.timeofweekOTSF2Day08[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day08[j].color = 'red' ;
+              this.timeofweekOTSF2Day08[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day08[j].showlabel = true;
-              this.timeofweekOTSF2Day08[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day08[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day08[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day08[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day08[j].checkReservations = true ;
+              this.timeofweekOTSF2Day08[j].checkReservations = true ; this.showday8 = true;
               if(this.timeofweekOTSF2Day08[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day08[j].id   ; k++){
@@ -10644,12 +10673,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day08.length; j++){
             if(this.timeofweekOTSF2Day08[j].roomid == 10){
               this.timeofweekOTSF2Day08[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day08[j].color = 'red' ;
+              this.timeofweekOTSF2Day08[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day08[j].showlabel = true;
-              this.timeofweekOTSF2Day08[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day08[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day08[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day08[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day08[j].checkReservations = true ;
+              this.timeofweekOTSF2Day08[j].checkReservations = true ; this.showday8 = true;
               if(this.timeofweekOTSF2Day08[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day08[j].id   ; k++){
@@ -10666,12 +10695,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day08.length; j++){
             if(this.timeofweekOTSF2Day08[j].roomid == 11){
               this.timeofweekOTSF2Day08[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day08[j].color = 'red' ;
+              this.timeofweekOTSF2Day08[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day08[j].showlabel = true;
-              this.timeofweekOTSF2Day08[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day08[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day08[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day08[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day08[j].checkReservations = true ;
+              this.timeofweekOTSF2Day08[j].checkReservations = true ; this.showday8 = true;
               if(this.timeofweekOTSF2Day08[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day08[j].id   ; k++){
@@ -10688,12 +10717,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day08.length; j++){
             if(this.timeofweekOTSF2Day08[j].roomid == 12){
               this.timeofweekOTSF2Day08[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day08[j].color = 'red' ;
+              this.timeofweekOTSF2Day08[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day08[j].showlabel = true;
-              this.timeofweekOTSF2Day08[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day08[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day08[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day08[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day08[j].checkReservations = true ;
+              this.timeofweekOTSF2Day08[j].checkReservations = true ; this.showday8 = true;
               if(this.timeofweekOTSF2Day08[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day08[j].id   ; k++){
@@ -10710,12 +10739,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day08.length; j++){
             if(this.timeofweekOTSF2Day08[j].roomid == 13){
               this.timeofweekOTSF2Day08[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day08[j].color = 'red' ;
+              this.timeofweekOTSF2Day08[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day08[j].showlabel = true;
-              this.timeofweekOTSF2Day08[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day08[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day08[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day08[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day08[j].checkReservations = true ;
+              this.timeofweekOTSF2Day08[j].checkReservations = true ; this.showday8 = true;
               if(this.timeofweekOTSF2Day08[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day08[j].id   ; k++){
@@ -10732,12 +10761,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day08.length; j++){
             if(this.timeofweekOTSF2Day08[j].roomid == 14){
               this.timeofweekOTSF2Day08[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day08[j].color = 'red' ;
+              this.timeofweekOTSF2Day08[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day08[j].showlabel = true;
-              this.timeofweekOTSF2Day08[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day08[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day08[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day08[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day08[j].checkReservations = true ;
+              this.timeofweekOTSF2Day08[j].checkReservations = true ; this.showday8 = true;
               if(this.timeofweekOTSF2Day08[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day08[j].id   ; k++){
@@ -10754,12 +10783,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day08.length; j++){
             if(this.timeofweekOTSF2Day08[j].roomid == 15){
               this.timeofweekOTSF2Day08[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day08[j].color = 'red' ;
+              this.timeofweekOTSF2Day08[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day08[j].showlabel = true;
-              this.timeofweekOTSF2Day08[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day08[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day08[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day08[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day08[j].checkReservations = true ;
+              this.timeofweekOTSF2Day08[j].checkReservations = true ; this.showday8 = true;
               if(this.timeofweekOTSF2Day08[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day08[j].id   ; k++){
@@ -10776,12 +10805,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day08.length; j++){
             if(this.timeofweekOTSF2Day08[j].roomid == 16){
               this.timeofweekOTSF2Day08[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day08[j].color = 'red' ;
+              this.timeofweekOTSF2Day08[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day08[j].showlabel = true;
-              this.timeofweekOTSF2Day08[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day08[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day08[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day08[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day08[j].checkReservations = true ;
+              this.timeofweekOTSF2Day08[j].checkReservations = true ; this.showday8 = true;
               if(this.timeofweekOTSF2Day08[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day08[j].id   ; k++){
@@ -10798,12 +10827,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day08.length; j++){
             if(this.timeofweekOTSF2Day08[j].roomid == 17){
               this.timeofweekOTSF2Day08[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day08[j].color = 'red' ;
+              this.timeofweekOTSF2Day08[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day08[j].showlabel = true;
-              this.timeofweekOTSF2Day08[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day08[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day08[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day08[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day08[j].checkReservations = true ;
+              this.timeofweekOTSF2Day08[j].checkReservations = true ; this.showday8 = true;
               if(this.timeofweekOTSF2Day08[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day08[j].id   ; k++){
@@ -10820,12 +10849,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day08.length; j++){
             if(this.timeofweekOTSF2Day08[j].roomid == 18){
               this.timeofweekOTSF2Day08[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day08[j].color = 'red' ;
+              this.timeofweekOTSF2Day08[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day08[j].showlabel = true;
-              this.timeofweekOTSF2Day08[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day08[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day08[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day08[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day08[j].checkReservations = true ;
+              this.timeofweekOTSF2Day08[j].checkReservations = true ; this.showday8 = true;
               if(this.timeofweekOTSF2Day08[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day08[j].id   ; k++){
@@ -10842,12 +10871,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day09.length; j++){
             if(this.timeofweekOTSF2Day09[j].roomid == 0){
               this.timeofweekOTSF2Day09[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day09[j].color = 'red' ;
+              this.timeofweekOTSF2Day09[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day09[j].showlabel = true;
-              this.timeofweekOTSF2Day09[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day09[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day09[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day09[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day09[j].checkReservations = true ;
+              this.timeofweekOTSF2Day09[j].checkReservations = true ; this.showday9 = true;
               if(this.timeofweekOTSF2Day09[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day09[j].id   ; k++){
@@ -10864,12 +10893,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day09.length; j++){
             if(this.timeofweekOTSF2Day09[j].roomid == 1){
               this.timeofweekOTSF2Day09[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day09[j].color = 'red' ;
+              this.timeofweekOTSF2Day09[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day09[j].showlabel = true;
-              this.timeofweekOTSF2Day09[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day09[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day09[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day09[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day09[j].checkReservations = true ;
+              this.timeofweekOTSF2Day09[j].checkReservations = true ; this.showday9 = true;
               if(this.timeofweekOTSF2Day09[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day09[j].id   ; k++){
@@ -10886,12 +10915,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day09.length; j++){
             if(this.timeofweekOTSF2Day09[j].roomid == 2){
               this.timeofweekOTSF2Day09[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day09[j].color = 'red' ;
+              this.timeofweekOTSF2Day09[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day09[j].showlabel = true;
-              this.timeofweekOTSF2Day09[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day09[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day09[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day09[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day09[j].checkReservations = true ;
+              this.timeofweekOTSF2Day09[j].checkReservations = true ; this.showday9 = true;
               if(this.timeofweekOTSF2Day09[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day09[j].id   ; k++){
@@ -10908,12 +10937,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day09.length; j++){
             if(this.timeofweekOTSF2Day09[j].roomid == 3){
               this.timeofweekOTSF2Day09[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day09[j].color = 'red' ;
+              this.timeofweekOTSF2Day09[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day09[j].showlabel = true;
-              this.timeofweekOTSF2Day09[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day09[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day09[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day09[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day09[j].checkReservations = true ;
+              this.timeofweekOTSF2Day09[j].checkReservations = true ; this.showday9 = true;
               if(this.timeofweekOTSF2Day09[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day09[j].id   ; k++){
@@ -10930,12 +10959,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day09.length; j++){
             if(this.timeofweekOTSF2Day09[j].roomid == 4){
               this.timeofweekOTSF2Day09[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day09[j].color = 'red' ;
+              this.timeofweekOTSF2Day09[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day09[j].showlabel = true;
-              this.timeofweekOTSF2Day09[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day09[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day09[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day09[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day09[j].checkReservations = true ;
+              this.timeofweekOTSF2Day09[j].checkReservations = true ; this.showday9 = true;
               if(this.timeofweekOTSF2Day09[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day09[j].id   ; k++){
@@ -10952,12 +10981,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day09.length; j++){
             if(this.timeofweekOTSF2Day09[j].roomid == 5){
               this.timeofweekOTSF2Day09[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day09[j].color = 'red' ;
+              this.timeofweekOTSF2Day09[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day09[j].showlabel = true;
-              this.timeofweekOTSF2Day09[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day09[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day09[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day09[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day09[j].checkReservations = true ;
+              this.timeofweekOTSF2Day09[j].checkReservations = true ; this.showday9 = true;
               if(this.timeofweekOTSF2Day09[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day09[j].id   ; k++){
@@ -10974,12 +11003,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day09.length; j++){
             if(this.timeofweekOTSF2Day09[j].roomid == 6){
               this.timeofweekOTSF2Day09[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day09[j].color = 'red' ;
+              this.timeofweekOTSF2Day09[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day09[j].showlabel = true;
-              this.timeofweekOTSF2Day09[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day09[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day09[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day09[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day09[j].checkReservations = true ;
+              this.timeofweekOTSF2Day09[j].checkReservations = true ; this.showday9 = true;
               if(this.timeofweekOTSF2Day09[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day09[j].id   ; k++){
@@ -10996,12 +11025,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day09.length; j++){
             if(this.timeofweekOTSF2Day09[j].roomid == 7){
               this.timeofweekOTSF2Day09[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day09[j].color = 'red' ;
+              this.timeofweekOTSF2Day09[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day09[j].showlabel = true;
-              this.timeofweekOTSF2Day09[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day09[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day09[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day09[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day09[j].checkReservations = true ;
+              this.timeofweekOTSF2Day09[j].checkReservations = true ; this.showday9 = true;
               if(this.timeofweekOTSF2Day09[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day09[j].id   ; k++){
@@ -11018,12 +11047,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day09.length; j++){
             if(this.timeofweekOTSF2Day09[j].roomid == 8){
               this.timeofweekOTSF2Day09[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day09[j].color = 'red' ;
+              this.timeofweekOTSF2Day09[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day09[j].showlabel = true;
-              this.timeofweekOTSF2Day09[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day09[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day09[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day09[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day09[j].checkReservations = true ;
+              this.timeofweekOTSF2Day09[j].checkReservations = true ; this.showday9 = true;
               if(this.timeofweekOTSF2Day09[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day09[j].id   ; k++){
@@ -11040,12 +11069,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day09.length; j++){
             if(this.timeofweekOTSF2Day09[j].roomid == 9){
               this.timeofweekOTSF2Day09[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day09[j].color = 'red' ;
+              this.timeofweekOTSF2Day09[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day09[j].showlabel = true;
-              this.timeofweekOTSF2Day09[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day09[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day09[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day09[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day09[j].checkReservations = true ;
+              this.timeofweekOTSF2Day09[j].checkReservations = true ; this.showday9 = true;
               if(this.timeofweekOTSF2Day09[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day09[j].id   ; k++){
@@ -11062,12 +11091,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day09.length; j++){
             if(this.timeofweekOTSF2Day09[j].roomid == 10){
               this.timeofweekOTSF2Day09[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day09[j].color = 'red' ;
+              this.timeofweekOTSF2Day09[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day09[j].showlabel = true;
-              this.timeofweekOTSF2Day09[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day09[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day09[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day09[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day09[j].checkReservations = true ;
+              this.timeofweekOTSF2Day09[j].checkReservations = true ; this.showday9 = true;
               if(this.timeofweekOTSF2Day09[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day09[j].id   ; k++){
@@ -11084,12 +11113,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day09.length; j++){
             if(this.timeofweekOTSF2Day09[j].roomid == 11){
               this.timeofweekOTSF2Day09[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day09[j].color = 'red' ;
+              this.timeofweekOTSF2Day09[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day09[j].showlabel = true;
-              this.timeofweekOTSF2Day09[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day09[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day09[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day09[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day09[j].checkReservations = true ;
+              this.timeofweekOTSF2Day09[j].checkReservations = true ; this.showday9 = true;
               if(this.timeofweekOTSF2Day09[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day09[j].id   ; k++){
@@ -11106,12 +11135,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day09.length; j++){
             if(this.timeofweekOTSF2Day09[j].roomid == 12){
               this.timeofweekOTSF2Day09[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day09[j].color = 'red' ;
+              this.timeofweekOTSF2Day09[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day09[j].showlabel = true;
-              this.timeofweekOTSF2Day09[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day09[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day09[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day09[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day09[j].checkReservations = true ;
+              this.timeofweekOTSF2Day09[j].checkReservations = true ; this.showday9 = true;
               if(this.timeofweekOTSF2Day09[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day09[j].id   ; k++){
@@ -11128,12 +11157,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day09.length; j++){
             if(this.timeofweekOTSF2Day09[j].roomid == 13){
               this.timeofweekOTSF2Day09[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day09[j].color = 'red' ;
+              this.timeofweekOTSF2Day09[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day09[j].showlabel = true;
-              this.timeofweekOTSF2Day09[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day09[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day09[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day09[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day09[j].checkReservations = true ;
+              this.timeofweekOTSF2Day09[j].checkReservations = true ; this.showday9 = true;
               if(this.timeofweekOTSF2Day09[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day09[j].id   ; k++){
@@ -11150,12 +11179,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day09.length; j++){
             if(this.timeofweekOTSF2Day09[j].roomid == 14){
               this.timeofweekOTSF2Day09[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day09[j].color = 'red' ;
+              this.timeofweekOTSF2Day09[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day09[j].showlabel = true;
-              this.timeofweekOTSF2Day09[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day09[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day09[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day09[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day09[j].checkReservations = true ;
+              this.timeofweekOTSF2Day09[j].checkReservations = true ; this.showday9 = true;
               if(this.timeofweekOTSF2Day09[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day09[j].id   ; k++){
@@ -11172,12 +11201,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day09.length; j++){
             if(this.timeofweekOTSF2Day09[j].roomid == 15){
               this.timeofweekOTSF2Day09[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day09[j].color = 'red' ;
+              this.timeofweekOTSF2Day09[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day09[j].showlabel = true;
-              this.timeofweekOTSF2Day09[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day09[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day09[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day09[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day09[j].checkReservations = true ;
+              this.timeofweekOTSF2Day09[j].checkReservations = true ; this.showday9 = true;
               if(this.timeofweekOTSF2Day09[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day09[j].id   ; k++){
@@ -11194,12 +11223,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day09.length; j++){
             if(this.timeofweekOTSF2Day09[j].roomid == 16){
               this.timeofweekOTSF2Day09[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day09[j].color = 'red' ;
+              this.timeofweekOTSF2Day09[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day09[j].showlabel = true;
-              this.timeofweekOTSF2Day09[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day09[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day09[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day09[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day09[j].checkReservations = true ;
+              this.timeofweekOTSF2Day09[j].checkReservations = true ; this.showday9 = true;
               if(this.timeofweekOTSF2Day09[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day09[j].id   ; k++){
@@ -11216,12 +11245,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day09.length; j++){
             if(this.timeofweekOTSF2Day09[j].roomid == 17){
               this.timeofweekOTSF2Day09[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day09[j].color = 'red' ;
+              this.timeofweekOTSF2Day09[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day09[j].showlabel = true;
-              this.timeofweekOTSF2Day09[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day09[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day09[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day09[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day09[j].checkReservations = true ;
+              this.timeofweekOTSF2Day09[j].checkReservations = true ; this.showday9 = true;
               if(this.timeofweekOTSF2Day09[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day09[j].id   ; k++){
@@ -11238,12 +11267,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day09.length; j++){
             if(this.timeofweekOTSF2Day09[j].roomid == 18){
               this.timeofweekOTSF2Day09[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day09[j].color = 'red' ;
+              this.timeofweekOTSF2Day09[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day09[j].showlabel = true;
-              this.timeofweekOTSF2Day09[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day09[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day09[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day09[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day09[j].checkReservations = true ;
+              this.timeofweekOTSF2Day09[j].checkReservations = true ; this.showday9 = true;
               if(this.timeofweekOTSF2Day09[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day09[j].id   ; k++){
@@ -11260,12 +11289,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day10.length; j++){
             if(this.timeofweekOTSF2Day10[j].roomid == 0){
               this.timeofweekOTSF2Day10[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day10[j].color = 'red' ;
+              this.timeofweekOTSF2Day10[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day10[j].showlabel = true;
-              this.timeofweekOTSF2Day10[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day10[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day10[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day10[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day10[j].checkReservations = true ;
+              this.timeofweekOTSF2Day10[j].checkReservations = true ; this.showday10 = true;
               if(this.timeofweekOTSF2Day10[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day10[j].id   ; k++){
@@ -11282,12 +11311,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day10.length; j++){
             if(this.timeofweekOTSF2Day10[j].roomid == 1){
               this.timeofweekOTSF2Day10[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day10[j].color = 'red' ;
+              this.timeofweekOTSF2Day10[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day10[j].showlabel = true;
-              this.timeofweekOTSF2Day10[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day10[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day10[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day10[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day10[j].checkReservations = true ;
+              this.timeofweekOTSF2Day10[j].checkReservations = true ; this.showday10 = true;
               if(this.timeofweekOTSF2Day10[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day10[j].id   ; k++){
@@ -11304,12 +11333,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day10.length; j++){
             if(this.timeofweekOTSF2Day10[j].roomid == 2){
               this.timeofweekOTSF2Day10[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day10[j].color = 'red' ;
+              this.timeofweekOTSF2Day10[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day10[j].showlabel = true;
-              this.timeofweekOTSF2Day10[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day10[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day10[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day10[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day10[j].checkReservations = true ;
+              this.timeofweekOTSF2Day10[j].checkReservations = true ; this.showday10 = true;
               if(this.timeofweekOTSF2Day10[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day10[j].id   ; k++){
@@ -11326,12 +11355,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day10.length; j++){
             if(this.timeofweekOTSF2Day10[j].roomid == 3){
               this.timeofweekOTSF2Day10[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day10[j].color = 'red' ;
+              this.timeofweekOTSF2Day10[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day10[j].showlabel = true;
-              this.timeofweekOTSF2Day10[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day10[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day10[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day10[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day10[j].checkReservations = true ;
+              this.timeofweekOTSF2Day10[j].checkReservations = true ; this.showday10 = true;
               if(this.timeofweekOTSF2Day10[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day10[j].id   ; k++){
@@ -11348,12 +11377,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day10.length; j++){
             if(this.timeofweekOTSF2Day10[j].roomid == 4){
               this.timeofweekOTSF2Day10[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day10[j].color = 'red' ;
+              this.timeofweekOTSF2Day10[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day10[j].showlabel = true;
-              this.timeofweekOTSF2Day10[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day10[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day10[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day10[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day10[j].checkReservations = true ;
+              this.timeofweekOTSF2Day10[j].checkReservations = true ; this.showday10 = true;
               if(this.timeofweekOTSF2Day10[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day10[j].id   ; k++){
@@ -11370,12 +11399,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day10.length; j++){
             if(this.timeofweekOTSF2Day10[j].roomid == 5){
               this.timeofweekOTSF2Day10[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day10[j].color = 'red' ;
+              this.timeofweekOTSF2Day10[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day10[j].showlabel = true;
-              this.timeofweekOTSF2Day10[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day10[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day10[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day10[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day10[j].checkReservations = true ;
+              this.timeofweekOTSF2Day10[j].checkReservations = true ; this.showday10 = true;
               if(this.timeofweekOTSF2Day10[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day10[j].id   ; k++){
@@ -11392,12 +11421,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day10.length; j++){
             if(this.timeofweekOTSF2Day10[j].roomid == 6){
               this.timeofweekOTSF2Day10[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day10[j].color = 'red' ;
+              this.timeofweekOTSF2Day10[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day10[j].showlabel = true;
-              this.timeofweekOTSF2Day10[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day10[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day10[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day10[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day10[j].checkReservations = true ;
+              this.timeofweekOTSF2Day10[j].checkReservations = true ; this.showday10 = true;
               if(this.timeofweekOTSF2Day10[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day10[j].id   ; k++){
@@ -11414,12 +11443,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day10.length; j++){
             if(this.timeofweekOTSF2Day10[j].roomid == 7){
               this.timeofweekOTSF2Day10[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day10[j].color = 'red' ;
+              this.timeofweekOTSF2Day10[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day10[j].showlabel = true;
-              this.timeofweekOTSF2Day10[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day10[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day10[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day10[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day10[j].checkReservations = true ;
+              this.timeofweekOTSF2Day10[j].checkReservations = true ; this.showday10 = true;
               if(this.timeofweekOTSF2Day10[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day10[j].id   ; k++){
@@ -11436,12 +11465,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day10.length; j++){
             if(this.timeofweekOTSF2Day10[j].roomid == 8){
               this.timeofweekOTSF2Day10[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day10[j].color = 'red' ;
+              this.timeofweekOTSF2Day10[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day10[j].showlabel = true;
-              this.timeofweekOTSF2Day10[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day10[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day10[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day10[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day10[j].checkReservations = true ;
+              this.timeofweekOTSF2Day10[j].checkReservations = true ; this.showday10 = true;
               if(this.timeofweekOTSF2Day10[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day10[j].id   ; k++){
@@ -11458,12 +11487,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day10.length; j++){
             if(this.timeofweekOTSF2Day10[j].roomid == 9){
               this.timeofweekOTSF2Day10[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day10[j].color = 'red' ;
+              this.timeofweekOTSF2Day10[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day10[j].showlabel = true;
-              this.timeofweekOTSF2Day10[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day10[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day10[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day10[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day10[j].checkReservations = true ;
+              this.timeofweekOTSF2Day10[j].checkReservations = true ; this.showday10 = true;
               if(this.timeofweekOTSF2Day10[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day10[j].id   ; k++){
@@ -11480,12 +11509,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day10.length; j++){
             if(this.timeofweekOTSF2Day10[j].roomid == 10){
               this.timeofweekOTSF2Day10[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day10[j].color = 'red' ;
+              this.timeofweekOTSF2Day10[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day10[j].showlabel = true;
-              this.timeofweekOTSF2Day10[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day10[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day10[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day10[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day10[j].checkReservations = true ;
+              this.timeofweekOTSF2Day10[j].checkReservations = true ; this.showday10 = true;
               if(this.timeofweekOTSF2Day10[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day10[j].id   ; k++){
@@ -11502,12 +11531,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day10.length; j++){
             if(this.timeofweekOTSF2Day10[j].roomid == 11){
               this.timeofweekOTSF2Day10[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day10[j].color = 'red' ;
+              this.timeofweekOTSF2Day10[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day10[j].showlabel = true;
-              this.timeofweekOTSF2Day10[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day10[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day10[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day10[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day10[j].checkReservations = true ;
+              this.timeofweekOTSF2Day10[j].checkReservations = true ; this.showday10 = true;
               if(this.timeofweekOTSF2Day10[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day10[j].id   ; k++){
@@ -11524,12 +11553,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day10.length; j++){
             if(this.timeofweekOTSF2Day10[j].roomid == 12){
               this.timeofweekOTSF2Day10[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day10[j].color = 'red' ;
+              this.timeofweekOTSF2Day10[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day10[j].showlabel = true;
-              this.timeofweekOTSF2Day10[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day10[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day10[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day10[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day10[j].checkReservations = true ;
+              this.timeofweekOTSF2Day10[j].checkReservations = true ; this.showday10 = true;
               if(this.timeofweekOTSF2Day10[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day10[j].id   ; k++){
@@ -11546,12 +11575,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day10.length; j++){
             if(this.timeofweekOTSF2Day10[j].roomid == 13){
               this.timeofweekOTSF2Day10[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day10[j].color = 'red' ;
+              this.timeofweekOTSF2Day10[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day10[j].showlabel = true;
-              this.timeofweekOTSF2Day10[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day10[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day10[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day10[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day10[j].checkReservations = true ;
+              this.timeofweekOTSF2Day10[j].checkReservations = true ; this.showday10 = true;
               if(this.timeofweekOTSF2Day10[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day10[j].id   ; k++){
@@ -11568,12 +11597,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day10.length; j++){
             if(this.timeofweekOTSF2Day10[j].roomid == 14){
               this.timeofweekOTSF2Day10[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day10[j].color = 'red' ;
+              this.timeofweekOTSF2Day10[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day10[j].showlabel = true;
-              this.timeofweekOTSF2Day10[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day10[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day10[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day10[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day10[j].checkReservations = true ;
+              this.timeofweekOTSF2Day10[j].checkReservations = true ; this.showday10 = true;
               if(this.timeofweekOTSF2Day10[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day10[j].id   ; k++){
@@ -11590,12 +11619,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day10.length; j++){
             if(this.timeofweekOTSF2Day10[j].roomid == 15){
               this.timeofweekOTSF2Day10[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day10[j].color = 'red' ;
+              this.timeofweekOTSF2Day10[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day10[j].showlabel = true;
-              this.timeofweekOTSF2Day10[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day10[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day10[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day10[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day10[j].checkReservations = true ;
+              this.timeofweekOTSF2Day10[j].checkReservations = true ; this.showday10 = true;
               if(this.timeofweekOTSF2Day10[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day10[j].id   ; k++){
@@ -11612,12 +11641,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day10.length; j++){
             if(this.timeofweekOTSF2Day10[j].roomid == 16){
               this.timeofweekOTSF2Day10[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day10[j].color = 'red' ;
+              this.timeofweekOTSF2Day10[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day10[j].showlabel = true;
-              this.timeofweekOTSF2Day10[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day10[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day10[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day10[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day10[j].checkReservations = true ;
+              this.timeofweekOTSF2Day10[j].checkReservations = true ; this.showday10 = true;
               if(this.timeofweekOTSF2Day10[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day10[j].id   ; k++){
@@ -11634,12 +11663,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day10.length; j++){
             if(this.timeofweekOTSF2Day10[j].roomid == 17){
               this.timeofweekOTSF2Day10[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day10[j].color = 'red' ;
+              this.timeofweekOTSF2Day10[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day10[j].showlabel = true;
-              this.timeofweekOTSF2Day10[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day10[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day10[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day10[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day10[j].checkReservations = true ;
+              this.timeofweekOTSF2Day10[j].checkReservations = true ; this.showday10 = true;
               if(this.timeofweekOTSF2Day10[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day10[j].id   ; k++){
@@ -11656,12 +11685,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day10.length; j++){
             if(this.timeofweekOTSF2Day10[j].roomid == 18){
               this.timeofweekOTSF2Day10[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day10[j].color = 'red' ;
+              this.timeofweekOTSF2Day10[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day10[j].showlabel = true;
-              this.timeofweekOTSF2Day10[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day10[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day10[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day10[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day10[j].checkReservations = true ;
+              this.timeofweekOTSF2Day10[j].checkReservations = true ; this.showday10 = true;
               if(this.timeofweekOTSF2Day10[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day10[j].id   ; k++){
@@ -11678,12 +11707,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day11.length; j++){
             if(this.timeofweekOTSF2Day11[j].roomid == 0){
               this.timeofweekOTSF2Day11[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day11[j].color = 'red' ;
+              this.timeofweekOTSF2Day11[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day11[j].showlabel = true;
-              this.timeofweekOTSF2Day11[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day11[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day11[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day11[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day11[j].checkReservations = true ;
+              this.timeofweekOTSF2Day11[j].checkReservations = true ; this.showday11 = true;
               if(this.timeofweekOTSF2Day11[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day11[j].id   ; k++){
@@ -11700,12 +11729,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day11.length; j++){
             if(this.timeofweekOTSF2Day11[j].roomid == 1){
               this.timeofweekOTSF2Day11[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day11[j].color = 'red' ;
+              this.timeofweekOTSF2Day11[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day11[j].showlabel = true;
-              this.timeofweekOTSF2Day11[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day11[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day11[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day11[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day11[j].checkReservations = true ;
+              this.timeofweekOTSF2Day11[j].checkReservations = true ; this.showday11 = true;
               if(this.timeofweekOTSF2Day11[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day11[j].id   ; k++){
@@ -11722,12 +11751,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day11.length; j++){
             if(this.timeofweekOTSF2Day11[j].roomid == 2){
               this.timeofweekOTSF2Day11[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day11[j].color = 'red' ;
+              this.timeofweekOTSF2Day11[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day11[j].showlabel = true;
-              this.timeofweekOTSF2Day11[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day11[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day11[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day11[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day11[j].checkReservations = true ;
+              this.timeofweekOTSF2Day11[j].checkReservations = true ; this.showday11 = true;
               if(this.timeofweekOTSF2Day11[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day11[j].id   ; k++){
@@ -11744,12 +11773,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day11.length; j++){
             if(this.timeofweekOTSF2Day11[j].roomid == 3){
               this.timeofweekOTSF2Day11[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day11[j].color = 'red' ;
+              this.timeofweekOTSF2Day11[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day11[j].showlabel = true;
-              this.timeofweekOTSF2Day11[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day11[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day11[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day11[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day11[j].checkReservations = true ;
+              this.timeofweekOTSF2Day11[j].checkReservations = true ; this.showday11 = true;
               if(this.timeofweekOTSF2Day11[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day11[j].id   ; k++){
@@ -11766,12 +11795,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day11.length; j++){
             if(this.timeofweekOTSF2Day11[j].roomid == 4){
               this.timeofweekOTSF2Day11[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day11[j].color = 'red' ;
+              this.timeofweekOTSF2Day11[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day11[j].showlabel = true;
-              this.timeofweekOTSF2Day11[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day11[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day11[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day11[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day11[j].checkReservations = true ;
+              this.timeofweekOTSF2Day11[j].checkReservations = true ; this.showday11 = true;
               if(this.timeofweekOTSF2Day11[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day11[j].id   ; k++){
@@ -11788,12 +11817,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day11.length; j++){
             if(this.timeofweekOTSF2Day11[j].roomid == 5){
               this.timeofweekOTSF2Day11[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day11[j].color = 'red' ;
+              this.timeofweekOTSF2Day11[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day11[j].showlabel = true;
-              this.timeofweekOTSF2Day11[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day11[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day11[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day11[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day11[j].checkReservations = true ;
+              this.timeofweekOTSF2Day11[j].checkReservations = true ; this.showday11 = true;
               if(this.timeofweekOTSF2Day11[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day11[j].id   ; k++){
@@ -11810,12 +11839,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day11.length; j++){
             if(this.timeofweekOTSF2Day11[j].roomid == 6){
               this.timeofweekOTSF2Day11[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day11[j].color = 'red' ;
+              this.timeofweekOTSF2Day11[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day11[j].showlabel = true;
-              this.timeofweekOTSF2Day11[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day11[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day11[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day11[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day11[j].checkReservations = true ;
+              this.timeofweekOTSF2Day11[j].checkReservations = true ; this.showday11 = true;
               if(this.timeofweekOTSF2Day11[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day11[j].id   ; k++){
@@ -11832,12 +11861,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day11.length; j++){
             if(this.timeofweekOTSF2Day11[j].roomid == 7){
               this.timeofweekOTSF2Day11[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day11[j].color = 'red' ;
+              this.timeofweekOTSF2Day11[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day11[j].showlabel = true;
-              this.timeofweekOTSF2Day11[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day11[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day11[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day11[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day11[j].checkReservations = true ;
+              this.timeofweekOTSF2Day11[j].checkReservations = true ; this.showday11 = true;
               if(this.timeofweekOTSF2Day11[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day11[j].id   ; k++){
@@ -11854,12 +11883,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day11.length; j++){
             if(this.timeofweekOTSF2Day11[j].roomid == 8){
               this.timeofweekOTSF2Day11[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day11[j].color = 'red' ;
+              this.timeofweekOTSF2Day11[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day11[j].showlabel = true;
-              this.timeofweekOTSF2Day11[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day11[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day11[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day11[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day11[j].checkReservations = true ;
+              this.timeofweekOTSF2Day11[j].checkReservations = true ; this.showday11 = true;
               if(this.timeofweekOTSF2Day11[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day11[j].id   ; k++){
@@ -11876,12 +11905,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day11.length; j++){
             if(this.timeofweekOTSF2Day11[j].roomid == 9){
               this.timeofweekOTSF2Day11[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day11[j].color = 'red' ;
+              this.timeofweekOTSF2Day11[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day11[j].showlabel = true;
-              this.timeofweekOTSF2Day11[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day11[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day11[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day11[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day11[j].checkReservations = true ;
+              this.timeofweekOTSF2Day11[j].checkReservations = true ; this.showday11 = true;
               if(this.timeofweekOTSF2Day11[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day11[j].id   ; k++){
@@ -11898,12 +11927,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day11.length; j++){
             if(this.timeofweekOTSF2Day11[j].roomid == 10){
               this.timeofweekOTSF2Day11[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day11[j].color = 'red' ;
+              this.timeofweekOTSF2Day11[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day11[j].showlabel = true;
-              this.timeofweekOTSF2Day11[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day11[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day11[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day11[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day11[j].checkReservations = true ;
+              this.timeofweekOTSF2Day11[j].checkReservations = true ; this.showday11 = true;
               if(this.timeofweekOTSF2Day11[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day11[j].id   ; k++){
@@ -11920,12 +11949,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day11.length; j++){
             if(this.timeofweekOTSF2Day11[j].roomid == 11){
               this.timeofweekOTSF2Day11[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day11[j].color = 'red' ;
+              this.timeofweekOTSF2Day11[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day11[j].showlabel = true;
-              this.timeofweekOTSF2Day11[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day11[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day11[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day11[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day11[j].checkReservations = true ;
+              this.timeofweekOTSF2Day11[j].checkReservations = true ; this.showday11 = true;
               if(this.timeofweekOTSF2Day11[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day11[j].id   ; k++){
@@ -11942,12 +11971,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day11.length; j++){
             if(this.timeofweekOTSF2Day11[j].roomid == 12){
               this.timeofweekOTSF2Day11[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day11[j].color = 'red' ;
+              this.timeofweekOTSF2Day11[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day11[j].showlabel = true;
-              this.timeofweekOTSF2Day11[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day11[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day11[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day11[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day11[j].checkReservations = true ;
+              this.timeofweekOTSF2Day11[j].checkReservations = true ; this.showday11 = true;
               if(this.timeofweekOTSF2Day11[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day11[j].id   ; k++){
@@ -11964,12 +11993,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day11.length; j++){
             if(this.timeofweekOTSF2Day11[j].roomid == 13){
               this.timeofweekOTSF2Day11[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day11[j].color = 'red' ;
+              this.timeofweekOTSF2Day11[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day11[j].showlabel = true;
-              this.timeofweekOTSF2Day11[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day11[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day11[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day11[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day11[j].checkReservations = true ;
+              this.timeofweekOTSF2Day11[j].checkReservations = true ; this.showday11 = true;
               if(this.timeofweekOTSF2Day11[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day11[j].id   ; k++){
@@ -11986,12 +12015,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day11.length; j++){
             if(this.timeofweekOTSF2Day11[j].roomid == 14){
               this.timeofweekOTSF2Day11[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day11[j].color = 'red' ;
+              this.timeofweekOTSF2Day11[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day11[j].showlabel = true;
-              this.timeofweekOTSF2Day11[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day11[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day11[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day11[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day11[j].checkReservations = true ;
+              this.timeofweekOTSF2Day11[j].checkReservations = true ; this.showday11 = true;
               if(this.timeofweekOTSF2Day11[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day11[j].id   ; k++){
@@ -12008,12 +12037,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day11.length; j++){
             if(this.timeofweekOTSF2Day11[j].roomid == 15){
               this.timeofweekOTSF2Day11[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day11[j].color = 'red' ;
+              this.timeofweekOTSF2Day11[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day11[j].showlabel = true;
-              this.timeofweekOTSF2Day11[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day11[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day11[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day11[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day11[j].checkReservations = true ;
+              this.timeofweekOTSF2Day11[j].checkReservations = true ; this.showday11 = true;
               if(this.timeofweekOTSF2Day11[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day11[j].id   ; k++){
@@ -12030,12 +12059,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day11.length; j++){
             if(this.timeofweekOTSF2Day11[j].roomid == 16){
               this.timeofweekOTSF2Day11[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day11[j].color = 'red' ;
+              this.timeofweekOTSF2Day11[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day11[j].showlabel = true;
-              this.timeofweekOTSF2Day11[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day11[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day11[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day11[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day11[j].checkReservations = true ;
+              this.timeofweekOTSF2Day11[j].checkReservations = true ; this.showday11 = true;
               if(this.timeofweekOTSF2Day11[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day11[j].id   ; k++){
@@ -12052,12 +12081,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day11.length; j++){
             if(this.timeofweekOTSF2Day11[j].roomid == 17){
               this.timeofweekOTSF2Day11[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day11[j].color = 'red' ;
+              this.timeofweekOTSF2Day11[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day11[j].showlabel = true;
-              this.timeofweekOTSF2Day11[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day11[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day11[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day11[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day11[j].checkReservations = true ;
+              this.timeofweekOTSF2Day11[j].checkReservations = true ; this.showday11 = true;
               if(this.timeofweekOTSF2Day11[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day11[j].id   ; k++){
@@ -12074,12 +12103,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day11.length; j++){
             if(this.timeofweekOTSF2Day11[j].roomid == 18){
               this.timeofweekOTSF2Day11[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day11[j].color = 'red' ;
+              this.timeofweekOTSF2Day11[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day11[j].showlabel = true;
-              this.timeofweekOTSF2Day11[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day11[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day11[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day11[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day11[j].checkReservations = true ;
+              this.timeofweekOTSF2Day11[j].checkReservations = true ; this.showday11 = true;
               if(this.timeofweekOTSF2Day11[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day11[j].id   ; k++){
@@ -12096,12 +12125,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day12.length; j++){
             if(this.timeofweekOTSF2Day12[j].roomid == 0){
               this.timeofweekOTSF2Day12[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day12[j].color = 'red' ;
+              this.timeofweekOTSF2Day12[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day12[j].showlabel = true;
-              this.timeofweekOTSF2Day12[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day12[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day12[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day12[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day12[j].checkReservations = true ;
+              this.timeofweekOTSF2Day12[j].checkReservations = true ; this.showday12 = true;
               if(this.timeofweekOTSF2Day12[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day12[j].id   ; k++){
@@ -12118,12 +12147,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day12.length; j++){
             if(this.timeofweekOTSF2Day12[j].roomid == 1){
               this.timeofweekOTSF2Day12[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day12[j].color = 'red' ;
+              this.timeofweekOTSF2Day12[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day12[j].showlabel = true;
-              this.timeofweekOTSF2Day12[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day12[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day12[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day12[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day12[j].checkReservations = true ;
+              this.timeofweekOTSF2Day12[j].checkReservations = true ; this.showday12 = true;
               if(this.timeofweekOTSF2Day12[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day12[j].id   ; k++){
@@ -12140,12 +12169,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day12.length; j++){
             if(this.timeofweekOTSF2Day12[j].roomid == 2){
               this.timeofweekOTSF2Day12[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day12[j].color = 'red' ;
+              this.timeofweekOTSF2Day12[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day12[j].showlabel = true;
-              this.timeofweekOTSF2Day12[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day12[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day12[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day12[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day12[j].checkReservations = true ;
+              this.timeofweekOTSF2Day12[j].checkReservations = true ; this.showday12 = true;
               if(this.timeofweekOTSF2Day12[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day12[j].id   ; k++){
@@ -12162,12 +12191,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day12.length; j++){
             if(this.timeofweekOTSF2Day12[j].roomid == 3){
               this.timeofweekOTSF2Day12[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day12[j].color = 'red' ;
+              this.timeofweekOTSF2Day12[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day12[j].showlabel = true;
-              this.timeofweekOTSF2Day12[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day12[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day12[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day12[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day12[j].checkReservations = true ;
+              this.timeofweekOTSF2Day12[j].checkReservations = true ; this.showday12 = true;
               if(this.timeofweekOTSF2Day12[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day12[j].id   ; k++){
@@ -12184,12 +12213,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day12.length; j++){
             if(this.timeofweekOTSF2Day12[j].roomid == 4){
               this.timeofweekOTSF2Day12[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day12[j].color = 'red' ;
+              this.timeofweekOTSF2Day12[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day12[j].showlabel = true;
-              this.timeofweekOTSF2Day12[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day12[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day12[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day12[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day12[j].checkReservations = true ;
+              this.timeofweekOTSF2Day12[j].checkReservations = true ; this.showday12 = true;
               if(this.timeofweekOTSF2Day12[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day12[j].id   ; k++){
@@ -12206,12 +12235,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day12.length; j++){
             if(this.timeofweekOTSF2Day12[j].roomid == 5){
               this.timeofweekOTSF2Day12[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day12[j].color = 'red' ;
+              this.timeofweekOTSF2Day12[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day12[j].showlabel = true;
-              this.timeofweekOTSF2Day12[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day12[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day12[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day12[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day12[j].checkReservations = true ;
+              this.timeofweekOTSF2Day12[j].checkReservations = true ; this.showday12 = true;
               if(this.timeofweekOTSF2Day12[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day12[j].id   ; k++){
@@ -12228,12 +12257,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day12.length; j++){
             if(this.timeofweekOTSF2Day12[j].roomid == 6){
               this.timeofweekOTSF2Day12[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day12[j].color = 'red' ;
+              this.timeofweekOTSF2Day12[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day12[j].showlabel = true;
-              this.timeofweekOTSF2Day12[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day12[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day12[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day12[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day12[j].checkReservations = true ;
+              this.timeofweekOTSF2Day12[j].checkReservations = true ; this.showday12 = true;
               if(this.timeofweekOTSF2Day12[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day12[j].id   ; k++){
@@ -12250,12 +12279,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day12.length; j++){
             if(this.timeofweekOTSF2Day12[j].roomid == 7){
               this.timeofweekOTSF2Day12[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day12[j].color = 'red' ;
+              this.timeofweekOTSF2Day12[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day12[j].showlabel = true;
-              this.timeofweekOTSF2Day12[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day12[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day12[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day12[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day12[j].checkReservations = true ;
+              this.timeofweekOTSF2Day12[j].checkReservations = true ; this.showday12 = true;
               if(this.timeofweekOTSF2Day12[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day12[j].id   ; k++){
@@ -12272,12 +12301,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day12.length; j++){
             if(this.timeofweekOTSF2Day12[j].roomid == 8){
               this.timeofweekOTSF2Day12[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day12[j].color = 'red' ;
+              this.timeofweekOTSF2Day12[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day12[j].showlabel = true;
-              this.timeofweekOTSF2Day12[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day12[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day12[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day12[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day12[j].checkReservations = true ;
+              this.timeofweekOTSF2Day12[j].checkReservations = true ; this.showday12 = true;
               if(this.timeofweekOTSF2Day12[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day12[j].id   ; k++){
@@ -12294,12 +12323,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day12.length; j++){
             if(this.timeofweekOTSF2Day12[j].roomid == 9){
               this.timeofweekOTSF2Day12[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day12[j].color = 'red' ;
+              this.timeofweekOTSF2Day12[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day12[j].showlabel = true;
-              this.timeofweekOTSF2Day12[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day12[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day12[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day12[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day12[j].checkReservations = true ;
+              this.timeofweekOTSF2Day12[j].checkReservations = true ; this.showday12 = true;
               if(this.timeofweekOTSF2Day12[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day12[j].id   ; k++){
@@ -12316,12 +12345,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day12.length; j++){
             if(this.timeofweekOTSF2Day12[j].roomid == 10){
               this.timeofweekOTSF2Day12[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day12[j].color = 'red' ;
+              this.timeofweekOTSF2Day12[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day12[j].showlabel = true;
-              this.timeofweekOTSF2Day12[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day12[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day12[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day12[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day12[j].checkReservations = true ;
+              this.timeofweekOTSF2Day12[j].checkReservations = true ; this.showday12 = true;
               if(this.timeofweekOTSF2Day12[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day12[j].id   ; k++){
@@ -12338,12 +12367,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day12.length; j++){
             if(this.timeofweekOTSF2Day12[j].roomid == 11){
               this.timeofweekOTSF2Day12[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day12[j].color = 'red' ;
+              this.timeofweekOTSF2Day12[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day12[j].showlabel = true;
-              this.timeofweekOTSF2Day12[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day12[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day12[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day12[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day12[j].checkReservations = true ;
+              this.timeofweekOTSF2Day12[j].checkReservations = true ; this.showday12 = true;
               if(this.timeofweekOTSF2Day12[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day12[j].id   ; k++){
@@ -12360,12 +12389,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day12.length; j++){
             if(this.timeofweekOTSF2Day12[j].roomid == 12){
               this.timeofweekOTSF2Day12[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day12[j].color = 'red' ;
+              this.timeofweekOTSF2Day12[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day12[j].showlabel = true;
-              this.timeofweekOTSF2Day12[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day12[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day12[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day12[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day12[j].checkReservations = true ;
+              this.timeofweekOTSF2Day12[j].checkReservations = true ; this.showday12 = true;
               if(this.timeofweekOTSF2Day12[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day12[j].id   ; k++){
@@ -12382,12 +12411,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day12.length; j++){
             if(this.timeofweekOTSF2Day12[j].roomid == 13){
               this.timeofweekOTSF2Day12[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day12[j].color = 'red' ;
+              this.timeofweekOTSF2Day12[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day12[j].showlabel = true;
-              this.timeofweekOTSF2Day12[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day12[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day12[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day12[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day12[j].checkReservations = true ;
+              this.timeofweekOTSF2Day12[j].checkReservations = true ; this.showday12 = true;
               if(this.timeofweekOTSF2Day12[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day12[j].id   ; k++){
@@ -12404,12 +12433,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day12.length; j++){
             if(this.timeofweekOTSF2Day12[j].roomid == 14){
               this.timeofweekOTSF2Day12[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day12[j].color = 'red' ;
+              this.timeofweekOTSF2Day12[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day12[j].showlabel = true;
-              this.timeofweekOTSF2Day12[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day12[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day12[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day12[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day12[j].checkReservations = true ;
+              this.timeofweekOTSF2Day12[j].checkReservations = true ; this.showday12 = true;
               if(this.timeofweekOTSF2Day12[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day12[j].id   ; k++){
@@ -12426,12 +12455,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day12.length; j++){
             if(this.timeofweekOTSF2Day12[j].roomid == 15){
               this.timeofweekOTSF2Day12[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day12[j].color = 'red' ;
+              this.timeofweekOTSF2Day12[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day12[j].showlabel = true;
-              this.timeofweekOTSF2Day12[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day12[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day12[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day12[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day12[j].checkReservations = true ;
+              this.timeofweekOTSF2Day12[j].checkReservations = true ; this.showday12 = true;
               if(this.timeofweekOTSF2Day12[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day12[j].id   ; k++){
@@ -12448,12 +12477,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day12.length; j++){
             if(this.timeofweekOTSF2Day12[j].roomid == 16){
               this.timeofweekOTSF2Day12[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day12[j].color = 'red' ;
+              this.timeofweekOTSF2Day12[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day12[j].showlabel = true;
-              this.timeofweekOTSF2Day12[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day12[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day12[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day12[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day12[j].checkReservations = true ;
+              this.timeofweekOTSF2Day12[j].checkReservations = true ; this.showday12 = true;
               if(this.timeofweekOTSF2Day12[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day12[j].id   ; k++){
@@ -12470,12 +12499,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day12.length; j++){
             if(this.timeofweekOTSF2Day12[j].roomid == 17){
               this.timeofweekOTSF2Day12[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day12[j].color = 'red' ;
+              this.timeofweekOTSF2Day12[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day12[j].showlabel = true;
-              this.timeofweekOTSF2Day12[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day12[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day12[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day12[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day12[j].checkReservations = true ;
+              this.timeofweekOTSF2Day12[j].checkReservations = true ; this.showday12 = true;
               if(this.timeofweekOTSF2Day12[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day12[j].id   ; k++){
@@ -12492,12 +12521,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day12.length; j++){
             if(this.timeofweekOTSF2Day12[j].roomid == 18){
               this.timeofweekOTSF2Day12[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day12[j].color = 'red' ;
+              this.timeofweekOTSF2Day12[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day12[j].showlabel = true;
-              this.timeofweekOTSF2Day12[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day12[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day12[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day12[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day12[j].checkReservations = true ;
+              this.timeofweekOTSF2Day12[j].checkReservations = true ; this.showday12 = true;
               if(this.timeofweekOTSF2Day12[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day12[j].id   ; k++){
@@ -12514,12 +12543,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day13.length; j++){
             if(this.timeofweekOTSF2Day13[j].roomid == 0){
               this.timeofweekOTSF2Day13[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day13[j].color = 'red' ;
+              this.timeofweekOTSF2Day13[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day13[j].showlabel = true;
-              this.timeofweekOTSF2Day13[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day13[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day13[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day13[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day13[j].checkReservations = true ;
+              this.timeofweekOTSF2Day13[j].checkReservations = true ; this.showday13 = true;
               if(this.timeofweekOTSF2Day13[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day13[j].id   ; k++){
@@ -12536,12 +12565,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day13.length; j++){
             if(this.timeofweekOTSF2Day13[j].roomid == 1){
               this.timeofweekOTSF2Day13[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day13[j].color = 'red' ;
+              this.timeofweekOTSF2Day13[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day13[j].showlabel = true;
-              this.timeofweekOTSF2Day13[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day13[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day13[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day13[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day13[j].checkReservations = true ;
+              this.timeofweekOTSF2Day13[j].checkReservations = true ; this.showday13 = true;
               if(this.timeofweekOTSF2Day13[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day13[j].id   ; k++){
@@ -12558,12 +12587,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day13.length; j++){
             if(this.timeofweekOTSF2Day13[j].roomid == 2){
               this.timeofweekOTSF2Day13[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day13[j].color = 'red' ;
+              this.timeofweekOTSF2Day13[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day13[j].showlabel = true;
-              this.timeofweekOTSF2Day13[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day13[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day13[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day13[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day13[j].checkReservations = true ;
+              this.timeofweekOTSF2Day13[j].checkReservations = true ; this.showday13 = true;
               if(this.timeofweekOTSF2Day13[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day13[j].id   ; k++){
@@ -12580,12 +12609,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day13.length; j++){
             if(this.timeofweekOTSF2Day13[j].roomid == 3){
               this.timeofweekOTSF2Day13[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day13[j].color = 'red' ;
+              this.timeofweekOTSF2Day13[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day13[j].showlabel = true;
-              this.timeofweekOTSF2Day13[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day13[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day13[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day13[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day13[j].checkReservations = true ;
+              this.timeofweekOTSF2Day13[j].checkReservations = true ; this.showday13 = true;
               if(this.timeofweekOTSF2Day13[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day13[j].id   ; k++){
@@ -12602,12 +12631,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day13.length; j++){
             if(this.timeofweekOTSF2Day13[j].roomid == 4){
               this.timeofweekOTSF2Day13[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day13[j].color = 'red' ;
+              this.timeofweekOTSF2Day13[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day13[j].showlabel = true;
-              this.timeofweekOTSF2Day13[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day13[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day13[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day13[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day13[j].checkReservations = true ;
+              this.timeofweekOTSF2Day13[j].checkReservations = true ; this.showday13 = true;
               if(this.timeofweekOTSF2Day13[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day13[j].id   ; k++){
@@ -12624,12 +12653,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day13.length; j++){
             if(this.timeofweekOTSF2Day13[j].roomid == 5){
               this.timeofweekOTSF2Day13[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day13[j].color = 'red' ;
+              this.timeofweekOTSF2Day13[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day13[j].showlabel = true;
-              this.timeofweekOTSF2Day13[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day13[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day13[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day13[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day13[j].checkReservations = true ;
+              this.timeofweekOTSF2Day13[j].checkReservations = true ; this.showday13 = true;
               if(this.timeofweekOTSF2Day13[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day13[j].id   ; k++){
@@ -12646,12 +12675,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day13.length; j++){
             if(this.timeofweekOTSF2Day13[j].roomid == 6){
               this.timeofweekOTSF2Day13[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day13[j].color = 'red' ;
+              this.timeofweekOTSF2Day13[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day13[j].showlabel = true;
-              this.timeofweekOTSF2Day13[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day13[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day13[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day13[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day13[j].checkReservations = true ;
+              this.timeofweekOTSF2Day13[j].checkReservations = true ; this.showday13 = true;
               if(this.timeofweekOTSF2Day13[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day13[j].id   ; k++){
@@ -12668,12 +12697,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day13.length; j++){
             if(this.timeofweekOTSF2Day13[j].roomid == 7){
               this.timeofweekOTSF2Day13[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day13[j].color = 'red' ;
+              this.timeofweekOTSF2Day13[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day13[j].showlabel = true;
-              this.timeofweekOTSF2Day13[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day13[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day13[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day13[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day13[j].checkReservations = true ;
+              this.timeofweekOTSF2Day13[j].checkReservations = true ; this.showday13 = true;
               if(this.timeofweekOTSF2Day13[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day13[j].id   ; k++){
@@ -12690,12 +12719,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day13.length; j++){
             if(this.timeofweekOTSF2Day13[j].roomid == 8){
               this.timeofweekOTSF2Day13[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day13[j].color = 'red' ;
+              this.timeofweekOTSF2Day13[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day13[j].showlabel = true;
-              this.timeofweekOTSF2Day13[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day13[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day13[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day13[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day13[j].checkReservations = true ;
+              this.timeofweekOTSF2Day13[j].checkReservations = true ; this.showday13 = true;
               if(this.timeofweekOTSF2Day13[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day13[j].id   ; k++){
@@ -12712,12 +12741,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day13.length; j++){
             if(this.timeofweekOTSF2Day13[j].roomid == 9){
               this.timeofweekOTSF2Day13[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day13[j].color = 'red' ;
+              this.timeofweekOTSF2Day13[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day13[j].showlabel = true;
-              this.timeofweekOTSF2Day13[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day13[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day13[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day13[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day13[j].checkReservations = true ;
+              this.timeofweekOTSF2Day13[j].checkReservations = true ; this.showday13 = true;
               if(this.timeofweekOTSF2Day13[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day13[j].id   ; k++){
@@ -12734,12 +12763,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day13.length; j++){
             if(this.timeofweekOTSF2Day13[j].roomid == 10){
               this.timeofweekOTSF2Day13[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day13[j].color = 'red' ;
+              this.timeofweekOTSF2Day13[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day13[j].showlabel = true;
-              this.timeofweekOTSF2Day13[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day13[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day13[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day13[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day13[j].checkReservations = true ;
+              this.timeofweekOTSF2Day13[j].checkReservations = true ; this.showday13 = true;
               if(this.timeofweekOTSF2Day13[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day13[j].id   ; k++){
@@ -12756,12 +12785,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day13.length; j++){
             if(this.timeofweekOTSF2Day13[j].roomid == 11){
               this.timeofweekOTSF2Day13[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day13[j].color = 'red' ;
+              this.timeofweekOTSF2Day13[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day13[j].showlabel = true;
-              this.timeofweekOTSF2Day13[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day13[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day13[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day13[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day13[j].checkReservations = true ;
+              this.timeofweekOTSF2Day13[j].checkReservations = true ; this.showday13 = true;
               if(this.timeofweekOTSF2Day13[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day13[j].id   ; k++){
@@ -12778,12 +12807,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day13.length; j++){
             if(this.timeofweekOTSF2Day13[j].roomid == 12){
               this.timeofweekOTSF2Day13[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day13[j].color = 'red' ;
+              this.timeofweekOTSF2Day13[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day13[j].showlabel = true;
-              this.timeofweekOTSF2Day13[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day13[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day13[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day13[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day13[j].checkReservations = true ;
+              this.timeofweekOTSF2Day13[j].checkReservations = true ; this.showday13 = true;
               if(this.timeofweekOTSF2Day13[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day13[j].id   ; k++){
@@ -12800,12 +12829,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day13.length; j++){
             if(this.timeofweekOTSF2Day13[j].roomid == 13){
               this.timeofweekOTSF2Day13[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day13[j].color = 'red' ;
+              this.timeofweekOTSF2Day13[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day13[j].showlabel = true;
-              this.timeofweekOTSF2Day13[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day13[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day13[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day13[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day13[j].checkReservations = true ;
+              this.timeofweekOTSF2Day13[j].checkReservations = true ; this.showday13 = true;
               if(this.timeofweekOTSF2Day13[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day13[j].id   ; k++){
@@ -12822,12 +12851,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day13.length; j++){
             if(this.timeofweekOTSF2Day13[j].roomid == 14){
               this.timeofweekOTSF2Day13[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day13[j].color = 'red' ;
+              this.timeofweekOTSF2Day13[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day13[j].showlabel = true;
-              this.timeofweekOTSF2Day13[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day13[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day13[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day13[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day13[j].checkReservations = true ;
+              this.timeofweekOTSF2Day13[j].checkReservations = true ; this.showday13 = true;
               if(this.timeofweekOTSF2Day13[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day13[j].id   ; k++){
@@ -12844,12 +12873,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day13.length; j++){
             if(this.timeofweekOTSF2Day13[j].roomid == 15){
               this.timeofweekOTSF2Day13[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day13[j].color = 'red' ;
+              this.timeofweekOTSF2Day13[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day13[j].showlabel = true;
-              this.timeofweekOTSF2Day13[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day13[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day13[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day13[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day13[j].checkReservations = true ;
+              this.timeofweekOTSF2Day13[j].checkReservations = true ; this.showday13 = true;
               if(this.timeofweekOTSF2Day13[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day13[j].id   ; k++){
@@ -12866,12 +12895,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day13.length; j++){
             if(this.timeofweekOTSF2Day13[j].roomid == 16){
               this.timeofweekOTSF2Day13[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day13[j].color = 'red' ;
+              this.timeofweekOTSF2Day13[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day13[j].showlabel = true;
-              this.timeofweekOTSF2Day13[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day13[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day13[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day13[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day13[j].checkReservations = true ;
+              this.timeofweekOTSF2Day13[j].checkReservations = true ; this.showday13 = true;
               if(this.timeofweekOTSF2Day13[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day13[j].id   ; k++){
@@ -12888,12 +12917,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day13.length; j++){
             if(this.timeofweekOTSF2Day13[j].roomid == 17){
               this.timeofweekOTSF2Day13[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day13[j].color = 'red' ;
+              this.timeofweekOTSF2Day13[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day13[j].showlabel = true;
-              this.timeofweekOTSF2Day13[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day13[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day13[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day13[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day13[j].checkReservations = true ;
+              this.timeofweekOTSF2Day13[j].checkReservations = true ; this.showday13 = true;
               if(this.timeofweekOTSF2Day13[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day13[j].id   ; k++){
@@ -12910,12 +12939,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day13.length; j++){
             if(this.timeofweekOTSF2Day13[j].roomid == 18){
               this.timeofweekOTSF2Day13[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day13[j].color = 'red' ;
+              this.timeofweekOTSF2Day13[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day13[j].showlabel = true;
-              this.timeofweekOTSF2Day13[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day13[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day13[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day13[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day13[j].checkReservations = true ;
+              this.timeofweekOTSF2Day13[j].checkReservations = true ; this.showday13 = true;
               if(this.timeofweekOTSF2Day13[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day13[j].id   ; k++){
@@ -12932,12 +12961,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day14.length; j++){
             if(this.timeofweekOTSF2Day14[j].roomid == 0){
               this.timeofweekOTSF2Day14[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day14[j].color = 'red' ;
+              this.timeofweekOTSF2Day14[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day14[j].showlabel = true;
-              this.timeofweekOTSF2Day14[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day14[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day14[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day14[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day14[j].checkReservations = true ;
+              this.timeofweekOTSF2Day14[j].checkReservations = true ; this.showday14 = true;
               if(this.timeofweekOTSF2Day14[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day14[j].id   ; k++){
@@ -12954,12 +12983,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day14.length; j++){
             if(this.timeofweekOTSF2Day14[j].roomid == 1){
               this.timeofweekOTSF2Day14[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day14[j].color = 'red' ;
+              this.timeofweekOTSF2Day14[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day14[j].showlabel = true;
-              this.timeofweekOTSF2Day14[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day14[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day14[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day14[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day14[j].checkReservations = true ;
+              this.timeofweekOTSF2Day14[j].checkReservations = true ; this.showday14 = true;
               if(this.timeofweekOTSF2Day14[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day14[j].id   ; k++){
@@ -12976,12 +13005,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day14.length; j++){
             if(this.timeofweekOTSF2Day14[j].roomid == 2){
               this.timeofweekOTSF2Day14[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day14[j].color = 'red' ;
+              this.timeofweekOTSF2Day14[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day14[j].showlabel = true;
-              this.timeofweekOTSF2Day14[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day14[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day14[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day14[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day14[j].checkReservations = true ;
+              this.timeofweekOTSF2Day14[j].checkReservations = true ; this.showday14 = true;
               if(this.timeofweekOTSF2Day14[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day14[j].id   ; k++){
@@ -12998,12 +13027,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day14.length; j++){
             if(this.timeofweekOTSF2Day14[j].roomid == 3){
               this.timeofweekOTSF2Day14[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day14[j].color = 'red' ;
+              this.timeofweekOTSF2Day14[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day14[j].showlabel = true;
-              this.timeofweekOTSF2Day14[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day14[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day14[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day14[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day14[j].checkReservations = true ;
+              this.timeofweekOTSF2Day14[j].checkReservations = true ; this.showday14 = true;
               if(this.timeofweekOTSF2Day14[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day14[j].id   ; k++){
@@ -13020,12 +13049,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day14.length; j++){
             if(this.timeofweekOTSF2Day14[j].roomid == 4){
               this.timeofweekOTSF2Day14[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day14[j].color = 'red' ;
+              this.timeofweekOTSF2Day14[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day14[j].showlabel = true;
-              this.timeofweekOTSF2Day14[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day14[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day14[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day14[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day14[j].checkReservations = true ;
+              this.timeofweekOTSF2Day14[j].checkReservations = true ; this.showday14 = true;
               if(this.timeofweekOTSF2Day14[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day14[j].id   ; k++){
@@ -13042,12 +13071,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day14.length; j++){
             if(this.timeofweekOTSF2Day14[j].roomid == 5){
               this.timeofweekOTSF2Day14[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day14[j].color = 'red' ;
+              this.timeofweekOTSF2Day14[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day14[j].showlabel = true;
-              this.timeofweekOTSF2Day14[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day14[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day14[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day14[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day14[j].checkReservations = true ;
+              this.timeofweekOTSF2Day14[j].checkReservations = true ; this.showday14 = true;
               if(this.timeofweekOTSF2Day14[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day14[j].id   ; k++){
@@ -13064,12 +13093,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day14.length; j++){
             if(this.timeofweekOTSF2Day14[j].roomid == 6){
               this.timeofweekOTSF2Day14[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day14[j].color = 'red' ;
+              this.timeofweekOTSF2Day14[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day14[j].showlabel = true;
-              this.timeofweekOTSF2Day14[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day14[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day14[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day14[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day14[j].checkReservations = true ;
+              this.timeofweekOTSF2Day14[j].checkReservations = true ; this.showday14 = true;
               if(this.timeofweekOTSF2Day14[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day14[j].id   ; k++){
@@ -13086,12 +13115,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day14.length; j++){
             if(this.timeofweekOTSF2Day14[j].roomid == 7){
               this.timeofweekOTSF2Day14[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day14[j].color = 'red' ;
+              this.timeofweekOTSF2Day14[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day14[j].showlabel = true;
-              this.timeofweekOTSF2Day14[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day14[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day14[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day14[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day14[j].checkReservations = true ;
+              this.timeofweekOTSF2Day14[j].checkReservations = true ; this.showday14 = true;
               if(this.timeofweekOTSF2Day14[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day14[j].id   ; k++){
@@ -13108,12 +13137,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day14.length; j++){
             if(this.timeofweekOTSF2Day14[j].roomid == 8){
               this.timeofweekOTSF2Day14[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day14[j].color = 'red' ;
+              this.timeofweekOTSF2Day14[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day14[j].showlabel = true;
-              this.timeofweekOTSF2Day14[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day14[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day14[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day14[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day14[j].checkReservations = true ;
+              this.timeofweekOTSF2Day14[j].checkReservations = true ; this.showday14 = true;
               if(this.timeofweekOTSF2Day14[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day14[j].id   ; k++){
@@ -13130,12 +13159,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day14.length; j++){
             if(this.timeofweekOTSF2Day14[j].roomid == 9){
               this.timeofweekOTSF2Day14[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day14[j].color = 'red' ;
+              this.timeofweekOTSF2Day14[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day14[j].showlabel = true;
-              this.timeofweekOTSF2Day14[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day14[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day14[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day14[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day14[j].checkReservations = true ;
+              this.timeofweekOTSF2Day14[j].checkReservations = true ; this.showday14 = true;
               if(this.timeofweekOTSF2Day14[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day14[j].id   ; k++){
@@ -13152,12 +13181,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day14.length; j++){
             if(this.timeofweekOTSF2Day14[j].roomid == 10){
               this.timeofweekOTSF2Day14[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day14[j].color = 'red' ;
+              this.timeofweekOTSF2Day14[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day14[j].showlabel = true;
-              this.timeofweekOTSF2Day14[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day14[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day14[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day14[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day14[j].checkReservations = true ;
+              this.timeofweekOTSF2Day14[j].checkReservations = true ; this.showday14 = true;
               if(this.timeofweekOTSF2Day14[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day14[j].id   ; k++){
@@ -13174,12 +13203,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day14.length; j++){
             if(this.timeofweekOTSF2Day14[j].roomid == 11){
               this.timeofweekOTSF2Day14[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day14[j].color = 'red' ;
+              this.timeofweekOTSF2Day14[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day14[j].showlabel = true;
-              this.timeofweekOTSF2Day14[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day14[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day14[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day14[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day14[j].checkReservations = true ;
+              this.timeofweekOTSF2Day14[j].checkReservations = true ; this.showday14 = true;
               if(this.timeofweekOTSF2Day14[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day14[j].id   ; k++){
@@ -13196,12 +13225,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day14.length; j++){
             if(this.timeofweekOTSF2Day14[j].roomid == 12){
               this.timeofweekOTSF2Day14[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day14[j].color = 'red' ;
+              this.timeofweekOTSF2Day14[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day14[j].showlabel = true;
-              this.timeofweekOTSF2Day14[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day14[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day14[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day14[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day14[j].checkReservations = true ;
+              this.timeofweekOTSF2Day14[j].checkReservations = true ; this.showday14 = true;
               if(this.timeofweekOTSF2Day14[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day14[j].id   ; k++){
@@ -13218,12 +13247,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day14.length; j++){
             if(this.timeofweekOTSF2Day14[j].roomid == 13){
               this.timeofweekOTSF2Day14[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day14[j].color = 'red' ;
+              this.timeofweekOTSF2Day14[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day14[j].showlabel = true;
-              this.timeofweekOTSF2Day14[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day14[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day14[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day14[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day14[j].checkReservations = true ;
+              this.timeofweekOTSF2Day14[j].checkReservations = true ; this.showday14 = true;
               if(this.timeofweekOTSF2Day14[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day14[j].id   ; k++){
@@ -13240,12 +13269,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day14.length; j++){
             if(this.timeofweekOTSF2Day14[j].roomid == 14){
               this.timeofweekOTSF2Day14[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day14[j].color = 'red' ;
+              this.timeofweekOTSF2Day14[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day14[j].showlabel = true;
-              this.timeofweekOTSF2Day14[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day14[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day14[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day14[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day14[j].checkReservations = true ;
+              this.timeofweekOTSF2Day14[j].checkReservations = true ; this.showday14 = true;
               if(this.timeofweekOTSF2Day14[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day14[j].id   ; k++){
@@ -13262,12 +13291,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day14.length; j++){
             if(this.timeofweekOTSF2Day14[j].roomid == 15){
               this.timeofweekOTSF2Day14[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day14[j].color = 'red' ;
+              this.timeofweekOTSF2Day14[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day14[j].showlabel = true;
-              this.timeofweekOTSF2Day14[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day14[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day14[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day14[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day14[j].checkReservations = true ;
+              this.timeofweekOTSF2Day14[j].checkReservations = true ; this.showday14 = true;
               if(this.timeofweekOTSF2Day14[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day14[j].id   ; k++){
@@ -13284,12 +13313,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day14.length; j++){
             if(this.timeofweekOTSF2Day14[j].roomid == 16){
               this.timeofweekOTSF2Day14[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day14[j].color = 'red' ;
+              this.timeofweekOTSF2Day14[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day14[j].showlabel = true;
-              this.timeofweekOTSF2Day14[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day14[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day14[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day14[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day14[j].checkReservations = true ;
+              this.timeofweekOTSF2Day14[j].checkReservations = true ; this.showday14 = true;
               if(this.timeofweekOTSF2Day14[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day14[j].id   ; k++){
@@ -13306,12 +13335,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day14.length; j++){
             if(this.timeofweekOTSF2Day14[j].roomid == 17){
               this.timeofweekOTSF2Day14[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day14[j].color = 'red' ;
+              this.timeofweekOTSF2Day14[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day14[j].showlabel = true;
-              this.timeofweekOTSF2Day14[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day14[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day14[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day14[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day14[j].checkReservations = true ;
+              this.timeofweekOTSF2Day14[j].checkReservations = true ; this.showday14 = true;
               if(this.timeofweekOTSF2Day14[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day14[j].id   ; k++){
@@ -13328,12 +13357,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day14.length; j++){
             if(this.timeofweekOTSF2Day14[j].roomid == 18){
               this.timeofweekOTSF2Day14[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day14[j].color = 'red' ;
+              this.timeofweekOTSF2Day14[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day14[j].showlabel = true;
-              this.timeofweekOTSF2Day14[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day14[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day14[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day14[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day14[j].checkReservations = true ;
+              this.timeofweekOTSF2Day14[j].checkReservations = true ; this.showday14 = true;
               if(this.timeofweekOTSF2Day14[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day14[j].id   ; k++){
@@ -13350,12 +13379,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day15.length; j++){
             if(this.timeofweekOTSF2Day15[j].roomid == 0){
               this.timeofweekOTSF2Day15[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day15[j].color = 'red' ;
+              this.timeofweekOTSF2Day15[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day15[j].showlabel = true;
-              this.timeofweekOTSF2Day15[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day15[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day15[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day15[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day15[j].checkReservations = true ;
+              this.timeofweekOTSF2Day15[j].checkReservations = true ; this.showday15 = true;
               if(this.timeofweekOTSF2Day15[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day15[j].id   ; k++){
@@ -13372,12 +13401,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day15.length; j++){
             if(this.timeofweekOTSF2Day15[j].roomid == 1){
               this.timeofweekOTSF2Day15[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day15[j].color = 'red' ;
+              this.timeofweekOTSF2Day15[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day15[j].showlabel = true;
-              this.timeofweekOTSF2Day15[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day15[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day15[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day15[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day15[j].checkReservations = true ;
+              this.timeofweekOTSF2Day15[j].checkReservations = true ; this.showday15 = true;
               if(this.timeofweekOTSF2Day15[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day15[j].id   ; k++){
@@ -13394,12 +13423,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day15.length; j++){
             if(this.timeofweekOTSF2Day15[j].roomid == 2){
               this.timeofweekOTSF2Day15[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day15[j].color = 'red' ;
+              this.timeofweekOTSF2Day15[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day15[j].showlabel = true;
-              this.timeofweekOTSF2Day15[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day15[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day15[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day15[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day15[j].checkReservations = true ;
+              this.timeofweekOTSF2Day15[j].checkReservations = true ; this.showday15 = true;
               if(this.timeofweekOTSF2Day15[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day15[j].id   ; k++){
@@ -13416,12 +13445,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day15.length; j++){
             if(this.timeofweekOTSF2Day15[j].roomid == 3){
               this.timeofweekOTSF2Day15[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day15[j].color = 'red' ;
+              this.timeofweekOTSF2Day15[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day15[j].showlabel = true;
-              this.timeofweekOTSF2Day15[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day15[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day15[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day15[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day15[j].checkReservations = true ;
+              this.timeofweekOTSF2Day15[j].checkReservations = true ; this.showday15 = true;
               if(this.timeofweekOTSF2Day15[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day15[j].id   ; k++){
@@ -13438,12 +13467,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day15.length; j++){
             if(this.timeofweekOTSF2Day15[j].roomid == 4){
               this.timeofweekOTSF2Day15[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day15[j].color = 'red' ;
+              this.timeofweekOTSF2Day15[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day15[j].showlabel = true;
-              this.timeofweekOTSF2Day15[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day15[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day15[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day15[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day15[j].checkReservations = true ;
+              this.timeofweekOTSF2Day15[j].checkReservations = true ; this.showday15 = true;
               if(this.timeofweekOTSF2Day15[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day15[j].id   ; k++){
@@ -13460,12 +13489,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day15.length; j++){
             if(this.timeofweekOTSF2Day15[j].roomid == 5){
               this.timeofweekOTSF2Day15[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day15[j].color = 'red' ;
+              this.timeofweekOTSF2Day15[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day15[j].showlabel = true;
-              this.timeofweekOTSF2Day15[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day15[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day15[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day15[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day15[j].checkReservations = true ;
+              this.timeofweekOTSF2Day15[j].checkReservations = true ; this.showday15 = true;
               if(this.timeofweekOTSF2Day15[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day15[j].id   ; k++){
@@ -13482,12 +13511,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day15.length; j++){
             if(this.timeofweekOTSF2Day15[j].roomid == 6){
               this.timeofweekOTSF2Day15[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day15[j].color = 'red' ;
+              this.timeofweekOTSF2Day15[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day15[j].showlabel = true;
-              this.timeofweekOTSF2Day15[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day15[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day15[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day15[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day15[j].checkReservations = true ;
+              this.timeofweekOTSF2Day15[j].checkReservations = true ; this.showday15 = true;
               if(this.timeofweekOTSF2Day15[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day15[j].id   ; k++){
@@ -13504,12 +13533,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day15.length; j++){
             if(this.timeofweekOTSF2Day15[j].roomid == 7){
               this.timeofweekOTSF2Day15[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day15[j].color = 'red' ;
+              this.timeofweekOTSF2Day15[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day15[j].showlabel = true;
-              this.timeofweekOTSF2Day15[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day15[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day15[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day15[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day15[j].checkReservations = true ;
+              this.timeofweekOTSF2Day15[j].checkReservations = true ; this.showday15 = true;
               if(this.timeofweekOTSF2Day15[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day15[j].id   ; k++){
@@ -13526,12 +13555,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day15.length; j++){
             if(this.timeofweekOTSF2Day15[j].roomid == 8){
               this.timeofweekOTSF2Day15[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day15[j].color = 'red' ;
+              this.timeofweekOTSF2Day15[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day15[j].showlabel = true;
-              this.timeofweekOTSF2Day15[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day15[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day15[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day15[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day15[j].checkReservations = true ;
+              this.timeofweekOTSF2Day15[j].checkReservations = true ; this.showday15 = true;
               if(this.timeofweekOTSF2Day15[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day15[j].id   ; k++){
@@ -13548,12 +13577,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day15.length; j++){
             if(this.timeofweekOTSF2Day15[j].roomid == 9){
               this.timeofweekOTSF2Day15[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day15[j].color = 'red' ;
+              this.timeofweekOTSF2Day15[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day15[j].showlabel = true;
-              this.timeofweekOTSF2Day15[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day15[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day15[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day15[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day15[j].checkReservations = true ;
+              this.timeofweekOTSF2Day15[j].checkReservations = true ; this.showday15 = true;
               if(this.timeofweekOTSF2Day15[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day15[j].id   ; k++){
@@ -13570,12 +13599,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day15.length; j++){
             if(this.timeofweekOTSF2Day15[j].roomid == 10){
               this.timeofweekOTSF2Day15[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day15[j].color = 'red' ;
+              this.timeofweekOTSF2Day15[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day15[j].showlabel = true;
-              this.timeofweekOTSF2Day15[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day15[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day15[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day15[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day15[j].checkReservations = true ;
+              this.timeofweekOTSF2Day15[j].checkReservations = true ; this.showday15 = true;
               if(this.timeofweekOTSF2Day15[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day15[j].id   ; k++){
@@ -13592,12 +13621,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day15.length; j++){
             if(this.timeofweekOTSF2Day15[j].roomid == 11){
               this.timeofweekOTSF2Day15[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day15[j].color = 'red' ;
+              this.timeofweekOTSF2Day15[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day15[j].showlabel = true;
-              this.timeofweekOTSF2Day15[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day15[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day15[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day15[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day15[j].checkReservations = true ;
+              this.timeofweekOTSF2Day15[j].checkReservations = true ; this.showday15 = true;
               if(this.timeofweekOTSF2Day15[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day15[j].id   ; k++){
@@ -13614,12 +13643,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day15.length; j++){
             if(this.timeofweekOTSF2Day15[j].roomid == 12){
               this.timeofweekOTSF2Day15[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day15[j].color = 'red' ;
+              this.timeofweekOTSF2Day15[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day15[j].showlabel = true;
-              this.timeofweekOTSF2Day15[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day15[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day15[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day15[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day15[j].checkReservations = true ;
+              this.timeofweekOTSF2Day15[j].checkReservations = true ; this.showday15 = true;
               if(this.timeofweekOTSF2Day15[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day15[j].id   ; k++){
@@ -13636,12 +13665,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day15.length; j++){
             if(this.timeofweekOTSF2Day15[j].roomid == 13){
               this.timeofweekOTSF2Day15[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day15[j].color = 'red' ;
+              this.timeofweekOTSF2Day15[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day15[j].showlabel = true;
-              this.timeofweekOTSF2Day15[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day15[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day15[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day15[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day15[j].checkReservations = true ;
+              this.timeofweekOTSF2Day15[j].checkReservations = true ; this.showday15 = true;
               if(this.timeofweekOTSF2Day15[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day15[j].id   ; k++){
@@ -13658,12 +13687,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day15.length; j++){
             if(this.timeofweekOTSF2Day15[j].roomid == 14){
               this.timeofweekOTSF2Day15[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day15[j].color = 'red' ;
+              this.timeofweekOTSF2Day15[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day15[j].showlabel = true;
-              this.timeofweekOTSF2Day15[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day15[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day15[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day15[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day15[j].checkReservations = true ;
+              this.timeofweekOTSF2Day15[j].checkReservations = true ; this.showday15 = true;
               if(this.timeofweekOTSF2Day15[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day15[j].id   ; k++){
@@ -13680,12 +13709,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day15.length; j++){
             if(this.timeofweekOTSF2Day15[j].roomid == 15){
               this.timeofweekOTSF2Day15[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day15[j].color = 'red' ;
+              this.timeofweekOTSF2Day15[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day15[j].showlabel = true;
-              this.timeofweekOTSF2Day15[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day15[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day15[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day15[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day15[j].checkReservations = true ;
+              this.timeofweekOTSF2Day15[j].checkReservations = true ; this.showday15 = true;
               if(this.timeofweekOTSF2Day15[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day15[j].id   ; k++){
@@ -13702,12 +13731,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day15.length; j++){
             if(this.timeofweekOTSF2Day15[j].roomid == 16){
               this.timeofweekOTSF2Day15[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day15[j].color = 'red' ;
+              this.timeofweekOTSF2Day15[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day15[j].showlabel = true;
-              this.timeofweekOTSF2Day15[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day15[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day15[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day15[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day15[j].checkReservations = true ;
+              this.timeofweekOTSF2Day15[j].checkReservations = true ; this.showday15 = true;
               if(this.timeofweekOTSF2Day15[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day15[j].id   ; k++){
@@ -13724,12 +13753,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day15.length; j++){
             if(this.timeofweekOTSF2Day15[j].roomid == 17){
               this.timeofweekOTSF2Day15[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day15[j].color = 'red' ;
+              this.timeofweekOTSF2Day15[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day15[j].showlabel = true;
-              this.timeofweekOTSF2Day15[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day15[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day15[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day15[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day15[j].checkReservations = true ;
+              this.timeofweekOTSF2Day15[j].checkReservations = true ; this.showday15 = true;
               if(this.timeofweekOTSF2Day15[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day15[j].id   ; k++){
@@ -13746,12 +13775,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day15.length; j++){
             if(this.timeofweekOTSF2Day15[j].roomid == 18){
               this.timeofweekOTSF2Day15[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day15[j].color = 'red' ;
+              this.timeofweekOTSF2Day15[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day15[j].showlabel = true;
-              this.timeofweekOTSF2Day15[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day15[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day15[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day15[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day15[j].checkReservations = true ;
+              this.timeofweekOTSF2Day15[j].checkReservations = true ; this.showday15 = true;
               if(this.timeofweekOTSF2Day15[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day15[j].id   ; k++){
@@ -13768,12 +13797,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day16.length; j++){
             if(this.timeofweekOTSF2Day16[j].roomid == 0){
               this.timeofweekOTSF2Day16[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day16[j].color = 'red' ;
+              this.timeofweekOTSF2Day16[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day16[j].showlabel = true;
-              this.timeofweekOTSF2Day16[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day16[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day16[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day16[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day16[j].checkReservations = true ;
+              this.timeofweekOTSF2Day16[j].checkReservations = true ; this.showday16 = true;
               if(this.timeofweekOTSF2Day16[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day16[j].id   ; k++){
@@ -13790,12 +13819,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day16.length; j++){
             if(this.timeofweekOTSF2Day16[j].roomid == 1){
               this.timeofweekOTSF2Day16[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day16[j].color = 'red' ;
+              this.timeofweekOTSF2Day16[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day16[j].showlabel = true;
-              this.timeofweekOTSF2Day16[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day16[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day16[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day16[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day16[j].checkReservations = true ;
+              this.timeofweekOTSF2Day16[j].checkReservations = true ; this.showday16 = true;
               if(this.timeofweekOTSF2Day16[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day16[j].id   ; k++){
@@ -13812,12 +13841,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day16.length; j++){
             if(this.timeofweekOTSF2Day16[j].roomid == 2){
               this.timeofweekOTSF2Day16[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day16[j].color = 'red' ;
+              this.timeofweekOTSF2Day16[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day16[j].showlabel = true;
-              this.timeofweekOTSF2Day16[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day16[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day16[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day16[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day16[j].checkReservations = true ;
+              this.timeofweekOTSF2Day16[j].checkReservations = true ; this.showday16 = true;
               if(this.timeofweekOTSF2Day16[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day16[j].id   ; k++){
@@ -13834,12 +13863,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day16.length; j++){
             if(this.timeofweekOTSF2Day16[j].roomid == 3){
               this.timeofweekOTSF2Day16[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day16[j].color = 'red' ;
+              this.timeofweekOTSF2Day16[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day16[j].showlabel = true;
-              this.timeofweekOTSF2Day16[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day16[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day16[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day16[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day16[j].checkReservations = true ;
+              this.timeofweekOTSF2Day16[j].checkReservations = true ; this.showday16 = true;
               if(this.timeofweekOTSF2Day16[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day16[j].id   ; k++){
@@ -13856,12 +13885,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day16.length; j++){
             if(this.timeofweekOTSF2Day16[j].roomid == 4){
               this.timeofweekOTSF2Day16[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day16[j].color = 'red' ;
+              this.timeofweekOTSF2Day16[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day16[j].showlabel = true;
-              this.timeofweekOTSF2Day16[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day16[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day16[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day16[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day16[j].checkReservations = true ;
+              this.timeofweekOTSF2Day16[j].checkReservations = true ; this.showday16 = true;
               if(this.timeofweekOTSF2Day16[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day16[j].id   ; k++){
@@ -13878,12 +13907,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day16.length; j++){
             if(this.timeofweekOTSF2Day16[j].roomid == 5){
               this.timeofweekOTSF2Day16[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day16[j].color = 'red' ;
+              this.timeofweekOTSF2Day16[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day16[j].showlabel = true;
-              this.timeofweekOTSF2Day16[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day16[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day16[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day16[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day16[j].checkReservations = true ;
+              this.timeofweekOTSF2Day16[j].checkReservations = true ; this.showday16 = true;
               if(this.timeofweekOTSF2Day16[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day16[j].id   ; k++){
@@ -13900,12 +13929,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day16.length; j++){
             if(this.timeofweekOTSF2Day16[j].roomid == 6){
               this.timeofweekOTSF2Day16[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day16[j].color = 'red' ;
+              this.timeofweekOTSF2Day16[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day16[j].showlabel = true;
-              this.timeofweekOTSF2Day16[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day16[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day16[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day16[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day16[j].checkReservations = true ;
+              this.timeofweekOTSF2Day16[j].checkReservations = true ; this.showday16 = true;
               if(this.timeofweekOTSF2Day16[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day16[j].id   ; k++){
@@ -13922,12 +13951,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day16.length; j++){
             if(this.timeofweekOTSF2Day16[j].roomid == 7){
               this.timeofweekOTSF2Day16[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day16[j].color = 'red' ;
+              this.timeofweekOTSF2Day16[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day16[j].showlabel = true;
-              this.timeofweekOTSF2Day16[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day16[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day16[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day16[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day16[j].checkReservations = true ;
+              this.timeofweekOTSF2Day16[j].checkReservations = true ; this.showday16 = true;
               if(this.timeofweekOTSF2Day16[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day16[j].id   ; k++){
@@ -13944,12 +13973,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day16.length; j++){
             if(this.timeofweekOTSF2Day16[j].roomid == 8){
               this.timeofweekOTSF2Day16[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day16[j].color = 'red' ;
+              this.timeofweekOTSF2Day16[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day16[j].showlabel = true;
-              this.timeofweekOTSF2Day16[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day16[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day16[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day16[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day16[j].checkReservations = true ;
+              this.timeofweekOTSF2Day16[j].checkReservations = true ; this.showday16 = true;
               if(this.timeofweekOTSF2Day16[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day16[j].id   ; k++){
@@ -13966,12 +13995,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day16.length; j++){
             if(this.timeofweekOTSF2Day16[j].roomid == 9){
               this.timeofweekOTSF2Day16[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day16[j].color = 'red' ;
+              this.timeofweekOTSF2Day16[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day16[j].showlabel = true;
-              this.timeofweekOTSF2Day16[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day16[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day16[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day16[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day16[j].checkReservations = true ;
+              this.timeofweekOTSF2Day16[j].checkReservations = true ; this.showday16 = true;
               if(this.timeofweekOTSF2Day16[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day16[j].id   ; k++){
@@ -13988,12 +14017,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day16.length; j++){
             if(this.timeofweekOTSF2Day16[j].roomid == 10){
               this.timeofweekOTSF2Day16[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day16[j].color = 'red' ;
+              this.timeofweekOTSF2Day16[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day16[j].showlabel = true;
-              this.timeofweekOTSF2Day16[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day16[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day16[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day16[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day16[j].checkReservations = true ;
+              this.timeofweekOTSF2Day16[j].checkReservations = true ; this.showday16 = true;
               if(this.timeofweekOTSF2Day16[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day16[j].id   ; k++){
@@ -14010,12 +14039,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day16.length; j++){
             if(this.timeofweekOTSF2Day16[j].roomid == 11){
               this.timeofweekOTSF2Day16[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day16[j].color = 'red' ;
+              this.timeofweekOTSF2Day16[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day16[j].showlabel = true;
-              this.timeofweekOTSF2Day16[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day16[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day16[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day16[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day16[j].checkReservations = true ;
+              this.timeofweekOTSF2Day16[j].checkReservations = true ; this.showday16 = true;
               if(this.timeofweekOTSF2Day16[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day16[j].id   ; k++){
@@ -14032,12 +14061,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day16.length; j++){
             if(this.timeofweekOTSF2Day16[j].roomid == 12){
               this.timeofweekOTSF2Day16[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day16[j].color = 'red' ;
+              this.timeofweekOTSF2Day16[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day16[j].showlabel = true;
-              this.timeofweekOTSF2Day16[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day16[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day16[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day16[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day16[j].checkReservations = true ;
+              this.timeofweekOTSF2Day16[j].checkReservations = true ; this.showday16 = true;
               if(this.timeofweekOTSF2Day16[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day16[j].id   ; k++){
@@ -14054,12 +14083,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day16.length; j++){
             if(this.timeofweekOTSF2Day16[j].roomid == 13){
               this.timeofweekOTSF2Day16[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day16[j].color = 'red' ;
+              this.timeofweekOTSF2Day16[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day16[j].showlabel = true;
-              this.timeofweekOTSF2Day16[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day16[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day16[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day16[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day16[j].checkReservations = true ;
+              this.timeofweekOTSF2Day16[j].checkReservations = true ; this.showday16 = true;
               if(this.timeofweekOTSF2Day16[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day16[j].id   ; k++){
@@ -14076,12 +14105,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day16.length; j++){
             if(this.timeofweekOTSF2Day16[j].roomid == 14){
               this.timeofweekOTSF2Day16[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day16[j].color = 'red' ;
+              this.timeofweekOTSF2Day16[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day16[j].showlabel = true;
-              this.timeofweekOTSF2Day16[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day16[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day16[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day16[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day16[j].checkReservations = true ;
+              this.timeofweekOTSF2Day16[j].checkReservations = true ; this.showday16 = true;
               if(this.timeofweekOTSF2Day16[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day16[j].id   ; k++){
@@ -14098,12 +14127,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day16.length; j++){
             if(this.timeofweekOTSF2Day16[j].roomid == 15){
               this.timeofweekOTSF2Day16[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day16[j].color = 'red' ;
+              this.timeofweekOTSF2Day16[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day16[j].showlabel = true;
-              this.timeofweekOTSF2Day16[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day16[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day16[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day16[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day16[j].checkReservations = true ;
+              this.timeofweekOTSF2Day16[j].checkReservations = true ; this.showday16 = true;
               if(this.timeofweekOTSF2Day16[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day16[j].id   ; k++){
@@ -14120,12 +14149,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day16.length; j++){
             if(this.timeofweekOTSF2Day16[j].roomid == 16){
               this.timeofweekOTSF2Day16[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day16[j].color = 'red' ;
+              this.timeofweekOTSF2Day16[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day16[j].showlabel = true;
-              this.timeofweekOTSF2Day16[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day16[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day16[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day16[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day16[j].checkReservations = true ;
+              this.timeofweekOTSF2Day16[j].checkReservations = true ; this.showday16 = true;
               if(this.timeofweekOTSF2Day16[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day16[j].id   ; k++){
@@ -14142,12 +14171,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day16.length; j++){
             if(this.timeofweekOTSF2Day16[j].roomid == 17){
               this.timeofweekOTSF2Day16[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day16[j].color = 'red' ;
+              this.timeofweekOTSF2Day16[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day16[j].showlabel = true;
-              this.timeofweekOTSF2Day16[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day16[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day16[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day16[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day16[j].checkReservations = true ;
+              this.timeofweekOTSF2Day16[j].checkReservations = true ; this.showday16 = true;
               if(this.timeofweekOTSF2Day16[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day16[j].id   ; k++){
@@ -14164,12 +14193,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day16.length; j++){
             if(this.timeofweekOTSF2Day16[j].roomid == 18){
               this.timeofweekOTSF2Day16[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day16[j].color = 'red' ;
+              this.timeofweekOTSF2Day16[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day16[j].showlabel = true;
-              this.timeofweekOTSF2Day16[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day16[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day16[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day16[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day16[j].checkReservations = true ;
+              this.timeofweekOTSF2Day16[j].checkReservations = true ; this.showday16 = true;
               if(this.timeofweekOTSF2Day16[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day16[j].id   ; k++){
@@ -14186,12 +14215,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day17.length; j++){
             if(this.timeofweekOTSF2Day17[j].roomid == 0){
               this.timeofweekOTSF2Day17[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day17[j].color = 'red' ;
+              this.timeofweekOTSF2Day17[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day17[j].showlabel = true;
-              this.timeofweekOTSF2Day17[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day17[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day17[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day17[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day17[j].checkReservations = true ;
+              this.timeofweekOTSF2Day17[j].checkReservations = true ; this.showday17= true;
               if(this.timeofweekOTSF2Day17[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day17[j].id   ; k++){
@@ -14208,12 +14237,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day17.length; j++){
             if(this.timeofweekOTSF2Day17[j].roomid == 1){
               this.timeofweekOTSF2Day17[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day17[j].color = 'red' ;
+              this.timeofweekOTSF2Day17[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day17[j].showlabel = true;
-              this.timeofweekOTSF2Day17[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day17[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day17[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day17[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day17[j].checkReservations = true ;
+              this.timeofweekOTSF2Day17[j].checkReservations = true ; this.showday17= true;
               if(this.timeofweekOTSF2Day17[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day17[j].id   ; k++){
@@ -14230,12 +14259,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day17.length; j++){
             if(this.timeofweekOTSF2Day17[j].roomid == 2){
               this.timeofweekOTSF2Day17[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day17[j].color = 'red' ;
+              this.timeofweekOTSF2Day17[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day17[j].showlabel = true;
-              this.timeofweekOTSF2Day17[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day17[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day17[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day17[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day17[j].checkReservations = true ;
+              this.timeofweekOTSF2Day17[j].checkReservations = true ; this.showday17= true;
               if(this.timeofweekOTSF2Day17[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day17[j].id   ; k++){
@@ -14252,12 +14281,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day17.length; j++){
             if(this.timeofweekOTSF2Day17[j].roomid == 3){
               this.timeofweekOTSF2Day17[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day17[j].color = 'red' ;
+              this.timeofweekOTSF2Day17[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day17[j].showlabel = true;
-              this.timeofweekOTSF2Day17[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day17[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day17[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day17[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day17[j].checkReservations = true ;
+              this.timeofweekOTSF2Day17[j].checkReservations = true ; this.showday17= true;
               if(this.timeofweekOTSF2Day17[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day17[j].id   ; k++){
@@ -14274,12 +14303,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day17.length; j++){
             if(this.timeofweekOTSF2Day17[j].roomid == 4){
               this.timeofweekOTSF2Day17[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day17[j].color = 'red' ;
+              this.timeofweekOTSF2Day17[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day17[j].showlabel = true;
-              this.timeofweekOTSF2Day17[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day17[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day17[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day17[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day17[j].checkReservations = true ;
+              this.timeofweekOTSF2Day17[j].checkReservations = true ; this.showday17= true;
               if(this.timeofweekOTSF2Day17[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day17[j].id   ; k++){
@@ -14296,12 +14325,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day17.length; j++){
             if(this.timeofweekOTSF2Day17[j].roomid == 5){
               this.timeofweekOTSF2Day17[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day17[j].color = 'red' ;
+              this.timeofweekOTSF2Day17[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day17[j].showlabel = true;
-              this.timeofweekOTSF2Day17[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day17[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day17[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day17[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day17[j].checkReservations = true ;
+              this.timeofweekOTSF2Day17[j].checkReservations = true ; this.showday17= true;
               if(this.timeofweekOTSF2Day17[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day17[j].id   ; k++){
@@ -14318,12 +14347,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day17.length; j++){
             if(this.timeofweekOTSF2Day17[j].roomid == 6){
               this.timeofweekOTSF2Day17[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day17[j].color = 'red' ;
+              this.timeofweekOTSF2Day17[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day17[j].showlabel = true;
-              this.timeofweekOTSF2Day17[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day17[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day17[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day17[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day17[j].checkReservations = true ;
+              this.timeofweekOTSF2Day17[j].checkReservations = true ; this.showday17= true;
               if(this.timeofweekOTSF2Day17[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day17[j].id   ; k++){
@@ -14340,12 +14369,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day17.length; j++){
             if(this.timeofweekOTSF2Day17[j].roomid == 7){
               this.timeofweekOTSF2Day17[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day17[j].color = 'red' ;
+              this.timeofweekOTSF2Day17[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day17[j].showlabel = true;
-              this.timeofweekOTSF2Day17[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day17[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day17[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day17[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day17[j].checkReservations = true ;
+              this.timeofweekOTSF2Day17[j].checkReservations = true ; this.showday17= true;
               if(this.timeofweekOTSF2Day17[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day17[j].id   ; k++){
@@ -14362,12 +14391,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day17.length; j++){
             if(this.timeofweekOTSF2Day17[j].roomid == 8){
               this.timeofweekOTSF2Day17[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day17[j].color = 'red' ;
+              this.timeofweekOTSF2Day17[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day17[j].showlabel = true;
-              this.timeofweekOTSF2Day17[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day17[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day17[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day17[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day17[j].checkReservations = true ;
+              this.timeofweekOTSF2Day17[j].checkReservations = true ; this.showday17= true;
               if(this.timeofweekOTSF2Day17[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day17[j].id   ; k++){
@@ -14384,12 +14413,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day17.length; j++){
             if(this.timeofweekOTSF2Day17[j].roomid == 9){
               this.timeofweekOTSF2Day17[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day17[j].color = 'red' ;
+              this.timeofweekOTSF2Day17[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day17[j].showlabel = true;
-              this.timeofweekOTSF2Day17[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day17[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day17[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day17[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day17[j].checkReservations = true ;
+              this.timeofweekOTSF2Day17[j].checkReservations = true ; this.showday17= true;
               if(this.timeofweekOTSF2Day17[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day17[j].id   ; k++){
@@ -14406,12 +14435,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day17.length; j++){
             if(this.timeofweekOTSF2Day17[j].roomid == 10){
               this.timeofweekOTSF2Day17[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day17[j].color = 'red' ;
+              this.timeofweekOTSF2Day17[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day17[j].showlabel = true;
-              this.timeofweekOTSF2Day17[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day17[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day17[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day17[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day17[j].checkReservations = true ;
+              this.timeofweekOTSF2Day17[j].checkReservations = true ; this.showday17= true;
               if(this.timeofweekOTSF2Day17[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day17[j].id   ; k++){
@@ -14428,12 +14457,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day17.length; j++){
             if(this.timeofweekOTSF2Day17[j].roomid == 11){
               this.timeofweekOTSF2Day17[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day17[j].color = 'red' ;
+              this.timeofweekOTSF2Day17[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day17[j].showlabel = true;
-              this.timeofweekOTSF2Day17[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day17[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day17[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day17[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day17[j].checkReservations = true ;
+              this.timeofweekOTSF2Day17[j].checkReservations = true ; this.showday17= true;
               if(this.timeofweekOTSF2Day17[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day17[j].id   ; k++){
@@ -14450,12 +14479,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day17.length; j++){
             if(this.timeofweekOTSF2Day17[j].roomid == 12){
               this.timeofweekOTSF2Day17[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day17[j].color = 'red' ;
+              this.timeofweekOTSF2Day17[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day17[j].showlabel = true;
-              this.timeofweekOTSF2Day17[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day17[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day17[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day17[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day17[j].checkReservations = true ;
+              this.timeofweekOTSF2Day17[j].checkReservations = true ; this.showday17= true;
               if(this.timeofweekOTSF2Day17[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day17[j].id   ; k++){
@@ -14472,12 +14501,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day17.length; j++){
             if(this.timeofweekOTSF2Day17[j].roomid == 13){
               this.timeofweekOTSF2Day17[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day17[j].color = 'red' ;
+              this.timeofweekOTSF2Day17[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day17[j].showlabel = true;
-              this.timeofweekOTSF2Day17[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day17[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day17[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day17[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day17[j].checkReservations = true ;
+              this.timeofweekOTSF2Day17[j].checkReservations = true ; this.showday17= true;
               if(this.timeofweekOTSF2Day17[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day17[j].id   ; k++){
@@ -14494,12 +14523,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day17.length; j++){
             if(this.timeofweekOTSF2Day17[j].roomid == 14){
               this.timeofweekOTSF2Day17[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day17[j].color = 'red' ;
+              this.timeofweekOTSF2Day17[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day17[j].showlabel = true;
-              this.timeofweekOTSF2Day17[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day17[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day17[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day17[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day17[j].checkReservations = true ;
+              this.timeofweekOTSF2Day17[j].checkReservations = true ; this.showday17= true;
               if(this.timeofweekOTSF2Day17[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day17[j].id   ; k++){
@@ -14516,12 +14545,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day17.length; j++){
             if(this.timeofweekOTSF2Day17[j].roomid == 15){
               this.timeofweekOTSF2Day17[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day17[j].color = 'red' ;
+              this.timeofweekOTSF2Day17[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day17[j].showlabel = true;
-              this.timeofweekOTSF2Day17[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day17[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day17[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day17[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day17[j].checkReservations = true ;
+              this.timeofweekOTSF2Day17[j].checkReservations = true ; this.showday17= true;
               if(this.timeofweekOTSF2Day17[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day17[j].id   ; k++){
@@ -14538,12 +14567,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day17.length; j++){
             if(this.timeofweekOTSF2Day17[j].roomid == 16){
               this.timeofweekOTSF2Day17[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day17[j].color = 'red' ;
+              this.timeofweekOTSF2Day17[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day17[j].showlabel = true;
-              this.timeofweekOTSF2Day17[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day17[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day17[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day17[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day17[j].checkReservations = true ;
+              this.timeofweekOTSF2Day17[j].checkReservations = true ; this.showday17= true;
               if(this.timeofweekOTSF2Day17[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day17[j].id   ; k++){
@@ -14560,12 +14589,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day17.length; j++){
             if(this.timeofweekOTSF2Day17[j].roomid == 17){
               this.timeofweekOTSF2Day17[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day17[j].color = 'red' ;
+              this.timeofweekOTSF2Day17[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day17[j].showlabel = true;
-              this.timeofweekOTSF2Day17[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day17[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day17[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day17[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day17[j].checkReservations = true ;
+              this.timeofweekOTSF2Day17[j].checkReservations = true ; this.showday17= true;
               if(this.timeofweekOTSF2Day17[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day17[j].id   ; k++){
@@ -14582,12 +14611,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day17.length; j++){
             if(this.timeofweekOTSF2Day17[j].roomid == 18){
               this.timeofweekOTSF2Day17[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day17[j].color = 'red' ;
+              this.timeofweekOTSF2Day17[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day17[j].showlabel = true;
-              this.timeofweekOTSF2Day17[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day17[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day17[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day17[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day17[j].checkReservations = true ;
+              this.timeofweekOTSF2Day17[j].checkReservations = true ; this.showday17= true;
               if(this.timeofweekOTSF2Day17[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day17[j].id   ; k++){
@@ -14604,12 +14633,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day18.length; j++){
             if(this.timeofweekOTSF2Day18[j].roomid == 0){
               this.timeofweekOTSF2Day18[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day18[j].color = 'red' ;
+              this.timeofweekOTSF2Day18[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day18[j].showlabel = true;
-              this.timeofweekOTSF2Day18[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day18[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day18[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day18[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day18[j].checkReservations = true ;
+              this.timeofweekOTSF2Day18[j].checkReservations = true ; this.showday18= true;
               if(this.timeofweekOTSF2Day18[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day18[j].id   ; k++){
@@ -14626,12 +14655,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day18.length; j++){
             if(this.timeofweekOTSF2Day18[j].roomid == 1){
               this.timeofweekOTSF2Day18[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day18[j].color = 'red' ;
+              this.timeofweekOTSF2Day18[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day18[j].showlabel = true;
-              this.timeofweekOTSF2Day18[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day18[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day18[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day18[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day18[j].checkReservations = true ;
+              this.timeofweekOTSF2Day18[j].checkReservations = true ; this.showday18= true;
               if(this.timeofweekOTSF2Day18[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day18[j].id   ; k++){
@@ -14648,12 +14677,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day18.length; j++){
             if(this.timeofweekOTSF2Day18[j].roomid == 2){
               this.timeofweekOTSF2Day18[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day18[j].color = 'red' ;
+              this.timeofweekOTSF2Day18[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day18[j].showlabel = true;
-              this.timeofweekOTSF2Day18[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day18[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day18[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day18[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day18[j].checkReservations = true ;
+              this.timeofweekOTSF2Day18[j].checkReservations = true ; this.showday18= true;
               if(this.timeofweekOTSF2Day18[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day18[j].id   ; k++){
@@ -14670,12 +14699,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day18.length; j++){
             if(this.timeofweekOTSF2Day18[j].roomid == 3){
               this.timeofweekOTSF2Day18[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day18[j].color = 'red' ;
+              this.timeofweekOTSF2Day18[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day18[j].showlabel = true;
-              this.timeofweekOTSF2Day18[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day18[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day18[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day18[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day18[j].checkReservations = true ;
+              this.timeofweekOTSF2Day18[j].checkReservations = true ; this.showday18= true;
               if(this.timeofweekOTSF2Day18[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day18[j].id   ; k++){
@@ -14692,12 +14721,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day18.length; j++){
             if(this.timeofweekOTSF2Day18[j].roomid == 4){
               this.timeofweekOTSF2Day18[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day18[j].color = 'red' ;
+              this.timeofweekOTSF2Day18[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day18[j].showlabel = true;
-              this.timeofweekOTSF2Day18[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day18[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day18[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day18[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day18[j].checkReservations = true ;
+              this.timeofweekOTSF2Day18[j].checkReservations = true ; this.showday18= true;
               if(this.timeofweekOTSF2Day18[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day18[j].id   ; k++){
@@ -14714,12 +14743,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day18.length; j++){
             if(this.timeofweekOTSF2Day18[j].roomid == 5){
               this.timeofweekOTSF2Day18[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day18[j].color = 'red' ;
+              this.timeofweekOTSF2Day18[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day18[j].showlabel = true;
-              this.timeofweekOTSF2Day18[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day18[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day18[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day18[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day18[j].checkReservations = true ;
+              this.timeofweekOTSF2Day18[j].checkReservations = true ; this.showday18= true;
               if(this.timeofweekOTSF2Day18[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day18[j].id   ; k++){
@@ -14736,12 +14765,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day18.length; j++){
             if(this.timeofweekOTSF2Day18[j].roomid == 6){
               this.timeofweekOTSF2Day18[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day18[j].color = 'red' ;
+              this.timeofweekOTSF2Day18[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day18[j].showlabel = true;
-              this.timeofweekOTSF2Day18[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day18[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day18[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day18[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day18[j].checkReservations = true ;
+              this.timeofweekOTSF2Day18[j].checkReservations = true ; this.showday18= true;
               if(this.timeofweekOTSF2Day18[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day18[j].id   ; k++){
@@ -14758,12 +14787,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day18.length; j++){
             if(this.timeofweekOTSF2Day18[j].roomid == 7){
               this.timeofweekOTSF2Day18[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day18[j].color = 'red' ;
+              this.timeofweekOTSF2Day18[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day18[j].showlabel = true;
-              this.timeofweekOTSF2Day18[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day18[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day18[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day18[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day18[j].checkReservations = true ;
+              this.timeofweekOTSF2Day18[j].checkReservations = true ; this.showday18= true;
               if(this.timeofweekOTSF2Day18[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day18[j].id   ; k++){
@@ -14780,12 +14809,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day18.length; j++){
             if(this.timeofweekOTSF2Day18[j].roomid == 8){
               this.timeofweekOTSF2Day18[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day18[j].color = 'red' ;
+              this.timeofweekOTSF2Day18[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day18[j].showlabel = true;
-              this.timeofweekOTSF2Day18[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day18[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day18[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day18[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day18[j].checkReservations = true ;
+              this.timeofweekOTSF2Day18[j].checkReservations = true ; this.showday18= true;
               if(this.timeofweekOTSF2Day18[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day18[j].id   ; k++){
@@ -14802,12 +14831,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day18.length; j++){
             if(this.timeofweekOTSF2Day18[j].roomid == 9){
               this.timeofweekOTSF2Day18[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day18[j].color = 'red' ;
+              this.timeofweekOTSF2Day18[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day18[j].showlabel = true;
-              this.timeofweekOTSF2Day18[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day18[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day18[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day18[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day18[j].checkReservations = true ;
+              this.timeofweekOTSF2Day18[j].checkReservations = true ; this.showday18= true;
               if(this.timeofweekOTSF2Day18[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day18[j].id   ; k++){
@@ -14824,12 +14853,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day18.length; j++){
             if(this.timeofweekOTSF2Day18[j].roomid == 10){
               this.timeofweekOTSF2Day18[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day18[j].color = 'red' ;
+              this.timeofweekOTSF2Day18[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day18[j].showlabel = true;
-              this.timeofweekOTSF2Day18[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day18[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day18[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day18[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day18[j].checkReservations = true ;
+              this.timeofweekOTSF2Day18[j].checkReservations = true ; this.showday18= true;
               if(this.timeofweekOTSF2Day18[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day18[j].id   ; k++){
@@ -14846,12 +14875,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day18.length; j++){
             if(this.timeofweekOTSF2Day18[j].roomid == 11){
               this.timeofweekOTSF2Day18[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day18[j].color = 'red' ;
+              this.timeofweekOTSF2Day18[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day18[j].showlabel = true;
-              this.timeofweekOTSF2Day18[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day18[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day18[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day18[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day18[j].checkReservations = true ;
+              this.timeofweekOTSF2Day18[j].checkReservations = true ; this.showday18= true;
               if(this.timeofweekOTSF2Day18[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day18[j].id   ; k++){
@@ -14868,12 +14897,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day18.length; j++){
             if(this.timeofweekOTSF2Day18[j].roomid == 12){
               this.timeofweekOTSF2Day18[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day18[j].color = 'red' ;
+              this.timeofweekOTSF2Day18[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day18[j].showlabel = true;
-              this.timeofweekOTSF2Day18[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day18[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day18[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day18[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day18[j].checkReservations = true ;
+              this.timeofweekOTSF2Day18[j].checkReservations = true ; this.showday18= true;
               if(this.timeofweekOTSF2Day18[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day18[j].id   ; k++){
@@ -14890,12 +14919,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day18.length; j++){
             if(this.timeofweekOTSF2Day18[j].roomid == 13){
               this.timeofweekOTSF2Day18[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day18[j].color = 'red' ;
+              this.timeofweekOTSF2Day18[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day18[j].showlabel = true;
-              this.timeofweekOTSF2Day18[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day18[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day18[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day18[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day18[j].checkReservations = true ;
+              this.timeofweekOTSF2Day18[j].checkReservations = true ; this.showday18= true;
               if(this.timeofweekOTSF2Day18[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day18[j].id   ; k++){
@@ -14912,12 +14941,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day18.length; j++){
             if(this.timeofweekOTSF2Day18[j].roomid == 14){
               this.timeofweekOTSF2Day18[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day18[j].color = 'red' ;
+              this.timeofweekOTSF2Day18[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day18[j].showlabel = true;
-              this.timeofweekOTSF2Day18[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day18[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day18[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day18[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day18[j].checkReservations = true ;
+              this.timeofweekOTSF2Day18[j].checkReservations = true ; this.showday18= true;
               if(this.timeofweekOTSF2Day18[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day18[j].id   ; k++){
@@ -14934,12 +14963,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day18.length; j++){
             if(this.timeofweekOTSF2Day18[j].roomid == 15){
               this.timeofweekOTSF2Day18[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day18[j].color = 'red' ;
+              this.timeofweekOTSF2Day18[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day18[j].showlabel = true;
-              this.timeofweekOTSF2Day18[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day18[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day18[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day18[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day18[j].checkReservations = true ;
+              this.timeofweekOTSF2Day18[j].checkReservations = true ; this.showday18= true;
               if(this.timeofweekOTSF2Day18[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day18[j].id   ; k++){
@@ -14956,12 +14985,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day18.length; j++){
             if(this.timeofweekOTSF2Day18[j].roomid == 16){
               this.timeofweekOTSF2Day18[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day18[j].color = 'red' ;
+              this.timeofweekOTSF2Day18[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day18[j].showlabel = true;
-              this.timeofweekOTSF2Day18[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day18[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day18[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day18[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day18[j].checkReservations = true ;
+              this.timeofweekOTSF2Day18[j].checkReservations = true ; this.showday18= true;
               if(this.timeofweekOTSF2Day18[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day18[j].id   ; k++){
@@ -14978,12 +15007,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day18.length; j++){
             if(this.timeofweekOTSF2Day18[j].roomid == 17){
               this.timeofweekOTSF2Day18[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day18[j].color = 'red' ;
+              this.timeofweekOTSF2Day18[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day18[j].showlabel = true;
-              this.timeofweekOTSF2Day18[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day18[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day18[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day18[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day18[j].checkReservations = true ;
+              this.timeofweekOTSF2Day18[j].checkReservations = true ; this.showday18= true;
               if(this.timeofweekOTSF2Day18[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day18[j].id   ; k++){
@@ -15000,12 +15029,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day18.length; j++){
             if(this.timeofweekOTSF2Day18[j].roomid == 18){
               this.timeofweekOTSF2Day18[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day18[j].color = 'red' ;
+              this.timeofweekOTSF2Day18[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day18[j].showlabel = true;
-              this.timeofweekOTSF2Day18[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day18[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day18[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day18[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day18[j].checkReservations = true ;
+              this.timeofweekOTSF2Day18[j].checkReservations = true ; this.showday18= true;
               if(this.timeofweekOTSF2Day18[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day18[j].id   ; k++){
@@ -15022,12 +15051,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day19.length; j++){
             if(this.timeofweekOTSF2Day19[j].roomid == 0){
               this.timeofweekOTSF2Day19[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day19[j].color = 'red' ;
+              this.timeofweekOTSF2Day19[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day19[j].showlabel = true;
-              this.timeofweekOTSF2Day19[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day19[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day19[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day19[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day19[j].checkReservations = true ;
+              this.timeofweekOTSF2Day19[j].checkReservations = true ; this.showday19= true;
               if(this.timeofweekOTSF2Day19[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day19[j].id   ; k++){
@@ -15044,12 +15073,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day19.length; j++){
             if(this.timeofweekOTSF2Day19[j].roomid == 1){
               this.timeofweekOTSF2Day19[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day19[j].color = 'red' ;
+              this.timeofweekOTSF2Day19[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day19[j].showlabel = true;
-              this.timeofweekOTSF2Day19[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day19[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day19[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day19[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day19[j].checkReservations = true ;
+              this.timeofweekOTSF2Day19[j].checkReservations = true ; this.showday19= true;
               if(this.timeofweekOTSF2Day19[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day19[j].id   ; k++){
@@ -15066,12 +15095,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day19.length; j++){
             if(this.timeofweekOTSF2Day19[j].roomid == 2){
               this.timeofweekOTSF2Day19[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day19[j].color = 'red' ;
+              this.timeofweekOTSF2Day19[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day19[j].showlabel = true;
-              this.timeofweekOTSF2Day19[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day19[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day19[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day19[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day19[j].checkReservations = true ;
+              this.timeofweekOTSF2Day19[j].checkReservations = true ; this.showday19= true;
               if(this.timeofweekOTSF2Day19[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day19[j].id   ; k++){
@@ -15088,12 +15117,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day19.length; j++){
             if(this.timeofweekOTSF2Day19[j].roomid == 3){
               this.timeofweekOTSF2Day19[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day19[j].color = 'red' ;
+              this.timeofweekOTSF2Day19[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day19[j].showlabel = true;
-              this.timeofweekOTSF2Day19[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day19[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day19[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day19[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day19[j].checkReservations = true ;
+              this.timeofweekOTSF2Day19[j].checkReservations = true ; this.showday19= true;
               if(this.timeofweekOTSF2Day19[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day19[j].id   ; k++){
@@ -15110,12 +15139,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day19.length; j++){
             if(this.timeofweekOTSF2Day19[j].roomid == 4){
               this.timeofweekOTSF2Day19[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day19[j].color = 'red' ;
+              this.timeofweekOTSF2Day19[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day19[j].showlabel = true;
-              this.timeofweekOTSF2Day19[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day19[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day19[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day19[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day19[j].checkReservations = true ;
+              this.timeofweekOTSF2Day19[j].checkReservations = true ; this.showday19= true;
               if(this.timeofweekOTSF2Day19[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day19[j].id   ; k++){
@@ -15132,12 +15161,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day19.length; j++){
             if(this.timeofweekOTSF2Day19[j].roomid == 5){
               this.timeofweekOTSF2Day19[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day19[j].color = 'red' ;
+              this.timeofweekOTSF2Day19[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day19[j].showlabel = true;
-              this.timeofweekOTSF2Day19[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day19[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day19[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day19[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day19[j].checkReservations = true ;
+              this.timeofweekOTSF2Day19[j].checkReservations = true ; this.showday19= true;
               if(this.timeofweekOTSF2Day19[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day19[j].id   ; k++){
@@ -15154,12 +15183,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day19.length; j++){
             if(this.timeofweekOTSF2Day19[j].roomid == 6){
               this.timeofweekOTSF2Day19[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day19[j].color = 'red' ;
+              this.timeofweekOTSF2Day19[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day19[j].showlabel = true;
-              this.timeofweekOTSF2Day19[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day19[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day19[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day19[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day19[j].checkReservations = true ;
+              this.timeofweekOTSF2Day19[j].checkReservations = true ; this.showday19= true;
               if(this.timeofweekOTSF2Day19[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day19[j].id   ; k++){
@@ -15176,12 +15205,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day19.length; j++){
             if(this.timeofweekOTSF2Day19[j].roomid == 7){
               this.timeofweekOTSF2Day19[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day19[j].color = 'red' ;
+              this.timeofweekOTSF2Day19[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day19[j].showlabel = true;
-              this.timeofweekOTSF2Day19[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day19[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day19[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day19[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day19[j].checkReservations = true ;
+              this.timeofweekOTSF2Day19[j].checkReservations = true ; this.showday19= true;
               if(this.timeofweekOTSF2Day19[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day19[j].id   ; k++){
@@ -15198,12 +15227,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day19.length; j++){
             if(this.timeofweekOTSF2Day19[j].roomid == 8){
               this.timeofweekOTSF2Day19[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day19[j].color = 'red' ;
+              this.timeofweekOTSF2Day19[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day19[j].showlabel = true;
-              this.timeofweekOTSF2Day19[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day19[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day19[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day19[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day19[j].checkReservations = true ;
+              this.timeofweekOTSF2Day19[j].checkReservations = true ; this.showday19= true;
               if(this.timeofweekOTSF2Day19[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day19[j].id   ; k++){
@@ -15220,12 +15249,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day19.length; j++){
             if(this.timeofweekOTSF2Day19[j].roomid == 9){
               this.timeofweekOTSF2Day19[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day19[j].color = 'red' ;
+              this.timeofweekOTSF2Day19[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day19[j].showlabel = true;
-              this.timeofweekOTSF2Day19[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day19[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day19[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day19[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day19[j].checkReservations = true ;
+              this.timeofweekOTSF2Day19[j].checkReservations = true ; this.showday19= true;
               if(this.timeofweekOTSF2Day19[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day19[j].id   ; k++){
@@ -15242,12 +15271,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day19.length; j++){
             if(this.timeofweekOTSF2Day19[j].roomid == 10){
               this.timeofweekOTSF2Day19[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day19[j].color = 'red' ;
+              this.timeofweekOTSF2Day19[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day19[j].showlabel = true;
-              this.timeofweekOTSF2Day19[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day19[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day19[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day19[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day19[j].checkReservations = true ;
+              this.timeofweekOTSF2Day19[j].checkReservations = true ; this.showday19= true;
               if(this.timeofweekOTSF2Day19[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day19[j].id   ; k++){
@@ -15264,12 +15293,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day19.length; j++){
             if(this.timeofweekOTSF2Day19[j].roomid == 11){
               this.timeofweekOTSF2Day19[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day19[j].color = 'red' ;
+              this.timeofweekOTSF2Day19[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day19[j].showlabel = true;
-              this.timeofweekOTSF2Day19[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day19[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day19[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day19[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day19[j].checkReservations = true ;
+              this.timeofweekOTSF2Day19[j].checkReservations = true ; this.showday19= true;
               if(this.timeofweekOTSF2Day19[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day19[j].id   ; k++){
@@ -15286,12 +15315,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day19.length; j++){
             if(this.timeofweekOTSF2Day19[j].roomid == 12){
               this.timeofweekOTSF2Day19[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day19[j].color = 'red' ;
+              this.timeofweekOTSF2Day19[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day19[j].showlabel = true;
-              this.timeofweekOTSF2Day19[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day19[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day19[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day19[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day19[j].checkReservations = true ;
+              this.timeofweekOTSF2Day19[j].checkReservations = true ; this.showday19= true;
               if(this.timeofweekOTSF2Day19[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day19[j].id   ; k++){
@@ -15308,12 +15337,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day19.length; j++){
             if(this.timeofweekOTSF2Day19[j].roomid == 13){
               this.timeofweekOTSF2Day19[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day19[j].color = 'red' ;
+              this.timeofweekOTSF2Day19[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day19[j].showlabel = true;
-              this.timeofweekOTSF2Day19[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day19[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day19[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day19[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day19[j].checkReservations = true ;
+              this.timeofweekOTSF2Day19[j].checkReservations = true ; this.showday19= true;
               if(this.timeofweekOTSF2Day19[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day19[j].id   ; k++){
@@ -15330,12 +15359,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day19.length; j++){
             if(this.timeofweekOTSF2Day19[j].roomid == 14){
               this.timeofweekOTSF2Day19[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day19[j].color = 'red' ;
+              this.timeofweekOTSF2Day19[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day19[j].showlabel = true;
-              this.timeofweekOTSF2Day19[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day19[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day19[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day19[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day19[j].checkReservations = true ;
+              this.timeofweekOTSF2Day19[j].checkReservations = true ; this.showday19= true;
               if(this.timeofweekOTSF2Day19[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day19[j].id   ; k++){
@@ -15352,12 +15381,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day19.length; j++){
             if(this.timeofweekOTSF2Day19[j].roomid == 15){
               this.timeofweekOTSF2Day19[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day19[j].color = 'red' ;
+              this.timeofweekOTSF2Day19[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day19[j].showlabel = true;
-              this.timeofweekOTSF2Day19[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day19[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day19[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day19[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day19[j].checkReservations = true ;
+              this.timeofweekOTSF2Day19[j].checkReservations = true ; this.showday19= true;
               if(this.timeofweekOTSF2Day19[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day19[j].id   ; k++){
@@ -15374,12 +15403,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day19.length; j++){
             if(this.timeofweekOTSF2Day19[j].roomid == 16){
               this.timeofweekOTSF2Day19[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day19[j].color = 'red' ;
+              this.timeofweekOTSF2Day19[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day19[j].showlabel = true;
-              this.timeofweekOTSF2Day19[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day19[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day19[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day19[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day19[j].checkReservations = true ;
+              this.timeofweekOTSF2Day19[j].checkReservations = true ; this.showday19= true;
               if(this.timeofweekOTSF2Day19[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day19[j].id   ; k++){
@@ -15396,12 +15425,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day19.length; j++){
             if(this.timeofweekOTSF2Day19[j].roomid == 17){
               this.timeofweekOTSF2Day19[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day19[j].color = 'red' ;
+              this.timeofweekOTSF2Day19[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day19[j].showlabel = true;
-              this.timeofweekOTSF2Day19[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day19[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day19[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day19[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day19[j].checkReservations = true ;
+              this.timeofweekOTSF2Day19[j].checkReservations = true ; this.showday19= true;
               if(this.timeofweekOTSF2Day19[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day19[j].id   ; k++){
@@ -15418,12 +15447,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day19.length; j++){
             if(this.timeofweekOTSF2Day19[j].roomid == 18){
               this.timeofweekOTSF2Day19[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day19[j].color = 'red' ;
+              this.timeofweekOTSF2Day19[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day19[j].showlabel = true;
-              this.timeofweekOTSF2Day19[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day19[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day19[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day19[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day19[j].checkReservations = true ;
+              this.timeofweekOTSF2Day19[j].checkReservations = true ; this.showday19= true;
               if(this.timeofweekOTSF2Day19[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day19[j].id   ; k++){
@@ -15440,12 +15469,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day20.length; j++){
             if(this.timeofweekOTSF2Day20[j].roomid == 0){
               this.timeofweekOTSF2Day20[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day20[j].color = 'red' ;
+              this.timeofweekOTSF2Day20[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day20[j].showlabel = true;
-              this.timeofweekOTSF2Day20[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day20[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day20[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day20[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day20[j].checkReservations = true ;
+              this.timeofweekOTSF2Day20[j].checkReservations = true ; this.showday20= true;
               if(this.timeofweekOTSF2Day20[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day20[j].id   ; k++){
@@ -15462,12 +15491,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day20.length; j++){
             if(this.timeofweekOTSF2Day20[j].roomid == 1){
               this.timeofweekOTSF2Day20[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day20[j].color = 'red' ;
+              this.timeofweekOTSF2Day20[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day20[j].showlabel = true;
-              this.timeofweekOTSF2Day20[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day20[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day20[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day20[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day20[j].checkReservations = true ;
+              this.timeofweekOTSF2Day20[j].checkReservations = true ; this.showday20= true;
               if(this.timeofweekOTSF2Day20[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day20[j].id   ; k++){
@@ -15484,12 +15513,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day20.length; j++){
             if(this.timeofweekOTSF2Day20[j].roomid == 2){
               this.timeofweekOTSF2Day20[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day20[j].color = 'red' ;
+              this.timeofweekOTSF2Day20[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day20[j].showlabel = true;
-              this.timeofweekOTSF2Day20[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day20[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day20[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day20[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day20[j].checkReservations = true ;
+              this.timeofweekOTSF2Day20[j].checkReservations = true ; this.showday20= true;
               if(this.timeofweekOTSF2Day20[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day20[j].id   ; k++){
@@ -15506,12 +15535,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day20.length; j++){
             if(this.timeofweekOTSF2Day20[j].roomid == 3){
               this.timeofweekOTSF2Day20[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day20[j].color = 'red' ;
+              this.timeofweekOTSF2Day20[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day20[j].showlabel = true;
-              this.timeofweekOTSF2Day20[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day20[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day20[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day20[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day20[j].checkReservations = true ;
+              this.timeofweekOTSF2Day20[j].checkReservations = true ; this.showday20= true;
               if(this.timeofweekOTSF2Day20[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day20[j].id   ; k++){
@@ -15528,12 +15557,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day20.length; j++){
             if(this.timeofweekOTSF2Day20[j].roomid == 4){
               this.timeofweekOTSF2Day20[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day20[j].color = 'red' ;
+              this.timeofweekOTSF2Day20[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day20[j].showlabel = true;
-              this.timeofweekOTSF2Day20[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day20[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day20[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day20[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day20[j].checkReservations = true ;
+              this.timeofweekOTSF2Day20[j].checkReservations = true ; this.showday20= true;
               if(this.timeofweekOTSF2Day20[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day20[j].id   ; k++){
@@ -15550,12 +15579,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day20.length; j++){
             if(this.timeofweekOTSF2Day20[j].roomid == 5){
               this.timeofweekOTSF2Day20[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day20[j].color = 'red' ;
+              this.timeofweekOTSF2Day20[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day20[j].showlabel = true;
-              this.timeofweekOTSF2Day20[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day20[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day20[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day20[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day20[j].checkReservations = true ;
+              this.timeofweekOTSF2Day20[j].checkReservations = true ; this.showday20= true;
               if(this.timeofweekOTSF2Day20[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day20[j].id   ; k++){
@@ -15572,12 +15601,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day20.length; j++){
             if(this.timeofweekOTSF2Day20[j].roomid == 6){
               this.timeofweekOTSF2Day20[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day20[j].color = 'red' ;
+              this.timeofweekOTSF2Day20[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day20[j].showlabel = true;
-              this.timeofweekOTSF2Day20[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day20[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day20[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day20[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day20[j].checkReservations = true ;
+              this.timeofweekOTSF2Day20[j].checkReservations = true ; this.showday20= true;
               if(this.timeofweekOTSF2Day20[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day20[j].id   ; k++){
@@ -15594,12 +15623,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day20.length; j++){
             if(this.timeofweekOTSF2Day20[j].roomid == 7){
               this.timeofweekOTSF2Day20[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day20[j].color = 'red' ;
+              this.timeofweekOTSF2Day20[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day20[j].showlabel = true;
-              this.timeofweekOTSF2Day20[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day20[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day20[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day20[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day20[j].checkReservations = true ;
+              this.timeofweekOTSF2Day20[j].checkReservations = true ; this.showday20= true;
               if(this.timeofweekOTSF2Day20[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day20[j].id   ; k++){
@@ -15616,12 +15645,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day20.length; j++){
             if(this.timeofweekOTSF2Day20[j].roomid == 8){
               this.timeofweekOTSF2Day20[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day20[j].color = 'red' ;
+              this.timeofweekOTSF2Day20[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day20[j].showlabel = true;
-              this.timeofweekOTSF2Day20[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day20[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day20[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day20[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day20[j].checkReservations = true ;
+              this.timeofweekOTSF2Day20[j].checkReservations = true ; this.showday20= true;
               if(this.timeofweekOTSF2Day20[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day20[j].id   ; k++){
@@ -15638,12 +15667,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day20.length; j++){
             if(this.timeofweekOTSF2Day20[j].roomid == 9){
               this.timeofweekOTSF2Day20[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day20[j].color = 'red' ;
+              this.timeofweekOTSF2Day20[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day20[j].showlabel = true;
-              this.timeofweekOTSF2Day20[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day20[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day20[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day20[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day20[j].checkReservations = true ;
+              this.timeofweekOTSF2Day20[j].checkReservations = true ; this.showday20= true;
               if(this.timeofweekOTSF2Day20[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day20[j].id   ; k++){
@@ -15660,12 +15689,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day20.length; j++){
             if(this.timeofweekOTSF2Day20[j].roomid == 10){
               this.timeofweekOTSF2Day20[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day20[j].color = 'red' ;
+              this.timeofweekOTSF2Day20[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day20[j].showlabel = true;
-              this.timeofweekOTSF2Day20[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day20[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day20[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day20[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day20[j].checkReservations = true ;
+              this.timeofweekOTSF2Day20[j].checkReservations = true ; this.showday20= true;
               if(this.timeofweekOTSF2Day20[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day20[j].id   ; k++){
@@ -15682,12 +15711,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day20.length; j++){
             if(this.timeofweekOTSF2Day20[j].roomid == 11){
               this.timeofweekOTSF2Day20[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day20[j].color = 'red' ;
+              this.timeofweekOTSF2Day20[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day20[j].showlabel = true;
-              this.timeofweekOTSF2Day20[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day20[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day20[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day20[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day20[j].checkReservations = true ;
+              this.timeofweekOTSF2Day20[j].checkReservations = true ; this.showday20= true;
               if(this.timeofweekOTSF2Day20[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day20[j].id   ; k++){
@@ -15704,12 +15733,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day20.length; j++){
             if(this.timeofweekOTSF2Day20[j].roomid == 12){
               this.timeofweekOTSF2Day20[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day20[j].color = 'red' ;
+              this.timeofweekOTSF2Day20[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day20[j].showlabel = true;
-              this.timeofweekOTSF2Day20[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day20[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day20[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day20[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day20[j].checkReservations = true ;
+              this.timeofweekOTSF2Day20[j].checkReservations = true ; this.showday20= true;
               if(this.timeofweekOTSF2Day20[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day20[j].id   ; k++){
@@ -15726,12 +15755,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day20.length; j++){
             if(this.timeofweekOTSF2Day20[j].roomid == 13){
               this.timeofweekOTSF2Day20[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day20[j].color = 'red' ;
+              this.timeofweekOTSF2Day20[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day20[j].showlabel = true;
-              this.timeofweekOTSF2Day20[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day20[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day20[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day20[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day20[j].checkReservations = true ;
+              this.timeofweekOTSF2Day20[j].checkReservations = true ; this.showday20= true;
               if(this.timeofweekOTSF2Day20[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day20[j].id   ; k++){
@@ -15748,12 +15777,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day20.length; j++){
             if(this.timeofweekOTSF2Day20[j].roomid == 14){
               this.timeofweekOTSF2Day20[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day20[j].color = 'red' ;
+              this.timeofweekOTSF2Day20[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day20[j].showlabel = true;
-              this.timeofweekOTSF2Day20[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day20[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day20[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day20[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day20[j].checkReservations = true ;
+              this.timeofweekOTSF2Day20[j].checkReservations = true ; this.showday20= true;
               if(this.timeofweekOTSF2Day20[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day20[j].id   ; k++){
@@ -15770,12 +15799,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day20.length; j++){
             if(this.timeofweekOTSF2Day20[j].roomid == 15){
               this.timeofweekOTSF2Day20[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day20[j].color = 'red' ;
+              this.timeofweekOTSF2Day20[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day20[j].showlabel = true;
-              this.timeofweekOTSF2Day20[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day20[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day20[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day20[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day20[j].checkReservations = true ;
+              this.timeofweekOTSF2Day20[j].checkReservations = true ; this.showday20= true;
               if(this.timeofweekOTSF2Day20[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day20[j].id   ; k++){
@@ -15792,12 +15821,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day20.length; j++){
             if(this.timeofweekOTSF2Day20[j].roomid == 16){
               this.timeofweekOTSF2Day20[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day20[j].color = 'red' ;
+              this.timeofweekOTSF2Day20[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day20[j].showlabel = true;
-              this.timeofweekOTSF2Day20[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day20[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day20[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day20[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day20[j].checkReservations = true ;
+              this.timeofweekOTSF2Day20[j].checkReservations = true ; this.showday20= true;
               if(this.timeofweekOTSF2Day20[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day20[j].id   ; k++){
@@ -15814,12 +15843,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day20.length; j++){
             if(this.timeofweekOTSF2Day20[j].roomid == 17){
               this.timeofweekOTSF2Day20[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day20[j].color = 'red' ;
+              this.timeofweekOTSF2Day20[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day20[j].showlabel = true;
-              this.timeofweekOTSF2Day20[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day20[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day20[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day20[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day20[j].checkReservations = true ;
+              this.timeofweekOTSF2Day20[j].checkReservations = true ; this.showday20= true;
               if(this.timeofweekOTSF2Day20[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day20[j].id   ; k++){
@@ -15836,12 +15865,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day20.length; j++){
             if(this.timeofweekOTSF2Day20[j].roomid == 18){
               this.timeofweekOTSF2Day20[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day20[j].color = 'red' ;
+              this.timeofweekOTSF2Day20[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day20[j].showlabel = true;
-              this.timeofweekOTSF2Day20[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day20[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day20[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day20[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day20[j].checkReservations = true ;
+              this.timeofweekOTSF2Day20[j].checkReservations = true ; this.showday20= true;
               if(this.timeofweekOTSF2Day20[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day20[j].id   ; k++){
@@ -15858,12 +15887,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day21.length; j++){
             if(this.timeofweekOTSF2Day21[j].roomid == 0){
               this.timeofweekOTSF2Day21[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day21[j].color = 'red' ;
+              this.timeofweekOTSF2Day21[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day21[j].showlabel = true;
-              this.timeofweekOTSF2Day21[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day21[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day21[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day21[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day21[j].checkReservations = true ;
+              this.timeofweekOTSF2Day21[j].checkReservations = true ; this.showday21= true;
               if(this.timeofweekOTSF2Day21[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day21[j].id   ; k++){
@@ -15880,12 +15909,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day21.length; j++){
             if(this.timeofweekOTSF2Day21[j].roomid == 1){
               this.timeofweekOTSF2Day21[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day21[j].color = 'red' ;
+              this.timeofweekOTSF2Day21[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day21[j].showlabel = true;
-              this.timeofweekOTSF2Day21[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day21[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day21[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day21[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day21[j].checkReservations = true ;
+              this.timeofweekOTSF2Day21[j].checkReservations = true ; this.showday21= true;
               if(this.timeofweekOTSF2Day21[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day21[j].id   ; k++){
@@ -15902,12 +15931,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day21.length; j++){
             if(this.timeofweekOTSF2Day21[j].roomid == 2){
               this.timeofweekOTSF2Day21[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day21[j].color = 'red' ;
+              this.timeofweekOTSF2Day21[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day21[j].showlabel = true;
-              this.timeofweekOTSF2Day21[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day21[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day21[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day21[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day21[j].checkReservations = true ;
+              this.timeofweekOTSF2Day21[j].checkReservations = true ; this.showday21= true;
               if(this.timeofweekOTSF2Day21[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day21[j].id   ; k++){
@@ -15924,12 +15953,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day21.length; j++){
             if(this.timeofweekOTSF2Day21[j].roomid == 3){
               this.timeofweekOTSF2Day21[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day21[j].color = 'red' ;
+              this.timeofweekOTSF2Day21[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day21[j].showlabel = true;
-              this.timeofweekOTSF2Day21[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day21[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day21[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day21[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day21[j].checkReservations = true ;
+              this.timeofweekOTSF2Day21[j].checkReservations = true ; this.showday21= true;
               if(this.timeofweekOTSF2Day21[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day21[j].id   ; k++){
@@ -15946,12 +15975,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day21.length; j++){
             if(this.timeofweekOTSF2Day21[j].roomid == 4){
               this.timeofweekOTSF2Day21[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day21[j].color = 'red' ;
+              this.timeofweekOTSF2Day21[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day21[j].showlabel = true;
-              this.timeofweekOTSF2Day21[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day21[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day21[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day21[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day21[j].checkReservations = true ;
+              this.timeofweekOTSF2Day21[j].checkReservations = true ; this.showday21= true;
               if(this.timeofweekOTSF2Day21[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day21[j].id   ; k++){
@@ -15968,12 +15997,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day21.length; j++){
             if(this.timeofweekOTSF2Day21[j].roomid == 5){
               this.timeofweekOTSF2Day21[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day21[j].color = 'red' ;
+              this.timeofweekOTSF2Day21[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day21[j].showlabel = true;
-              this.timeofweekOTSF2Day21[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day21[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day21[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day21[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day21[j].checkReservations = true ;
+              this.timeofweekOTSF2Day21[j].checkReservations = true ; this.showday21= true;
               if(this.timeofweekOTSF2Day21[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day21[j].id   ; k++){
@@ -15990,12 +16019,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day21.length; j++){
             if(this.timeofweekOTSF2Day21[j].roomid == 6){
               this.timeofweekOTSF2Day21[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day21[j].color = 'red' ;
+              this.timeofweekOTSF2Day21[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day21[j].showlabel = true;
-              this.timeofweekOTSF2Day21[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day21[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day21[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day21[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day21[j].checkReservations = true ;
+              this.timeofweekOTSF2Day21[j].checkReservations = true ; this.showday21= true;
               if(this.timeofweekOTSF2Day21[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day21[j].id   ; k++){
@@ -16012,12 +16041,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day21.length; j++){
             if(this.timeofweekOTSF2Day21[j].roomid == 7){
               this.timeofweekOTSF2Day21[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day21[j].color = 'red' ;
+              this.timeofweekOTSF2Day21[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day21[j].showlabel = true;
-              this.timeofweekOTSF2Day21[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day21[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day21[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day21[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day21[j].checkReservations = true ;
+              this.timeofweekOTSF2Day21[j].checkReservations = true ; this.showday21= true;
               if(this.timeofweekOTSF2Day21[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day21[j].id   ; k++){
@@ -16034,12 +16063,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day21.length; j++){
             if(this.timeofweekOTSF2Day21[j].roomid == 8){
               this.timeofweekOTSF2Day21[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day21[j].color = 'red' ;
+              this.timeofweekOTSF2Day21[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day21[j].showlabel = true;
-              this.timeofweekOTSF2Day21[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day21[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day21[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day21[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day21[j].checkReservations = true ;
+              this.timeofweekOTSF2Day21[j].checkReservations = true ; this.showday21= true;
               if(this.timeofweekOTSF2Day21[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day21[j].id   ; k++){
@@ -16056,12 +16085,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day21.length; j++){
             if(this.timeofweekOTSF2Day21[j].roomid == 9){
               this.timeofweekOTSF2Day21[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day21[j].color = 'red' ;
+              this.timeofweekOTSF2Day21[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day21[j].showlabel = true;
-              this.timeofweekOTSF2Day21[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day21[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day21[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day21[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day21[j].checkReservations = true ;
+              this.timeofweekOTSF2Day21[j].checkReservations = true ; this.showday21= true;
               if(this.timeofweekOTSF2Day21[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day21[j].id   ; k++){
@@ -16078,12 +16107,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day21.length; j++){
             if(this.timeofweekOTSF2Day21[j].roomid == 10){
               this.timeofweekOTSF2Day21[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day21[j].color = 'red' ;
+              this.timeofweekOTSF2Day21[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day21[j].showlabel = true;
-              this.timeofweekOTSF2Day21[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day21[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day21[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day21[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day21[j].checkReservations = true ;
+              this.timeofweekOTSF2Day21[j].checkReservations = true ; this.showday21= true;
               if(this.timeofweekOTSF2Day21[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day21[j].id   ; k++){
@@ -16100,12 +16129,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day21.length; j++){
             if(this.timeofweekOTSF2Day21[j].roomid == 11){
               this.timeofweekOTSF2Day21[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day21[j].color = 'red' ;
+              this.timeofweekOTSF2Day21[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day21[j].showlabel = true;
-              this.timeofweekOTSF2Day21[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day21[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day21[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day21[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day21[j].checkReservations = true ;
+              this.timeofweekOTSF2Day21[j].checkReservations = true ; this.showday21= true;
               if(this.timeofweekOTSF2Day21[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day21[j].id   ; k++){
@@ -16122,12 +16151,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day21.length; j++){
             if(this.timeofweekOTSF2Day21[j].roomid == 12){
               this.timeofweekOTSF2Day21[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day21[j].color = 'red' ;
+              this.timeofweekOTSF2Day21[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day21[j].showlabel = true;
-              this.timeofweekOTSF2Day21[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day21[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day21[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day21[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day21[j].checkReservations = true ;
+              this.timeofweekOTSF2Day21[j].checkReservations = true ; this.showday21= true;
               if(this.timeofweekOTSF2Day21[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day21[j].id   ; k++){
@@ -16144,12 +16173,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day21.length; j++){
             if(this.timeofweekOTSF2Day21[j].roomid == 13){
               this.timeofweekOTSF2Day21[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day21[j].color = 'red' ;
+              this.timeofweekOTSF2Day21[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day21[j].showlabel = true;
-              this.timeofweekOTSF2Day21[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day21[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day21[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day21[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day21[j].checkReservations = true ;
+              this.timeofweekOTSF2Day21[j].checkReservations = true ; this.showday21= true;
               if(this.timeofweekOTSF2Day21[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day21[j].id   ; k++){
@@ -16166,12 +16195,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day21.length; j++){
             if(this.timeofweekOTSF2Day21[j].roomid == 14){
               this.timeofweekOTSF2Day21[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day21[j].color = 'red' ;
+              this.timeofweekOTSF2Day21[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day21[j].showlabel = true;
-              this.timeofweekOTSF2Day21[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day21[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day21[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day21[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day21[j].checkReservations = true ;
+              this.timeofweekOTSF2Day21[j].checkReservations = true ; this.showday21= true;
               if(this.timeofweekOTSF2Day21[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day21[j].id   ; k++){
@@ -16188,12 +16217,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day21.length; j++){
             if(this.timeofweekOTSF2Day21[j].roomid == 15){
               this.timeofweekOTSF2Day21[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day21[j].color = 'red' ;
+              this.timeofweekOTSF2Day21[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day21[j].showlabel = true;
-              this.timeofweekOTSF2Day21[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day21[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day21[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day21[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day21[j].checkReservations = true ;
+              this.timeofweekOTSF2Day21[j].checkReservations = true ; this.showday21= true;
               if(this.timeofweekOTSF2Day21[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day21[j].id   ; k++){
@@ -16210,12 +16239,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day21.length; j++){
             if(this.timeofweekOTSF2Day21[j].roomid == 16){
               this.timeofweekOTSF2Day21[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day21[j].color = 'red' ;
+              this.timeofweekOTSF2Day21[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day21[j].showlabel = true;
-              this.timeofweekOTSF2Day21[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day21[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day21[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day21[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day21[j].checkReservations = true ;
+              this.timeofweekOTSF2Day21[j].checkReservations = true ; this.showday21= true;
               if(this.timeofweekOTSF2Day21[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day21[j].id   ; k++){
@@ -16232,12 +16261,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day21.length; j++){
             if(this.timeofweekOTSF2Day21[j].roomid == 17){
               this.timeofweekOTSF2Day21[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day21[j].color = 'red' ;
+              this.timeofweekOTSF2Day21[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day21[j].showlabel = true;
-              this.timeofweekOTSF2Day21[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day21[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day21[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day21[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day21[j].checkReservations = true ;
+              this.timeofweekOTSF2Day21[j].checkReservations = true ; this.showday21= true;
               if(this.timeofweekOTSF2Day21[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day21[j].id   ; k++){
@@ -16254,12 +16283,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day21.length; j++){
             if(this.timeofweekOTSF2Day21[j].roomid == 18){
               this.timeofweekOTSF2Day21[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day21[j].color = 'red' ;
+              this.timeofweekOTSF2Day21[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day21[j].showlabel = true;
-              this.timeofweekOTSF2Day21[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day21[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day21[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day21[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day21[j].checkReservations = true ;
+              this.timeofweekOTSF2Day21[j].checkReservations = true ; this.showday21= true;
               if(this.timeofweekOTSF2Day21[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day21[j].id   ; k++){
@@ -16276,12 +16305,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day22.length; j++){
             if(this.timeofweekOTSF2Day22[j].roomid == 0){
               this.timeofweekOTSF2Day22[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day22[j].color = 'red' ;
+              this.timeofweekOTSF2Day22[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day22[j].showlabel = true;
-              this.timeofweekOTSF2Day22[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day22[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day22[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day22[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day22[j].checkReservations = true ;
+              this.timeofweekOTSF2Day22[j].checkReservations = true ; this.showday22= true;
               if(this.timeofweekOTSF2Day22[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day22[j].id   ; k++){
@@ -16298,12 +16327,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day22.length; j++){
             if(this.timeofweekOTSF2Day22[j].roomid == 1){
               this.timeofweekOTSF2Day22[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day22[j].color = 'red' ;
+              this.timeofweekOTSF2Day22[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day22[j].showlabel = true;
-              this.timeofweekOTSF2Day22[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day22[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day22[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day22[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day22[j].checkReservations = true ;
+              this.timeofweekOTSF2Day22[j].checkReservations = true ; this.showday22= true;
               if(this.timeofweekOTSF2Day22[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day22[j].id   ; k++){
@@ -16320,12 +16349,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day22.length; j++){
             if(this.timeofweekOTSF2Day22[j].roomid == 2){
               this.timeofweekOTSF2Day22[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day22[j].color = 'red' ;
+              this.timeofweekOTSF2Day22[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day22[j].showlabel = true;
-              this.timeofweekOTSF2Day22[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day22[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day22[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day22[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day22[j].checkReservations = true ;
+              this.timeofweekOTSF2Day22[j].checkReservations = true ; this.showday22= true;
               if(this.timeofweekOTSF2Day22[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day22[j].id   ; k++){
@@ -16342,12 +16371,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day22.length; j++){
             if(this.timeofweekOTSF2Day22[j].roomid == 3){
               this.timeofweekOTSF2Day22[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day22[j].color = 'red' ;
+              this.timeofweekOTSF2Day22[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day22[j].showlabel = true;
-              this.timeofweekOTSF2Day22[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day22[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day22[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day22[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day22[j].checkReservations = true ;
+              this.timeofweekOTSF2Day22[j].checkReservations = true ; this.showday22= true;
               if(this.timeofweekOTSF2Day22[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day22[j].id   ; k++){
@@ -16364,12 +16393,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day22.length; j++){
             if(this.timeofweekOTSF2Day22[j].roomid == 4){
               this.timeofweekOTSF2Day22[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day22[j].color = 'red' ;
+              this.timeofweekOTSF2Day22[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day22[j].showlabel = true;
-              this.timeofweekOTSF2Day22[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day22[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day22[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day22[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day22[j].checkReservations = true ;
+              this.timeofweekOTSF2Day22[j].checkReservations = true ; this.showday22= true;
               if(this.timeofweekOTSF2Day22[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day22[j].id   ; k++){
@@ -16386,12 +16415,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day22.length; j++){
             if(this.timeofweekOTSF2Day22[j].roomid == 5){
               this.timeofweekOTSF2Day22[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day22[j].color = 'red' ;
+              this.timeofweekOTSF2Day22[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day22[j].showlabel = true;
-              this.timeofweekOTSF2Day22[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day22[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day22[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day22[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day22[j].checkReservations = true ;
+              this.timeofweekOTSF2Day22[j].checkReservations = true ; this.showday22= true;
               if(this.timeofweekOTSF2Day22[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day22[j].id   ; k++){
@@ -16408,12 +16437,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day22.length; j++){
             if(this.timeofweekOTSF2Day22[j].roomid == 6){
               this.timeofweekOTSF2Day22[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day22[j].color = 'red' ;
+              this.timeofweekOTSF2Day22[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day22[j].showlabel = true;
-              this.timeofweekOTSF2Day22[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day22[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day22[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day22[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day22[j].checkReservations = true ;
+              this.timeofweekOTSF2Day22[j].checkReservations = true ; this.showday22= true;
               if(this.timeofweekOTSF2Day22[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day22[j].id   ; k++){
@@ -16430,12 +16459,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day22.length; j++){
             if(this.timeofweekOTSF2Day22[j].roomid == 7){
               this.timeofweekOTSF2Day22[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day22[j].color = 'red' ;
+              this.timeofweekOTSF2Day22[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day22[j].showlabel = true;
-              this.timeofweekOTSF2Day22[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day22[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day22[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day22[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day22[j].checkReservations = true ;
+              this.timeofweekOTSF2Day22[j].checkReservations = true ; this.showday22= true;
               if(this.timeofweekOTSF2Day22[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day22[j].id   ; k++){
@@ -16452,12 +16481,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day22.length; j++){
             if(this.timeofweekOTSF2Day22[j].roomid == 8){
               this.timeofweekOTSF2Day22[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day22[j].color = 'red' ;
+              this.timeofweekOTSF2Day22[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day22[j].showlabel = true;
-              this.timeofweekOTSF2Day22[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day22[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day22[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day22[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day22[j].checkReservations = true ;
+              this.timeofweekOTSF2Day22[j].checkReservations = true ; this.showday22= true;
               if(this.timeofweekOTSF2Day22[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day22[j].id   ; k++){
@@ -16474,12 +16503,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day22.length; j++){
             if(this.timeofweekOTSF2Day22[j].roomid == 9){
               this.timeofweekOTSF2Day22[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day22[j].color = 'red' ;
+              this.timeofweekOTSF2Day22[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day22[j].showlabel = true;
-              this.timeofweekOTSF2Day22[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day22[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day22[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day22[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day22[j].checkReservations = true ;
+              this.timeofweekOTSF2Day22[j].checkReservations = true ; this.showday22= true;
               if(this.timeofweekOTSF2Day22[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day22[j].id   ; k++){
@@ -16496,12 +16525,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day22.length; j++){
             if(this.timeofweekOTSF2Day22[j].roomid == 10){
               this.timeofweekOTSF2Day22[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day22[j].color = 'red' ;
+              this.timeofweekOTSF2Day22[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day22[j].showlabel = true;
-              this.timeofweekOTSF2Day22[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day22[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day22[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day22[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day22[j].checkReservations = true ;
+              this.timeofweekOTSF2Day22[j].checkReservations = true ; this.showday22= true;
               if(this.timeofweekOTSF2Day22[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day22[j].id   ; k++){
@@ -16518,12 +16547,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day22.length; j++){
             if(this.timeofweekOTSF2Day22[j].roomid == 11){
               this.timeofweekOTSF2Day22[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day22[j].color = 'red' ;
+              this.timeofweekOTSF2Day22[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day22[j].showlabel = true;
-              this.timeofweekOTSF2Day22[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day22[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day22[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day22[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day22[j].checkReservations = true ;
+              this.timeofweekOTSF2Day22[j].checkReservations = true ; this.showday22= true;
               if(this.timeofweekOTSF2Day22[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day22[j].id   ; k++){
@@ -16540,12 +16569,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day22.length; j++){
             if(this.timeofweekOTSF2Day22[j].roomid == 12){
               this.timeofweekOTSF2Day22[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day22[j].color = 'red' ;
+              this.timeofweekOTSF2Day22[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day22[j].showlabel = true;
-              this.timeofweekOTSF2Day22[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day22[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day22[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day22[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day22[j].checkReservations = true ;
+              this.timeofweekOTSF2Day22[j].checkReservations = true ; this.showday22= true;
               if(this.timeofweekOTSF2Day22[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day22[j].id   ; k++){
@@ -16562,12 +16591,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day22.length; j++){
             if(this.timeofweekOTSF2Day22[j].roomid == 13){
               this.timeofweekOTSF2Day22[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day22[j].color = 'red' ;
+              this.timeofweekOTSF2Day22[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day22[j].showlabel = true;
-              this.timeofweekOTSF2Day22[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day22[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day22[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day22[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day22[j].checkReservations = true ;
+              this.timeofweekOTSF2Day22[j].checkReservations = true ; this.showday22= true;
               if(this.timeofweekOTSF2Day22[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day22[j].id   ; k++){
@@ -16584,12 +16613,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day22.length; j++){
             if(this.timeofweekOTSF2Day22[j].roomid == 14){
               this.timeofweekOTSF2Day22[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day22[j].color = 'red' ;
+              this.timeofweekOTSF2Day22[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day22[j].showlabel = true;
-              this.timeofweekOTSF2Day22[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day22[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day22[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day22[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day22[j].checkReservations = true ;
+              this.timeofweekOTSF2Day22[j].checkReservations = true ; this.showday22= true;
               if(this.timeofweekOTSF2Day22[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day22[j].id   ; k++){
@@ -16606,12 +16635,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day22.length; j++){
             if(this.timeofweekOTSF2Day22[j].roomid == 15){
               this.timeofweekOTSF2Day22[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day22[j].color = 'red' ;
+              this.timeofweekOTSF2Day22[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day22[j].showlabel = true;
-              this.timeofweekOTSF2Day22[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day22[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day22[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day22[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day22[j].checkReservations = true ;
+              this.timeofweekOTSF2Day22[j].checkReservations = true ; this.showday22= true;
               if(this.timeofweekOTSF2Day22[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day22[j].id   ; k++){
@@ -16628,12 +16657,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day22.length; j++){
             if(this.timeofweekOTSF2Day22[j].roomid == 16){
               this.timeofweekOTSF2Day22[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day22[j].color = 'red' ;
+              this.timeofweekOTSF2Day22[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day22[j].showlabel = true;
-              this.timeofweekOTSF2Day22[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day22[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day22[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day22[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day22[j].checkReservations = true ;
+              this.timeofweekOTSF2Day22[j].checkReservations = true ; this.showday22= true;
               if(this.timeofweekOTSF2Day22[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day22[j].id   ; k++){
@@ -16650,12 +16679,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day22.length; j++){
             if(this.timeofweekOTSF2Day22[j].roomid == 17){
               this.timeofweekOTSF2Day22[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day22[j].color = 'red' ;
+              this.timeofweekOTSF2Day22[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day22[j].showlabel = true;
-              this.timeofweekOTSF2Day22[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day22[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day22[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day22[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day22[j].checkReservations = true ;
+              this.timeofweekOTSF2Day22[j].checkReservations = true ; this.showday22= true;
               if(this.timeofweekOTSF2Day22[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day22[j].id   ; k++){
@@ -16672,12 +16701,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day22.length; j++){
             if(this.timeofweekOTSF2Day22[j].roomid == 18){
               this.timeofweekOTSF2Day22[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day22[j].color = 'red' ;
+              this.timeofweekOTSF2Day22[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day22[j].showlabel = true;
-              this.timeofweekOTSF2Day22[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day22[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day22[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day22[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day22[j].checkReservations = true ;
+              this.timeofweekOTSF2Day22[j].checkReservations = true ; this.showday22= true;
               if(this.timeofweekOTSF2Day22[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day22[j].id   ; k++){
@@ -16694,12 +16723,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day23.length; j++){
             if(this.timeofweekOTSF2Day23[j].roomid == 0){
               this.timeofweekOTSF2Day23[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day23[j].color = 'red' ;
+              this.timeofweekOTSF2Day23[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day23[j].showlabel = true;
-              this.timeofweekOTSF2Day23[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day23[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day23[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day23[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day23[j].checkReservations = true ;
+              this.timeofweekOTSF2Day23[j].checkReservations = true ; this.showday23= true;
               if(this.timeofweekOTSF2Day23[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day23[j].id   ; k++){
@@ -16716,12 +16745,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day23.length; j++){
             if(this.timeofweekOTSF2Day23[j].roomid == 1){
               this.timeofweekOTSF2Day23[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day23[j].color = 'red' ;
+              this.timeofweekOTSF2Day23[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day23[j].showlabel = true;
-              this.timeofweekOTSF2Day23[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day23[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day23[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day23[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day23[j].checkReservations = true ;
+              this.timeofweekOTSF2Day23[j].checkReservations = true ; this.showday23= true;
               if(this.timeofweekOTSF2Day23[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day23[j].id   ; k++){
@@ -16738,12 +16767,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day23.length; j++){
             if(this.timeofweekOTSF2Day23[j].roomid == 2){
               this.timeofweekOTSF2Day23[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day23[j].color = 'red' ;
+              this.timeofweekOTSF2Day23[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day23[j].showlabel = true;
-              this.timeofweekOTSF2Day23[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day23[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day23[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day23[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day23[j].checkReservations = true ;
+              this.timeofweekOTSF2Day23[j].checkReservations = true ; this.showday23= true;
               if(this.timeofweekOTSF2Day23[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day23[j].id   ; k++){
@@ -16760,12 +16789,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day23.length; j++){
             if(this.timeofweekOTSF2Day23[j].roomid == 3){
               this.timeofweekOTSF2Day23[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day23[j].color = 'red' ;
+              this.timeofweekOTSF2Day23[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day23[j].showlabel = true;
-              this.timeofweekOTSF2Day23[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day23[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day23[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day23[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day23[j].checkReservations = true ;
+              this.timeofweekOTSF2Day23[j].checkReservations = true ; this.showday23= true;
               if(this.timeofweekOTSF2Day23[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day23[j].id   ; k++){
@@ -16782,12 +16811,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day23.length; j++){
             if(this.timeofweekOTSF2Day23[j].roomid == 4){
               this.timeofweekOTSF2Day23[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day23[j].color = 'red' ;
+              this.timeofweekOTSF2Day23[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day23[j].showlabel = true;
-              this.timeofweekOTSF2Day23[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day23[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day23[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day23[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day23[j].checkReservations = true ;
+              this.timeofweekOTSF2Day23[j].checkReservations = true ; this.showday23= true;
               if(this.timeofweekOTSF2Day23[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day23[j].id   ; k++){
@@ -16804,12 +16833,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day23.length; j++){
             if(this.timeofweekOTSF2Day23[j].roomid == 5){
               this.timeofweekOTSF2Day23[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day23[j].color = 'red' ;
+              this.timeofweekOTSF2Day23[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day23[j].showlabel = true;
-              this.timeofweekOTSF2Day23[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day23[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day23[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day23[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day23[j].checkReservations = true ;
+              this.timeofweekOTSF2Day23[j].checkReservations = true ; this.showday23= true;
               if(this.timeofweekOTSF2Day23[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day23[j].id   ; k++){
@@ -16826,12 +16855,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day23.length; j++){
             if(this.timeofweekOTSF2Day23[j].roomid == 6){
               this.timeofweekOTSF2Day23[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day23[j].color = 'red' ;
+              this.timeofweekOTSF2Day23[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day23[j].showlabel = true;
-              this.timeofweekOTSF2Day23[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day23[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day23[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day23[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day23[j].checkReservations = true ;
+              this.timeofweekOTSF2Day23[j].checkReservations = true ; this.showday23= true;
               if(this.timeofweekOTSF2Day23[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day23[j].id   ; k++){
@@ -16848,12 +16877,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day23.length; j++){
             if(this.timeofweekOTSF2Day23[j].roomid == 7){
               this.timeofweekOTSF2Day23[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day23[j].color = 'red' ;
+              this.timeofweekOTSF2Day23[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day23[j].showlabel = true;
-              this.timeofweekOTSF2Day23[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day23[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day23[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day23[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day23[j].checkReservations = true ;
+              this.timeofweekOTSF2Day23[j].checkReservations = true ; this.showday23= true;
               if(this.timeofweekOTSF2Day23[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day23[j].id   ; k++){
@@ -16870,12 +16899,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day23.length; j++){
             if(this.timeofweekOTSF2Day23[j].roomid == 8){
               this.timeofweekOTSF2Day23[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day23[j].color = 'red' ;
+              this.timeofweekOTSF2Day23[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day23[j].showlabel = true;
-              this.timeofweekOTSF2Day23[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day23[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day23[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day23[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day23[j].checkReservations = true ;
+              this.timeofweekOTSF2Day23[j].checkReservations = true ; this.showday23= true;
               if(this.timeofweekOTSF2Day23[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day23[j].id   ; k++){
@@ -16892,12 +16921,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day23.length; j++){
             if(this.timeofweekOTSF2Day23[j].roomid == 9){
               this.timeofweekOTSF2Day23[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day23[j].color = 'red' ;
+              this.timeofweekOTSF2Day23[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day23[j].showlabel = true;
-              this.timeofweekOTSF2Day23[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day23[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day23[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day23[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day23[j].checkReservations = true ;
+              this.timeofweekOTSF2Day23[j].checkReservations = true ; this.showday23= true;
               if(this.timeofweekOTSF2Day23[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day23[j].id   ; k++){
@@ -16914,12 +16943,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day23.length; j++){
             if(this.timeofweekOTSF2Day23[j].roomid == 10){
               this.timeofweekOTSF2Day23[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day23[j].color = 'red' ;
+              this.timeofweekOTSF2Day23[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day23[j].showlabel = true;
-              this.timeofweekOTSF2Day23[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day23[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day23[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day23[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day23[j].checkReservations = true ;
+              this.timeofweekOTSF2Day23[j].checkReservations = true ; this.showday23= true;
               if(this.timeofweekOTSF2Day23[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day23[j].id   ; k++){
@@ -16936,12 +16965,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day23.length; j++){
             if(this.timeofweekOTSF2Day23[j].roomid == 11){
               this.timeofweekOTSF2Day23[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day23[j].color = 'red' ;
+              this.timeofweekOTSF2Day23[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day23[j].showlabel = true;
-              this.timeofweekOTSF2Day23[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day23[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day23[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day23[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day23[j].checkReservations = true ;
+              this.timeofweekOTSF2Day23[j].checkReservations = true ; this.showday23= true;
               if(this.timeofweekOTSF2Day23[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day23[j].id   ; k++){
@@ -16958,12 +16987,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day23.length; j++){
             if(this.timeofweekOTSF2Day23[j].roomid == 12){
               this.timeofweekOTSF2Day23[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day23[j].color = 'red' ;
+              this.timeofweekOTSF2Day23[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day23[j].showlabel = true;
-              this.timeofweekOTSF2Day23[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day23[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day23[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day23[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day23[j].checkReservations = true ;
+              this.timeofweekOTSF2Day23[j].checkReservations = true ; this.showday23= true;
               if(this.timeofweekOTSF2Day23[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day23[j].id   ; k++){
@@ -16980,12 +17009,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day23.length; j++){
             if(this.timeofweekOTSF2Day23[j].roomid == 13){
               this.timeofweekOTSF2Day23[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day23[j].color = 'red' ;
+              this.timeofweekOTSF2Day23[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day23[j].showlabel = true;
-              this.timeofweekOTSF2Day23[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day23[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day23[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day23[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day23[j].checkReservations = true ;
+              this.timeofweekOTSF2Day23[j].checkReservations = true ; this.showday23= true;
               if(this.timeofweekOTSF2Day23[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day23[j].id   ; k++){
@@ -17002,12 +17031,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day23.length; j++){
             if(this.timeofweekOTSF2Day23[j].roomid == 14){
               this.timeofweekOTSF2Day23[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day23[j].color = 'red' ;
+              this.timeofweekOTSF2Day23[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day23[j].showlabel = true;
-              this.timeofweekOTSF2Day23[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day23[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day23[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day23[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day23[j].checkReservations = true ;
+              this.timeofweekOTSF2Day23[j].checkReservations = true ; this.showday23= true;
               if(this.timeofweekOTSF2Day23[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day23[j].id   ; k++){
@@ -17024,12 +17053,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day23.length; j++){
             if(this.timeofweekOTSF2Day23[j].roomid == 15){
               this.timeofweekOTSF2Day23[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day23[j].color = 'red' ;
+              this.timeofweekOTSF2Day23[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day23[j].showlabel = true;
-              this.timeofweekOTSF2Day23[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day23[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day23[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day23[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day23[j].checkReservations = true ;
+              this.timeofweekOTSF2Day23[j].checkReservations = true ; this.showday23= true;
               if(this.timeofweekOTSF2Day23[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day23[j].id   ; k++){
@@ -17046,12 +17075,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day23.length; j++){
             if(this.timeofweekOTSF2Day23[j].roomid == 16){
               this.timeofweekOTSF2Day23[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day23[j].color = 'red' ;
+              this.timeofweekOTSF2Day23[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day23[j].showlabel = true;
-              this.timeofweekOTSF2Day23[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day23[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day23[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day23[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day23[j].checkReservations = true ;
+              this.timeofweekOTSF2Day23[j].checkReservations = true ; this.showday23= true;
               if(this.timeofweekOTSF2Day23[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day23[j].id   ; k++){
@@ -17068,12 +17097,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day23.length; j++){
             if(this.timeofweekOTSF2Day23[j].roomid == 17){
               this.timeofweekOTSF2Day23[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day23[j].color = 'red' ;
+              this.timeofweekOTSF2Day23[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day23[j].showlabel = true;
-              this.timeofweekOTSF2Day23[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day23[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day23[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day23[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day23[j].checkReservations = true ;
+              this.timeofweekOTSF2Day23[j].checkReservations = true ; this.showday23= true;
               if(this.timeofweekOTSF2Day23[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day23[j].id   ; k++){
@@ -17090,12 +17119,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day23.length; j++){
             if(this.timeofweekOTSF2Day23[j].roomid == 18){
               this.timeofweekOTSF2Day23[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day23[j].color = 'red' ;
+              this.timeofweekOTSF2Day23[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day23[j].showlabel = true;
-              this.timeofweekOTSF2Day23[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day23[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day23[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day23[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day23[j].checkReservations = true ;
+              this.timeofweekOTSF2Day23[j].checkReservations = true ; this.showday23= true;
               if(this.timeofweekOTSF2Day23[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day23[j].id   ; k++){
@@ -17112,12 +17141,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day24.length; j++){
             if(this.timeofweekOTSF2Day24[j].roomid == 0){
               this.timeofweekOTSF2Day24[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day24[j].color = 'red' ;
+              this.timeofweekOTSF2Day24[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day24[j].showlabel = true;
-              this.timeofweekOTSF2Day24[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day24[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day24[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day24[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day24[j].checkReservations = true ;
+              this.timeofweekOTSF2Day24[j].checkReservations = true ; this.showday24= true;
               if(this.timeofweekOTSF2Day24[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day24[j].id   ; k++){
@@ -17134,12 +17163,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day24.length; j++){
             if(this.timeofweekOTSF2Day24[j].roomid == 1){
               this.timeofweekOTSF2Day24[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day24[j].color = 'red' ;
+              this.timeofweekOTSF2Day24[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day24[j].showlabel = true;
-              this.timeofweekOTSF2Day24[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day24[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day24[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day24[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day24[j].checkReservations = true ;
+              this.timeofweekOTSF2Day24[j].checkReservations = true ; this.showday24= true;
               if(this.timeofweekOTSF2Day24[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day24[j].id   ; k++){
@@ -17156,12 +17185,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day24.length; j++){
             if(this.timeofweekOTSF2Day24[j].roomid == 2){
               this.timeofweekOTSF2Day24[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day24[j].color = 'red' ;
+              this.timeofweekOTSF2Day24[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day24[j].showlabel = true;
-              this.timeofweekOTSF2Day24[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day24[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day24[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day24[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day24[j].checkReservations = true ;
+              this.timeofweekOTSF2Day24[j].checkReservations = true ; this.showday24= true;
               if(this.timeofweekOTSF2Day24[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day24[j].id   ; k++){
@@ -17178,12 +17207,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day24.length; j++){
             if(this.timeofweekOTSF2Day24[j].roomid == 3){
               this.timeofweekOTSF2Day24[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day24[j].color = 'red' ;
+              this.timeofweekOTSF2Day24[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day24[j].showlabel = true;
-              this.timeofweekOTSF2Day24[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day24[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day24[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day24[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day24[j].checkReservations = true ;
+              this.timeofweekOTSF2Day24[j].checkReservations = true ; this.showday24= true;
               if(this.timeofweekOTSF2Day24[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day24[j].id   ; k++){
@@ -17200,12 +17229,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day24.length; j++){
             if(this.timeofweekOTSF2Day24[j].roomid == 4){
               this.timeofweekOTSF2Day24[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day24[j].color = 'red' ;
+              this.timeofweekOTSF2Day24[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day24[j].showlabel = true;
-              this.timeofweekOTSF2Day24[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day24[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day24[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day24[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day24[j].checkReservations = true ;
+              this.timeofweekOTSF2Day24[j].checkReservations = true ; this.showday24= true;
               if(this.timeofweekOTSF2Day24[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day24[j].id   ; k++){
@@ -17222,12 +17251,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day24.length; j++){
             if(this.timeofweekOTSF2Day24[j].roomid == 5){
               this.timeofweekOTSF2Day24[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day24[j].color = 'red' ;
+              this.timeofweekOTSF2Day24[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day24[j].showlabel = true;
-              this.timeofweekOTSF2Day24[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day24[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day24[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day24[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day24[j].checkReservations = true ;
+              this.timeofweekOTSF2Day24[j].checkReservations = true ; this.showday24= true;
               if(this.timeofweekOTSF2Day24[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day24[j].id   ; k++){
@@ -17244,12 +17273,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day24.length; j++){
             if(this.timeofweekOTSF2Day24[j].roomid == 6){
               this.timeofweekOTSF2Day24[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day24[j].color = 'red' ;
+              this.timeofweekOTSF2Day24[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day24[j].showlabel = true;
-              this.timeofweekOTSF2Day24[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day24[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day24[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day24[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day24[j].checkReservations = true ;
+              this.timeofweekOTSF2Day24[j].checkReservations = true ; this.showday24= true;
               if(this.timeofweekOTSF2Day24[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day24[j].id   ; k++){
@@ -17266,12 +17295,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day24.length; j++){
             if(this.timeofweekOTSF2Day24[j].roomid == 7){
               this.timeofweekOTSF2Day24[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day24[j].color = 'red' ;
+              this.timeofweekOTSF2Day24[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day24[j].showlabel = true;
-              this.timeofweekOTSF2Day24[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day24[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day24[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day24[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day24[j].checkReservations = true ;
+              this.timeofweekOTSF2Day24[j].checkReservations = true ; this.showday24= true;
               if(this.timeofweekOTSF2Day24[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day24[j].id   ; k++){
@@ -17288,12 +17317,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day24.length; j++){
             if(this.timeofweekOTSF2Day24[j].roomid == 8){
               this.timeofweekOTSF2Day24[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day24[j].color = 'red' ;
+              this.timeofweekOTSF2Day24[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day24[j].showlabel = true;
-              this.timeofweekOTSF2Day24[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day24[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day24[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day24[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day24[j].checkReservations = true ;
+              this.timeofweekOTSF2Day24[j].checkReservations = true ; this.showday24= true;
               if(this.timeofweekOTSF2Day24[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day24[j].id   ; k++){
@@ -17310,12 +17339,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day24.length; j++){
             if(this.timeofweekOTSF2Day24[j].roomid == 9){
               this.timeofweekOTSF2Day24[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day24[j].color = 'red' ;
+              this.timeofweekOTSF2Day24[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day24[j].showlabel = true;
-              this.timeofweekOTSF2Day24[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day24[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day24[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day24[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day24[j].checkReservations = true ;
+              this.timeofweekOTSF2Day24[j].checkReservations = true ; this.showday24= true;
               if(this.timeofweekOTSF2Day24[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day24[j].id   ; k++){
@@ -17332,12 +17361,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day24.length; j++){
             if(this.timeofweekOTSF2Day24[j].roomid == 10){
               this.timeofweekOTSF2Day24[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day24[j].color = 'red' ;
+              this.timeofweekOTSF2Day24[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day24[j].showlabel = true;
-              this.timeofweekOTSF2Day24[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day24[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day24[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day24[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day24[j].checkReservations = true ;
+              this.timeofweekOTSF2Day24[j].checkReservations = true ; this.showday24= true;
               if(this.timeofweekOTSF2Day24[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day24[j].id   ; k++){
@@ -17354,12 +17383,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day24.length; j++){
             if(this.timeofweekOTSF2Day24[j].roomid == 11){
               this.timeofweekOTSF2Day24[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day24[j].color = 'red' ;
+              this.timeofweekOTSF2Day24[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day24[j].showlabel = true;
-              this.timeofweekOTSF2Day24[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day24[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day24[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day24[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day24[j].checkReservations = true ;
+              this.timeofweekOTSF2Day24[j].checkReservations = true ; this.showday24= true;
               if(this.timeofweekOTSF2Day24[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day24[j].id   ; k++){
@@ -17376,12 +17405,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day24.length; j++){
             if(this.timeofweekOTSF2Day24[j].roomid == 12){
               this.timeofweekOTSF2Day24[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day24[j].color = 'red' ;
+              this.timeofweekOTSF2Day24[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day24[j].showlabel = true;
-              this.timeofweekOTSF2Day24[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day24[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day24[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day24[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day24[j].checkReservations = true ;
+              this.timeofweekOTSF2Day24[j].checkReservations = true ; this.showday24= true;
               if(this.timeofweekOTSF2Day24[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day24[j].id   ; k++){
@@ -17398,12 +17427,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day24.length; j++){
             if(this.timeofweekOTSF2Day24[j].roomid == 13){
               this.timeofweekOTSF2Day24[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day24[j].color = 'red' ;
+              this.timeofweekOTSF2Day24[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day24[j].showlabel = true;
-              this.timeofweekOTSF2Day24[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day24[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day24[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day24[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day24[j].checkReservations = true ;
+              this.timeofweekOTSF2Day24[j].checkReservations = true ; this.showday24= true;
               if(this.timeofweekOTSF2Day24[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day24[j].id   ; k++){
@@ -17420,12 +17449,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day24.length; j++){
             if(this.timeofweekOTSF2Day24[j].roomid == 14){
               this.timeofweekOTSF2Day24[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day24[j].color = 'red' ;
+              this.timeofweekOTSF2Day24[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day24[j].showlabel = true;
-              this.timeofweekOTSF2Day24[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day24[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day24[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day24[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day24[j].checkReservations = true ;
+              this.timeofweekOTSF2Day24[j].checkReservations = true ; this.showday24= true;
               if(this.timeofweekOTSF2Day24[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day24[j].id   ; k++){
@@ -17442,12 +17471,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day24.length; j++){
             if(this.timeofweekOTSF2Day24[j].roomid == 15){
               this.timeofweekOTSF2Day24[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day24[j].color = 'red' ;
+              this.timeofweekOTSF2Day24[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day24[j].showlabel = true;
-              this.timeofweekOTSF2Day24[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day24[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day24[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day24[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day24[j].checkReservations = true ;
+              this.timeofweekOTSF2Day24[j].checkReservations = true ; this.showday24= true;
               if(this.timeofweekOTSF2Day24[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day24[j].id   ; k++){
@@ -17464,12 +17493,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day24.length; j++){
             if(this.timeofweekOTSF2Day24[j].roomid == 16){
               this.timeofweekOTSF2Day24[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day24[j].color = 'red' ;
+              this.timeofweekOTSF2Day24[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day24[j].showlabel = true;
-              this.timeofweekOTSF2Day24[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day24[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day24[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day24[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day24[j].checkReservations = true ;
+              this.timeofweekOTSF2Day24[j].checkReservations = true ; this.showday24= true;
               if(this.timeofweekOTSF2Day24[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day24[j].id   ; k++){
@@ -17486,12 +17515,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day24.length; j++){
             if(this.timeofweekOTSF2Day24[j].roomid == 17){
               this.timeofweekOTSF2Day24[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day24[j].color = 'red' ;
+              this.timeofweekOTSF2Day24[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day24[j].showlabel = true;
-              this.timeofweekOTSF2Day24[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day24[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day24[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day24[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day24[j].checkReservations = true ;
+              this.timeofweekOTSF2Day24[j].checkReservations = true ; this.showday24= true;
               if(this.timeofweekOTSF2Day24[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day24[j].id   ; k++){
@@ -17508,12 +17537,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day24.length; j++){
             if(this.timeofweekOTSF2Day24[j].roomid == 18){
               this.timeofweekOTSF2Day24[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day24[j].color = 'red' ;
+              this.timeofweekOTSF2Day24[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day24[j].showlabel = true;
-              this.timeofweekOTSF2Day24[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day24[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day24[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day24[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day24[j].checkReservations = true ;
+              this.timeofweekOTSF2Day24[j].checkReservations = true ; this.showday24= true;
               if(this.timeofweekOTSF2Day24[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day24[j].id   ; k++){
@@ -17530,12 +17559,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day25.length; j++){
             if(this.timeofweekOTSF2Day25[j].roomid == 0){
               this.timeofweekOTSF2Day25[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day25[j].color = 'red' ;
+              this.timeofweekOTSF2Day25[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day25[j].showlabel = true;
-              this.timeofweekOTSF2Day25[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day25[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day25[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day25[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day25[j].checkReservations = true ;
+              this.timeofweekOTSF2Day25[j].checkReservations = true ; this.showday25= true;
               if(this.timeofweekOTSF2Day25[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day25[j].id   ; k++){
@@ -17552,12 +17581,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day25.length; j++){
             if(this.timeofweekOTSF2Day25[j].roomid == 1){
               this.timeofweekOTSF2Day25[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day25[j].color = 'red' ;
+              this.timeofweekOTSF2Day25[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day25[j].showlabel = true;
-              this.timeofweekOTSF2Day25[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day25[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day25[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day25[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day25[j].checkReservations = true ;
+              this.timeofweekOTSF2Day25[j].checkReservations = true ; this.showday25= true;
               if(this.timeofweekOTSF2Day25[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day25[j].id   ; k++){
@@ -17574,12 +17603,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day25.length; j++){
             if(this.timeofweekOTSF2Day25[j].roomid == 2){
               this.timeofweekOTSF2Day25[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day25[j].color = 'red' ;
+              this.timeofweekOTSF2Day25[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day25[j].showlabel = true;
-              this.timeofweekOTSF2Day25[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day25[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day25[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day25[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day25[j].checkReservations = true ;
+              this.timeofweekOTSF2Day25[j].checkReservations = true ; this.showday25= true;
               if(this.timeofweekOTSF2Day25[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day25[j].id   ; k++){
@@ -17596,12 +17625,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day25.length; j++){
             if(this.timeofweekOTSF2Day25[j].roomid == 3){
               this.timeofweekOTSF2Day25[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day25[j].color = 'red' ;
+              this.timeofweekOTSF2Day25[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day25[j].showlabel = true;
-              this.timeofweekOTSF2Day25[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day25[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day25[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day25[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day25[j].checkReservations = true ;
+              this.timeofweekOTSF2Day25[j].checkReservations = true ; this.showday25= true;
               if(this.timeofweekOTSF2Day25[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day25[j].id   ; k++){
@@ -17618,12 +17647,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day25.length; j++){
             if(this.timeofweekOTSF2Day25[j].roomid == 4){
               this.timeofweekOTSF2Day25[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day25[j].color = 'red' ;
+              this.timeofweekOTSF2Day25[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day25[j].showlabel = true;
-              this.timeofweekOTSF2Day25[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day25[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day25[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day25[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day25[j].checkReservations = true ;
+              this.timeofweekOTSF2Day25[j].checkReservations = true ; this.showday25= true;
               if(this.timeofweekOTSF2Day25[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day25[j].id   ; k++){
@@ -17640,12 +17669,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day25.length; j++){
             if(this.timeofweekOTSF2Day25[j].roomid == 5){
               this.timeofweekOTSF2Day25[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day25[j].color = 'red' ;
+              this.timeofweekOTSF2Day25[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day25[j].showlabel = true;
-              this.timeofweekOTSF2Day25[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day25[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day25[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day25[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day25[j].checkReservations = true ;
+              this.timeofweekOTSF2Day25[j].checkReservations = true ; this.showday25= true;
               if(this.timeofweekOTSF2Day25[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day25[j].id   ; k++){
@@ -17662,12 +17691,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day25.length; j++){
             if(this.timeofweekOTSF2Day25[j].roomid == 6){
               this.timeofweekOTSF2Day25[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day25[j].color = 'red' ;
+              this.timeofweekOTSF2Day25[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day25[j].showlabel = true;
-              this.timeofweekOTSF2Day25[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day25[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day25[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day25[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day25[j].checkReservations = true ;
+              this.timeofweekOTSF2Day25[j].checkReservations = true ; this.showday25= true;
               if(this.timeofweekOTSF2Day25[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day25[j].id   ; k++){
@@ -17684,12 +17713,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day25.length; j++){
             if(this.timeofweekOTSF2Day25[j].roomid == 7){
               this.timeofweekOTSF2Day25[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day25[j].color = 'red' ;
+              this.timeofweekOTSF2Day25[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day25[j].showlabel = true;
-              this.timeofweekOTSF2Day25[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day25[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day25[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day25[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day25[j].checkReservations = true ;
+              this.timeofweekOTSF2Day25[j].checkReservations = true ; this.showday25= true;
               if(this.timeofweekOTSF2Day25[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day25[j].id   ; k++){
@@ -17706,12 +17735,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day25.length; j++){
             if(this.timeofweekOTSF2Day25[j].roomid == 8){
               this.timeofweekOTSF2Day25[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day25[j].color = 'red' ;
+              this.timeofweekOTSF2Day25[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day25[j].showlabel = true;
-              this.timeofweekOTSF2Day25[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day25[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day25[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day25[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day25[j].checkReservations = true ;
+              this.timeofweekOTSF2Day25[j].checkReservations = true ; this.showday25= true;
               if(this.timeofweekOTSF2Day25[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day25[j].id   ; k++){
@@ -17728,12 +17757,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day25.length; j++){
             if(this.timeofweekOTSF2Day25[j].roomid == 9){
               this.timeofweekOTSF2Day25[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day25[j].color = 'red' ;
+              this.timeofweekOTSF2Day25[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day25[j].showlabel = true;
-              this.timeofweekOTSF2Day25[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day25[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day25[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day25[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day25[j].checkReservations = true ;
+              this.timeofweekOTSF2Day25[j].checkReservations = true ; this.showday25= true;
               if(this.timeofweekOTSF2Day25[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day25[j].id   ; k++){
@@ -17750,12 +17779,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day25.length; j++){
             if(this.timeofweekOTSF2Day25[j].roomid == 10){
               this.timeofweekOTSF2Day25[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day25[j].color = 'red' ;
+              this.timeofweekOTSF2Day25[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day25[j].showlabel = true;
-              this.timeofweekOTSF2Day25[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day25[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day25[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day25[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day25[j].checkReservations = true ;
+              this.timeofweekOTSF2Day25[j].checkReservations = true ; this.showday25= true;
               if(this.timeofweekOTSF2Day25[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day25[j].id   ; k++){
@@ -17772,12 +17801,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day25.length; j++){
             if(this.timeofweekOTSF2Day25[j].roomid == 11){
               this.timeofweekOTSF2Day25[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day25[j].color = 'red' ;
+              this.timeofweekOTSF2Day25[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day25[j].showlabel = true;
-              this.timeofweekOTSF2Day25[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day25[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day25[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day25[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day25[j].checkReservations = true ;
+              this.timeofweekOTSF2Day25[j].checkReservations = true ; this.showday25= true;
               if(this.timeofweekOTSF2Day25[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day25[j].id   ; k++){
@@ -17794,12 +17823,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day25.length; j++){
             if(this.timeofweekOTSF2Day25[j].roomid == 12){
               this.timeofweekOTSF2Day25[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day25[j].color = 'red' ;
+              this.timeofweekOTSF2Day25[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day25[j].showlabel = true;
-              this.timeofweekOTSF2Day25[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day25[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day25[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day25[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day25[j].checkReservations = true ;
+              this.timeofweekOTSF2Day25[j].checkReservations = true ; this.showday25= true;
               if(this.timeofweekOTSF2Day25[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day25[j].id   ; k++){
@@ -17816,12 +17845,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day25.length; j++){
             if(this.timeofweekOTSF2Day25[j].roomid == 13){
               this.timeofweekOTSF2Day25[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day25[j].color = 'red' ;
+              this.timeofweekOTSF2Day25[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day25[j].showlabel = true;
-              this.timeofweekOTSF2Day25[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day25[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day25[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day25[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day25[j].checkReservations = true ;
+              this.timeofweekOTSF2Day25[j].checkReservations = true ; this.showday25= true;
               if(this.timeofweekOTSF2Day25[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day25[j].id   ; k++){
@@ -17838,12 +17867,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day25.length; j++){
             if(this.timeofweekOTSF2Day25[j].roomid == 14){
               this.timeofweekOTSF2Day25[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day25[j].color = 'red' ;
+              this.timeofweekOTSF2Day25[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day25[j].showlabel = true;
-              this.timeofweekOTSF2Day25[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day25[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day25[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day25[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day25[j].checkReservations = true ;
+              this.timeofweekOTSF2Day25[j].checkReservations = true ; this.showday25= true;
               if(this.timeofweekOTSF2Day25[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day25[j].id   ; k++){
@@ -17860,12 +17889,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day25.length; j++){
             if(this.timeofweekOTSF2Day25[j].roomid == 15){
               this.timeofweekOTSF2Day25[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day25[j].color = 'red' ;
+              this.timeofweekOTSF2Day25[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day25[j].showlabel = true;
-              this.timeofweekOTSF2Day25[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day25[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day25[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day25[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day25[j].checkReservations = true ;
+              this.timeofweekOTSF2Day25[j].checkReservations = true ; this.showday25= true;
               if(this.timeofweekOTSF2Day25[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day25[j].id   ; k++){
@@ -17882,12 +17911,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day25.length; j++){
             if(this.timeofweekOTSF2Day25[j].roomid == 16){
               this.timeofweekOTSF2Day25[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day25[j].color = 'red' ;
+              this.timeofweekOTSF2Day25[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day25[j].showlabel = true;
-              this.timeofweekOTSF2Day25[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day25[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day25[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day25[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day25[j].checkReservations = true ;
+              this.timeofweekOTSF2Day25[j].checkReservations = true ; this.showday25= true;
               if(this.timeofweekOTSF2Day25[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day25[j].id   ; k++){
@@ -17904,12 +17933,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day25.length; j++){
             if(this.timeofweekOTSF2Day25[j].roomid == 17){
               this.timeofweekOTSF2Day25[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day25[j].color = 'red' ;
+              this.timeofweekOTSF2Day25[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day25[j].showlabel = true;
-              this.timeofweekOTSF2Day25[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day25[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day25[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day25[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day25[j].checkReservations = true ;
+              this.timeofweekOTSF2Day25[j].checkReservations = true ; this.showday25= true;
               if(this.timeofweekOTSF2Day25[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day25[j].id   ; k++){
@@ -17926,12 +17955,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day25.length; j++){
             if(this.timeofweekOTSF2Day25[j].roomid == 18){
               this.timeofweekOTSF2Day25[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day25[j].color = 'red' ;
+              this.timeofweekOTSF2Day25[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day25[j].showlabel = true;
-              this.timeofweekOTSF2Day25[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day25[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day25[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day25[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day25[j].checkReservations = true ;
+              this.timeofweekOTSF2Day25[j].checkReservations = true ; this.showday25= true;
               if(this.timeofweekOTSF2Day25[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day25[j].id   ; k++){
@@ -17948,12 +17977,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day26.length; j++){
             if(this.timeofweekOTSF2Day26[j].roomid == 0){
               this.timeofweekOTSF2Day26[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day26[j].color = 'red' ;
+              this.timeofweekOTSF2Day26[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day26[j].showlabel = true;
-              this.timeofweekOTSF2Day26[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day26[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day26[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day26[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day26[j].checkReservations = true ;
+              this.timeofweekOTSF2Day26[j].checkReservations = true ; this.showday26= true;
               if(this.timeofweekOTSF2Day26[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day26[j].id   ; k++){
@@ -17970,12 +17999,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day26.length; j++){
             if(this.timeofweekOTSF2Day26[j].roomid == 1){
               this.timeofweekOTSF2Day26[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day26[j].color = 'red' ;
+              this.timeofweekOTSF2Day26[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day26[j].showlabel = true;
-              this.timeofweekOTSF2Day26[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day26[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day26[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day26[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day26[j].checkReservations = true ;
+              this.timeofweekOTSF2Day26[j].checkReservations = true ; this.showday26= true;
               if(this.timeofweekOTSF2Day26[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day26[j].id   ; k++){
@@ -17992,12 +18021,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day26.length; j++){
             if(this.timeofweekOTSF2Day26[j].roomid == 2){
               this.timeofweekOTSF2Day26[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day26[j].color = 'red' ;
+              this.timeofweekOTSF2Day26[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day26[j].showlabel = true;
-              this.timeofweekOTSF2Day26[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day26[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day26[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day26[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day26[j].checkReservations = true ;
+              this.timeofweekOTSF2Day26[j].checkReservations = true ; this.showday26= true;
               if(this.timeofweekOTSF2Day26[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day26[j].id   ; k++){
@@ -18014,12 +18043,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day26.length; j++){
             if(this.timeofweekOTSF2Day26[j].roomid == 3){
               this.timeofweekOTSF2Day26[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day26[j].color = 'red' ;
+              this.timeofweekOTSF2Day26[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day26[j].showlabel = true;
-              this.timeofweekOTSF2Day26[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day26[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day26[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day26[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day26[j].checkReservations = true ;
+              this.timeofweekOTSF2Day26[j].checkReservations = true ; this.showday26= true;
               if(this.timeofweekOTSF2Day26[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day26[j].id   ; k++){
@@ -18036,12 +18065,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day26.length; j++){
             if(this.timeofweekOTSF2Day26[j].roomid == 4){
               this.timeofweekOTSF2Day26[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day26[j].color = 'red' ;
+              this.timeofweekOTSF2Day26[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day26[j].showlabel = true;
-              this.timeofweekOTSF2Day26[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day26[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day26[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day26[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day26[j].checkReservations = true ;
+              this.timeofweekOTSF2Day26[j].checkReservations = true ; this.showday26= true;
               if(this.timeofweekOTSF2Day26[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day26[j].id   ; k++){
@@ -18058,12 +18087,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day26.length; j++){
             if(this.timeofweekOTSF2Day26[j].roomid == 5){
               this.timeofweekOTSF2Day26[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day26[j].color = 'red' ;
+              this.timeofweekOTSF2Day26[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day26[j].showlabel = true;
-              this.timeofweekOTSF2Day26[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day26[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day26[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day26[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day26[j].checkReservations = true ;
+              this.timeofweekOTSF2Day26[j].checkReservations = true ; this.showday26= true;
               if(this.timeofweekOTSF2Day26[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day26[j].id   ; k++){
@@ -18080,12 +18109,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day26.length; j++){
             if(this.timeofweekOTSF2Day26[j].roomid == 6){
               this.timeofweekOTSF2Day26[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day26[j].color = 'red' ;
+              this.timeofweekOTSF2Day26[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day26[j].showlabel = true;
-              this.timeofweekOTSF2Day26[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day26[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day26[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day26[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day26[j].checkReservations = true ;
+              this.timeofweekOTSF2Day26[j].checkReservations = true ; this.showday26= true;
               if(this.timeofweekOTSF2Day26[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day26[j].id   ; k++){
@@ -18102,12 +18131,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day26.length; j++){
             if(this.timeofweekOTSF2Day26[j].roomid == 7){
               this.timeofweekOTSF2Day26[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day26[j].color = 'red' ;
+              this.timeofweekOTSF2Day26[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day26[j].showlabel = true;
-              this.timeofweekOTSF2Day26[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day26[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day26[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day26[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day26[j].checkReservations = true ;
+              this.timeofweekOTSF2Day26[j].checkReservations = true ; this.showday26= true;
               if(this.timeofweekOTSF2Day26[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day26[j].id   ; k++){
@@ -18124,12 +18153,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day26.length; j++){
             if(this.timeofweekOTSF2Day26[j].roomid == 8){
               this.timeofweekOTSF2Day26[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day26[j].color = 'red' ;
+              this.timeofweekOTSF2Day26[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day26[j].showlabel = true;
-              this.timeofweekOTSF2Day26[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day26[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day26[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day26[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day26[j].checkReservations = true ;
+              this.timeofweekOTSF2Day26[j].checkReservations = true ; this.showday26= true;
               if(this.timeofweekOTSF2Day26[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day26[j].id   ; k++){
@@ -18146,12 +18175,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day26.length; j++){
             if(this.timeofweekOTSF2Day26[j].roomid == 9){
               this.timeofweekOTSF2Day26[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day26[j].color = 'red' ;
+              this.timeofweekOTSF2Day26[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day26[j].showlabel = true;
-              this.timeofweekOTSF2Day26[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day26[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day26[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day26[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day26[j].checkReservations = true ;
+              this.timeofweekOTSF2Day26[j].checkReservations = true ; this.showday26= true;
               if(this.timeofweekOTSF2Day26[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day26[j].id   ; k++){
@@ -18168,12 +18197,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day26.length; j++){
             if(this.timeofweekOTSF2Day26[j].roomid == 10){
               this.timeofweekOTSF2Day26[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day26[j].color = 'red' ;
+              this.timeofweekOTSF2Day26[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day26[j].showlabel = true;
-              this.timeofweekOTSF2Day26[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day26[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day26[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day26[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day26[j].checkReservations = true ;
+              this.timeofweekOTSF2Day26[j].checkReservations = true ; this.showday26= true;
               if(this.timeofweekOTSF2Day26[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day26[j].id   ; k++){
@@ -18190,12 +18219,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day26.length; j++){
             if(this.timeofweekOTSF2Day26[j].roomid == 11){
               this.timeofweekOTSF2Day26[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day26[j].color = 'red' ;
+              this.timeofweekOTSF2Day26[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day26[j].showlabel = true;
-              this.timeofweekOTSF2Day26[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day26[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day26[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day26[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day26[j].checkReservations = true ;
+              this.timeofweekOTSF2Day26[j].checkReservations = true ; this.showday26= true;
               if(this.timeofweekOTSF2Day26[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day26[j].id   ; k++){
@@ -18212,12 +18241,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day26.length; j++){
             if(this.timeofweekOTSF2Day26[j].roomid == 12){
               this.timeofweekOTSF2Day26[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day26[j].color = 'red' ;
+              this.timeofweekOTSF2Day26[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day26[j].showlabel = true;
-              this.timeofweekOTSF2Day26[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day26[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day26[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day26[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day26[j].checkReservations = true ;
+              this.timeofweekOTSF2Day26[j].checkReservations = true ; this.showday26= true;
               if(this.timeofweekOTSF2Day26[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day26[j].id   ; k++){
@@ -18234,12 +18263,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day26.length; j++){
             if(this.timeofweekOTSF2Day26[j].roomid == 13){
               this.timeofweekOTSF2Day26[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day26[j].color = 'red' ;
+              this.timeofweekOTSF2Day26[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day26[j].showlabel = true;
-              this.timeofweekOTSF2Day26[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day26[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day26[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day26[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day26[j].checkReservations = true ;
+              this.timeofweekOTSF2Day26[j].checkReservations = true ; this.showday26= true;
               if(this.timeofweekOTSF2Day26[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day26[j].id   ; k++){
@@ -18256,12 +18285,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day26.length; j++){
             if(this.timeofweekOTSF2Day26[j].roomid == 14){
               this.timeofweekOTSF2Day26[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day26[j].color = 'red' ;
+              this.timeofweekOTSF2Day26[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day26[j].showlabel = true;
-              this.timeofweekOTSF2Day26[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day26[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day26[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day26[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day26[j].checkReservations = true ;
+              this.timeofweekOTSF2Day26[j].checkReservations = true ; this.showday26= true;
               if(this.timeofweekOTSF2Day26[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day26[j].id   ; k++){
@@ -18278,12 +18307,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day26.length; j++){
             if(this.timeofweekOTSF2Day26[j].roomid == 15){
               this.timeofweekOTSF2Day26[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day26[j].color = 'red' ;
+              this.timeofweekOTSF2Day26[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day26[j].showlabel = true;
-              this.timeofweekOTSF2Day26[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day26[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day26[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day26[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day26[j].checkReservations = true ;
+              this.timeofweekOTSF2Day26[j].checkReservations = true ; this.showday26= true;
               if(this.timeofweekOTSF2Day26[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day26[j].id   ; k++){
@@ -18300,12 +18329,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day26.length; j++){
             if(this.timeofweekOTSF2Day26[j].roomid == 16){
               this.timeofweekOTSF2Day26[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day26[j].color = 'red' ;
+              this.timeofweekOTSF2Day26[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day26[j].showlabel = true;
-              this.timeofweekOTSF2Day26[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day26[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day26[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day26[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day26[j].checkReservations = true ;
+              this.timeofweekOTSF2Day26[j].checkReservations = true ; this.showday26= true;
               if(this.timeofweekOTSF2Day26[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day26[j].id   ; k++){
@@ -18322,12 +18351,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day26.length; j++){
             if(this.timeofweekOTSF2Day26[j].roomid == 17){
               this.timeofweekOTSF2Day26[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day26[j].color = 'red' ;
+              this.timeofweekOTSF2Day26[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day26[j].showlabel = true;
-              this.timeofweekOTSF2Day26[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day26[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day26[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day26[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day26[j].checkReservations = true ;
+              this.timeofweekOTSF2Day26[j].checkReservations = true ; this.showday26= true;
               if(this.timeofweekOTSF2Day26[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day26[j].id   ; k++){
@@ -18344,12 +18373,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day26.length; j++){
             if(this.timeofweekOTSF2Day26[j].roomid == 18){
               this.timeofweekOTSF2Day26[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day26[j].color = 'red' ;
+              this.timeofweekOTSF2Day26[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day26[j].showlabel = true;
-              this.timeofweekOTSF2Day26[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day26[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day26[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day26[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day26[j].checkReservations = true ;
+              this.timeofweekOTSF2Day26[j].checkReservations = true ; this.showday26= true;
               if(this.timeofweekOTSF2Day26[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day26[j].id   ; k++){
@@ -18366,12 +18395,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day27.length; j++){
             if(this.timeofweekOTSF2Day27[j].roomid == 0){
               this.timeofweekOTSF2Day27[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day27[j].color = 'red' ;
+              this.timeofweekOTSF2Day27[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day27[j].showlabel = true;
-              this.timeofweekOTSF2Day27[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day27[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day27[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day27[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day27[j].checkReservations = true ;
+              this.timeofweekOTSF2Day27[j].checkReservations = true ; this.showday27= true;
               if(this.timeofweekOTSF2Day27[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day27[j].id   ; k++){
@@ -18388,12 +18417,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day27.length; j++){
             if(this.timeofweekOTSF2Day27[j].roomid == 1){
               this.timeofweekOTSF2Day27[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day27[j].color = 'red' ;
+              this.timeofweekOTSF2Day27[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day27[j].showlabel = true;
-              this.timeofweekOTSF2Day27[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day27[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day27[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day27[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day27[j].checkReservations = true ;
+              this.timeofweekOTSF2Day27[j].checkReservations = true ; this.showday27= true;
               if(this.timeofweekOTSF2Day27[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day27[j].id   ; k++){
@@ -18410,12 +18439,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day27.length; j++){
             if(this.timeofweekOTSF2Day27[j].roomid == 2){
               this.timeofweekOTSF2Day27[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day27[j].color = 'red' ;
+              this.timeofweekOTSF2Day27[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day27[j].showlabel = true;
-              this.timeofweekOTSF2Day27[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day27[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day27[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day27[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day27[j].checkReservations = true ;
+              this.timeofweekOTSF2Day27[j].checkReservations = true ; this.showday27= true;
               if(this.timeofweekOTSF2Day27[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day27[j].id   ; k++){
@@ -18432,12 +18461,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day27.length; j++){
             if(this.timeofweekOTSF2Day27[j].roomid == 3){
               this.timeofweekOTSF2Day27[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day27[j].color = 'red' ;
+              this.timeofweekOTSF2Day27[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day27[j].showlabel = true;
-              this.timeofweekOTSF2Day27[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day27[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day27[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day27[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day27[j].checkReservations = true ;
+              this.timeofweekOTSF2Day27[j].checkReservations = true ; this.showday27= true;
               if(this.timeofweekOTSF2Day27[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day27[j].id   ; k++){
@@ -18454,12 +18483,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day27.length; j++){
             if(this.timeofweekOTSF2Day27[j].roomid == 4){
               this.timeofweekOTSF2Day27[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day27[j].color = 'red' ;
+              this.timeofweekOTSF2Day27[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day27[j].showlabel = true;
-              this.timeofweekOTSF2Day27[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day27[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day27[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day27[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day27[j].checkReservations = true ;
+              this.timeofweekOTSF2Day27[j].checkReservations = true ; this.showday27= true;
               if(this.timeofweekOTSF2Day27[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day27[j].id   ; k++){
@@ -18476,12 +18505,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day27.length; j++){
             if(this.timeofweekOTSF2Day27[j].roomid == 5){
               this.timeofweekOTSF2Day27[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day27[j].color = 'red' ;
+              this.timeofweekOTSF2Day27[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day27[j].showlabel = true;
-              this.timeofweekOTSF2Day27[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day27[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day27[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day27[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day27[j].checkReservations = true ;
+              this.timeofweekOTSF2Day27[j].checkReservations = true ; this.showday27= true;
               if(this.timeofweekOTSF2Day27[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day27[j].id   ; k++){
@@ -18498,12 +18527,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day27.length; j++){
             if(this.timeofweekOTSF2Day27[j].roomid == 6){
               this.timeofweekOTSF2Day27[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day27[j].color = 'red' ;
+              this.timeofweekOTSF2Day27[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day27[j].showlabel = true;
-              this.timeofweekOTSF2Day27[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day27[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day27[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day27[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day27[j].checkReservations = true ;
+              this.timeofweekOTSF2Day27[j].checkReservations = true ; this.showday27= true;
               if(this.timeofweekOTSF2Day27[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day27[j].id   ; k++){
@@ -18520,12 +18549,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day27.length; j++){
             if(this.timeofweekOTSF2Day27[j].roomid == 7){
               this.timeofweekOTSF2Day27[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day27[j].color = 'red' ;
+              this.timeofweekOTSF2Day27[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day27[j].showlabel = true;
-              this.timeofweekOTSF2Day27[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day27[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day27[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day27[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day27[j].checkReservations = true ;
+              this.timeofweekOTSF2Day27[j].checkReservations = true ; this.showday27= true;
               if(this.timeofweekOTSF2Day27[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day27[j].id   ; k++){
@@ -18542,12 +18571,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day27.length; j++){
             if(this.timeofweekOTSF2Day27[j].roomid == 8){
               this.timeofweekOTSF2Day27[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day27[j].color = 'red' ;
+              this.timeofweekOTSF2Day27[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day27[j].showlabel = true;
-              this.timeofweekOTSF2Day27[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day27[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day27[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day27[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day27[j].checkReservations = true ;
+              this.timeofweekOTSF2Day27[j].checkReservations = true ; this.showday27= true;
               if(this.timeofweekOTSF2Day27[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day27[j].id   ; k++){
@@ -18564,12 +18593,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day27.length; j++){
             if(this.timeofweekOTSF2Day27[j].roomid == 9){
               this.timeofweekOTSF2Day27[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day27[j].color = 'red' ;
+              this.timeofweekOTSF2Day27[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day27[j].showlabel = true;
-              this.timeofweekOTSF2Day27[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day27[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day27[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day27[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day27[j].checkReservations = true ;
+              this.timeofweekOTSF2Day27[j].checkReservations = true ; this.showday27= true;
               if(this.timeofweekOTSF2Day27[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day27[j].id   ; k++){
@@ -18586,12 +18615,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day27.length; j++){
             if(this.timeofweekOTSF2Day27[j].roomid == 10){
               this.timeofweekOTSF2Day27[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day27[j].color = 'red' ;
+              this.timeofweekOTSF2Day27[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day27[j].showlabel = true;
-              this.timeofweekOTSF2Day27[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day27[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day27[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day27[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day27[j].checkReservations = true ;
+              this.timeofweekOTSF2Day27[j].checkReservations = true ; this.showday27= true;
               if(this.timeofweekOTSF2Day27[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day27[j].id   ; k++){
@@ -18608,12 +18637,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day27.length; j++){
             if(this.timeofweekOTSF2Day27[j].roomid == 11){
               this.timeofweekOTSF2Day27[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day27[j].color = 'red' ;
+              this.timeofweekOTSF2Day27[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day27[j].showlabel = true;
-              this.timeofweekOTSF2Day27[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day27[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day27[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day27[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day27[j].checkReservations = true ;
+              this.timeofweekOTSF2Day27[j].checkReservations = true ; this.showday27= true;
               if(this.timeofweekOTSF2Day27[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day27[j].id   ; k++){
@@ -18630,12 +18659,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day27.length; j++){
             if(this.timeofweekOTSF2Day27[j].roomid == 12){
               this.timeofweekOTSF2Day27[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day27[j].color = 'red' ;
+              this.timeofweekOTSF2Day27[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day27[j].showlabel = true;
-              this.timeofweekOTSF2Day27[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day27[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day27[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day27[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day27[j].checkReservations = true ;
+              this.timeofweekOTSF2Day27[j].checkReservations = true ; this.showday27= true;
               if(this.timeofweekOTSF2Day27[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day27[j].id   ; k++){
@@ -18652,12 +18681,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day27.length; j++){
             if(this.timeofweekOTSF2Day27[j].roomid == 13){
               this.timeofweekOTSF2Day27[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day27[j].color = 'red' ;
+              this.timeofweekOTSF2Day27[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day27[j].showlabel = true;
-              this.timeofweekOTSF2Day27[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day27[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day27[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day27[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day27[j].checkReservations = true ;
+              this.timeofweekOTSF2Day27[j].checkReservations = true ; this.showday27= true;
               if(this.timeofweekOTSF2Day27[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day27[j].id   ; k++){
@@ -18674,12 +18703,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day27.length; j++){
             if(this.timeofweekOTSF2Day27[j].roomid == 14){
               this.timeofweekOTSF2Day27[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day27[j].color = 'red' ;
+              this.timeofweekOTSF2Day27[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day27[j].showlabel = true;
-              this.timeofweekOTSF2Day27[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day27[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day27[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day27[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day27[j].checkReservations = true ;
+              this.timeofweekOTSF2Day27[j].checkReservations = true ; this.showday27= true;
               if(this.timeofweekOTSF2Day27[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day27[j].id   ; k++){
@@ -18696,12 +18725,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day27.length; j++){
             if(this.timeofweekOTSF2Day27[j].roomid == 15){
               this.timeofweekOTSF2Day27[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day27[j].color = 'red' ;
+              this.timeofweekOTSF2Day27[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day27[j].showlabel = true;
-              this.timeofweekOTSF2Day27[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day27[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day27[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day27[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day27[j].checkReservations = true ;
+              this.timeofweekOTSF2Day27[j].checkReservations = true ; this.showday27= true;
               if(this.timeofweekOTSF2Day27[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day27[j].id   ; k++){
@@ -18718,12 +18747,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day27.length; j++){
             if(this.timeofweekOTSF2Day27[j].roomid == 16){
               this.timeofweekOTSF2Day27[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day27[j].color = 'red' ;
+              this.timeofweekOTSF2Day27[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day27[j].showlabel = true;
-              this.timeofweekOTSF2Day27[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day27[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day27[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day27[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day27[j].checkReservations = true ;
+              this.timeofweekOTSF2Day27[j].checkReservations = true ; this.showday27= true;
               if(this.timeofweekOTSF2Day27[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day27[j].id   ; k++){
@@ -18740,12 +18769,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day27.length; j++){
             if(this.timeofweekOTSF2Day27[j].roomid == 17){
               this.timeofweekOTSF2Day27[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day27[j].color = 'red' ;
+              this.timeofweekOTSF2Day27[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day27[j].showlabel = true;
-              this.timeofweekOTSF2Day27[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day27[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day27[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day27[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day27[j].checkReservations = true ;
+              this.timeofweekOTSF2Day27[j].checkReservations = true ; this.showday27= true;
               if(this.timeofweekOTSF2Day27[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day27[j].id   ; k++){
@@ -18762,12 +18791,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day27.length; j++){
             if(this.timeofweekOTSF2Day27[j].roomid == 18){
               this.timeofweekOTSF2Day27[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day27[j].color = 'red' ;
+              this.timeofweekOTSF2Day27[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day27[j].showlabel = true;
-              this.timeofweekOTSF2Day27[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day27[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day27[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day27[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day27[j].checkReservations = true ;
+              this.timeofweekOTSF2Day27[j].checkReservations = true ; this.showday27= true;
               if(this.timeofweekOTSF2Day27[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day27[j].id   ; k++){
@@ -18784,12 +18813,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day28.length; j++){
             if(this.timeofweekOTSF2Day28[j].roomid == 0){
               this.timeofweekOTSF2Day28[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day28[j].color = 'red' ;
+              this.timeofweekOTSF2Day28[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day28[j].showlabel = true;
-              this.timeofweekOTSF2Day28[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day28[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day28[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day28[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day28[j].checkReservations = true ;
+              this.timeofweekOTSF2Day28[j].checkReservations = true ; this.showday28= true;
               if(this.timeofweekOTSF2Day28[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day28[j].id   ; k++){
@@ -18806,12 +18835,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day28.length; j++){
             if(this.timeofweekOTSF2Day28[j].roomid == 1){
               this.timeofweekOTSF2Day28[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day28[j].color = 'red' ;
+              this.timeofweekOTSF2Day28[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day28[j].showlabel = true;
-              this.timeofweekOTSF2Day28[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day28[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day28[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day28[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day28[j].checkReservations = true ;
+              this.timeofweekOTSF2Day28[j].checkReservations = true ; this.showday28= true;
               if(this.timeofweekOTSF2Day28[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day28[j].id   ; k++){
@@ -18828,12 +18857,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day28.length; j++){
             if(this.timeofweekOTSF2Day28[j].roomid == 2){
               this.timeofweekOTSF2Day28[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day28[j].color = 'red' ;
+              this.timeofweekOTSF2Day28[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day28[j].showlabel = true;
-              this.timeofweekOTSF2Day28[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day28[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day28[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day28[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day28[j].checkReservations = true ;
+              this.timeofweekOTSF2Day28[j].checkReservations = true ; this.showday28= true;
               if(this.timeofweekOTSF2Day28[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day28[j].id   ; k++){
@@ -18850,12 +18879,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day28.length; j++){
             if(this.timeofweekOTSF2Day28[j].roomid == 3){
               this.timeofweekOTSF2Day28[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day28[j].color = 'red' ;
+              this.timeofweekOTSF2Day28[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day28[j].showlabel = true;
-              this.timeofweekOTSF2Day28[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day28[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day28[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day28[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day28[j].checkReservations = true ;
+              this.timeofweekOTSF2Day28[j].checkReservations = true ; this.showday28= true;
               if(this.timeofweekOTSF2Day28[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day28[j].id   ; k++){
@@ -18872,12 +18901,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day28.length; j++){
             if(this.timeofweekOTSF2Day28[j].roomid == 4){
               this.timeofweekOTSF2Day28[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day28[j].color = 'red' ;
+              this.timeofweekOTSF2Day28[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day28[j].showlabel = true;
-              this.timeofweekOTSF2Day28[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day28[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day28[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day28[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day28[j].checkReservations = true ;
+              this.timeofweekOTSF2Day28[j].checkReservations = true ; this.showday28= true;
               if(this.timeofweekOTSF2Day28[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day28[j].id   ; k++){
@@ -18894,12 +18923,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day28.length; j++){
             if(this.timeofweekOTSF2Day28[j].roomid == 5){
               this.timeofweekOTSF2Day28[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day28[j].color = 'red' ;
+              this.timeofweekOTSF2Day28[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day28[j].showlabel = true;
-              this.timeofweekOTSF2Day28[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day28[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day28[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day28[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day28[j].checkReservations = true ;
+              this.timeofweekOTSF2Day28[j].checkReservations = true ; this.showday28= true;
               if(this.timeofweekOTSF2Day28[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day28[j].id   ; k++){
@@ -18916,12 +18945,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day28.length; j++){
             if(this.timeofweekOTSF2Day28[j].roomid == 6){
               this.timeofweekOTSF2Day28[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day28[j].color = 'red' ;
+              this.timeofweekOTSF2Day28[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day28[j].showlabel = true;
-              this.timeofweekOTSF2Day28[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day28[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day28[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day28[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day28[j].checkReservations = true ;
+              this.timeofweekOTSF2Day28[j].checkReservations = true ; this.showday28= true;
               if(this.timeofweekOTSF2Day28[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day28[j].id   ; k++){
@@ -18938,12 +18967,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day28.length; j++){
             if(this.timeofweekOTSF2Day28[j].roomid == 7){
               this.timeofweekOTSF2Day28[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day28[j].color = 'red' ;
+              this.timeofweekOTSF2Day28[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day28[j].showlabel = true;
-              this.timeofweekOTSF2Day28[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day28[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day28[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day28[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day28[j].checkReservations = true ;
+              this.timeofweekOTSF2Day28[j].checkReservations = true ; this.showday28= true;
               if(this.timeofweekOTSF2Day28[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day28[j].id   ; k++){
@@ -18960,12 +18989,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day28.length; j++){
             if(this.timeofweekOTSF2Day28[j].roomid == 8){
               this.timeofweekOTSF2Day28[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day28[j].color = 'red' ;
+              this.timeofweekOTSF2Day28[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day28[j].showlabel = true;
-              this.timeofweekOTSF2Day28[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day28[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day28[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day28[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day28[j].checkReservations = true ;
+              this.timeofweekOTSF2Day28[j].checkReservations = true ; this.showday28= true;
               if(this.timeofweekOTSF2Day28[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day28[j].id   ; k++){
@@ -18982,12 +19011,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day28.length; j++){
             if(this.timeofweekOTSF2Day28[j].roomid == 9){
               this.timeofweekOTSF2Day28[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day28[j].color = 'red' ;
+              this.timeofweekOTSF2Day28[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day28[j].showlabel = true;
-              this.timeofweekOTSF2Day28[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day28[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day28[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day28[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day28[j].checkReservations = true ;
+              this.timeofweekOTSF2Day28[j].checkReservations = true ; this.showday28= true;
               if(this.timeofweekOTSF2Day28[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day28[j].id   ; k++){
@@ -19004,12 +19033,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day28.length; j++){
             if(this.timeofweekOTSF2Day28[j].roomid == 10){
               this.timeofweekOTSF2Day28[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day28[j].color = 'red' ;
+              this.timeofweekOTSF2Day28[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day28[j].showlabel = true;
-              this.timeofweekOTSF2Day28[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day28[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day28[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day28[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day28[j].checkReservations = true ;
+              this.timeofweekOTSF2Day28[j].checkReservations = true ; this.showday28= true;
               if(this.timeofweekOTSF2Day28[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day28[j].id   ; k++){
@@ -19026,12 +19055,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day28.length; j++){
             if(this.timeofweekOTSF2Day28[j].roomid == 11){
               this.timeofweekOTSF2Day28[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day28[j].color = 'red' ;
+              this.timeofweekOTSF2Day28[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day28[j].showlabel = true;
-              this.timeofweekOTSF2Day28[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day28[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day28[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day28[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day28[j].checkReservations = true ;
+              this.timeofweekOTSF2Day28[j].checkReservations = true ; this.showday28= true;
               if(this.timeofweekOTSF2Day28[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day28[j].id   ; k++){
@@ -19048,12 +19077,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day28.length; j++){
             if(this.timeofweekOTSF2Day28[j].roomid == 12){
               this.timeofweekOTSF2Day28[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day28[j].color = 'red' ;
+              this.timeofweekOTSF2Day28[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day28[j].showlabel = true;
-              this.timeofweekOTSF2Day28[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day28[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day28[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day28[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day28[j].checkReservations = true ;
+              this.timeofweekOTSF2Day28[j].checkReservations = true ; this.showday28= true;
               if(this.timeofweekOTSF2Day28[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day28[j].id   ; k++){
@@ -19070,12 +19099,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day28.length; j++){
             if(this.timeofweekOTSF2Day28[j].roomid == 13){
               this.timeofweekOTSF2Day28[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day28[j].color = 'red' ;
+              this.timeofweekOTSF2Day28[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day28[j].showlabel = true;
-              this.timeofweekOTSF2Day28[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day28[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day28[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day28[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day28[j].checkReservations = true ;
+              this.timeofweekOTSF2Day28[j].checkReservations = true ; this.showday28= true;
               if(this.timeofweekOTSF2Day28[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day28[j].id   ; k++){
@@ -19092,12 +19121,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day28.length; j++){
             if(this.timeofweekOTSF2Day28[j].roomid == 14){
               this.timeofweekOTSF2Day28[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day28[j].color = 'red' ;
+              this.timeofweekOTSF2Day28[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day28[j].showlabel = true;
-              this.timeofweekOTSF2Day28[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day28[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day28[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day28[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day28[j].checkReservations = true ;
+              this.timeofweekOTSF2Day28[j].checkReservations = true ; this.showday28= true;
               if(this.timeofweekOTSF2Day28[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day28[j].id   ; k++){
@@ -19114,12 +19143,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day28.length; j++){
             if(this.timeofweekOTSF2Day28[j].roomid == 15){
               this.timeofweekOTSF2Day28[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day28[j].color = 'red' ;
+              this.timeofweekOTSF2Day28[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day28[j].showlabel = true;
-              this.timeofweekOTSF2Day28[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day28[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day28[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day28[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day28[j].checkReservations = true ;
+              this.timeofweekOTSF2Day28[j].checkReservations = true ; this.showday28= true;
               if(this.timeofweekOTSF2Day28[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day28[j].id   ; k++){
@@ -19136,12 +19165,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day28.length; j++){
             if(this.timeofweekOTSF2Day28[j].roomid == 16){
               this.timeofweekOTSF2Day28[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day28[j].color = 'red' ;
+              this.timeofweekOTSF2Day28[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day28[j].showlabel = true;
-              this.timeofweekOTSF2Day28[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day28[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day28[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day28[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day28[j].checkReservations = true ;
+              this.timeofweekOTSF2Day28[j].checkReservations = true ; this.showday28= true;
               if(this.timeofweekOTSF2Day28[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day28[j].id   ; k++){
@@ -19158,12 +19187,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day28.length; j++){
             if(this.timeofweekOTSF2Day28[j].roomid == 17){
               this.timeofweekOTSF2Day28[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day28[j].color = 'red' ;
+              this.timeofweekOTSF2Day28[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day28[j].showlabel = true;
-              this.timeofweekOTSF2Day28[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day28[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day28[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day28[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day28[j].checkReservations = true ;
+              this.timeofweekOTSF2Day28[j].checkReservations = true ; this.showday28= true;
               if(this.timeofweekOTSF2Day28[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day28[j].id   ; k++){
@@ -19180,12 +19209,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day28.length; j++){
             if(this.timeofweekOTSF2Day28[j].roomid == 18){
               this.timeofweekOTSF2Day28[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day28[j].color = 'red' ;
+              this.timeofweekOTSF2Day28[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day28[j].showlabel = true;
-              this.timeofweekOTSF2Day28[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day28[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day28[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day28[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day28[j].checkReservations = true ;
+              this.timeofweekOTSF2Day28[j].checkReservations = true ; this.showday28= true;
               if(this.timeofweekOTSF2Day28[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day28[j].id   ; k++){
@@ -19202,12 +19231,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day29.length; j++){
             if(this.timeofweekOTSF2Day29[j].roomid == 0){
               this.timeofweekOTSF2Day29[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day29[j].color = 'red' ;
+              this.timeofweekOTSF2Day29[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day29[j].showlabel = true;
-              this.timeofweekOTSF2Day29[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day29[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day29[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day29[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day29[j].checkReservations = true ;
+              this.timeofweekOTSF2Day29[j].checkReservations = true ; this.showday29= true;
               if(this.timeofweekOTSF2Day29[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day29[j].id   ; k++){
@@ -19224,12 +19253,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day29.length; j++){
             if(this.timeofweekOTSF2Day29[j].roomid == 1){
               this.timeofweekOTSF2Day29[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day29[j].color = 'red' ;
+              this.timeofweekOTSF2Day29[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day29[j].showlabel = true;
-              this.timeofweekOTSF2Day29[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day29[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day29[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day29[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day29[j].checkReservations = true ;
+              this.timeofweekOTSF2Day29[j].checkReservations = true ; this.showday29= true;
               if(this.timeofweekOTSF2Day29[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day29[j].id   ; k++){
@@ -19246,12 +19275,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day29.length; j++){
             if(this.timeofweekOTSF2Day29[j].roomid == 2){
               this.timeofweekOTSF2Day29[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day29[j].color = 'red' ;
+              this.timeofweekOTSF2Day29[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day29[j].showlabel = true;
-              this.timeofweekOTSF2Day29[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day29[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day29[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day29[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day29[j].checkReservations = true ;
+              this.timeofweekOTSF2Day29[j].checkReservations = true ; this.showday29= true;
               if(this.timeofweekOTSF2Day29[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day29[j].id   ; k++){
@@ -19268,12 +19297,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day29.length; j++){
             if(this.timeofweekOTSF2Day29[j].roomid == 3){
               this.timeofweekOTSF2Day29[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day29[j].color = 'red' ;
+              this.timeofweekOTSF2Day29[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day29[j].showlabel = true;
-              this.timeofweekOTSF2Day29[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day29[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day29[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day29[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day29[j].checkReservations = true ;
+              this.timeofweekOTSF2Day29[j].checkReservations = true ; this.showday29= true;
               if(this.timeofweekOTSF2Day29[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day29[j].id   ; k++){
@@ -19290,12 +19319,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day29.length; j++){
             if(this.timeofweekOTSF2Day29[j].roomid == 4){
               this.timeofweekOTSF2Day29[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day29[j].color = 'red' ;
+              this.timeofweekOTSF2Day29[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day29[j].showlabel = true;
-              this.timeofweekOTSF2Day29[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day29[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day29[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day29[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day29[j].checkReservations = true ;
+              this.timeofweekOTSF2Day29[j].checkReservations = true ; this.showday29= true;
               if(this.timeofweekOTSF2Day29[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day29[j].id   ; k++){
@@ -19312,12 +19341,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day29.length; j++){
             if(this.timeofweekOTSF2Day29[j].roomid == 5){
               this.timeofweekOTSF2Day29[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day29[j].color = 'red' ;
+              this.timeofweekOTSF2Day29[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day29[j].showlabel = true;
-              this.timeofweekOTSF2Day29[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day29[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day29[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day29[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day29[j].checkReservations = true ;
+              this.timeofweekOTSF2Day29[j].checkReservations = true ; this.showday29= true;
               if(this.timeofweekOTSF2Day29[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day29[j].id   ; k++){
@@ -19334,12 +19363,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day29.length; j++){
             if(this.timeofweekOTSF2Day29[j].roomid == 6){
               this.timeofweekOTSF2Day29[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day29[j].color = 'red' ;
+              this.timeofweekOTSF2Day29[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day29[j].showlabel = true;
-              this.timeofweekOTSF2Day29[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day29[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day29[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day29[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day29[j].checkReservations = true ;
+              this.timeofweekOTSF2Day29[j].checkReservations = true ; this.showday29= true;
               if(this.timeofweekOTSF2Day29[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day29[j].id   ; k++){
@@ -19356,12 +19385,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day29.length; j++){
             if(this.timeofweekOTSF2Day29[j].roomid == 7){
               this.timeofweekOTSF2Day29[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day29[j].color = 'red' ;
+              this.timeofweekOTSF2Day29[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day29[j].showlabel = true;
-              this.timeofweekOTSF2Day29[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day29[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day29[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day29[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day29[j].checkReservations = true ;
+              this.timeofweekOTSF2Day29[j].checkReservations = true ; this.showday29= true;
               if(this.timeofweekOTSF2Day29[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day29[j].id   ; k++){
@@ -19378,12 +19407,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day29.length; j++){
             if(this.timeofweekOTSF2Day29[j].roomid == 8){
               this.timeofweekOTSF2Day29[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day29[j].color = 'red' ;
+              this.timeofweekOTSF2Day29[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day29[j].showlabel = true;
-              this.timeofweekOTSF2Day29[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day29[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day29[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day29[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day29[j].checkReservations = true ;
+              this.timeofweekOTSF2Day29[j].checkReservations = true ; this.showday29= true;
               if(this.timeofweekOTSF2Day29[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day29[j].id   ; k++){
@@ -19400,12 +19429,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day29.length; j++){
             if(this.timeofweekOTSF2Day29[j].roomid == 9){
               this.timeofweekOTSF2Day29[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day29[j].color = 'red' ;
+              this.timeofweekOTSF2Day29[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day29[j].showlabel = true;
-              this.timeofweekOTSF2Day29[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day29[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day29[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day29[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day29[j].checkReservations = true ;
+              this.timeofweekOTSF2Day29[j].checkReservations = true ; this.showday29= true;
               if(this.timeofweekOTSF2Day29[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day29[j].id   ; k++){
@@ -19422,12 +19451,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day29.length; j++){
             if(this.timeofweekOTSF2Day29[j].roomid == 10){
               this.timeofweekOTSF2Day29[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day29[j].color = 'red' ;
+              this.timeofweekOTSF2Day29[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day29[j].showlabel = true;
-              this.timeofweekOTSF2Day29[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day29[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day29[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day29[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day29[j].checkReservations = true ;
+              this.timeofweekOTSF2Day29[j].checkReservations = true ; this.showday29= true;
               if(this.timeofweekOTSF2Day29[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day29[j].id   ; k++){
@@ -19444,12 +19473,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day29.length; j++){
             if(this.timeofweekOTSF2Day29[j].roomid == 11){
               this.timeofweekOTSF2Day29[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day29[j].color = 'red' ;
+              this.timeofweekOTSF2Day29[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day29[j].showlabel = true;
-              this.timeofweekOTSF2Day29[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day29[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day29[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day29[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day29[j].checkReservations = true ;
+              this.timeofweekOTSF2Day29[j].checkReservations = true ; this.showday29= true;
               if(this.timeofweekOTSF2Day29[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day29[j].id   ; k++){
@@ -19466,12 +19495,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day29.length; j++){
             if(this.timeofweekOTSF2Day29[j].roomid == 12){
               this.timeofweekOTSF2Day29[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day29[j].color = 'red' ;
+              this.timeofweekOTSF2Day29[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day29[j].showlabel = true;
-              this.timeofweekOTSF2Day29[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day29[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day29[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day29[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day29[j].checkReservations = true ;
+              this.timeofweekOTSF2Day29[j].checkReservations = true ; this.showday29= true;
               if(this.timeofweekOTSF2Day29[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day29[j].id   ; k++){
@@ -19488,12 +19517,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day29.length; j++){
             if(this.timeofweekOTSF2Day29[j].roomid == 13){
               this.timeofweekOTSF2Day29[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day29[j].color = 'red' ;
+              this.timeofweekOTSF2Day29[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day29[j].showlabel = true;
-              this.timeofweekOTSF2Day29[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day29[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day29[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day29[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day29[j].checkReservations = true ;
+              this.timeofweekOTSF2Day29[j].checkReservations = true ; this.showday29= true;
               if(this.timeofweekOTSF2Day29[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day29[j].id   ; k++){
@@ -19510,12 +19539,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day29.length; j++){
             if(this.timeofweekOTSF2Day29[j].roomid == 14){
               this.timeofweekOTSF2Day29[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day29[j].color = 'red' ;
+              this.timeofweekOTSF2Day29[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day29[j].showlabel = true;
-              this.timeofweekOTSF2Day29[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day29[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day29[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day29[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day29[j].checkReservations = true ;
+              this.timeofweekOTSF2Day29[j].checkReservations = true ; this.showday29= true;
               if(this.timeofweekOTSF2Day29[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day29[j].id   ; k++){
@@ -19532,12 +19561,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day29.length; j++){
             if(this.timeofweekOTSF2Day29[j].roomid == 15){
               this.timeofweekOTSF2Day29[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day29[j].color = 'red' ;
+              this.timeofweekOTSF2Day29[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day29[j].showlabel = true;
-              this.timeofweekOTSF2Day29[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day29[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day29[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day29[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day29[j].checkReservations = true ;
+              this.timeofweekOTSF2Day29[j].checkReservations = true ; this.showday29= true;
               if(this.timeofweekOTSF2Day29[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day29[j].id   ; k++){
@@ -19554,12 +19583,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day29.length; j++){
             if(this.timeofweekOTSF2Day29[j].roomid == 16){
               this.timeofweekOTSF2Day29[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day29[j].color = 'red' ;
+              this.timeofweekOTSF2Day29[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day29[j].showlabel = true;
-              this.timeofweekOTSF2Day29[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day29[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day29[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day29[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day29[j].checkReservations = true ;
+              this.timeofweekOTSF2Day29[j].checkReservations = true ; this.showday29= true;
               if(this.timeofweekOTSF2Day29[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day29[j].id   ; k++){
@@ -19576,12 +19605,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day29.length; j++){
             if(this.timeofweekOTSF2Day29[j].roomid == 17){
               this.timeofweekOTSF2Day29[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day29[j].color = 'red' ;
+              this.timeofweekOTSF2Day29[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day29[j].showlabel = true;
-              this.timeofweekOTSF2Day29[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day29[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day29[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day29[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day29[j].checkReservations = true ;
+              this.timeofweekOTSF2Day29[j].checkReservations = true ; this.showday29= true;
               if(this.timeofweekOTSF2Day29[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day29[j].id   ; k++){
@@ -19598,12 +19627,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day29.length; j++){
             if(this.timeofweekOTSF2Day29[j].roomid == 18){
               this.timeofweekOTSF2Day29[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day29[j].color = 'red' ;
+              this.timeofweekOTSF2Day29[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day29[j].showlabel = true;
-              this.timeofweekOTSF2Day29[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day29[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day29[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day29[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day29[j].checkReservations = true ;
+              this.timeofweekOTSF2Day29[j].checkReservations = true ; this.showday29= true;
               if(this.timeofweekOTSF2Day29[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day29[j].id   ; k++){
@@ -19620,12 +19649,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day30.length; j++){
             if(this.timeofweekOTSF2Day30[j].roomid == 0){
               this.timeofweekOTSF2Day30[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day30[j].color = 'red' ;
+              this.timeofweekOTSF2Day30[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day30[j].showlabel = true;
-              this.timeofweekOTSF2Day30[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day30[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day30[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day30[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day30[j].checkReservations = true ;
+              this.timeofweekOTSF2Day30[j].checkReservations = true ; this.showday30= true;
               if(this.timeofweekOTSF2Day30[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day30[j].id   ; k++){
@@ -19642,12 +19671,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day30.length; j++){
             if(this.timeofweekOTSF2Day30[j].roomid == 1){
               this.timeofweekOTSF2Day30[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day30[j].color = 'red' ;
+              this.timeofweekOTSF2Day30[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day30[j].showlabel = true;
-              this.timeofweekOTSF2Day30[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day30[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day30[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day30[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day30[j].checkReservations = true ;
+              this.timeofweekOTSF2Day30[j].checkReservations = true ; this.showday30= true;
               if(this.timeofweekOTSF2Day30[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day30[j].id   ; k++){
@@ -19664,12 +19693,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day30.length; j++){
             if(this.timeofweekOTSF2Day30[j].roomid == 2){
               this.timeofweekOTSF2Day30[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day30[j].color = 'red' ;
+              this.timeofweekOTSF2Day30[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day30[j].showlabel = true;
-              this.timeofweekOTSF2Day30[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day30[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day30[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day30[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day30[j].checkReservations = true ;
+              this.timeofweekOTSF2Day30[j].checkReservations = true ; this.showday30= true;
               if(this.timeofweekOTSF2Day30[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day30[j].id   ; k++){
@@ -19686,12 +19715,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day30.length; j++){
             if(this.timeofweekOTSF2Day30[j].roomid == 3){
               this.timeofweekOTSF2Day30[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day30[j].color = 'red' ;
+              this.timeofweekOTSF2Day30[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day30[j].showlabel = true;
-              this.timeofweekOTSF2Day30[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day30[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day30[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day30[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day30[j].checkReservations = true ;
+              this.timeofweekOTSF2Day30[j].checkReservations = true ; this.showday30= true;
               if(this.timeofweekOTSF2Day30[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day30[j].id   ; k++){
@@ -19708,12 +19737,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day30.length; j++){
             if(this.timeofweekOTSF2Day30[j].roomid == 4){
               this.timeofweekOTSF2Day30[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day30[j].color = 'red' ;
+              this.timeofweekOTSF2Day30[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day30[j].showlabel = true;
-              this.timeofweekOTSF2Day30[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day30[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day30[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day30[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day30[j].checkReservations = true ;
+              this.timeofweekOTSF2Day30[j].checkReservations = true ; this.showday30= true;
               if(this.timeofweekOTSF2Day30[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day30[j].id   ; k++){
@@ -19730,12 +19759,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day30.length; j++){
             if(this.timeofweekOTSF2Day30[j].roomid == 5){
               this.timeofweekOTSF2Day30[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day30[j].color = 'red' ;
+              this.timeofweekOTSF2Day30[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day30[j].showlabel = true;
-              this.timeofweekOTSF2Day30[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day30[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day30[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day30[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day30[j].checkReservations = true ;
+              this.timeofweekOTSF2Day30[j].checkReservations = true ; this.showday30= true;
               if(this.timeofweekOTSF2Day30[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day30[j].id   ; k++){
@@ -19752,12 +19781,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day30.length; j++){
             if(this.timeofweekOTSF2Day30[j].roomid == 6){
               this.timeofweekOTSF2Day30[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day30[j].color = 'red' ;
+              this.timeofweekOTSF2Day30[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day30[j].showlabel = true;
-              this.timeofweekOTSF2Day30[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day30[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day30[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day30[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day30[j].checkReservations = true ;
+              this.timeofweekOTSF2Day30[j].checkReservations = true ; this.showday30= true;
               if(this.timeofweekOTSF2Day30[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day30[j].id   ; k++){
@@ -19774,12 +19803,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day30.length; j++){
             if(this.timeofweekOTSF2Day30[j].roomid == 7){
               this.timeofweekOTSF2Day30[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day30[j].color = 'red' ;
+              this.timeofweekOTSF2Day30[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day30[j].showlabel = true;
-              this.timeofweekOTSF2Day30[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day30[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day30[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day30[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day30[j].checkReservations = true ;
+              this.timeofweekOTSF2Day30[j].checkReservations = true ; this.showday30= true;
               if(this.timeofweekOTSF2Day30[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day30[j].id   ; k++){
@@ -19796,12 +19825,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day30.length; j++){
             if(this.timeofweekOTSF2Day30[j].roomid == 8){
               this.timeofweekOTSF2Day30[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day30[j].color = 'red' ;
+              this.timeofweekOTSF2Day30[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day30[j].showlabel = true;
-              this.timeofweekOTSF2Day30[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day30[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day30[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day30[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day30[j].checkReservations = true ;
+              this.timeofweekOTSF2Day30[j].checkReservations = true ; this.showday30= true;
               if(this.timeofweekOTSF2Day30[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day30[j].id   ; k++){
@@ -19818,12 +19847,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day30.length; j++){
             if(this.timeofweekOTSF2Day30[j].roomid == 9){
               this.timeofweekOTSF2Day30[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day30[j].color = 'red' ;
+              this.timeofweekOTSF2Day30[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day30[j].showlabel = true;
-              this.timeofweekOTSF2Day30[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day30[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day30[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day30[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day30[j].checkReservations = true ;
+              this.timeofweekOTSF2Day30[j].checkReservations = true ; this.showday30= true;
               if(this.timeofweekOTSF2Day30[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day30[j].id   ; k++){
@@ -19840,12 +19869,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day30.length; j++){
             if(this.timeofweekOTSF2Day30[j].roomid == 10){
               this.timeofweekOTSF2Day30[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day30[j].color = 'red' ;
+              this.timeofweekOTSF2Day30[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day30[j].showlabel = true;
-              this.timeofweekOTSF2Day30[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day30[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day30[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day30[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day30[j].checkReservations = true ;
+              this.timeofweekOTSF2Day30[j].checkReservations = true ; this.showday30= true;
               if(this.timeofweekOTSF2Day30[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day30[j].id   ; k++){
@@ -19862,12 +19891,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day30.length; j++){
             if(this.timeofweekOTSF2Day30[j].roomid == 11){
               this.timeofweekOTSF2Day30[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day30[j].color = 'red' ;
+              this.timeofweekOTSF2Day30[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day30[j].showlabel = true;
-              this.timeofweekOTSF2Day30[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day30[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day30[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day30[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day30[j].checkReservations = true ;
+              this.timeofweekOTSF2Day30[j].checkReservations = true ; this.showday30= true;
               if(this.timeofweekOTSF2Day30[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day30[j].id   ; k++){
@@ -19884,12 +19913,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day30.length; j++){
             if(this.timeofweekOTSF2Day30[j].roomid == 12){
               this.timeofweekOTSF2Day30[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day30[j].color = 'red' ;
+              this.timeofweekOTSF2Day30[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day30[j].showlabel = true;
-              this.timeofweekOTSF2Day30[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day30[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day30[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day30[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day30[j].checkReservations = true ;
+              this.timeofweekOTSF2Day30[j].checkReservations = true ; this.showday30= true;
               if(this.timeofweekOTSF2Day30[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day30[j].id   ; k++){
@@ -19906,12 +19935,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day30.length; j++){
             if(this.timeofweekOTSF2Day30[j].roomid == 13){
               this.timeofweekOTSF2Day30[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day30[j].color = 'red' ;
+              this.timeofweekOTSF2Day30[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day30[j].showlabel = true;
-              this.timeofweekOTSF2Day30[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day30[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day30[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day30[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day30[j].checkReservations = true ;
+              this.timeofweekOTSF2Day30[j].checkReservations = true ; this.showday30= true;
               if(this.timeofweekOTSF2Day30[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day30[j].id   ; k++){
@@ -19928,12 +19957,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day30.length; j++){
             if(this.timeofweekOTSF2Day30[j].roomid == 14){
               this.timeofweekOTSF2Day30[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day30[j].color = 'red' ;
+              this.timeofweekOTSF2Day30[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day30[j].showlabel = true;
-              this.timeofweekOTSF2Day30[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day30[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day30[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day30[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day30[j].checkReservations = true ;
+              this.timeofweekOTSF2Day30[j].checkReservations = true ; this.showday30= true;
               if(this.timeofweekOTSF2Day30[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day30[j].id   ; k++){
@@ -19950,12 +19979,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day30.length; j++){
             if(this.timeofweekOTSF2Day30[j].roomid == 15){
               this.timeofweekOTSF2Day30[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day30[j].color = 'red' ;
+              this.timeofweekOTSF2Day30[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day30[j].showlabel = true;
-              this.timeofweekOTSF2Day30[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day30[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day30[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day30[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day30[j].checkReservations = true ;
+              this.timeofweekOTSF2Day30[j].checkReservations = true ; this.showday30= true;
               if(this.timeofweekOTSF2Day30[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day30[j].id   ; k++){
@@ -19972,12 +20001,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day30.length; j++){
             if(this.timeofweekOTSF2Day30[j].roomid == 16){
               this.timeofweekOTSF2Day30[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day30[j].color = 'red' ;
+              this.timeofweekOTSF2Day30[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day30[j].showlabel = true;
-              this.timeofweekOTSF2Day30[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day30[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day30[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day30[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day30[j].checkReservations = true ;
+              this.timeofweekOTSF2Day30[j].checkReservations = true ; this.showday30= true;
               if(this.timeofweekOTSF2Day30[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day30[j].id   ; k++){
@@ -19994,12 +20023,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day30.length; j++){
             if(this.timeofweekOTSF2Day30[j].roomid == 17){
               this.timeofweekOTSF2Day30[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day30[j].color = 'red' ;
+              this.timeofweekOTSF2Day30[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day30[j].showlabel = true;
-              this.timeofweekOTSF2Day30[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day30[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day30[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day30[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day30[j].checkReservations = true ;
+              this.timeofweekOTSF2Day30[j].checkReservations = true ; this.showday30= true;
               if(this.timeofweekOTSF2Day30[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day30[j].id   ; k++){
@@ -20016,12 +20045,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day30.length; j++){
             if(this.timeofweekOTSF2Day30[j].roomid == 18){
               this.timeofweekOTSF2Day30[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day30[j].color = 'red' ;
+              this.timeofweekOTSF2Day30[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day30[j].showlabel = true;
-              this.timeofweekOTSF2Day30[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day30[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day30[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day30[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day30[j].checkReservations = true ;
+              this.timeofweekOTSF2Day30[j].checkReservations = true ; this.showday30= true;
               if(this.timeofweekOTSF2Day30[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day30[j].id   ; k++){
@@ -20038,12 +20067,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day31.length; j++){
             if(this.timeofweekOTSF2Day31[j].roomid == 0){
               this.timeofweekOTSF2Day31[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day31[j].color = 'red' ;
+              this.timeofweekOTSF2Day31[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day31[j].showlabel = true;
-              this.timeofweekOTSF2Day31[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day31[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day31[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day31[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day31[j].checkReservations = true ;
+              this.timeofweekOTSF2Day31[j].checkReservations = true ; this.showday31= true;
               if(this.timeofweekOTSF2Day31[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day31[j].id   ; k++){
@@ -20060,12 +20089,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day31.length; j++){
             if(this.timeofweekOTSF2Day31[j].roomid == 1){
               this.timeofweekOTSF2Day31[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day31[j].color = 'red' ;
+              this.timeofweekOTSF2Day31[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day31[j].showlabel = true;
-              this.timeofweekOTSF2Day31[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day31[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day31[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day31[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day31[j].checkReservations = true ;
+              this.timeofweekOTSF2Day31[j].checkReservations = true ; this.showday31= true;
               if(this.timeofweekOTSF2Day31[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day31[j].id   ; k++){
@@ -20082,12 +20111,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day31.length; j++){
             if(this.timeofweekOTSF2Day31[j].roomid == 2){
               this.timeofweekOTSF2Day31[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day31[j].color = 'red' ;
+              this.timeofweekOTSF2Day31[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day31[j].showlabel = true;
-              this.timeofweekOTSF2Day31[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day31[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day31[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day31[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day31[j].checkReservations = true ;
+              this.timeofweekOTSF2Day31[j].checkReservations = true ; this.showday31= true;
               if(this.timeofweekOTSF2Day31[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day31[j].id   ; k++){
@@ -20104,12 +20133,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day31.length; j++){
             if(this.timeofweekOTSF2Day31[j].roomid == 3){
               this.timeofweekOTSF2Day31[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day31[j].color = 'red' ;
+              this.timeofweekOTSF2Day31[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day31[j].showlabel = true;
-              this.timeofweekOTSF2Day31[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day31[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day31[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day31[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day31[j].checkReservations = true ;
+              this.timeofweekOTSF2Day31[j].checkReservations = true ; this.showday31= true;
               if(this.timeofweekOTSF2Day31[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day31[j].id   ; k++){
@@ -20126,12 +20155,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day31.length; j++){
             if(this.timeofweekOTSF2Day31[j].roomid == 4){
               this.timeofweekOTSF2Day31[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day31[j].color = 'red' ;
+              this.timeofweekOTSF2Day31[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day31[j].showlabel = true;
-              this.timeofweekOTSF2Day31[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day31[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day31[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day31[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day31[j].checkReservations = true ;
+              this.timeofweekOTSF2Day31[j].checkReservations = true ; this.showday31= true;
               if(this.timeofweekOTSF2Day31[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day31[j].id   ; k++){
@@ -20148,12 +20177,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day31.length; j++){
             if(this.timeofweekOTSF2Day31[j].roomid == 5){
               this.timeofweekOTSF2Day31[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day31[j].color = 'red' ;
+              this.timeofweekOTSF2Day31[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day31[j].showlabel = true;
-              this.timeofweekOTSF2Day31[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day31[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day31[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day31[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day31[j].checkReservations = true ;
+              this.timeofweekOTSF2Day31[j].checkReservations = true ; this.showday31= true;
               if(this.timeofweekOTSF2Day31[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day31[j].id   ; k++){
@@ -20170,12 +20199,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day31.length; j++){
             if(this.timeofweekOTSF2Day31[j].roomid == 6){
               this.timeofweekOTSF2Day31[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day31[j].color = 'red' ;
+              this.timeofweekOTSF2Day31[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day31[j].showlabel = true;
-              this.timeofweekOTSF2Day31[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day31[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day31[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day31[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day31[j].checkReservations = true ;
+              this.timeofweekOTSF2Day31[j].checkReservations = true ; this.showday31= true;
               if(this.timeofweekOTSF2Day31[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day31[j].id   ; k++){
@@ -20192,12 +20221,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day31.length; j++){
             if(this.timeofweekOTSF2Day31[j].roomid == 7){
               this.timeofweekOTSF2Day31[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day31[j].color = 'red' ;
+              this.timeofweekOTSF2Day31[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day31[j].showlabel = true;
-              this.timeofweekOTSF2Day31[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day31[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day31[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day31[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day31[j].checkReservations = true ;
+              this.timeofweekOTSF2Day31[j].checkReservations = true ; this.showday31= true;
               if(this.timeofweekOTSF2Day31[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day31[j].id   ; k++){
@@ -20214,12 +20243,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day31.length; j++){
             if(this.timeofweekOTSF2Day31[j].roomid == 8){
               this.timeofweekOTSF2Day31[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day31[j].color = 'red' ;
+              this.timeofweekOTSF2Day31[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day31[j].showlabel = true;
-              this.timeofweekOTSF2Day31[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day31[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day31[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day31[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day31[j].checkReservations = true ;
+              this.timeofweekOTSF2Day31[j].checkReservations = true ; this.showday31= true;
               if(this.timeofweekOTSF2Day31[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day31[j].id   ; k++){
@@ -20236,12 +20265,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day31.length; j++){
             if(this.timeofweekOTSF2Day31[j].roomid == 9){
               this.timeofweekOTSF2Day31[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day31[j].color = 'red' ;
+              this.timeofweekOTSF2Day31[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day31[j].showlabel = true;
-              this.timeofweekOTSF2Day31[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day31[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day31[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day31[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day31[j].checkReservations = true ;
+              this.timeofweekOTSF2Day31[j].checkReservations = true ; this.showday31= true;
               if(this.timeofweekOTSF2Day31[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day31[j].id   ; k++){
@@ -20258,12 +20287,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day31.length; j++){
             if(this.timeofweekOTSF2Day31[j].roomid == 10){
               this.timeofweekOTSF2Day31[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day31[j].color = 'red' ;
+              this.timeofweekOTSF2Day31[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day31[j].showlabel = true;
-              this.timeofweekOTSF2Day31[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day31[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day31[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day31[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day31[j].checkReservations = true ;
+              this.timeofweekOTSF2Day31[j].checkReservations = true ; this.showday31= true;
               if(this.timeofweekOTSF2Day31[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day31[j].id   ; k++){
@@ -20280,12 +20309,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day31.length; j++){
             if(this.timeofweekOTSF2Day31[j].roomid == 11){
               this.timeofweekOTSF2Day31[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day31[j].color = 'red' ;
+              this.timeofweekOTSF2Day31[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day31[j].showlabel = true;
-              this.timeofweekOTSF2Day31[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day31[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day31[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day31[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day31[j].checkReservations = true ;
+              this.timeofweekOTSF2Day31[j].checkReservations = true ; this.showday31= true;
               if(this.timeofweekOTSF2Day31[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day31[j].id   ; k++){
@@ -20302,12 +20331,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day31.length; j++){
             if(this.timeofweekOTSF2Day31[j].roomid == 12){
               this.timeofweekOTSF2Day31[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day31[j].color = 'red' ;
+              this.timeofweekOTSF2Day31[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day31[j].showlabel = true;
-              this.timeofweekOTSF2Day31[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day31[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day31[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day31[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day31[j].checkReservations = true ;
+              this.timeofweekOTSF2Day31[j].checkReservations = true ; this.showday31= true;
               if(this.timeofweekOTSF2Day31[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day31[j].id   ; k++){
@@ -20324,12 +20353,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day31.length; j++){
             if(this.timeofweekOTSF2Day31[j].roomid == 13){
               this.timeofweekOTSF2Day31[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day31[j].color = 'red' ;
+              this.timeofweekOTSF2Day31[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day31[j].showlabel = true;
-              this.timeofweekOTSF2Day31[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day31[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day31[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day31[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day31[j].checkReservations = true ;
+              this.timeofweekOTSF2Day31[j].checkReservations = true ; this.showday31= true;
               if(this.timeofweekOTSF2Day31[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day31[j].id   ; k++){
@@ -20346,12 +20375,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day31.length; j++){
             if(this.timeofweekOTSF2Day31[j].roomid == 14){
               this.timeofweekOTSF2Day31[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day31[j].color = 'red' ;
+              this.timeofweekOTSF2Day31[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day31[j].showlabel = true;
-              this.timeofweekOTSF2Day31[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day31[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day31[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day31[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day31[j].checkReservations = true ;
+              this.timeofweekOTSF2Day31[j].checkReservations = true ; this.showday31= true;
               if(this.timeofweekOTSF2Day31[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day31[j].id   ; k++){
@@ -20368,12 +20397,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day31.length; j++){
             if(this.timeofweekOTSF2Day31[j].roomid == 15){
               this.timeofweekOTSF2Day31[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day31[j].color = 'red' ;
+              this.timeofweekOTSF2Day31[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day31[j].showlabel = true;
-              this.timeofweekOTSF2Day31[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day31[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day31[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day31[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day31[j].checkReservations = true ;
+              this.timeofweekOTSF2Day31[j].checkReservations = true ; this.showday31= true;
               if(this.timeofweekOTSF2Day31[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day31[j].id   ; k++){
@@ -20390,12 +20419,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day31.length; j++){
             if(this.timeofweekOTSF2Day31[j].roomid == 16){
               this.timeofweekOTSF2Day31[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day31[j].color = 'red' ;
+              this.timeofweekOTSF2Day31[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day31[j].showlabel = true;
-              this.timeofweekOTSF2Day31[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day31[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day31[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day31[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day31[j].checkReservations = true ;
+              this.timeofweekOTSF2Day31[j].checkReservations = true ; this.showday31= true;
               if(this.timeofweekOTSF2Day31[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day31[j].id   ; k++){
@@ -20412,12 +20441,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day31.length; j++){
             if(this.timeofweekOTSF2Day31[j].roomid == 17){
               this.timeofweekOTSF2Day31[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day31[j].color = 'red' ;
+              this.timeofweekOTSF2Day31[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day31[j].showlabel = true;
-              this.timeofweekOTSF2Day31[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day31[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day31[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day31[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day31[j].checkReservations = true ;
+              this.timeofweekOTSF2Day31[j].checkReservations = true ; this.showday31= true;
               if(this.timeofweekOTSF2Day31[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day31[j].id   ; k++){
@@ -20434,12 +20463,12 @@ public appendTime(){
           for(let j =0 ; j < this.timeofweekOTSF2Day31.length; j++){
             if(this.timeofweekOTSF2Day31[j].roomid == 18){
               this.timeofweekOTSF2Day31[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2Day31[j].color = 'red' ;
+              this.timeofweekOTSF2Day31[j].color = '#A0FF7D' ;
               this.timeofweekOTSF2Day31[j].showlabel = true;
-              this.timeofweekOTSF2Day31[j].byname = this.report[i].users.username +' '+ this.report[i].users.lastname;
+              this.timeofweekOTSF2Day31[j].byname = this.report[i].users.firstname ;
               this.timeofweekOTSF2Day31[j].atten = this.report[i].bookMeetingRoom.attendees ;
               this.timeofweekOTSF2Day31[j].topic = this.report[i].bookMeetingRoom.topic ;
-              this.timeofweekOTSF2Day31[j].checkReservations = true ;
+              this.timeofweekOTSF2Day31[j].checkReservations = true ; this.showday31= true;
               if(this.timeofweekOTSF2Day31[j].id > 1){
                    this.counting = j+1 ;
                    for(let k = 1 ; k < this.timeofweekOTSF2Day31[j].id   ; k++){

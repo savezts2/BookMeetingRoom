@@ -5,7 +5,7 @@
 
 <mat-sidenav-container *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)"
                        class="card" (backdropClick)="close()">
-  <mat-sidenav #sidenav (keydown.escape)="close()">
+  <mat-sidenav #sidenav (keydown.escape)="close()" class="sidenavs">
     <button mat-button (click)="close()" routerLink="/selectDate" class="botton">Book MeetingRoom</button><br>
     <button mat-button (click)="close()" routerLink="/dashboard" class="botton">Dashboard</button>
 
@@ -40,16 +40,17 @@
 
       <h2 style="margin-left:5%;">{{dateFull.month}} {{dateFull.year}}</h2>
       <br/><br/>
+
       <table border="1" align="center" bordercolor=black bgcolor="black">
 
-        <tr class="greentable">
+        <tr class="greentable" *ngIf="showday1">
           <th rowspan="2">Date</th>
           <th rowspan="2">MeetingRoom</th>
           <th colspan="19">Time</th>
         </tr>
 
 
-        <tr class="yellowtable">
+        <tr class="yellowtable" *ngIf="showday1">
           <th>08.00</th>
           <th>08.30</th>
           <th>09.00</th>
@@ -72,7 +73,7 @@
         </tr>
 
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday1">
           <th rowspan="4">{{day1}}<br/>
             01-{{dateFull.month}}-{{dateFull.year}}
           </th>
@@ -81,7 +82,7 @@
 
           <td *ngFor="let time of timeofweekOTSF2Day01" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -93,12 +94,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday1">
 
           <td> Room1 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR1WH7F2Day01" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -110,12 +111,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday1">
 
           <td> Room2 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR2WH7F2Day01" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -127,12 +128,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday1">
 
           <td> WH2 Second Floor 2</td>
           <td *ngFor="let time of timeofweekWH2F2Day01" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -145,14 +146,14 @@
         </tr>
 
 
-        <tr class="greentable">
+        <tr class="greentable" *ngIf="showday2">
           <th rowspan="2">Date</th>
           <th rowspan="2">MeetingRoom</th>
           <th colspan="19">Time</th>
         </tr>
 
 
-        <tr class="yellowtable">
+        <tr class="yellowtable" *ngIf="showday2">
           <th>08.00</th>
           <th>08.30</th>
           <th>09.00</th>
@@ -174,14 +175,14 @@
           <th>17.00</th>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday2">
           <th rowspan="4">{{day2}}<br/>
             02-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <td> Office TSP Second Floor 2</td>
           <td *ngFor="let time of timeofweekOTSF2Day02" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -193,12 +194,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday2">
 
           <td> Room1 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR1WH7F2Day02" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -210,12 +211,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday2">
 
           <td> Room2 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR2WH7F2Day02" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -227,12 +228,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday2">
 
           <td> WH2 Second Floor 2</td>
           <td *ngFor="let time of timeofweekWH2F2Day02" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -245,14 +246,14 @@
         </tr>
 
 
-        <tr class="greentable">
+        <tr class="greentable" *ngIf="showday3">
           <th rowspan="2">Date</th>
           <th rowspan="2">MeetingRoom</th>
           <th colspan="19">Time</th>
         </tr>
 
 
-        <tr class="yellowtable">
+        <tr class="yellowtable" *ngIf="showday3">
           <th>08.00</th>
           <th>08.30</th>
           <th>09.00</th>
@@ -274,14 +275,14 @@
           <th>17.00</th>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday3">
           <th rowspan="4">{{day3}}<br/>
             03-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <td> Office TSP Second Floor 2</td>
           <td *ngFor="let time of timeofweekOTSF2Day03" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -293,12 +294,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday3">
 
           <td> Room1 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR1WH7F2Day03" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -310,12 +311,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday3">
 
           <td> Room2 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR2WH7F2Day03" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -327,12 +328,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday3">
 
           <td> WH2 Second Floor 2</td>
           <td *ngFor="let time of timeofweekWH2F2Day03" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -345,14 +346,14 @@
         </tr>
 
 
-        <tr class="greentable">
+        <tr class="greentable" *ngIf="showday4">
           <th rowspan="2">Date</th>
           <th rowspan="2">MeetingRoom</th>
           <th colspan="19">Time</th>
         </tr>
 
 
-        <tr class="yellowtable">
+        <tr class="yellowtable" *ngIf="showday4">
           <th>08.00</th>
           <th>08.30</th>
           <th>09.00</th>
@@ -374,14 +375,14 @@
           <th>17.00</th>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday4">
           <th rowspan="4">{{day4}}<br/>
             04-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <td> Office TSP Second Floor 2</td>
           <td *ngFor="let time of timeofweekOTSF2Day04" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -393,12 +394,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday4">
 
           <td> Room1 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR1WH7F2Day04" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -410,12 +411,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday4">
 
           <td> Room2 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR2WH7F2Day04" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -427,12 +428,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday4">
 
           <td> WH2 Second Floor 2</td>
           <td *ngFor="let time of timeofweekWH2F2Day04" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -445,14 +446,14 @@
         </tr>
 
 
-        <tr class="greentable">
+        <tr class="greentable" *ngIf="showday5">
           <th rowspan="2">Date</th>
           <th rowspan="2">MeetingRoom</th>
           <th colspan="19">Time</th>
         </tr>
 
 
-        <tr class="yellowtable">
+        <tr class="yellowtable" *ngIf="showday5">
           <th>08.00</th>
           <th>08.30</th>
           <th>09.00</th>
@@ -474,14 +475,14 @@
           <th>17.00</th>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday5">
           <th rowspan="4">{{day5}}<br/>
             05-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <td> Office TSP Second Floor 2</td>
           <td *ngFor="let time of timeofweekOTSF2Day05" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -493,12 +494,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday5">
 
           <td> Room1 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR1WH7F2Day05" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -510,12 +511,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday5">
 
           <td> Room2 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR2WH7F2Day05" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -527,12 +528,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday5">
 
           <td> WH2 Second Floor 2</td>
           <td *ngFor="let time of timeofweekWH2F2Day05" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -545,14 +546,14 @@
         </tr>
 
 
-        <tr class="greentable">
+        <tr class="greentable" *ngIf="showday6">
           <th rowspan="2">Date</th>
           <th rowspan="2">MeetingRoom</th>
           <th colspan="19">Time</th>
         </tr>
 
 
-        <tr class="yellowtable">
+        <tr class="yellowtable" *ngIf="showday6">
           <th>08.00</th>
           <th>08.30</th>
           <th>09.00</th>
@@ -575,14 +576,14 @@
         </tr>
 
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday6">
           <th rowspan="4">{{day6}}<br/>
             06-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <td> Office TSP Second Floor 2</td>
           <td *ngFor="let time of timeofweekOTSF2Day06" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -594,12 +595,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday6">
 
           <td> Room1 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR1WH7F2Day06" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -611,12 +612,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday6">
 
           <td> Room2 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR2WH7F2Day06" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -628,12 +629,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday6">
 
           <td> WH2 Second Floor 2</td>
           <td *ngFor="let time of timeofweekWH2F2Day06" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -646,14 +647,14 @@
         </tr>
 
 
-        <tr class="greentable">
+        <tr class="greentable" *ngIf="showday7">
           <th rowspan="2">Date</th>
           <th rowspan="2">MeetingRoom</th>
           <th colspan="19">Time</th>
         </tr>
 
 
-        <tr class="yellowtable">
+        <tr class="yellowtable" *ngIf="showday7">
           <th>08.00</th>
           <th>08.30</th>
           <th>09.00</th>
@@ -675,14 +676,14 @@
           <th>17.00</th>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday7">
           <th rowspan="4">{{day7}}<br/>
             07-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <td> Office TSP Second Floor 2</td>
           <td *ngFor="let time of timeofweekOTSF2Day07" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -694,12 +695,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday7">
 
           <td> Room1 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR1WH7F2Day07" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -711,12 +712,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday7">
 
           <td> Room2 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR2WH7F2Day07" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -728,12 +729,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday7">
 
           <td> WH2 Second Floor 2</td>
           <td *ngFor="let time of timeofweekWH2F2Day07" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -746,14 +747,14 @@
         </tr>
 
 
-        <tr class="greentable">
+        <tr class="greentable" *ngIf="showday8">
           <th rowspan="2">Date</th>
           <th rowspan="2">MeetingRoom</th>
           <th colspan="19">Time</th>
         </tr>
 
 
-        <tr class="yellowtable">
+        <tr class="yellowtable" *ngIf="showday8">
           <th>08.00</th>
           <th>08.30</th>
           <th>09.00</th>
@@ -776,14 +777,14 @@
         </tr>
 
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday8">
           <th rowspan="4">{{day8}}<br/>
             08-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <td> Office TSP Second Floor 2</td>
           <td *ngFor="let time of timeofweekOTSF2Day08" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -795,12 +796,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday8">
 
           <td> Room1 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR1WH7F2Day08" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -812,12 +813,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday8">
 
           <td> Room2 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR2WH7F2Day08" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -829,12 +830,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday8">
 
           <td> WH2 Second Floor 2</td>
           <td *ngFor="let time of timeofweekWH2F2Day08" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -847,14 +848,14 @@
         </tr>
 
 
-        <tr class="greentable">
+        <tr class="greentable" *ngIf="showday9">
           <th rowspan="2">Date</th>
           <th rowspan="2">MeetingRoom</th>
           <th colspan="19">Time</th>
         </tr>
 
 
-        <tr class="yellowtable">
+        <tr class="yellowtable" *ngIf="showday9">
           <th>08.00</th>
           <th>08.30</th>
           <th>09.00</th>
@@ -877,14 +878,14 @@
         </tr>
 
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday9">
           <th rowspan="4">{{day9}}<br/>
             09-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <td> Office TSP Second Floor 2</td>
           <td *ngFor="let time of timeofweekOTSF2Day09" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -896,12 +897,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday9">
 
           <td> Room1 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR1WH7F2Day09" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -913,12 +914,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday9">
 
           <td> Room2 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR2WH7F2Day09" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -930,12 +931,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday9">
 
           <td> WH2 Second Floor 2</td>
           <td *ngFor="let time of timeofweekWH2F2Day09" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -948,14 +949,14 @@
         </tr>
 
 
-        <tr class="greentable">
+        <tr class="greentable" *ngIf="showday10">
           <th rowspan="2">Date</th>
           <th rowspan="2">MeetingRoom</th>
           <th colspan="19">Time</th>
         </tr>
 
 
-        <tr class="yellowtable">
+        <tr class="yellowtable" *ngIf="showday10">
           <th>08.00</th>
           <th>08.30</th>
           <th>09.00</th>
@@ -978,14 +979,14 @@
         </tr>
 
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday10">
           <th rowspan="4">{{day10}}<br/>
             10-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <td> Office TSP Second Floor 2</td>
           <td *ngFor="let time of timeofweekOTSF2Day10" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -997,12 +998,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday10">
 
           <td> Room1 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR1WH7F2Day10" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -1014,12 +1015,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday10">
 
           <td> Room2 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR2WH7F2Day10" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -1031,12 +1032,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday10">
 
           <td> WH2 Second Floor 2</td>
           <td *ngFor="let time of timeofweekWH2F2Day10" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -1049,14 +1050,14 @@
         </tr>
 
 
-        <tr class="greentable">
+        <tr class="greentable" *ngIf="showday11">
           <th rowspan="2">Date</th>
           <th rowspan="2">MeetingRoom</th>
           <th colspan="19">Time</th>
         </tr>
 
 
-        <tr class="yellowtable">
+        <tr class="yellowtable" *ngIf="showday11">
           <th>08.00</th>
           <th>08.30</th>
           <th>09.00</th>
@@ -1079,14 +1080,14 @@
         </tr>
 
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday11">
           <th rowspan="4">{{day11}}<br/>
             11-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <td> Office TSP Second Floor 2</td>
           <td *ngFor="let time of timeofweekOTSF2Day11" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -1098,12 +1099,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday11">
 
           <td> Room1 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR1WH7F2Day11" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -1115,12 +1116,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday11">
 
           <td> Room2 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR2WH7F2Day11" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -1132,12 +1133,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday11">
 
           <td> WH2 Second Floor 2</td>
           <td *ngFor="let time of timeofweekWH2F2Day11" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -1150,14 +1151,14 @@
         </tr>
 
 
-        <tr class="greentable">
+        <tr class="greentable" *ngIf="showday12">
           <th rowspan="2">Date</th>
           <th rowspan="2">MeetingRoom</th>
           <th colspan="19">Time</th>
         </tr>
 
 
-        <tr class="yellowtable">
+        <tr class="yellowtable" *ngIf="showday12">
           <th>08.00</th>
           <th>08.30</th>
           <th>09.00</th>
@@ -1180,14 +1181,14 @@
         </tr>
 
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday12">
           <th rowspan="4">{{day12}}<br/>
             12-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <td> Office TSP Second Floor 2</td>
           <td *ngFor="let time of timeofweekOTSF2Day12" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -1199,12 +1200,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday12">
 
           <td> Room1 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR1WH7F2Day12" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -1216,12 +1217,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday12">
 
           <td> Room2 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR2WH7F2Day12" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -1233,12 +1234,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday12">
 
           <td> WH2 Second Floor 2</td>
           <td *ngFor="let time of timeofweekWH2F2Day12" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -1250,14 +1251,14 @@
           </td>
         </tr>
 
-        <tr class="greentable">
+        <tr class="greentable" *ngIf="showday13">
           <th rowspan="2">Date</th>
           <th rowspan="2">MeetingRoom</th>
           <th colspan="19">Time</th>
         </tr>
 
 
-        <tr class="yellowtable">
+        <tr class="yellowtable" *ngIf="showday13">
           <th>08.00</th>
           <th>08.30</th>
           <th>09.00</th>
@@ -1280,14 +1281,14 @@
         </tr>
 
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday13">
           <th rowspan="4">{{day13}}<br/>
             13-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <td> Office TSP Second Floor 2</td>
           <td *ngFor="let time of timeofweekOTSF2Day13" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -1299,12 +1300,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday13">
 
           <td> Room1 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR1WH7F2Day13" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -1316,12 +1317,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday13">
 
           <td> Room2 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR2WH7F2Day13" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -1333,12 +1334,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday13">
 
           <td> WH2 Second Floor 2</td>
           <td *ngFor="let time of timeofweekWH2F2Day13" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -1351,14 +1352,14 @@
         </tr>
 
 
-        <tr class="greentable">
+        <tr class="greentable" *ngIf="showday14">
           <th rowspan="2">Date</th>
           <th rowspan="2">MeetingRoom</th>
           <th colspan="19">Time</th>
         </tr>
 
 
-        <tr class="yellowtable">
+        <tr class="yellowtable" *ngIf="showday14">
           <th>08.00</th>
           <th>08.30</th>
           <th>09.00</th>
@@ -1381,14 +1382,14 @@
         </tr>
 
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday14">
           <th rowspan="4">{{day14}}<br/>
             14-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <td> Office TSP Second Floor 2</td>
           <td *ngFor="let time of timeofweekOTSF2Day14" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -1400,12 +1401,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday14">
 
           <td> Room1 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR1WH7F2Day14" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -1417,12 +1418,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday14">
 
           <td> Room2 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR2WH7F2Day14" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -1434,12 +1435,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday14">
 
           <td> WH2 Second Floor 2</td>
           <td *ngFor="let time of timeofweekWH2F2Day14" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -1452,14 +1453,14 @@
         </tr>
 
 
-        <tr class="greentable">
+        <tr class="greentable" *ngIf="showday15">
           <th rowspan="2">Date</th>
           <th rowspan="2">MeetingRoom</th>
           <th colspan="19">Time</th>
         </tr>
 
 
-        <tr class="yellowtable">
+        <tr class="yellowtable" *ngIf="showday15">
           <th>08.00</th>
           <th>08.30</th>
           <th>09.00</th>
@@ -1482,14 +1483,14 @@
         </tr>
 
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday15">
           <th rowspan="4">{{day15}}<br/>
             15-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <td> Office TSP Second Floor 2</td>
           <td *ngFor="let time of timeofweekOTSF2Day15" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -1501,12 +1502,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday15">
 
           <td> Room1 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR1WH7F2Day15" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -1518,12 +1519,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday15">
 
           <td> Room2 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR2WH7F2Day15" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -1535,12 +1536,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday15">
 
           <td> WH2 Second Floor 2</td>
           <td *ngFor="let time of timeofweekWH2F2Day15" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -1552,14 +1553,14 @@
           </td>
         </tr>
 
-        <tr class="greentable">
+        <tr class="greentable" *ngIf="showday16">
           <th rowspan="2">Date</th>
           <th rowspan="2">MeetingRoom</th>
           <th colspan="19">Time</th>
         </tr>
 
 
-        <tr class="yellowtable">
+        <tr class="yellowtable" *ngIf="showday16">
           <th>08.00</th>
           <th>08.30</th>
           <th>09.00</th>
@@ -1582,14 +1583,14 @@
         </tr>
 
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday16">
           <th rowspan="4">{{day16}}<br/>
             16-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <td> Office TSP Second Floor 2</td>
           <td *ngFor="let time of timeofweekOTSF2Day16" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -1601,12 +1602,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday16">
 
           <td> Room1 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR1WH7F2Day16" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -1618,12 +1619,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday16">
 
           <td> Room2 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR2WH7F2Day16" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -1635,12 +1636,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday16">
 
           <td> WH2 Second Floor 2</td>
           <td *ngFor="let time of timeofweekWH2F2Day16" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -1652,14 +1653,14 @@
           </td>
         </tr>
 
-        <tr class="greentable">
+        <tr class="greentable" *ngIf="showday17">
           <th rowspan="2">Date</th>
           <th rowspan="2">MeetingRoom</th>
           <th colspan="19">Time</th>
         </tr>
 
 
-        <tr class="yellowtable">
+        <tr class="yellowtable" *ngIf="showday17">
           <th>08.00</th>
           <th>08.30</th>
           <th>09.00</th>
@@ -1682,14 +1683,14 @@
         </tr>
 
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday17">
           <th rowspan="4">{{day17}}<br/>
             17-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <td> Office TSP Second Floor 2</td>
           <td *ngFor="let time of timeofweekOTSF2Day17" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -1701,12 +1702,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday17">
 
           <td> Room1 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR1WH7F2Day17" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -1718,12 +1719,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday17">
 
           <td> Room2 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR2WH7F2Day17" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -1735,12 +1736,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday17">
 
           <td> WH2 Second Floor 2</td>
           <td *ngFor="let time of timeofweekWH2F2Day17" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -1752,14 +1753,14 @@
           </td>
         </tr>
 
-        <tr class="greentable">
+        <tr class="greentable" *ngIf="showday18">
           <th rowspan="2">Date</th>
           <th rowspan="2">MeetingRoom</th>
           <th colspan="19">Time</th>
         </tr>
 
 
-        <tr class="yellowtable">
+        <tr class="yellowtable" *ngIf="showday18">
           <th>08.00</th>
           <th>08.30</th>
           <th>09.00</th>
@@ -1782,14 +1783,14 @@
         </tr>
 
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday18">
           <th rowspan="4">{{day18}}<br/>
             18-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <td> Office TSP Second Floor 2</td>
           <td *ngFor="let time of timeofweekOTSF2Day18" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -1801,12 +1802,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday18">
 
           <td> Room1 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR1WH7F2Day18" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -1818,12 +1819,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday18">
 
           <td> Room2 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR2WH7F2Day18" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -1835,12 +1836,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday18">
 
           <td> WH2 Second Floor 2</td>
           <td *ngFor="let time of timeofweekWH2F2Day18" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -1853,14 +1854,14 @@
         </tr>
 
 
-        <tr class="greentable">
+        <tr class="greentable" *ngIf="showday19">
           <th rowspan="2">Date</th>
           <th rowspan="2">MeetingRoom</th>
           <th colspan="19">Time</th>
         </tr>
 
 
-        <tr class="yellowtable">
+        <tr class="yellowtable" *ngIf="showday19">
           <th>08.00</th>
           <th>08.30</th>
           <th>09.00</th>
@@ -1883,14 +1884,14 @@
         </tr>
 
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday19">
           <th rowspan="4">{{day19}}<br/>
             19-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <td> Office TSP Second Floor 2</td>
           <td *ngFor="let time of timeofweekOTSF2Day19" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -1902,12 +1903,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday19">
 
           <td> Room1 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR1WH7F2Day19" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -1919,12 +1920,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday19">
 
           <td> Room2 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR2WH7F2Day19" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -1936,13 +1937,13 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday19">
 
 
           <td> WH2 Second Floor 2</td>
           <td *ngFor="let time of timeofweekWH2F2Day19" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -1955,14 +1956,14 @@
         </tr>
 
 
-        <tr class="greentable">
+        <tr class="greentable" *ngIf="showday20">
           <th rowspan="2">Date</th>
           <th rowspan="2">MeetingRoom</th>
           <th colspan="19">Time</th>
         </tr>
 
 
-        <tr class="yellowtable">
+        <tr class="yellowtable" *ngIf="showday20">
           <th>08.00</th>
           <th>08.30</th>
           <th>09.00</th>
@@ -1985,14 +1986,14 @@
         </tr>
 
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday20">
           <th rowspan="4">{{day20}}<br/>
             20-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <td> Office TSP Second Floor 2</td>
           <td *ngFor="let time of timeofweekOTSF2Day20" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -2004,12 +2005,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday20">
 
           <td> Room1 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR1WH7F2Day20" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -2021,12 +2022,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday20">
 
           <td> Room2 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR2WH7F2Day20" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -2038,12 +2039,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday20">
 
           <td> WH2 Second Floor 2</td>
           <td *ngFor="let time of timeofweekWH2F2Day20" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -2055,14 +2056,14 @@
           </td>
         </tr>
 
-        <tr class="greentable">
+        <tr class="greentable" *ngIf="showday21">
           <th rowspan="2">Date</th>
           <th rowspan="2">MeetingRoom</th>
           <th colspan="19">Time</th>
         </tr>
 
 
-        <tr class="yellowtable">
+        <tr class="yellowtable" *ngIf="showday21">
           <th>08.00</th>
           <th>08.30</th>
           <th>09.00</th>
@@ -2084,14 +2085,14 @@
           <th>17.00</th>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday21">
           <th rowspan="4">{{day21}}<br/>
             21-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <td> Office TSP Second Floor 2</td>
           <td *ngFor="let time of timeofweekOTSF2Day21" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -2103,12 +2104,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday21">
 
           <td> Room1 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR1WH7F2Day21" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -2120,12 +2121,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday21">
 
           <td> Room2 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR2WH7F2Day21" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -2137,12 +2138,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday21">
 
           <td> WH2 Second Floor 2</td>
           <td *ngFor="let time of timeofweekWH2F2Day21" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -2155,14 +2156,14 @@
         </tr>
 
 
-        <tr class="greentable">
+        <tr class="greentable" *ngIf="showday22">
           <th rowspan="2">Date</th>
           <th rowspan="2">MeetingRoom</th>
           <th colspan="19">Time</th>
         </tr>
 
 
-        <tr class="yellowtable">
+        <tr class="yellowtable" *ngIf="showday22">
           <th>08.00</th>
           <th>08.30</th>
           <th>09.00</th>
@@ -2185,14 +2186,14 @@
         </tr>
 
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday22">
           <th rowspan="4">{{day22}}<br/>
             22-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <td> Office TSP Second Floor 2</td>
           <td *ngFor="let time of timeofweekOTSF2Day22" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -2204,12 +2205,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday22">
 
           <td> Room1 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR1WH7F2Day22" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -2221,12 +2222,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday22">
 
           <td> Room2 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR2WH7F2Day22" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -2238,12 +2239,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday22">
 
           <td> WH2 Second Floor 2</td>
           <td *ngFor="let time of timeofweekWH2F2Day22" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -2256,14 +2257,14 @@
         </tr>
 
 
-        <tr class="greentable">
+        <tr class="greentable" *ngIf="showday23">
           <th rowspan="2">Date</th>
           <th rowspan="2">MeetingRoom</th>
           <th colspan="19">Time</th>
         </tr>
 
 
-        <tr class="yellowtable">
+        <tr class="yellowtable" *ngIf="showday23">
           <th>08.00</th>
           <th>08.30</th>
           <th>09.00</th>
@@ -2286,14 +2287,14 @@
         </tr>
 
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday23">
           <th rowspan="4">{{day23}}<br/>
             23-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <td> Office TSP Second Floor 2</td>
           <td *ngFor="let time of timeofweekOTSF2Day23" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -2305,12 +2306,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday23">
 
           <td> Room1 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR1WH7F2Day23" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -2322,12 +2323,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday23">
 
           <td> Room2 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR2WH7F2Day23" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -2339,12 +2340,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday23">
 
           <td> WH2 Second Floor 2</td>
           <td *ngFor="let time of timeofweekWH2F2Day23" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -2357,14 +2358,14 @@
         </tr>
 
 
-        <tr class="greentable">
+        <tr class="greentable" *ngIf="showday24">
           <th rowspan="2">Date</th>
           <th rowspan="2">MeetingRoom</th>
           <th colspan="19">Time</th>
         </tr>
 
 
-        <tr class="yellowtable">
+        <tr class="yellowtable" *ngIf="showday24">
           <th>08.00</th>
           <th>08.30</th>
           <th>09.00</th>
@@ -2387,14 +2388,14 @@
         </tr>
 
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday24">
           <th rowspan="4">{{day24}}<br/>
             24-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <td> Office TSP Second Floor 2</td>
           <td *ngFor="let time of timeofweekOTSF2Day24" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -2406,12 +2407,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday24">
 
           <td> Room1 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR1WH7F2Day24" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -2423,12 +2424,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday24">
 
           <td> Room2 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR2WH7F2Day24" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -2440,12 +2441,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday24">
 
           <td> WH2 Second Floor 2</td>
           <td *ngFor="let time of timeofweekWH2F2Day24" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -2458,14 +2459,14 @@
         </tr>
 
 
-        <tr class="greentable">
+        <tr class="greentable" *ngIf="showday25">
           <th rowspan="2">Date</th>
           <th rowspan="2">MeetingRoom</th>
           <th colspan="19">Time</th>
         </tr>
 
 
-        <tr class="yellowtable">
+        <tr class="yellowtable" *ngIf="showday25">
           <th>08.00</th>
           <th>08.30</th>
           <th>09.00</th>
@@ -2488,14 +2489,14 @@
         </tr>
 
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday25">
           <th rowspan="4">{{day25}}<br/>
             25-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <td> Office TSP Second Floor 2</td>
           <td *ngFor="let time of timeofweekOTSF2Day25" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -2507,12 +2508,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday25">
 
           <td> Room1 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR1WH7F2Day25" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -2524,12 +2525,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday25">
 
           <td> Room2 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR2WH7F2Day25" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -2541,12 +2542,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday25">
 
           <td> WH2 Second Floor 2</td>
           <td *ngFor="let time of timeofweekWH2F2Day25" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -2558,14 +2559,14 @@
           </td>
         </tr>
 
-        <tr class="greentable">
+        <tr class="greentable" *ngIf="showday26">
           <th rowspan="2">Date</th>
           <th rowspan="2">MeetingRoom</th>
           <th colspan="19">Time</th>
         </tr>
 
 
-        <tr class="yellowtable">
+        <tr class="yellowtable" *ngIf="showday26">
           <th>08.00</th>
           <th>08.30</th>
           <th>09.00</th>
@@ -2588,14 +2589,14 @@
         </tr>
 
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday26">
           <th rowspan="4">{{day26}}<br/>
             26-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <td> Office TSP Second Floor 2</td>
           <td *ngFor="let time of timeofweekOTSF2Day26" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -2607,12 +2608,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday26">
 
           <td> Room1 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR1WH7F2Day26" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -2624,12 +2625,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday26">
 
           <td> Room2 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR2WH7F2Day26" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -2641,12 +2642,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday26">
 
           <td> WH2 Second Floor 2</td>
           <td *ngFor="let time of timeofweekWH2F2Day26" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -2659,14 +2660,14 @@
         </tr>
 
 
-        <tr class="greentable">
+        <tr class="greentable" *ngIf="showday27">
           <th rowspan="2">Date</th>
           <th rowspan="2">MeetingRoom</th>
           <th colspan="19">Time</th>
         </tr>
 
 
-        <tr class="yellowtable">
+        <tr class="yellowtable" *ngIf="showday27">
           <th>08.00</th>
           <th>08.30</th>
           <th>09.00</th>
@@ -2689,14 +2690,14 @@
         </tr>
 
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday27">
           <th rowspan="4">{{day27}}<br/>
             27-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <td> Office TSP Second Floor 2</td>
           <td *ngFor="let time of timeofweekOTSF2Day27" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -2708,12 +2709,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday27">
 
           <td> Room1 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR1WH7F2Day27" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -2725,12 +2726,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday27">
 
           <td> Room2 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR2WH7F2Day27" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -2742,12 +2743,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday27">
 
           <td> WH2 Second Floor 2</td>
           <td *ngFor="let time of timeofweekWH2F2Day27" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -2760,14 +2761,14 @@
         </tr>
 
 
-        <tr class="greentable">
+        <tr class="greentable" *ngIf="showday28">
           <th rowspan="2">Date</th>
           <th rowspan="2">MeetingRoom</th>
           <th colspan="19">Time</th>
         </tr>
 
 
-        <tr class="yellowtable">
+        <tr class="yellowtable" *ngIf="showday28">
           <th>08.00</th>
           <th>08.30</th>
           <th>09.00</th>
@@ -2790,14 +2791,14 @@
         </tr>
 
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday28">
           <th rowspan="4">{{day28}}<br/>
             28-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <td> Office TSP Second Floor 2</td>
           <td *ngFor="let time of timeofweekOTSF2Day28" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -2809,12 +2810,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday28">
 
           <td> Room1 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR1WH7F2Day28" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -2826,12 +2827,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday28">
 
           <td> Room2 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR2WH7F2Day28" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -2843,12 +2844,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable">
+        <tr height="70" class="whitetable" *ngIf="showday28">
 
           <td> WH2 Second Floor 2</td>
           <td *ngFor="let time of timeofweekWH2F2Day28" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -2861,14 +2862,14 @@
         </tr>
 
 
-        <tr class="greentable" *ngIf="feb28">
+        <tr class="greentable" *ngIf="showday29">
           <th rowspan="2">Date</th>
           <th rowspan="2">MeetingRoom</th>
           <th colspan="19">Time</th>
         </tr>
 
 
-        <tr class="yellowtable" *ngIf="feb28">
+        <tr class="yellowtable" *ngIf="showday29">
           <th>08.00</th>
           <th>08.30</th>
           <th>09.00</th>
@@ -2891,14 +2892,14 @@
         </tr>
 
 
-        <tr height="70" class="whitetable" *ngIf="feb28">
+        <tr height="70" class="whitetable" *ngIf="showday29">
           <th rowspan="4">{{day29}}<br/>
             29-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <td> Office TSP Second Floor 2</td>
           <td *ngFor="let time of timeofweekOTSF2Day29" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -2910,12 +2911,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable" *ngIf="feb28">
+        <tr height="70" class="whitetable" *ngIf="showday29">
 
           <td> Room1 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR1WH7F2Day29" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -2927,12 +2928,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable" *ngIf="feb28">
+        <tr height="70" class="whitetable" *ngIf="showday29">
 
           <td> Room2 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR2WH7F2Day29" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -2944,12 +2945,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable" *ngIf="feb28">
+        <tr height="70" class="whitetable" *ngIf="showday29">
 
           <td> WH2 Second Floor 2</td>
           <td *ngFor="let time of timeofweekWH2F2Day29" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -2962,14 +2963,14 @@
         </tr>
 
 
-        <tr class="greentable" *ngIf="dayofmonth30 || dayofmonth28">
+        <tr class="greentable" *ngIf="showday30">
           <th rowspan="2">Date</th>
           <th rowspan="2">MeetingRoom</th>
           <th colspan="19">Time</th>
         </tr>
 
 
-        <tr class="yellowtable" *ngIf="dayofmonth30 || dayofmonth28">
+        <tr class="yellowtable" *ngIf="showday30">
           <th>08.00</th>
           <th>08.30</th>
           <th>09.00</th>
@@ -2992,14 +2993,14 @@
         </tr>
 
 
-        <tr height="70" class="whitetable" *ngIf="dayofmonth30 || dayofmonth28">
+        <tr height="70" class="whitetable" *ngIf="showday30">
           <th rowspan="4">{{day30}}<br/>
             30-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <td> Office TSP Second Floor 2</td>
           <td *ngFor="let time of timeofweekOTSF2Day30" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -3011,12 +3012,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable" *ngIf="dayofmonth30 || dayofmonth28">
+        <tr height="70" class="whitetable" *ngIf="showday30">
 
           <td> Room1 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR1WH7F2Day30" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -3028,12 +3029,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable" *ngIf="dayofmonth30 || dayofmonth28">
+        <tr height="70" class="whitetable" *ngIf="showday30">
 
           <td> Room2 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR2WH7F2Day30" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -3045,12 +3046,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable" *ngIf="dayofmonth30 || dayofmonth28">
+        <tr height="70" class="whitetable" *ngIf="showday30">
 
           <td> WH2 Second Floor 2</td>
           <td *ngFor="let time of timeofweekWH2F2Day30" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -3063,14 +3064,14 @@
         </tr>
 
 
-        <tr class="greentable" *ngIf="dayofmonth30">
+        <tr class="greentable" *ngIf="showday31">
           <th rowspan="2">Date</th>
           <th rowspan="2">MeetingRoom</th>
           <th colspan="19">Time</th>
         </tr>
 
 
-        <tr class="yellowtable" *ngIf="dayofmonth30">
+        <tr class="yellowtable" *ngIf="showday31">
           <th>08.00</th>
           <th>08.30</th>
           <th>09.00</th>
@@ -3093,14 +3094,14 @@
         </tr>
 
 
-        <tr height="70" class="whitetable" *ngIf="dayofmonth30">
+        <tr height="70" class="whitetable" *ngIf="showday31">
           <th rowspan="4">{{day31}}<br/>
             31-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <td> Office TSP Second Floor 2</td>
           <td *ngFor="let time of timeofweekOTSF2Day31" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -3112,12 +3113,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable" *ngIf="dayofmonth30">
+        <tr height="70" class="whitetable" *ngIf="showday31">
 
           <td> Room1 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR1WH7F2Day31" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -3129,12 +3130,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable" *ngIf="dayofmonth30">
+        <tr height="70" class="whitetable" *ngIf="showday31">
 
           <td> Room2 WH7 Second Floor 2</td>
           <td *ngFor="let time of timeofweekR2WH7F2Day31" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -3146,12 +3147,12 @@
           </td>
         </tr>
 
-        <tr height="70" class="whitetable" *ngIf="dayofmonth30">
+        <tr height="70" class="whitetable" *ngIf="showday31">
 
           <td> WH2 Second Floor 2</td>
           <td *ngFor="let time of timeofweekWH2F2Day31" [attr.colspan]="time.id" [attr.bgcolor]="time.color">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>

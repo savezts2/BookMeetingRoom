@@ -5,7 +5,7 @@
 
 <mat-sidenav-container *ngIf="(isLoggedInAdmin | async)"
                        class="card" (backdropClick)="close()">
-  <mat-sidenav #sidenav (keydown.escape)="close()">
+  <mat-sidenav #sidenav (keydown.escape)="close()" class="sidenavs">
     <button mat-button (click)="close()" routerLink="/selectDate" class="botton">Book MeetingRoom</button><br>
     <button mat-button (click)="close()" routerLink="/dashboard" class="botton">Dashboard</button>
 
@@ -40,6 +40,9 @@
 
     <button mat-flat-button class="bottonadd" (click)="onAdduser()">Create User +</button>
     <br/><br/>
+    <mat-form-field style="margin-left: 5%; width: 90%;">
+      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Keyword">
+    </mat-form-field><br/>
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" align="center">
 
       <!--- Note that these columns can be defined in any order.
