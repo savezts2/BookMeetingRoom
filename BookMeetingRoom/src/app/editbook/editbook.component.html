@@ -1,0 +1,109 @@
+
+<h1 align="center" style="background-color: rgb(0, 176, 80); color:white;">Edit Book</h1>
+
+<form [formGroup]="firstFormGroup">
+<div align ="center">
+  <label>From Time :
+    <mat-form-field>
+      <mat-select formControlName="time" required placeholder=" ">
+        <mat-option value="08.00">08.00</mat-option>
+        <mat-option value="08.30">08.30</mat-option>
+        <mat-option value="09.00">09.00</mat-option>
+        <mat-option value="09.30">09.30</mat-option>
+        <mat-option value="10.00">10.00</mat-option>
+        <mat-option value="10.30">10.30</mat-option>
+        <mat-option value="11.00">11.00</mat-option>
+        <mat-option value="11.30">11.30</mat-option>
+        <mat-option value="12.00">12.00</mat-option>
+        <mat-option value="12.30">12.30</mat-option>
+        <mat-option value="13.00">13.00</mat-option>
+        <mat-option value="13.30">13.30</mat-option>
+        <mat-option value="14.00">14.00</mat-option>
+        <mat-option value="14.30">14.30</mat-option>
+        <mat-option value="15.00">15.00</mat-option>
+        <mat-option value="15.30">15.30</mat-option>
+        <mat-option value="16.00">16.00</mat-option>
+        <mat-option value="16.30">16.30</mat-option>
+        <mat-option value="17.00">17.00</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </label>
+  <label>To Time :
+    <mat-form-field>
+      <mat-select required placeholder=" " formControlName="totime" >
+        <mat-option value="08.00" *ngIf="this.firstFormGroup.get('time').value <= '08.00' ? true : false">08.00</mat-option>
+        <mat-option value="08.30" *ngIf="this.firstFormGroup.get('time').value <= '08.30' ? true : false">08.30</mat-option>
+        <mat-option value="09.00" *ngIf="this.firstFormGroup.get('time').value <= '09.00' ? true : false">09.00</mat-option>
+        <mat-option value="09.30" *ngIf="this.firstFormGroup.get('time').value <= '09.30' ? true : false">09.30</mat-option>
+        <mat-option value="10.00" *ngIf="this.firstFormGroup.get('time').value <= '10.00' ? true : false">10.00</mat-option>
+        <mat-option value="10.30" *ngIf="this.firstFormGroup.get('time').value <= '10.30' ? true : false">10.30</mat-option>
+        <mat-option value="11.00" *ngIf="this.firstFormGroup.get('time').value <= '11.00' ? true : false">11.00</mat-option>
+        <mat-option value="11.30" *ngIf="this.firstFormGroup.get('time').value <= '11.30' ? true : false">11.30</mat-option>
+        <mat-option value="12.00" *ngIf="this.firstFormGroup.get('time').value <= '12.00' ? true : false">12.00</mat-option>
+        <mat-option value="12.30" *ngIf="this.firstFormGroup.get('time').value <= '12.30' ? true : false">12.30</mat-option>
+        <mat-option value="13.00" *ngIf="this.firstFormGroup.get('time').value <= '13.00' ? true : false">13.00</mat-option>
+        <mat-option value="13.30" *ngIf="this.firstFormGroup.get('time').value <= '13.30' ? true : false">13.30</mat-option>
+        <mat-option value="14.00" *ngIf="this.firstFormGroup.get('time').value <= '14.00' ? true : false">14.00</mat-option>
+        <mat-option value="14.30" *ngIf="this.firstFormGroup.get('time').value <= '14.30' ? true : false">14.30</mat-option>
+        <mat-option value="15.00" *ngIf="this.firstFormGroup.get('time').value <= '15.00' ? true : false">15.00</mat-option>
+        <mat-option value="15.30" *ngIf="this.firstFormGroup.get('time').value <= '15.30' ? true : false">15.30</mat-option>
+        <mat-option value="16.00" *ngIf="this.firstFormGroup.get('time').value <= '16.00' ? true : false">16.00</mat-option>
+        <mat-option value="16.30" *ngIf="this.firstFormGroup.get('time').value <= '16.30' ? true : false">16.30</mat-option>
+        <mat-option value="17.00" *ngIf="this.firstFormGroup.get('time').value <= '17.00' ? true : false">17.00</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </label>
+</div>
+
+
+
+
+
+
+  <div align="center">
+    <label>Tel. Booking By :
+      <mat-form-field>
+
+        <input matInput formControlName="tel" required placeholder=" " pattern="[0][1-9]{9}" maxlength="10"  #message>
+        <mat-hint align="end">{{message.value.length}} / 10</mat-hint>
+      </mat-form-field>
+    </label>
+    &nbsp;&nbsp;
+    <label>Topic :
+      <mat-form-field>
+
+        <input matInput formControlName="topic" required placeholder=" " >
+
+      </mat-form-field>
+    </label>
+
+  </div>
+
+
+
+  <div align="center">
+    <label>Attendees :
+      <mat-form-field>
+
+        <input matInput formControlName="atten" required placeholder=" " type="number" >
+
+      </mat-form-field>
+    </label>
+    &nbsp;&nbsp;
+    <label>Remark :
+      <mat-form-field>
+
+        <input matInput formControlName="remark">
+
+      </mat-form-field>
+    </label>
+  </div>
+
+<div style="text-align:center;">
+  <button mat-fab mat-button color="primary" class="material-cust-large-button" (click)="edit()">Save</button>
+
+  &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
+  <button mat-fab mat-button color="primary" class="material-cust-large-button" (click)="cancel()">Cancel</button>
+
+</div>
+</form>

@@ -18,7 +18,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import { FormsModule ,ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { SelectRoomComponent , DialogCancel} from './select-room/select-room.component';
+import { SelectRoomComponent } from './select-room/select-room.component';
 import {MatDialogModule} from '@angular/material/dialog';
 
 import {DialogOverviewExampleDialog} from './auth.service';
@@ -38,6 +38,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import { SystemadminComponent } from './systemadmin/systemadmin.component';
 import { EdituserbyadminComponent } from './edituserbyadmin/edituserbyadmin.component';
 import { DeleteuserbyadminComponent } from './deleteuserbyadmin/deleteuserbyadmin.component';
+import { EditordeletebookComponent } from './editordeletebook/editordeletebook.component';
+import { EditbookComponent } from './editbook/editbook.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,11 +50,12 @@ import { DeleteuserbyadminComponent } from './deleteuserbyadmin/deleteuserbyadmi
     DashboardComponent,
     DashboardtableComponent,
     AdduserbyadminComponent,
-    DialogCancel,
     HeaderComponent,
     SystemadminComponent,
     EdituserbyadminComponent,
-    DeleteuserbyadminComponent
+    DeleteuserbyadminComponent,
+    EditordeletebookComponent,
+    EditbookComponent
   ],
   imports: [
     BrowserModule,
@@ -80,7 +83,7 @@ import { DeleteuserbyadminComponent } from './deleteuserbyadmin/deleteuserbyadmi
     MatProgressBarModule,
     MatExpansionModule
   ],
-    entryComponents: [ DialogOverviewExampleDialog , DialogCancel],
+    entryComponents: [ DialogOverviewExampleDialog ],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -80,9 +80,9 @@
             Meeting Room1(TSP)
           </th>
           <td *ngFor="let time of timeofweekOTSF2" [attr.colspan]="time.id" [attr.bgcolor]="time.color"
-              (click)="time.checkReservations ? Reserved(time.roomname,time.time) : selectTable(time.roomname,time.time)">
+              (click)="time.checkReservations ? Reserved(time.roomname,time.time,time.byusername,time.atten,time.topic,time.remark,time.totime,time.tel) : selectTable(time.roomname,time.time)">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -100,9 +100,9 @@
             Meeting Room2(WH7)
           </th>
           <td *ngFor="let time of timeofweekR1WH7F2" [attr.colspan]="time.id" [attr.bgcolor]="time.color"
-              (click)="time.checkReservations ? Reserved(time.roomname,time.time) : selectTable(time.roomname,time.time)">
+              (click)="time.checkReservations ? Reserved(time.roomname,time.time,time.byusername,time.atten,time.topic,time.remark,time.totime,time.tel) : selectTable(time.roomname,time.time)">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -119,9 +119,9 @@
             Meeting Room3(WH7)
           </th>
           <td *ngFor="let time of timeofweekR2WH7F2" [attr.colspan]="time.id" [attr.bgcolor]="time.color"
-              (click)="time.checkReservations ? Reserved(time.roomname,time.time) : selectTable(time.roomname,time.time)">
+              (click)="time.checkReservations ? Reserved(time.roomname,time.time,time.byusername,time.atten,time.topic,time.remark,time.totime,time.tel) : selectTable(time.roomname,time.time)">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>
@@ -138,9 +138,9 @@
             Meeting Room4(WH2)
           </th>
           <td *ngFor="let time of timeofweekWH2F2" [attr.colspan]="time.id" [attr.bgcolor]="time.color"
-              (click)="time.checkReservations ? Reserved(time.roomname,time.time) : selectTable(time.roomname,time.time)">
+              (click)="time.checkReservations ? Reserved(time.roomname,time.time,time.byusername,time.atten,time.topic,time.remark,time.totime,time.tel) : selectTable(time.roomname,time.time)">
             <div *ngIf="time.showlabel">
-              <font color="white">
+              <font color="black">
                 Booking by: {{time.byname}}<br>
                 Attendees: {{time.atten}}<br>
                 Topic: {{time.topic}}<br>

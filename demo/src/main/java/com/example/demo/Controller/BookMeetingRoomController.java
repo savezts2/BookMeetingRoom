@@ -45,6 +45,23 @@ public class BookMeetingRoomController {
     }
 
 
+    @PostMapping(path = "/Editbook/{dateBookMeetingRoom}/{roomname}/{starttime}/{newstarttime}/{endtime}/{atten}/{topic}/{remark}/{tel}")
+    public BookMeetingRoom bookMeetingRoom3(@PathVariable String dateBookMeetingRoom, @PathVariable String roomname, @PathVariable String starttime,
+   @PathVariable String newstarttime,@PathVariable String endtime,@PathVariable String atten,@PathVariable String topic,@PathVariable String remark,@PathVariable String tel ) {
+        BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findByDateBookMeetingRoomAndRoomnameAndStarttimeAndIsActive(dateBookMeetingRoom,roomname,starttime,"1");
+        bookMeetingRoom.setStarttime(newstarttime);
+        bookMeetingRoom.setEndtime(endtime);
+        bookMeetingRoom.setAttendees(atten);
+        bookMeetingRoom.setTopic(topic);
+        bookMeetingRoom.setRemark(remark);
+        bookMeetingRoom.setTelbookingby(tel);
+        int length = convertLengthTime(newstarttime,endtime);
+        bookMeetingRoom.setLengthtime(length);
+        bookMeetingRoomRepository.save(bookMeetingRoom);
+        return bookMeetingRoom;
+    }
+
+
 
 
     @PostMapping(path = "/{userid}/{fromtime}/{totime}/{tel}/{topic}/{atten}/{remark}/{roomname}/{date}")

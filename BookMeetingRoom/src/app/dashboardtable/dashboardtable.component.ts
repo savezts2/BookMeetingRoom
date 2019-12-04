@@ -5,14 +5,14 @@ import {Router}from '@angular/router';
 import {ServiceService}from '../Service/service.service';
 import {DashboardService}from './dashboard.service';
 import {ActivatedRoute}from "@angular/router";
-
+import {MatSidenav} from '@angular/material/sidenav';
 @Component({
 selector: 'app-dashboardtable',
 templateUrl: './dashboardtable.component.html',
 styleUrls: ['./dashboardtable.component.css']
 })
 export class DashboardtableComponent implements OnInit {
-
+@ViewChild('sidenav', {static: false}) sidenav: MatSidenav;
 
 isLoggedIn : Observable <boolean>;
 isLoggedInAdmin : Observable < boolean>;
@@ -69,6 +69,9 @@ constructor(public authService : AuthService , private router: Router, private s
         this.isLoggedInHR = authService.isLoggedInHR();
    }
 
+close() {
+    this.sidenav.close();
+  }
 
   ngOnInit() {
 
@@ -274,1801 +277,1801 @@ constructor(public authService : AuthService , private router: Router, private s
 
 
 timeofweekOTSF2Day01 = [
-    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false}
   ];
 timeofweekOTSF2Day02 = [
-    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false}
     ];
 timeofweekOTSF2Day03 = [
-    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false}
     ];
 timeofweekOTSF2Day04 = [
-    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false}
     ];
 timeofweekOTSF2Day05 = [
-   {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+   {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false}
     ];
 timeofweekOTSF2Day06 = [
-   {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+   {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false}
     ];
 timeofweekOTSF2Day07 = [
-    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false}
     ];
 timeofweekOTSF2Day08 = [
-    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false}
     ];
 timeofweekOTSF2Day09 = [
-    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false}
     ];
 timeofweekOTSF2Day10 = [
-    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false}
     ];
 timeofweekOTSF2Day11 = [
-    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false}
     ];
 timeofweekOTSF2Day12 = [
-    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false}
     ];
 timeofweekOTSF2Day13 = [
-    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false}
     ];
 timeofweekOTSF2Day14 = [
-    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false}
     ];
 timeofweekOTSF2Day15 = [
-    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false}
     ];
 timeofweekOTSF2Day16 = [
-    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false}
     ];
 timeofweekOTSF2Day17 = [
-    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false}
     ];
 timeofweekOTSF2Day18 = [
-   {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+   {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false}
     ];
 timeofweekOTSF2Day19 = [
-    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false}
     ];
 timeofweekOTSF2Day20 = [
-   {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+   {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false}
     ];
 timeofweekOTSF2Day21 = [
-    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false}
     ];
 timeofweekOTSF2Day22 = [
-    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false}
     ];
 timeofweekOTSF2Day23 = [
-    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false}
     ];
 timeofweekOTSF2Day24 = [
-    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false}
     ];
 timeofweekOTSF2Day25 = [
-    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false}
     ];
 timeofweekOTSF2Day26 = [
-    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false}
     ];
 timeofweekOTSF2Day27 = [
-    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false}
     ];
 timeofweekOTSF2Day28 = [
-    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false}
     ];
 timeofweekOTSF2Day29 = [
-    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false}
     ];
 timeofweekOTSF2Day30 = [
-    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false}
     ];
 timeofweekOTSF2Day31 = [
-    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 0,time:'08.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 1,time:'08.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 2,time:'09.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 3,time:'09.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 4,time:'10.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 5,time:'10.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 6,time:'11.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 7,time:'11.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 8,time:'12.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 9,time:'12.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 10,time:'13.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 11,time:'13.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 12,time:'14.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 13,time:'14.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 14,time:'15.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 15,time:'15.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 16,time:'16.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 17,time:'16.30',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false},
 
-    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Office TSP Second Floor 2',showlabel:false,
+    {roomid : 18,time:'17.00',id: 1,color:'white',roomname: 'Meeting Room1(TSP)',showlabel:false,
     byname: '',atten:'0',topic: '',remark:'',showremark:false,checkReservations: false}];
 
 
@@ -7491,7 +7494,7 @@ timeofweekWH2F2Day31 = [
 public appendTime(){
     for(let i = 0 ; i < this.report.length ; i++){
       if(this.report[i].isActive == "1"){
-        if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day01.length; j++){
             if(this.timeofweekOTSF2Day01[j].roomid == 0){
               this.timeofweekOTSF2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -7507,13 +7510,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day01.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day01[j].showremark = true;
                 this.timeofweekOTSF2Day01[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day01.length; j++){
             if(this.timeofweekOTSF2Day01[j].roomid == 1){
               this.timeofweekOTSF2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -7529,13 +7532,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day01.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day01[j].showremark = true;
                 this.timeofweekOTSF2Day01[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day01.length; j++){
             if(this.timeofweekOTSF2Day01[j].roomid == 2){
               this.timeofweekOTSF2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -7551,13 +7554,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day01.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day01[j].showremark = true;
                 this.timeofweekOTSF2Day01[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day01.length; j++){
             if(this.timeofweekOTSF2Day01[j].roomid == 3){
               this.timeofweekOTSF2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -7573,13 +7576,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day01.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day01[j].showremark = true;
                 this.timeofweekOTSF2Day01[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day01.length; j++){
             if(this.timeofweekOTSF2Day01[j].roomid == 4){
               this.timeofweekOTSF2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -7595,13 +7598,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day01.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day01[j].showremark = true;
                 this.timeofweekOTSF2Day01[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day01.length; j++){
             if(this.timeofweekOTSF2Day01[j].roomid == 5){
               this.timeofweekOTSF2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -7617,13 +7620,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day01.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day01[j].showremark = true;
                 this.timeofweekOTSF2Day01[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day01.length; j++){
             if(this.timeofweekOTSF2Day01[j].roomid == 6){
               this.timeofweekOTSF2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -7639,13 +7642,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day01.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day01[j].showremark = true;
                 this.timeofweekOTSF2Day01[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day01.length; j++){
             if(this.timeofweekOTSF2Day01[j].roomid == 7){
               this.timeofweekOTSF2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -7661,13 +7664,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day01.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day01[j].showremark = true;
                 this.timeofweekOTSF2Day01[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day01.length; j++){
             if(this.timeofweekOTSF2Day01[j].roomid == 8){
               this.timeofweekOTSF2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -7683,13 +7686,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day01.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day01[j].showremark = true;
                 this.timeofweekOTSF2Day01[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day01.length; j++){
             if(this.timeofweekOTSF2Day01[j].roomid == 9){
               this.timeofweekOTSF2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -7705,13 +7708,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day01.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day01[j].showremark = true;
                 this.timeofweekOTSF2Day01[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day01.length; j++){
             if(this.timeofweekOTSF2Day01[j].roomid == 10){
               this.timeofweekOTSF2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -7727,13 +7730,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day01.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day01[j].showremark = true;
                 this.timeofweekOTSF2Day01[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day01.length; j++){
             if(this.timeofweekOTSF2Day01[j].roomid == 11){
               this.timeofweekOTSF2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -7749,13 +7752,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day01.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day01[j].showremark = true;
                 this.timeofweekOTSF2Day01[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day01.length; j++){
             if(this.timeofweekOTSF2Day01[j].roomid == 12){
               this.timeofweekOTSF2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -7771,13 +7774,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day01.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day01[j].showremark = true;
                 this.timeofweekOTSF2Day01[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day01.length; j++){
             if(this.timeofweekOTSF2Day01[j].roomid == 13){
               this.timeofweekOTSF2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -7793,13 +7796,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day01.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day01[j].showremark = true;
                 this.timeofweekOTSF2Day01[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day01.length; j++){
             if(this.timeofweekOTSF2Day01[j].roomid == 14){
               this.timeofweekOTSF2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -7815,13 +7818,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day01.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day01[j].showremark = true;
                 this.timeofweekOTSF2Day01[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day01.length; j++){
             if(this.timeofweekOTSF2Day01[j].roomid == 15){
               this.timeofweekOTSF2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -7837,13 +7840,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day01.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day01[j].showremark = true;
                 this.timeofweekOTSF2Day01[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day01.length; j++){
             if(this.timeofweekOTSF2Day01[j].roomid == 16){
               this.timeofweekOTSF2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -7859,13 +7862,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day01.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day01[j].showremark = true;
                 this.timeofweekOTSF2Day01[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day01.length; j++){
             if(this.timeofweekOTSF2Day01[j].roomid == 17){
               this.timeofweekOTSF2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -7881,13 +7884,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day01.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day01[j].showremark = true;
                 this.timeofweekOTSF2Day01[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '01-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day01.length; j++){
             if(this.timeofweekOTSF2Day01[j].roomid == 18){
               this.timeofweekOTSF2Day01[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -7903,13 +7906,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day01.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day01[j].showremark = true;
                 this.timeofweekOTSF2Day01[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day02.length; j++){
             if(this.timeofweekOTSF2Day02[j].roomid == 0){
               this.timeofweekOTSF2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -7925,13 +7928,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day02.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day02[j].showremark = true;
                 this.timeofweekOTSF2Day02[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day02.length; j++){
             if(this.timeofweekOTSF2Day02[j].roomid == 1){
               this.timeofweekOTSF2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -7947,13 +7950,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day02.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day02[j].showremark = true;
                 this.timeofweekOTSF2Day02[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day02.length; j++){
             if(this.timeofweekOTSF2Day02[j].roomid == 2){
               this.timeofweekOTSF2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -7969,13 +7972,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day02.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day02[j].showremark = true;
                 this.timeofweekOTSF2Day02[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day02.length; j++){
             if(this.timeofweekOTSF2Day02[j].roomid == 3){
               this.timeofweekOTSF2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -7991,13 +7994,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day02.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day02[j].showremark = true;
                 this.timeofweekOTSF2Day02[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day02.length; j++){
             if(this.timeofweekOTSF2Day02[j].roomid == 4){
               this.timeofweekOTSF2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -8013,13 +8016,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day02.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day02[j].showremark = true;
                 this.timeofweekOTSF2Day02[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day02.length; j++){
             if(this.timeofweekOTSF2Day02[j].roomid == 5){
               this.timeofweekOTSF2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -8035,13 +8038,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day02.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day02[j].showremark = true;
                 this.timeofweekOTSF2Day02[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day02.length; j++){
             if(this.timeofweekOTSF2Day02[j].roomid == 6){
               this.timeofweekOTSF2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -8057,13 +8060,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day02.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day02[j].showremark = true;
                 this.timeofweekOTSF2Day02[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day02.length; j++){
             if(this.timeofweekOTSF2Day02[j].roomid == 7){
               this.timeofweekOTSF2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -8079,13 +8082,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day02.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day02[j].showremark = true;
                 this.timeofweekOTSF2Day02[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day02.length; j++){
             if(this.timeofweekOTSF2Day02[j].roomid == 8){
               this.timeofweekOTSF2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -8101,13 +8104,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day02.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day02[j].showremark = true;
                 this.timeofweekOTSF2Day02[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day02.length; j++){
             if(this.timeofweekOTSF2Day02[j].roomid == 9){
               this.timeofweekOTSF2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -8123,13 +8126,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day02.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day02[j].showremark = true;
                 this.timeofweekOTSF2Day02[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day02.length; j++){
             if(this.timeofweekOTSF2Day02[j].roomid == 10){
               this.timeofweekOTSF2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -8145,13 +8148,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day02.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day02[j].showremark = true;
                 this.timeofweekOTSF2Day02[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day02.length; j++){
             if(this.timeofweekOTSF2Day02[j].roomid == 11){
               this.timeofweekOTSF2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -8167,13 +8170,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day02.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day02[j].showremark = true;
                 this.timeofweekOTSF2Day02[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day02.length; j++){
             if(this.timeofweekOTSF2Day02[j].roomid == 12){
               this.timeofweekOTSF2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -8189,13 +8192,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day02.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day02[j].showremark = true;
                 this.timeofweekOTSF2Day02[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day02.length; j++){
             if(this.timeofweekOTSF2Day02[j].roomid == 13){
               this.timeofweekOTSF2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -8211,13 +8214,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day02.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day02[j].showremark = true;
                 this.timeofweekOTSF2Day02[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day02.length; j++){
             if(this.timeofweekOTSF2Day02[j].roomid == 14){
               this.timeofweekOTSF2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -8233,13 +8236,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day02.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day02[j].showremark = true;
                 this.timeofweekOTSF2Day02[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day02.length; j++){
             if(this.timeofweekOTSF2Day02[j].roomid == 15){
               this.timeofweekOTSF2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -8255,13 +8258,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day02.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day02[j].showremark = true;
                 this.timeofweekOTSF2Day02[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day02.length; j++){
             if(this.timeofweekOTSF2Day02[j].roomid == 16){
               this.timeofweekOTSF2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -8277,13 +8280,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day02.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day02[j].showremark = true;
                 this.timeofweekOTSF2Day02[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day02.length; j++){
             if(this.timeofweekOTSF2Day02[j].roomid == 17){
               this.timeofweekOTSF2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -8299,13 +8302,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day02.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day02[j].showremark = true;
                 this.timeofweekOTSF2Day02[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '02-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day02.length; j++){
             if(this.timeofweekOTSF2Day02[j].roomid == 18){
               this.timeofweekOTSF2Day02[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -8321,13 +8324,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day02.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day02[j].showremark = true;
                 this.timeofweekOTSF2Day02[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day03.length; j++){
             if(this.timeofweekOTSF2Day03[j].roomid == 0){
               this.timeofweekOTSF2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -8343,13 +8346,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day03.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day03[j].showremark = true;
                 this.timeofweekOTSF2Day03[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day03.length; j++){
             if(this.timeofweekOTSF2Day03[j].roomid == 1){
               this.timeofweekOTSF2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -8365,13 +8368,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day03.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day03[j].showremark = true;
                 this.timeofweekOTSF2Day03[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day03.length; j++){
             if(this.timeofweekOTSF2Day03[j].roomid == 2){
               this.timeofweekOTSF2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -8387,13 +8390,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day03.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day03[j].showremark = true;
                 this.timeofweekOTSF2Day03[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day03.length; j++){
             if(this.timeofweekOTSF2Day03[j].roomid == 3){
               this.timeofweekOTSF2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -8409,13 +8412,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day03.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day03[j].showremark = true;
                 this.timeofweekOTSF2Day03[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day03.length; j++){
             if(this.timeofweekOTSF2Day03[j].roomid == 4){
               this.timeofweekOTSF2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -8431,13 +8434,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day03.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day03[j].showremark = true;
                 this.timeofweekOTSF2Day03[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day03.length; j++){
             if(this.timeofweekOTSF2Day03[j].roomid == 5){
               this.timeofweekOTSF2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -8453,13 +8456,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day03.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day03[j].showremark = true;
                 this.timeofweekOTSF2Day03[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day03.length; j++){
             if(this.timeofweekOTSF2Day03[j].roomid == 6){
               this.timeofweekOTSF2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -8475,13 +8478,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day03.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day03[j].showremark = true;
                 this.timeofweekOTSF2Day03[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day03.length; j++){
             if(this.timeofweekOTSF2Day03[j].roomid == 7){
               this.timeofweekOTSF2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -8497,13 +8500,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day03.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day03[j].showremark = true;
                 this.timeofweekOTSF2Day03[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day03.length; j++){
             if(this.timeofweekOTSF2Day03[j].roomid == 8){
               this.timeofweekOTSF2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -8519,13 +8522,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day03.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day03[j].showremark = true;
                 this.timeofweekOTSF2Day03[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day03.length; j++){
             if(this.timeofweekOTSF2Day03[j].roomid == 9){
               this.timeofweekOTSF2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -8541,13 +8544,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day03.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day03[j].showremark = true;
                 this.timeofweekOTSF2Day03[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day03.length; j++){
             if(this.timeofweekOTSF2Day03[j].roomid == 10){
               this.timeofweekOTSF2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -8563,13 +8566,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day03.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day03[j].showremark = true;
                 this.timeofweekOTSF2Day03[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day03.length; j++){
             if(this.timeofweekOTSF2Day03[j].roomid == 11){
               this.timeofweekOTSF2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -8585,13 +8588,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day03.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day03[j].showremark = true;
                 this.timeofweekOTSF2Day03[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day03.length; j++){
             if(this.timeofweekOTSF2Day03[j].roomid == 12){
               this.timeofweekOTSF2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -8607,13 +8610,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day03.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day03[j].showremark = true;
                 this.timeofweekOTSF2Day03[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day03.length; j++){
             if(this.timeofweekOTSF2Day03[j].roomid == 13){
               this.timeofweekOTSF2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -8629,13 +8632,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day03.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day03[j].showremark = true;
                 this.timeofweekOTSF2Day03[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day03.length; j++){
             if(this.timeofweekOTSF2Day03[j].roomid == 14){
               this.timeofweekOTSF2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -8651,13 +8654,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day03.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day03[j].showremark = true;
                 this.timeofweekOTSF2Day03[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day03.length; j++){
             if(this.timeofweekOTSF2Day03[j].roomid == 15){
               this.timeofweekOTSF2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -8673,13 +8676,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day03.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day03[j].showremark = true;
                 this.timeofweekOTSF2Day03[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day03.length; j++){
             if(this.timeofweekOTSF2Day03[j].roomid == 16){
               this.timeofweekOTSF2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -8695,13 +8698,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day03.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day03[j].showremark = true;
                 this.timeofweekOTSF2Day03[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day03.length; j++){
             if(this.timeofweekOTSF2Day03[j].roomid == 17){
               this.timeofweekOTSF2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -8717,13 +8720,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day03.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day03[j].showremark = true;
                 this.timeofweekOTSF2Day03[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '03-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day03.length; j++){
             if(this.timeofweekOTSF2Day03[j].roomid == 18){
               this.timeofweekOTSF2Day03[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -8739,13 +8742,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day03.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day03[j].showremark = true;
                 this.timeofweekOTSF2Day03[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '04-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '04-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day04.length; j++){
             if(this.timeofweekOTSF2Day04[j].roomid == 0){
               this.timeofweekOTSF2Day04[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -8761,13 +8764,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day04.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day04[j].showremark = true;
                 this.timeofweekOTSF2Day04[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '04-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '04-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day04.length; j++){
             if(this.timeofweekOTSF2Day04[j].roomid == 1){
               this.timeofweekOTSF2Day04[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -8783,13 +8786,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day04.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day04[j].showremark = true;
                 this.timeofweekOTSF2Day04[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '04-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '04-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day04.length; j++){
             if(this.timeofweekOTSF2Day04[j].roomid == 2){
               this.timeofweekOTSF2Day04[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -8805,13 +8808,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day04.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day04[j].showremark = true;
                 this.timeofweekOTSF2Day04[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '04-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '04-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day04.length; j++){
             if(this.timeofweekOTSF2Day04[j].roomid == 3){
               this.timeofweekOTSF2Day04[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -8827,13 +8830,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day04.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day04[j].showremark = true;
                 this.timeofweekOTSF2Day04[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '04-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '04-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day04.length; j++){
             if(this.timeofweekOTSF2Day04[j].roomid == 4){
               this.timeofweekOTSF2Day04[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -8849,13 +8852,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day04.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day04[j].showremark = true;
                 this.timeofweekOTSF2Day04[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '04-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '04-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day04.length; j++){
             if(this.timeofweekOTSF2Day04[j].roomid == 5){
               this.timeofweekOTSF2Day04[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -8871,13 +8874,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day04.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day04[j].showremark = true;
                 this.timeofweekOTSF2Day04[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '04-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '04-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day04.length; j++){
             if(this.timeofweekOTSF2Day04[j].roomid == 6){
               this.timeofweekOTSF2Day04[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -8893,13 +8896,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day04.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day04[j].showremark = true;
                 this.timeofweekOTSF2Day04[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '04-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '04-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day04.length; j++){
             if(this.timeofweekOTSF2Day04[j].roomid == 7){
               this.timeofweekOTSF2Day04[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -8915,13 +8918,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day04.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day04[j].showremark = true;
                 this.timeofweekOTSF2Day04[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '04-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '04-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day04.length; j++){
             if(this.timeofweekOTSF2Day04[j].roomid == 8){
               this.timeofweekOTSF2Day04[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -8937,13 +8940,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day04.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day04[j].showremark = true;
                 this.timeofweekOTSF2Day04[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '04-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '04-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day04.length; j++){
             if(this.timeofweekOTSF2Day04[j].roomid == 9){
               this.timeofweekOTSF2Day04[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -8959,13 +8962,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day04.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day04[j].showremark = true;
                 this.timeofweekOTSF2Day04[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '04-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '04-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day04.length; j++){
             if(this.timeofweekOTSF2Day04[j].roomid == 10){
               this.timeofweekOTSF2Day04[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -8981,13 +8984,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day04.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day04[j].showremark = true;
                 this.timeofweekOTSF2Day04[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '04-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '04-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day04.length; j++){
             if(this.timeofweekOTSF2Day04[j].roomid == 11){
               this.timeofweekOTSF2Day04[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -9003,13 +9006,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day04.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day04[j].showremark = true;
                 this.timeofweekOTSF2Day04[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '04-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '04-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day04.length; j++){
             if(this.timeofweekOTSF2Day04[j].roomid == 12){
               this.timeofweekOTSF2Day04[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -9025,13 +9028,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day04.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day04[j].showremark = true;
                 this.timeofweekOTSF2Day04[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '04-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '04-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day04.length; j++){
             if(this.timeofweekOTSF2Day04[j].roomid == 13){
               this.timeofweekOTSF2Day04[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -9047,13 +9050,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day04.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day04[j].showremark = true;
                 this.timeofweekOTSF2Day04[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '04-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '04-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day04.length; j++){
             if(this.timeofweekOTSF2Day04[j].roomid == 14){
               this.timeofweekOTSF2Day04[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -9069,13 +9072,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day04.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day04[j].showremark = true;
                 this.timeofweekOTSF2Day04[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '04-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '04-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day04.length; j++){
             if(this.timeofweekOTSF2Day04[j].roomid == 15){
               this.timeofweekOTSF2Day04[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -9091,13 +9094,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day04.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day04[j].showremark = true;
                 this.timeofweekOTSF2Day04[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '04-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '04-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day04.length; j++){
             if(this.timeofweekOTSF2Day04[j].roomid == 16){
               this.timeofweekOTSF2Day04[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -9113,13 +9116,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day04.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day04[j].showremark = true;
                 this.timeofweekOTSF2Day04[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '04-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '04-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day04.length; j++){
             if(this.timeofweekOTSF2Day04[j].roomid == 17){
               this.timeofweekOTSF2Day04[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -9135,13 +9138,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day04.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day04[j].showremark = true;
                 this.timeofweekOTSF2Day04[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '04-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '04-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day04.length; j++){
             if(this.timeofweekOTSF2Day04[j].roomid == 18){
               this.timeofweekOTSF2Day04[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -9157,13 +9160,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day04.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day04[j].showremark = true;
                 this.timeofweekOTSF2Day04[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '05-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '05-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day05.length; j++){
             if(this.timeofweekOTSF2Day05[j].roomid == 0){
               this.timeofweekOTSF2Day05[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -9179,13 +9182,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day05.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day05[j].showremark = true;
                 this.timeofweekOTSF2Day05[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '05-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '05-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day05.length; j++){
             if(this.timeofweekOTSF2Day05[j].roomid == 1){
               this.timeofweekOTSF2Day05[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -9201,13 +9204,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day05.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day05[j].showremark = true;
                 this.timeofweekOTSF2Day05[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '05-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '05-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day05.length; j++){
             if(this.timeofweekOTSF2Day05[j].roomid == 2){
               this.timeofweekOTSF2Day05[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -9223,13 +9226,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day05.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day05[j].showremark = true;
                 this.timeofweekOTSF2Day05[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '05-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '05-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day05.length; j++){
             if(this.timeofweekOTSF2Day05[j].roomid == 3){
               this.timeofweekOTSF2Day05[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -9245,13 +9248,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day05.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day05[j].showremark = true;
                 this.timeofweekOTSF2Day05[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '05-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '05-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day05.length; j++){
             if(this.timeofweekOTSF2Day05[j].roomid == 4){
               this.timeofweekOTSF2Day05[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -9267,13 +9270,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day05.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day05[j].showremark = true;
                 this.timeofweekOTSF2Day05[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '05-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '05-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day05.length; j++){
             if(this.timeofweekOTSF2Day05[j].roomid == 5){
               this.timeofweekOTSF2Day05[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -9289,13 +9292,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day05.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day05[j].showremark = true;
                 this.timeofweekOTSF2Day05[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '05-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '05-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day05.length; j++){
             if(this.timeofweekOTSF2Day05[j].roomid == 6){
               this.timeofweekOTSF2Day05[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -9311,13 +9314,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day05.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day05[j].showremark = true;
                 this.timeofweekOTSF2Day05[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '05-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '05-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day05.length; j++){
             if(this.timeofweekOTSF2Day05[j].roomid == 7){
               this.timeofweekOTSF2Day05[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -9333,13 +9336,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day05.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day05[j].showremark = true;
                 this.timeofweekOTSF2Day05[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '05-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '05-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day05.length; j++){
             if(this.timeofweekOTSF2Day05[j].roomid == 8){
               this.timeofweekOTSF2Day05[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -9355,13 +9358,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day05.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day05[j].showremark = true;
                 this.timeofweekOTSF2Day05[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '05-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '05-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day05.length; j++){
             if(this.timeofweekOTSF2Day05[j].roomid == 9){
               this.timeofweekOTSF2Day05[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -9377,13 +9380,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day05.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day05[j].showremark = true;
                 this.timeofweekOTSF2Day05[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '05-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '05-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day05.length; j++){
             if(this.timeofweekOTSF2Day05[j].roomid == 10){
               this.timeofweekOTSF2Day05[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -9399,13 +9402,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day05.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day05[j].showremark = true;
                 this.timeofweekOTSF2Day05[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '05-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '05-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day05.length; j++){
             if(this.timeofweekOTSF2Day05[j].roomid == 11){
               this.timeofweekOTSF2Day05[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -9421,13 +9424,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day05.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day05[j].showremark = true;
                 this.timeofweekOTSF2Day05[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '05-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '05-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day05.length; j++){
             if(this.timeofweekOTSF2Day05[j].roomid == 12){
               this.timeofweekOTSF2Day05[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -9443,13 +9446,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day05.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day05[j].showremark = true;
                 this.timeofweekOTSF2Day05[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '05-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '05-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day05.length; j++){
             if(this.timeofweekOTSF2Day05[j].roomid == 13){
               this.timeofweekOTSF2Day05[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -9465,13 +9468,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day05.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day05[j].showremark = true;
                 this.timeofweekOTSF2Day05[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '05-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '05-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day05.length; j++){
             if(this.timeofweekOTSF2Day05[j].roomid == 14){
               this.timeofweekOTSF2Day05[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -9487,13 +9490,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day05.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day05[j].showremark = true;
                 this.timeofweekOTSF2Day05[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '05-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '05-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day05.length; j++){
             if(this.timeofweekOTSF2Day05[j].roomid == 15){
               this.timeofweekOTSF2Day05[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -9509,13 +9512,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day05.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day05[j].showremark = true;
                 this.timeofweekOTSF2Day05[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '05-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '05-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day05.length; j++){
             if(this.timeofweekOTSF2Day05[j].roomid == 16){
               this.timeofweekOTSF2Day05[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -9531,13 +9534,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day05.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day05[j].showremark = true;
                 this.timeofweekOTSF2Day05[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '05-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '05-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day05.length; j++){
             if(this.timeofweekOTSF2Day05[j].roomid == 17){
               this.timeofweekOTSF2Day05[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -9553,13 +9556,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day05.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day05[j].showremark = true;
                 this.timeofweekOTSF2Day05[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '05-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '05-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day05.length; j++){
             if(this.timeofweekOTSF2Day05[j].roomid == 18){
               this.timeofweekOTSF2Day05[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -9575,13 +9578,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day05.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day05[j].showremark = true;
                 this.timeofweekOTSF2Day05[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '06-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '06-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day06.length; j++){
             if(this.timeofweekOTSF2Day06[j].roomid == 0){
               this.timeofweekOTSF2Day06[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -9597,13 +9600,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day06.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day06[j].showremark = true;
                 this.timeofweekOTSF2Day06[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '06-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '06-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day06.length; j++){
             if(this.timeofweekOTSF2Day06[j].roomid == 1){
               this.timeofweekOTSF2Day06[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -9619,13 +9622,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day06.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day06[j].showremark = true;
                 this.timeofweekOTSF2Day06[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '06-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '06-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day06.length; j++){
             if(this.timeofweekOTSF2Day06[j].roomid == 2){
               this.timeofweekOTSF2Day06[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -9641,13 +9644,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day06.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day06[j].showremark = true;
                 this.timeofweekOTSF2Day06[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '06-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '06-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day06.length; j++){
             if(this.timeofweekOTSF2Day06[j].roomid == 3){
               this.timeofweekOTSF2Day06[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -9663,13 +9666,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day06.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day06[j].showremark = true;
                 this.timeofweekOTSF2Day06[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '06-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '06-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day06.length; j++){
             if(this.timeofweekOTSF2Day06[j].roomid == 4){
               this.timeofweekOTSF2Day06[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -9685,13 +9688,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day06.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day06[j].showremark = true;
                 this.timeofweekOTSF2Day06[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '06-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '06-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day06.length; j++){
             if(this.timeofweekOTSF2Day06[j].roomid == 5){
               this.timeofweekOTSF2Day06[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -9707,13 +9710,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day06.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day06[j].showremark = true;
                 this.timeofweekOTSF2Day06[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '06-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '06-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day06.length; j++){
             if(this.timeofweekOTSF2Day06[j].roomid == 6){
               this.timeofweekOTSF2Day06[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -9729,13 +9732,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day06.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day06[j].showremark = true;
                 this.timeofweekOTSF2Day06[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '06-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '06-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day06.length; j++){
             if(this.timeofweekOTSF2Day06[j].roomid == 7){
               this.timeofweekOTSF2Day06[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -9751,13 +9754,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day06.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day06[j].showremark = true;
                 this.timeofweekOTSF2Day06[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '06-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '06-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day06.length; j++){
             if(this.timeofweekOTSF2Day06[j].roomid == 8){
               this.timeofweekOTSF2Day06[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -9773,13 +9776,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day06.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day06[j].showremark = true;
                 this.timeofweekOTSF2Day06[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '06-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '06-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day06.length; j++){
             if(this.timeofweekOTSF2Day06[j].roomid == 9){
               this.timeofweekOTSF2Day06[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -9795,13 +9798,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day06.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day06[j].showremark = true;
                 this.timeofweekOTSF2Day06[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '06-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '06-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day06.length; j++){
             if(this.timeofweekOTSF2Day06[j].roomid == 10){
               this.timeofweekOTSF2Day06[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -9817,13 +9820,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day06.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day06[j].showremark = true;
                 this.timeofweekOTSF2Day06[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '06-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '06-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day06.length; j++){
             if(this.timeofweekOTSF2Day06[j].roomid == 11){
               this.timeofweekOTSF2Day06[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -9839,13 +9842,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day06.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day06[j].showremark = true;
                 this.timeofweekOTSF2Day06[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '06-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '06-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day06.length; j++){
             if(this.timeofweekOTSF2Day06[j].roomid == 12){
               this.timeofweekOTSF2Day06[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -9861,13 +9864,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day06.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day06[j].showremark = true;
                 this.timeofweekOTSF2Day06[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '06-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '06-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day06.length; j++){
             if(this.timeofweekOTSF2Day06[j].roomid == 13){
               this.timeofweekOTSF2Day06[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -9883,13 +9886,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day06.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day06[j].showremark = true;
                 this.timeofweekOTSF2Day06[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '06-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '06-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day06.length; j++){
             if(this.timeofweekOTSF2Day06[j].roomid == 14){
               this.timeofweekOTSF2Day06[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -9905,13 +9908,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day06.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day06[j].showremark = true;
                 this.timeofweekOTSF2Day06[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '06-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '06-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day06.length; j++){
             if(this.timeofweekOTSF2Day06[j].roomid == 15){
               this.timeofweekOTSF2Day06[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -9927,13 +9930,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day06.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day06[j].showremark = true;
                 this.timeofweekOTSF2Day06[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '06-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '06-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day06.length; j++){
             if(this.timeofweekOTSF2Day06[j].roomid == 16){
               this.timeofweekOTSF2Day06[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -9949,13 +9952,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day06.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day06[j].showremark = true;
                 this.timeofweekOTSF2Day06[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '06-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '06-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day06.length; j++){
             if(this.timeofweekOTSF2Day06[j].roomid == 17){
               this.timeofweekOTSF2Day06[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -9971,13 +9974,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day06.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day06[j].showremark = true;
                 this.timeofweekOTSF2Day06[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '06-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '06-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day06.length; j++){
             if(this.timeofweekOTSF2Day06[j].roomid == 18){
               this.timeofweekOTSF2Day06[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -9993,13 +9996,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day06.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day06[j].showremark = true;
                 this.timeofweekOTSF2Day06[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '07-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '07-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day07.length; j++){
             if(this.timeofweekOTSF2Day07[j].roomid == 0){
               this.timeofweekOTSF2Day07[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -10015,13 +10018,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day07.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day07[j].showremark = true;
                 this.timeofweekOTSF2Day07[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '07-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '07-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day07.length; j++){
             if(this.timeofweekOTSF2Day07[j].roomid == 1){
               this.timeofweekOTSF2Day07[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -10037,13 +10040,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day07.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day07[j].showremark = true;
                 this.timeofweekOTSF2Day07[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '07-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '07-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day07.length; j++){
             if(this.timeofweekOTSF2Day07[j].roomid == 2){
               this.timeofweekOTSF2Day07[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -10059,13 +10062,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day07.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day07[j].showremark = true;
                 this.timeofweekOTSF2Day07[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '07-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '07-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day07.length; j++){
             if(this.timeofweekOTSF2Day07[j].roomid == 3){
               this.timeofweekOTSF2Day07[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -10081,13 +10084,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day07.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day07[j].showremark = true;
                 this.timeofweekOTSF2Day07[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '07-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '07-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day07.length; j++){
             if(this.timeofweekOTSF2Day07[j].roomid == 4){
               this.timeofweekOTSF2Day07[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -10103,13 +10106,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day07.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day07[j].showremark = true;
                 this.timeofweekOTSF2Day07[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '07-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '07-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day07.length; j++){
             if(this.timeofweekOTSF2Day07[j].roomid == 5){
               this.timeofweekOTSF2Day07[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -10125,13 +10128,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day07.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day07[j].showremark = true;
                 this.timeofweekOTSF2Day07[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '07-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '07-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day07.length; j++){
             if(this.timeofweekOTSF2Day07[j].roomid == 6){
               this.timeofweekOTSF2Day07[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -10147,13 +10150,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day07.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day07[j].showremark = true;
                 this.timeofweekOTSF2Day07[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '07-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '07-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day07.length; j++){
             if(this.timeofweekOTSF2Day07[j].roomid == 7){
               this.timeofweekOTSF2Day07[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -10169,13 +10172,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day07.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day07[j].showremark = true;
                 this.timeofweekOTSF2Day07[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '07-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '07-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day07.length; j++){
             if(this.timeofweekOTSF2Day07[j].roomid == 8){
               this.timeofweekOTSF2Day07[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -10191,13 +10194,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day07.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day07[j].showremark = true;
                 this.timeofweekOTSF2Day07[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '07-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '07-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day07.length; j++){
             if(this.timeofweekOTSF2Day07[j].roomid == 9){
               this.timeofweekOTSF2Day07[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -10213,13 +10216,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day07.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day07[j].showremark = true;
                 this.timeofweekOTSF2Day07[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '07-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '07-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day07.length; j++){
             if(this.timeofweekOTSF2Day07[j].roomid == 10){
               this.timeofweekOTSF2Day07[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -10235,13 +10238,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day07.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day07[j].showremark = true;
                 this.timeofweekOTSF2Day07[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '07-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '07-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day07.length; j++){
             if(this.timeofweekOTSF2Day07[j].roomid == 11){
               this.timeofweekOTSF2Day07[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -10257,13 +10260,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day07.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day07[j].showremark = true;
                 this.timeofweekOTSF2Day07[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '07-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '07-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day07.length; j++){
             if(this.timeofweekOTSF2Day07[j].roomid == 12){
               this.timeofweekOTSF2Day07[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -10279,13 +10282,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day07.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day07[j].showremark = true;
                 this.timeofweekOTSF2Day07[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '07-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '07-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day07.length; j++){
             if(this.timeofweekOTSF2Day07[j].roomid == 13){
               this.timeofweekOTSF2Day07[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -10301,13 +10304,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day07.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day07[j].showremark = true;
                 this.timeofweekOTSF2Day07[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '07-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '07-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day07.length; j++){
             if(this.timeofweekOTSF2Day07[j].roomid == 14){
               this.timeofweekOTSF2Day07[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -10323,13 +10326,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day07.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day07[j].showremark = true;
                 this.timeofweekOTSF2Day07[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '07-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '07-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day07.length; j++){
             if(this.timeofweekOTSF2Day07[j].roomid == 15){
               this.timeofweekOTSF2Day07[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -10345,13 +10348,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day07.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day07[j].showremark = true;
                 this.timeofweekOTSF2Day07[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '07-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '07-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day07.length; j++){
             if(this.timeofweekOTSF2Day07[j].roomid == 16){
               this.timeofweekOTSF2Day07[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -10367,13 +10370,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day07.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day07[j].showremark = true;
                 this.timeofweekOTSF2Day07[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '07-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '07-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day07.length; j++){
             if(this.timeofweekOTSF2Day07[j].roomid == 17){
               this.timeofweekOTSF2Day07[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -10389,13 +10392,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day07.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day07[j].showremark = true;
                 this.timeofweekOTSF2Day07[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '07-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '07-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day07.length; j++){
             if(this.timeofweekOTSF2Day07[j].roomid == 18){
               this.timeofweekOTSF2Day07[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -10411,13 +10414,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day07.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day07[j].showremark = true;
                 this.timeofweekOTSF2Day07[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '08-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '08-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day08.length; j++){
             if(this.timeofweekOTSF2Day08[j].roomid == 0){
               this.timeofweekOTSF2Day08[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -10433,13 +10436,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day08.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day08[j].showremark = true;
                 this.timeofweekOTSF2Day08[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '08-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '08-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day08.length; j++){
             if(this.timeofweekOTSF2Day08[j].roomid == 1){
               this.timeofweekOTSF2Day08[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -10455,13 +10458,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day08.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day08[j].showremark = true;
                 this.timeofweekOTSF2Day08[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '08-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '08-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day08.length; j++){
             if(this.timeofweekOTSF2Day08[j].roomid == 2){
               this.timeofweekOTSF2Day08[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -10477,13 +10480,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day08.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day08[j].showremark = true;
                 this.timeofweekOTSF2Day08[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '08-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '08-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day08.length; j++){
             if(this.timeofweekOTSF2Day08[j].roomid == 3){
               this.timeofweekOTSF2Day08[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -10499,13 +10502,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day08.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day08[j].showremark = true;
                 this.timeofweekOTSF2Day08[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '08-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '08-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day08.length; j++){
             if(this.timeofweekOTSF2Day08[j].roomid == 4){
               this.timeofweekOTSF2Day08[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -10521,13 +10524,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day08.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day08[j].showremark = true;
                 this.timeofweekOTSF2Day08[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '08-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '08-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day08.length; j++){
             if(this.timeofweekOTSF2Day08[j].roomid == 5){
               this.timeofweekOTSF2Day08[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -10543,13 +10546,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day08.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day08[j].showremark = true;
                 this.timeofweekOTSF2Day08[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '08-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '08-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day08.length; j++){
             if(this.timeofweekOTSF2Day08[j].roomid == 6){
               this.timeofweekOTSF2Day08[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -10565,13 +10568,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day08.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day08[j].showremark = true;
                 this.timeofweekOTSF2Day08[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '08-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '08-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day08.length; j++){
             if(this.timeofweekOTSF2Day08[j].roomid == 7){
               this.timeofweekOTSF2Day08[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -10587,13 +10590,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day08.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day08[j].showremark = true;
                 this.timeofweekOTSF2Day08[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '08-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '08-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day08.length; j++){
             if(this.timeofweekOTSF2Day08[j].roomid == 8){
               this.timeofweekOTSF2Day08[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -10609,13 +10612,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day08.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day08[j].showremark = true;
                 this.timeofweekOTSF2Day08[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '08-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '08-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day08.length; j++){
             if(this.timeofweekOTSF2Day08[j].roomid == 9){
               this.timeofweekOTSF2Day08[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -10631,13 +10634,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day08.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day08[j].showremark = true;
                 this.timeofweekOTSF2Day08[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '08-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '08-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day08.length; j++){
             if(this.timeofweekOTSF2Day08[j].roomid == 10){
               this.timeofweekOTSF2Day08[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -10653,13 +10656,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day08.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day08[j].showremark = true;
                 this.timeofweekOTSF2Day08[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '08-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '08-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day08.length; j++){
             if(this.timeofweekOTSF2Day08[j].roomid == 11){
               this.timeofweekOTSF2Day08[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -10675,13 +10678,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day08.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day08[j].showremark = true;
                 this.timeofweekOTSF2Day08[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '08-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '08-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day08.length; j++){
             if(this.timeofweekOTSF2Day08[j].roomid == 12){
               this.timeofweekOTSF2Day08[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -10697,13 +10700,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day08.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day08[j].showremark = true;
                 this.timeofweekOTSF2Day08[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '08-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '08-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day08.length; j++){
             if(this.timeofweekOTSF2Day08[j].roomid == 13){
               this.timeofweekOTSF2Day08[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -10719,13 +10722,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day08.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day08[j].showremark = true;
                 this.timeofweekOTSF2Day08[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '08-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '08-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day08.length; j++){
             if(this.timeofweekOTSF2Day08[j].roomid == 14){
               this.timeofweekOTSF2Day08[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -10741,13 +10744,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day08.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day08[j].showremark = true;
                 this.timeofweekOTSF2Day08[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '08-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '08-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day08.length; j++){
             if(this.timeofweekOTSF2Day08[j].roomid == 15){
               this.timeofweekOTSF2Day08[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -10763,13 +10766,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day08.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day08[j].showremark = true;
                 this.timeofweekOTSF2Day08[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '08-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '08-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day08.length; j++){
             if(this.timeofweekOTSF2Day08[j].roomid == 16){
               this.timeofweekOTSF2Day08[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -10785,13 +10788,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day08.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day08[j].showremark = true;
                 this.timeofweekOTSF2Day08[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '08-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '08-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day08.length; j++){
             if(this.timeofweekOTSF2Day08[j].roomid == 17){
               this.timeofweekOTSF2Day08[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -10807,13 +10810,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day08.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day08[j].showremark = true;
                 this.timeofweekOTSF2Day08[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '08-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '08-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day08.length; j++){
             if(this.timeofweekOTSF2Day08[j].roomid == 18){
               this.timeofweekOTSF2Day08[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -10829,13 +10832,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day08.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day08[j].showremark = true;
                 this.timeofweekOTSF2Day08[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '09-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '09-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day09.length; j++){
             if(this.timeofweekOTSF2Day09[j].roomid == 0){
               this.timeofweekOTSF2Day09[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -10851,13 +10854,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day09.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day09[j].showremark = true;
                 this.timeofweekOTSF2Day09[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '09-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '09-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day09.length; j++){
             if(this.timeofweekOTSF2Day09[j].roomid == 1){
               this.timeofweekOTSF2Day09[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -10873,13 +10876,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day09.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day09[j].showremark = true;
                 this.timeofweekOTSF2Day09[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '09-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '09-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day09.length; j++){
             if(this.timeofweekOTSF2Day09[j].roomid == 2){
               this.timeofweekOTSF2Day09[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -10895,13 +10898,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day09.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day09[j].showremark = true;
                 this.timeofweekOTSF2Day09[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '09-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '09-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day09.length; j++){
             if(this.timeofweekOTSF2Day09[j].roomid == 3){
               this.timeofweekOTSF2Day09[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -10917,13 +10920,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day09.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day09[j].showremark = true;
                 this.timeofweekOTSF2Day09[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '09-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '09-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day09.length; j++){
             if(this.timeofweekOTSF2Day09[j].roomid == 4){
               this.timeofweekOTSF2Day09[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -10939,13 +10942,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day09.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day09[j].showremark = true;
                 this.timeofweekOTSF2Day09[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '09-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '09-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day09.length; j++){
             if(this.timeofweekOTSF2Day09[j].roomid == 5){
               this.timeofweekOTSF2Day09[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -10961,13 +10964,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day09.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day09[j].showremark = true;
                 this.timeofweekOTSF2Day09[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '09-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '09-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day09.length; j++){
             if(this.timeofweekOTSF2Day09[j].roomid == 6){
               this.timeofweekOTSF2Day09[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -10983,13 +10986,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day09.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day09[j].showremark = true;
                 this.timeofweekOTSF2Day09[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '09-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '09-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day09.length; j++){
             if(this.timeofweekOTSF2Day09[j].roomid == 7){
               this.timeofweekOTSF2Day09[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -11005,13 +11008,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day09.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day09[j].showremark = true;
                 this.timeofweekOTSF2Day09[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '09-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '09-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day09.length; j++){
             if(this.timeofweekOTSF2Day09[j].roomid == 8){
               this.timeofweekOTSF2Day09[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -11027,13 +11030,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day09.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day09[j].showremark = true;
                 this.timeofweekOTSF2Day09[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '09-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '09-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day09.length; j++){
             if(this.timeofweekOTSF2Day09[j].roomid == 9){
               this.timeofweekOTSF2Day09[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -11049,13 +11052,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day09.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day09[j].showremark = true;
                 this.timeofweekOTSF2Day09[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '09-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '09-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day09.length; j++){
             if(this.timeofweekOTSF2Day09[j].roomid == 10){
               this.timeofweekOTSF2Day09[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -11071,13 +11074,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day09.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day09[j].showremark = true;
                 this.timeofweekOTSF2Day09[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '09-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '09-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day09.length; j++){
             if(this.timeofweekOTSF2Day09[j].roomid == 11){
               this.timeofweekOTSF2Day09[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -11093,13 +11096,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day09.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day09[j].showremark = true;
                 this.timeofweekOTSF2Day09[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '09-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '09-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day09.length; j++){
             if(this.timeofweekOTSF2Day09[j].roomid == 12){
               this.timeofweekOTSF2Day09[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -11115,13 +11118,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day09.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day09[j].showremark = true;
                 this.timeofweekOTSF2Day09[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '09-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '09-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day09.length; j++){
             if(this.timeofweekOTSF2Day09[j].roomid == 13){
               this.timeofweekOTSF2Day09[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -11137,13 +11140,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day09.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day09[j].showremark = true;
                 this.timeofweekOTSF2Day09[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '09-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '09-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day09.length; j++){
             if(this.timeofweekOTSF2Day09[j].roomid == 14){
               this.timeofweekOTSF2Day09[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -11159,13 +11162,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day09.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day09[j].showremark = true;
                 this.timeofweekOTSF2Day09[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '09-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '09-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day09.length; j++){
             if(this.timeofweekOTSF2Day09[j].roomid == 15){
               this.timeofweekOTSF2Day09[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -11181,13 +11184,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day09.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day09[j].showremark = true;
                 this.timeofweekOTSF2Day09[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '09-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '09-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day09.length; j++){
             if(this.timeofweekOTSF2Day09[j].roomid == 16){
               this.timeofweekOTSF2Day09[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -11203,13 +11206,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day09.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day09[j].showremark = true;
                 this.timeofweekOTSF2Day09[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '09-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '09-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day09.length; j++){
             if(this.timeofweekOTSF2Day09[j].roomid == 17){
               this.timeofweekOTSF2Day09[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -11225,13 +11228,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day09.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day09[j].showremark = true;
                 this.timeofweekOTSF2Day09[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '09-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '09-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day09.length; j++){
             if(this.timeofweekOTSF2Day09[j].roomid == 18){
               this.timeofweekOTSF2Day09[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -11247,13 +11250,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day09.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day09[j].showremark = true;
                 this.timeofweekOTSF2Day09[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '10-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '10-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day10.length; j++){
             if(this.timeofweekOTSF2Day10[j].roomid == 0){
               this.timeofweekOTSF2Day10[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -11269,13 +11272,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day10.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day10[j].showremark = true;
                 this.timeofweekOTSF2Day10[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '10-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '10-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day10.length; j++){
             if(this.timeofweekOTSF2Day10[j].roomid == 1){
               this.timeofweekOTSF2Day10[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -11291,13 +11294,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day10.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day10[j].showremark = true;
                 this.timeofweekOTSF2Day10[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '10-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '10-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day10.length; j++){
             if(this.timeofweekOTSF2Day10[j].roomid == 2){
               this.timeofweekOTSF2Day10[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -11313,13 +11316,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day10.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day10[j].showremark = true;
                 this.timeofweekOTSF2Day10[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '10-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '10-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day10.length; j++){
             if(this.timeofweekOTSF2Day10[j].roomid == 3){
               this.timeofweekOTSF2Day10[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -11335,13 +11338,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day10.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day10[j].showremark = true;
                 this.timeofweekOTSF2Day10[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '10-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '10-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day10.length; j++){
             if(this.timeofweekOTSF2Day10[j].roomid == 4){
               this.timeofweekOTSF2Day10[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -11357,13 +11360,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day10.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day10[j].showremark = true;
                 this.timeofweekOTSF2Day10[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '10-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '10-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day10.length; j++){
             if(this.timeofweekOTSF2Day10[j].roomid == 5){
               this.timeofweekOTSF2Day10[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -11379,13 +11382,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day10.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day10[j].showremark = true;
                 this.timeofweekOTSF2Day10[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '10-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '10-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day10.length; j++){
             if(this.timeofweekOTSF2Day10[j].roomid == 6){
               this.timeofweekOTSF2Day10[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -11401,13 +11404,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day10.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day10[j].showremark = true;
                 this.timeofweekOTSF2Day10[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '10-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '10-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day10.length; j++){
             if(this.timeofweekOTSF2Day10[j].roomid == 7){
               this.timeofweekOTSF2Day10[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -11423,13 +11426,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day10.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day10[j].showremark = true;
                 this.timeofweekOTSF2Day10[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '10-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '10-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day10.length; j++){
             if(this.timeofweekOTSF2Day10[j].roomid == 8){
               this.timeofweekOTSF2Day10[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -11445,13 +11448,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day10.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day10[j].showremark = true;
                 this.timeofweekOTSF2Day10[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '10-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '10-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day10.length; j++){
             if(this.timeofweekOTSF2Day10[j].roomid == 9){
               this.timeofweekOTSF2Day10[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -11467,13 +11470,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day10.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day10[j].showremark = true;
                 this.timeofweekOTSF2Day10[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '10-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '10-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day10.length; j++){
             if(this.timeofweekOTSF2Day10[j].roomid == 10){
               this.timeofweekOTSF2Day10[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -11489,13 +11492,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day10.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day10[j].showremark = true;
                 this.timeofweekOTSF2Day10[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '10-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '10-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day10.length; j++){
             if(this.timeofweekOTSF2Day10[j].roomid == 11){
               this.timeofweekOTSF2Day10[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -11511,13 +11514,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day10.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day10[j].showremark = true;
                 this.timeofweekOTSF2Day10[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '10-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '10-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day10.length; j++){
             if(this.timeofweekOTSF2Day10[j].roomid == 12){
               this.timeofweekOTSF2Day10[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -11533,13 +11536,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day10.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day10[j].showremark = true;
                 this.timeofweekOTSF2Day10[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '10-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '10-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day10.length; j++){
             if(this.timeofweekOTSF2Day10[j].roomid == 13){
               this.timeofweekOTSF2Day10[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -11555,13 +11558,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day10.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day10[j].showremark = true;
                 this.timeofweekOTSF2Day10[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '10-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '10-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day10.length; j++){
             if(this.timeofweekOTSF2Day10[j].roomid == 14){
               this.timeofweekOTSF2Day10[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -11577,13 +11580,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day10.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day10[j].showremark = true;
                 this.timeofweekOTSF2Day10[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '10-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '10-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day10.length; j++){
             if(this.timeofweekOTSF2Day10[j].roomid == 15){
               this.timeofweekOTSF2Day10[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -11599,13 +11602,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day10.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day10[j].showremark = true;
                 this.timeofweekOTSF2Day10[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '10-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '10-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day10.length; j++){
             if(this.timeofweekOTSF2Day10[j].roomid == 16){
               this.timeofweekOTSF2Day10[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -11621,13 +11624,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day10.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day10[j].showremark = true;
                 this.timeofweekOTSF2Day10[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '10-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '10-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day10.length; j++){
             if(this.timeofweekOTSF2Day10[j].roomid == 17){
               this.timeofweekOTSF2Day10[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -11643,13 +11646,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day10.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day10[j].showremark = true;
                 this.timeofweekOTSF2Day10[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '10-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '10-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day10.length; j++){
             if(this.timeofweekOTSF2Day10[j].roomid == 18){
               this.timeofweekOTSF2Day10[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -11665,13 +11668,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day10.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day10[j].showremark = true;
                 this.timeofweekOTSF2Day10[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '11-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '11-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day11.length; j++){
             if(this.timeofweekOTSF2Day11[j].roomid == 0){
               this.timeofweekOTSF2Day11[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -11687,13 +11690,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day11.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day11[j].showremark = true;
                 this.timeofweekOTSF2Day11[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '11-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '11-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day11.length; j++){
             if(this.timeofweekOTSF2Day11[j].roomid == 1){
               this.timeofweekOTSF2Day11[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -11709,13 +11712,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day11.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day11[j].showremark = true;
                 this.timeofweekOTSF2Day11[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '11-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '11-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day11.length; j++){
             if(this.timeofweekOTSF2Day11[j].roomid == 2){
               this.timeofweekOTSF2Day11[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -11731,13 +11734,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day11.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day11[j].showremark = true;
                 this.timeofweekOTSF2Day11[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '11-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '11-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day11.length; j++){
             if(this.timeofweekOTSF2Day11[j].roomid == 3){
               this.timeofweekOTSF2Day11[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -11753,13 +11756,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day11.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day11[j].showremark = true;
                 this.timeofweekOTSF2Day11[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '11-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '11-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day11.length; j++){
             if(this.timeofweekOTSF2Day11[j].roomid == 4){
               this.timeofweekOTSF2Day11[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -11775,13 +11778,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day11.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day11[j].showremark = true;
                 this.timeofweekOTSF2Day11[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '11-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '11-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day11.length; j++){
             if(this.timeofweekOTSF2Day11[j].roomid == 5){
               this.timeofweekOTSF2Day11[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -11797,13 +11800,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day11.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day11[j].showremark = true;
                 this.timeofweekOTSF2Day11[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '11-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '11-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day11.length; j++){
             if(this.timeofweekOTSF2Day11[j].roomid == 6){
               this.timeofweekOTSF2Day11[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -11819,13 +11822,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day11.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day11[j].showremark = true;
                 this.timeofweekOTSF2Day11[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '11-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '11-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day11.length; j++){
             if(this.timeofweekOTSF2Day11[j].roomid == 7){
               this.timeofweekOTSF2Day11[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -11841,13 +11844,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day11.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day11[j].showremark = true;
                 this.timeofweekOTSF2Day11[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '11-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '11-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day11.length; j++){
             if(this.timeofweekOTSF2Day11[j].roomid == 8){
               this.timeofweekOTSF2Day11[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -11863,13 +11866,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day11.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day11[j].showremark = true;
                 this.timeofweekOTSF2Day11[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '11-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '11-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day11.length; j++){
             if(this.timeofweekOTSF2Day11[j].roomid == 9){
               this.timeofweekOTSF2Day11[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -11885,13 +11888,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day11.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day11[j].showremark = true;
                 this.timeofweekOTSF2Day11[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '11-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '11-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day11.length; j++){
             if(this.timeofweekOTSF2Day11[j].roomid == 10){
               this.timeofweekOTSF2Day11[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -11907,13 +11910,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day11.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day11[j].showremark = true;
                 this.timeofweekOTSF2Day11[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '11-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '11-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day11.length; j++){
             if(this.timeofweekOTSF2Day11[j].roomid == 11){
               this.timeofweekOTSF2Day11[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -11929,13 +11932,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day11.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day11[j].showremark = true;
                 this.timeofweekOTSF2Day11[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '11-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '11-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day11.length; j++){
             if(this.timeofweekOTSF2Day11[j].roomid == 12){
               this.timeofweekOTSF2Day11[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -11951,13 +11954,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day11.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day11[j].showremark = true;
                 this.timeofweekOTSF2Day11[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '11-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '11-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day11.length; j++){
             if(this.timeofweekOTSF2Day11[j].roomid == 13){
               this.timeofweekOTSF2Day11[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -11973,13 +11976,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day11.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day11[j].showremark = true;
                 this.timeofweekOTSF2Day11[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '11-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '11-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day11.length; j++){
             if(this.timeofweekOTSF2Day11[j].roomid == 14){
               this.timeofweekOTSF2Day11[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -11995,13 +11998,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day11.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day11[j].showremark = true;
                 this.timeofweekOTSF2Day11[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '11-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '11-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day11.length; j++){
             if(this.timeofweekOTSF2Day11[j].roomid == 15){
               this.timeofweekOTSF2Day11[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -12017,13 +12020,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day11.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day11[j].showremark = true;
                 this.timeofweekOTSF2Day11[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '11-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '11-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day11.length; j++){
             if(this.timeofweekOTSF2Day11[j].roomid == 16){
               this.timeofweekOTSF2Day11[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -12039,13 +12042,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day11.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day11[j].showremark = true;
                 this.timeofweekOTSF2Day11[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '11-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '11-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day11.length; j++){
             if(this.timeofweekOTSF2Day11[j].roomid == 17){
               this.timeofweekOTSF2Day11[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -12061,13 +12064,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day11.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day11[j].showremark = true;
                 this.timeofweekOTSF2Day11[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '11-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '11-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day11.length; j++){
             if(this.timeofweekOTSF2Day11[j].roomid == 18){
               this.timeofweekOTSF2Day11[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -12083,13 +12086,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day11.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day11[j].showremark = true;
                 this.timeofweekOTSF2Day11[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '12-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '12-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day12.length; j++){
             if(this.timeofweekOTSF2Day12[j].roomid == 0){
               this.timeofweekOTSF2Day12[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -12105,13 +12108,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day12.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day12[j].showremark = true;
                 this.timeofweekOTSF2Day12[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '12-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '12-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day12.length; j++){
             if(this.timeofweekOTSF2Day12[j].roomid == 1){
               this.timeofweekOTSF2Day12[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -12127,13 +12130,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day12.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day12[j].showremark = true;
                 this.timeofweekOTSF2Day12[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '12-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '12-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day12.length; j++){
             if(this.timeofweekOTSF2Day12[j].roomid == 2){
               this.timeofweekOTSF2Day12[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -12149,13 +12152,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day12.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day12[j].showremark = true;
                 this.timeofweekOTSF2Day12[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '12-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '12-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day12.length; j++){
             if(this.timeofweekOTSF2Day12[j].roomid == 3){
               this.timeofweekOTSF2Day12[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -12171,13 +12174,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day12.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day12[j].showremark = true;
                 this.timeofweekOTSF2Day12[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '12-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '12-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day12.length; j++){
             if(this.timeofweekOTSF2Day12[j].roomid == 4){
               this.timeofweekOTSF2Day12[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -12193,13 +12196,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day12.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day12[j].showremark = true;
                 this.timeofweekOTSF2Day12[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '12-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '12-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day12.length; j++){
             if(this.timeofweekOTSF2Day12[j].roomid == 5){
               this.timeofweekOTSF2Day12[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -12215,13 +12218,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day12.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day12[j].showremark = true;
                 this.timeofweekOTSF2Day12[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '12-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '12-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day12.length; j++){
             if(this.timeofweekOTSF2Day12[j].roomid == 6){
               this.timeofweekOTSF2Day12[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -12237,13 +12240,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day12.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day12[j].showremark = true;
                 this.timeofweekOTSF2Day12[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '12-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '12-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day12.length; j++){
             if(this.timeofweekOTSF2Day12[j].roomid == 7){
               this.timeofweekOTSF2Day12[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -12259,13 +12262,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day12.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day12[j].showremark = true;
                 this.timeofweekOTSF2Day12[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '12-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '12-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day12.length; j++){
             if(this.timeofweekOTSF2Day12[j].roomid == 8){
               this.timeofweekOTSF2Day12[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -12281,13 +12284,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day12.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day12[j].showremark = true;
                 this.timeofweekOTSF2Day12[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '12-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '12-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day12.length; j++){
             if(this.timeofweekOTSF2Day12[j].roomid == 9){
               this.timeofweekOTSF2Day12[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -12303,13 +12306,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day12.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day12[j].showremark = true;
                 this.timeofweekOTSF2Day12[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '12-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '12-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day12.length; j++){
             if(this.timeofweekOTSF2Day12[j].roomid == 10){
               this.timeofweekOTSF2Day12[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -12325,13 +12328,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day12.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day12[j].showremark = true;
                 this.timeofweekOTSF2Day12[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '12-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '12-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day12.length; j++){
             if(this.timeofweekOTSF2Day12[j].roomid == 11){
               this.timeofweekOTSF2Day12[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -12347,13 +12350,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day12.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day12[j].showremark = true;
                 this.timeofweekOTSF2Day12[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '12-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '12-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day12.length; j++){
             if(this.timeofweekOTSF2Day12[j].roomid == 12){
               this.timeofweekOTSF2Day12[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -12369,13 +12372,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day12.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day12[j].showremark = true;
                 this.timeofweekOTSF2Day12[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '12-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '12-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day12.length; j++){
             if(this.timeofweekOTSF2Day12[j].roomid == 13){
               this.timeofweekOTSF2Day12[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -12391,13 +12394,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day12.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day12[j].showremark = true;
                 this.timeofweekOTSF2Day12[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '12-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '12-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day12.length; j++){
             if(this.timeofweekOTSF2Day12[j].roomid == 14){
               this.timeofweekOTSF2Day12[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -12413,13 +12416,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day12.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day12[j].showremark = true;
                 this.timeofweekOTSF2Day12[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '12-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '12-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day12.length; j++){
             if(this.timeofweekOTSF2Day12[j].roomid == 15){
               this.timeofweekOTSF2Day12[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -12435,13 +12438,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day12.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day12[j].showremark = true;
                 this.timeofweekOTSF2Day12[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '12-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '12-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day12.length; j++){
             if(this.timeofweekOTSF2Day12[j].roomid == 16){
               this.timeofweekOTSF2Day12[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -12457,13 +12460,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day12.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day12[j].showremark = true;
                 this.timeofweekOTSF2Day12[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '12-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '12-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day12.length; j++){
             if(this.timeofweekOTSF2Day12[j].roomid == 17){
               this.timeofweekOTSF2Day12[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -12479,13 +12482,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day12.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day12[j].showremark = true;
                 this.timeofweekOTSF2Day12[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '12-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '12-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day12.length; j++){
             if(this.timeofweekOTSF2Day12[j].roomid == 18){
               this.timeofweekOTSF2Day12[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -12501,13 +12504,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day12.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day12[j].showremark = true;
                 this.timeofweekOTSF2Day12[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '13-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '13-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day13.length; j++){
             if(this.timeofweekOTSF2Day13[j].roomid == 0){
               this.timeofweekOTSF2Day13[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -12523,13 +12526,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day13.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day13[j].showremark = true;
                 this.timeofweekOTSF2Day13[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '13-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '13-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day13.length; j++){
             if(this.timeofweekOTSF2Day13[j].roomid == 1){
               this.timeofweekOTSF2Day13[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -12545,13 +12548,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day13.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day13[j].showremark = true;
                 this.timeofweekOTSF2Day13[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '13-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '13-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day13.length; j++){
             if(this.timeofweekOTSF2Day13[j].roomid == 2){
               this.timeofweekOTSF2Day13[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -12567,13 +12570,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day13.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day13[j].showremark = true;
                 this.timeofweekOTSF2Day13[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '13-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '13-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day13.length; j++){
             if(this.timeofweekOTSF2Day13[j].roomid == 3){
               this.timeofweekOTSF2Day13[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -12589,13 +12592,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day13.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day13[j].showremark = true;
                 this.timeofweekOTSF2Day13[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '13-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '13-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day13.length; j++){
             if(this.timeofweekOTSF2Day13[j].roomid == 4){
               this.timeofweekOTSF2Day13[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -12611,13 +12614,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day13.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day13[j].showremark = true;
                 this.timeofweekOTSF2Day13[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '13-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '13-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day13.length; j++){
             if(this.timeofweekOTSF2Day13[j].roomid == 5){
               this.timeofweekOTSF2Day13[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -12633,13 +12636,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day13.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day13[j].showremark = true;
                 this.timeofweekOTSF2Day13[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '13-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '13-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day13.length; j++){
             if(this.timeofweekOTSF2Day13[j].roomid == 6){
               this.timeofweekOTSF2Day13[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -12655,13 +12658,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day13.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day13[j].showremark = true;
                 this.timeofweekOTSF2Day13[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '13-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '13-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day13.length; j++){
             if(this.timeofweekOTSF2Day13[j].roomid == 7){
               this.timeofweekOTSF2Day13[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -12677,13 +12680,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day13.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day13[j].showremark = true;
                 this.timeofweekOTSF2Day13[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '13-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '13-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day13.length; j++){
             if(this.timeofweekOTSF2Day13[j].roomid == 8){
               this.timeofweekOTSF2Day13[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -12699,13 +12702,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day13.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day13[j].showremark = true;
                 this.timeofweekOTSF2Day13[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '13-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '13-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day13.length; j++){
             if(this.timeofweekOTSF2Day13[j].roomid == 9){
               this.timeofweekOTSF2Day13[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -12721,13 +12724,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day13.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day13[j].showremark = true;
                 this.timeofweekOTSF2Day13[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '13-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '13-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day13.length; j++){
             if(this.timeofweekOTSF2Day13[j].roomid == 10){
               this.timeofweekOTSF2Day13[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -12743,13 +12746,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day13.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day13[j].showremark = true;
                 this.timeofweekOTSF2Day13[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '13-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '13-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day13.length; j++){
             if(this.timeofweekOTSF2Day13[j].roomid == 11){
               this.timeofweekOTSF2Day13[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -12765,13 +12768,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day13.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day13[j].showremark = true;
                 this.timeofweekOTSF2Day13[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '13-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '13-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day13.length; j++){
             if(this.timeofweekOTSF2Day13[j].roomid == 12){
               this.timeofweekOTSF2Day13[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -12787,13 +12790,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day13.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day13[j].showremark = true;
                 this.timeofweekOTSF2Day13[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '13-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '13-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day13.length; j++){
             if(this.timeofweekOTSF2Day13[j].roomid == 13){
               this.timeofweekOTSF2Day13[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -12809,13 +12812,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day13.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day13[j].showremark = true;
                 this.timeofweekOTSF2Day13[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '13-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '13-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day13.length; j++){
             if(this.timeofweekOTSF2Day13[j].roomid == 14){
               this.timeofweekOTSF2Day13[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -12831,13 +12834,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day13.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day13[j].showremark = true;
                 this.timeofweekOTSF2Day13[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '13-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '13-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day13.length; j++){
             if(this.timeofweekOTSF2Day13[j].roomid == 15){
               this.timeofweekOTSF2Day13[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -12853,13 +12856,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day13.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day13[j].showremark = true;
                 this.timeofweekOTSF2Day13[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '13-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '13-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day13.length; j++){
             if(this.timeofweekOTSF2Day13[j].roomid == 16){
               this.timeofweekOTSF2Day13[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -12875,13 +12878,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day13.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day13[j].showremark = true;
                 this.timeofweekOTSF2Day13[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '13-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '13-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day13.length; j++){
             if(this.timeofweekOTSF2Day13[j].roomid == 17){
               this.timeofweekOTSF2Day13[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -12897,13 +12900,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day13.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day13[j].showremark = true;
                 this.timeofweekOTSF2Day13[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '13-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '13-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day13.length; j++){
             if(this.timeofweekOTSF2Day13[j].roomid == 18){
               this.timeofweekOTSF2Day13[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -12919,13 +12922,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day13.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day13[j].showremark = true;
                 this.timeofweekOTSF2Day13[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '14-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '14-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day14.length; j++){
             if(this.timeofweekOTSF2Day14[j].roomid == 0){
               this.timeofweekOTSF2Day14[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -12941,13 +12944,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day14.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day14[j].showremark = true;
                 this.timeofweekOTSF2Day14[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '14-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '14-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day14.length; j++){
             if(this.timeofweekOTSF2Day14[j].roomid == 1){
               this.timeofweekOTSF2Day14[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -12963,13 +12966,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day14.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day14[j].showremark = true;
                 this.timeofweekOTSF2Day14[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '14-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '14-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day14.length; j++){
             if(this.timeofweekOTSF2Day14[j].roomid == 2){
               this.timeofweekOTSF2Day14[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -12985,13 +12988,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day14.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day14[j].showremark = true;
                 this.timeofweekOTSF2Day14[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '14-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '14-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day14.length; j++){
             if(this.timeofweekOTSF2Day14[j].roomid == 3){
               this.timeofweekOTSF2Day14[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -13007,13 +13010,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day14.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day14[j].showremark = true;
                 this.timeofweekOTSF2Day14[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '14-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '14-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day14.length; j++){
             if(this.timeofweekOTSF2Day14[j].roomid == 4){
               this.timeofweekOTSF2Day14[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -13029,13 +13032,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day14.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day14[j].showremark = true;
                 this.timeofweekOTSF2Day14[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '14-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '14-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day14.length; j++){
             if(this.timeofweekOTSF2Day14[j].roomid == 5){
               this.timeofweekOTSF2Day14[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -13051,13 +13054,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day14.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day14[j].showremark = true;
                 this.timeofweekOTSF2Day14[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '14-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '14-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day14.length; j++){
             if(this.timeofweekOTSF2Day14[j].roomid == 6){
               this.timeofweekOTSF2Day14[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -13073,13 +13076,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day14.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day14[j].showremark = true;
                 this.timeofweekOTSF2Day14[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '14-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '14-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day14.length; j++){
             if(this.timeofweekOTSF2Day14[j].roomid == 7){
               this.timeofweekOTSF2Day14[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -13095,13 +13098,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day14.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day14[j].showremark = true;
                 this.timeofweekOTSF2Day14[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '14-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '14-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day14.length; j++){
             if(this.timeofweekOTSF2Day14[j].roomid == 8){
               this.timeofweekOTSF2Day14[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -13117,13 +13120,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day14.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day14[j].showremark = true;
                 this.timeofweekOTSF2Day14[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '14-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '14-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day14.length; j++){
             if(this.timeofweekOTSF2Day14[j].roomid == 9){
               this.timeofweekOTSF2Day14[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -13139,13 +13142,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day14.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day14[j].showremark = true;
                 this.timeofweekOTSF2Day14[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '14-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '14-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day14.length; j++){
             if(this.timeofweekOTSF2Day14[j].roomid == 10){
               this.timeofweekOTSF2Day14[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -13161,13 +13164,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day14.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day14[j].showremark = true;
                 this.timeofweekOTSF2Day14[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '14-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '14-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day14.length; j++){
             if(this.timeofweekOTSF2Day14[j].roomid == 11){
               this.timeofweekOTSF2Day14[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -13183,13 +13186,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day14.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day14[j].showremark = true;
                 this.timeofweekOTSF2Day14[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '14-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '14-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day14.length; j++){
             if(this.timeofweekOTSF2Day14[j].roomid == 12){
               this.timeofweekOTSF2Day14[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -13205,13 +13208,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day14.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day14[j].showremark = true;
                 this.timeofweekOTSF2Day14[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '14-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '14-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day14.length; j++){
             if(this.timeofweekOTSF2Day14[j].roomid == 13){
               this.timeofweekOTSF2Day14[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -13227,13 +13230,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day14.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day14[j].showremark = true;
                 this.timeofweekOTSF2Day14[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '14-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '14-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day14.length; j++){
             if(this.timeofweekOTSF2Day14[j].roomid == 14){
               this.timeofweekOTSF2Day14[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -13249,13 +13252,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day14.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day14[j].showremark = true;
                 this.timeofweekOTSF2Day14[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '14-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '14-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day14.length; j++){
             if(this.timeofweekOTSF2Day14[j].roomid == 15){
               this.timeofweekOTSF2Day14[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -13271,13 +13274,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day14.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day14[j].showremark = true;
                 this.timeofweekOTSF2Day14[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '14-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '14-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day14.length; j++){
             if(this.timeofweekOTSF2Day14[j].roomid == 16){
               this.timeofweekOTSF2Day14[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -13293,13 +13296,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day14.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day14[j].showremark = true;
                 this.timeofweekOTSF2Day14[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '14-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '14-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day14.length; j++){
             if(this.timeofweekOTSF2Day14[j].roomid == 17){
               this.timeofweekOTSF2Day14[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -13315,13 +13318,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day14.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day14[j].showremark = true;
                 this.timeofweekOTSF2Day14[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '14-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '14-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day14.length; j++){
             if(this.timeofweekOTSF2Day14[j].roomid == 18){
               this.timeofweekOTSF2Day14[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -13337,13 +13340,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day14.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day14[j].showremark = true;
                 this.timeofweekOTSF2Day14[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '15-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '15-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day15.length; j++){
             if(this.timeofweekOTSF2Day15[j].roomid == 0){
               this.timeofweekOTSF2Day15[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -13359,13 +13362,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day15.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day15[j].showremark = true;
                 this.timeofweekOTSF2Day15[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '15-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '15-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day15.length; j++){
             if(this.timeofweekOTSF2Day15[j].roomid == 1){
               this.timeofweekOTSF2Day15[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -13381,13 +13384,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day15.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day15[j].showremark = true;
                 this.timeofweekOTSF2Day15[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '15-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '15-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day15.length; j++){
             if(this.timeofweekOTSF2Day15[j].roomid == 2){
               this.timeofweekOTSF2Day15[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -13403,13 +13406,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day15.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day15[j].showremark = true;
                 this.timeofweekOTSF2Day15[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '15-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '15-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day15.length; j++){
             if(this.timeofweekOTSF2Day15[j].roomid == 3){
               this.timeofweekOTSF2Day15[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -13425,13 +13428,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day15.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day15[j].showremark = true;
                 this.timeofweekOTSF2Day15[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '15-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '15-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day15.length; j++){
             if(this.timeofweekOTSF2Day15[j].roomid == 4){
               this.timeofweekOTSF2Day15[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -13447,13 +13450,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day15.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day15[j].showremark = true;
                 this.timeofweekOTSF2Day15[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '15-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '15-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day15.length; j++){
             if(this.timeofweekOTSF2Day15[j].roomid == 5){
               this.timeofweekOTSF2Day15[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -13469,13 +13472,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day15.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day15[j].showremark = true;
                 this.timeofweekOTSF2Day15[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '15-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '15-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day15.length; j++){
             if(this.timeofweekOTSF2Day15[j].roomid == 6){
               this.timeofweekOTSF2Day15[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -13491,13 +13494,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day15.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day15[j].showremark = true;
                 this.timeofweekOTSF2Day15[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '15-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '15-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day15.length; j++){
             if(this.timeofweekOTSF2Day15[j].roomid == 7){
               this.timeofweekOTSF2Day15[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -13513,13 +13516,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day15.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day15[j].showremark = true;
                 this.timeofweekOTSF2Day15[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '15-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '15-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day15.length; j++){
             if(this.timeofweekOTSF2Day15[j].roomid == 8){
               this.timeofweekOTSF2Day15[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -13535,13 +13538,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day15.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day15[j].showremark = true;
                 this.timeofweekOTSF2Day15[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '15-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '15-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day15.length; j++){
             if(this.timeofweekOTSF2Day15[j].roomid == 9){
               this.timeofweekOTSF2Day15[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -13557,13 +13560,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day15.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day15[j].showremark = true;
                 this.timeofweekOTSF2Day15[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '15-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '15-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day15.length; j++){
             if(this.timeofweekOTSF2Day15[j].roomid == 10){
               this.timeofweekOTSF2Day15[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -13579,13 +13582,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day15.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day15[j].showremark = true;
                 this.timeofweekOTSF2Day15[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '15-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '15-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day15.length; j++){
             if(this.timeofweekOTSF2Day15[j].roomid == 11){
               this.timeofweekOTSF2Day15[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -13601,13 +13604,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day15.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day15[j].showremark = true;
                 this.timeofweekOTSF2Day15[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '15-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '15-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day15.length; j++){
             if(this.timeofweekOTSF2Day15[j].roomid == 12){
               this.timeofweekOTSF2Day15[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -13623,13 +13626,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day15.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day15[j].showremark = true;
                 this.timeofweekOTSF2Day15[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '15-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '15-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day15.length; j++){
             if(this.timeofweekOTSF2Day15[j].roomid == 13){
               this.timeofweekOTSF2Day15[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -13645,13 +13648,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day15.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day15[j].showremark = true;
                 this.timeofweekOTSF2Day15[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '15-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '15-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day15.length; j++){
             if(this.timeofweekOTSF2Day15[j].roomid == 14){
               this.timeofweekOTSF2Day15[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -13667,13 +13670,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day15.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day15[j].showremark = true;
                 this.timeofweekOTSF2Day15[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '15-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '15-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day15.length; j++){
             if(this.timeofweekOTSF2Day15[j].roomid == 15){
               this.timeofweekOTSF2Day15[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -13689,13 +13692,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day15.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day15[j].showremark = true;
                 this.timeofweekOTSF2Day15[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '15-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '15-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day15.length; j++){
             if(this.timeofweekOTSF2Day15[j].roomid == 16){
               this.timeofweekOTSF2Day15[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -13711,13 +13714,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day15.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day15[j].showremark = true;
                 this.timeofweekOTSF2Day15[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '15-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '15-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day15.length; j++){
             if(this.timeofweekOTSF2Day15[j].roomid == 17){
               this.timeofweekOTSF2Day15[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -13733,13 +13736,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day15.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day15[j].showremark = true;
                 this.timeofweekOTSF2Day15[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '15-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '15-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day15.length; j++){
             if(this.timeofweekOTSF2Day15[j].roomid == 18){
               this.timeofweekOTSF2Day15[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -13755,13 +13758,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day15.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day15[j].showremark = true;
                 this.timeofweekOTSF2Day15[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '16-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '16-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day16.length; j++){
             if(this.timeofweekOTSF2Day16[j].roomid == 0){
               this.timeofweekOTSF2Day16[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -13777,13 +13780,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day16.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day16[j].showremark = true;
                 this.timeofweekOTSF2Day16[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '16-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '16-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day16.length; j++){
             if(this.timeofweekOTSF2Day16[j].roomid == 1){
               this.timeofweekOTSF2Day16[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -13799,13 +13802,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day16.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day16[j].showremark = true;
                 this.timeofweekOTSF2Day16[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '16-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '16-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day16.length; j++){
             if(this.timeofweekOTSF2Day16[j].roomid == 2){
               this.timeofweekOTSF2Day16[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -13821,13 +13824,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day16.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day16[j].showremark = true;
                 this.timeofweekOTSF2Day16[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '16-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '16-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day16.length; j++){
             if(this.timeofweekOTSF2Day16[j].roomid == 3){
               this.timeofweekOTSF2Day16[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -13843,13 +13846,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day16.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day16[j].showremark = true;
                 this.timeofweekOTSF2Day16[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '16-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '16-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day16.length; j++){
             if(this.timeofweekOTSF2Day16[j].roomid == 4){
               this.timeofweekOTSF2Day16[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -13865,13 +13868,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day16.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day16[j].showremark = true;
                 this.timeofweekOTSF2Day16[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '16-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '16-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day16.length; j++){
             if(this.timeofweekOTSF2Day16[j].roomid == 5){
               this.timeofweekOTSF2Day16[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -13887,13 +13890,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day16.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day16[j].showremark = true;
                 this.timeofweekOTSF2Day16[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '16-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '16-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day16.length; j++){
             if(this.timeofweekOTSF2Day16[j].roomid == 6){
               this.timeofweekOTSF2Day16[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -13909,13 +13912,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day16.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day16[j].showremark = true;
                 this.timeofweekOTSF2Day16[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '16-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '16-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day16.length; j++){
             if(this.timeofweekOTSF2Day16[j].roomid == 7){
               this.timeofweekOTSF2Day16[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -13931,13 +13934,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day16.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day16[j].showremark = true;
                 this.timeofweekOTSF2Day16[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '16-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '16-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day16.length; j++){
             if(this.timeofweekOTSF2Day16[j].roomid == 8){
               this.timeofweekOTSF2Day16[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -13953,13 +13956,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day16.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day16[j].showremark = true;
                 this.timeofweekOTSF2Day16[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '16-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '16-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day16.length; j++){
             if(this.timeofweekOTSF2Day16[j].roomid == 9){
               this.timeofweekOTSF2Day16[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -13975,13 +13978,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day16.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day16[j].showremark = true;
                 this.timeofweekOTSF2Day16[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '16-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '16-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day16.length; j++){
             if(this.timeofweekOTSF2Day16[j].roomid == 10){
               this.timeofweekOTSF2Day16[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -13997,13 +14000,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day16.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day16[j].showremark = true;
                 this.timeofweekOTSF2Day16[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '16-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '16-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day16.length; j++){
             if(this.timeofweekOTSF2Day16[j].roomid == 11){
               this.timeofweekOTSF2Day16[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -14019,13 +14022,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day16.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day16[j].showremark = true;
                 this.timeofweekOTSF2Day16[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '16-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '16-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day16.length; j++){
             if(this.timeofweekOTSF2Day16[j].roomid == 12){
               this.timeofweekOTSF2Day16[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -14041,13 +14044,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day16.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day16[j].showremark = true;
                 this.timeofweekOTSF2Day16[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '16-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '16-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day16.length; j++){
             if(this.timeofweekOTSF2Day16[j].roomid == 13){
               this.timeofweekOTSF2Day16[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -14063,13 +14066,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day16.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day16[j].showremark = true;
                 this.timeofweekOTSF2Day16[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '16-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '16-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day16.length; j++){
             if(this.timeofweekOTSF2Day16[j].roomid == 14){
               this.timeofweekOTSF2Day16[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -14085,13 +14088,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day16.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day16[j].showremark = true;
                 this.timeofweekOTSF2Day16[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '16-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '16-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day16.length; j++){
             if(this.timeofweekOTSF2Day16[j].roomid == 15){
               this.timeofweekOTSF2Day16[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -14107,13 +14110,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day16.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day16[j].showremark = true;
                 this.timeofweekOTSF2Day16[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '16-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '16-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day16.length; j++){
             if(this.timeofweekOTSF2Day16[j].roomid == 16){
               this.timeofweekOTSF2Day16[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -14129,13 +14132,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day16.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day16[j].showremark = true;
                 this.timeofweekOTSF2Day16[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '16-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '16-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day16.length; j++){
             if(this.timeofweekOTSF2Day16[j].roomid == 17){
               this.timeofweekOTSF2Day16[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -14151,13 +14154,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day16.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day16[j].showremark = true;
                 this.timeofweekOTSF2Day16[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '16-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '16-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day16.length; j++){
             if(this.timeofweekOTSF2Day16[j].roomid == 18){
               this.timeofweekOTSF2Day16[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -14173,13 +14176,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day16.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day16[j].showremark = true;
                 this.timeofweekOTSF2Day16[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '17-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '17-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day17.length; j++){
             if(this.timeofweekOTSF2Day17[j].roomid == 0){
               this.timeofweekOTSF2Day17[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -14195,13 +14198,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day17.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day17[j].showremark = true;
                 this.timeofweekOTSF2Day17[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '17-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '17-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day17.length; j++){
             if(this.timeofweekOTSF2Day17[j].roomid == 1){
               this.timeofweekOTSF2Day17[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -14217,13 +14220,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day17.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day17[j].showremark = true;
                 this.timeofweekOTSF2Day17[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '17-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '17-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day17.length; j++){
             if(this.timeofweekOTSF2Day17[j].roomid == 2){
               this.timeofweekOTSF2Day17[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -14239,13 +14242,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day17.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day17[j].showremark = true;
                 this.timeofweekOTSF2Day17[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '17-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '17-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day17.length; j++){
             if(this.timeofweekOTSF2Day17[j].roomid == 3){
               this.timeofweekOTSF2Day17[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -14261,13 +14264,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day17.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day17[j].showremark = true;
                 this.timeofweekOTSF2Day17[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '17-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '17-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day17.length; j++){
             if(this.timeofweekOTSF2Day17[j].roomid == 4){
               this.timeofweekOTSF2Day17[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -14283,13 +14286,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day17.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day17[j].showremark = true;
                 this.timeofweekOTSF2Day17[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '17-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '17-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day17.length; j++){
             if(this.timeofweekOTSF2Day17[j].roomid == 5){
               this.timeofweekOTSF2Day17[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -14305,13 +14308,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day17.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day17[j].showremark = true;
                 this.timeofweekOTSF2Day17[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '17-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '17-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day17.length; j++){
             if(this.timeofweekOTSF2Day17[j].roomid == 6){
               this.timeofweekOTSF2Day17[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -14327,13 +14330,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day17.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day17[j].showremark = true;
                 this.timeofweekOTSF2Day17[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '17-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '17-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day17.length; j++){
             if(this.timeofweekOTSF2Day17[j].roomid == 7){
               this.timeofweekOTSF2Day17[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -14349,13 +14352,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day17.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day17[j].showremark = true;
                 this.timeofweekOTSF2Day17[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '17-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '17-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day17.length; j++){
             if(this.timeofweekOTSF2Day17[j].roomid == 8){
               this.timeofweekOTSF2Day17[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -14371,13 +14374,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day17.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day17[j].showremark = true;
                 this.timeofweekOTSF2Day17[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '17-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '17-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day17.length; j++){
             if(this.timeofweekOTSF2Day17[j].roomid == 9){
               this.timeofweekOTSF2Day17[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -14393,13 +14396,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day17.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day17[j].showremark = true;
                 this.timeofweekOTSF2Day17[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '17-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '17-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day17.length; j++){
             if(this.timeofweekOTSF2Day17[j].roomid == 10){
               this.timeofweekOTSF2Day17[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -14415,13 +14418,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day17.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day17[j].showremark = true;
                 this.timeofweekOTSF2Day17[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '17-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '17-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day17.length; j++){
             if(this.timeofweekOTSF2Day17[j].roomid == 11){
               this.timeofweekOTSF2Day17[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -14437,13 +14440,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day17.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day17[j].showremark = true;
                 this.timeofweekOTSF2Day17[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '17-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '17-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day17.length; j++){
             if(this.timeofweekOTSF2Day17[j].roomid == 12){
               this.timeofweekOTSF2Day17[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -14459,13 +14462,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day17.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day17[j].showremark = true;
                 this.timeofweekOTSF2Day17[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '17-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '17-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day17.length; j++){
             if(this.timeofweekOTSF2Day17[j].roomid == 13){
               this.timeofweekOTSF2Day17[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -14481,13 +14484,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day17.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day17[j].showremark = true;
                 this.timeofweekOTSF2Day17[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '17-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '17-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day17.length; j++){
             if(this.timeofweekOTSF2Day17[j].roomid == 14){
               this.timeofweekOTSF2Day17[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -14503,13 +14506,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day17.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day17[j].showremark = true;
                 this.timeofweekOTSF2Day17[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '17-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '17-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day17.length; j++){
             if(this.timeofweekOTSF2Day17[j].roomid == 15){
               this.timeofweekOTSF2Day17[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -14525,13 +14528,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day17.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day17[j].showremark = true;
                 this.timeofweekOTSF2Day17[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '17-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '17-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day17.length; j++){
             if(this.timeofweekOTSF2Day17[j].roomid == 16){
               this.timeofweekOTSF2Day17[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -14547,13 +14550,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day17.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day17[j].showremark = true;
                 this.timeofweekOTSF2Day17[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '17-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '17-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day17.length; j++){
             if(this.timeofweekOTSF2Day17[j].roomid == 17){
               this.timeofweekOTSF2Day17[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -14569,13 +14572,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day17.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day17[j].showremark = true;
                 this.timeofweekOTSF2Day17[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '17-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '17-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day17.length; j++){
             if(this.timeofweekOTSF2Day17[j].roomid == 18){
               this.timeofweekOTSF2Day17[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -14591,13 +14594,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day17.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day17[j].showremark = true;
                 this.timeofweekOTSF2Day17[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '18-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '18-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day18.length; j++){
             if(this.timeofweekOTSF2Day18[j].roomid == 0){
               this.timeofweekOTSF2Day18[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -14613,13 +14616,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day18.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day18[j].showremark = true;
                 this.timeofweekOTSF2Day18[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '18-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '18-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day18.length; j++){
             if(this.timeofweekOTSF2Day18[j].roomid == 1){
               this.timeofweekOTSF2Day18[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -14635,13 +14638,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day18.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day18[j].showremark = true;
                 this.timeofweekOTSF2Day18[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '18-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '18-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day18.length; j++){
             if(this.timeofweekOTSF2Day18[j].roomid == 2){
               this.timeofweekOTSF2Day18[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -14657,13 +14660,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day18.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day18[j].showremark = true;
                 this.timeofweekOTSF2Day18[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '18-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '18-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day18.length; j++){
             if(this.timeofweekOTSF2Day18[j].roomid == 3){
               this.timeofweekOTSF2Day18[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -14679,13 +14682,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day18.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day18[j].showremark = true;
                 this.timeofweekOTSF2Day18[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '18-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '18-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day18.length; j++){
             if(this.timeofweekOTSF2Day18[j].roomid == 4){
               this.timeofweekOTSF2Day18[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -14701,13 +14704,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day18.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day18[j].showremark = true;
                 this.timeofweekOTSF2Day18[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '18-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '18-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day18.length; j++){
             if(this.timeofweekOTSF2Day18[j].roomid == 5){
               this.timeofweekOTSF2Day18[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -14723,13 +14726,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day18.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day18[j].showremark = true;
                 this.timeofweekOTSF2Day18[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '18-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '18-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day18.length; j++){
             if(this.timeofweekOTSF2Day18[j].roomid == 6){
               this.timeofweekOTSF2Day18[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -14745,13 +14748,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day18.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day18[j].showremark = true;
                 this.timeofweekOTSF2Day18[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '18-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '18-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day18.length; j++){
             if(this.timeofweekOTSF2Day18[j].roomid == 7){
               this.timeofweekOTSF2Day18[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -14767,13 +14770,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day18.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day18[j].showremark = true;
                 this.timeofweekOTSF2Day18[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '18-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '18-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day18.length; j++){
             if(this.timeofweekOTSF2Day18[j].roomid == 8){
               this.timeofweekOTSF2Day18[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -14789,13 +14792,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day18.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day18[j].showremark = true;
                 this.timeofweekOTSF2Day18[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '18-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '18-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day18.length; j++){
             if(this.timeofweekOTSF2Day18[j].roomid == 9){
               this.timeofweekOTSF2Day18[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -14811,13 +14814,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day18.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day18[j].showremark = true;
                 this.timeofweekOTSF2Day18[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '18-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '18-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day18.length; j++){
             if(this.timeofweekOTSF2Day18[j].roomid == 10){
               this.timeofweekOTSF2Day18[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -14833,13 +14836,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day18.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day18[j].showremark = true;
                 this.timeofweekOTSF2Day18[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '18-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '18-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day18.length; j++){
             if(this.timeofweekOTSF2Day18[j].roomid == 11){
               this.timeofweekOTSF2Day18[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -14855,13 +14858,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day18.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day18[j].showremark = true;
                 this.timeofweekOTSF2Day18[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '18-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '18-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day18.length; j++){
             if(this.timeofweekOTSF2Day18[j].roomid == 12){
               this.timeofweekOTSF2Day18[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -14877,13 +14880,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day18.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day18[j].showremark = true;
                 this.timeofweekOTSF2Day18[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '18-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '18-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day18.length; j++){
             if(this.timeofweekOTSF2Day18[j].roomid == 13){
               this.timeofweekOTSF2Day18[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -14899,13 +14902,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day18.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day18[j].showremark = true;
                 this.timeofweekOTSF2Day18[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '18-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '18-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day18.length; j++){
             if(this.timeofweekOTSF2Day18[j].roomid == 14){
               this.timeofweekOTSF2Day18[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -14921,13 +14924,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day18.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day18[j].showremark = true;
                 this.timeofweekOTSF2Day18[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '18-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '18-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day18.length; j++){
             if(this.timeofweekOTSF2Day18[j].roomid == 15){
               this.timeofweekOTSF2Day18[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -14943,13 +14946,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day18.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day18[j].showremark = true;
                 this.timeofweekOTSF2Day18[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '18-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '18-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day18.length; j++){
             if(this.timeofweekOTSF2Day18[j].roomid == 16){
               this.timeofweekOTSF2Day18[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -14965,13 +14968,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day18.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day18[j].showremark = true;
                 this.timeofweekOTSF2Day18[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '18-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '18-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day18.length; j++){
             if(this.timeofweekOTSF2Day18[j].roomid == 17){
               this.timeofweekOTSF2Day18[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -14987,13 +14990,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day18.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day18[j].showremark = true;
                 this.timeofweekOTSF2Day18[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '18-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '18-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day18.length; j++){
             if(this.timeofweekOTSF2Day18[j].roomid == 18){
               this.timeofweekOTSF2Day18[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -15009,13 +15012,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day18.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day18[j].showremark = true;
                 this.timeofweekOTSF2Day18[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '19-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '19-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day19.length; j++){
             if(this.timeofweekOTSF2Day19[j].roomid == 0){
               this.timeofweekOTSF2Day19[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -15031,13 +15034,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day19.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day19[j].showremark = true;
                 this.timeofweekOTSF2Day19[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '19-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '19-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day19.length; j++){
             if(this.timeofweekOTSF2Day19[j].roomid == 1){
               this.timeofweekOTSF2Day19[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -15053,13 +15056,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day19.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day19[j].showremark = true;
                 this.timeofweekOTSF2Day19[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '19-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '19-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day19.length; j++){
             if(this.timeofweekOTSF2Day19[j].roomid == 2){
               this.timeofweekOTSF2Day19[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -15075,13 +15078,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day19.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day19[j].showremark = true;
                 this.timeofweekOTSF2Day19[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '19-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '19-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day19.length; j++){
             if(this.timeofweekOTSF2Day19[j].roomid == 3){
               this.timeofweekOTSF2Day19[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -15097,13 +15100,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day19.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day19[j].showremark = true;
                 this.timeofweekOTSF2Day19[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '19-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '19-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day19.length; j++){
             if(this.timeofweekOTSF2Day19[j].roomid == 4){
               this.timeofweekOTSF2Day19[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -15119,13 +15122,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day19.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day19[j].showremark = true;
                 this.timeofweekOTSF2Day19[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '19-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '19-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day19.length; j++){
             if(this.timeofweekOTSF2Day19[j].roomid == 5){
               this.timeofweekOTSF2Day19[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -15141,13 +15144,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day19.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day19[j].showremark = true;
                 this.timeofweekOTSF2Day19[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '19-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '19-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day19.length; j++){
             if(this.timeofweekOTSF2Day19[j].roomid == 6){
               this.timeofweekOTSF2Day19[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -15163,13 +15166,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day19.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day19[j].showremark = true;
                 this.timeofweekOTSF2Day19[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '19-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '19-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day19.length; j++){
             if(this.timeofweekOTSF2Day19[j].roomid == 7){
               this.timeofweekOTSF2Day19[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -15185,13 +15188,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day19.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day19[j].showremark = true;
                 this.timeofweekOTSF2Day19[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '19-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '19-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day19.length; j++){
             if(this.timeofweekOTSF2Day19[j].roomid == 8){
               this.timeofweekOTSF2Day19[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -15207,13 +15210,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day19.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day19[j].showremark = true;
                 this.timeofweekOTSF2Day19[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '19-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '19-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day19.length; j++){
             if(this.timeofweekOTSF2Day19[j].roomid == 9){
               this.timeofweekOTSF2Day19[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -15229,13 +15232,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day19.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day19[j].showremark = true;
                 this.timeofweekOTSF2Day19[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '19-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '19-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day19.length; j++){
             if(this.timeofweekOTSF2Day19[j].roomid == 10){
               this.timeofweekOTSF2Day19[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -15251,13 +15254,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day19.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day19[j].showremark = true;
                 this.timeofweekOTSF2Day19[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '19-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '19-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day19.length; j++){
             if(this.timeofweekOTSF2Day19[j].roomid == 11){
               this.timeofweekOTSF2Day19[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -15273,13 +15276,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day19.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day19[j].showremark = true;
                 this.timeofweekOTSF2Day19[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '19-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '19-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day19.length; j++){
             if(this.timeofweekOTSF2Day19[j].roomid == 12){
               this.timeofweekOTSF2Day19[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -15295,13 +15298,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day19.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day19[j].showremark = true;
                 this.timeofweekOTSF2Day19[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '19-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '19-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day19.length; j++){
             if(this.timeofweekOTSF2Day19[j].roomid == 13){
               this.timeofweekOTSF2Day19[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -15317,13 +15320,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day19.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day19[j].showremark = true;
                 this.timeofweekOTSF2Day19[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '19-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '19-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day19.length; j++){
             if(this.timeofweekOTSF2Day19[j].roomid == 14){
               this.timeofweekOTSF2Day19[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -15339,13 +15342,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day19.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day19[j].showremark = true;
                 this.timeofweekOTSF2Day19[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '19-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '19-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day19.length; j++){
             if(this.timeofweekOTSF2Day19[j].roomid == 15){
               this.timeofweekOTSF2Day19[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -15361,13 +15364,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day19.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day19[j].showremark = true;
                 this.timeofweekOTSF2Day19[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '19-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '19-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day19.length; j++){
             if(this.timeofweekOTSF2Day19[j].roomid == 16){
               this.timeofweekOTSF2Day19[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -15383,13 +15386,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day19.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day19[j].showremark = true;
                 this.timeofweekOTSF2Day19[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '19-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '19-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day19.length; j++){
             if(this.timeofweekOTSF2Day19[j].roomid == 17){
               this.timeofweekOTSF2Day19[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -15405,13 +15408,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day19.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day19[j].showremark = true;
                 this.timeofweekOTSF2Day19[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '19-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '19-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day19.length; j++){
             if(this.timeofweekOTSF2Day19[j].roomid == 18){
               this.timeofweekOTSF2Day19[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -15427,13 +15430,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day19.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day19[j].showremark = true;
                 this.timeofweekOTSF2Day19[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '20-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '20-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day20.length; j++){
             if(this.timeofweekOTSF2Day20[j].roomid == 0){
               this.timeofweekOTSF2Day20[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -15449,13 +15452,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day20.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day20[j].showremark = true;
                 this.timeofweekOTSF2Day20[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '20-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '20-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day20.length; j++){
             if(this.timeofweekOTSF2Day20[j].roomid == 1){
               this.timeofweekOTSF2Day20[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -15471,13 +15474,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day20.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day20[j].showremark = true;
                 this.timeofweekOTSF2Day20[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '20-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '20-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day20.length; j++){
             if(this.timeofweekOTSF2Day20[j].roomid == 2){
               this.timeofweekOTSF2Day20[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -15493,13 +15496,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day20.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day20[j].showremark = true;
                 this.timeofweekOTSF2Day20[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '20-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '20-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day20.length; j++){
             if(this.timeofweekOTSF2Day20[j].roomid == 3){
               this.timeofweekOTSF2Day20[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -15515,13 +15518,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day20.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day20[j].showremark = true;
                 this.timeofweekOTSF2Day20[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '20-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '20-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day20.length; j++){
             if(this.timeofweekOTSF2Day20[j].roomid == 4){
               this.timeofweekOTSF2Day20[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -15537,13 +15540,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day20.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day20[j].showremark = true;
                 this.timeofweekOTSF2Day20[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '20-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '20-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day20.length; j++){
             if(this.timeofweekOTSF2Day20[j].roomid == 5){
               this.timeofweekOTSF2Day20[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -15559,13 +15562,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day20.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day20[j].showremark = true;
                 this.timeofweekOTSF2Day20[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '20-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '20-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day20.length; j++){
             if(this.timeofweekOTSF2Day20[j].roomid == 6){
               this.timeofweekOTSF2Day20[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -15581,13 +15584,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day20.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day20[j].showremark = true;
                 this.timeofweekOTSF2Day20[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '20-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '20-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day20.length; j++){
             if(this.timeofweekOTSF2Day20[j].roomid == 7){
               this.timeofweekOTSF2Day20[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -15603,13 +15606,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day20.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day20[j].showremark = true;
                 this.timeofweekOTSF2Day20[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '20-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '20-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day20.length; j++){
             if(this.timeofweekOTSF2Day20[j].roomid == 8){
               this.timeofweekOTSF2Day20[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -15625,13 +15628,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day20.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day20[j].showremark = true;
                 this.timeofweekOTSF2Day20[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '20-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '20-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day20.length; j++){
             if(this.timeofweekOTSF2Day20[j].roomid == 9){
               this.timeofweekOTSF2Day20[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -15647,13 +15650,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day20.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day20[j].showremark = true;
                 this.timeofweekOTSF2Day20[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '20-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '20-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day20.length; j++){
             if(this.timeofweekOTSF2Day20[j].roomid == 10){
               this.timeofweekOTSF2Day20[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -15669,13 +15672,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day20.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day20[j].showremark = true;
                 this.timeofweekOTSF2Day20[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '20-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '20-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day20.length; j++){
             if(this.timeofweekOTSF2Day20[j].roomid == 11){
               this.timeofweekOTSF2Day20[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -15691,13 +15694,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day20.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day20[j].showremark = true;
                 this.timeofweekOTSF2Day20[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '20-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '20-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day20.length; j++){
             if(this.timeofweekOTSF2Day20[j].roomid == 12){
               this.timeofweekOTSF2Day20[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -15713,13 +15716,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day20.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day20[j].showremark = true;
                 this.timeofweekOTSF2Day20[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '20-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '20-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day20.length; j++){
             if(this.timeofweekOTSF2Day20[j].roomid == 13){
               this.timeofweekOTSF2Day20[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -15735,13 +15738,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day20.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day20[j].showremark = true;
                 this.timeofweekOTSF2Day20[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '20-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '20-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day20.length; j++){
             if(this.timeofweekOTSF2Day20[j].roomid == 14){
               this.timeofweekOTSF2Day20[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -15757,13 +15760,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day20.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day20[j].showremark = true;
                 this.timeofweekOTSF2Day20[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '20-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '20-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day20.length; j++){
             if(this.timeofweekOTSF2Day20[j].roomid == 15){
               this.timeofweekOTSF2Day20[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -15779,13 +15782,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day20.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day20[j].showremark = true;
                 this.timeofweekOTSF2Day20[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '20-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '20-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day20.length; j++){
             if(this.timeofweekOTSF2Day20[j].roomid == 16){
               this.timeofweekOTSF2Day20[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -15801,13 +15804,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day20.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day20[j].showremark = true;
                 this.timeofweekOTSF2Day20[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '20-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '20-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day20.length; j++){
             if(this.timeofweekOTSF2Day20[j].roomid == 17){
               this.timeofweekOTSF2Day20[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -15823,13 +15826,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day20.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day20[j].showremark = true;
                 this.timeofweekOTSF2Day20[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '20-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '20-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day20.length; j++){
             if(this.timeofweekOTSF2Day20[j].roomid == 18){
               this.timeofweekOTSF2Day20[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -15845,13 +15848,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day20.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day20[j].showremark = true;
                 this.timeofweekOTSF2Day20[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '21-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '21-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day21.length; j++){
             if(this.timeofweekOTSF2Day21[j].roomid == 0){
               this.timeofweekOTSF2Day21[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -15867,13 +15870,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day21.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day21[j].showremark = true;
                 this.timeofweekOTSF2Day21[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '21-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '21-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day21.length; j++){
             if(this.timeofweekOTSF2Day21[j].roomid == 1){
               this.timeofweekOTSF2Day21[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -15889,13 +15892,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day21.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day21[j].showremark = true;
                 this.timeofweekOTSF2Day21[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '21-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '21-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day21.length; j++){
             if(this.timeofweekOTSF2Day21[j].roomid == 2){
               this.timeofweekOTSF2Day21[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -15911,13 +15914,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day21.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day21[j].showremark = true;
                 this.timeofweekOTSF2Day21[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '21-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '21-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day21.length; j++){
             if(this.timeofweekOTSF2Day21[j].roomid == 3){
               this.timeofweekOTSF2Day21[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -15933,13 +15936,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day21.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day21[j].showremark = true;
                 this.timeofweekOTSF2Day21[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '21-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '21-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day21.length; j++){
             if(this.timeofweekOTSF2Day21[j].roomid == 4){
               this.timeofweekOTSF2Day21[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -15955,13 +15958,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day21.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day21[j].showremark = true;
                 this.timeofweekOTSF2Day21[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '21-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '21-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day21.length; j++){
             if(this.timeofweekOTSF2Day21[j].roomid == 5){
               this.timeofweekOTSF2Day21[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -15977,13 +15980,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day21.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day21[j].showremark = true;
                 this.timeofweekOTSF2Day21[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '21-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '21-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day21.length; j++){
             if(this.timeofweekOTSF2Day21[j].roomid == 6){
               this.timeofweekOTSF2Day21[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -15999,13 +16002,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day21.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day21[j].showremark = true;
                 this.timeofweekOTSF2Day21[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '21-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '21-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day21.length; j++){
             if(this.timeofweekOTSF2Day21[j].roomid == 7){
               this.timeofweekOTSF2Day21[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -16021,13 +16024,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day21.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day21[j].showremark = true;
                 this.timeofweekOTSF2Day21[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '21-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '21-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day21.length; j++){
             if(this.timeofweekOTSF2Day21[j].roomid == 8){
               this.timeofweekOTSF2Day21[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -16043,13 +16046,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day21.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day21[j].showremark = true;
                 this.timeofweekOTSF2Day21[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '21-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '21-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day21.length; j++){
             if(this.timeofweekOTSF2Day21[j].roomid == 9){
               this.timeofweekOTSF2Day21[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -16065,13 +16068,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day21.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day21[j].showremark = true;
                 this.timeofweekOTSF2Day21[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '21-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '21-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day21.length; j++){
             if(this.timeofweekOTSF2Day21[j].roomid == 10){
               this.timeofweekOTSF2Day21[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -16087,13 +16090,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day21.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day21[j].showremark = true;
                 this.timeofweekOTSF2Day21[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '21-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '21-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day21.length; j++){
             if(this.timeofweekOTSF2Day21[j].roomid == 11){
               this.timeofweekOTSF2Day21[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -16109,13 +16112,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day21.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day21[j].showremark = true;
                 this.timeofweekOTSF2Day21[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '21-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '21-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day21.length; j++){
             if(this.timeofweekOTSF2Day21[j].roomid == 12){
               this.timeofweekOTSF2Day21[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -16131,13 +16134,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day21.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day21[j].showremark = true;
                 this.timeofweekOTSF2Day21[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '21-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '21-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day21.length; j++){
             if(this.timeofweekOTSF2Day21[j].roomid == 13){
               this.timeofweekOTSF2Day21[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -16153,13 +16156,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day21.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day21[j].showremark = true;
                 this.timeofweekOTSF2Day21[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '21-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '21-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day21.length; j++){
             if(this.timeofweekOTSF2Day21[j].roomid == 14){
               this.timeofweekOTSF2Day21[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -16175,13 +16178,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day21.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day21[j].showremark = true;
                 this.timeofweekOTSF2Day21[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '21-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '21-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day21.length; j++){
             if(this.timeofweekOTSF2Day21[j].roomid == 15){
               this.timeofweekOTSF2Day21[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -16197,13 +16200,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day21.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day21[j].showremark = true;
                 this.timeofweekOTSF2Day21[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '21-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '21-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day21.length; j++){
             if(this.timeofweekOTSF2Day21[j].roomid == 16){
               this.timeofweekOTSF2Day21[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -16219,13 +16222,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day21.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day21[j].showremark = true;
                 this.timeofweekOTSF2Day21[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '21-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '21-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day21.length; j++){
             if(this.timeofweekOTSF2Day21[j].roomid == 17){
               this.timeofweekOTSF2Day21[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -16241,13 +16244,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day21.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day21[j].showremark = true;
                 this.timeofweekOTSF2Day21[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '21-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '21-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day21.length; j++){
             if(this.timeofweekOTSF2Day21[j].roomid == 18){
               this.timeofweekOTSF2Day21[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -16263,13 +16266,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day21.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day21[j].showremark = true;
                 this.timeofweekOTSF2Day21[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '22-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '22-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day22.length; j++){
             if(this.timeofweekOTSF2Day22[j].roomid == 0){
               this.timeofweekOTSF2Day22[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -16285,13 +16288,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day22.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day22[j].showremark = true;
                 this.timeofweekOTSF2Day22[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '22-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '22-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day22.length; j++){
             if(this.timeofweekOTSF2Day22[j].roomid == 1){
               this.timeofweekOTSF2Day22[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -16307,13 +16310,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day22.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day22[j].showremark = true;
                 this.timeofweekOTSF2Day22[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '22-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '22-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day22.length; j++){
             if(this.timeofweekOTSF2Day22[j].roomid == 2){
               this.timeofweekOTSF2Day22[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -16329,13 +16332,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day22.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day22[j].showremark = true;
                 this.timeofweekOTSF2Day22[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '22-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '22-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day22.length; j++){
             if(this.timeofweekOTSF2Day22[j].roomid == 3){
               this.timeofweekOTSF2Day22[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -16351,13 +16354,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day22.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day22[j].showremark = true;
                 this.timeofweekOTSF2Day22[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '22-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '22-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day22.length; j++){
             if(this.timeofweekOTSF2Day22[j].roomid == 4){
               this.timeofweekOTSF2Day22[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -16373,13 +16376,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day22.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day22[j].showremark = true;
                 this.timeofweekOTSF2Day22[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '22-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '22-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day22.length; j++){
             if(this.timeofweekOTSF2Day22[j].roomid == 5){
               this.timeofweekOTSF2Day22[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -16395,13 +16398,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day22.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day22[j].showremark = true;
                 this.timeofweekOTSF2Day22[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '22-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '22-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day22.length; j++){
             if(this.timeofweekOTSF2Day22[j].roomid == 6){
               this.timeofweekOTSF2Day22[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -16417,13 +16420,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day22.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day22[j].showremark = true;
                 this.timeofweekOTSF2Day22[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '22-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '22-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day22.length; j++){
             if(this.timeofweekOTSF2Day22[j].roomid == 7){
               this.timeofweekOTSF2Day22[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -16439,13 +16442,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day22.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day22[j].showremark = true;
                 this.timeofweekOTSF2Day22[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '22-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '22-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day22.length; j++){
             if(this.timeofweekOTSF2Day22[j].roomid == 8){
               this.timeofweekOTSF2Day22[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -16461,13 +16464,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day22.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day22[j].showremark = true;
                 this.timeofweekOTSF2Day22[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '22-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '22-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day22.length; j++){
             if(this.timeofweekOTSF2Day22[j].roomid == 9){
               this.timeofweekOTSF2Day22[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -16483,13 +16486,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day22.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day22[j].showremark = true;
                 this.timeofweekOTSF2Day22[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '22-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '22-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day22.length; j++){
             if(this.timeofweekOTSF2Day22[j].roomid == 10){
               this.timeofweekOTSF2Day22[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -16505,13 +16508,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day22.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day22[j].showremark = true;
                 this.timeofweekOTSF2Day22[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '22-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '22-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day22.length; j++){
             if(this.timeofweekOTSF2Day22[j].roomid == 11){
               this.timeofweekOTSF2Day22[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -16527,13 +16530,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day22.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day22[j].showremark = true;
                 this.timeofweekOTSF2Day22[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '22-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '22-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day22.length; j++){
             if(this.timeofweekOTSF2Day22[j].roomid == 12){
               this.timeofweekOTSF2Day22[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -16549,13 +16552,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day22.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day22[j].showremark = true;
                 this.timeofweekOTSF2Day22[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '22-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '22-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day22.length; j++){
             if(this.timeofweekOTSF2Day22[j].roomid == 13){
               this.timeofweekOTSF2Day22[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -16571,13 +16574,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day22.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day22[j].showremark = true;
                 this.timeofweekOTSF2Day22[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '22-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '22-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day22.length; j++){
             if(this.timeofweekOTSF2Day22[j].roomid == 14){
               this.timeofweekOTSF2Day22[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -16593,13 +16596,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day22.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day22[j].showremark = true;
                 this.timeofweekOTSF2Day22[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '22-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '22-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day22.length; j++){
             if(this.timeofweekOTSF2Day22[j].roomid == 15){
               this.timeofweekOTSF2Day22[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -16615,13 +16618,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day22.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day22[j].showremark = true;
                 this.timeofweekOTSF2Day22[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '22-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '22-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day22.length; j++){
             if(this.timeofweekOTSF2Day22[j].roomid == 16){
               this.timeofweekOTSF2Day22[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -16637,13 +16640,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day22.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day22[j].showremark = true;
                 this.timeofweekOTSF2Day22[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '22-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '22-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day22.length; j++){
             if(this.timeofweekOTSF2Day22[j].roomid == 17){
               this.timeofweekOTSF2Day22[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -16659,13 +16662,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day22.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day22[j].showremark = true;
                 this.timeofweekOTSF2Day22[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '22-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '22-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day22.length; j++){
             if(this.timeofweekOTSF2Day22[j].roomid == 18){
               this.timeofweekOTSF2Day22[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -16681,13 +16684,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day22.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day22[j].showremark = true;
                 this.timeofweekOTSF2Day22[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '23-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '23-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day23.length; j++){
             if(this.timeofweekOTSF2Day23[j].roomid == 0){
               this.timeofweekOTSF2Day23[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -16703,13 +16706,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day23.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day23[j].showremark = true;
                 this.timeofweekOTSF2Day23[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '23-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '23-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day23.length; j++){
             if(this.timeofweekOTSF2Day23[j].roomid == 1){
               this.timeofweekOTSF2Day23[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -16725,13 +16728,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day23.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day23[j].showremark = true;
                 this.timeofweekOTSF2Day23[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '23-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '23-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day23.length; j++){
             if(this.timeofweekOTSF2Day23[j].roomid == 2){
               this.timeofweekOTSF2Day23[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -16747,13 +16750,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day23.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day23[j].showremark = true;
                 this.timeofweekOTSF2Day23[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '23-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '23-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day23.length; j++){
             if(this.timeofweekOTSF2Day23[j].roomid == 3){
               this.timeofweekOTSF2Day23[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -16769,13 +16772,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day23.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day23[j].showremark = true;
                 this.timeofweekOTSF2Day23[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '23-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '23-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day23.length; j++){
             if(this.timeofweekOTSF2Day23[j].roomid == 4){
               this.timeofweekOTSF2Day23[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -16791,13 +16794,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day23.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day23[j].showremark = true;
                 this.timeofweekOTSF2Day23[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '23-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '23-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day23.length; j++){
             if(this.timeofweekOTSF2Day23[j].roomid == 5){
               this.timeofweekOTSF2Day23[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -16813,13 +16816,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day23.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day23[j].showremark = true;
                 this.timeofweekOTSF2Day23[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '23-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '23-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day23.length; j++){
             if(this.timeofweekOTSF2Day23[j].roomid == 6){
               this.timeofweekOTSF2Day23[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -16835,13 +16838,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day23.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day23[j].showremark = true;
                 this.timeofweekOTSF2Day23[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '23-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '23-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day23.length; j++){
             if(this.timeofweekOTSF2Day23[j].roomid == 7){
               this.timeofweekOTSF2Day23[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -16857,13 +16860,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day23.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day23[j].showremark = true;
                 this.timeofweekOTSF2Day23[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '23-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '23-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day23.length; j++){
             if(this.timeofweekOTSF2Day23[j].roomid == 8){
               this.timeofweekOTSF2Day23[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -16879,13 +16882,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day23.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day23[j].showremark = true;
                 this.timeofweekOTSF2Day23[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '23-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '23-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day23.length; j++){
             if(this.timeofweekOTSF2Day23[j].roomid == 9){
               this.timeofweekOTSF2Day23[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -16901,13 +16904,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day23.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day23[j].showremark = true;
                 this.timeofweekOTSF2Day23[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '23-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '23-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day23.length; j++){
             if(this.timeofweekOTSF2Day23[j].roomid == 10){
               this.timeofweekOTSF2Day23[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -16923,13 +16926,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day23.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day23[j].showremark = true;
                 this.timeofweekOTSF2Day23[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '23-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '23-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day23.length; j++){
             if(this.timeofweekOTSF2Day23[j].roomid == 11){
               this.timeofweekOTSF2Day23[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -16945,13 +16948,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day23.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day23[j].showremark = true;
                 this.timeofweekOTSF2Day23[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '23-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '23-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day23.length; j++){
             if(this.timeofweekOTSF2Day23[j].roomid == 12){
               this.timeofweekOTSF2Day23[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -16967,13 +16970,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day23.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day23[j].showremark = true;
                 this.timeofweekOTSF2Day23[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '23-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '23-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day23.length; j++){
             if(this.timeofweekOTSF2Day23[j].roomid == 13){
               this.timeofweekOTSF2Day23[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -16989,13 +16992,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day23.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day23[j].showremark = true;
                 this.timeofweekOTSF2Day23[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '23-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '23-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day23.length; j++){
             if(this.timeofweekOTSF2Day23[j].roomid == 14){
               this.timeofweekOTSF2Day23[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -17011,13 +17014,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day23.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day23[j].showremark = true;
                 this.timeofweekOTSF2Day23[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '23-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '23-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day23.length; j++){
             if(this.timeofweekOTSF2Day23[j].roomid == 15){
               this.timeofweekOTSF2Day23[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -17033,13 +17036,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day23.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day23[j].showremark = true;
                 this.timeofweekOTSF2Day23[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '23-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '23-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day23.length; j++){
             if(this.timeofweekOTSF2Day23[j].roomid == 16){
               this.timeofweekOTSF2Day23[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -17055,13 +17058,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day23.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day23[j].showremark = true;
                 this.timeofweekOTSF2Day23[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '23-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '23-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day23.length; j++){
             if(this.timeofweekOTSF2Day23[j].roomid == 17){
               this.timeofweekOTSF2Day23[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -17077,13 +17080,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day23.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day23[j].showremark = true;
                 this.timeofweekOTSF2Day23[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '23-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '23-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day23.length; j++){
             if(this.timeofweekOTSF2Day23[j].roomid == 18){
               this.timeofweekOTSF2Day23[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -17099,13 +17102,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day23.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day23[j].showremark = true;
                 this.timeofweekOTSF2Day23[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '24-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '24-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day24.length; j++){
             if(this.timeofweekOTSF2Day24[j].roomid == 0){
               this.timeofweekOTSF2Day24[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -17121,13 +17124,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day24.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day24[j].showremark = true;
                 this.timeofweekOTSF2Day24[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '24-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '24-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day24.length; j++){
             if(this.timeofweekOTSF2Day24[j].roomid == 1){
               this.timeofweekOTSF2Day24[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -17143,13 +17146,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day24.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day24[j].showremark = true;
                 this.timeofweekOTSF2Day24[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '24-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '24-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day24.length; j++){
             if(this.timeofweekOTSF2Day24[j].roomid == 2){
               this.timeofweekOTSF2Day24[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -17165,13 +17168,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day24.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day24[j].showremark = true;
                 this.timeofweekOTSF2Day24[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '24-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '24-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day24.length; j++){
             if(this.timeofweekOTSF2Day24[j].roomid == 3){
               this.timeofweekOTSF2Day24[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -17187,13 +17190,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day24.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day24[j].showremark = true;
                 this.timeofweekOTSF2Day24[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '24-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '24-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day24.length; j++){
             if(this.timeofweekOTSF2Day24[j].roomid == 4){
               this.timeofweekOTSF2Day24[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -17209,13 +17212,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day24.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day24[j].showremark = true;
                 this.timeofweekOTSF2Day24[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '24-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '24-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day24.length; j++){
             if(this.timeofweekOTSF2Day24[j].roomid == 5){
               this.timeofweekOTSF2Day24[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -17231,13 +17234,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day24.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day24[j].showremark = true;
                 this.timeofweekOTSF2Day24[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '24-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '24-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day24.length; j++){
             if(this.timeofweekOTSF2Day24[j].roomid == 6){
               this.timeofweekOTSF2Day24[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -17253,13 +17256,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day24.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day24[j].showremark = true;
                 this.timeofweekOTSF2Day24[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '24-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '24-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day24.length; j++){
             if(this.timeofweekOTSF2Day24[j].roomid == 7){
               this.timeofweekOTSF2Day24[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -17275,13 +17278,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day24.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day24[j].showremark = true;
                 this.timeofweekOTSF2Day24[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '24-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '24-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day24.length; j++){
             if(this.timeofweekOTSF2Day24[j].roomid == 8){
               this.timeofweekOTSF2Day24[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -17297,13 +17300,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day24.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day24[j].showremark = true;
                 this.timeofweekOTSF2Day24[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '24-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '24-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day24.length; j++){
             if(this.timeofweekOTSF2Day24[j].roomid == 9){
               this.timeofweekOTSF2Day24[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -17319,13 +17322,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day24.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day24[j].showremark = true;
                 this.timeofweekOTSF2Day24[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '24-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '24-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day24.length; j++){
             if(this.timeofweekOTSF2Day24[j].roomid == 10){
               this.timeofweekOTSF2Day24[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -17341,13 +17344,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day24.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day24[j].showremark = true;
                 this.timeofweekOTSF2Day24[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '24-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '24-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day24.length; j++){
             if(this.timeofweekOTSF2Day24[j].roomid == 11){
               this.timeofweekOTSF2Day24[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -17363,13 +17366,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day24.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day24[j].showremark = true;
                 this.timeofweekOTSF2Day24[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '24-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '24-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day24.length; j++){
             if(this.timeofweekOTSF2Day24[j].roomid == 12){
               this.timeofweekOTSF2Day24[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -17385,13 +17388,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day24.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day24[j].showremark = true;
                 this.timeofweekOTSF2Day24[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '24-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '24-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day24.length; j++){
             if(this.timeofweekOTSF2Day24[j].roomid == 13){
               this.timeofweekOTSF2Day24[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -17407,13 +17410,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day24.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day24[j].showremark = true;
                 this.timeofweekOTSF2Day24[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '24-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '24-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day24.length; j++){
             if(this.timeofweekOTSF2Day24[j].roomid == 14){
               this.timeofweekOTSF2Day24[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -17429,13 +17432,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day24.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day24[j].showremark = true;
                 this.timeofweekOTSF2Day24[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '24-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '24-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day24.length; j++){
             if(this.timeofweekOTSF2Day24[j].roomid == 15){
               this.timeofweekOTSF2Day24[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -17451,13 +17454,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day24.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day24[j].showremark = true;
                 this.timeofweekOTSF2Day24[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '24-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '24-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day24.length; j++){
             if(this.timeofweekOTSF2Day24[j].roomid == 16){
               this.timeofweekOTSF2Day24[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -17473,13 +17476,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day24.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day24[j].showremark = true;
                 this.timeofweekOTSF2Day24[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '24-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '24-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day24.length; j++){
             if(this.timeofweekOTSF2Day24[j].roomid == 17){
               this.timeofweekOTSF2Day24[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -17495,13 +17498,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day24.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day24[j].showremark = true;
                 this.timeofweekOTSF2Day24[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '24-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '24-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day24.length; j++){
             if(this.timeofweekOTSF2Day24[j].roomid == 18){
               this.timeofweekOTSF2Day24[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -17517,13 +17520,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day24.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day24[j].showremark = true;
                 this.timeofweekOTSF2Day24[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '25-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '25-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day25.length; j++){
             if(this.timeofweekOTSF2Day25[j].roomid == 0){
               this.timeofweekOTSF2Day25[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -17539,13 +17542,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day25.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day25[j].showremark = true;
                 this.timeofweekOTSF2Day25[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '25-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '25-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day25.length; j++){
             if(this.timeofweekOTSF2Day25[j].roomid == 1){
               this.timeofweekOTSF2Day25[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -17561,13 +17564,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day25.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day25[j].showremark = true;
                 this.timeofweekOTSF2Day25[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '25-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '25-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day25.length; j++){
             if(this.timeofweekOTSF2Day25[j].roomid == 2){
               this.timeofweekOTSF2Day25[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -17583,13 +17586,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day25.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day25[j].showremark = true;
                 this.timeofweekOTSF2Day25[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '25-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '25-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day25.length; j++){
             if(this.timeofweekOTSF2Day25[j].roomid == 3){
               this.timeofweekOTSF2Day25[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -17605,13 +17608,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day25.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day25[j].showremark = true;
                 this.timeofweekOTSF2Day25[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '25-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '25-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day25.length; j++){
             if(this.timeofweekOTSF2Day25[j].roomid == 4){
               this.timeofweekOTSF2Day25[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -17627,13 +17630,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day25.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day25[j].showremark = true;
                 this.timeofweekOTSF2Day25[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '25-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '25-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day25.length; j++){
             if(this.timeofweekOTSF2Day25[j].roomid == 5){
               this.timeofweekOTSF2Day25[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -17649,13 +17652,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day25.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day25[j].showremark = true;
                 this.timeofweekOTSF2Day25[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '25-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '25-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day25.length; j++){
             if(this.timeofweekOTSF2Day25[j].roomid == 6){
               this.timeofweekOTSF2Day25[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -17671,13 +17674,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day25.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day25[j].showremark = true;
                 this.timeofweekOTSF2Day25[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '25-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '25-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day25.length; j++){
             if(this.timeofweekOTSF2Day25[j].roomid == 7){
               this.timeofweekOTSF2Day25[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -17693,13 +17696,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day25.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day25[j].showremark = true;
                 this.timeofweekOTSF2Day25[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '25-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '25-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day25.length; j++){
             if(this.timeofweekOTSF2Day25[j].roomid == 8){
               this.timeofweekOTSF2Day25[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -17715,13 +17718,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day25.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day25[j].showremark = true;
                 this.timeofweekOTSF2Day25[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '25-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '25-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day25.length; j++){
             if(this.timeofweekOTSF2Day25[j].roomid == 9){
               this.timeofweekOTSF2Day25[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -17737,13 +17740,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day25.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day25[j].showremark = true;
                 this.timeofweekOTSF2Day25[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '25-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '25-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day25.length; j++){
             if(this.timeofweekOTSF2Day25[j].roomid == 10){
               this.timeofweekOTSF2Day25[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -17759,13 +17762,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day25.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day25[j].showremark = true;
                 this.timeofweekOTSF2Day25[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '25-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '25-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day25.length; j++){
             if(this.timeofweekOTSF2Day25[j].roomid == 11){
               this.timeofweekOTSF2Day25[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -17781,13 +17784,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day25.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day25[j].showremark = true;
                 this.timeofweekOTSF2Day25[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '25-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '25-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day25.length; j++){
             if(this.timeofweekOTSF2Day25[j].roomid == 12){
               this.timeofweekOTSF2Day25[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -17803,13 +17806,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day25.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day25[j].showremark = true;
                 this.timeofweekOTSF2Day25[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '25-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '25-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day25.length; j++){
             if(this.timeofweekOTSF2Day25[j].roomid == 13){
               this.timeofweekOTSF2Day25[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -17825,13 +17828,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day25.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day25[j].showremark = true;
                 this.timeofweekOTSF2Day25[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '25-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '25-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day25.length; j++){
             if(this.timeofweekOTSF2Day25[j].roomid == 14){
               this.timeofweekOTSF2Day25[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -17847,13 +17850,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day25.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day25[j].showremark = true;
                 this.timeofweekOTSF2Day25[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '25-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '25-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day25.length; j++){
             if(this.timeofweekOTSF2Day25[j].roomid == 15){
               this.timeofweekOTSF2Day25[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -17869,13 +17872,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day25.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day25[j].showremark = true;
                 this.timeofweekOTSF2Day25[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '25-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '25-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day25.length; j++){
             if(this.timeofweekOTSF2Day25[j].roomid == 16){
               this.timeofweekOTSF2Day25[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -17891,13 +17894,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day25.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day25[j].showremark = true;
                 this.timeofweekOTSF2Day25[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '25-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '25-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day25.length; j++){
             if(this.timeofweekOTSF2Day25[j].roomid == 17){
               this.timeofweekOTSF2Day25[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -17913,13 +17916,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day25.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day25[j].showremark = true;
                 this.timeofweekOTSF2Day25[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '25-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '25-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day25.length; j++){
             if(this.timeofweekOTSF2Day25[j].roomid == 18){
               this.timeofweekOTSF2Day25[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -17935,13 +17938,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day25.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day25[j].showremark = true;
                 this.timeofweekOTSF2Day25[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '26-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '26-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day26.length; j++){
             if(this.timeofweekOTSF2Day26[j].roomid == 0){
               this.timeofweekOTSF2Day26[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -17957,13 +17960,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day26.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day26[j].showremark = true;
                 this.timeofweekOTSF2Day26[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '26-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '26-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day26.length; j++){
             if(this.timeofweekOTSF2Day26[j].roomid == 1){
               this.timeofweekOTSF2Day26[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -17979,13 +17982,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day26.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day26[j].showremark = true;
                 this.timeofweekOTSF2Day26[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '26-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '26-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day26.length; j++){
             if(this.timeofweekOTSF2Day26[j].roomid == 2){
               this.timeofweekOTSF2Day26[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -18001,13 +18004,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day26.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day26[j].showremark = true;
                 this.timeofweekOTSF2Day26[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '26-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '26-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day26.length; j++){
             if(this.timeofweekOTSF2Day26[j].roomid == 3){
               this.timeofweekOTSF2Day26[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -18023,13 +18026,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day26.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day26[j].showremark = true;
                 this.timeofweekOTSF2Day26[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '26-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '26-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day26.length; j++){
             if(this.timeofweekOTSF2Day26[j].roomid == 4){
               this.timeofweekOTSF2Day26[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -18045,13 +18048,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day26.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day26[j].showremark = true;
                 this.timeofweekOTSF2Day26[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '26-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '26-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day26.length; j++){
             if(this.timeofweekOTSF2Day26[j].roomid == 5){
               this.timeofweekOTSF2Day26[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -18067,13 +18070,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day26.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day26[j].showremark = true;
                 this.timeofweekOTSF2Day26[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '26-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '26-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day26.length; j++){
             if(this.timeofweekOTSF2Day26[j].roomid == 6){
               this.timeofweekOTSF2Day26[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -18089,13 +18092,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day26.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day26[j].showremark = true;
                 this.timeofweekOTSF2Day26[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '26-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '26-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day26.length; j++){
             if(this.timeofweekOTSF2Day26[j].roomid == 7){
               this.timeofweekOTSF2Day26[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -18111,13 +18114,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day26.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day26[j].showremark = true;
                 this.timeofweekOTSF2Day26[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '26-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '26-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day26.length; j++){
             if(this.timeofweekOTSF2Day26[j].roomid == 8){
               this.timeofweekOTSF2Day26[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -18133,13 +18136,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day26.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day26[j].showremark = true;
                 this.timeofweekOTSF2Day26[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '26-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '26-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day26.length; j++){
             if(this.timeofweekOTSF2Day26[j].roomid == 9){
               this.timeofweekOTSF2Day26[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -18155,13 +18158,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day26.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day26[j].showremark = true;
                 this.timeofweekOTSF2Day26[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '26-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '26-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day26.length; j++){
             if(this.timeofweekOTSF2Day26[j].roomid == 10){
               this.timeofweekOTSF2Day26[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -18177,13 +18180,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day26.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day26[j].showremark = true;
                 this.timeofweekOTSF2Day26[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '26-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '26-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day26.length; j++){
             if(this.timeofweekOTSF2Day26[j].roomid == 11){
               this.timeofweekOTSF2Day26[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -18199,13 +18202,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day26.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day26[j].showremark = true;
                 this.timeofweekOTSF2Day26[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '26-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '26-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day26.length; j++){
             if(this.timeofweekOTSF2Day26[j].roomid == 12){
               this.timeofweekOTSF2Day26[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -18221,13 +18224,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day26.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day26[j].showremark = true;
                 this.timeofweekOTSF2Day26[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '26-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '26-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day26.length; j++){
             if(this.timeofweekOTSF2Day26[j].roomid == 13){
               this.timeofweekOTSF2Day26[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -18243,13 +18246,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day26.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day26[j].showremark = true;
                 this.timeofweekOTSF2Day26[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '26-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '26-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day26.length; j++){
             if(this.timeofweekOTSF2Day26[j].roomid == 14){
               this.timeofweekOTSF2Day26[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -18265,13 +18268,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day26.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day26[j].showremark = true;
                 this.timeofweekOTSF2Day26[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '26-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '26-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day26.length; j++){
             if(this.timeofweekOTSF2Day26[j].roomid == 15){
               this.timeofweekOTSF2Day26[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -18287,13 +18290,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day26.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day26[j].showremark = true;
                 this.timeofweekOTSF2Day26[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '26-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '26-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day26.length; j++){
             if(this.timeofweekOTSF2Day26[j].roomid == 16){
               this.timeofweekOTSF2Day26[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -18309,13 +18312,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day26.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day26[j].showremark = true;
                 this.timeofweekOTSF2Day26[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '26-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '26-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day26.length; j++){
             if(this.timeofweekOTSF2Day26[j].roomid == 17){
               this.timeofweekOTSF2Day26[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -18331,13 +18334,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day26.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day26[j].showremark = true;
                 this.timeofweekOTSF2Day26[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '26-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '26-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day26.length; j++){
             if(this.timeofweekOTSF2Day26[j].roomid == 18){
               this.timeofweekOTSF2Day26[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -18353,13 +18356,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day26.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day26[j].showremark = true;
                 this.timeofweekOTSF2Day26[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '27-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '27-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day27.length; j++){
             if(this.timeofweekOTSF2Day27[j].roomid == 0){
               this.timeofweekOTSF2Day27[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -18375,13 +18378,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day27.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day27[j].showremark = true;
                 this.timeofweekOTSF2Day27[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '27-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '27-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day27.length; j++){
             if(this.timeofweekOTSF2Day27[j].roomid == 1){
               this.timeofweekOTSF2Day27[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -18397,13 +18400,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day27.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day27[j].showremark = true;
                 this.timeofweekOTSF2Day27[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '27-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '27-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day27.length; j++){
             if(this.timeofweekOTSF2Day27[j].roomid == 2){
               this.timeofweekOTSF2Day27[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -18419,13 +18422,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day27.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day27[j].showremark = true;
                 this.timeofweekOTSF2Day27[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '27-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '27-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day27.length; j++){
             if(this.timeofweekOTSF2Day27[j].roomid == 3){
               this.timeofweekOTSF2Day27[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -18441,13 +18444,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day27.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day27[j].showremark = true;
                 this.timeofweekOTSF2Day27[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '27-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '27-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day27.length; j++){
             if(this.timeofweekOTSF2Day27[j].roomid == 4){
               this.timeofweekOTSF2Day27[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -18463,13 +18466,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day27.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day27[j].showremark = true;
                 this.timeofweekOTSF2Day27[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '27-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '27-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day27.length; j++){
             if(this.timeofweekOTSF2Day27[j].roomid == 5){
               this.timeofweekOTSF2Day27[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -18485,13 +18488,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day27.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day27[j].showremark = true;
                 this.timeofweekOTSF2Day27[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '27-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '27-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day27.length; j++){
             if(this.timeofweekOTSF2Day27[j].roomid == 6){
               this.timeofweekOTSF2Day27[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -18507,13 +18510,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day27.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day27[j].showremark = true;
                 this.timeofweekOTSF2Day27[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '27-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '27-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day27.length; j++){
             if(this.timeofweekOTSF2Day27[j].roomid == 7){
               this.timeofweekOTSF2Day27[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -18529,13 +18532,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day27.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day27[j].showremark = true;
                 this.timeofweekOTSF2Day27[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '27-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '27-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day27.length; j++){
             if(this.timeofweekOTSF2Day27[j].roomid == 8){
               this.timeofweekOTSF2Day27[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -18551,13 +18554,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day27.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day27[j].showremark = true;
                 this.timeofweekOTSF2Day27[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '27-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '27-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day27.length; j++){
             if(this.timeofweekOTSF2Day27[j].roomid == 9){
               this.timeofweekOTSF2Day27[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -18573,13 +18576,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day27.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day27[j].showremark = true;
                 this.timeofweekOTSF2Day27[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '27-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '27-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day27.length; j++){
             if(this.timeofweekOTSF2Day27[j].roomid == 10){
               this.timeofweekOTSF2Day27[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -18595,13 +18598,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day27.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day27[j].showremark = true;
                 this.timeofweekOTSF2Day27[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '27-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '27-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day27.length; j++){
             if(this.timeofweekOTSF2Day27[j].roomid == 11){
               this.timeofweekOTSF2Day27[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -18617,13 +18620,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day27.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day27[j].showremark = true;
                 this.timeofweekOTSF2Day27[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '27-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '27-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day27.length; j++){
             if(this.timeofweekOTSF2Day27[j].roomid == 12){
               this.timeofweekOTSF2Day27[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -18639,13 +18642,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day27.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day27[j].showremark = true;
                 this.timeofweekOTSF2Day27[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '27-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '27-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day27.length; j++){
             if(this.timeofweekOTSF2Day27[j].roomid == 13){
               this.timeofweekOTSF2Day27[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -18661,13 +18664,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day27.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day27[j].showremark = true;
                 this.timeofweekOTSF2Day27[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '27-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '27-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day27.length; j++){
             if(this.timeofweekOTSF2Day27[j].roomid == 14){
               this.timeofweekOTSF2Day27[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -18683,13 +18686,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day27.splice(this.counting,1);
                     }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day27[j].showremark = true;
                 this.timeofweekOTSF2Day27[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '27-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '27-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day27.length; j++){
             if(this.timeofweekOTSF2Day27[j].roomid == 15){
               this.timeofweekOTSF2Day27[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -18705,13 +18708,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day27.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day27[j].showremark = true;
                 this.timeofweekOTSF2Day27[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '27-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '27-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day27.length; j++){
             if(this.timeofweekOTSF2Day27[j].roomid == 16){
               this.timeofweekOTSF2Day27[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -18727,13 +18730,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day27.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day27[j].showremark = true;
                 this.timeofweekOTSF2Day27[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '27-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '27-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day27.length; j++){
             if(this.timeofweekOTSF2Day27[j].roomid == 17){
               this.timeofweekOTSF2Day27[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -18749,13 +18752,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day27.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day27[j].showremark = true;
                 this.timeofweekOTSF2Day27[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '27-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '27-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day27.length; j++){
             if(this.timeofweekOTSF2Day27[j].roomid == 18){
               this.timeofweekOTSF2Day27[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -18771,13 +18774,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day27.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day27[j].showremark = true;
                 this.timeofweekOTSF2Day27[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '28-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '28-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day28.length; j++){
             if(this.timeofweekOTSF2Day28[j].roomid == 0){
               this.timeofweekOTSF2Day28[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -18793,13 +18796,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day28.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day28[j].showremark = true;
                 this.timeofweekOTSF2Day28[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '28-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '28-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day28.length; j++){
             if(this.timeofweekOTSF2Day28[j].roomid == 1){
               this.timeofweekOTSF2Day28[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -18815,13 +18818,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day28.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day28[j].showremark = true;
                 this.timeofweekOTSF2Day28[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '28-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '28-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day28.length; j++){
             if(this.timeofweekOTSF2Day28[j].roomid == 2){
               this.timeofweekOTSF2Day28[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -18837,13 +18840,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day28.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day28[j].showremark = true;
                 this.timeofweekOTSF2Day28[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '28-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '28-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day28.length; j++){
             if(this.timeofweekOTSF2Day28[j].roomid == 3){
               this.timeofweekOTSF2Day28[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -18859,13 +18862,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day28.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day28[j].showremark = true;
                 this.timeofweekOTSF2Day28[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '28-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '28-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day28.length; j++){
             if(this.timeofweekOTSF2Day28[j].roomid == 4){
               this.timeofweekOTSF2Day28[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -18881,13 +18884,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day28.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day28[j].showremark = true;
                 this.timeofweekOTSF2Day28[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '28-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '28-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day28.length; j++){
             if(this.timeofweekOTSF2Day28[j].roomid == 5){
               this.timeofweekOTSF2Day28[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -18903,13 +18906,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day28.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day28[j].showremark = true;
                 this.timeofweekOTSF2Day28[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '28-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '28-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day28.length; j++){
             if(this.timeofweekOTSF2Day28[j].roomid == 6){
               this.timeofweekOTSF2Day28[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -18925,13 +18928,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day28.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day28[j].showremark = true;
                 this.timeofweekOTSF2Day28[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '28-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '28-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day28.length; j++){
             if(this.timeofweekOTSF2Day28[j].roomid == 7){
               this.timeofweekOTSF2Day28[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -18947,13 +18950,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day28.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day28[j].showremark = true;
                 this.timeofweekOTSF2Day28[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '28-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '28-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day28.length; j++){
             if(this.timeofweekOTSF2Day28[j].roomid == 8){
               this.timeofweekOTSF2Day28[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -18969,13 +18972,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day28.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day28[j].showremark = true;
                 this.timeofweekOTSF2Day28[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '28-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '28-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day28.length; j++){
             if(this.timeofweekOTSF2Day28[j].roomid == 9){
               this.timeofweekOTSF2Day28[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -18991,13 +18994,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day28.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day28[j].showremark = true;
                 this.timeofweekOTSF2Day28[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '28-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '28-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day28.length; j++){
             if(this.timeofweekOTSF2Day28[j].roomid == 10){
               this.timeofweekOTSF2Day28[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -19013,13 +19016,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day28.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day28[j].showremark = true;
                 this.timeofweekOTSF2Day28[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '28-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '28-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day28.length; j++){
             if(this.timeofweekOTSF2Day28[j].roomid == 11){
               this.timeofweekOTSF2Day28[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -19035,13 +19038,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day28.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day28[j].showremark = true;
                 this.timeofweekOTSF2Day28[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '28-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '28-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day28.length; j++){
             if(this.timeofweekOTSF2Day28[j].roomid == 12){
               this.timeofweekOTSF2Day28[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -19057,13 +19060,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day28.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day28[j].showremark = true;
                 this.timeofweekOTSF2Day28[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '28-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '28-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day28.length; j++){
             if(this.timeofweekOTSF2Day28[j].roomid == 13){
               this.timeofweekOTSF2Day28[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -19079,13 +19082,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day28.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day28[j].showremark = true;
                 this.timeofweekOTSF2Day28[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '28-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '28-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day28.length; j++){
             if(this.timeofweekOTSF2Day28[j].roomid == 14){
               this.timeofweekOTSF2Day28[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -19101,13 +19104,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day28.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day28[j].showremark = true;
                 this.timeofweekOTSF2Day28[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '28-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '28-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day28.length; j++){
             if(this.timeofweekOTSF2Day28[j].roomid == 15){
               this.timeofweekOTSF2Day28[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -19123,13 +19126,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day28.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day28[j].showremark = true;
                 this.timeofweekOTSF2Day28[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '28-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '28-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day28.length; j++){
             if(this.timeofweekOTSF2Day28[j].roomid == 16){
               this.timeofweekOTSF2Day28[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -19145,13 +19148,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day28.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day28[j].showremark = true;
                 this.timeofweekOTSF2Day28[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '28-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '28-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day28.length; j++){
             if(this.timeofweekOTSF2Day28[j].roomid == 17){
               this.timeofweekOTSF2Day28[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -19167,13 +19170,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day28.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day28[j].showremark = true;
                 this.timeofweekOTSF2Day28[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '28-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '28-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day28.length; j++){
             if(this.timeofweekOTSF2Day28[j].roomid == 18){
               this.timeofweekOTSF2Day28[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -19189,13 +19192,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day28.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day28[j].showremark = true;
                 this.timeofweekOTSF2Day28[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '29-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '29-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day29.length; j++){
             if(this.timeofweekOTSF2Day29[j].roomid == 0){
               this.timeofweekOTSF2Day29[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -19211,13 +19214,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day29.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day29[j].showremark = true;
                 this.timeofweekOTSF2Day29[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '29'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '29'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day29.length; j++){
             if(this.timeofweekOTSF2Day29[j].roomid == 1){
               this.timeofweekOTSF2Day29[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -19233,13 +19236,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day29.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day29[j].showremark = true;
                 this.timeofweekOTSF2Day29[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '29-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '29-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day29.length; j++){
             if(this.timeofweekOTSF2Day29[j].roomid == 2){
               this.timeofweekOTSF2Day29[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -19255,13 +19258,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day29.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day29[j].showremark = true;
                 this.timeofweekOTSF2Day29[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '29-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '29-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day29.length; j++){
             if(this.timeofweekOTSF2Day29[j].roomid == 3){
               this.timeofweekOTSF2Day29[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -19277,13 +19280,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day29.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day29[j].showremark = true;
                 this.timeofweekOTSF2Day29[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '29-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '29-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day29.length; j++){
             if(this.timeofweekOTSF2Day29[j].roomid == 4){
               this.timeofweekOTSF2Day29[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -19299,13 +19302,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day29.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day29[j].showremark = true;
                 this.timeofweekOTSF2Day29[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '29-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '29-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day29.length; j++){
             if(this.timeofweekOTSF2Day29[j].roomid == 5){
               this.timeofweekOTSF2Day29[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -19321,13 +19324,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day29.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day29[j].showremark = true;
                 this.timeofweekOTSF2Day29[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '29-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '29-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day29.length; j++){
             if(this.timeofweekOTSF2Day29[j].roomid == 6){
               this.timeofweekOTSF2Day29[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -19343,13 +19346,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day29.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day29[j].showremark = true;
                 this.timeofweekOTSF2Day29[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '29-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '29-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day29.length; j++){
             if(this.timeofweekOTSF2Day29[j].roomid == 7){
               this.timeofweekOTSF2Day29[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -19365,13 +19368,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day29.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day29[j].showremark = true;
                 this.timeofweekOTSF2Day29[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '29-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '29-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day29.length; j++){
             if(this.timeofweekOTSF2Day29[j].roomid == 8){
               this.timeofweekOTSF2Day29[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -19387,13 +19390,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day29.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day29[j].showremark = true;
                 this.timeofweekOTSF2Day29[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '29-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '29-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day29.length; j++){
             if(this.timeofweekOTSF2Day29[j].roomid == 9){
               this.timeofweekOTSF2Day29[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -19409,13 +19412,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day29.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day29[j].showremark = true;
                 this.timeofweekOTSF2Day29[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '29-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '29-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day29.length; j++){
             if(this.timeofweekOTSF2Day29[j].roomid == 10){
               this.timeofweekOTSF2Day29[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -19431,13 +19434,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day29.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day29[j].showremark = true;
                 this.timeofweekOTSF2Day29[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '29-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '29-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day29.length; j++){
             if(this.timeofweekOTSF2Day29[j].roomid == 11){
               this.timeofweekOTSF2Day29[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -19453,13 +19456,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day29.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day29[j].showremark = true;
                 this.timeofweekOTSF2Day29[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '29-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '29-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day29.length; j++){
             if(this.timeofweekOTSF2Day29[j].roomid == 12){
               this.timeofweekOTSF2Day29[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -19475,13 +19478,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day29.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day29[j].showremark = true;
                 this.timeofweekOTSF2Day29[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '29-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '29-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day29.length; j++){
             if(this.timeofweekOTSF2Day29[j].roomid == 13){
               this.timeofweekOTSF2Day29[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -19497,13 +19500,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day29.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day29[j].showremark = true;
                 this.timeofweekOTSF2Day29[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '29-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '29-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day29.length; j++){
             if(this.timeofweekOTSF2Day29[j].roomid == 14){
               this.timeofweekOTSF2Day29[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -19519,13 +19522,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day29.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day29[j].showremark = true;
                 this.timeofweekOTSF2Day29[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '29-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '29-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day29.length; j++){
             if(this.timeofweekOTSF2Day29[j].roomid == 15){
               this.timeofweekOTSF2Day29[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -19541,13 +19544,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day29.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day29[j].showremark = true;
                 this.timeofweekOTSF2Day29[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '29-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '29-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day29.length; j++){
             if(this.timeofweekOTSF2Day29[j].roomid == 16){
               this.timeofweekOTSF2Day29[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -19563,13 +19566,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day29.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day29[j].showremark = true;
                 this.timeofweekOTSF2Day29[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '29-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '29-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day29.length; j++){
             if(this.timeofweekOTSF2Day29[j].roomid == 17){
               this.timeofweekOTSF2Day29[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -19585,13 +19588,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day29.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day29[j].showremark = true;
                 this.timeofweekOTSF2Day29[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '29-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '29-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day29.length; j++){
             if(this.timeofweekOTSF2Day29[j].roomid == 18){
               this.timeofweekOTSF2Day29[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -19607,13 +19610,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day29.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day29[j].showremark = true;
                 this.timeofweekOTSF2Day29[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '30-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '30-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day30.length; j++){
             if(this.timeofweekOTSF2Day30[j].roomid == 0){
               this.timeofweekOTSF2Day30[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -19629,13 +19632,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day30.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day30[j].showremark = true;
                 this.timeofweekOTSF2Day30[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '30'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '30'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day30.length; j++){
             if(this.timeofweekOTSF2Day30[j].roomid == 1){
               this.timeofweekOTSF2Day30[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -19651,13 +19654,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day30.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day30[j].showremark = true;
                 this.timeofweekOTSF2Day30[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '30-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '30-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day30.length; j++){
             if(this.timeofweekOTSF2Day30[j].roomid == 2){
               this.timeofweekOTSF2Day30[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -19673,13 +19676,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day30.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day30[j].showremark = true;
                 this.timeofweekOTSF2Day30[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '30-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '30-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day30.length; j++){
             if(this.timeofweekOTSF2Day30[j].roomid == 3){
               this.timeofweekOTSF2Day30[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -19695,13 +19698,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day30.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day30[j].showremark = true;
                 this.timeofweekOTSF2Day30[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '30-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '30-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day30.length; j++){
             if(this.timeofweekOTSF2Day30[j].roomid == 4){
               this.timeofweekOTSF2Day30[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -19717,13 +19720,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day30.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day30[j].showremark = true;
                 this.timeofweekOTSF2Day30[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '30-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '30-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day30.length; j++){
             if(this.timeofweekOTSF2Day30[j].roomid == 5){
               this.timeofweekOTSF2Day30[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -19739,13 +19742,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day30.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day30[j].showremark = true;
                 this.timeofweekOTSF2Day30[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '30-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '30-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day30.length; j++){
             if(this.timeofweekOTSF2Day30[j].roomid == 6){
               this.timeofweekOTSF2Day30[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -19761,13 +19764,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day30.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day30[j].showremark = true;
                 this.timeofweekOTSF2Day30[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '30-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '30-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day30.length; j++){
             if(this.timeofweekOTSF2Day30[j].roomid == 7){
               this.timeofweekOTSF2Day30[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -19783,13 +19786,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day30.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day30[j].showremark = true;
                 this.timeofweekOTSF2Day30[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '30-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '30-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day30.length; j++){
             if(this.timeofweekOTSF2Day30[j].roomid == 8){
               this.timeofweekOTSF2Day30[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -19805,13 +19808,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day30.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day30[j].showremark = true;
                 this.timeofweekOTSF2Day30[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '30-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '30-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day30.length; j++){
             if(this.timeofweekOTSF2Day30[j].roomid == 9){
               this.timeofweekOTSF2Day30[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -19827,13 +19830,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day30.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day30[j].showremark = true;
                 this.timeofweekOTSF2Day30[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '30-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '30-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day30.length; j++){
             if(this.timeofweekOTSF2Day30[j].roomid == 10){
               this.timeofweekOTSF2Day30[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -19849,13 +19852,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day30.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day30[j].showremark = true;
                 this.timeofweekOTSF2Day30[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '30-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '30-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day30.length; j++){
             if(this.timeofweekOTSF2Day30[j].roomid == 11){
               this.timeofweekOTSF2Day30[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -19871,13 +19874,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day30.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day30[j].showremark = true;
                 this.timeofweekOTSF2Day30[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '30-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '30-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day30.length; j++){
             if(this.timeofweekOTSF2Day30[j].roomid == 12){
               this.timeofweekOTSF2Day30[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -19893,13 +19896,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day30.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day30[j].showremark = true;
                 this.timeofweekOTSF2Day30[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '30-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '30-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day30.length; j++){
             if(this.timeofweekOTSF2Day30[j].roomid == 13){
               this.timeofweekOTSF2Day30[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -19915,13 +19918,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day30.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day30[j].showremark = true;
                 this.timeofweekOTSF2Day30[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '30-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '30-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day30.length; j++){
             if(this.timeofweekOTSF2Day30[j].roomid == 14){
               this.timeofweekOTSF2Day30[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -19937,13 +19940,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day30.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day30[j].showremark = true;
                 this.timeofweekOTSF2Day30[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '30-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '30-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day30.length; j++){
             if(this.timeofweekOTSF2Day30[j].roomid == 15){
               this.timeofweekOTSF2Day30[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -19959,13 +19962,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day30.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day30[j].showremark = true;
                 this.timeofweekOTSF2Day30[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '30-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '30-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day30.length; j++){
             if(this.timeofweekOTSF2Day30[j].roomid == 16){
               this.timeofweekOTSF2Day30[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -19981,13 +19984,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day30.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day30[j].showremark = true;
                 this.timeofweekOTSF2Day30[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '30-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '30-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day30.length; j++){
             if(this.timeofweekOTSF2Day30[j].roomid == 17){
               this.timeofweekOTSF2Day30[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -20003,13 +20006,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day30.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day30[j].showremark = true;
                 this.timeofweekOTSF2Day30[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '30-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '30-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day30.length; j++){
             if(this.timeofweekOTSF2Day30[j].roomid == 18){
               this.timeofweekOTSF2Day30[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -20025,13 +20028,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day30.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day30[j].showremark = true;
                 this.timeofweekOTSF2Day30[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '31-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '31-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day31.length; j++){
             if(this.timeofweekOTSF2Day31[j].roomid == 0){
               this.timeofweekOTSF2Day31[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -20047,13 +20050,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day31.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day31[j].showremark = true;
                 this.timeofweekOTSF2Day31[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '31'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '31'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day31.length; j++){
             if(this.timeofweekOTSF2Day31[j].roomid == 1){
               this.timeofweekOTSF2Day31[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -20069,13 +20072,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day31.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day31[j].showremark = true;
                 this.timeofweekOTSF2Day31[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '31-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '31-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day31.length; j++){
             if(this.timeofweekOTSF2Day31[j].roomid == 2){
               this.timeofweekOTSF2Day31[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -20091,13 +20094,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day31.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day31[j].showremark = true;
                 this.timeofweekOTSF2Day31[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '31-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '31-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day31.length; j++){
             if(this.timeofweekOTSF2Day31[j].roomid == 3){
               this.timeofweekOTSF2Day31[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -20113,13 +20116,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day31.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day31[j].showremark = true;
                 this.timeofweekOTSF2Day31[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '31-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '31-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day31.length; j++){
             if(this.timeofweekOTSF2Day31[j].roomid == 4){
               this.timeofweekOTSF2Day31[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -20135,13 +20138,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day31.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day31[j].showremark = true;
                 this.timeofweekOTSF2Day31[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '31-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '31-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day31.length; j++){
             if(this.timeofweekOTSF2Day31[j].roomid == 5){
               this.timeofweekOTSF2Day31[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -20157,13 +20160,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day31.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day31[j].showremark = true;
                 this.timeofweekOTSF2Day31[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '31-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '31-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day31.length; j++){
             if(this.timeofweekOTSF2Day31[j].roomid == 6){
               this.timeofweekOTSF2Day31[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -20179,13 +20182,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day31.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day31[j].showremark = true;
                 this.timeofweekOTSF2Day31[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '31-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '31-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day31.length; j++){
             if(this.timeofweekOTSF2Day31[j].roomid == 7){
               this.timeofweekOTSF2Day31[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -20201,13 +20204,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day31.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day31[j].showremark = true;
                 this.timeofweekOTSF2Day31[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '31-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '31-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day31.length; j++){
             if(this.timeofweekOTSF2Day31[j].roomid == 8){
               this.timeofweekOTSF2Day31[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -20223,13 +20226,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day31.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day31[j].showremark = true;
                 this.timeofweekOTSF2Day31[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '31-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '31-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day31.length; j++){
             if(this.timeofweekOTSF2Day31[j].roomid == 9){
               this.timeofweekOTSF2Day31[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -20245,13 +20248,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day31.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day31[j].showremark = true;
                 this.timeofweekOTSF2Day31[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '31-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '31-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day31.length; j++){
             if(this.timeofweekOTSF2Day31[j].roomid == 10){
               this.timeofweekOTSF2Day31[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -20267,13 +20270,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day31.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day31[j].showremark = true;
                 this.timeofweekOTSF2Day31[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '31-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '31-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day31.length; j++){
             if(this.timeofweekOTSF2Day31[j].roomid == 11){
               this.timeofweekOTSF2Day31[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -20289,13 +20292,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day31.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day31[j].showremark = true;
                 this.timeofweekOTSF2Day31[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '31-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '31-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day31.length; j++){
             if(this.timeofweekOTSF2Day31[j].roomid == 12){
               this.timeofweekOTSF2Day31[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -20311,13 +20314,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day31.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day31[j].showremark = true;
                 this.timeofweekOTSF2Day31[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '31-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '31-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day31.length; j++){
             if(this.timeofweekOTSF2Day31[j].roomid == 13){
               this.timeofweekOTSF2Day31[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -20333,13 +20336,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day31.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day31[j].showremark = true;
                 this.timeofweekOTSF2Day31[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '31-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '31-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day31.length; j++){
             if(this.timeofweekOTSF2Day31[j].roomid == 14){
               this.timeofweekOTSF2Day31[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -20355,13 +20358,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day31.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day31[j].showremark = true;
                 this.timeofweekOTSF2Day31[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '31-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '31-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day31.length; j++){
             if(this.timeofweekOTSF2Day31[j].roomid == 15){
               this.timeofweekOTSF2Day31[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -20377,13 +20380,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day31.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day31[j].showremark = true;
                 this.timeofweekOTSF2Day31[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '31-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '31-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day31.length; j++){
             if(this.timeofweekOTSF2Day31[j].roomid == 16){
               this.timeofweekOTSF2Day31[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -20399,13 +20402,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day31.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day31[j].showremark = true;
                 this.timeofweekOTSF2Day31[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '31-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '31-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day31.length; j++){
             if(this.timeofweekOTSF2Day31[j].roomid == 17){
               this.timeofweekOTSF2Day31[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -20421,13 +20424,13 @@ public appendTime(){
                       this.timeofweekOTSF2Day31.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day31[j].showremark = true;
                 this.timeofweekOTSF2Day31[j].remark = this.report[i].bookMeetingRoom.remark;
                }
             }
           }
-        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Office TSP Second Floor 2' && this.report[i].date== '31-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
+        }else if(this.report[i].bookMeetingRoom.starttime == '17.00' && this.report[i].bookMeetingRoom.roomname == 'Meeting Room1(TSP)' && this.report[i].date== '31-'+this.dateSelectMonth[1]+'-'+this.dateFull.year){
           for(let j =0 ; j < this.timeofweekOTSF2Day31.length; j++){
             if(this.timeofweekOTSF2Day31[j].roomid == 18){
               this.timeofweekOTSF2Day31[j].id = this.report[i].bookMeetingRoom.lengthtime ;
@@ -20443,7 +20446,7 @@ public appendTime(){
                       this.timeofweekOTSF2Day31.splice(this.counting,1);
                    }
               }
-              if(this.report[i].bookMeetingRoom.remark != 'undefined'){
+              if(this.report[i].bookMeetingRoom.remark != 'null'){
                 this.timeofweekOTSF2Day31[j].showremark = true;
                 this.timeofweekOTSF2Day31[j].remark = this.report[i].bookMeetingRoom.remark;
               }

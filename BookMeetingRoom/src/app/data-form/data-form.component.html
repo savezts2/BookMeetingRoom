@@ -43,7 +43,7 @@
           <div style="margin-left:25%;">
             <label>From Time :
               <mat-form-field>
-                <mat-select [(ngModel)]="fromtimeSelect" [ngModelOptions]="{standalone: true}" disabled>
+                <mat-select [(ngModel)]="fromtimeSelect" [ngModelOptions]="{standalone: true}">
                   <mat-option value="08.00">08.00</mat-option>
                   <mat-option value="08.30">08.30</mat-option>
                   <mat-option value="09.00">09.00</mat-option>
@@ -111,8 +111,8 @@
             <label>Tel. Booking By :
               <mat-form-field>
 
-                <input matInput formControlName="tel" required placeholder=" " pattern="[0][1-9]{9}" maxlength="10">
-
+                <input matInput formControlName="tel" required placeholder=" " pattern="[0][1-9]{9}" maxlength="10"  #message>
+                <mat-hint align="end">{{message.value.length}} / 10</mat-hint>
               </mat-form-field>
             </label>
             &nbsp;&nbsp;

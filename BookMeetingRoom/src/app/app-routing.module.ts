@@ -13,6 +13,8 @@ import { ModuleWithProviders } from '@angular/core';
 import { SystemadminComponent } from './systemadmin/systemadmin.component';
 import { EdituserbyadminComponent } from './edituserbyadmin/edituserbyadmin.component';
 import { DeleteuserbyadminComponent } from './deleteuserbyadmin/deleteuserbyadmin.component';
+import { EditordeletebookComponent } from './editordeletebook/editordeletebook.component';
+import { EditbookComponent } from './editbook/editbook.component';
 const routes: Routes = [
     { path: 'selectRoom', component: SelectRoomComponent },
     { path: 'selectDate', component: BookMeetingRoom1Component },
@@ -23,6 +25,8 @@ const routes: Routes = [
     { path: 'systemadmin', component: SystemadminComponent },
     { path: 'edituserbyadmin', component: EdituserbyadminComponent },
     { path: 'deleteuserbyadmin', component: DeleteuserbyadminComponent },
+    { path: 'editordeletebook', component: EditordeletebookComponent },
+    { path: 'editbook', component: EditbookComponent },
     { path: '', redirectTo: '/selectDate', pathMatch: 'full' }
 ];
 

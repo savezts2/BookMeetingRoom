@@ -21,7 +21,7 @@ isLoggedInHR : Observable<boolean>;
 
 
 roomnameandtime:any={}
-fromtimeSelect: null;
+fromtimeSelect: '';
 
 roomname: '' ;
 date: '';
@@ -40,28 +40,24 @@ secondFormGroup: FormGroup;
 
 
 
-constructor(public authService : AuthService, private route:ActivatedRoute, private service : ServiceService,private http: HttpClient,
-private router: Router,private _formBuilder: FormBuilder) {
-    this.isLoggedIn = authService.isLoggedIn();
-    this.isLoggedInAdmin = authService.isLoggedInAdmin();
-    this.isLoggedInHR = authService.isLoggedInHR();
-  }
+
 
 
 
   ngOnInit() {
 
       this.route.params.subscribe(prams=>{
+
                 this.roomnameandtime = prams;
-                this.fromtimeSelect=this.roomnameandtime.roomtime;
                 this.roomname =this.roomnameandtime.roomname;
                 this.date = this.roomnameandtime.date;
+                console.log(this.roomnameandtime);
               })
-
+    this.fromtimeSelect = this.roomnameandtime.roomtime;
     this.userid3 = localStorage.getItem('userid');
     this.service.findDate(this.date).subscribe(data=>{
     this.report = data;
-    //console.log(data);
+    console.log(data);
     this.appendTime();
     })
 
@@ -75,6 +71,14 @@ private router: Router,private _formBuilder: FormBuilder) {
       atten: [null, Validators.required],
       remark: null
     });
+  }
+
+constructor(public authService : AuthService, private route:ActivatedRoute, private service : ServiceService,private http: HttpClient,
+private router: Router,private _formBuilder: FormBuilder) {
+    this.isLoggedIn = authService.isLoggedIn();
+    this.isLoggedInAdmin = authService.isLoggedInAdmin();
+    this.isLoggedInHR = authService.isLoggedInHR();
+
   }
 
 close() {
@@ -104,6 +108,7 @@ SubmitData(){
                                }
                               );
 
+
       }
 
    }
@@ -118,61 +123,52 @@ checkReserved (fromtime: String , totime: String , roomname:String){
       for(let i = 0 ; i < this.timeofweekOTSF2.length ; i++){
         if(this.timeofweekOTSF2[i].time == fromtime){
           if(this.countTime > 1)
-             for(let j = i+1 ; j < this.countTime + i + 1; j++){
+             for(let j = i+1 ; j < this.countTime + i ; j++){
                  if(this.timeofweekOTSF2[j].checkReservations == true){
 
                      return true;
+
                      break;
-                  }
-                  else{
-                      return false;
-                      break;
                   }
              }
 
-        }
-      }
-
+          }
+       }
+          return false;
     }
 
     else if(roomname == "Meeting Room2(WH7)"){
       for(let i = 0 ; i < this.timeofweekR1WH7F2.length ; i++){
         if(this.timeofweekR1WH7F2[i].time == fromtime){
           if(this.countTime > 1)
-             for(let j = i+1 ; j < this.countTime + i + 1; j++){
+             for(let j = i+1 ; j < this.countTime + i ; j++){
                  if(this.timeofweekR1WH7F2[j].checkReservations == true){
                      return true;
                      break;
                   }
-                  else{
-                      return false;
-                      break;
-                  }
+
              }
 
         }
       }
-
+    return false;
     }
 
      else if(roomname == "Meeting Room3(WH7)"){
       for(let i = 0 ; i < this.timeofweekR2WH7F2.length ; i++){
         if(this.timeofweekR2WH7F2[i].time == fromtime){
           if(this.countTime > 1)
-             for(let j = i+1 ; j < this.countTime + i + 1; j++){
+             for(let j = i+1 ; j < this.countTime + i ; j++){
                  if(this.timeofweekR2WH7F2[j].checkReservations == true){
                      return true;
                      break;
                   }
-                  else{
-                      return false;
-                      break;
-                  }
+
              }
 
         }
       }
-
+    return false;
     }
 
 
@@ -180,20 +176,16 @@ checkReserved (fromtime: String , totime: String , roomname:String){
       for(let i = 0 ; i < this.timeofweekWH2F2.length ; i++){
         if(this.timeofweekWH2F2[i].time == fromtime){
           if(this.countTime > 1)
-             for(let j = i+1 ; j < this.countTime + i + 1; j++){
+             for(let j = i+1 ; j < this.countTime + i ; j++){
                  if(this.timeofweekWH2F2[j].checkReservations == true){
-                   console.log(this.countTime);  return true;
+                   return true;
                      break;
-                  }
-                  else{
-                    console.log(this.countTime);  return false;
-                      break;
                   }
              }
 
         }
       }
-      console.log(this.countTime);
+      return false;
     }
 
 }
@@ -2713,7 +2705,9 @@ timeofweekWH2F2 = [
         }
 
  }
+
 }
+
 }
 
 }

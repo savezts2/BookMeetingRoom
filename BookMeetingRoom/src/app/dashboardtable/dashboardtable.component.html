@@ -1,14 +1,44 @@
 <html>
-<body>
-<div class="wrapper">
+<body class="bgimg">
 
 
 
+<mat-sidenav-container *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)"
+                       class="card" (backdropClick)="close()">
+  <mat-sidenav #sidenav (keydown.escape)="close()">
+    <button mat-button (click)="close()" routerLink="/selectDate" class="botton">Book MeetingRoom</button><br>
+    <button mat-button (click)="close()" routerLink="/dashboard" class="botton">Dashboard</button>
+
+    <mat-accordion *ngIf="(isLoggedInAdmin | async)">
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Admin
+          </mat-panel-title>
+
+        </mat-expansion-panel-header>
+
+        <button mat-button (click)="close()" routerLink="/systemadmin" class="botton">System Admin</button>
+
+      </mat-expansion-panel>
+
+    </mat-accordion>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+
+    <button type="button" mat-button (click)="sidenav.open()">
+      <mat-icon aria-hidden="false" aria-label="Example home icon" class="icon">list
+      </mat-icon><p>Menu</p>
+    </button>
+
+
+
+    <h1 align="center">Dashboard</h1>
 
     <div *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)">
-      <br/>
-      <h1 align="center" style="color:#6d7fcc;">DashBoard</h1>
-      <h2 style="color:#6d7fcc; margin-left:5%;">{{dateFull.month}} {{dateFull.year}}</h2>
+
+      <h2 style="margin-left:5%;">{{dateFull.month}} {{dateFull.year}}</h2>
       <br/><br/>
       <table border="1" align="center" bordercolor=black bgcolor="black">
 
@@ -3140,7 +3170,20 @@
 
     </div>
 
-  </div>
+
+
+
+
+
+  </mat-sidenav-content>
+
+
+</mat-sidenav-container>
+
+
+
+
+
 
 
 
