@@ -7,6 +7,6 @@ export const baseUrl = 'http://192.168.1.47:8080/BookMeetingRoom';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent{
   title = 'BookMeetingRoom';
 }

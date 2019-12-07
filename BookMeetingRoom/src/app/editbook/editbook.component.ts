@@ -147,6 +147,7 @@
 countRow: number = 0;
 
 checkReserved (fromtime , totime , roomname){
+    this.countRow = 0;
     this.fromtimesplited = fromtime.split(".");
     this.totimesplited = totime.split(".");
 
@@ -193,10 +194,7 @@ checkReserved (fromtime , totime , roomname){
 
          }
       }
-          if(this.countRow > 0){
-              return false;
-          }else{
-          return true;}
+          return false;
     }
 
     else if(roomname == "Meeting Room2(WH7)"){
@@ -241,10 +239,7 @@ checkReserved (fromtime , totime , roomname){
 
          }
       }
-          if(this.countRow > 0){
-              return false;
-          }else{
-          return true;}
+          return false;
     }
 
      else if(roomname == "Meeting Room3(WH7)"){
@@ -287,10 +282,7 @@ checkReserved (fromtime , totime , roomname){
 
          }
       }
-          if(this.countRow > 0){
-              return false;
-          }else{
-          return true;}
+          return false;
     }
 
 
@@ -334,10 +326,7 @@ checkReserved (fromtime , totime , roomname){
 
          }
       }
-          if(this.countRow > 0){
-              return false;
-          }else{
-          return true;}
+          return false;
     }
 
 }

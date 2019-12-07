@@ -67,7 +67,6 @@ isLoggedInHR() : Observable<boolean> {
                       this.isLoginSubject.next(false);
                       this.isLoginHR.next(false);
 
-
                      // console.log("admin");
 
                   }else if(data.status == "hr"){

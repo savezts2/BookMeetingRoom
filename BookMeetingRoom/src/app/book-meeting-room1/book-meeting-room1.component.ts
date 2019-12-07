@@ -46,6 +46,12 @@ export class BookMeetingRoom1Component implements OnInit {
     today=new Date();
 
 
+    CurrentTime: any;
+    days: any;
+    hour: any;
+    minute: any;
+    sec: any;
+
 myFilter = (d: Date): boolean => {
 const day = d.getDay();
 // Prevent Saturday and Sunday from being selected.
@@ -62,6 +68,13 @@ constructor(public authService : AuthService , private router: Router , private 
     this.isLoggedIn = authService.isLoggedIn();
     this.isLoggedInAdmin = authService.isLoggedInAdmin();
     this.isLoggedInHR = authService.isLoggedInHR();
+
+    setInterval(() => {
+      this.CurrentTime = new Date().getHours() + ':' + new Date().getMinutes() + ':'+  new Date().getSeconds(),
+      this.hour = new Date().getHours(),this.minute = new Date().getMinutes(),this.sec = new Date().getSeconds(),
+      this.days = new Date().getDay()
+      }, 1);
+
   }
 
 
@@ -72,6 +85,7 @@ constructor(public authService : AuthService , private router: Router , private 
       //console.log("user",this.isLoggedIn );
       //console.log("admin",this.isLoggedInAdmin );
      // console.log("hr",this.isLoggedInHR );
+
   }
 
 
@@ -116,6 +130,7 @@ if(this.splitted.length == 1){
 
 }
 
+
 clicksearch(){
     this.dateSelect = this.serializedDate.value;
     if(this.dateSelect == ''){
@@ -123,6 +138,7 @@ clicksearch(){
     }else{
       this.convertMonth(this.dateSelect.toString());
     }
+
 }
 
 

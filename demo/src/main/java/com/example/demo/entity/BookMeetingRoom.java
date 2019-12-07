@@ -39,6 +39,16 @@ public class BookMeetingRoom {
 
     private String isActive;
 
+    private String statusbooking;
+
+
+    public String getStatusbooking() {
+        return statusbooking;
+    }
+
+    public void setStatusbooking(String statusbooking) {
+        this.statusbooking = statusbooking;
+    }
 
     public String getIsActive() {
         return isActive;

@@ -34,9 +34,18 @@ findUserid(userid : String){
     return this.http.get(this.API+'/Userid/'+userid,{})
 }
 
+findBook(date , room , time){
+    return this.http.get(this.API+'/'+date+'/'+room+'/'+time,{})
+}
+
 public getUserid(userid : String): Observable<any> {
                  return this.http.get(this.API + '/Userid/'+userid,{});
                }
+
+
+ getBookMeetingRoom(date: String, room: String , time: String): Observable<any>{
+      return this.http.get(this.API +'/Bookeiei/'+date+'/'+room+'/'+time,{});
+  }
 
 
 

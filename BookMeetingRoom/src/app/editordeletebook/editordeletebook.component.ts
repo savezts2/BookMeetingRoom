@@ -53,6 +53,47 @@ public API = '//localhost:8080';   //for test
 
   }
 
+checkin(){
+  let totimesplit: Array<string>;
+  let fromtimesplit: Array<string>;
+  totimesplit = this.data.time.split(".");
+  fromtimesplit = this.data.totime.split(".");
+  let datetoday: Array<string>;
+  let datebook: Array<string>;
+  let dates = new Date();
+  datetoday = dates.toString().split(" ");
+  datebook = this.data.date.split("-");
+
+  if(new Date().getHours() >= parseInt(totimesplit[0]) &&  new Date().getHours() <= parseInt(fromtimesplit[0]) && datetoday[2] == datebook[0]){
+
+
+        if(new Date().getMinutes() < parseInt(totimesplit[1]) && new Date().getHours() == parseInt(totimesplit[0])){
+            alert("Please checkin time: " + this.data.time + " - " + this.data.totime + " Date: " + this.data.date);
+        }else if(new Date().getMinutes() > parseInt(totimesplit[1]) && new Date().getHours() == parseInt(fromtimesplit[0])){
+            alert("Please checkin time: " + this.data.time + " - " + this.data.totime + " Date: " + this.data.date);
+        }else{
+        console.log(1);
+        this.http.post(this.API + '/CheckIn/'+this.data.date+'/'+this.data.room+'/'+this.data.time,{})
+                             .subscribe(
+                               data => {
+                                   console.log('PUT Request is successful');
+                                   alert("Checkin Success!");
+                                   window.location.reload(true);
+                               },
+                               error => {
+                                   console.log('Error', error);
+                               }
+                              );
+        }
+
+
+
+  }else{
+    this.dialogRef.close();
+    alert("Please checkin time: " + this.data.time + " - " + this.data.totime + " Date: " + this.data.date);
+  }
+}
+
 delete(){
 
   this.http.post(this.API + '/CancelBooking/'+this.data.date+'/'+this.data.room+'/'+this.data.time,{})

@@ -30,6 +30,12 @@ export class SelectRoomComponent implements OnInit {
     starttime : Array<any> = [];
     counting: number ;
 
+CurrentTime: any;
+days: any ;
+hour: any;
+minute: any;
+sec: any;
+
 
 day : String;
 month : String;
@@ -40,16 +46,34 @@ year : String;
 //public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
 
 dateshow : String;
-
+bf : boolean = true;
    constructor(public authService : AuthService , private router: Router, private service : ServiceService,private http: HttpClient,
    private route:ActivatedRoute, public dialog: MatDialog) {
       this.isLoggedIn = authService.isLoggedIn();
       this.isLoggedInAdmin = authService.isLoggedInAdmin();
       this.isLoggedInHR = authService.isLoggedInHR();
 
+       setInterval(() => {
+      this.CurrentTime = new Date().getHours() + ':' + new Date().getMinutes() + ':'+  new Date().getSeconds(),
+      this.hour = new Date().getHours(),this.minute = new Date().getMinutes(),this.sec = new Date().getSeconds(),
+      this.days = new Date().getDay()
+      }, 1);
+
+
    }
 
   ngOnInit() {
+
+     /*setInterval(() => {
+      if(new Date().getHours() == 13 && new Date().getMinutes() == 31){
+        console.log(1);
+      }
+        myInterval = myInterval + 1 ;
+        console.log(myInterval);
+
+    }, 1000);*/
+
+
 
       this.route.params.subscribe(prams=>{
                 this.datefull = prams;
@@ -61,6 +85,8 @@ dateshow : String;
     console.log(data);
     })
     this.dateshow = this.dateShow(this.datefull.datefull);
+
+
   }
 
 
@@ -82,30 +108,84 @@ dateShow(datefull){
     //console.log(room);
     //console.log(time);
       //console.log(this.datefull.datefull);
-    this.router.navigate(['data-form',{roomname:room,roomtime:time,date:this.datefull.datefull}]);
-  }
 
-   Reserved(room,time,username,atten,topic,remark,totime,tel){
-    if(localStorage.getItem('tokenidadmin') == "JWT" || localStorage.getItem('tokenidhr') == "JWT"){
+    let datebook: Array<string>;
+    let datetoday: Array<string>;
+    let dates = new Date();
+    datetoday = dates.toString().split(" ");
+    datebook = this.datefull.datefull.split("-");
+    let timesplit: Array<string>;
+    timesplit = time.split(".");
 
-      const dialogRef = this.dialog.open(EditordeletebookComponent, {
-        data: {room:room , time:time , date : this.datefull.datefull,atten:atten,topic:topic,remark:remark,totime:totime,tel:tel},
-        height: 'auto',
-        width:  'auto',
-    });
+    console.log(datetoday,datebook,timesplit);
+
+    if(parseInt(datetoday[2]) == parseInt(datebook[0])){
+    if(new Date().getHours() > parseInt(timesplit[0]) ){
+        alert("Cannot make a previous booking.");
+    }else if( new Date().getHours() == parseInt(timesplit[0]) ){
+      if( new Date().getMinutes() > parseInt(timesplit[1]) ){
+        alert("Cannot make a previous booking.");
+      }else{
+        this.router.navigate(['data-form',{roomname:room,roomtime:time,date:this.datefull.datefull}]);
+      }
+    }else{
+        this.router.navigate(['data-form',{roomname:room,roomtime:time,date:this.datefull.datefull}]);
+    }
 
     }else{
-        if(localStorage.getItem('userid') == username){
-            const dialogRef = this.dialog.open(EditordeletebookComponent, {
-        data: {room:room , time:time , date : this.datefull.datefull,atten:atten,topic:topic,remark:remark,totime:totime,tel:tel},
-        height: 'auto',
-        width:  'auto',
-    });
-        }else{
-            alert("Cannot book this time");
-        }
+        this.router.navigate(['data-form',{roomname:room,roomtime:time,date:this.datefull.datefull}]);
     }
+
   }
+
+        time1 : string;
+        time2 : string;
+        time3 = new Date();
+   Reserved(room,time,username,atten,topic,remark,totime,tel){
+        let totimesplit: Array<string>;
+         let fromtimesplit: Array<string>;
+
+        totimesplit = time.split(".");
+        fromtimesplit = totime.split(".");
+        this.time1 = totimesplit[0]+""+totimesplit[1];
+        this.time2 = fromtimesplit[0]+""+fromtimesplit[1];
+        let time4 : string = this.time3.getHours().toString() +""+ this.time3.getMinutes().toString();
+
+       this.service.getBookMeetingRoom(this.datefull.datefull,room,time).subscribe(data=>{
+              console.log(data);
+              if(data != null){
+                    if(parseInt(time4) > parseInt(this.time2)){
+                          alert("This time has passed");
+                    }else{
+
+                         if(localStorage.getItem('tokenidadmin') == "JWT" || localStorage.getItem('tokenidhr') == "JWT"){
+
+                           const dialogRef = this.dialog.open(EditordeletebookComponent, {
+                           data: {room:room , time:time , date : this.datefull.datefull,atten:atten,topic:topic,remark:remark,totime:totime,tel:tel},
+                           height: 'auto',
+                           width:  'auto',
+                           });
+
+                   }else{
+                        if(localStorage.getItem('userid') == username){
+                             const dialogRef = this.dialog.open(EditordeletebookComponent, {
+                             data: {room:room , time:time , date : this.datefull.datefull,atten:atten,topic:topic,remark:remark,totime:totime,tel:tel},
+                             height: 'auto',
+                             width:  'auto',
+                               });
+                        }else{
+                           alert("Cannot book this time");
+                         }
+                     }
+
+                }
+              }else{
+                  alert("this time is checked");
+              }
+       })
+
+  }
+
 
 
 
@@ -367,7 +447,15 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekOTSF2.length; j++){
             if(this.timeofweekOTSF2[j].roomid == 0){
               this.timeofweekOTSF2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2[j].color = '#A0FF7D' ;
+
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekOTSF2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekOTSF2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekOTSF2[j].color = '#FF3333' ;
+              }
+
               this.timeofweekOTSF2[j].showlabel = true;
               this.timeofweekOTSF2[j].byname = this.report[i].users.firstname;
               this.timeofweekOTSF2[j].atten = this.report[i].bookMeetingRoom.attendees ;this.timeofweekOTSF2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -391,7 +479,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekOTSF2.length; j++){
             if(this.timeofweekOTSF2[j].roomid == 1){
               this.timeofweekOTSF2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekOTSF2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekOTSF2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekOTSF2[j].color = '#FF3333' ;
+              }
               this.timeofweekOTSF2[j].showlabel = true;
               this.timeofweekOTSF2[j].byname = this.report[i].users.firstname;
               this.timeofweekOTSF2[j].atten = this.report[i].bookMeetingRoom.attendees ;this.timeofweekOTSF2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -414,7 +508,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekOTSF2.length; j++){
             if(this.timeofweekOTSF2[j].roomid == 2){
               this.timeofweekOTSF2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekOTSF2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekOTSF2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekOTSF2[j].color = '#FF3333' ;
+              }
               this.timeofweekOTSF2[j].showlabel = true;
               this.timeofweekOTSF2[j].byname = this.report[i].users.firstname;
               this.timeofweekOTSF2[j].atten = this.report[i].bookMeetingRoom.attendees ;this.timeofweekOTSF2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -437,7 +537,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekOTSF2.length; j++){
             if(this.timeofweekOTSF2[j].roomid == 3){
               this.timeofweekOTSF2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekOTSF2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekOTSF2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekOTSF2[j].color = '#FF3333' ;
+              }
               this.timeofweekOTSF2[j].showlabel = true;
               this.timeofweekOTSF2[j].byname = this.report[i].users.firstname;
               this.timeofweekOTSF2[j].atten = this.report[i].bookMeetingRoom.attendees ;this.timeofweekOTSF2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -460,7 +566,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekOTSF2.length; j++){
             if(this.timeofweekOTSF2[j].roomid == 4){
               this.timeofweekOTSF2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekOTSF2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekOTSF2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekOTSF2[j].color = '#FF3333' ;
+              }
               this.timeofweekOTSF2[j].showlabel = true;
               this.timeofweekOTSF2[j].byname = this.report[i].users.firstname;
               this.timeofweekOTSF2[j].atten = this.report[i].bookMeetingRoom.attendees ;this.timeofweekOTSF2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -483,7 +595,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekOTSF2.length; j++){
             if(this.timeofweekOTSF2[j].roomid == 5){
               this.timeofweekOTSF2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekOTSF2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekOTSF2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekOTSF2[j].color = '#FF3333' ;
+              }
               this.timeofweekOTSF2[j].showlabel = true;
               this.timeofweekOTSF2[j].byname = this.report[i].users.firstname;
               this.timeofweekOTSF2[j].atten = this.report[i].bookMeetingRoom.attendees ;this.timeofweekOTSF2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -506,7 +624,14 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekOTSF2.length; j++){
             if(this.timeofweekOTSF2[j].roomid == 6){
               this.timeofweekOTSF2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2[j].color = '#A0FF7D' ;
+
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekOTSF2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekOTSF2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekOTSF2[j].color = '#FF3333' ;
+              }
               this.timeofweekOTSF2[j].showlabel = true;
               this.timeofweekOTSF2[j].byname = this.report[i].users.firstname;
               this.timeofweekOTSF2[j].atten = this.report[i].bookMeetingRoom.attendees ;this.timeofweekOTSF2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -529,7 +654,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekOTSF2.length; j++){
             if(this.timeofweekOTSF2[j].roomid == 7){
               this.timeofweekOTSF2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekOTSF2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekOTSF2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekOTSF2[j].color = '#FF3333' ;
+              }
               this.timeofweekOTSF2[j].showlabel = true;
               this.timeofweekOTSF2[j].byname = this.report[i].users.firstname;
               this.timeofweekOTSF2[j].atten = this.report[i].bookMeetingRoom.attendees ;this.timeofweekOTSF2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -552,7 +683,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekOTSF2.length; j++){
             if(this.timeofweekOTSF2[j].roomid == 8){
               this.timeofweekOTSF2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekOTSF2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekOTSF2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekOTSF2[j].color = '#FF3333' ;
+              }
               this.timeofweekOTSF2[j].showlabel = true;
               this.timeofweekOTSF2[j].byname = this.report[i].users.firstname;
               this.timeofweekOTSF2[j].atten = this.report[i].bookMeetingRoom.attendees ;this.timeofweekOTSF2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -575,7 +712,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekOTSF2.length; j++){
             if(this.timeofweekOTSF2[j].roomid == 9){
               this.timeofweekOTSF2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekOTSF2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekOTSF2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekOTSF2[j].color = '#FF3333' ;
+              }
               this.timeofweekOTSF2[j].showlabel = true;
               this.timeofweekOTSF2[j].byname = this.report[i].users.firstname;
               this.timeofweekOTSF2[j].atten = this.report[i].bookMeetingRoom.attendees ;this.timeofweekOTSF2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -598,7 +741,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekOTSF2.length; j++){
             if(this.timeofweekOTSF2[j].roomid == 10){
               this.timeofweekOTSF2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekOTSF2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekOTSF2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekOTSF2[j].color = '#FF3333' ;
+              }
               this.timeofweekOTSF2[j].showlabel = true;
               this.timeofweekOTSF2[j].byname = this.report[i].users.firstname;
               this.timeofweekOTSF2[j].atten = this.report[i].bookMeetingRoom.attendees ;this.timeofweekOTSF2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -621,7 +770,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekOTSF2.length; j++){
             if(this.timeofweekOTSF2[j].roomid == 11){
               this.timeofweekOTSF2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekOTSF2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekOTSF2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekOTSF2[j].color = '#FF3333' ;
+              }
               this.timeofweekOTSF2[j].showlabel = true;
               this.timeofweekOTSF2[j].byname = this.report[i].users.firstname;
               this.timeofweekOTSF2[j].atten = this.report[i].bookMeetingRoom.attendees ;this.timeofweekOTSF2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -644,7 +799,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekOTSF2.length; j++){
             if(this.timeofweekOTSF2[j].roomid == 12){
               this.timeofweekOTSF2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekOTSF2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekOTSF2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekOTSF2[j].color = '#FF3333' ;
+              }
               this.timeofweekOTSF2[j].showlabel = true;
               this.timeofweekOTSF2[j].byname = this.report[i].users.firstname;
               this.timeofweekOTSF2[j].atten = this.report[i].bookMeetingRoom.attendees ;this.timeofweekOTSF2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -667,7 +828,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekOTSF2.length; j++){
             if(this.timeofweekOTSF2[j].roomid == 13){
               this.timeofweekOTSF2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekOTSF2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekOTSF2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekOTSF2[j].color = '#FF3333' ;
+              }
               this.timeofweekOTSF2[j].showlabel = true;
               this.timeofweekOTSF2[j].byname = this.report[i].users.firstname;
               this.timeofweekOTSF2[j].atten = this.report[i].bookMeetingRoom.attendees ;this.timeofweekOTSF2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -690,7 +857,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekOTSF2.length; j++){
             if(this.timeofweekOTSF2[j].roomid == 14){
               this.timeofweekOTSF2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekOTSF2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekOTSF2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekOTSF2[j].color = '#FF3333' ;
+              }
               this.timeofweekOTSF2[j].showlabel = true;
               this.timeofweekOTSF2[j].byname = this.report[i].users.firstname;
               this.timeofweekOTSF2[j].atten = this.report[i].bookMeetingRoom.attendees ;this.timeofweekOTSF2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -713,7 +886,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekOTSF2.length; j++){
             if(this.timeofweekOTSF2[j].roomid == 15){
               this.timeofweekOTSF2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekOTSF2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekOTSF2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekOTSF2[j].color = '#FF3333' ;
+              }
               this.timeofweekOTSF2[j].showlabel = true;
               this.timeofweekOTSF2[j].byname = this.report[i].users.firstname;
               this.timeofweekOTSF2[j].atten = this.report[i].bookMeetingRoom.attendees ;this.timeofweekOTSF2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -736,7 +915,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekOTSF2.length; j++){
             if(this.timeofweekOTSF2[j].roomid == 16){
               this.timeofweekOTSF2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekOTSF2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekOTSF2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekOTSF2[j].color = '#FF3333' ;
+              }
               this.timeofweekOTSF2[j].showlabel = true;
               this.timeofweekOTSF2[j].byname = this.report[i].users.firstname;
               this.timeofweekOTSF2[j].atten = this.report[i].bookMeetingRoom.attendees ;this.timeofweekOTSF2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -759,7 +944,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekOTSF2.length; j++){
             if(this.timeofweekOTSF2[j].roomid == 17){
               this.timeofweekOTSF2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekOTSF2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekOTSF2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekOTSF2[j].color = '#FF3333' ;
+              }
               this.timeofweekOTSF2[j].showlabel = true;
               this.timeofweekOTSF2[j].byname = this.report[i].users.firstname;
               this.timeofweekOTSF2[j].atten = this.report[i].bookMeetingRoom.attendees ;this.timeofweekOTSF2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -782,7 +973,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekOTSF2.length; j++){
             if(this.timeofweekOTSF2[j].roomid == 18){
               this.timeofweekOTSF2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekOTSF2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekOTSF2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekOTSF2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekOTSF2[j].color = '#FF3333' ;
+              }
               this.timeofweekOTSF2[j].showlabel = true;
               this.timeofweekOTSF2[j].byname = this.report[i].users.firstname;
               this.timeofweekOTSF2[j].atten = this.report[i].bookMeetingRoom.attendees ;this.timeofweekOTSF2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -811,7 +1008,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekR1WH7F2.length; j++){
             if(this.timeofweekR1WH7F2[j].roomid == 0){
               this.timeofweekR1WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekR1WH7F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekR1WH7F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekR1WH7F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekR1WH7F2[j].color = '#FF3333' ;
+              }
               this.timeofweekR1WH7F2[j].showlabel = true;
               this.timeofweekR1WH7F2[j].byname = this.report[i].users.firstname;
               this.timeofweekR1WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ; this.timeofweekR1WH7F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -835,7 +1038,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekR1WH7F2.length; j++){
             if(this.timeofweekR1WH7F2[j].roomid == 1){
               this.timeofweekR1WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekR1WH7F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekR1WH7F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekR1WH7F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekR1WH7F2[j].color = '#FF3333' ;
+              }
               this.timeofweekR1WH7F2[j].showlabel = true;
               this.timeofweekR1WH7F2[j].byname = this.report[i].users.firstname;
               this.timeofweekR1WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ; this.timeofweekR1WH7F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -858,7 +1067,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekR1WH7F2.length; j++){
             if(this.timeofweekR1WH7F2[j].roomid == 2){
               this.timeofweekR1WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekR1WH7F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekR1WH7F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekR1WH7F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekR1WH7F2[j].color = '#FF3333' ;
+              }
               this.timeofweekR1WH7F2[j].showlabel = true;
               this.timeofweekR1WH7F2[j].byname = this.report[i].users.firstname;
               this.timeofweekR1WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ; this.timeofweekR1WH7F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -881,7 +1096,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekR1WH7F2.length; j++){
             if(this.timeofweekR1WH7F2[j].roomid == 3){
               this.timeofweekR1WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekR1WH7F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekR1WH7F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekR1WH7F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekR1WH7F2[j].color = '#FF3333' ;
+              }
               this.timeofweekR1WH7F2[j].showlabel = true;
               this.timeofweekR1WH7F2[j].byname = this.report[i].users.firstname;
               this.timeofweekR1WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ; this.timeofweekR1WH7F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -904,7 +1125,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekR1WH7F2.length; j++){
             if(this.timeofweekR1WH7F2[j].roomid == 4){
               this.timeofweekR1WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekR1WH7F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekR1WH7F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekR1WH7F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekR1WH7F2[j].color = '#FF3333' ;
+              }
               this.timeofweekR1WH7F2[j].showlabel = true;
               this.timeofweekR1WH7F2[j].byname = this.report[i].users.firstname;
               this.timeofweekR1WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ; this.timeofweekR1WH7F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -927,7 +1154,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekR1WH7F2.length; j++){
             if(this.timeofweekR1WH7F2[j].roomid == 5){
               this.timeofweekR1WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekR1WH7F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekR1WH7F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekR1WH7F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekR1WH7F2[j].color = '#FF3333' ;
+              }
               this.timeofweekR1WH7F2[j].showlabel = true;
               this.timeofweekR1WH7F2[j].byname = this.report[i].users.firstname;
               this.timeofweekR1WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ; this.timeofweekR1WH7F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -950,7 +1183,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekR1WH7F2.length; j++){
             if(this.timeofweekR1WH7F2[j].roomid == 6){
               this.timeofweekR1WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekR1WH7F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekR1WH7F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekR1WH7F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekR1WH7F2[j].color = '#FF3333' ;
+              }
               this.timeofweekR1WH7F2[j].showlabel = true;
               this.timeofweekR1WH7F2[j].byname = this.report[i].users.firstname;
               this.timeofweekR1WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ; this.timeofweekR1WH7F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -973,7 +1212,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekR1WH7F2.length; j++){
             if(this.timeofweekR1WH7F2[j].roomid == 7){
               this.timeofweekR1WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekR1WH7F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekR1WH7F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekR1WH7F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekR1WH7F2[j].color = '#FF3333' ;
+              }
               this.timeofweekR1WH7F2[j].showlabel = true;
               this.timeofweekR1WH7F2[j].byname = this.report[i].users.firstname;
               this.timeofweekR1WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ; this.timeofweekR1WH7F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -996,7 +1241,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekR1WH7F2.length; j++){
             if(this.timeofweekR1WH7F2[j].roomid == 8){
               this.timeofweekR1WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekR1WH7F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekR1WH7F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekR1WH7F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekR1WH7F2[j].color = '#FF3333' ;
+              }
               this.timeofweekR1WH7F2[j].showlabel = true;
               this.timeofweekR1WH7F2[j].byname = this.report[i].users.firstname;
               this.timeofweekR1WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ; this.timeofweekR1WH7F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -1019,7 +1270,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekR1WH7F2.length; j++){
             if(this.timeofweekR1WH7F2[j].roomid == 9){
               this.timeofweekR1WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekR1WH7F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekR1WH7F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekR1WH7F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekR1WH7F2[j].color = '#FF3333' ;
+              }
               this.timeofweekR1WH7F2[j].showlabel = true;
               this.timeofweekR1WH7F2[j].byname = this.report[i].users.firstname;
               this.timeofweekR1WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ; this.timeofweekR1WH7F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -1042,7 +1299,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekR1WH7F2.length; j++){
             if(this.timeofweekR1WH7F2[j].roomid == 10){
               this.timeofweekR1WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekR1WH7F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekR1WH7F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekR1WH7F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekR1WH7F2[j].color = '#FF3333' ;
+              }
               this.timeofweekR1WH7F2[j].showlabel = true;
               this.timeofweekR1WH7F2[j].byname = this.report[i].users.firstname;
               this.timeofweekR1WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ; this.timeofweekR1WH7F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -1065,7 +1328,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekR1WH7F2.length; j++){
             if(this.timeofweekR1WH7F2[j].roomid == 11){
               this.timeofweekR1WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekR1WH7F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekR1WH7F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekR1WH7F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekR1WH7F2[j].color = '#FF3333' ;
+              }
               this.timeofweekR1WH7F2[j].showlabel = true;
               this.timeofweekR1WH7F2[j].byname = this.report[i].users.firstname;
               this.timeofweekR1WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ; this.timeofweekR1WH7F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -1088,7 +1357,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekR1WH7F2.length; j++){
             if(this.timeofweekR1WH7F2[j].roomid == 12){
               this.timeofweekR1WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekR1WH7F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekR1WH7F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekR1WH7F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekR1WH7F2[j].color = '#FF3333' ;
+              }
               this.timeofweekR1WH7F2[j].showlabel = true;
               this.timeofweekR1WH7F2[j].byname = this.report[i].users.firstname;
               this.timeofweekR1WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ; this.timeofweekR1WH7F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -1111,7 +1386,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekR1WH7F2.length; j++){
             if(this.timeofweekR1WH7F2[j].roomid == 13){
               this.timeofweekR1WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekR1WH7F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekR1WH7F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekR1WH7F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekR1WH7F2[j].color = '#FF3333' ;
+              }
               this.timeofweekR1WH7F2[j].showlabel = true;
               this.timeofweekR1WH7F2[j].byname = this.report[i].users.firstname;
               this.timeofweekR1WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ; this.timeofweekR1WH7F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -1134,7 +1415,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekR1WH7F2.length; j++){
             if(this.timeofweekR1WH7F2[j].roomid == 14){
               this.timeofweekR1WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekR1WH7F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekR1WH7F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekR1WH7F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekR1WH7F2[j].color = '#FF3333' ;
+              }
               this.timeofweekR1WH7F2[j].showlabel = true;
               this.timeofweekR1WH7F2[j].byname = this.report[i].users.firstname;
               this.timeofweekR1WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ; this.timeofweekR1WH7F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -1157,7 +1444,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekR1WH7F2.length; j++){
             if(this.timeofweekR1WH7F2[j].roomid == 15){
               this.timeofweekR1WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekR1WH7F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekR1WH7F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekR1WH7F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekR1WH7F2[j].color = '#FF3333' ;
+              }
               this.timeofweekR1WH7F2[j].showlabel = true;
               this.timeofweekR1WH7F2[j].byname = this.report[i].users.firstname;
               this.timeofweekR1WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ; this.timeofweekR1WH7F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -1180,7 +1473,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekR1WH7F2.length; j++){
             if(this.timeofweekR1WH7F2[j].roomid == 16){
               this.timeofweekR1WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekR1WH7F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekR1WH7F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekR1WH7F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekR1WH7F2[j].color = '#FF3333' ;
+              }
               this.timeofweekR1WH7F2[j].showlabel = true;
               this.timeofweekR1WH7F2[j].byname = this.report[i].users.firstname;
               this.timeofweekR1WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ; this.timeofweekR1WH7F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -1203,7 +1502,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekR1WH7F2.length; j++){
             if(this.timeofweekR1WH7F2[j].roomid == 17){
               this.timeofweekR1WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekR1WH7F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekR1WH7F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekR1WH7F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekR1WH7F2[j].color = '#FF3333' ;
+              }
               this.timeofweekR1WH7F2[j].showlabel = true;
               this.timeofweekR1WH7F2[j].byname = this.report[i].users.firstname;
               this.timeofweekR1WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ; this.timeofweekR1WH7F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -1226,7 +1531,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekR1WH7F2.length; j++){
             if(this.timeofweekR1WH7F2[j].roomid == 18){
               this.timeofweekR1WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekR1WH7F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekR1WH7F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekR1WH7F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekR1WH7F2[j].color = '#FF3333' ;
+              }
               this.timeofweekR1WH7F2[j].showlabel = true;
               this.timeofweekR1WH7F2[j].byname = this.report[i].users.firstname;
               this.timeofweekR1WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ; this.timeofweekR1WH7F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -1254,7 +1565,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekR2WH7F2.length; j++){
             if(this.timeofweekR2WH7F2[j].roomid == 0){
               this.timeofweekR2WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekR2WH7F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekR2WH7F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekR2WH7F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekR2WH7F2[j].color = '#FF3333' ;
+              }
               this.timeofweekR2WH7F2[j].showlabel = true;
               this.timeofweekR2WH7F2[j].byname = this.report[i].users.firstname;
               this.timeofweekR2WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ; this.timeofweekR2WH7F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -1278,7 +1595,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekR2WH7F2.length; j++){
             if(this.timeofweekR2WH7F2[j].roomid == 1){
               this.timeofweekR2WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekR2WH7F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekR2WH7F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekR2WH7F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekR2WH7F2[j].color = '#FF3333' ;
+              }
               this.timeofweekR2WH7F2[j].showlabel = true;
               this.timeofweekR2WH7F2[j].byname = this.report[i].users.firstname;
               this.timeofweekR2WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ; this.timeofweekR2WH7F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -1301,7 +1624,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekR2WH7F2.length; j++){
             if(this.timeofweekR2WH7F2[j].roomid == 2){
               this.timeofweekR2WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekR2WH7F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekR2WH7F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekR2WH7F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekR2WH7F2[j].color = '#FF3333' ;
+              }
               this.timeofweekR2WH7F2[j].showlabel = true;
               this.timeofweekR2WH7F2[j].byname = this.report[i].users.firstname;
               this.timeofweekR2WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ; this.timeofweekR2WH7F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -1324,7 +1653,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekR2WH7F2.length; j++){
             if(this.timeofweekR2WH7F2[j].roomid == 3){
               this.timeofweekR2WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekR2WH7F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekR2WH7F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekR2WH7F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekR2WH7F2[j].color = '#FF3333' ;
+              }
               this.timeofweekR2WH7F2[j].showlabel = true;
               this.timeofweekR2WH7F2[j].byname = this.report[i].users.firstname;
               this.timeofweekR2WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ; this.timeofweekR2WH7F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -1347,7 +1682,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekR2WH7F2.length; j++){
             if(this.timeofweekR2WH7F2[j].roomid == 4){
               this.timeofweekR2WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekR2WH7F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekR2WH7F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekR2WH7F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekR2WH7F2[j].color = '#FF3333' ;
+              }
               this.timeofweekR2WH7F2[j].showlabel = true;
               this.timeofweekR2WH7F2[j].byname = this.report[i].users.firstname;
               this.timeofweekR2WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ; this.timeofweekR2WH7F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -1370,7 +1711,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekR2WH7F2.length; j++){
             if(this.timeofweekR2WH7F2[j].roomid == 5){
               this.timeofweekR2WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekR2WH7F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekR2WH7F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekR2WH7F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekR2WH7F2[j].color = '#FF3333' ;
+              }
               this.timeofweekR2WH7F2[j].showlabel = true;
               this.timeofweekR2WH7F2[j].byname = this.report[i].users.firstname;
               this.timeofweekR2WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ; this.timeofweekR2WH7F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -1393,7 +1740,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekR2WH7F2.length; j++){
             if(this.timeofweekR2WH7F2[j].roomid == 6){
               this.timeofweekR2WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekR2WH7F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekR2WH7F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekR2WH7F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekR2WH7F2[j].color = '#FF3333' ;
+              }
               this.timeofweekR2WH7F2[j].showlabel = true;
               this.timeofweekR2WH7F2[j].byname = this.report[i].users.firstname;
               this.timeofweekR2WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ; this.timeofweekR2WH7F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -1416,7 +1769,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekR2WH7F2.length; j++){
             if(this.timeofweekR2WH7F2[j].roomid == 7){
               this.timeofweekR2WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekR2WH7F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekR2WH7F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekR2WH7F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekR2WH7F2[j].color = '#FF3333' ;
+              }
               this.timeofweekR2WH7F2[j].showlabel = true;
               this.timeofweekR2WH7F2[j].byname = this.report[i].users.firstname;
               this.timeofweekR2WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ; this.timeofweekR2WH7F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -1439,7 +1798,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekR2WH7F2.length; j++){
             if(this.timeofweekR2WH7F2[j].roomid == 8){
               this.timeofweekR2WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekR2WH7F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekR2WH7F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekR2WH7F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekR2WH7F2[j].color = '#FF3333' ;
+              }
               this.timeofweekR2WH7F2[j].showlabel = true;
               this.timeofweekR2WH7F2[j].byname = this.report[i].users.firstname;
               this.timeofweekR2WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ; this.timeofweekR2WH7F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -1462,7 +1827,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekR2WH7F2.length; j++){
             if(this.timeofweekR2WH7F2[j].roomid == 9){
               this.timeofweekR2WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekR2WH7F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekR2WH7F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekR2WH7F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekR2WH7F2[j].color = '#FF3333' ;
+              }
               this.timeofweekR2WH7F2[j].showlabel = true;
               this.timeofweekR2WH7F2[j].byname = this.report[i].users.firstname;
               this.timeofweekR2WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ; this.timeofweekR2WH7F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -1485,7 +1856,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekR2WH7F2.length; j++){
             if(this.timeofweekR2WH7F2[j].roomid == 10){
               this.timeofweekR2WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekR2WH7F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekR2WH7F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekR2WH7F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekR2WH7F2[j].color = '#FF3333' ;
+              }
               this.timeofweekR2WH7F2[j].showlabel = true;
               this.timeofweekR2WH7F2[j].byname = this.report[i].users.firstname;
               this.timeofweekR2WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ; this.timeofweekR2WH7F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -1508,7 +1885,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekR2WH7F2.length; j++){
             if(this.timeofweekR2WH7F2[j].roomid == 11){
               this.timeofweekR2WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekR2WH7F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekR2WH7F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekR2WH7F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekR2WH7F2[j].color = '#FF3333' ;
+              }
               this.timeofweekR2WH7F2[j].showlabel = true;
               this.timeofweekR2WH7F2[j].byname = this.report[i].users.firstname;
               this.timeofweekR2WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ; this.timeofweekR2WH7F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -1531,7 +1914,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekR2WH7F2.length; j++){
             if(this.timeofweekR2WH7F2[j].roomid == 12){
               this.timeofweekR2WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekR2WH7F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekR2WH7F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekR2WH7F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekR2WH7F2[j].color = '#FF3333' ;
+              }
               this.timeofweekR2WH7F2[j].showlabel = true;
               this.timeofweekR2WH7F2[j].byname = this.report[i].users.firstname;
               this.timeofweekR2WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ; this.timeofweekR2WH7F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -1554,7 +1943,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekR2WH7F2.length; j++){
             if(this.timeofweekR2WH7F2[j].roomid == 13){
               this.timeofweekR2WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekR2WH7F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekR2WH7F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekR2WH7F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekR2WH7F2[j].color = '#FF3333' ;
+              }
               this.timeofweekR2WH7F2[j].showlabel = true;
               this.timeofweekR2WH7F2[j].byname = this.report[i].users.firstname;
               this.timeofweekR2WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ; this.timeofweekR2WH7F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -1577,7 +1972,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekR2WH7F2.length; j++){
             if(this.timeofweekR2WH7F2[j].roomid == 14){
               this.timeofweekR2WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekR2WH7F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekR2WH7F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekR2WH7F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekR2WH7F2[j].color = '#FF3333' ;
+              }
               this.timeofweekR2WH7F2[j].showlabel = true;
               this.timeofweekR2WH7F2[j].byname = this.report[i].users.firstname;
               this.timeofweekR2WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ; this.timeofweekR2WH7F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -1600,7 +2001,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekR2WH7F2.length; j++){
             if(this.timeofweekR2WH7F2[j].roomid == 15){
               this.timeofweekR2WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekR2WH7F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekR2WH7F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekR2WH7F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekR2WH7F2[j].color = '#FF3333' ;
+              }
               this.timeofweekR2WH7F2[j].showlabel = true;
               this.timeofweekR2WH7F2[j].byname = this.report[i].users.firstname;
               this.timeofweekR2WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ; this.timeofweekR2WH7F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -1623,7 +2030,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekR2WH7F2.length; j++){
             if(this.timeofweekR2WH7F2[j].roomid == 16){
               this.timeofweekR2WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekR2WH7F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekR2WH7F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekR2WH7F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekR2WH7F2[j].color = '#FF3333' ;
+              }
               this.timeofweekR2WH7F2[j].showlabel = true;
               this.timeofweekR2WH7F2[j].byname = this.report[i].users.firstname;
               this.timeofweekR2WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ; this.timeofweekR2WH7F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -1646,7 +2059,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekR2WH7F2.length; j++){
             if(this.timeofweekR2WH7F2[j].roomid == 17){
               this.timeofweekR2WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekR2WH7F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekR2WH7F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekR2WH7F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekR2WH7F2[j].color = '#FF3333' ;
+              }
               this.timeofweekR2WH7F2[j].showlabel = true;
               this.timeofweekR2WH7F2[j].byname = this.report[i].users.firstname;
               this.timeofweekR2WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ; this.timeofweekR2WH7F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -1669,7 +2088,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekR2WH7F2.length; j++){
             if(this.timeofweekR2WH7F2[j].roomid == 18){
               this.timeofweekR2WH7F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekR2WH7F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekR2WH7F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekR2WH7F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekR2WH7F2[j].color = '#FF3333' ;
+              }
               this.timeofweekR2WH7F2[j].showlabel = true;
               this.timeofweekR2WH7F2[j].byname = this.report[i].users.firstname;
               this.timeofweekR2WH7F2[j].atten = this.report[i].bookMeetingRoom.attendees ; this.timeofweekR2WH7F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -1695,7 +2120,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekWH2F2.length; j++){
             if(this.timeofweekWH2F2[j].roomid == 0){
               this.timeofweekWH2F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekWH2F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekWH2F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekWH2F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekWH2F2[j].color = '#FF3333' ;
+              }
               this.timeofweekWH2F2[j].showlabel = true;
               this.timeofweekWH2F2[j].byname = this.report[i].users.firstname;
               this.timeofweekWH2F2[j].atten = this.report[i].bookMeetingRoom.attendees ;this.timeofweekWH2F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -1719,7 +2150,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekWH2F2.length; j++){
             if(this.timeofweekWH2F2[j].roomid == 1){
               this.timeofweekWH2F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekWH2F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekWH2F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekWH2F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekWH2F2[j].color = '#FF3333' ;
+              }
               this.timeofweekWH2F2[j].showlabel = true;
               this.timeofweekWH2F2[j].byname = this.report[i].users.firstname;
               this.timeofweekWH2F2[j].atten = this.report[i].bookMeetingRoom.attendees ;this.timeofweekWH2F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -1742,7 +2179,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekWH2F2.length; j++){
             if(this.timeofweekWH2F2[j].roomid == 2){
               this.timeofweekWH2F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekWH2F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekWH2F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekWH2F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekWH2F2[j].color = '#FF3333' ;
+              }
               this.timeofweekWH2F2[j].showlabel = true;
               this.timeofweekWH2F2[j].byname = this.report[i].users.firstname;
               this.timeofweekWH2F2[j].atten = this.report[i].bookMeetingRoom.attendees ;this.timeofweekWH2F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -1765,7 +2208,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekWH2F2.length; j++){
             if(this.timeofweekWH2F2[j].roomid == 3){
               this.timeofweekWH2F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekWH2F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekWH2F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekWH2F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekWH2F2[j].color = '#FF3333' ;
+              }
               this.timeofweekWH2F2[j].showlabel = true;
               this.timeofweekWH2F2[j].byname = this.report[i].users.firstname;
               this.timeofweekWH2F2[j].atten = this.report[i].bookMeetingRoom.attendees ;this.timeofweekWH2F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -1788,7 +2237,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekWH2F2.length; j++){
             if(this.timeofweekWH2F2[j].roomid == 4){
               this.timeofweekWH2F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekWH2F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekWH2F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekWH2F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekWH2F2[j].color = '#FF3333' ;
+              }
               this.timeofweekWH2F2[j].showlabel = true;
               this.timeofweekWH2F2[j].byname = this.report[i].users.firstname;
               this.timeofweekWH2F2[j].atten = this.report[i].bookMeetingRoom.attendees ;this.timeofweekWH2F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -1811,7 +2266,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekWH2F2.length; j++){
             if(this.timeofweekWH2F2[j].roomid == 5){
               this.timeofweekWH2F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekWH2F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekWH2F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekWH2F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekWH2F2[j].color = '#FF3333' ;
+              }
               this.timeofweekWH2F2[j].showlabel = true;
               this.timeofweekWH2F2[j].byname = this.report[i].users.firstname;
               this.timeofweekWH2F2[j].atten = this.report[i].bookMeetingRoom.attendees ;this.timeofweekWH2F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -1834,7 +2295,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekWH2F2.length; j++){
             if(this.timeofweekWH2F2[j].roomid == 6){
               this.timeofweekWH2F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekWH2F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekWH2F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekWH2F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekWH2F2[j].color = '#FF3333' ;
+              }
               this.timeofweekWH2F2[j].showlabel = true;
               this.timeofweekWH2F2[j].byname = this.report[i].users.firstname;
               this.timeofweekWH2F2[j].atten = this.report[i].bookMeetingRoom.attendees ;this.timeofweekWH2F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -1857,7 +2324,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekWH2F2.length; j++){
             if(this.timeofweekWH2F2[j].roomid == 7){
               this.timeofweekWH2F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekWH2F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekWH2F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekWH2F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekWH2F2[j].color = '#FF3333' ;
+              }
               this.timeofweekWH2F2[j].showlabel = true;
               this.timeofweekWH2F2[j].byname = this.report[i].users.firstname;
               this.timeofweekWH2F2[j].atten = this.report[i].bookMeetingRoom.attendees ;this.timeofweekWH2F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -1880,7 +2353,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekWH2F2.length; j++){
             if(this.timeofweekWH2F2[j].roomid == 8){
               this.timeofweekWH2F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekWH2F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekWH2F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekWH2F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekWH2F2[j].color = '#FF3333' ;
+              }
               this.timeofweekWH2F2[j].showlabel = true;
               this.timeofweekWH2F2[j].byname = this.report[i].users.firstname;
               this.timeofweekWH2F2[j].atten = this.report[i].bookMeetingRoom.attendees ;this.timeofweekWH2F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -1903,7 +2382,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekWH2F2.length; j++){
             if(this.timeofweekWH2F2[j].roomid == 9){
               this.timeofweekWH2F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekWH2F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekWH2F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekWH2F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekWH2F2[j].color = '#FF3333' ;
+              }
               this.timeofweekWH2F2[j].showlabel = true;
               this.timeofweekWH2F2[j].byname = this.report[i].users.firstname;
               this.timeofweekWH2F2[j].atten = this.report[i].bookMeetingRoom.attendees ;this.timeofweekWH2F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -1926,7 +2411,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekWH2F2.length; j++){
             if(this.timeofweekWH2F2[j].roomid == 10){
               this.timeofweekWH2F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekWH2F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekWH2F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekWH2F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekWH2F2[j].color = '#FF3333' ;
+              }
               this.timeofweekWH2F2[j].showlabel = true;
               this.timeofweekWH2F2[j].byname = this.report[i].users.firstname;
               this.timeofweekWH2F2[j].atten = this.report[i].bookMeetingRoom.attendees ;this.timeofweekWH2F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -1949,7 +2440,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekWH2F2.length; j++){
             if(this.timeofweekWH2F2[j].roomid == 11){
               this.timeofweekWH2F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekWH2F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekWH2F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekWH2F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekWH2F2[j].color = '#FF3333' ;
+              }
               this.timeofweekWH2F2[j].showlabel = true;
               this.timeofweekWH2F2[j].byname = this.report[i].users.firstname;
               this.timeofweekWH2F2[j].atten = this.report[i].bookMeetingRoom.attendees ;this.timeofweekWH2F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -1972,7 +2469,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekWH2F2.length; j++){
             if(this.timeofweekWH2F2[j].roomid == 12){
               this.timeofweekWH2F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekWH2F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekWH2F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekWH2F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekWH2F2[j].color = '#FF3333' ;
+              }
               this.timeofweekWH2F2[j].showlabel = true;
               this.timeofweekWH2F2[j].byname = this.report[i].users.firstname;
               this.timeofweekWH2F2[j].atten = this.report[i].bookMeetingRoom.attendees ;this.timeofweekWH2F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -1995,7 +2498,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekWH2F2.length; j++){
             if(this.timeofweekWH2F2[j].roomid == 13){
               this.timeofweekWH2F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekWH2F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekWH2F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekWH2F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekWH2F2[j].color = '#FF3333' ;
+              }
               this.timeofweekWH2F2[j].showlabel = true;
               this.timeofweekWH2F2[j].byname = this.report[i].users.firstname;
               this.timeofweekWH2F2[j].atten = this.report[i].bookMeetingRoom.attendees ;this.timeofweekWH2F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -2018,7 +2527,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekWH2F2.length; j++){
             if(this.timeofweekWH2F2[j].roomid == 14){
               this.timeofweekWH2F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekWH2F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekWH2F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekWH2F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekWH2F2[j].color = '#FF3333' ;
+              }
               this.timeofweekWH2F2[j].showlabel = true;
               this.timeofweekWH2F2[j].byname = this.report[i].users.firstname;
               this.timeofweekWH2F2[j].atten = this.report[i].bookMeetingRoom.attendees ;this.timeofweekWH2F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -2041,7 +2556,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekWH2F2.length; j++){
             if(this.timeofweekWH2F2[j].roomid == 15){
               this.timeofweekWH2F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekWH2F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekWH2F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekWH2F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekWH2F2[j].color = '#FF3333' ;
+              }
               this.timeofweekWH2F2[j].showlabel = true;
               this.timeofweekWH2F2[j].byname = this.report[i].users.firstname;
               this.timeofweekWH2F2[j].atten = this.report[i].bookMeetingRoom.attendees ;this.timeofweekWH2F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -2064,7 +2585,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekWH2F2.length; j++){
             if(this.timeofweekWH2F2[j].roomid == 16){
               this.timeofweekWH2F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekWH2F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekWH2F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekWH2F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekWH2F2[j].color = '#FF3333' ;
+              }
               this.timeofweekWH2F2[j].showlabel = true;
               this.timeofweekWH2F2[j].byname = this.report[i].users.firstname;
               this.timeofweekWH2F2[j].atten = this.report[i].bookMeetingRoom.attendees ;this.timeofweekWH2F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -2087,7 +2614,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekWH2F2.length; j++){
             if(this.timeofweekWH2F2[j].roomid == 17){
               this.timeofweekWH2F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekWH2F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekWH2F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekWH2F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekWH2F2[j].color = '#FF3333' ;
+              }
               this.timeofweekWH2F2[j].showlabel = true;
               this.timeofweekWH2F2[j].byname = this.report[i].users.firstname;
               this.timeofweekWH2F2[j].atten = this.report[i].bookMeetingRoom.attendees ;this.timeofweekWH2F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;
@@ -2110,7 +2643,13 @@ timeofweekWH2F2 = [
           for(let j =0 ; j < this.timeofweekWH2F2.length; j++){
             if(this.timeofweekWH2F2[j].roomid == 18){
               this.timeofweekWH2F2[j].id = this.report[i].bookMeetingRoom.lengthtime ;
-              this.timeofweekWH2F2[j].color = '#A0FF7D' ;
+              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                this.timeofweekWH2F2[j].color = '#C0C0C0' ;
+              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                this.timeofweekWH2F2[j].color = '#A0FF7D' ;
+              }else{
+                this.timeofweekWH2F2[j].color = '#FF3333' ;
+              }
               this.timeofweekWH2F2[j].showlabel = true;
               this.timeofweekWH2F2[j].byname = this.report[i].users.firstname;
               this.timeofweekWH2F2[j].atten = this.report[i].bookMeetingRoom.attendees ;this.timeofweekWH2F2[j].tel = this.report[i].bookMeetingRoom.telbookingby ;

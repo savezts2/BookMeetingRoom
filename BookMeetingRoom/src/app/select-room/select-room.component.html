@@ -30,13 +30,13 @@
 
     <button type="button" mat-button (click)="sidenav.open()">
       <mat-icon aria-hidden="false" aria-label="Example home icon" class="icon">list
-      </mat-icon><p>Menu</p>
+      </mat-icon><p>Menu</p>{{CurrentTime}}
     </button>
 
     <div *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)">
 
 
-      <h2 style="margin-left:5%;">Date: {{dateshow}}</h2>
+      <h2 style="margin-left:5%;" *ngIf="bf">Date: {{dateshow}}</h2>
 
 
       <table border="1" align="center" bordercolor=black bgcolor="black">
@@ -157,7 +157,7 @@
 
 
     </div>
-
+    <br/><br/>
 
 
 

@@ -28,13 +28,17 @@ DateEndDashboard: String;
 DateStartDashboard: String;
 month: String;
 splittedDate : Array<any>;
-
+CurrentTime: any;
 selectedyear = this.convertyear(this.serializedDate);
 selectedmonth= this.convertmonth(this.serializedDate);
 constructor(public authService : AuthService , private router: Router , private service : ServiceService) {
       this.isLoggedIn = authService.isLoggedIn();
       this.isLoggedInAdmin = authService.isLoggedInAdmin();
       this.isLoggedInHR = authService.isLoggedInHR();
+
+     setInterval(() => {
+      this.CurrentTime = new Date().getHours() + ':' + new Date().getMinutes() + ':'+  new Date().getSeconds()
+      }, 1);
    }
 
   ngOnInit() {

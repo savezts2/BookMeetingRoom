@@ -44,6 +44,18 @@ public class BookMeetingRoomController {
         return bookMeetingRoom;
     }
 
+    @PostMapping(path = "/CheckIn/{dateBookMeetingRoom}/{roomname}/{starttime}")
+    public BookMeetingRoom bookMeetingRoom4(@PathVariable String dateBookMeetingRoom, @PathVariable String roomname, @PathVariable String starttime ) {
+        BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findByDateBookMeetingRoomAndRoomnameAndStarttimeAndIsActive(dateBookMeetingRoom,roomname,starttime,"1");
+        bookMeetingRoom.setStatusbooking("checkin");
+        bookMeetingRoomRepository.save(bookMeetingRoom);
+        return bookMeetingRoom;
+    }
+
+    @GetMapping("/Bookeiei/{dateBookMeetingRoom}/{roomname}/{starttime}")
+    public  BookMeetingRoom bookMeetingRoom(@PathVariable String dateBookMeetingRoom, @PathVariable String roomname, @PathVariable String starttime){
+        return this.bookMeetingRoomRepository.getBookday(dateBookMeetingRoom,roomname,starttime,"1","booking");
+    }
 
     @PostMapping(path = "/Editbook/{dateBookMeetingRoom}/{roomname}/{starttime}/{newstarttime}/{endtime}/{atten}/{topic}/{remark}/{tel}")
     public BookMeetingRoom bookMeetingRoom3(@PathVariable String dateBookMeetingRoom, @PathVariable String roomname, @PathVariable String starttime,
@@ -83,7 +95,7 @@ public class BookMeetingRoomController {
         bookMeetingRoom.setDateBookMeetingRoom(date);
         bookMeetingRoom.setIsActive("1");
         bookMeetingRoomRepository.save(bookMeetingRoom);
-
+        bookMeetingRoom.setStatusbooking("booking");
         Users users = usersRepository.findByUsernameAndIsActive(userid,"1");
 
 
