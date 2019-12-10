@@ -8,6 +8,7 @@ import { HttpClient} from '@angular/common/http';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import {MatSidenav} from '@angular/material/sidenav';
 import {EditordeletebookComponent} from '../editordeletebook/editordeletebook.component'
+import {CheckoutComponent} from '../checkout/checkout.component'
 export interface DialogData {
 room: string;
 time: string;
@@ -43,7 +44,7 @@ month : string;
 year : string;
 
     datefull :any={}
-    public API = '//localhost:8080/';  //for test
+    public API = '//localhost:8080';  //for test
 //public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
 
 dateshow : String;
@@ -91,12 +92,12 @@ ngOnDestroy() {
 
 
   this.intervals = setInterval(() => {
-    if(new Date().getHours() >= 8 && new Date().getMinutes() >= 30){
+    if(new Date().getHours() >= 8 && new Date().getMinutes() >= 45){
       for(let i = 0 ; i < this.report.length ; i++){
-          if(this.report[i].bookMeetingRoom.endtime == "08.30" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
+          if(this.report[i].bookMeetingRoom.starttime == "08.30" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
           getDate()){
 
-                this.http.post(this.API + '/Changstatusbook/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.endtime+'/'+
+                this.http.post(this.API + '/Changstatusbook/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.starttime+'/'+
                 this.report[i].bookMeetingRoom.dateBookMeetingRoom,{})
                                .subscribe(
                                  data => {
@@ -114,12 +115,12 @@ ngOnDestroy() {
       }
 
     }
-    if(new Date().getHours() >= 9 && new Date().getMinutes() >= 0){
+    if(new Date().getHours() >= 9 && new Date().getMinutes() >= 15){
       for(let i = 0 ; i < this.report.length ; i++){
-          if(this.report[i].bookMeetingRoom.endtime == "09.00" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
+          if(this.report[i].bookMeetingRoom.starttime == "09.00" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
           getDate()){
 
-                this.http.post(this.API + '/Changstatusbook/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.endtime+'/'+
+                this.http.post(this.API + '/Changstatusbook/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.starttime+'/'+
                 this.report[i].bookMeetingRoom.dateBookMeetingRoom,{})
                                .subscribe(
                                  data => {
@@ -137,12 +138,12 @@ ngOnDestroy() {
       }
 
     }
-    if(new Date().getHours() >= 9 && new Date().getMinutes() >= 30){
+    if(new Date().getHours() >= 9 && new Date().getMinutes() >= 45){
       for(let i = 0 ; i < this.report.length ; i++){
-          if(this.report[i].bookMeetingRoom.endtime == "09.30" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
+          if(this.report[i].bookMeetingRoom.starttime == "09.30" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
           getDate()){
 
-                this.http.post(this.API + '/Changstatusbook/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.endtime+'/'+
+                this.http.post(this.API + '/Changstatusbook/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.starttime+'/'+
                 this.report[i].bookMeetingRoom.dateBookMeetingRoom,{})
                                .subscribe(
                                  data => {
@@ -160,12 +161,12 @@ ngOnDestroy() {
       }
 
     }
-    if(new Date().getHours() >= 10 && new Date().getMinutes() >= 0){
+    if(new Date().getHours() >= 10 && new Date().getMinutes() >= 15){
       for(let i = 0 ; i < this.report.length ; i++){
-          if(this.report[i].bookMeetingRoom.endtime == "10.00" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
+          if(this.report[i].bookMeetingRoom.starttime == "10.00" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
           getDate()){
 
-                this.http.post(this.API + '/Changstatusbook/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.endtime+'/'+
+                this.http.post(this.API + '/Changstatusbook/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.starttime+'/'+
                 this.report[i].bookMeetingRoom.dateBookMeetingRoom,{})
                                .subscribe(
                                  data => {
@@ -183,12 +184,12 @@ ngOnDestroy() {
       }
 
     }
-    if(new Date().getHours() >= 10 && new Date().getMinutes() >= 30){
+    if(new Date().getHours() >= 10 && new Date().getMinutes() >= 45){
       for(let i = 0 ; i < this.report.length ; i++){
-          if(this.report[i].bookMeetingRoom.endtime == "10.30" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
+          if(this.report[i].bookMeetingRoom.starttime == "10.30" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
           getDate()){
 
-                this.http.post(this.API + '/Changstatusbook/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.endtime+'/'+
+                this.http.post(this.API + '/Changstatusbook/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.starttime+'/'+
                 this.report[i].bookMeetingRoom.dateBookMeetingRoom,{})
                                .subscribe(
                                  data => {
@@ -206,12 +207,12 @@ ngOnDestroy() {
       }
 
     }
-    if(new Date().getHours() >= 11 && new Date().getMinutes() >= 0){
+    if(new Date().getHours() >= 11 && new Date().getMinutes() >= 15){
       for(let i = 0 ; i < this.report.length ; i++){
-          if(this.report[i].bookMeetingRoom.endtime == "11.00" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
+          if(this.report[i].bookMeetingRoom.starttime == "11.00" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
           getDate()){
 
-                this.http.post(this.API + '/Changstatusbook/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.endtime+'/'+
+                this.http.post(this.API + '/Changstatusbook/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.starttime+'/'+
                 this.report[i].bookMeetingRoom.dateBookMeetingRoom,{})
                                .subscribe(
                                  data => {
@@ -229,12 +230,12 @@ ngOnDestroy() {
       }
 
     }
-    if(new Date().getHours() >= 11 && new Date().getMinutes() >= 30){
+    if(new Date().getHours() >= 11 && new Date().getMinutes() >= 45){
       for(let i = 0 ; i < this.report.length ; i++){
-          if(this.report[i].bookMeetingRoom.endtime == "11.30" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
+          if(this.report[i].bookMeetingRoom.starttime == "11.30" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
           getDate()){
 
-                this.http.post(this.API + '/Changstatusbook/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.endtime+'/'+
+                this.http.post(this.API + '/Changstatusbook/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.starttime+'/'+
                 this.report[i].bookMeetingRoom.dateBookMeetingRoom,{})
                                .subscribe(
                                  data => {
@@ -252,12 +253,12 @@ ngOnDestroy() {
       }
 
     }
-    if(new Date().getHours() >= 12 && new Date().getMinutes() >= 0){
+    if(new Date().getHours() >= 12 && new Date().getMinutes() >= 15){
       for(let i = 0 ; i < this.report.length ; i++){
-          if(this.report[i].bookMeetingRoom.endtime == "12.00" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
+          if(this.report[i].bookMeetingRoom.starttime == "12.00" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
           getDate()){
 
-                this.http.post(this.API + '/Changstatusbook/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.endtime+'/'+
+                this.http.post(this.API + '/Changstatusbook/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.starttime+'/'+
                 this.report[i].bookMeetingRoom.dateBookMeetingRoom,{})
                                .subscribe(
                                  data => {
@@ -275,12 +276,12 @@ ngOnDestroy() {
       }
 
     }
-    if(new Date().getHours() >= 12 && new Date().getMinutes() >= 30){
+    if(new Date().getHours() >= 12 && new Date().getMinutes() >= 45){
       for(let i = 0 ; i < this.report.length ; i++){
-          if(this.report[i].bookMeetingRoom.endtime == "12.30" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
+          if(this.report[i].bookMeetingRoom.starttime == "12.30" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
           getDate()){
 
-                this.http.post(this.API + '/Changstatusbook/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.endtime+'/'+
+                this.http.post(this.API + '/Changstatusbook/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.starttime+'/'+
                 this.report[i].bookMeetingRoom.dateBookMeetingRoom,{})
                                .subscribe(
                                  data => {
@@ -298,12 +299,12 @@ ngOnDestroy() {
       }
 
     }
-    if(new Date().getHours() >= 13 && new Date().getMinutes() >= 0){
+    if(new Date().getHours() >= 13 && new Date().getMinutes() >= 15){
       for(let i = 0 ; i < this.report.length ; i++){
-          if(this.report[i].bookMeetingRoom.endtime == "13.00" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
+          if(this.report[i].bookMeetingRoom.starttime == "13.00" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
           getDate()){
 
-                this.http.post(this.API + '/Changstatusbook/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.endtime+'/'+
+                this.http.post(this.API + '/Changstatusbook/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.starttime+'/'+
                 this.report[i].bookMeetingRoom.dateBookMeetingRoom,{})
                                .subscribe(
                                  data => {
@@ -321,12 +322,12 @@ ngOnDestroy() {
       }
 
     }
-    if(new Date().getHours() >= 13 && new Date().getMinutes() >= 30){
+    if(new Date().getHours() >= 13 && new Date().getMinutes() >= 45){
       for(let i = 0 ; i < this.report.length ; i++){
-          if(this.report[i].bookMeetingRoom.endtime == "13.30" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
+          if(this.report[i].bookMeetingRoom.starttime == "13.30" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
           getDate()){
 
-                this.http.post(this.API + '/Changstatusbook/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.endtime+'/'+
+                this.http.post(this.API + '/Changstatusbook/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.starttime+'/'+
                 this.report[i].bookMeetingRoom.dateBookMeetingRoom,{})
                                .subscribe(
                                  data => {
@@ -344,12 +345,12 @@ ngOnDestroy() {
       }
 
     }
-    if(new Date().getHours() >= 14 && new Date().getMinutes() >= 0){
+    if(new Date().getHours() >= 14 && new Date().getMinutes() >= 15){
       for(let i = 0 ; i < this.report.length ; i++){
-          if(this.report[i].bookMeetingRoom.endtime == "14.00" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
+          if(this.report[i].bookMeetingRoom.starttime == "14.00" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
           getDate()){
 
-                this.http.post(this.API + '/Changstatusbook/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.endtime+'/'+
+                this.http.post(this.API + '/Changstatusbook/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.starttime+'/'+
                 this.report[i].bookMeetingRoom.dateBookMeetingRoom,{})
                                .subscribe(
                                  data => {
@@ -367,12 +368,12 @@ ngOnDestroy() {
       }
 
     }
-    if(new Date().getHours() >= 14 && new Date().getMinutes() >= 30){
+    if(new Date().getHours() >= 14 && new Date().getMinutes() >= 45){
       for(let i = 0 ; i < this.report.length ; i++){
-          if(this.report[i].bookMeetingRoom.endtime == "14.30" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
+          if(this.report[i].bookMeetingRoom.starttime == "14.30" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
           getDate()){
 
-                this.http.post(this.API + '/Changstatusbook/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.endtime+'/'+
+                this.http.post(this.API + '/Changstatusbook/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.starttime+'/'+
                 this.report[i].bookMeetingRoom.dateBookMeetingRoom,{})
                                .subscribe(
                                  data => {
@@ -390,12 +391,12 @@ ngOnDestroy() {
       }
 
     }
-    if(new Date().getHours() >= 15 && new Date().getMinutes() >= 0){
+    if(new Date().getHours() >= 15 && new Date().getMinutes() >= 15){
       for(let i = 0 ; i < this.report.length ; i++){
-          if(this.report[i].bookMeetingRoom.endtime == "15.00" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
+          if(this.report[i].bookMeetingRoom.starttime == "15.00" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
           getDate()){
 
-                this.http.post(this.API + '/Changstatusbook/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.endtime+'/'+
+                this.http.post(this.API + '/Changstatusbook/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.starttime+'/'+
                 this.report[i].bookMeetingRoom.dateBookMeetingRoom,{})
                                .subscribe(
                                  data => {
@@ -413,12 +414,12 @@ ngOnDestroy() {
       }
 
     }
-    if(new Date().getHours() >= 15 && new Date().getMinutes() >= 30){
+    if(new Date().getHours() >= 15 && new Date().getMinutes() >= 45){
       for(let i = 0 ; i < this.report.length ; i++){
-          if(this.report[i].bookMeetingRoom.endtime == "15.30" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
+          if(this.report[i].bookMeetingRoom.starttime == "15.30" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
           getDate()){
 
-                this.http.post(this.API + '/Changstatusbook/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.endtime+'/'+
+                this.http.post(this.API + '/Changstatusbook/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.starttime+'/'+
                 this.report[i].bookMeetingRoom.dateBookMeetingRoom,{})
                                .subscribe(
                                  data => {
@@ -436,12 +437,12 @@ ngOnDestroy() {
       }
 
     }
-    if(new Date().getHours() >= 16 && new Date().getMinutes() >= 0){
+    if(new Date().getHours() >= 16 && new Date().getMinutes() >= 15){
       for(let i = 0 ; i < this.report.length ; i++){
-          if(this.report[i].bookMeetingRoom.endtime == "16.00" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
+          if(this.report[i].bookMeetingRoom.starttime == "16.00" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
           getDate()){
 
-                this.http.post(this.API + '/Changstatusbook/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.endtime+'/'+
+                this.http.post(this.API + '/Changstatusbook/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.starttime+'/'+
                 this.report[i].bookMeetingRoom.dateBookMeetingRoom,{})
                                .subscribe(
                                  data => {
@@ -459,12 +460,12 @@ ngOnDestroy() {
       }
 
     }
-    if(new Date().getHours() >= 16 && new Date().getMinutes() >= 30){
+    if(new Date().getHours() >= 16 && new Date().getMinutes() >= 45){
       for(let i = 0 ; i < this.report.length ; i++){
           if(this.report[i].bookMeetingRoom.endtime == "16.30" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
           getDate()){
 
-                this.http.post(this.API + '/Changstatusbook/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.endtime+'/'+
+                this.http.post(this.API + '/Changstatusbook/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.starttime+'/'+
                 this.report[i].bookMeetingRoom.dateBookMeetingRoom,{})
                                .subscribe(
                                  data => {
@@ -484,10 +485,10 @@ ngOnDestroy() {
     }
     if(new Date().getHours() >= 17 && new Date().getMinutes() >= 0){
       for(let i = 0 ; i < this.report.length ; i++){
-          if(this.report[i].bookMeetingRoom.endtime == "17.00" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
+          if(this.report[i].bookMeetingRoom.starttime == "17.00" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
           getDate()){
 
-                this.http.post(this.API + '/Changstatusbook/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.endtime+'/'+
+                this.http.post(this.API + '/Changstatusbook/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.starttime+'/'+
                 this.report[i].bookMeetingRoom.dateBookMeetingRoom,{})
                                .subscribe(
                                  data => {
@@ -587,8 +588,9 @@ dateShow(datefull){
 
 
        this.service.getBookMeetingRoom(this.datefull.datefull,room,time).subscribe(data=>{
-
+              console.log(data);
               if(data != null){
+
                     if(parseInt(this.time4) > parseInt(this.time2) && new Date().getDate().toString() == this.day){
                           alert("This time has passed");
                     }else{
@@ -615,7 +617,32 @@ dateShow(datefull){
 
                 }
               }else{
-                  alert("this time is checked");
+                  if(localStorage.getItem('tokenidadmin') == "JWT" || localStorage.getItem('tokenidhr') == "JWT"){
+                       if(parseInt(this.time4) > parseInt(this.time2) && new Date().getDate().toString() == this.day){
+                          alert("This time has passed");
+                         }else{
+                                     const dialogRef = this.dialog.open(CheckoutComponent, {
+                            data: {room:room , time:time , date : this.datefull.datefull,atten:atten,topic:topic,remark:remark,totime:totime,tel:tel},
+                           height: 'auto',
+                           width:  'auto',
+                           });
+                          }
+                  }else{
+                              if(localStorage.getItem('userid') == username){
+                                  if(parseInt(this.time4) > parseInt(this.time2) && new Date().getDate().toString() == this.day){
+                                     alert("This time has passed");
+                                  }else{
+                                    const dialogRef = this.dialog.open(CheckoutComponent, {
+                                   data: {room:room , time:time , date : this.datefull.datefull,atten:atten,topic:topic,remark:remark,totime:totime,tel:tel},
+                                   height: 'auto',
+                                    width:  'auto',
+                                    });
+                                  }
+                               }
+                                else{
+                                    alert("is not your book.");
+                                 }
+                  }
               }
        })
 

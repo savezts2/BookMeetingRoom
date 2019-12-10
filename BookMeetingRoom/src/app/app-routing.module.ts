@@ -9,7 +9,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { DashboardtableComponent } from './dashboardtable/dashboardtable.component';
 import { AdduserbyadminComponent } from './adduserbyadmin/adduserbyadmin.component';
 import { ModuleWithProviders } from '@angular/core';
-
+import {CheckoutComponent} from './checkout/checkout.component'
 import { SystemadminComponent } from './systemadmin/systemadmin.component';
 import { EdituserbyadminComponent } from './edituserbyadmin/edituserbyadmin.component';
 import { DeleteuserbyadminComponent } from './deleteuserbyadmin/deleteuserbyadmin.component';
@@ -26,7 +26,8 @@ const routes: Routes = [
     { path: 'edituserbyadmin', component: EdituserbyadminComponent },
     { path: 'deleteuserbyadmin', component: DeleteuserbyadminComponent },
     { path: 'editordeletebook', component: EditordeletebookComponent },
-    { path: 'editbook', component: EditbookComponent },
+{ path: 'editbook', component: EditbookComponent },
+{ path: 'checkout', component: CheckoutComponent },
     { path: '', redirectTo: '/selectDate', pathMatch: 'full' }
 ];
 

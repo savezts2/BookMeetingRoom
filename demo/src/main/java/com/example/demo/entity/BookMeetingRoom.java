@@ -15,8 +15,11 @@ import javax.persistence.*;
 public class BookMeetingRoom {
 
     @Id
-    @SequenceGenerator(name = "book_seq", sequenceName = "book_seq")
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "book_seq")
+    @SequenceGenerator(initialValue=1,
+            allocationSize=1,
+            name = "book_seq",
+            sequenceName="book_seq")
+    @GeneratedValue(generator="book_seq")
     private Long book_id;
 
     private String dateBookMeetingRoom ;

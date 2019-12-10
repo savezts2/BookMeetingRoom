@@ -16,8 +16,11 @@ import java.util.Date;
 public class Report {
 
     @Id
-    @SequenceGenerator(name = "report_seq", sequenceName = "report_seq")
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "report_seq")
+    @SequenceGenerator(initialValue=1,
+            allocationSize=1,
+            name = "report_seq",
+            sequenceName="report_seq")
+    @GeneratedValue(generator="report_seq")
     private Long report_id;
 
     @ManyToOne

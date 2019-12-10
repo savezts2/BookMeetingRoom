@@ -15,8 +15,7 @@ public class Department {
 
 
     @Id
-    @SequenceGenerator(name = "dep_seq", sequenceName = "dep_seq")
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "dep_seq")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long department_id;
 
     private String departments;

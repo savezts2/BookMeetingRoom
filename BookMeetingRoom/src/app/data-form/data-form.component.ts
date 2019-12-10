@@ -85,6 +85,22 @@ close() {
     this.sidenav.close();
   }
 
+checkOne(){
+   if(this.firstFormGroup.get('totime').value == null || this.firstFormGroup.get('totime').value == ''){
+    alert("Please Check your field");
+  }
+
+}
+
+checkTwo(){
+
+if(this.secondFormGroup.get('tel').value == null || this.secondFormGroup.get('tel').value == '' ||
+  this.secondFormGroup.get('topic').value == null || this.secondFormGroup.get('topic').value == '' ||
+   this.secondFormGroup.get('atten').value == null || this.secondFormGroup.get('atten').value == ''){
+    alert("Please Check your field");
+  }
+}
+
 
 SubmitData(){
 

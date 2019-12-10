@@ -40,6 +40,8 @@ import { EdituserbyadminComponent } from './edituserbyadmin/edituserbyadmin.comp
 import { DeleteuserbyadminComponent } from './deleteuserbyadmin/deleteuserbyadmin.component';
 import { EditordeletebookComponent } from './editordeletebook/editordeletebook.component';
 import { EditbookComponent } from './editbook/editbook.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,7 +57,8 @@ import { EditbookComponent } from './editbook/editbook.component';
     EdituserbyadminComponent,
     DeleteuserbyadminComponent,
     EditordeletebookComponent,
-    EditbookComponent
+    EditbookComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,

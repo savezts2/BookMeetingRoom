@@ -24,9 +24,9 @@ public interface BookMeetingRoomRepository extends JpaRepository<BookMeetingRoom
     BookMeetingRoom findByDateBookMeetingRoomAndRoomnameAndStarttimeAndIsActive(String dateBookMeetingRoom , String roomname, String starttime, String IsActive);
 
 
-    BookMeetingRoom findByRoomnameAndEndtimeAndDateBookMeetingRoom(String roomnamme , String endtime , String dateBookMeetingRoom);
+    BookMeetingRoom findByRoomnameAndStarttimeAndDateBookMeetingRoom(String roomnamme , String starttime , String dateBookMeetingRoom);
 
-    @Query(value = "SELECT * FROM book_meeting_room WHERE date_book_meeting_room = :date_book_meeting_room AND roomname = :roomname AND starttime = :starttime AND is_active = :is_active AND statusbooking = :statusbooking",nativeQuery = true)
+    @Query(value = "SELECT * FROM book_meeting_room WHERE date_book_meeting_room = :date_book_meeting_room AND roomname = :roomname AND starttime = :starttime AND is_active = :is_active AND (statusbooking = :statusbooking OR statusbooking = \'notcheckin\')",nativeQuery = true)
     BookMeetingRoom getBookday(@Param("date_book_meeting_room") String date_book_meeting_room ,@Param("roomname") String roomname,
                                @Param("starttime") String starttime,@Param("is_active") String is_active,@Param("statusbooking") String statusbooking);
 }

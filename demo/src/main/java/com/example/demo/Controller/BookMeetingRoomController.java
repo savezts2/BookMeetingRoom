@@ -32,11 +32,12 @@ public class BookMeetingRoomController {
     }
 
 
-    @PostMapping(path = "/Changstatusbook/{roomname}/{endtime}/{dateBookMeetingRoom}")
-    public BookMeetingRoom chackstatusbook(@PathVariable String roomname, @PathVariable String endtime, @PathVariable String dateBookMeetingRoom) {
-        BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findByRoomnameAndEndtimeAndDateBookMeetingRoom(roomname,endtime,dateBookMeetingRoom);
+    @PostMapping(path = "/Changstatusbook/{roomname}/{starttime}/{dateBookMeetingRoom}")
+    public BookMeetingRoom chackstatusbook(@PathVariable String roomname, @PathVariable String starttime, @PathVariable String dateBookMeetingRoom) {
+        BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findByRoomnameAndStarttimeAndDateBookMeetingRoom(roomname,starttime,dateBookMeetingRoom);
         bookMeetingRoom.setStatusbooking("notcheckin");
         bookMeetingRoomRepository.save(bookMeetingRoom);
+        System.out.println(dateBookMeetingRoom+roomname+starttime);
         return bookMeetingRoom;
     }
 
@@ -60,8 +61,63 @@ public class BookMeetingRoomController {
         return bookMeetingRoom;
     }
 
+    @PostMapping(path = "/Checkout/{dateBookMeetingRoom}/{roomname}/{starttime}/{hour}/{minute}")
+    public BookMeetingRoom checkout(@PathVariable String dateBookMeetingRoom, @PathVariable String roomname, @PathVariable String starttime
+            , @PathVariable int hour, @PathVariable int minute) {
+        String endtime2;
+        System.out.println(starttime);
+        System.out.println(hour+""+minute);
+
+        if(hour == 8 && minute <= 30){
+            endtime2 = "08.30";
+        }else if(hour == 8 && minute > 30){
+            endtime2 = "09.00";
+        }else if(hour == 9 && minute <= 30){
+            endtime2 = "09.30";
+        }else if(hour == 9 && minute > 30){
+            endtime2 = "10.00";
+        }else if(hour == 10 && minute <= 30){
+            endtime2 = "10.30";
+        }else if(hour == 10 && minute > 30){
+            endtime2 = "11.00";
+        }else if(hour == 11 && minute <= 30){
+            endtime2 = "11.30";
+        }else if(hour == 11 && minute > 30){
+            endtime2 = "12.00";
+        }else if(hour == 12 && minute <= 30){
+            endtime2 = "12.30";
+        }else if(hour == 12 && minute > 30){
+            endtime2 = "13.00";
+        }else if(hour == 13 && minute <= 30){
+            endtime2 = "13.30";
+        }else if(hour == 13 && minute > 30){
+            endtime2 = "14.00";
+        }else if(hour == 14 && minute <= 30){
+            endtime2 = "14.30";
+        }else if(hour == 14 && minute > 30){
+            endtime2 = "15.00";
+        }else if(hour == 15 && minute <= 30){
+            endtime2 = "15.30";
+        }else if(hour == 15 && minute > 30){
+            endtime2 = "16.00";
+        }else if(hour == 16 && minute <= 30){
+            endtime2 = "16.30";
+        }else{
+            endtime2 = "17.00";
+        }
+
+        BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findByDateBookMeetingRoomAndRoomnameAndStarttimeAndIsActive(dateBookMeetingRoom,roomname,starttime,"1");
+
+        int lengthh = convertLengthTime(starttime,endtime2);
+        bookMeetingRoom.setLengthtime(lengthh);
+        bookMeetingRoom.setEndtime(endtime2);
+        bookMeetingRoomRepository.save(bookMeetingRoom);
+        return bookMeetingRoom;
+    }
+
     @GetMapping("/Bookeiei/{dateBookMeetingRoom}/{roomname}/{starttime}")
     public  BookMeetingRoom bookMeetingRoom(@PathVariable String dateBookMeetingRoom, @PathVariable String roomname, @PathVariable String starttime){
+
         return this.bookMeetingRoomRepository.getBookday(dateBookMeetingRoom,roomname,starttime,"1","booking");
     }
 
