@@ -55,7 +55,7 @@ isLoggedInHR() : Observable<boolean> {
                       alert("this id hasn't active please contact IT Support");
                   }
                   else{
-                  if(data.status == "admin"){
+                  if(data.status == "ADMIN"){
                       alert("Login Success !");
                       localStorage.setItem('tokenidadmin', 'JWT');
                       this.isLoginAdmin.next(true);
@@ -67,9 +67,9 @@ isLoggedInHR() : Observable<boolean> {
                       this.isLoginSubject.next(false);
                       this.isLoginHR.next(false);
 
-                     // console.log("admin");
+                      console.log("admin");
 
-                  }else if(data.status == "hr"){
+                  }else if(data.status == "HR"){
                       alert("Login Success !");
                       localStorage.setItem('tokenidhr', 'JWT');
                       this.isLoginHR.next(true);
@@ -80,7 +80,7 @@ isLoggedInHR() : Observable<boolean> {
                       localStorage.removeItem('tokenidadmin');
                       this.isLoginSubject.next(false);
                       this.isLoginAdmin.next(false);
-                    //  console.log("HR");
+                      console.log("HR");
                   }
                   else{
                     alert("Login Success !");
@@ -93,7 +93,7 @@ isLoggedInHR() : Observable<boolean> {
                       localStorage.removeItem('tokenidhr');
                       this.isLoginHR.next(false);
                       this.isLoginAdmin.next(false);
-                  //   console.log("user");
+                     console.log("user");
                   }
                   }
               }

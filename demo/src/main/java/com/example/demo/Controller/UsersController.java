@@ -1,7 +1,13 @@
 package com.example.demo.Controller;
 
 
+import com.example.demo.entity.Department;
+import com.example.demo.entity.Position;
+import com.example.demo.entity.S_role;
 import com.example.demo.entity.Users;
+import com.example.demo.repository.DepartmentRepository;
+import com.example.demo.repository.PositionRepository;
+import com.example.demo.repository.S_roleRepository;
 import com.example.demo.repository.UsersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -18,6 +24,17 @@ public class UsersController {
 
     @Autowired
     private UsersRepository usersRepository;
+
+    @Autowired
+    private DepartmentRepository departmentRepository;
+
+    @Autowired
+    private PositionRepository positionRepository;
+
+    @Autowired
+    private S_roleRepository s_roleRepository;
+
+
 
     @GetMapping("/Users/{username}/Password/{password}")
     public Users getUserid(@PathVariable("username") String username , @PathVariable("password") String password){
@@ -38,6 +55,35 @@ public class UsersController {
     @GetMapping("/Userid/{username}")
     public  Users users(@PathVariable String username){
         return this.usersRepository.findByUsernameAndIsActive(username,"1");
+    }
+
+    @GetMapping(path = "/Department")
+    public Collection<Department> departments() {
+        return departmentRepository.findAll().stream().filter(this::departmentActive).collect(Collectors.toList());
+    }
+
+    @GetMapping(path = "/Position")
+    public Collection<Position> positions() {
+        return positionRepository.findAll().stream().filter(this::PositionActive).collect(Collectors.toList());
+    }
+
+    @GetMapping(path = "/Role")
+    public Collection<S_role> s_roles() {
+        return s_roleRepository.findAll().stream().filter(this::RoleActive).collect(Collectors.toList());
+    }
+
+
+
+    private boolean departmentActive(Department department) {
+        return department.getIsActive().equals("1");
+    }
+
+    private boolean PositionActive(Position position) {
+        return position.getIsActive().equals("1");
+    }
+
+    private boolean RoleActive(S_role s_role) {
+        return s_role.getIsActive().equals("1");
     }
 
     @PostMapping(path = "/Adduser/{firstname}/{lastname}/{department}/{position}/{username}/{password}/{status}")

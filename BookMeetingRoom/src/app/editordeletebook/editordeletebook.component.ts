@@ -41,7 +41,9 @@ isLoggedInAdmin : Observable<boolean>;
 isLoggedInHR : Observable<boolean>;
 public API = '//localhost:8080';   //for test
 //public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
-
+timenum : number;
+totimenum : number;
+datetimenow : number;
   constructor(public authService : AuthService , private router: Router , private service : ServiceService,public dialog: MatDialog,
   @Inject(MAT_DIALOG_DATA) public data: DialogData, public dialogRef: MatDialogRef<EditordeletebookComponent>, private http: HttpClient) {
       this.isLoggedIn = authService.isLoggedIn();
@@ -64,16 +66,30 @@ checkin(){
   datetoday = dates.toString().split(" ");
   datebook = this.data.date.split("-");
 
-  if(new Date().getHours() >= parseInt(totimesplit[0]) &&  new Date().getHours() <= parseInt(fromtimesplit[0]) && datetoday[2] == datebook[0]){
+
+    this.timenum = parseInt(totimesplit[0]+""+totimesplit[1]);
+    this.totimenum = parseInt(fromtimesplit[0]+""+fromtimesplit[1]);
 
 
-        if(new Date().getMinutes() < parseInt(totimesplit[1]) && new Date().getHours() == parseInt(totimesplit[0])){
-            alert("Please checkin time: " + this.data.time + " - " + this.data.totime + " Date: " + this.data.date);
-        }else if(new Date().getMinutes() > parseInt(totimesplit[1]) && new Date().getHours() == parseInt(fromtimesplit[0])){
-            alert("Please checkin time: " + this.data.time + " - " + this.data.totime + " Date: " + this.data.date);
-        }else{
-        console.log(1);
-        this.http.post(this.API + '/CheckIn/'+this.data.date+'/'+this.data.room+'/'+this.data.time,{})
+  if(new Date().getMinutes() < 10 ){
+
+     this.datetimenow = parseInt(new Date().getHours().toString()+"0"+new Date().getMinutes().toString());
+
+  }else{
+
+     this.datetimenow = parseInt(new Date().getHours().toString()+""+new Date().getMinutes().toString());
+
+  }
+
+
+
+  if(this.datetimenow <  this.timenum || this.datetimenow >  this.totimenum || datetoday[2] != datebook[0]){
+
+    alert("Please Checkin in time "+this.data.time+" - "+this.data.totime + " Date: "+this.data.date);
+
+
+  }else{
+     this.http.post(this.API + '/CheckIn/'+this.data.date+'/'+this.data.room+'/'+this.data.time,{})
                              .subscribe(
                                data => {
                                    console.log('PUT Request is successful');
@@ -84,14 +100,10 @@ checkin(){
                                    console.log('Error', error);
                                }
                               );
-        }
-
-
-
-  }else{
-    this.dialogRef.close();
-    alert("Please checkin time: " + this.data.time + " - " + this.data.totime + " Date: " + this.data.date);
   }
+
+
+
 }
 
 delete(){

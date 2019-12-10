@@ -56,9 +56,9 @@ table{
 
 }
 
-tr:hover {background-color: #FB5A37}
-td:hover {background-color: #FB5A37}
-th:hover {background-color: #FB5A37}
+tr:hover {background-color: #EEFF5A}
+td:hover {background-color: #EEFF5A}
+th:hover {background-color: #EEFF5A}
 
 .datepick{
     margin-left:126px;

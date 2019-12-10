@@ -21,31 +21,15 @@
       <div align="center">
         <mat-form-field>
           <mat-select placeholder="Department" formControlName="department" required>
-            <mat-option value="Account Executive">Account Executive</mat-option>
-            <mat-option value="Analyst">Analyst</mat-option>
-            <mat-option value="Business Development">Business Development</mat-option>
-            <mat-option value="Human Resource">Human Resource</mat-option>
-            <mat-option value="Inventory Management Control">Inventory Management Control</mat-option>
-            <mat-option value="Information Technology">Information Technology</mat-option>
-            <mat-option value="Operation">Operation</mat-option>
-            <mat-option value="Safety">Safety</mat-option>
-            <mat-option value="Trainee">Trainee</mat-option>
-            <mat-option value="Transport">Transport</mat-option>
+            <mat-option *ngFor="let department of departments" [value]="department.departments">
+              {{department.departments}}</mat-option>
           </mat-select>
         </mat-form-field>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <mat-form-field>
           <mat-select placeholder="Position" formControlName="position" required>
-            <mat-option value="Admin-AccountExcutive">Admin-AccountExcutive</mat-option>
-            <mat-option value="Admin-HumanResource">Admin-HumanResource</mat-option>
-            <mat-option value="Admin-InventoryManagementControl">Admin-InventoryManagementControl</mat-option>
-            <mat-option value="Admin-Transport">Admin-Transport</mat-option>
-            <mat-option value="DC-Manager">DC-Manager</mat-option>
-            <mat-option value="Manager">Manager</mat-option>
-            <mat-option value="Safety">Safety</mat-option>
-            <mat-option value="Supervisor">Supervisor</mat-option>
-            <mat-option value="Support">Support</mat-option>
-            <mat-option value="Trainee">Trainee</mat-option>
+            <mat-option *ngFor="let position of positions" [value]="position.positions">
+              {{position.positions}}</mat-option>
           </mat-select>
         </mat-form-field>
       </div>
@@ -67,10 +51,9 @@
         </mat-form-field>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <mat-form-field>
-          <mat-select placeholder="Status" formControlName="status" required>
-            <mat-option value="admin">Admin</mat-option>
-            <mat-option value="hr">HR</mat-option>
-            <mat-option value="user">User</mat-option>
+          <mat-select placeholder="Role" formControlName="status" required>
+            <mat-option *ngFor="let role of roles" [value]="role.role">
+              {{role.role}}</mat-option>
           </mat-select>
         </mat-form-field>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

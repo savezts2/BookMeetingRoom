@@ -38,6 +38,10 @@ isLoggedInAdmin : Observable<boolean>;
 isLoggedInHR : Observable<boolean>;
 firstFormGroup: FormGroup;
 hide : boolean;
+departments : Array<any>;
+positions : Array<any>;
+roles : Array<any>;
+
 public API = '//localhost:8080/';   //for test
 //public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
 
@@ -51,6 +55,19 @@ private router: Router,private _formBuilder: FormBuilder, @Inject(MAT_DIALOG_DAT
 }
 
   ngOnInit() {
+
+this.service.getDepartment().subscribe(data => {
+                                 this.departments = data;
+                               //  console.log(this.departments);
+                               });
+        this.service.getPosition().subscribe(data => {
+                                 this.positions = data;
+                              //   console.log(this.positions);
+                               });
+         this.service.getRole().subscribe(data => {
+                                 this.roles = data;
+                              //   console.log(this.roles);
+                               });
 
 
   this.firstFormGroup = this._formBuilder.group({

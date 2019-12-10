@@ -47,6 +47,18 @@ public getUserid(userid : String): Observable<any> {
       return this.http.get(this.API +'/Bookeiei/'+date+'/'+room+'/'+time,{});
   }
 
+getDepartment(): Observable<any> {
+            return this.http.get(this.API + '/Department');
+         }
+
+getPosition(): Observable<any> {
+            return this.http.get(this.API + '/Position');
+         }
+
+getRole(): Observable<any> {
+            return this.http.get(this.API + '/Role');
+         }
+
 
 
 }
