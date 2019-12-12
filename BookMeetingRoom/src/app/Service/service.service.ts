@@ -59,6 +59,11 @@ getRole(): Observable<any> {
             return this.http.get(this.API + '/Role');
          }
 
+getRoomname(): Observable<any> {
+            return this.http.get(this.API + '/Roomname');
+         }
+
+
 
 
 }

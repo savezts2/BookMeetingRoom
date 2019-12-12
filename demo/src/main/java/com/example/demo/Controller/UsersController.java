@@ -1,14 +1,8 @@
 package com.example.demo.Controller;
 
 
-import com.example.demo.entity.Department;
-import com.example.demo.entity.Position;
-import com.example.demo.entity.S_role;
-import com.example.demo.entity.Users;
-import com.example.demo.repository.DepartmentRepository;
-import com.example.demo.repository.PositionRepository;
-import com.example.demo.repository.S_roleRepository;
-import com.example.demo.repository.UsersRepository;
+import com.example.demo.entity.*;
+import com.example.demo.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -34,6 +28,8 @@ public class UsersController {
     @Autowired
     private S_roleRepository s_roleRepository;
 
+    @Autowired
+    private RoomnameRepository roomnameRepository;
 
 
     @GetMapping("/Users/{username}/Password/{password}")
@@ -62,6 +58,11 @@ public class UsersController {
         return departmentRepository.findAll().stream().filter(this::departmentActive).collect(Collectors.toList());
     }
 
+    @GetMapping(path = "/Roomname")
+    public Collection<Roomname> roomnames() {
+        return roomnameRepository.findAll().stream().filter(this::RoomnameActive).collect(Collectors.toList());
+    }
+
     @GetMapping(path = "/Position")
     public Collection<Position> positions() {
         return positionRepository.findAll().stream().filter(this::PositionActive).collect(Collectors.toList());
@@ -73,6 +74,9 @@ public class UsersController {
     }
 
 
+    private boolean RoomnameActive(Roomname roomname) {
+        return roomname.getIsActive().equals("1");
+    }
 
     private boolean departmentActive(Department department) {
         return department.getIsActive().equals("1");
