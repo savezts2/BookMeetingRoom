@@ -34,7 +34,7 @@ public class BookMeetingRoomController {
 
     @PostMapping(path = "/Changstatusbook/{roomname}/{starttime}/{dateBookMeetingRoom}")
     public BookMeetingRoom chackstatusbook(@PathVariable String roomname, @PathVariable String starttime, @PathVariable String dateBookMeetingRoom) {
-        BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findByRoomnameAndStarttimeAndDateBookMeetingRoom(roomname,starttime,dateBookMeetingRoom);
+        BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findByRoomnameAndStarttimeAndDateBookMeetingRoomAndIsActive(roomname,starttime,dateBookMeetingRoom,"1");
         bookMeetingRoom.setStatusbooking("notcheckin");
         bookMeetingRoomRepository.save(bookMeetingRoom);
         System.out.println(dateBookMeetingRoom+roomname+starttime);

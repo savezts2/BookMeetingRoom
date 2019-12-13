@@ -43,8 +43,9 @@ export class BookMeetingRoom1Component implements OnInit {
     dateFull : String ;
     nameLogin: String ;
     serializedDate = new FormControl((new Date()).toISOString());
-    today=new Date();
 
+    today=new Date();
+    maxDate = new Date(new Date().getFullYear(),new Date().getMonth(),new Date().getDate()+31);
 
     CurrentTime: any;
     days: any;
@@ -133,11 +134,12 @@ if(this.splitted.length == 1){
 
 clicksearch(){
     this.dateSelect = this.serializedDate.value;
-    if(this.dateSelect == ''){
+ if(this.dateSelect == ''){
       alert("Please Select Date");
     }else{
       this.convertMonth(this.dateSelect.toString());
     }
+
 
 }
 

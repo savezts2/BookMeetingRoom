@@ -42,7 +42,7 @@
       <br/>
       <div align="center">
       <mat-form-field>
-        <input matInput [matDatepickerFilter]="myFilter" [min]="today" [matDatepicker]="picker" placeholder="DD/MM/yyyy"
+        <input matInput [matDatepickerFilter]="myFilter" [min]="today" [max]="maxDate" [matDatepicker]="picker" placeholder="DD/MM/yyyy"
                [formControl]="serializedDate">
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>

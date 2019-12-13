@@ -28,7 +28,7 @@ export class SelectRoomComponent implements OnInit {
     isLoggedInHR : Observable<boolean>;
 
     report : Array<any>;
-    roomnames : Array<any>;
+    roomnames : any[] = [];
     starttime : Array<any> = [];
     counting: number ;
 
@@ -89,6 +89,7 @@ ngOnDestroy() {
 
       this.route.params.subscribe(prams=>{
                 this.datefull = prams;
+
                 })
 
     this.service.findDate(this.datefull.datefull).subscribe(data=>{
@@ -108,7 +109,7 @@ ngOnDestroy() {
     }
 
 
-    if(this.numberTime > 814){
+    if(this.numberTime > 814 || new Date().getDate() > parseInt(this.day)){
       for(let i = 0 ; i < this.report.length ; i++){
           if(this.report[i].bookMeetingRoom.starttime == "08.00" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
           getDate()){
@@ -131,7 +132,7 @@ ngOnDestroy() {
       }
 
     }
-    if(this.numberTime > 844){
+    if(this.numberTime > 844 || new Date().getDate() > parseInt(this.day)){
       for(let i = 0 ; i < this.report.length ; i++){
           if(this.report[i].bookMeetingRoom.starttime == "08.30" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
           getDate()){
@@ -154,7 +155,7 @@ ngOnDestroy() {
       }
 
     }
-    if(this.numberTime > 914){
+    if(this.numberTime > 914 || new Date().getDate() > parseInt(this.day)){
       for(let i = 0 ; i < this.report.length ; i++){
           if(this.report[i].bookMeetingRoom.starttime == "09.00" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
           getDate()){
@@ -177,7 +178,7 @@ ngOnDestroy() {
       }
 
     }
-     if(this.numberTime > 944){
+     if(this.numberTime > 944 || new Date().getDate() > parseInt(this.day)){
       for(let i = 0 ; i < this.report.length ; i++){
           if(this.report[i].bookMeetingRoom.starttime == "09.30" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
           getDate()){
@@ -200,7 +201,7 @@ ngOnDestroy() {
       }
 
     }
-     if(this.numberTime > 1014){
+     if(this.numberTime > 1014 || new Date().getDate() > parseInt(this.day)){
       for(let i = 0 ; i < this.report.length ; i++){
           if(this.report[i].bookMeetingRoom.starttime == "10.00" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
           getDate()){
@@ -223,7 +224,7 @@ ngOnDestroy() {
       }
 
     }
-     if(this.numberTime > 1044){
+     if(this.numberTime > 1044 || new Date().getDate() > parseInt(this.day)){
       for(let i = 0 ; i < this.report.length ; i++){
           if(this.report[i].bookMeetingRoom.starttime == "10.30" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
           getDate()){
@@ -246,7 +247,7 @@ ngOnDestroy() {
       }
 
     }
-     if(this.numberTime > 1114){
+     if(this.numberTime > 1114 || new Date().getDate() > parseInt(this.day)){
       for(let i = 0 ; i < this.report.length ; i++){
           if(this.report[i].bookMeetingRoom.starttime == "11.00" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
           getDate()){
@@ -269,7 +270,7 @@ ngOnDestroy() {
       }
 
     }
-     if(this.numberTime > 1144){
+     if(this.numberTime > 1144 || new Date().getDate() > parseInt(this.day)){
       for(let i = 0 ; i < this.report.length ; i++){
           if(this.report[i].bookMeetingRoom.starttime == "11.30" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
           getDate()){
@@ -292,7 +293,7 @@ ngOnDestroy() {
       }
 
     }
-     if(this.numberTime > 1214){
+     if(this.numberTime > 1214 || new Date().getDate() > parseInt(this.day)){
       for(let i = 0 ; i < this.report.length ; i++){
           if(this.report[i].bookMeetingRoom.starttime == "12.00" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
           getDate()){
@@ -315,7 +316,7 @@ ngOnDestroy() {
       }
 
     }
-     if(this.numberTime > 1244){
+     if(this.numberTime > 1244 || new Date().getDate() > parseInt(this.day)){
       for(let i = 0 ; i < this.report.length ; i++){
           if(this.report[i].bookMeetingRoom.starttime == "12.30" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
           getDate()){
@@ -338,7 +339,7 @@ ngOnDestroy() {
       }
 
     }
-     if(this.numberTime > 1314){
+     if(this.numberTime > 1314 || new Date().getDate() > parseInt(this.day)){
       for(let i = 0 ; i < this.report.length ; i++){
           if(this.report[i].bookMeetingRoom.starttime == "13.00" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
           getDate()){
@@ -361,7 +362,7 @@ ngOnDestroy() {
       }
 
     }
-     if(this.numberTime > 1344){
+     if(this.numberTime > 1344 || new Date().getDate() > parseInt(this.day)){
       for(let i = 0 ; i < this.report.length ; i++){
           if(this.report[i].bookMeetingRoom.starttime == "13.30" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
           getDate()){
@@ -384,7 +385,7 @@ ngOnDestroy() {
       }
 
     }
-     if(this.numberTime > 1414){
+     if(this.numberTime > 1414 || new Date().getDate() > parseInt(this.day)){
       for(let i = 0 ; i < this.report.length ; i++){
           if(this.report[i].bookMeetingRoom.starttime == "14.00" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
           getDate()){
@@ -407,7 +408,7 @@ ngOnDestroy() {
       }
 
     }
-     if(this.numberTime > 1444){
+     if(this.numberTime > 1444 || new Date().getDate() > parseInt(this.day)){
       for(let i = 0 ; i < this.report.length ; i++){
           if(this.report[i].bookMeetingRoom.starttime == "14.30" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
           getDate()){
@@ -430,7 +431,7 @@ ngOnDestroy() {
       }
 
     }
-     if(this.numberTime > 1514){
+     if(this.numberTime > 1514 || new Date().getDate() > parseInt(this.day)){
       for(let i = 0 ; i < this.report.length ; i++){
           if(this.report[i].bookMeetingRoom.starttime == "15.00" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
           getDate()){
@@ -453,7 +454,7 @@ ngOnDestroy() {
       }
 
     }
-     if(this.numberTime > 1544){
+     if(this.numberTime > 1544 || new Date().getDate() > parseInt(this.day)){
       for(let i = 0 ; i < this.report.length ; i++){
           if(this.report[i].bookMeetingRoom.starttime == "15.30" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
           getDate()){
@@ -476,7 +477,7 @@ ngOnDestroy() {
       }
 
     }
-     if(this.numberTime > 1614){
+     if(this.numberTime > 1614 || new Date().getDate() > parseInt(this.day)){
       for(let i = 0 ; i < this.report.length ; i++){
           if(this.report[i].bookMeetingRoom.starttime == "16.00" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
           getDate()){
@@ -499,7 +500,7 @@ ngOnDestroy() {
       }
 
     }
-     if(this.numberTime > 1644){
+     if(this.numberTime > 1644 || new Date().getDate() > parseInt(this.day)){
       for(let i = 0 ; i < this.report.length ; i++){
           if(this.report[i].bookMeetingRoom.starttime == "16.30" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
           getDate()){
@@ -522,7 +523,7 @@ ngOnDestroy() {
       }
 
     }
-     if(this.numberTime > 1714){
+     if(this.numberTime > 1714 || new Date().getDate() > parseInt(this.day)){
       for(let i = 0 ; i < this.report.length ; i++){
           if(this.report[i].bookMeetingRoom.starttime == "17.00" && this.report[i].bookMeetingRoom.statusbooking == "booking" && parseInt(this.day) == new Date().
           getDate()){

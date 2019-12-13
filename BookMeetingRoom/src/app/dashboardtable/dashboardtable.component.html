@@ -43,6 +43,69 @@
 
       <table border="1" align="center" bordercolor=black bgcolor="black">
 
+        <tr class="greentable" *ngIf="showday1">
+          <th rowspan="2">Date</th>
+          <th rowspan="2">MeetingRoom</th>
+          <th colspan="19">Time</th>
+        </tr>
+
+
+        <tr class="yellowtable" *ngIf="showday1">
+          <th>08.00</th>
+          <th>08.30</th>
+          <th>09.00</th>
+          <th>09.30</th>
+          <th>10.00</th>
+          <th>10.30</th>
+          <th>11.00</th>
+          <th>11.30</th>
+          <th>12.00</th>
+          <th>12.30</th>
+          <th>13.00</th>
+          <th>13.30</th>
+          <th>14.00</th>
+          <th>14.30</th>
+          <th>15.00</th>
+          <th>15.30</th>
+          <th>16.00</th>
+          <th>16.30</th>
+          <th>17.00</th>
+        </tr>
+
+
+        <ng-container *ngIf="showday1">
+        <tr height="70" class="whitetable" *ngFor="let event1 of events1; let i = index" >
+
+          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+            {{day1}}<br/>
+            01-{{dateFull.month}}-{{dateFull.year}}
+          </th>
+
+          <th>
+            {{event1[i][4]}}
+          </th>
+
+          <td *ngFor="let cell of event1"
+              [attr.colspan]="cell[2]" [attr.bgcolor]="cell[3]"
+          >
+
+            <div *ngIf="cell[5]">
+              <font color="black">
+                Booking by: {{cell[6]}}<br>
+                Attendees: {{cell[7]}}<br>
+                Topic: {{cell[8]}}<br>
+                <div *ngIf="cell[10]">
+                  Remark: {{cell[9]}}
+                </div>
+              </font>
+            </div>
+
+          </td>
+        </tr>
+
+        </ng-container>
+
+        <ng-container *ngIf="showday2">
         <tr class="greentable">
           <th rowspan="2">Date</th>
           <th rowspan="2">MeetingRoom</th>
@@ -74,37 +137,9 @@
 
 
 
-        <tr height="70" class="whitetable" *ngFor="let event1 of events1; let i = index">
-
+        <tr height="70" class="whitetable" *ngFor="let event2 of events2; let i = index" >
           <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
-            01-{{dateFull.month}}-{{dateFull.year}}
-          </th>
-
-          <th>
-            {{event1[i][4]}}
-          </th>
-
-          <td *ngFor="let cell of event1"
-              [attr.colspan]="cell[2]" [attr.bgcolor]="cell[3]"
-          >
-
-            <div *ngIf="cell[5]">
-              <font color="black">
-                Booking by: {{cell[6]}}<br>
-                Attendees: {{cell[7]}}<br>
-                Topic: {{cell[8]}}<br>
-                <div *ngIf="cell[10]">
-                  Remark: {{cell[9]}}
-                </div>
-              </font>
-            </div>
-
-          </td>
-
-        </tr>
-
-        <tr height="70" class="whitetable" *ngFor="let event2 of events2; let i = index">
-          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+            {{day2}}<br/>
             02-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <th>
@@ -130,10 +165,44 @@
 
         </tr>
 
+        </ng-container>
+
+
+        <ng-container *ngIf="showday3">
+        <tr class="greentable">
+          <th rowspan="2">Date</th>
+          <th rowspan="2">MeetingRoom</th>
+          <th colspan="19">Time</th>
+        </tr>
+
+
+        <tr class="yellowtable">
+          <th>08.00</th>
+          <th>08.30</th>
+          <th>09.00</th>
+          <th>09.30</th>
+          <th>10.00</th>
+          <th>10.30</th>
+          <th>11.00</th>
+          <th>11.30</th>
+          <th>12.00</th>
+          <th>12.30</th>
+          <th>13.00</th>
+          <th>13.30</th>
+          <th>14.00</th>
+          <th>14.30</th>
+          <th>15.00</th>
+          <th>15.30</th>
+          <th>16.00</th>
+          <th>16.30</th>
+          <th>17.00</th>
+        </tr>
+
 
 
         <tr height="70" class="whitetable" *ngFor="let event3 of events3; let i = index">
           <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+            {{day3}}<br/>
             03-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <th>
@@ -160,9 +229,41 @@
         </tr>
 
 
+        </ng-container>
+        <ng-container *ngIf="showday4">
+        <tr class="greentable">
+          <th rowspan="2">Date</th>
+          <th rowspan="2">MeetingRoom</th>
+          <th colspan="19">Time</th>
+        </tr>
+
+
+        <tr class="yellowtable">
+          <th>08.00</th>
+          <th>08.30</th>
+          <th>09.00</th>
+          <th>09.30</th>
+          <th>10.00</th>
+          <th>10.30</th>
+          <th>11.00</th>
+          <th>11.30</th>
+          <th>12.00</th>
+          <th>12.30</th>
+          <th>13.00</th>
+          <th>13.30</th>
+          <th>14.00</th>
+          <th>14.30</th>
+          <th>15.00</th>
+          <th>15.30</th>
+          <th>16.00</th>
+          <th>16.30</th>
+          <th>17.00</th>
+        </tr>
+
 
         <tr height="70" class="whitetable" *ngFor="let event4 of events4; let i = index">
           <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+            {{day4}}<br/>
             04-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <th>
@@ -188,10 +289,42 @@
 
         </tr>
 
+        </ng-container>
+        <ng-container *ngIf="showday5">
+
+        <tr class="greentable">
+          <th rowspan="2">Date</th>
+          <th rowspan="2">MeetingRoom</th>
+          <th colspan="19">Time</th>
+        </tr>
+
+
+        <tr class="yellowtable">
+          <th>08.00</th>
+          <th>08.30</th>
+          <th>09.00</th>
+          <th>09.30</th>
+          <th>10.00</th>
+          <th>10.30</th>
+          <th>11.00</th>
+          <th>11.30</th>
+          <th>12.00</th>
+          <th>12.30</th>
+          <th>13.00</th>
+          <th>13.30</th>
+          <th>14.00</th>
+          <th>14.30</th>
+          <th>15.00</th>
+          <th>15.30</th>
+          <th>16.00</th>
+          <th>16.30</th>
+          <th>17.00</th>
+        </tr>
 
 
         <tr height="70" class="whitetable" *ngFor="let event5 of events5; let i = index">
           <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+            {{day5}}<br/>
             05-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <th>
@@ -218,9 +351,41 @@
         </tr>
 
 
+</ng-container>
+        <ng-container *ngIf="showday6">
+        <tr class="greentable">
+          <th rowspan="2">Date</th>
+          <th rowspan="2">MeetingRoom</th>
+          <th colspan="19">Time</th>
+        </tr>
+
+
+        <tr class="yellowtable">
+          <th>08.00</th>
+          <th>08.30</th>
+          <th>09.00</th>
+          <th>09.30</th>
+          <th>10.00</th>
+          <th>10.30</th>
+          <th>11.00</th>
+          <th>11.30</th>
+          <th>12.00</th>
+          <th>12.30</th>
+          <th>13.00</th>
+          <th>13.30</th>
+          <th>14.00</th>
+          <th>14.30</th>
+          <th>15.00</th>
+          <th>15.30</th>
+          <th>16.00</th>
+          <th>16.30</th>
+          <th>17.00</th>
+        </tr>
+
 
         <tr height="70" class="whitetable" *ngFor="let event6 of events6; let i = index">
           <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+            {{day6}}<br/>
             06-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <th>
@@ -247,9 +412,41 @@
         </tr>
 
 
+  </ng-container>
+        <ng-container *ngIf="showday7">
+        <tr class="greentable">
+          <th rowspan="2">Date</th>
+          <th rowspan="2">MeetingRoom</th>
+          <th colspan="19">Time</th>
+        </tr>
+
+
+        <tr class="yellowtable">
+          <th>08.00</th>
+          <th>08.30</th>
+          <th>09.00</th>
+          <th>09.30</th>
+          <th>10.00</th>
+          <th>10.30</th>
+          <th>11.00</th>
+          <th>11.30</th>
+          <th>12.00</th>
+          <th>12.30</th>
+          <th>13.00</th>
+          <th>13.30</th>
+          <th>14.00</th>
+          <th>14.30</th>
+          <th>15.00</th>
+          <th>15.30</th>
+          <th>16.00</th>
+          <th>16.30</th>
+          <th>17.00</th>
+        </tr>
+
 
         <tr height="70" class="whitetable" *ngFor="let event7 of events7; let i = index">
           <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+            {{day7}}<br/>
             07-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <th>
@@ -275,10 +472,42 @@
 
         </tr>
 
+        </ng-container>
+        <ng-container *ngIf="showday8">
+
+        <tr class="greentable">
+          <th rowspan="2">Date</th>
+          <th rowspan="2">MeetingRoom</th>
+          <th colspan="19">Time</th>
+        </tr>
+
+
+        <tr class="yellowtable">
+          <th>08.00</th>
+          <th>08.30</th>
+          <th>09.00</th>
+          <th>09.30</th>
+          <th>10.00</th>
+          <th>10.30</th>
+          <th>11.00</th>
+          <th>11.30</th>
+          <th>12.00</th>
+          <th>12.30</th>
+          <th>13.00</th>
+          <th>13.30</th>
+          <th>14.00</th>
+          <th>14.30</th>
+          <th>15.00</th>
+          <th>15.30</th>
+          <th>16.00</th>
+          <th>16.30</th>
+          <th>17.00</th>
+        </tr>
 
 
         <tr height="70" class="whitetable" *ngFor="let event8 of events8; let i = index">
           <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+            {{day8}}<br/>
             08-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <th>
@@ -304,10 +533,42 @@
 
         </tr>
 
+        </ng-container>
+        <ng-container *ngIf="showday9">
+
+        <tr class="greentable">
+          <th rowspan="2">Date</th>
+          <th rowspan="2">MeetingRoom</th>
+          <th colspan="19">Time</th>
+        </tr>
+
+
+        <tr class="yellowtable">
+          <th>08.00</th>
+          <th>08.30</th>
+          <th>09.00</th>
+          <th>09.30</th>
+          <th>10.00</th>
+          <th>10.30</th>
+          <th>11.00</th>
+          <th>11.30</th>
+          <th>12.00</th>
+          <th>12.30</th>
+          <th>13.00</th>
+          <th>13.30</th>
+          <th>14.00</th>
+          <th>14.30</th>
+          <th>15.00</th>
+          <th>15.30</th>
+          <th>16.00</th>
+          <th>16.30</th>
+          <th>17.00</th>
+        </tr>
 
 
         <tr height="70" class="whitetable" *ngFor="let event9 of events9; let i = index">
           <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+            {{day9}}<br/>
             09-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <th>
@@ -334,9 +595,41 @@
         </tr>
 
 
+        </ng-container>
+        <ng-container *ngIf="showday10">
+
+        <tr class="greentable">
+          <th rowspan="2">Date</th>
+          <th rowspan="2">MeetingRoom</th>
+          <th colspan="19">Time</th>
+        </tr>
+
+
+        <tr class="yellowtable">
+          <th>08.00</th>
+          <th>08.30</th>
+          <th>09.00</th>
+          <th>09.30</th>
+          <th>10.00</th>
+          <th>10.30</th>
+          <th>11.00</th>
+          <th>11.30</th>
+          <th>12.00</th>
+          <th>12.30</th>
+          <th>13.00</th>
+          <th>13.30</th>
+          <th>14.00</th>
+          <th>14.30</th>
+          <th>15.00</th>
+          <th>15.30</th>
+          <th>16.00</th>
+          <th>16.30</th>
+          <th>17.00</th>
+        </tr>
 
         <tr height="70" class="whitetable" *ngFor="let event10 of events10; let i = index">
           <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+            {{day10}}<br/>
             10-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <th>
@@ -362,10 +655,42 @@
 
         </tr>
 
+        </ng-container>
+        <ng-container *ngIf="showday11">
+        <tr class="greentable">
+          <th rowspan="2">Date</th>
+          <th rowspan="2">MeetingRoom</th>
+          <th colspan="19">Time</th>
+        </tr>
+
+
+        <tr class="yellowtable">
+          <th>08.00</th>
+          <th>08.30</th>
+          <th>09.00</th>
+          <th>09.30</th>
+          <th>10.00</th>
+          <th>10.30</th>
+          <th>11.00</th>
+          <th>11.30</th>
+          <th>12.00</th>
+          <th>12.30</th>
+          <th>13.00</th>
+          <th>13.30</th>
+          <th>14.00</th>
+          <th>14.30</th>
+          <th>15.00</th>
+          <th>15.30</th>
+          <th>16.00</th>
+          <th>16.30</th>
+          <th>17.00</th>
+        </tr>
+
 
 
         <tr height="70" class="whitetable" *ngFor="let event11 of events11; let i = index">
           <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+            {{day11}}<br/>
             11-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <th>
@@ -390,11 +715,44 @@
           </td>
 
         </tr>
+        </ng-container>
+        <ng-container *ngIf="showday12">
+
+
+        <tr class="greentable">
+          <th rowspan="2">Date</th>
+          <th rowspan="2">MeetingRoom</th>
+          <th colspan="19">Time</th>
+        </tr>
+
+
+        <tr class="yellowtable">
+          <th>08.00</th>
+          <th>08.30</th>
+          <th>09.00</th>
+          <th>09.30</th>
+          <th>10.00</th>
+          <th>10.30</th>
+          <th>11.00</th>
+          <th>11.30</th>
+          <th>12.00</th>
+          <th>12.30</th>
+          <th>13.00</th>
+          <th>13.30</th>
+          <th>14.00</th>
+          <th>14.30</th>
+          <th>15.00</th>
+          <th>15.30</th>
+          <th>16.00</th>
+          <th>16.30</th>
+          <th>17.00</th>
+        </tr>
 
 
 
         <tr height="70" class="whitetable" *ngFor="let event12 of events12; let i = index">
           <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+            {{day12}}<br/>
             12-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <th>
@@ -419,11 +777,44 @@
           </td>
 
         </tr>
+        </ng-container>
+        <ng-container *ngIf="showday13">
 
+
+
+        <tr class="greentable">
+          <th rowspan="2">Date</th>
+          <th rowspan="2">MeetingRoom</th>
+          <th colspan="19">Time</th>
+        </tr>
+
+
+        <tr class="yellowtable">
+          <th>08.00</th>
+          <th>08.30</th>
+          <th>09.00</th>
+          <th>09.30</th>
+          <th>10.00</th>
+          <th>10.30</th>
+          <th>11.00</th>
+          <th>11.30</th>
+          <th>12.00</th>
+          <th>12.30</th>
+          <th>13.00</th>
+          <th>13.30</th>
+          <th>14.00</th>
+          <th>14.30</th>
+          <th>15.00</th>
+          <th>15.30</th>
+          <th>16.00</th>
+          <th>16.30</th>
+          <th>17.00</th>
+        </tr>
 
 
         <tr height="70" class="whitetable" *ngFor="let event13 of events13; let i = index">
           <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+            {{day13}}<br/>
             13-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <th>
@@ -449,9 +840,41 @@
 
         </tr>
 
+        </ng-container>
+        <ng-container *ngIf="showday14">
+        <tr class="greentable">
+          <th rowspan="2">Date</th>
+          <th rowspan="2">MeetingRoom</th>
+          <th colspan="19">Time</th>
+        </tr>
+
+
+        <tr class="yellowtable">
+          <th>08.00</th>
+          <th>08.30</th>
+          <th>09.00</th>
+          <th>09.30</th>
+          <th>10.00</th>
+          <th>10.30</th>
+          <th>11.00</th>
+          <th>11.30</th>
+          <th>12.00</th>
+          <th>12.30</th>
+          <th>13.00</th>
+          <th>13.30</th>
+          <th>14.00</th>
+          <th>14.30</th>
+          <th>15.00</th>
+          <th>15.30</th>
+          <th>16.00</th>
+          <th>16.30</th>
+          <th>17.00</th>
+        </tr>
+
 
         <tr height="70" class="whitetable" *ngFor="let event14 of events14; let i = index">
           <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+            {{day14}}<br/>
             14-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <th>
@@ -478,9 +901,41 @@
         </tr>
 
 
+        </ng-container>
+        <ng-container *ngIf="showday15">
+        <tr class="greentable">
+          <th rowspan="2">Date</th>
+          <th rowspan="2">MeetingRoom</th>
+          <th colspan="19">Time</th>
+        </tr>
+
+
+        <tr class="yellowtable">
+          <th>08.00</th>
+          <th>08.30</th>
+          <th>09.00</th>
+          <th>09.30</th>
+          <th>10.00</th>
+          <th>10.30</th>
+          <th>11.00</th>
+          <th>11.30</th>
+          <th>12.00</th>
+          <th>12.30</th>
+          <th>13.00</th>
+          <th>13.30</th>
+          <th>14.00</th>
+          <th>14.30</th>
+          <th>15.00</th>
+          <th>15.30</th>
+          <th>16.00</th>
+          <th>16.30</th>
+          <th>17.00</th>
+        </tr>
+
 
         <tr height="70" class="whitetable" *ngFor="let event15 of events15; let i = index">
           <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+            {{day15}}<br/>
             15-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <th>
@@ -505,11 +960,43 @@
           </td>
 
         </tr>
+        </ng-container>
+        <ng-container *ngIf="showday16">
+
+        <tr class="greentable">
+          <th rowspan="2">Date</th>
+          <th rowspan="2">MeetingRoom</th>
+          <th colspan="19">Time</th>
+        </tr>
+
+
+        <tr class="yellowtable">
+          <th>08.00</th>
+          <th>08.30</th>
+          <th>09.00</th>
+          <th>09.30</th>
+          <th>10.00</th>
+          <th>10.30</th>
+          <th>11.00</th>
+          <th>11.30</th>
+          <th>12.00</th>
+          <th>12.30</th>
+          <th>13.00</th>
+          <th>13.30</th>
+          <th>14.00</th>
+          <th>14.30</th>
+          <th>15.00</th>
+          <th>15.30</th>
+          <th>16.00</th>
+          <th>16.30</th>
+          <th>17.00</th>
+        </tr>
 
 
 
         <tr height="70" class="whitetable" *ngFor="let event16 of events16; let i = index">
           <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+            {{day16}}<br/>
             16-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <th>
@@ -534,10 +1021,42 @@
           </td>
 
         </tr>
+        </ng-container>
+        <ng-container *ngIf="showday17">
+
+        <tr class="greentable">
+          <th rowspan="2">Date</th>
+          <th rowspan="2">MeetingRoom</th>
+          <th colspan="19">Time</th>
+        </tr>
+
+
+        <tr class="yellowtable">
+          <th>08.00</th>
+          <th>08.30</th>
+          <th>09.00</th>
+          <th>09.30</th>
+          <th>10.00</th>
+          <th>10.30</th>
+          <th>11.00</th>
+          <th>11.30</th>
+          <th>12.00</th>
+          <th>12.30</th>
+          <th>13.00</th>
+          <th>13.30</th>
+          <th>14.00</th>
+          <th>14.30</th>
+          <th>15.00</th>
+          <th>15.30</th>
+          <th>16.00</th>
+          <th>16.30</th>
+          <th>17.00</th>
+        </tr>
 
 
         <tr height="70" class="whitetable" *ngFor="let event17 of events17; let i = index">
           <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+            {{day17}}<br/>
             17-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <th>
@@ -563,9 +1082,41 @@
 
         </tr>
 
+        </ng-container>
+        <ng-container *ngIf="showday18">
+        <tr class="greentable">
+          <th rowspan="2">Date</th>
+          <th rowspan="2">MeetingRoom</th>
+          <th colspan="19">Time</th>
+        </tr>
+
+
+        <tr class="yellowtable">
+          <th>08.00</th>
+          <th>08.30</th>
+          <th>09.00</th>
+          <th>09.30</th>
+          <th>10.00</th>
+          <th>10.30</th>
+          <th>11.00</th>
+          <th>11.30</th>
+          <th>12.00</th>
+          <th>12.30</th>
+          <th>13.00</th>
+          <th>13.30</th>
+          <th>14.00</th>
+          <th>14.30</th>
+          <th>15.00</th>
+          <th>15.30</th>
+          <th>16.00</th>
+          <th>16.30</th>
+          <th>17.00</th>
+        </tr>
+
 
         <tr height="70" class="whitetable" *ngFor="let event18 of events18; let i = index">
           <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+            {{day18}}<br/>
             18-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <th>
@@ -592,8 +1143,40 @@
         </tr>
 
 
+        </ng-container>
+        <ng-container *ngIf="showday19">
+        <tr class="greentable">
+          <th rowspan="2">Date</th>
+          <th rowspan="2">MeetingRoom</th>
+          <th colspan="19">Time</th>
+        </tr>
+
+
+        <tr class="yellowtable">
+          <th>08.00</th>
+          <th>08.30</th>
+          <th>09.00</th>
+          <th>09.30</th>
+          <th>10.00</th>
+          <th>10.30</th>
+          <th>11.00</th>
+          <th>11.30</th>
+          <th>12.00</th>
+          <th>12.30</th>
+          <th>13.00</th>
+          <th>13.30</th>
+          <th>14.00</th>
+          <th>14.30</th>
+          <th>15.00</th>
+          <th>15.30</th>
+          <th>16.00</th>
+          <th>16.30</th>
+          <th>17.00</th>
+        </tr>
+
         <tr height="70" class="whitetable" *ngFor="let event19 of events19; let i = index">
           <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+            {{day19}}<br/>
             19-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <th>
@@ -619,9 +1202,41 @@
 
         </tr>
 
+        </ng-container>
+        <ng-container *ngIf="showday20">
+        <tr class="greentable">
+          <th rowspan="2">Date</th>
+          <th rowspan="2">MeetingRoom</th>
+          <th colspan="19">Time</th>
+        </tr>
+
+
+        <tr class="yellowtable">
+          <th>08.00</th>
+          <th>08.30</th>
+          <th>09.00</th>
+          <th>09.30</th>
+          <th>10.00</th>
+          <th>10.30</th>
+          <th>11.00</th>
+          <th>11.30</th>
+          <th>12.00</th>
+          <th>12.30</th>
+          <th>13.00</th>
+          <th>13.30</th>
+          <th>14.00</th>
+          <th>14.30</th>
+          <th>15.00</th>
+          <th>15.30</th>
+          <th>16.00</th>
+          <th>16.30</th>
+          <th>17.00</th>
+        </tr>
+
 
         <tr height="70" class="whitetable" *ngFor="let event20 of events20; let i = index">
           <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+            {{day20}}<br/>
             20-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <th>
@@ -646,10 +1261,42 @@
           </td>
 
         </tr>
+        </ng-container>
+        <ng-container *ngIf="showday21">
+
+        <tr class="greentable">
+          <th rowspan="2">Date</th>
+          <th rowspan="2">MeetingRoom</th>
+          <th colspan="19">Time</th>
+        </tr>
+
+
+        <tr class="yellowtable">
+          <th>08.00</th>
+          <th>08.30</th>
+          <th>09.00</th>
+          <th>09.30</th>
+          <th>10.00</th>
+          <th>10.30</th>
+          <th>11.00</th>
+          <th>11.30</th>
+          <th>12.00</th>
+          <th>12.30</th>
+          <th>13.00</th>
+          <th>13.30</th>
+          <th>14.00</th>
+          <th>14.30</th>
+          <th>15.00</th>
+          <th>15.30</th>
+          <th>16.00</th>
+          <th>16.30</th>
+          <th>17.00</th>
+        </tr>
 
 
         <tr height="70" class="whitetable" *ngFor="let event21 of events21; let i = index">
           <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+            {{day21}}<br/>
             21-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <th>
@@ -675,9 +1322,41 @@
 
         </tr>
 
+        </ng-container>
+        <ng-container *ngIf="showday22">
+
+        <tr class="greentable">
+          <th rowspan="2">Date</th>
+          <th rowspan="2">MeetingRoom</th>
+          <th colspan="19">Time</th>
+        </tr>
+
+
+        <tr class="yellowtable">
+          <th>08.00</th>
+          <th>08.30</th>
+          <th>09.00</th>
+          <th>09.30</th>
+          <th>10.00</th>
+          <th>10.30</th>
+          <th>11.00</th>
+          <th>11.30</th>
+          <th>12.00</th>
+          <th>12.30</th>
+          <th>13.00</th>
+          <th>13.30</th>
+          <th>14.00</th>
+          <th>14.30</th>
+          <th>15.00</th>
+          <th>15.30</th>
+          <th>16.00</th>
+          <th>16.30</th>
+          <th>17.00</th>
+        </tr>
 
         <tr height="70" class="whitetable" *ngFor="let event22 of events22; let i = index">
           <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+            {{day22}}<br/>
             22-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <th>
@@ -703,12 +1382,44 @@
 
         </tr>
 
+        </ng-container>
+        <ng-container *ngIf="showday23">
 
+
+        <tr class="greentable">
+          <th rowspan="2">Date</th>
+          <th rowspan="2">MeetingRoom</th>
+          <th colspan="19">Time</th>
+        </tr>
+
+
+        <tr class="yellowtable">
+          <th>08.00</th>
+          <th>08.30</th>
+          <th>09.00</th>
+          <th>09.30</th>
+          <th>10.00</th>
+          <th>10.30</th>
+          <th>11.00</th>
+          <th>11.30</th>
+          <th>12.00</th>
+          <th>12.30</th>
+          <th>13.00</th>
+          <th>13.30</th>
+          <th>14.00</th>
+          <th>14.30</th>
+          <th>15.00</th>
+          <th>15.30</th>
+          <th>16.00</th>
+          <th>16.30</th>
+          <th>17.00</th>
+        </tr>
 
 
 
         <tr height="70" class="whitetable" *ngFor="let event23 of events23; let i = index">
           <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+            {{day23}}<br/>
             23-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <th>
@@ -734,9 +1445,41 @@
 
         </tr>
 
+        </ng-container>
+        <ng-container *ngIf="showday24">
+
+        <tr class="greentable">
+          <th rowspan="2">Date</th>
+          <th rowspan="2">MeetingRoom</th>
+          <th colspan="19">Time</th>
+        </tr>
+
+
+        <tr class="yellowtable">
+          <th>08.00</th>
+          <th>08.30</th>
+          <th>09.00</th>
+          <th>09.30</th>
+          <th>10.00</th>
+          <th>10.30</th>
+          <th>11.00</th>
+          <th>11.30</th>
+          <th>12.00</th>
+          <th>12.30</th>
+          <th>13.00</th>
+          <th>13.30</th>
+          <th>14.00</th>
+          <th>14.30</th>
+          <th>15.00</th>
+          <th>15.30</th>
+          <th>16.00</th>
+          <th>16.30</th>
+          <th>17.00</th>
+        </tr>
 
         <tr height="70" class="whitetable" *ngFor="let event24 of events24; let i = index">
           <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+            {{day24}}<br/>
             24-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <th>
@@ -762,9 +1505,41 @@
 
         </tr>
 
+        </ng-container>
+        <ng-container *ngIf="showday25">
+
+        <tr class="greentable">
+          <th rowspan="2">Date</th>
+          <th rowspan="2">MeetingRoom</th>
+          <th colspan="19">Time</th>
+        </tr>
+
+
+        <tr class="yellowtable">
+          <th>08.00</th>
+          <th>08.30</th>
+          <th>09.00</th>
+          <th>09.30</th>
+          <th>10.00</th>
+          <th>10.30</th>
+          <th>11.00</th>
+          <th>11.30</th>
+          <th>12.00</th>
+          <th>12.30</th>
+          <th>13.00</th>
+          <th>13.30</th>
+          <th>14.00</th>
+          <th>14.30</th>
+          <th>15.00</th>
+          <th>15.30</th>
+          <th>16.00</th>
+          <th>16.30</th>
+          <th>17.00</th>
+        </tr>
 
         <tr height="70" class="whitetable" *ngFor="let event25 of events25; let i = index">
           <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+            {{day25}}<br/>
             25-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <th>
@@ -789,9 +1564,41 @@
           </td>
 
         </tr>
+        </ng-container>
+        <ng-container *ngIf="showday26">
+        <tr class="greentable">
+          <th rowspan="2">Date</th>
+          <th rowspan="2">MeetingRoom</th>
+          <th colspan="19">Time</th>
+        </tr>
+
+
+        <tr class="yellowtable">
+          <th>08.00</th>
+          <th>08.30</th>
+          <th>09.00</th>
+          <th>09.30</th>
+          <th>10.00</th>
+          <th>10.30</th>
+          <th>11.00</th>
+          <th>11.30</th>
+          <th>12.00</th>
+          <th>12.30</th>
+          <th>13.00</th>
+          <th>13.30</th>
+          <th>14.00</th>
+          <th>14.30</th>
+          <th>15.00</th>
+          <th>15.30</th>
+          <th>16.00</th>
+          <th>16.30</th>
+          <th>17.00</th>
+        </tr>
+
 
         <tr height="70" class="whitetable" *ngFor="let event26 of events26; let i = index">
           <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+            {{day26}}<br/>
             26-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <th>
@@ -816,9 +1623,41 @@
           </td>
 
         </tr>
+        </ng-container>
+        <ng-container *ngIf="showday27">
+        <tr class="greentable">
+          <th rowspan="2">Date</th>
+          <th rowspan="2">MeetingRoom</th>
+          <th colspan="19">Time</th>
+        </tr>
+
+
+        <tr class="yellowtable">
+          <th>08.00</th>
+          <th>08.30</th>
+          <th>09.00</th>
+          <th>09.30</th>
+          <th>10.00</th>
+          <th>10.30</th>
+          <th>11.00</th>
+          <th>11.30</th>
+          <th>12.00</th>
+          <th>12.30</th>
+          <th>13.00</th>
+          <th>13.30</th>
+          <th>14.00</th>
+          <th>14.30</th>
+          <th>15.00</th>
+          <th>15.30</th>
+          <th>16.00</th>
+          <th>16.30</th>
+          <th>17.00</th>
+        </tr>
+
 
         <tr height="70" class="whitetable" *ngFor="let event27 of events27; let i = index">
           <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+            {{day27}}<br/>
             27-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <th>
@@ -843,9 +1682,41 @@
           </td>
 
         </tr>
+        </ng-container>
+        <ng-container *ngIf="showday28">
+        <tr class="greentable">
+          <th rowspan="2">Date</th>
+          <th rowspan="2">MeetingRoom</th>
+          <th colspan="19">Time</th>
+        </tr>
+
+
+        <tr class="yellowtable">
+          <th>08.00</th>
+          <th>08.30</th>
+          <th>09.00</th>
+          <th>09.30</th>
+          <th>10.00</th>
+          <th>10.30</th>
+          <th>11.00</th>
+          <th>11.30</th>
+          <th>12.00</th>
+          <th>12.30</th>
+          <th>13.00</th>
+          <th>13.30</th>
+          <th>14.00</th>
+          <th>14.30</th>
+          <th>15.00</th>
+          <th>15.30</th>
+          <th>16.00</th>
+          <th>16.30</th>
+          <th>17.00</th>
+        </tr>
+
 
         <tr height="70" class="whitetable" *ngFor="let event28 of events28; let i = index">
           <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+            {{day28}}<br/>
             28-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <th>
@@ -871,8 +1742,40 @@
 
         </tr>
 
+        </ng-container>
+        <ng-container *ngIf="showday29">
+        <tr class="greentable">
+          <th rowspan="2">Date</th>
+          <th rowspan="2">MeetingRoom</th>
+          <th colspan="19">Time</th>
+        </tr>
+
+
+        <tr class="yellowtable">
+          <th>08.00</th>
+          <th>08.30</th>
+          <th>09.00</th>
+          <th>09.30</th>
+          <th>10.00</th>
+          <th>10.30</th>
+          <th>11.00</th>
+          <th>11.30</th>
+          <th>12.00</th>
+          <th>12.30</th>
+          <th>13.00</th>
+          <th>13.30</th>
+          <th>14.00</th>
+          <th>14.30</th>
+          <th>15.00</th>
+          <th>15.30</th>
+          <th>16.00</th>
+          <th>16.30</th>
+          <th>17.00</th>
+        </tr>
+
         <tr height="70" class="whitetable" *ngFor="let event29 of events29; let i = index">
           <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+            {{day29}}<br/>
             29-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <th>
@@ -898,8 +1801,40 @@
 
         </tr>
 
+        </ng-container>
+        <ng-container *ngIf="showday30">
+        <tr class="greentable">
+          <th rowspan="2">Date</th>
+          <th rowspan="2">MeetingRoom</th>
+          <th colspan="19">Time</th>
+        </tr>
+
+
+        <tr class="yellowtable">
+          <th>08.00</th>
+          <th>08.30</th>
+          <th>09.00</th>
+          <th>09.30</th>
+          <th>10.00</th>
+          <th>10.30</th>
+          <th>11.00</th>
+          <th>11.30</th>
+          <th>12.00</th>
+          <th>12.30</th>
+          <th>13.00</th>
+          <th>13.30</th>
+          <th>14.00</th>
+          <th>14.30</th>
+          <th>15.00</th>
+          <th>15.30</th>
+          <th>16.00</th>
+          <th>16.30</th>
+          <th>17.00</th>
+        </tr>
+
         <tr height="70" class="whitetable" *ngFor="let event30 of events30; let i = index">
           <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+            {{day30}}<br/>
             30-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <th>
@@ -925,8 +1860,41 @@
 
         </tr>
 
+        </ng-container>
+        <ng-container *ngIf="showday31">
+        <tr class="greentable">
+          <th rowspan="2">Date</th>
+          <th rowspan="2">MeetingRoom</th>
+          <th colspan="19">Time</th>
+        </tr>
+
+
+        <tr class="yellowtable">
+          <th>08.00</th>
+          <th>08.30</th>
+          <th>09.00</th>
+          <th>09.30</th>
+          <th>10.00</th>
+          <th>10.30</th>
+          <th>11.00</th>
+          <th>11.30</th>
+          <th>12.00</th>
+          <th>12.30</th>
+          <th>13.00</th>
+          <th>13.30</th>
+          <th>14.00</th>
+          <th>14.30</th>
+          <th>15.00</th>
+          <th>15.30</th>
+          <th>16.00</th>
+          <th>16.30</th>
+          <th>17.00</th>
+        </tr>
+
+
         <tr height="70" class="whitetable" *ngFor="let event31 of events31; let i = index">
           <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+            {{day31}}<br/>
             31-{{dateFull.month}}-{{dateFull.year}}
           </th>
           <th>
@@ -953,7 +1921,7 @@
         </tr>
 
 
-
+        </ng-container>
 
 
       </table>
