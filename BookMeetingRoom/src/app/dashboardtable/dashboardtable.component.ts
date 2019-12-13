@@ -1008,7 +1008,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
 
       }
     }
-  console.log(this.events1);
+
   }
 
   public appendTime(){
@@ -25221,6 +25221,187 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
              }// หาห้อง
          } //if active
      } //for report
+
+
+
+
+    for(let q = 0 ; q < this.events1.length ; q++){
+        if(this.events1[q].length == 19){
+            this.events1.splice(q,1);
+            q = q-1 ;
+         }
+      }for(let q = 0 ; q < this.events2.length ; q++){
+        if(this.events2[q].length == 19){
+            this.events2.splice(q,1);
+            q = q-1 ;
+         }
+      }for(let q = 0 ; q < this.events3.length ; q++){
+        if(this.events3[q].length == 19){
+            this.events3.splice(q,1);
+            q = q-1 ;
+         }
+      }for(let q = 0 ; q < this.events4.length ; q++){
+        if(this.events4[q].length == 19){
+            this.events4.splice(q,1);
+            q = q-1 ;
+         }
+      }for(let q = 0 ; q < this.events5.length ; q++){
+        if(this.events5[q].length == 19){
+            this.events5.splice(q,1);
+            q = q-1 ;
+         }
+      }for(let q = 0 ; q < this.events6.length ; q++){
+        if(this.events6[q].length == 19){
+            this.events6.splice(q,1);
+            q = q-1 ;
+         }
+      }for(let q = 0 ; q < this.events7.length ; q++){
+        if(this.events7[q].length == 19){
+            this.events7.splice(q,1);
+            q = q-1 ;
+         }
+      }for(let q = 0 ; q < this.events8.length ; q++){
+        if(this.events8[q].length == 19){
+            this.events8.splice(q,1);
+            q = q-1 ;
+         }
+      }for(let q = 0 ; q < this.events9.length ; q++){
+        if(this.events9[q].length == 19){
+            this.events9.splice(q,1);
+            q = q-1 ;
+         }
+      }for(let q = 0 ; q < this.events10.length ; q++){
+        if(this.events10[q].length == 19){
+            this.events10.splice(q,1);
+            q = q-1 ;
+         }
+      }for(let q = 0 ; q < this.events11.length ; q++){
+        if(this.events11[q].length == 19){
+            this.events11.splice(q,1);
+            q = q-1 ;
+         }
+      }for(let q = 0 ; q < this.events12.length ; q++){
+        if(this.events12[q].length == 19){
+            this.events12.splice(q,1);
+            q = q-1 ;
+         }
+      }
+    for(let q = 0 ; q < this.events13.length ; q++){
+        if(this.events13[q].length == 19){
+            this.events13.splice(q,1);
+            q = q-1 ;
+         }
+      }
+    for(let q = 0 ; q < this.events14.length ; q++){
+        if(this.events14[q].length == 19){
+            this.events14.splice(q,1);
+            q = q-1 ;
+         }
+      }
+    for(let q = 0 ; q < this.events15.length ; q++){
+        if(this.events15[q].length == 19){
+            this.events15.splice(q,1);
+            q = q-1 ;
+         }
+      }
+    for(let q = 0 ; q < this.events16.length ; q++){
+        if(this.events16[q].length == 19){
+            this.events16.splice(q,1);
+            q = q-1 ;
+         }
+      }
+    for(let q = 0 ; q < this.events17.length ; q++){
+        if(this.events17[q].length == 19){
+            this.events17.splice(q,1);
+            q = q-1 ;
+         }
+      }
+    for(let q = 0 ; q < this.events18.length ; q++){
+        if(this.events18[q].length == 19){
+            this.events18.splice(q,1);
+            q = q-1 ;
+         }
+      }
+    for(let q = 0 ; q < this.events19.length ; q++){
+        if(this.events19[q].length == 19){
+            this.events19.splice(q,1);
+            q = q-1 ;
+         }
+      }
+    for(let q = 0 ; q < this.events20.length ; q++){
+        if(this.events20[q].length == 19){
+            this.events20.splice(q,1);
+            q = q-1 ;
+         }
+      }
+    for(let q = 0 ; q < this.events21.length ; q++){
+        if(this.events21[q].length == 19){
+            this.events21.splice(q,1);
+            q = q-1 ;
+         }
+      }
+    for(let q = 0 ; q < this.events22.length ; q++){
+        if(this.events22[q].length == 19){
+            this.events22.splice(q,1);
+            q = q-1 ;
+         }
+      }
+    for(let q = 0 ; q < this.events23.length ; q++){
+        if(this.events23[q].length == 19){
+            this.events23.splice(q,1);
+            q = q-1 ;
+         }
+      }
+    for(let q = 0 ; q < this.events24.length ; q++){
+        if(this.events24[q].length == 19){
+            this.events24.splice(q,1);
+            q = q-1 ;
+         }
+      }
+    for(let q = 0 ; q < this.events25.length ; q++){
+        if(this.events25[q].length == 19){
+            this.events25.splice(q,1);
+            q = q-1 ;
+         }
+      }
+    for(let q = 0 ; q < this.events26.length ; q++){
+        if(this.events26[q].length == 19){
+            this.events26.splice(q,1);
+            q = q-1 ;
+         }
+      }
+    for(let q = 0 ; q < this.events27.length ; q++){
+        if(this.events27[q].length == 19){
+            this.events27.splice(q,1);
+            q = q-1 ;
+         }
+      }
+    for(let q = 0 ; q < this.events28.length ; q++){
+        if(this.events28[q].length == 19){
+            this.events28.splice(q,1);
+            q = q-1 ;
+         }
+      }
+    for(let q = 0 ; q < this.events29.length ; q++){
+        if(this.events29[q].length == 19){
+            this.events29.splice(q,1);
+            q = q-1 ;
+         }
+      }
+    for(let q = 0 ; q < this.events30.length ; q++){
+        if(this.events30[q].length == 19){
+            this.events30.splice(q,1);
+            q = q-1 ;
+         }
+      }
+    for(let q = 0 ; q < this.events31.length ; q++){
+        if(this.events31[q].length == 19){
+            this.events31.splice(q,1);
+            q = q-1 ;
+         }
+      }
+
+
 
 
 

@@ -76,7 +76,7 @@
         <ng-container *ngIf="showday1">
         <tr height="70" class="whitetable" *ngFor="let event1 of events1; let i = index" >
 
-          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="events1.length">
             {{day1}}<br/>
             01-{{dateFull.month}}-{{dateFull.year}}
           </th>
@@ -138,7 +138,7 @@
 
 
         <tr height="70" class="whitetable" *ngFor="let event2 of events2; let i = index" >
-          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="events2.length">
             {{day2}}<br/>
             02-{{dateFull.month}}-{{dateFull.year}}
           </th>
@@ -201,7 +201,7 @@
 
 
         <tr height="70" class="whitetable" *ngFor="let event3 of events3; let i = index">
-          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="events3.length">
             {{day3}}<br/>
             03-{{dateFull.month}}-{{dateFull.year}}
           </th>
@@ -262,7 +262,7 @@
 
 
         <tr height="70" class="whitetable" *ngFor="let event4 of events4; let i = index">
-          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="events4.length">
             {{day4}}<br/>
             04-{{dateFull.month}}-{{dateFull.year}}
           </th>
@@ -323,7 +323,7 @@
 
 
         <tr height="70" class="whitetable" *ngFor="let event5 of events5; let i = index">
-          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="events5.length">
             {{day5}}<br/>
             05-{{dateFull.month}}-{{dateFull.year}}
           </th>
@@ -384,7 +384,7 @@
 
 
         <tr height="70" class="whitetable" *ngFor="let event6 of events6; let i = index">
-          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="events6.length">
             {{day6}}<br/>
             06-{{dateFull.month}}-{{dateFull.year}}
           </th>
@@ -445,7 +445,7 @@
 
 
         <tr height="70" class="whitetable" *ngFor="let event7 of events7; let i = index">
-          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="events7.length">
             {{day7}}<br/>
             07-{{dateFull.month}}-{{dateFull.year}}
           </th>
@@ -506,7 +506,7 @@
 
 
         <tr height="70" class="whitetable" *ngFor="let event8 of events8; let i = index">
-          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="events8.length">
             {{day8}}<br/>
             08-{{dateFull.month}}-{{dateFull.year}}
           </th>
@@ -567,7 +567,7 @@
 
 
         <tr height="70" class="whitetable" *ngFor="let event9 of events9; let i = index">
-          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="events9.length">
             {{day9}}<br/>
             09-{{dateFull.month}}-{{dateFull.year}}
           </th>
@@ -628,7 +628,7 @@
         </tr>
 
         <tr height="70" class="whitetable" *ngFor="let event10 of events10; let i = index">
-          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="events10.length">
             {{day10}}<br/>
             10-{{dateFull.month}}-{{dateFull.year}}
           </th>
@@ -689,7 +689,7 @@
 
 
         <tr height="70" class="whitetable" *ngFor="let event11 of events11; let i = index">
-          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="events11.length">
             {{day11}}<br/>
             11-{{dateFull.month}}-{{dateFull.year}}
           </th>
@@ -751,7 +751,7 @@
 
 
         <tr height="70" class="whitetable" *ngFor="let event12 of events12; let i = index">
-          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="events12.length">
             {{day12}}<br/>
             12-{{dateFull.month}}-{{dateFull.year}}
           </th>
@@ -813,7 +813,8 @@
 
 
         <tr height="70" class="whitetable" *ngFor="let event13 of events13; let i = index">
-          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+
+          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="events13.length">
             {{day13}}<br/>
             13-{{dateFull.month}}-{{dateFull.year}}
           </th>
@@ -873,7 +874,7 @@
 
 
         <tr height="70" class="whitetable" *ngFor="let event14 of events14; let i = index">
-          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="events14.length">
             {{day14}}<br/>
             14-{{dateFull.month}}-{{dateFull.year}}
           </th>
@@ -934,7 +935,7 @@
 
 
         <tr height="70" class="whitetable" *ngFor="let event15 of events15; let i = index">
-          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="events15.length">
             {{day15}}<br/>
             15-{{dateFull.month}}-{{dateFull.year}}
           </th>
@@ -995,7 +996,7 @@
 
 
         <tr height="70" class="whitetable" *ngFor="let event16 of events16; let i = index">
-          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="events16.length">
             {{day16}}<br/>
             16-{{dateFull.month}}-{{dateFull.year}}
           </th>
@@ -1055,7 +1056,7 @@
 
 
         <tr height="70" class="whitetable" *ngFor="let event17 of events17; let i = index">
-          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="events17.length">
             {{day17}}<br/>
             17-{{dateFull.month}}-{{dateFull.year}}
           </th>
@@ -1115,7 +1116,7 @@
 
 
         <tr height="70" class="whitetable" *ngFor="let event18 of events18; let i = index">
-          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="events18.length">
             {{day18}}<br/>
             18-{{dateFull.month}}-{{dateFull.year}}
           </th>
@@ -1175,7 +1176,7 @@
         </tr>
 
         <tr height="70" class="whitetable" *ngFor="let event19 of events19; let i = index">
-          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="events19.length">
             {{day19}}<br/>
             19-{{dateFull.month}}-{{dateFull.year}}
           </th>
@@ -1235,7 +1236,7 @@
 
 
         <tr height="70" class="whitetable" *ngFor="let event20 of events20; let i = index">
-          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="events20.length">
             {{day20}}<br/>
             20-{{dateFull.month}}-{{dateFull.year}}
           </th>
@@ -1295,7 +1296,7 @@
 
 
         <tr height="70" class="whitetable" *ngFor="let event21 of events21; let i = index">
-          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="events21.length">
             {{day21}}<br/>
             21-{{dateFull.month}}-{{dateFull.year}}
           </th>
@@ -1355,7 +1356,7 @@
         </tr>
 
         <tr height="70" class="whitetable" *ngFor="let event22 of events22; let i = index">
-          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="events22.length">
             {{day22}}<br/>
             22-{{dateFull.month}}-{{dateFull.year}}
           </th>
@@ -1418,7 +1419,7 @@
 
 
         <tr height="70" class="whitetable" *ngFor="let event23 of events23; let i = index">
-          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="events23.length">
             {{day23}}<br/>
             23-{{dateFull.month}}-{{dateFull.year}}
           </th>
@@ -1478,7 +1479,7 @@
         </tr>
 
         <tr height="70" class="whitetable" *ngFor="let event24 of events24; let i = index">
-          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="events24.length">
             {{day24}}<br/>
             24-{{dateFull.month}}-{{dateFull.year}}
           </th>
@@ -1538,7 +1539,7 @@
         </tr>
 
         <tr height="70" class="whitetable" *ngFor="let event25 of events25; let i = index">
-          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="events25.length">
             {{day25}}<br/>
             25-{{dateFull.month}}-{{dateFull.year}}
           </th>
@@ -1597,7 +1598,7 @@
 
 
         <tr height="70" class="whitetable" *ngFor="let event26 of events26; let i = index">
-          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="events26.length">
             {{day26}}<br/>
             26-{{dateFull.month}}-{{dateFull.year}}
           </th>
@@ -1656,7 +1657,7 @@
 
 
         <tr height="70" class="whitetable" *ngFor="let event27 of events27; let i = index">
-          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="events27.length">
             {{day27}}<br/>
             27-{{dateFull.month}}-{{dateFull.year}}
           </th>
@@ -1715,7 +1716,7 @@
 
 
         <tr height="70" class="whitetable" *ngFor="let event28 of events28; let i = index">
-          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="events28.length">
             {{day28}}<br/>
             28-{{dateFull.month}}-{{dateFull.year}}
           </th>
@@ -1774,7 +1775,7 @@
         </tr>
 
         <tr height="70" class="whitetable" *ngFor="let event29 of events29; let i = index">
-          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="events29.length">
             {{day29}}<br/>
             29-{{dateFull.month}}-{{dateFull.year}}
           </th>
@@ -1833,7 +1834,7 @@
         </tr>
 
         <tr height="70" class="whitetable" *ngFor="let event30 of events30; let i = index">
-          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="events30.length">
             {{day30}}<br/>
             30-{{dateFull.month}}-{{dateFull.year}}
           </th>
@@ -1893,7 +1894,7 @@
 
 
         <tr height="70" class="whitetable" *ngFor="let event31 of events31; let i = index">
-          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="roomnames.length">
+          <th *ngIf="i == 0 ? true : false" [attr.rowspan]="events31.length">
             {{day31}}<br/>
             31-{{dateFull.month}}-{{dateFull.year}}
           </th>

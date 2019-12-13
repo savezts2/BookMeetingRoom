@@ -82,12 +82,15 @@ constructor(public authService : AuthService , private router: Router , private 
 
 
   ngOnInit(){
+
+
       this.nameLogin = localStorage.getItem('nameid');
       //console.log("user",this.isLoggedIn );
       //console.log("admin",this.isLoggedInAdmin );
      // console.log("hr",this.isLoggedInHR );
 
   }
+
 
 
 convertMonth(month : String ){

@@ -44,8 +44,8 @@
       <mat-form-field>
         <input matInput [matDatepickerFilter]="myFilter" [min]="today" [max]="maxDate" [matDatepicker]="picker" placeholder="DD/MM/yyyy"
                [formControl]="serializedDate">
-        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker>
+        <mat-datepicker-toggle matSuffix [for]="picker" ></mat-datepicker-toggle >
+        <mat-datepicker #picker ></mat-datepicker>
       </mat-form-field>
       &nbsp;&nbsp;
       <button mat-raised-button color="primary" (click)="clicksearch()">Search</button>

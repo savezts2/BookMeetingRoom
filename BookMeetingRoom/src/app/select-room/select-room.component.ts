@@ -46,8 +46,8 @@ year : string;
 numberTime : number = 0 ;
 events: any[] = [];
     datefull :any={}
-    public API = '//localhost:8080';  //for test
-//public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
+  //  public API = '//localhost:8080';  //for test
+public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
 
 dateshow : String;
 
@@ -92,11 +92,15 @@ ngOnDestroy() {
 
                 })
 
+
     this.service.findDate(this.datefull.datefull).subscribe(data=>{
     this.report = data;
+    setTimeout(() => {
     this.appendTime();
-    console.log(data);
+     }, 1000); //interval
+    //console.log(data);
     })
+
     this.dateshow = this.dateShow(this.datefull.datefull);
 
 
@@ -1359,7 +1363,7 @@ public appendTime(){
       } //if active
   } //for report
 
- // console.log(this.events);
+
 
 } // appendtime
 
