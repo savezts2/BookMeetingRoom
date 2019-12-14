@@ -48,8 +48,8 @@
   events: any[] = [];
   roomnames : Array<any>;
   spiner : boolean = false;
-  //public API = '//localhost:8080';   //for test
-  public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
+  public API = '//localhost:8080';   //for test
+ // public API = 'http://192.168.1.56:8080/BookMeetingRoom';  //for build
 
     constructor(public authService : AuthService , private router: Router , private service : ServiceService,public dialog: MatDialog,
     @Inject(MAT_DIALOG_DATA) public data: DialogData, public dialogRef: MatDialogRef<EditbookComponent>, private http: HttpClient,
@@ -114,7 +114,7 @@
                                  data => {
                                      console.log('PUT Request is successful');
                                      alert("Edit Success!");
-                                     window.location.reload(true);
+                                     this.dialogRef.close();
                                  },
                                  error => {
                                      console.log('Error', error);

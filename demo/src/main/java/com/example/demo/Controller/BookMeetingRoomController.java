@@ -26,13 +26,10 @@ public class BookMeetingRoomController {
     @Autowired
     private ReportRepository reportRepository;
 
-    @GetMapping("/BookMeetingRoom/{date}")
-    public Iterable<BookMeetingRoom> Bookmaster(@PathVariable String date) {
-        return this.bookMeetingRoomRepository.getBookmaster(date);
-    }
 
 
-    @PostMapping(path = "/BookMeetingRoom/Changstatusbook/{roomname}/{starttime}/{dateBookMeetingRoom}")
+
+    @PostMapping(path = "/Changstatusbook/{roomname}/{starttime}/{dateBookMeetingRoom}")
     public BookMeetingRoom chackstatusbook(@PathVariable String roomname, @PathVariable String starttime, @PathVariable String dateBookMeetingRoom) {
         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findByRoomnameAndStarttimeAndDateBookMeetingRoomAndIsActive(roomname,starttime,dateBookMeetingRoom,"1");
         bookMeetingRoom.setStatusbooking("notcheckin");
@@ -42,7 +39,9 @@ public class BookMeetingRoomController {
     }
 
 
-    @PostMapping(path = "/BookMeetingRoom/CancelBooking/{dateBookMeetingRoom}/{roomname}/{starttime}")
+
+
+    @PostMapping(path = "/CancelBooking/{dateBookMeetingRoom}/{roomname}/{starttime}")
     public BookMeetingRoom bookMeetingRoom2(@PathVariable String dateBookMeetingRoom, @PathVariable String roomname, @PathVariable String starttime) {
         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findByDateBookMeetingRoomAndRoomnameAndStarttimeAndIsActive(dateBookMeetingRoom,roomname,starttime,"1");
         bookMeetingRoom.setIsActive("0");
@@ -53,7 +52,7 @@ public class BookMeetingRoomController {
         return bookMeetingRoom;
     }
 
-    @PostMapping(path = "/BookMeetingRoom/CheckIn/{dateBookMeetingRoom}/{roomname}/{starttime}")
+    @PostMapping(path = "/CheckIn/{dateBookMeetingRoom}/{roomname}/{starttime}")
     public BookMeetingRoom bookMeetingRoom4(@PathVariable String dateBookMeetingRoom, @PathVariable String roomname, @PathVariable String starttime ) {
         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findByDateBookMeetingRoomAndRoomnameAndStarttimeAndIsActive(dateBookMeetingRoom,roomname,starttime,"1");
         bookMeetingRoom.setStatusbooking("checkin");
@@ -61,7 +60,7 @@ public class BookMeetingRoomController {
         return bookMeetingRoom;
     }
 
-    @PostMapping(path = "/BookMeetingRoom/Checkout/{dateBookMeetingRoom}/{roomname}/{starttime}/{hour}/{minute}")
+    @PostMapping(path = "/Checkout/{dateBookMeetingRoom}/{roomname}/{starttime}/{hour}/{minute}")
     public BookMeetingRoom checkout(@PathVariable String dateBookMeetingRoom, @PathVariable String roomname, @PathVariable String starttime
             , @PathVariable int hour, @PathVariable int minute) {
         String endtime2;
@@ -115,13 +114,13 @@ public class BookMeetingRoomController {
         return bookMeetingRoom;
     }
 
-    @GetMapping("/BookMeetingRoom/Bookeiei/{dateBookMeetingRoom}/{roomname}/{starttime}")
+    @GetMapping("/Bookeiei/{dateBookMeetingRoom}/{roomname}/{starttime}")
     public  BookMeetingRoom bookMeetingRoom(@PathVariable String dateBookMeetingRoom, @PathVariable String roomname, @PathVariable String starttime){
 
         return this.bookMeetingRoomRepository.getBookday(dateBookMeetingRoom,roomname,starttime,"1","booking");
     }
 
-    @PostMapping(path = "/BookMeetingRoom/Editbook/{dateBookMeetingRoom}/{roomname}/{starttime}/{newstarttime}/{endtime}/{atten}/{topic}/{remark}/{tel}")
+    @PostMapping(path = "/Editbook/{dateBookMeetingRoom}/{roomname}/{starttime}/{newstarttime}/{endtime}/{atten}/{topic}/{remark}/{tel}")
     public BookMeetingRoom bookMeetingRoom3(@PathVariable String dateBookMeetingRoom, @PathVariable String roomname, @PathVariable String starttime,
    @PathVariable String newstarttime,@PathVariable String endtime,@PathVariable String atten,@PathVariable String topic,@PathVariable String remark,@PathVariable String tel ) {
         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findByDateBookMeetingRoomAndRoomnameAndStarttimeAndIsActive(dateBookMeetingRoom,roomname,starttime,"1");
@@ -140,7 +139,7 @@ public class BookMeetingRoomController {
 
 
 
-    @PostMapping(path = "/BookMeetingRoom/{userid}/{fromtime}/{totime}/{tel}/{topic}/{atten}/{remark}/{roomname}/{date}")
+    @PostMapping(path = "/{userid}/{fromtime}/{totime}/{tel}/{topic}/{atten}/{remark}/{roomname}/{date}")
     public BookMeetingRoom bookMeetingRoom(@PathVariable String userid, @PathVariable String fromtime, @PathVariable String totime,
                                      @PathVariable String  tel, @PathVariable String topic,@PathVariable String atten,@PathVariable String remark
             ,@PathVariable String roomname ,@PathVariable String date) throws Exception {

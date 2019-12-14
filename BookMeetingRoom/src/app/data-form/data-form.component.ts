@@ -33,13 +33,13 @@ fromtimesplited : Array<any>;
 totimesplited : Array<any>;
 countTime : number;
 spiner : boolean = false;
-//public API = '//localhost:8080';  //for test
-public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
+public API = '//localhost:8080';  //for test
+//public API = 'http://192.168.1.56:8080/BookMeetingRoom';  //for build
 firstFormGroup: FormGroup;
 secondFormGroup: FormGroup;
 events: any[] = [];
 roomnames : Array<any>;
-
+in : any ;
 
 
 
@@ -55,11 +55,24 @@ roomnames : Array<any>;
               })
     this.fromtimeSelect = this.roomnameandtime.roomtime;
     this.userid3 = localStorage.getItem('userid');
+
+
+ this.in =  setInterval(() => {
     this.service.findDate(this.date).subscribe(data=>{
     this.report = data;
-    console.log(data);
-    this.appendTime();
+
+
+    this.events = [];
+    this.appendRoomname();
+     this.appendTime();
+
+
+    //console.log(data);
     })
+
+  }, 500); //interval
+
+
 
      this.service.getRoomname().subscribe(data => {
                                  this.roomnames = data;
@@ -98,15 +111,13 @@ checkOne(){
 
 }
 
-checkTwo(){
 
-if(this.secondFormGroup.get('tel').value == null || this.secondFormGroup.get('tel').value == '' ||
-  this.secondFormGroup.get('topic').value == null || this.secondFormGroup.get('topic').value == '' ||
-   this.secondFormGroup.get('atten').value == null || this.secondFormGroup.get('atten').value == ''){
-    alert("Please Check your field");
+ngOnDestroy() {
+  if (this.in) {
+    clearInterval(this.in);
   }
-}
 
+}
 
 appendRoomname(){
   for(let i = 0 ; i < this.roomnames.length ; i++){
@@ -913,34 +924,65 @@ public appendTime(){
       } //if active
   } //for report
 
-  console.log(this.events);
+  //console.log(this.events);
 
 } // appendtime
 
-
+numnum : number ;
 SubmitData(){
 
-      this.spiner = true;
 
-      if(this.checkReserved (this.fromtimeSelect , this.firstFormGroup.get('totime').value , this.roomname)){
-          alert("Cannot book this time period");
-          window.location.reload(true);
-      }else{
 
-     this.http.post(this.API + '/'+this.userid3 +'/' + this.fromtimeSelect +'/' + this.firstFormGroup.get('totime').value +'/'+ this.secondFormGroup.get('tel').value
-     + '/' + this.secondFormGroup.get('topic').value+ '/' + this.secondFormGroup.get('atten').value+ '/' + this.secondFormGroup.get('remark').value+ '/' + this.roomname+ '/' + this.date,{})
+      if(this.secondFormGroup.get('tel').value == null || this.secondFormGroup.get('tel').value == '' ||
+         this.secondFormGroup.get('topic').value == null || this.secondFormGroup.get('topic').value == '' ||
+         this.secondFormGroup.get('atten').value == null || this.secondFormGroup.get('atten').value == ''){
+          alert("Please Check your field");
+      }else if(false){
+
+      }
+      else{
+
+            for(let i = 0 ; i < this.roomnames.length ; i++){
+                if(this.roomnames[i].roomnames == this.roomname  ){
+                    for(let j = 0 ; j < this.events[i].length ; j++){
+                      this.numnum = 0 ;
+                      if(this.events[i][j][1] == this.fromtimeSelect){
+                           this.numnum = 1;
+                          if(this.events[i][j][11] == true){
+                              alert("this time other users have already booked.");
+                              this.router.navigate(['selectRoom',{datefull : this.date}]);
+                              break;
+                          }else{
+
+
+                              this.spiner = true;
+                                      this.http.post(this.API + '/'+this.userid3 +'/' + this.fromtimeSelect +'/' + this.firstFormGroup.get('totime').value +'/'+ this.secondFormGroup.get('tel').value
+                                    + '/' + this.secondFormGroup.get('topic').value+ '/' + this.secondFormGroup.get('atten').value+ '/' + this.secondFormGroup.get('remark').value+ '/' + this.roomname+ '/' + this.date,{})
                              .subscribe(
                                data => {
                                    console.log('PUT Request is successful');
                                    alert("จองสำเร็จ");
-
-                                   this.router.navigate(['selectDate']);
+                                   this.router.navigate(['selectRoom',{datefull : this.date}]);
 
                                },
                                error => {
                                    console.log('Error', error);
                                }
                               );
+                            break;
+                          }
+                      }
+                    }
+
+                  if(this.numnum == 0){
+                    alert("this time other users have already booked.");
+                    this.router.navigate(['selectRoom',{datefull : this.date}]);
+                  }
+                }
+            }
+
+
+
 
 
       }
@@ -948,37 +990,7 @@ SubmitData(){
    }
 
 
-checkReserved (fromtime: String , totime: String , roomname:String){
-    this.fromtimesplited = fromtime.split(".");
-    this.totimesplited = totime.split(".");
 
-    this.countTime = this.convertlengthTime(this.fromtimesplited[0],this.fromtimesplited[1],this.totimesplited[0],this.totimesplited[1]);
-
-     for(let i = 0 ; i < this.roomnames.length ; i++){
-
-         if(this.roomnames[i].roomnames == roomname){
-            for(let j = 0 ; j < this.events[i].length ; j++){
-                if(this.events[i][j][1] == fromtime){
-                  if(this.countTime > 1){
-
-                    for(let k = j+1 ; k < this.countTime + j ; k++){
-                      if(this.events[i][k][11] == true){
-
-                        return true;
-
-                          break;
-                       }
-                    }
-                   }
-                }
-            }
-          return false;
-         }
-
-     }
-
-
-}
 
 
 convertlengthTime(from , fromback , to , toback){

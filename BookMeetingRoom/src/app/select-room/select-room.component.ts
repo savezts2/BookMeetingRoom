@@ -39,15 +39,15 @@ minute: any;
 sec: any;
 
 intervals : any;
-
+in : any;
 day : string;
 month : string;
 year : string;
 numberTime : number = 0 ;
 events: any[] = [];
     datefull :any={}
-  //  public API = '//localhost:8080';  //for test
-public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
+    public API = '//localhost:8080';  //for test
+//public API = 'http://192.168.1.56:8080/BookMeetingRoom';  //for build
 
 dateshow : String;
 
@@ -70,7 +70,12 @@ dateshow : String;
 ngOnDestroy() {
   if (this.intervals) {
     clearInterval(this.intervals);
+
   }
+  if(this.in){
+      clearInterval(this.in);
+  }
+
 }
 
 
@@ -92,16 +97,23 @@ ngOnDestroy() {
 
                 })
 
-
+    this.in =  setInterval(() => {
     this.service.findDate(this.datefull.datefull).subscribe(data=>{
     this.report = data;
-    setTimeout(() => {
-    this.appendTime();
-     }, 1000); //interval
+
+
+    this.events = [];
+    this.appendRoomname();
+     this.appendTime();
     //console.log(data);
+
     })
 
+    }, 500); //interval
+
+
     this.dateshow = this.dateShow(this.datefull.datefull);
+
 
 
   this.intervals = setInterval(() => {
@@ -1363,7 +1375,7 @@ public appendTime(){
       } //if active
   } //for report
 
-
+  //console.log(this.events);
 
 } // appendtime
 

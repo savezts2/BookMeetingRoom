@@ -39,11 +39,12 @@ export class EditordeletebookComponent implements OnInit {
 isLoggedIn : Observable<boolean>;
 isLoggedInAdmin : Observable<boolean>;
 isLoggedInHR : Observable<boolean>;
-//public API = '//localhost:8080';   //for test
-public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
+public API = '//localhost:8080';   //for test
+//public API = 'http://192.168.1.56:8080/BookMeetingRoom';  //for build
 timenum : number;
 totimenum : number;
 datetimenow : number;
+spiner : boolean = false;
   constructor(public authService : AuthService , private router: Router , private service : ServiceService,public dialog: MatDialog,
   @Inject(MAT_DIALOG_DATA) public data: DialogData, public dialogRef: MatDialogRef<EditordeletebookComponent>, private http: HttpClient) {
       this.isLoggedIn = authService.isLoggedIn();
@@ -94,7 +95,7 @@ checkin(){
                                data => {
                                    console.log('PUT Request is successful');
                                    alert("Checkin Success!");
-                                   window.location.reload(true);
+                                   this.dialogRef.close();
                                },
                                error => {
                                    console.log('Error', error);
@@ -107,13 +108,13 @@ checkin(){
 }
 
 delete(){
-
+  this.spiner = true;
   this.http.post(this.API + '/CancelBooking/'+this.data.date+'/'+this.data.room+'/'+this.data.time,{})
                              .subscribe(
                                data => {
                                    console.log('PUT Request is successful');
                                    alert("Cancel Success!");
-                                   window.location.reload(true);
+                                   this.dialogRef.close();
                                },
                                error => {
                                    console.log('Error', error);

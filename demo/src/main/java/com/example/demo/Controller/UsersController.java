@@ -48,27 +48,27 @@ public class UsersController {
     }
 
 
-    @GetMapping("/BookMeetingRoom/Userid/{username}")
+    @GetMapping("/Userid/{username}")
     public  Users users(@PathVariable String username){
         return this.usersRepository.findByUsernameAndIsActive(username,"1");
     }
 
-    @GetMapping(path = "/BookMeetingRoom/Department")
+    @GetMapping(path = "/Department")
     public Collection<Department> departments() {
         return departmentRepository.findAll().stream().filter(this::departmentActive).collect(Collectors.toList());
     }
 
-    @GetMapping(path = "/BookMeetingRoom/Roomname")
+    @GetMapping(path = "/Roomname")
     public Collection<Roomname> roomnames() {
         return roomnameRepository.findAll().stream().filter(this::RoomnameActive).collect(Collectors.toList());
     }
 
-    @GetMapping(path = "/BookMeetingRoom/Position")
+    @GetMapping(path = "/Position")
     public Collection<Position> positions() {
         return positionRepository.findAll().stream().filter(this::PositionActive).collect(Collectors.toList());
     }
 
-    @GetMapping(path = "/BookMeetingRoom/Role")
+    @GetMapping(path = "/Role")
     public Collection<S_role> s_roles() {
         return s_roleRepository.findAll().stream().filter(this::RoleActive).collect(Collectors.toList());
     }
@@ -90,7 +90,7 @@ public class UsersController {
         return s_role.getIsActive().equals("1");
     }
 
-    @PostMapping(path = "/BookMeetingRoom/Adduser/{firstname}/{lastname}/{department}/{position}/{username}/{password}/{status}")
+    @PostMapping(path = "/Adduser/{firstname}/{lastname}/{department}/{position}/{username}/{password}/{status}")
     public Users users(@PathVariable String firstname, @PathVariable String lastname, @PathVariable String department, @PathVariable String position,
                        @PathVariable String username,@PathVariable String password,@PathVariable String status) {
         Users users = new Users();
@@ -107,7 +107,7 @@ public class UsersController {
     }
 
 
-    @PostMapping(path = "/BookMeetingRoom/Edituser/{firstname}/{lastname}/{department}/{position}/{username}/{password}/{status}")
+    @PostMapping(path = "/Edituser/{firstname}/{lastname}/{department}/{position}/{username}/{password}/{status}")
     public Users edituser(@PathVariable String firstname, @PathVariable String lastname, @PathVariable String department, @PathVariable String position,
                        @PathVariable String username,@PathVariable String password,@PathVariable String status) {
         Users users = usersRepository.findByUsernameAndIsActive(username,"1");
@@ -121,7 +121,7 @@ public class UsersController {
         return users;
     }
 
-    @PostMapping(path = "/BookMeetingRoom/Deleteuser/{username}")
+    @PostMapping(path = "/Deleteuser/{username}")
     public Users deleteuser(@PathVariable String username) {
         Users users = usersRepository.findByUsernameAndIsActive(username,"1");
         users.setIsActive("0");

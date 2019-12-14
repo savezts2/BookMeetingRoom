@@ -34,7 +34,7 @@ isactive: string;
 export class SystemadminComponent implements OnInit {
 @ViewChild('sidenav', {static: false}) sidenav: MatSidenav;
 
-displayedColumns: string[] = ['user_id', 'firstname', 'lastname','department','position','username','status','is_active','edit','delete'];
+displayedColumns: string[] = ['username','firstname', 'lastname','department','position','status','edit','delete'];
 
 isLoggedIn : Observable<boolean>;
 isLoggedInAdmin : Observable<boolean>;

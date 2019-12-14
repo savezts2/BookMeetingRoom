@@ -111,8 +111,10 @@
             <label>Tel. Booking By :
               <mat-form-field>
 
-                <input matInput formControlName="tel" required placeholder=" " pattern="[0][1-9]{9}" maxlength="10"  #message>
-                <mat-hint align="end">{{message.value.length}} / 10</mat-hint>
+                <input matInput formControlName="tel" required placeholder=" "
+                       maxlength="10" type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57'
+                >
+
               </mat-form-field>
             </label>
             &nbsp;&nbsp;
@@ -132,7 +134,9 @@
             <label>Attendees :
               <mat-form-field>
 
-                <input matInput formControlName="atten"required placeholder=" " type="number" >
+                <input matInput formControlName="atten"required placeholder=" "
+                       maxlength="2" type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57'
+                >
 
               </mat-form-field>
             </label>
@@ -150,32 +154,27 @@
 
           <div align="center">
             <button mat-fab matStepperPrevious mat-button color="accent" class="material-cust-large-button">Back</button>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <button mat-fab matStepperNext mat-button color="accent" class="material-cust-large-button" (click)="checkTwo()">Next</button>
+            &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
+
+
+
+              <button mat-fab mat-button color="accent" class="material-cust-large-button" (click)="SubmitData()">Save</button>
+
+              &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
+              <button mat-fab mat-button color="accent" class="material-cust-large-button" (click)="stepper.reset()">Reset</button>
+
+
+            <br/><br/>
+            <h2 align="center" style="color:red;">*Please check the information before saving.</h2>
+
+            <div align="center" *ngIf="spiner">
+              <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+            </div>
           </div>
         </form>
 
       </mat-step>
 
-      <mat-step>
-        <ng-template matStepLabel>Done</ng-template>
-        <br/><br/>
-
-        <div style="text-align:center;">
-          <button mat-fab mat-button color="accent" class="material-cust-large-button" (click)="SubmitData()">Save</button>
-
-          &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
-          <button mat-fab mat-button color="accent" class="material-cust-large-button" (click)="stepper.reset()">Reset</button>
-
-        </div>
-        <br/><br/>
-        <h2 align="center" style="color:red;">*Please check the information before saving.</h2>
-
-        <div align="center" *ngIf="spiner">
-          <mat-progress-bar mode="indeterminate"></mat-progress-bar>
-        </div>
-
-      </mat-step>
     </mat-horizontal-stepper>
 
 

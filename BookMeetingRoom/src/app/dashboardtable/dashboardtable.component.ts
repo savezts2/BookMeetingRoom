@@ -169,7 +169,9 @@ close() {
     this.service.getDateDashBoard(this.dateStart , this.dateEnd).subscribe(data=>{
        this.report = data;
         console.log(data);
+      setTimeout(() => {
        this.appendTime();
+      }, 1000); //interval
     })
 
 this.dateSelectMonth = this.dateFull.dateStart.split("-");
@@ -25404,7 +25406,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
 
 
 
-
+  console.log(this.events14);
 
 
   } // appendtime
