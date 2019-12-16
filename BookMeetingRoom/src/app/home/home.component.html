@@ -1,0 +1,54 @@
+
+<body class="bgimg">
+
+
+
+<mat-sidenav-container *ngIf="!(isLoggedInAdmin | async) && !(isLoggedInAdmin | async) && !(isLoggedInAdmin | async)"
+                       class="card" (backdropClick)="close()">
+
+  <br/><br/>
+  <div style="text-align: center;">
+    <img src="http://www.ils.co.th/wp-content/themes/ils/images/logo.png" alt="ILS"/>
+
+  </div>
+
+  <div align="center">
+  <div class="field" style="width: 80%;">
+    <p class="control has-icons-left has-icons-right">
+      <input class="input" type="email" placeholder="Username" [(ngModel)]="username" (keydown.enter)="login()">
+      <span class="icon is-small is-left">
+      <i class="fas fa-envelope"></i>
+    </span>
+      <span class="icon is-small is-right">
+      <i class="fas fa-check"></i>
+    </span>
+    </p>
+  </div>
+
+  <div class="field" style="width: 80%;">
+    <p class="control has-icons-left">
+      <input class="input" type="password" placeholder="Password" [(ngModel)]="password" (keydown.enter)="login()">
+      <span class="icon is-small is-left">
+      <i class="fas fa-lock"></i>
+    </span>
+    </p>
+  </div>
+
+    <button class="button is-info is-active" style="width:60%" (click)="login()"><b>Login</b></button><br/><br/>
+    <button class="button is-info is-active" style="width:60%" (click)="reset()"><b>Reset</b></button>
+  </div>
+
+  <br/><br/>
+
+
+
+
+
+</mat-sidenav-container>
+
+
+
+
+
+
+</body>

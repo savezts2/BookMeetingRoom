@@ -15,7 +15,7 @@
 }
 
 #sidebar .sidebar-header {
-     padding: 24px;
+    padding: 24px;
     background: #6d7fcc;
 }
 
@@ -29,7 +29,7 @@
 #sidebar .sidebar-emp {
         width: 100%;
         padding: 20px;
-        min-height: 100%;
+        min-height: 200vh;
         transition: all 0.3s;
 }
 
@@ -50,15 +50,57 @@
     text-align : center;
 }
 
-table{
-  width:95%;
-  text-align:center;
-
+table {
+  width: 90%;
 }
 
-.datepick{
-    margin-left:126px;
+tr.example-detail-row {
+  height: 0;
 }
+
+tr.example-element-row:not(.example-expanded-row):hover {
+  background: #EEFF5A;
+}
+
+tr.example-element-row:not(.example-expanded-row):active {
+  background: #EEFF5A;
+}
+
+.example-element-row td {
+  border-bottom-width: 0;
+}
+
+.example-element-detail {
+  overflow: hidden;
+  display: flex;
+}
+
+.example-element-diagram {
+  min-width: 80px;
+  border: 2px solid black;
+  padding: 8px;
+  font-weight: lighter;
+  margin: 8px 0;
+  height: 104px;
+}
+
+.example-element-symbol {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: normal;
+}
+
+.example-element-description {
+  padding: 16px;
+}
+
+.example-element-description-attribution {
+  opacity: 0.5;
+}
+
+
+
+
 
 .greentable{
   background-color: rgb(0, 176, 80);
@@ -71,7 +113,6 @@ table{
 .whitetable{
     background-color: white;
 }
-
 
 .example-container {
   display: flex;
@@ -109,11 +150,11 @@ h1.example-app-name {
   background-color: white;
   box-shadow: rgba(0,0,0,0.2);
   transition: 0.3s;
-  margin-top: 30px;
+  margin-top: 100px;
   margin-bottom: auto;
   margin-right: auto;
   margin-left: auto;
-  width : 95%;
+  width : 30%;
   height : auto;
   opacity: 0.9;
 }
@@ -138,9 +179,15 @@ h1.example-app-name {
 }
 
 .mat-icon{
-  font-size: 50px;
-  width: 50px;
+  font-size: 25px;
+  width: 25px;
 }
+
+.mat-icon2{
+    font-size: 50px;
+      width: 50px;
+}
+
 
 .botton{
   width:100%;
@@ -152,3 +199,12 @@ h1.example-app-name {
   background-color: white;
   width : 20%;
 }
+
+.bottonadd{
+  background-color: rgb(0, 176, 80);
+  color: white;
+  margin-left: 5%;
+}
+
+
+

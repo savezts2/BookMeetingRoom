@@ -48,6 +48,8 @@
   events: any[] = [];
   roomnames : Array<any>;
   spiner : boolean = false;
+  in : any ;
+  nameuser : string;
   public API = '//localhost:8080';   //for test
  // public API = 'http://192.168.1.56:8080/BookMeetingRoom';  //for build
 
@@ -65,15 +67,24 @@
 
     this.service.getRoomname().subscribe(data => {
                                  this.roomnames = data;
-                                console.log(this.roomnames);
+                              //  console.log(this.roomnames);
                                 this.appendRoomname();
                                });
 
+    this.in =  setInterval(() => {
     this.service.findDate(this.data.date).subscribe(data=>{
     this.report = data;
-    console.log(data);
-    this.appendTime();
+
+
+    this.events = [];
+    this.appendRoomname();
+     this.appendTime();
+
+
+    //console.log(data);
     })
+
+  }, 500); //interval
 
 
        this.firstFormGroup = this._formBuilder.group({
@@ -87,9 +98,17 @@
 
 
 
-
+  this.nameuser = localStorage.getItem('nameid');
 
     }
+
+  ngOnDestroy() {
+
+  if(this.in){
+      clearInterval(this.in);
+  }
+
+}
 
   cancel(){
       this.dialogRef.close();
@@ -106,9 +125,10 @@
             alert("Please check your filled.");
         }else if(this.checkReserved(this.firstFormGroup.get('time').value , this.firstFormGroup.get('totime').value , this.data.room)){
             alert("This time can't book");
+            this.dialogRef.close();
         }else{
               this.spiner = true;
-                this.http.post(this.API + '/Editbook/'+this.data.date+'/'+this.data.room+'/'+this.data.time+'/'+this.firstFormGroup.get('time').value+'/'+this.firstFormGroup.get('totime').value
+                this.http.post(this.API + '/Editbook/'+this.nameuser+'/'+this.data.date+'/'+this.data.room+'/'+this.data.time+'/'+this.firstFormGroup.get('time').value+'/'+this.firstFormGroup.get('totime').value
             +'/'+this.firstFormGroup.get('atten').value+'/'+this.firstFormGroup.get('topic').value+'/null/'+this.firstFormGroup.get('tel').value,{})
                                .subscribe(
                                  data => {
@@ -131,6 +151,7 @@
             alert("Please check your filled.");
         }else if(this.checkReserved (this.firstFormGroup.get('time').value , this.firstFormGroup.get('totime').value , this.data.room)){
             alert("This time can't book");
+            this.dialogRef.close();
         }else{
 
         this.spiner = true;
@@ -151,56 +172,29 @@
       }}
   }
 
-countRow: number = 0;
-checkReserved(fromtime , totime , roomname){
-    this.countRow = 0;
+
+checkReserved (fromtime: String , totime: String , roomname:String){
     this.fromtimesplited = fromtime.split(".");
     this.totimesplited = totime.split(".");
+
     this.countTime = this.convertlengthTime(this.fromtimesplited[0],this.fromtimesplited[1],this.totimesplited[0],this.totimesplited[1]);
 
     for(let i = 0 ; i < this.roomnames.length ; i++){
-      if(roomname == this.roomnames[i].roomnames){
+      if(this.roomnames[i].roomnames == roomname){
         for(let j = 0 ; j < this.events[i].length ; j++){
-
-          if(this.events[i][j][1] == fromtime){
-            this.countRow = this.countRow + 1 ;
-             if(this.countTime > 1){
-                if(this.events[i][j][11] == true && this.firstFormGroup.get('time').value != this.data.time){
-
-                    return true;
-
-                     break;
-                }
-                 for(let k = j+1 ; k < this.countTime + j - this.events[i][j][2] + 1 ; k++){
-
-                   if(this.events[i][j][0] == 18 && this.events[i][j][11] == false){
-
-                        return false;
-                        break;
-                   }else if(this.events[i][j][11] == true && this.data.time == this.events[i][j][1]){
-
-                      return false;
-                        break;
-                    }
-                  else if(this.events[i][j][11] == true){
-
+            if(this.events[i][j][1] == fromtime){
+              for(let k = j + 1 ; k <  this.countTime + j - this.events[i][j][2] + 1 ; k++){
+                  if(this.events[i][k][11] == true){
                       return true;
-
-                     break;
-                   }
-                 }
-             }else{
-              if(this.events[i][j][11] == true){
-                  return true;
-
-                     break;
+                      break;
+                  }
               }
-           }
-           }
+            }
         }
+        return false;
       }
     }
-  return false;
+
 }
 
 
@@ -1009,7 +1003,7 @@ appendRoomname(){
       } //if active
   } //for report
 
-  console.log(this.events);
+  //console.log(this.events);
 
 } // appendtime
 

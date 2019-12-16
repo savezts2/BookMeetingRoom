@@ -33,6 +33,7 @@ public class BookMeetingRoomController {
     public BookMeetingRoom chackstatusbook(@PathVariable String roomname, @PathVariable String starttime, @PathVariable String dateBookMeetingRoom) {
         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findByRoomnameAndStarttimeAndDateBookMeetingRoomAndIsActive(roomname,starttime,dateBookMeetingRoom,"1");
         bookMeetingRoom.setStatusbooking("notcheckin");
+
         bookMeetingRoomRepository.save(bookMeetingRoom);
         System.out.println(dateBookMeetingRoom+roomname+starttime);
         return bookMeetingRoom;
@@ -41,68 +42,88 @@ public class BookMeetingRoomController {
 
 
 
-    @PostMapping(path = "/CancelBooking/{dateBookMeetingRoom}/{roomname}/{starttime}")
-    public BookMeetingRoom bookMeetingRoom2(@PathVariable String dateBookMeetingRoom, @PathVariable String roomname, @PathVariable String starttime) {
+    @PostMapping(path = "/CancelBooking/{firstname}/{dateBookMeetingRoom}/{roomname}/{starttime}")
+    public BookMeetingRoom bookMeetingRoom2(@PathVariable String firstname,@PathVariable String dateBookMeetingRoom, @PathVariable String roomname, @PathVariable String starttime) {
         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findByDateBookMeetingRoomAndRoomnameAndStarttimeAndIsActive(dateBookMeetingRoom,roomname,starttime,"1");
         bookMeetingRoom.setIsActive("0");
         bookMeetingRoomRepository.save(bookMeetingRoom);
+        Date date = new Date();
+        bookMeetingRoom.setUpdate_date(date);
+        bookMeetingRoom.setUpdate_by(firstname);
         Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
         report.setIsActive("0");
+        report.setUpdate_by(firstname);
+        report.setUpdate_date(date);
         reportRepository.save(report);
         return bookMeetingRoom;
     }
 
-    @PostMapping(path = "/CheckIn/{dateBookMeetingRoom}/{roomname}/{starttime}")
-    public BookMeetingRoom bookMeetingRoom4(@PathVariable String dateBookMeetingRoom, @PathVariable String roomname, @PathVariable String starttime ) {
+    @PostMapping(path = "/CheckIn/{firstname}/{dateBookMeetingRoom}/{roomname}/{starttime}")
+    public BookMeetingRoom bookMeetingRoom4(@PathVariable String firstname,@PathVariable String dateBookMeetingRoom, @PathVariable String roomname, @PathVariable String starttime ) {
         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findByDateBookMeetingRoomAndRoomnameAndStarttimeAndIsActive(dateBookMeetingRoom,roomname,starttime,"1");
+        Date date = new Date();
         bookMeetingRoom.setStatusbooking("checkin");
+        bookMeetingRoom.setUpdate_date(date);
+        bookMeetingRoom.setUpdate_by(firstname);
         bookMeetingRoomRepository.save(bookMeetingRoom);
+        Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
+        report.setUpdate_by(firstname);
+        report.setUpdate_date(date);
+        reportRepository.save(report);
         return bookMeetingRoom;
     }
 
-    @PostMapping(path = "/Checkout/{dateBookMeetingRoom}/{roomname}/{starttime}/{hour}/{minute}")
-    public BookMeetingRoom checkout(@PathVariable String dateBookMeetingRoom, @PathVariable String roomname, @PathVariable String starttime
+    @PostMapping(path = "/Checkoutauto/{roomname}/{starttime}/{datebook}")
+    public BookMeetingRoom checkoutauto(@PathVariable String roomname,@PathVariable String starttime, @PathVariable String datebook) {
+        BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findByRoomnameAndStarttimeAndDateBookMeetingRoomAndIsActive(roomname,starttime,datebook,"1");
+       bookMeetingRoom.setStatusbooking("checkout");
+       bookMeetingRoomRepository.save(bookMeetingRoom);
+        return bookMeetingRoom;
+    }
+
+    @PostMapping(path = "/Checkout/{firstname}/{dateBookMeetingRoom}/{roomname}/{starttime}/{hour}/{minute}")
+    public BookMeetingRoom checkout(@PathVariable String firstname,@PathVariable String dateBookMeetingRoom, @PathVariable String roomname, @PathVariable String starttime
             , @PathVariable int hour, @PathVariable int minute) {
         String endtime2;
         System.out.println(starttime);
         System.out.println(hour+""+minute);
 
         if(hour == 8 && minute <= 30){
-            endtime2 = "08.30";
+            endtime2 = "08.00";
         }else if(hour == 8 && minute > 30){
-            endtime2 = "09.00";
+            endtime2 = "08.30";
         }else if(hour == 9 && minute <= 30){
-            endtime2 = "09.30";
+            endtime2 = "09.00";
         }else if(hour == 9 && minute > 30){
-            endtime2 = "10.00";
+            endtime2 = "09.30";
         }else if(hour == 10 && minute <= 30){
-            endtime2 = "10.30";
+            endtime2 = "10.00";
         }else if(hour == 10 && minute > 30){
-            endtime2 = "11.00";
+            endtime2 = "10.30";
         }else if(hour == 11 && minute <= 30){
-            endtime2 = "11.30";
+            endtime2 = "11.00";
         }else if(hour == 11 && minute > 30){
-            endtime2 = "12.00";
+            endtime2 = "11.30";
         }else if(hour == 12 && minute <= 30){
-            endtime2 = "12.30";
+            endtime2 = "12.00";
         }else if(hour == 12 && minute > 30){
-            endtime2 = "13.00";
+            endtime2 = "12.30";
         }else if(hour == 13 && minute <= 30){
-            endtime2 = "13.30";
+            endtime2 = "13.00";
         }else if(hour == 13 && minute > 30){
-            endtime2 = "14.00";
+            endtime2 = "13.30";
         }else if(hour == 14 && minute <= 30){
-            endtime2 = "14.30";
+            endtime2 = "14.00";
         }else if(hour == 14 && minute > 30){
-            endtime2 = "15.00";
+            endtime2 = "14.30";
         }else if(hour == 15 && minute <= 30){
-            endtime2 = "15.30";
+            endtime2 = "15.00";
         }else if(hour == 15 && minute > 30){
-            endtime2 = "16.00";
+            endtime2 = "15.30";
         }else if(hour == 16 && minute <= 30){
-            endtime2 = "16.30";
+            endtime2 = "16.00";
         }else{
-            endtime2 = "17.00";
+            endtime2 = "16.30";
         }
 
         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findByDateBookMeetingRoomAndRoomnameAndStarttimeAndIsActive(dateBookMeetingRoom,roomname,starttime,"1");
@@ -110,6 +131,13 @@ public class BookMeetingRoomController {
         int lengthh = convertLengthTime(starttime,endtime2);
         bookMeetingRoom.setLengthtime(lengthh);
         bookMeetingRoom.setEndtime(endtime2);
+        bookMeetingRoom.setStatusbooking("checkout");
+        Date date = new Date();
+        bookMeetingRoom.setUpdate_date(date);
+        bookMeetingRoom.setUpdate_by(firstname);
+        Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
+        report.setUpdate_date(date);
+        report.setUpdate_by(firstname);
         bookMeetingRoomRepository.save(bookMeetingRoom);
         return bookMeetingRoom;
     }
@@ -120,8 +148,8 @@ public class BookMeetingRoomController {
         return this.bookMeetingRoomRepository.getBookday(dateBookMeetingRoom,roomname,starttime,"1","booking");
     }
 
-    @PostMapping(path = "/Editbook/{dateBookMeetingRoom}/{roomname}/{starttime}/{newstarttime}/{endtime}/{atten}/{topic}/{remark}/{tel}")
-    public BookMeetingRoom bookMeetingRoom3(@PathVariable String dateBookMeetingRoom, @PathVariable String roomname, @PathVariable String starttime,
+    @PostMapping(path = "/Editbook/{firstname}/{dateBookMeetingRoom}/{roomname}/{starttime}/{newstarttime}/{endtime}/{atten}/{topic}/{remark}/{tel}")
+    public BookMeetingRoom bookMeetingRoom3(@PathVariable String firstname,@PathVariable String dateBookMeetingRoom, @PathVariable String roomname, @PathVariable String starttime,
    @PathVariable String newstarttime,@PathVariable String endtime,@PathVariable String atten,@PathVariable String topic,@PathVariable String remark,@PathVariable String tel ) {
         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findByDateBookMeetingRoomAndRoomnameAndStarttimeAndIsActive(dateBookMeetingRoom,roomname,starttime,"1");
         bookMeetingRoom.setStarttime(newstarttime);
@@ -130,9 +158,16 @@ public class BookMeetingRoomController {
         bookMeetingRoom.setTopic(topic);
         bookMeetingRoom.setRemark(remark);
         bookMeetingRoom.setTelbookingby(tel);
+        Date date = new Date();
+        bookMeetingRoom.setUpdate_by(firstname);
+        bookMeetingRoom.setUpdate_date(date);
         int length = convertLengthTime(newstarttime,endtime);
         bookMeetingRoom.setLengthtime(length);
         bookMeetingRoomRepository.save(bookMeetingRoom);
+        Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
+        report.setUpdate_date(date);
+        report.setUpdate_by(firstname);
+        reportRepository.save(report);
         return bookMeetingRoom;
     }
 
@@ -150,7 +185,7 @@ public class BookMeetingRoomController {
         bookMeetingRoom.setTopic(topic);
         bookMeetingRoom.setAttendees(atten);
         bookMeetingRoom.setRemark(remark);
-
+        Date date1 = new Date();
         int length = convertLengthTime(fromtime,totime);
 
         bookMeetingRoom.setLengthtime(length);
@@ -158,9 +193,12 @@ public class BookMeetingRoomController {
         bookMeetingRoom.setDateBookMeetingRoom(date);
         bookMeetingRoom.setIsActive("1");
         bookMeetingRoomRepository.save(bookMeetingRoom);
-        bookMeetingRoom.setStatusbooking("booking");
-        Users users = usersRepository.findByUsernameAndIsActive(userid,"1");
 
+        bookMeetingRoom.setStatusbooking("booking");
+        bookMeetingRoom.setCreate_date(date1);
+
+        Users users = usersRepository.findByUsernameAndIsActive(userid,"1");
+        bookMeetingRoom.setCreate_by(users.getFirstname());
 
         Report report = new Report();
         report.setBookMeetingRoom(bookMeetingRoom);
@@ -174,6 +212,8 @@ public class BookMeetingRoomController {
         Date date2=formatter2.parse(fullPatternyear);
         report.setDateBook(date2);
         report.setIsActive("1");
+        report.setCreate_by(users.getFirstname());
+        report.setCreate_date(date1);
         reportRepository.save(report);
 
         return bookMeetingRoom;

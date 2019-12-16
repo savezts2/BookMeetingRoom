@@ -15,7 +15,11 @@ import { EdituserbyadminComponent } from './edituserbyadmin/edituserbyadmin.comp
 import { DeleteuserbyadminComponent } from './deleteuserbyadmin/deleteuserbyadmin.component';
 import { EditordeletebookComponent } from './editordeletebook/editordeletebook.component';
 import { EditbookComponent } from './editbook/editbook.component';
+import { AddroombyadminComponent } from './addroombyadmin/addroombyadmin.component';
+import { HomeComponent } from './home/home.component';
+
 const routes: Routes = [
+    { path: '', component: HomeComponent },
     { path: 'selectRoom', component: SelectRoomComponent },
     { path: 'selectDate', component: BookMeetingRoom1Component },
     { path: 'data-form', component: DataFormComponent },
@@ -28,7 +32,8 @@ const routes: Routes = [
     { path: 'editordeletebook', component: EditordeletebookComponent },
 { path: 'editbook', component: EditbookComponent },
 { path: 'checkout', component: CheckoutComponent },
-    { path: '', redirectTo: '/selectDate', pathMatch: 'full' }
+{ path: 'addroom', component: AddroombyadminComponent }
+
 ];
 
 @NgModule({

@@ -66,10 +66,12 @@ tr:hover {background-color: #EEFF5A}
 
 .greentable{
   background-color: rgb(0, 176, 80);
+  text-align : center;
 }
 
 .yellowtable{
   background-color: rgb(255, 192, 0);
+
 }
 
 .whitetable{
@@ -113,11 +115,11 @@ h1.example-app-name {
   background-color: white;
   box-shadow: rgba(0,0,0,0.2);
   transition: 0.3s;
-  margin-top: 50px;
+  margin-top: 30px;
   margin-bottom: auto;
   margin-right: auto;
   margin-left: auto;
-  width : 90%;
+  width : 95%;
   height : auto;
   opacity: 0.9;
 }
@@ -156,3 +158,22 @@ h1.example-app-name {
   background-color: white;
   width : 20%;
 }
+
+
+div span.only-show-on-hover {
+    visibility: hidden;
+}
+div:hover span.only-show-on-hover  {
+    visibility: visible;
+}
+
+.tooltip {
+        border: 1px solid black;
+        width: 230px;
+        margin-left: 58px;
+        margin-top: -35px;
+        background-color: darkcyan;
+        border-radius: 4px;
+        height: 20px;
+        color: white;
+    }

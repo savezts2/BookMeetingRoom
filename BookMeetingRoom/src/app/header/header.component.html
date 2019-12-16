@@ -10,10 +10,7 @@
 
   <div class="botton">
 
-    <button mat-raised-button
-            *ngIf="!(isLoggedIn | async) && !(isLoggedInAdmin | async) && !(isLoggedInHR | async)"
-            (click)="authService.callDialog()">Login
-    </button>
+
     <button mat-raised-button
             *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)"
             (click)="authService.logout()">LogOut

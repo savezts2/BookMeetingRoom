@@ -45,6 +45,7 @@ timenum : number;
 totimenum : number;
 datetimenow : number;
 spiner : boolean = false;
+nameuser : string;
   constructor(public authService : AuthService , private router: Router , private service : ServiceService,public dialog: MatDialog,
   @Inject(MAT_DIALOG_DATA) public data: DialogData, public dialogRef: MatDialogRef<EditordeletebookComponent>, private http: HttpClient) {
       this.isLoggedIn = authService.isLoggedIn();
@@ -53,7 +54,7 @@ spiner : boolean = false;
   }
 
   ngOnInit() {
-
+    this.nameuser = localStorage.getItem('nameid');
   }
 
 checkin(){
@@ -90,7 +91,7 @@ checkin(){
 
 
   }else{
-     this.http.post(this.API + '/CheckIn/'+this.data.date+'/'+this.data.room+'/'+this.data.time,{})
+     this.http.post(this.API + '/CheckIn/'+this.nameuser+'/'+this.data.date+'/'+this.data.room+'/'+this.data.time,{})
                              .subscribe(
                                data => {
                                    console.log('PUT Request is successful');
@@ -109,7 +110,7 @@ checkin(){
 
 delete(){
   this.spiner = true;
-  this.http.post(this.API + '/CancelBooking/'+this.data.date+'/'+this.data.room+'/'+this.data.time,{})
+  this.http.post(this.API + '/CancelBooking/'+this.nameuser+'/'+this.data.date+'/'+this.data.room+'/'+this.data.time,{})
                              .subscribe(
                                data => {
                                    console.log('PUT Request is successful');
@@ -118,6 +119,8 @@ delete(){
                                },
                                error => {
                                    console.log('Error', error);
+                                    alert("Cancel Success!");
+                                  this.dialogRef.close();
                                }
                               );
 }

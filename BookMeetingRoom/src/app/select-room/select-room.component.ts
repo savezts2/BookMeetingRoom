@@ -79,7 +79,9 @@ ngOnDestroy() {
 }
 
 
-
+geeks(s){
+  console.log(s);
+}
   ngOnInit() {
 
 
@@ -564,6 +566,433 @@ ngOnDestroy() {
     }
 
 
+
+
+      ///////////////////////////////////////////////////////////////////
+      ///////////             checkout auto /////////////////////////////
+      ///////////////////////////////////////////////////////////////////
+
+
+
+
+      if(this.numberTime > 829 || new Date().getDate() > parseInt(this.day)){
+      for(let i = 0 ; i < this.report.length ; i++){
+          if(this.report[i].bookMeetingRoom.endtime == "08.30" && this.report[i].bookMeetingRoom.statusbooking == "checkin" && parseInt(this.day) == new Date().
+          getDate()){
+
+                this.http.post(this.API + '/Checkoutauto/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.starttime+'/'+
+                this.report[i].bookMeetingRoom.dateBookMeetingRoom,{})
+                               .subscribe(
+                                 data => {
+                                     console.log('PUT Request is successful');
+
+                                      window.location.reload(true);
+                                 },
+                                 error => {
+                                     console.log('Error', error);
+                                 }
+                                );
+
+
+          }
+      }
+
+    }
+if(this.numberTime > 899 || new Date().getDate() > parseInt(this.day)){
+      for(let i = 0 ; i < this.report.length ; i++){
+          if(this.report[i].bookMeetingRoom.endtime == "09.00" && this.report[i].bookMeetingRoom.statusbooking == "checkin" && parseInt(this.day) == new Date().
+          getDate()){
+
+                this.http.post(this.API + '/Checkoutauto/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.starttime+'/'+
+                this.report[i].bookMeetingRoom.dateBookMeetingRoom,{})
+                               .subscribe(
+                                 data => {
+                                     console.log('PUT Request is successful');
+
+                                    window.location.reload(true);
+                                 },
+                                 error => {
+                                     console.log('Error', error);
+                                 }
+                                );
+
+
+          }
+      }
+
+    }
+if(this.numberTime > 929 || new Date().getDate() > parseInt(this.day)){
+      for(let i = 0 ; i < this.report.length ; i++){
+          if(this.report[i].bookMeetingRoom.endtime == "9.30" && this.report[i].bookMeetingRoom.statusbooking == "checkin" && parseInt(this.day) == new Date().
+          getDate()){
+
+                this.http.post(this.API + '/Checkoutauto/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.starttime+'/'+
+                this.report[i].bookMeetingRoom.dateBookMeetingRoom,{})
+                               .subscribe(
+                                 data => {
+                                     console.log('PUT Request is successful');
+                                      window.location.reload(true);
+
+                                 },
+                                 error => {
+                                     console.log('Error', error);
+                                 }
+                                );
+
+
+          }
+      }
+
+    }
+if(this.numberTime > 999 || new Date().getDate() > parseInt(this.day)){
+      for(let i = 0 ; i < this.report.length ; i++){
+          if(this.report[i].bookMeetingRoom.endtime == "10.00" && this.report[i].bookMeetingRoom.statusbooking == "checkin" && parseInt(this.day) == new Date().
+          getDate()){
+
+                this.http.post(this.API + '/Checkoutauto/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.starttime+'/'+
+                this.report[i].bookMeetingRoom.dateBookMeetingRoom,{})
+                               .subscribe(
+                                 data => {
+                                     console.log('PUT Request is successful');
+                                    window.location.reload(true);
+
+                                 },
+                                 error => {
+                                     console.log('Error', error);
+                                 }
+                                );
+
+
+          }
+      }
+
+    }
+
+     if(this.numberTime > 1029 || new Date().getDate() > parseInt(this.day)){
+      for(let i = 0 ; i < this.report.length ; i++){
+          if(this.report[i].bookMeetingRoom.endtime == "10.30" && this.report[i].bookMeetingRoom.statusbooking == "checkin" && parseInt(this.day) == new Date().
+          getDate()){
+
+                this.http.post(this.API + '/Checkoutauto/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.starttime+'/'+
+                this.report[i].bookMeetingRoom.dateBookMeetingRoom,{})
+                               .subscribe(
+                                 data => {
+                                     console.log('PUT Request is successful');
+                                      window.location.reload(true);
+
+                                 },
+                                 error => {
+                                     console.log('Error', error);
+                                 }
+                                );
+
+
+          }
+      }
+
+    }
+    if(this.numberTime > 1099 || new Date().getDate() > parseInt(this.day)){
+      for(let i = 0 ; i < this.report.length ; i++){
+          if(this.report[i].bookMeetingRoom.endtime == "11.00" && this.report[i].bookMeetingRoom.statusbooking == "checkin" && parseInt(this.day) == new Date().
+          getDate()){
+
+                this.http.post(this.API + '/Checkoutauto/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.starttime+'/'+
+                this.report[i].bookMeetingRoom.dateBookMeetingRoom,{})
+                               .subscribe(
+                                 data => {
+                                     console.log('PUT Request is successful');
+
+                                    window.location.reload(true);
+                                 },
+                                 error => {
+                                     console.log('Error', error);
+                                 }
+                                );
+
+
+          }
+      }
+
+    }
+if(this.numberTime > 1129 || new Date().getDate() > parseInt(this.day)){
+      for(let i = 0 ; i < this.report.length ; i++){
+          if(this.report[i].bookMeetingRoom.endtime == "11.30" && this.report[i].bookMeetingRoom.statusbooking == "checkin" && parseInt(this.day) == new Date().
+          getDate()){
+
+                this.http.post(this.API + '/Checkoutauto/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.starttime+'/'+
+                this.report[i].bookMeetingRoom.dateBookMeetingRoom,{})
+                               .subscribe(
+                                 data => {
+                                     console.log('PUT Request is successful');
+
+                                      window.location.reload(true);
+                                 },
+                                 error => {
+                                     console.log('Error', error);
+                                 }
+                                );
+
+
+          }
+      }
+
+    }
+if(this.numberTime > 1199 || new Date().getDate() > parseInt(this.day)){
+      for(let i = 0 ; i < this.report.length ; i++){
+          if(this.report[i].bookMeetingRoom.endtime == "12.00" && this.report[i].bookMeetingRoom.statusbooking == "checkin" && parseInt(this.day) == new Date().
+          getDate()){
+
+                this.http.post(this.API + '/Checkoutauto/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.starttime+'/'+
+                this.report[i].bookMeetingRoom.dateBookMeetingRoom,{})
+                               .subscribe(
+                                 data => {
+                                     console.log('PUT Request is successful');
+
+                                    window.location.reload(true);
+                                 },
+                                 error => {
+                                     console.log('Error', error);
+                                 }
+                                );
+
+
+          }
+      }
+
+    }
+if(this.numberTime > 1229 || new Date().getDate() > parseInt(this.day)){
+      for(let i = 0 ; i < this.report.length ; i++){
+          if(this.report[i].bookMeetingRoom.endtime == "12.30" && this.report[i].bookMeetingRoom.statusbooking == "checkin" && parseInt(this.day) == new Date().
+          getDate()){
+
+                this.http.post(this.API + '/Checkoutauto/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.starttime+'/'+
+                this.report[i].bookMeetingRoom.dateBookMeetingRoom,{})
+                               .subscribe(
+                                 data => {
+                                     console.log('PUT Request is successful');
+
+window.location.reload(true);
+                                 },
+                                 error => {
+                                     console.log('Error', error);
+                                 }
+                                );
+
+
+          }
+      }
+
+    }
+if(this.numberTime > 829 || new Date().getDate() > parseInt(this.day)){
+      for(let i = 1299 ; i < this.report.length ; i++){
+          if(this.report[i].bookMeetingRoom.endtime == "13.00" && this.report[i].bookMeetingRoom.statusbooking == "checkin" && parseInt(this.day) == new Date().
+          getDate()){
+
+                this.http.post(this.API + '/Checkoutauto/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.starttime+'/'+
+                this.report[i].bookMeetingRoom.dateBookMeetingRoom,{})
+                               .subscribe(
+                                 data => {
+                                     console.log('PUT Request is successful');
+
+window.location.reload(true);
+                                 },
+                                 error => {
+                                     console.log('Error', error);
+                                 }
+                                );
+
+
+          }
+      }
+
+    }
+if(this.numberTime > 1329 || new Date().getDate() > parseInt(this.day)){
+      for(let i = 0 ; i < this.report.length ; i++){
+          if(this.report[i].bookMeetingRoom.endtime == "13.30" && this.report[i].bookMeetingRoom.statusbooking == "checkin" && parseInt(this.day) == new Date().
+          getDate()){
+
+                this.http.post(this.API + '/Checkoutauto/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.starttime+'/'+
+                this.report[i].bookMeetingRoom.dateBookMeetingRoom,{})
+                               .subscribe(
+                                 data => {
+                                     console.log('PUT Request is successful');
+window.location.reload(true);
+
+                                 },
+                                 error => {
+                                     console.log('Error', error);
+                                 }
+                                );
+
+
+          }
+      }
+
+    }
+if(this.numberTime > 1399 || new Date().getDate() > parseInt(this.day)){
+      for(let i = 0 ; i < this.report.length ; i++){
+          if(this.report[i].bookMeetingRoom.endtime == "14.00" && this.report[i].bookMeetingRoom.statusbooking == "checkin" && parseInt(this.day) == new Date().
+          getDate()){
+
+                this.http.post(this.API + '/Checkoutauto/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.starttime+'/'+
+                this.report[i].bookMeetingRoom.dateBookMeetingRoom,{})
+                               .subscribe(
+                                 data => {
+                                     console.log('PUT Request is successful');
+window.location.reload(true);
+
+                                 },
+                                 error => {
+                                     console.log('Error', error);
+                                 }
+                                );
+
+
+          }
+      }
+
+    }
+if(this.numberTime > 1429 || new Date().getDate() > parseInt(this.day)){
+      for(let i = 0 ; i < this.report.length ; i++){
+          if(this.report[i].bookMeetingRoom.endtime == "14.30" && this.report[i].bookMeetingRoom.statusbooking == "checkin" && parseInt(this.day) == new Date().
+          getDate()){
+
+                this.http.post(this.API + '/Checkoutauto/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.starttime+'/'+
+                this.report[i].bookMeetingRoom.dateBookMeetingRoom,{})
+                               .subscribe(
+                                 data => {
+                                     console.log('PUT Request is successful');
+window.location.reload(true);
+
+                                 },
+                                 error => {
+                                     console.log('Error', error);
+                                 }
+                                );
+
+
+          }
+      }
+
+    }
+if(this.numberTime > 1499 || new Date().getDate() > parseInt(this.day)){
+      for(let i = 0 ; i < this.report.length ; i++){
+          if(this.report[i].bookMeetingRoom.endtime == "15.00" && this.report[i].bookMeetingRoom.statusbooking == "checkin" && parseInt(this.day) == new Date().
+          getDate()){
+
+                this.http.post(this.API + '/Checkoutauto/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.starttime+'/'+
+                this.report[i].bookMeetingRoom.dateBookMeetingRoom,{})
+                               .subscribe(
+                                 data => {
+                                     console.log('PUT Request is successful');
+window.location.reload(true);
+
+                                 },
+                                 error => {
+                                     console.log('Error', error);
+                                 }
+                                );
+
+
+          }
+      }
+
+    }
+if(this.numberTime > 1529 || new Date().getDate() > parseInt(this.day)){
+      for(let i = 0 ; i < this.report.length ; i++){
+          if(this.report[i].bookMeetingRoom.endtime == "15.30" && this.report[i].bookMeetingRoom.statusbooking == "checkin" && parseInt(this.day) == new Date().
+          getDate()){
+
+                this.http.post(this.API + '/Checkoutauto/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.starttime+'/'+
+                this.report[i].bookMeetingRoom.dateBookMeetingRoom,{})
+                               .subscribe(
+                                 data => {
+                                     console.log('PUT Request is successful');
+window.location.reload(true);
+
+                                 },
+                                 error => {
+                                     console.log('Error', error);
+                                 }
+                                );
+
+
+          }
+      }
+
+    }
+if(this.numberTime > 1599 || new Date().getDate() > parseInt(this.day)){
+      for(let i = 0 ; i < this.report.length ; i++){
+          if(this.report[i].bookMeetingRoom.endtime == "16.00" && this.report[i].bookMeetingRoom.statusbooking == "checkin" && parseInt(this.day) == new Date().
+          getDate()){
+
+                this.http.post(this.API + '/Checkoutauto/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.starttime+'/'+
+                this.report[i].bookMeetingRoom.dateBookMeetingRoom,{})
+                               .subscribe(
+                                 data => {
+                                     console.log('PUT Request is successful');
+window.location.reload(true);
+
+                                 },
+                                 error => {
+                                     console.log('Error', error);
+                                 }
+                                );
+
+
+          }
+      }
+
+    }
+if(this.numberTime > 1629 || new Date().getDate() > parseInt(this.day)){
+      for(let i = 0 ; i < this.report.length ; i++){
+          if(this.report[i].bookMeetingRoom.endtime == "16.30" && this.report[i].bookMeetingRoom.statusbooking == "checkin" && parseInt(this.day) == new Date().
+          getDate()){
+
+                this.http.post(this.API + '/Checkoutauto/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.starttime+'/'+
+                this.report[i].bookMeetingRoom.dateBookMeetingRoom,{})
+                               .subscribe(
+                                 data => {
+                                     console.log('PUT Request is successful');
+window.location.reload(true);
+
+                                 },
+                                 error => {
+                                     console.log('Error', error);
+                                 }
+                                );
+
+
+          }
+      }
+
+    }
+if(this.numberTime > 1699 || new Date().getDate() > parseInt(this.day)){
+      for(let i = 0 ; i < this.report.length ; i++){
+          if(this.report[i].bookMeetingRoom.endtime == "17.00" && this.report[i].bookMeetingRoom.statusbooking == "checkin" && parseInt(this.day) == new Date().
+          getDate()){
+
+                this.http.post(this.API + '/Checkoutauto/'+this.report[i].bookMeetingRoom.roomname+'/'+this.report[i].bookMeetingRoom.starttime+'/'+
+                this.report[i].bookMeetingRoom.dateBookMeetingRoom,{})
+                               .subscribe(
+                                 data => {
+                                     console.log('PUT Request is successful');
+window.location.reload(true);
+
+                                 },
+                                 error => {
+                                     console.log('Error', error);
+                                 }
+                                );
+
+
+          }
+      }
+
+    }
+
+
+
   }, 2500); //interval
 
 
@@ -640,6 +1069,8 @@ public appendTime(){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events[j][k][3] = '#3366FF' ;
                     }else{
                         this.events[j][k][3] = '#FF3333' ;
                     }
@@ -680,6 +1111,8 @@ public appendTime(){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events[j][k][3] = '#3366FF' ;
                     }else{
                         this.events[j][k][3] = '#FF3333' ;
                     }
@@ -719,6 +1152,8 @@ public appendTime(){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events[j][k][3] = '#3366FF' ;
                     }else{
                         this.events[j][k][3] = '#FF3333' ;
                     }
@@ -758,6 +1193,8 @@ public appendTime(){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events[j][k][3] = '#3366FF' ;
                     }else{
                         this.events[j][k][3] = '#FF3333' ;
                     }
@@ -797,6 +1234,8 @@ public appendTime(){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events[j][k][3] = '#3366FF' ;
                     }else{
                         this.events[j][k][3] = '#FF3333' ;
                     }
@@ -836,6 +1275,8 @@ public appendTime(){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events[j][k][3] = '#3366FF' ;
                     }else{
                         this.events[j][k][3] = '#FF3333' ;
                     }
@@ -875,6 +1316,8 @@ public appendTime(){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events[j][k][3] = '#3366FF' ;
                     }else{
                         this.events[j][k][3] = '#FF3333' ;
                     }
@@ -914,6 +1357,8 @@ public appendTime(){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events[j][k][3] = '#3366FF' ;
                     }else{
                         this.events[j][k][3] = '#FF3333' ;
                     }
@@ -953,6 +1398,8 @@ public appendTime(){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events[j][k][3] = '#3366FF' ;
                     }else{
                         this.events[j][k][3] = '#FF3333' ;
                     }
@@ -992,6 +1439,8 @@ public appendTime(){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events[j][k][3] = '#3366FF' ;
                     }else{
                         this.events[j][k][3] = '#FF3333' ;
                     }
@@ -1031,6 +1480,8 @@ public appendTime(){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events[j][k][3] = '#3366FF' ;
                     }else{
                         this.events[j][k][3] = '#FF3333' ;
                     }
@@ -1070,6 +1521,8 @@ public appendTime(){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events[j][k][3] = '#3366FF' ;
                     }else{
                         this.events[j][k][3] = '#FF3333' ;
                     }
@@ -1109,6 +1562,8 @@ public appendTime(){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events[j][k][3] = '#3366FF' ;
                     }else{
                         this.events[j][k][3] = '#FF3333' ;
                     }
@@ -1148,6 +1603,8 @@ public appendTime(){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events[j][k][3] = '#3366FF' ;
                     }else{
                         this.events[j][k][3] = '#FF3333' ;
                     }
@@ -1187,6 +1644,8 @@ public appendTime(){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events[j][k][3] = '#3366FF' ;
                     }else{
                         this.events[j][k][3] = '#FF3333' ;
                     }
@@ -1226,6 +1685,8 @@ public appendTime(){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events[j][k][3] = '#3366FF' ;
                     }else{
                         this.events[j][k][3] = '#FF3333' ;
                     }
@@ -1265,6 +1726,8 @@ public appendTime(){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events[j][k][3] = '#3366FF' ;
                     }else{
                         this.events[j][k][3] = '#FF3333' ;
                     }
@@ -1304,6 +1767,8 @@ public appendTime(){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events[j][k][3] = '#3366FF' ;
                     }else{
                         this.events[j][k][3] = '#FF3333' ;
                     }
@@ -1343,6 +1808,8 @@ public appendTime(){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events[j][k][3] = '#3366FF' ;
                     }else{
                         this.events[j][k][3] = '#FF3333' ;
                     }
@@ -1451,7 +1918,7 @@ dateShow(datefull){
 
 
        this.service.getBookMeetingRoom(this.datefull.datefull,room,time).subscribe(data=>{
-              console.log(data);
+           //   console.log(data);
               if(data != null){
 
                     if(parseInt(this.time4) > parseInt(this.time2) && new Date().getDate().toString() == this.day){

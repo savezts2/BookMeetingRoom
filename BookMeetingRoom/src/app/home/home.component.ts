@@ -9,29 +9,38 @@ import { Router } from '@angular/router';
 
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class HomeComponent implements OnInit {
 
 isLoggedIn : Observable<boolean>;
 isLoggedInAdmin : Observable<boolean>;
 isLoggedInHR : Observable<boolean>;
-nameuser: String;
-
+username : string = '' ;
+password : string = '' ;
   constructor(public authService : AuthService, private route:ActivatedRoute, private service : ServiceService,private http: HttpClient,
 private router: Router) {
      this.isLoggedIn = authService.isLoggedIn();
     this.isLoggedInAdmin = authService.isLoggedInAdmin();
     this.isLoggedInHR = authService.isLoggedInHR();
-
-    this.nameuser = localStorage.getItem('nameid');
-
-
 }
 
   ngOnInit() {
   }
+
+login(){
+  if(this.username == '' || this.password == ''){
+    alert("please check your field");
+  }else{
+    this.authService.login(this.username,this.password);
+  }
+}
+
+reset(){
+  this.username = '';
+  this.password = '';
+}
 
 }

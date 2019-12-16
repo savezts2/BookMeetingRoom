@@ -38,45 +38,44 @@
 
       <h2 style="margin-left:5%;">Date: {{dateshow}}</h2>
 
-
       <table border="1" align="center" bordercolor=black bgcolor="black">
 
 
-        <tr height="50" class="greentable">
-          <th colspan="20">Booking Meeting Room</th>
+        <tr height="50" class="greentable" >
+          <th colspan="20" style="text-align:center; color:black; vertical-align: middle;">Booking Meeting Room</th>
         </tr>
 
 
         <tr class="yellowtable">
-          <th rowspan="2" height="50"> Meeting Room</th>
-          <th colspan="19">Time</th>
+          <th rowspan="2" height="50" style="text-align:center; color:black; vertical-align: middle;"> Meeting Room</th>
+          <th colspan="19" style="text-align:center; color:black; vertical-align: middle;">Time</th>
         </tr>
 
-        <tr class="yellowtable">
-          <th>08.00</th>
-          <th>08.30</th>
-          <th>09.00</th>
-          <th>09.30</th>
-          <th>10.00</th>
-          <th>10.30</th>
-          <th>11.00</th>
-          <th>11.30</th>
-          <th>12.00</th>
-          <th>12.30</th>
-          <th>13.00</th>
-          <th>13.30</th>
-          <th>14.00</th>
-          <th>14.30</th>
-          <th>15.00</th>
-          <th>15.30</th>
-          <th>16.00</th>
-          <th>16.30</th>
-          <th>17.00</th>
+        <tr class="yellowtable" >
+          <th style="text-align:center; color:black; vertical-align: middle;">08.00</th>
+          <th style="text-align:center; color:black; vertical-align: middle;">08.30</th>
+          <th style="text-align:center; color:black; vertical-align: middle;">09.00</th>
+          <th style="text-align:center; color:black; vertical-align: middle;">09.30</th>
+          <th style="text-align:center; color:black; vertical-align: middle;">10.00</th>
+          <th style="text-align:center; color:black; vertical-align: middle;">10.30</th>
+          <th style="text-align:center; color:black; vertical-align: middle;">11.00</th>
+          <th style="text-align:center; color:black; vertical-align: middle;">11.30</th>
+          <th style="text-align:center; color:black; vertical-align: middle;">12.00</th>
+          <th style="text-align:center; color:black; vertical-align: middle;">12.30</th>
+          <th style="text-align:center; color:black; vertical-align: middle;">13.00</th>
+          <th style="text-align:center; color:black; vertical-align: middle;">13.30</th>
+          <th style="text-align:center; color:black; vertical-align: middle;">14.00</th>
+          <th style="text-align:center; color:black; vertical-align: middle;">14.30</th>
+          <th style="text-align:center; color:black; vertical-align: middle;">15.00</th>
+          <th style="text-align:center; color:black; vertical-align: middle;">15.30</th>
+          <th style="text-align:center; color:black; vertical-align: middle;">16.00</th>
+          <th style="text-align:center; color:black; vertical-align: middle;">16.30</th>
+          <th style="text-align:center; color:black; vertical-align: middle;">17.00</th>
         </tr>
 
         <tr class="whitetable" *ngFor="let event of events; let i = index">
 
-          <th>
+          <th style="text-align:center; color:black; vertical-align: middle;">
             {{event[i][4]}}
           </th>
 
@@ -86,10 +85,13 @@
 
               (click)="cell[11] ? Reserved(cell[4],cell[1],cell[12],cell[7],cell[8],cell[9],cell[13],cell[14]) :
               cell[0] == 18 ? 1 :selectTable(cell[4],cell[1])"
+              style="text-align:center; color:black; vertical-align: middle;"
+
           >
 
             <div *ngIf="cell[5]">
               <font color="black">
+
                 Booking by: {{cell[6]}}<br>
                 Attendees: {{cell[7]}}<br>
                 Topic: {{cell[8]}}<br>
@@ -123,7 +125,6 @@
 
 
 </body>
-
 
 </html>
 

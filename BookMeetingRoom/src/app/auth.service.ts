@@ -61,26 +61,29 @@ isLoggedInHR() : Observable<boolean> {
                       this.isLoginAdmin.next(true);
                       localStorage.setItem('userid', data.username);
                       localStorage.setItem('nameid', data.firstname);
-                      window.location.reload(true);
+
                       localStorage.removeItem('tokenid');
                       localStorage.removeItem('tokenidhr');
                       this.isLoginSubject.next(false);
                       this.isLoginHR.next(false);
-
+                      this.router.navigate(['selectDate']);
                       console.log("admin");
-
+                      window.location.href='#/selectDate';
+                      window.location.reload()
                   }else if(data.status == "HR"){
                       alert("Login Success !");
                       localStorage.setItem('tokenidhr', 'JWT');
                       this.isLoginHR.next(true);
                       localStorage.setItem('userid', data.username);
                       localStorage.setItem('nameid', data.firstname);
-                      window.location.reload(true);
+
                       localStorage.removeItem('tokenid');
                       localStorage.removeItem('tokenidadmin');
                       this.isLoginSubject.next(false);
                       this.isLoginAdmin.next(false);
-                      console.log("HR");
+                      console.log("HR");this.router.navigate(['selectDate']);
+                      window.location.href='#/selectDate';
+                      window.location.reload()
                   }
                   else{
                     alert("Login Success !");
@@ -88,17 +91,20 @@ isLoggedInHR() : Observable<boolean> {
                      this.isLoginSubject.next(true);
                      localStorage.setItem('userid', data.username);
                      localStorage.setItem('nameid', data.firstname);
-                     window.location.reload(true);
+
                       localStorage.removeItem('tokenidadmin');
                       localStorage.removeItem('tokenidhr');
                       this.isLoginHR.next(false);
                       this.isLoginAdmin.next(false);
-                     console.log("user");
+                     console.log("user");this.router.navigate(['selectDate']);
+                    window.location.href='#/selectDate';
+                      window.location.reload()
                   }
                   }
               }
               else{
                 alert("id/password incorrect !");
+                window.location.reload()
               }
        })
 
@@ -118,7 +124,7 @@ isLoggedInHR() : Observable<boolean> {
    * Log out the user then tell all the subscribers about the new status
    */
   logout() : void {
-    this.router.navigate(['selectDate']);
+    this.router.navigate(['']);
     this.isLoginSubject.next(false);
     this.isLoginHR.next(false);
     this.isLoginAdmin.next(false);

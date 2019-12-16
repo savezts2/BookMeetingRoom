@@ -51,7 +51,7 @@ in : any ;
                 this.roomnameandtime = prams;
                 this.roomname =this.roomnameandtime.roomname;
                 this.date = this.roomnameandtime.date;
-                console.log(this.roomnameandtime);
+            //    console.log(this.roomnameandtime);
               })
     this.fromtimeSelect = this.roomnameandtime.roomtime;
     this.userid3 = localStorage.getItem('userid');
@@ -76,7 +76,7 @@ in : any ;
 
      this.service.getRoomname().subscribe(data => {
                                  this.roomnames = data;
-                                console.log(this.roomnames);
+                               // console.log(this.roomnames);
                                 this.appendRoomname();
                                });
 
@@ -924,7 +924,7 @@ public appendTime(){
       } //if active
   } //for report
 
-  //console.log(this.events);
+ // console.log(this.events);
 
 } // appendtime
 
@@ -937,8 +937,9 @@ SubmitData(){
          this.secondFormGroup.get('topic').value == null || this.secondFormGroup.get('topic').value == '' ||
          this.secondFormGroup.get('atten').value == null || this.secondFormGroup.get('atten').value == ''){
           alert("Please Check your field");
-      }else if(false){
-
+      }else if(this.checkReserved (this.fromtimeSelect , this.firstFormGroup.get('totime').value , this.roomname)){
+            alert("Cannot book this time period");
+            this.router.navigate(['selectRoom',{datefull : this.date}]);
       }
       else{
 
@@ -981,16 +982,34 @@ SubmitData(){
                 }
             }
 
-
-
-
-
       }
 
    }
 
 
+checkReserved (fromtime: String , totime: String , roomname:String){
+    this.fromtimesplited = fromtime.split(".");
+    this.totimesplited = totime.split(".");
 
+    this.countTime = this.convertlengthTime(this.fromtimesplited[0],this.fromtimesplited[1],this.totimesplited[0],this.totimesplited[1]);
+
+    for(let i = 0 ; i < this.roomnames.length ; i++){
+      if(this.roomnames[i].roomnames == roomname){
+        for(let j = 0 ; j < this.events[i].length ; j++){
+            if(this.events[i][j][1] == fromtime){
+              for(let k = j + 1 ; k <  this.countTime + j ; k++){
+                  if(this.events[i][k][11] == true){
+                      return true;
+                      break;
+                  }
+              }
+            }
+        }
+        return false;
+      }
+    }
+
+}
 
 
 convertlengthTime(from , fromback , to , toback){

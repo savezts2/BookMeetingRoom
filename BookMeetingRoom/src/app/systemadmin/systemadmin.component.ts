@@ -32,6 +32,7 @@ isactive: string;
   styleUrls: ['./systemadmin.component.css']
 })
 export class SystemadminComponent implements OnInit {
+
 @ViewChild('sidenav', {static: false}) sidenav: MatSidenav;
 
 displayedColumns: string[] = ['username','firstname', 'lastname','department','position','status','edit','delete'];
@@ -42,6 +43,7 @@ isLoggedInHR : Observable<boolean>;
 users : Array<any>;
 
 dataSource = new MatTableDataSource<PeriodicElement>(this.users);
+@ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
 
 applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase();
@@ -54,13 +56,12 @@ applyFilter(filterValue: string) {
    }
 
   ngOnInit() {
-
+  this.dataSource.paginator = this.paginator;
   this.service.getUsers().subscribe(data => {
         this.users = data;
         this.dataSource.data = data;
 
       });
-
 
   }
 

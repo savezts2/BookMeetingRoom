@@ -32,11 +32,12 @@ tel : String;
 export class CheckoutComponent implements OnInit {
 public API = '//localhost:8080/';   //for test
 //public API = 'http://192.168.1.56:8080/BookMeetingRoom';  //for build
+nameuser : string;
   constructor(public authService : AuthService , private router: Router , private service : ServiceService,public dialog: MatDialog,
   @Inject(MAT_DIALOG_DATA) public data: DialogData, public dialogRef: MatDialogRef<CheckoutComponent>, private http: HttpClient) { }
 
   ngOnInit() {
-
+     this.nameuser = localStorage.getItem('nameid');
   }
 
 closed(){
@@ -45,12 +46,12 @@ closed(){
 
 checkOut(){
 
-   this.http.post(this.API + '/Checkout/'+this.data.date+'/'+this.data.room+'/'+this.data.time+'/'+new Date().getHours()+'/'+new Date().getMinutes(),{})
+   this.http.post(this.API + '/Checkout/'+ this.nameuser+'/'+this.data.date+'/'+this.data.room+'/'+this.data.time+'/'+new Date().getHours()+'/'+new Date().getMinutes(),{})
                              .subscribe(
                                data => {
                                    console.log('PUT Request is successful');
                                    alert("Checkout Success!");
-                                   window.location.reload(true);
+
                                },
                                error => {
                                    console.log('Error', error);
