@@ -16,12 +16,12 @@ import { DeleteuserbyadminComponent } from './deleteuserbyadmin/deleteuserbyadmi
 import { EditordeletebookComponent } from './editordeletebook/editordeletebook.component';
 import { EditbookComponent } from './editbook/editbook.component';
 import { AddroombyadminComponent } from './addroombyadmin/addroombyadmin.component';
-import { HomeComponent } from './home/home.component';
-
+import { EditroomnameComponent } from './editroomname/editroomname.component';
+import { DeleteroomComponent } from './deleteroom/deleteroom.component';
 const routes: Routes = [
-    { path: '', component: HomeComponent },
+
     { path: 'selectRoom', component: SelectRoomComponent },
-    { path: 'selectDate', component: BookMeetingRoom1Component },
+    { path: '', component: BookMeetingRoom1Component },
     { path: 'data-form', component: DataFormComponent },
     { path: 'dashboard', component: DashboardComponent },
     { path: 'dashboardTable', component: DashboardtableComponent },
@@ -32,6 +32,8 @@ const routes: Routes = [
     { path: 'editordeletebook', component: EditordeletebookComponent },
 { path: 'editbook', component: EditbookComponent },
 { path: 'checkout', component: CheckoutComponent },
+{ path: 'editroomname', component: EditroomnameComponent },
+{ path: 'deleteroom', component: DeleteroomComponent },
 { path: 'addroom', component: AddroombyadminComponent }
 
 ];

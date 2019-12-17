@@ -68,7 +68,7 @@ isLoggedInHR() : Observable<boolean> {
                       this.isLoginHR.next(false);
                       this.router.navigate(['selectDate']);
                       console.log("admin");
-                      window.location.href='#/selectDate';
+                      window.location.href='#/';
                       window.location.reload()
                   }else if(data.status == "HR"){
                       alert("Login Success !");
@@ -82,7 +82,7 @@ isLoggedInHR() : Observable<boolean> {
                       this.isLoginSubject.next(false);
                       this.isLoginAdmin.next(false);
                       console.log("HR");this.router.navigate(['selectDate']);
-                      window.location.href='#/selectDate';
+                      window.location.href='#/';
                       window.location.reload()
                   }
                   else{
@@ -97,7 +97,7 @@ isLoggedInHR() : Observable<boolean> {
                       this.isLoginHR.next(false);
                       this.isLoginAdmin.next(false);
                      console.log("user");this.router.navigate(['selectDate']);
-                    window.location.href='#/selectDate';
+                    window.location.href='#/';
                       window.location.reload()
                   }
                   }

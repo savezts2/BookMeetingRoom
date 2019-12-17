@@ -9,6 +9,8 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog
 import {MatSidenav} from '@angular/material/sidenav';
 import {EditordeletebookComponent} from '../editordeletebook/editordeletebook.component'
 import {CheckoutComponent} from '../checkout/checkout.component'
+import {TooltipPosition} from '@angular/material/tooltip';
+import {FormControl} from '@angular/forms';
 export interface DialogData {
 room: string;
 time: string;
@@ -23,6 +25,9 @@ date: String;
 })
 export class SelectRoomComponent implements OnInit {
 @ViewChild('sidenav', {static: false}) sidenav: MatSidenav;
+
+positionOptions: TooltipPosition[] = ['after', 'before', 'above', 'below', 'left', 'right'];
+position = new FormControl(this.positionOptions[2]);
     isLoggedIn : Observable<boolean>;
     isLoggedInAdmin : Observable<boolean>;
     isLoggedInHR : Observable<boolean>;
@@ -31,6 +36,9 @@ export class SelectRoomComponent implements OnInit {
     roomnames : any[] = [];
     starttime : Array<any> = [];
     counting: number ;
+
+    showDelay = 0;
+    hideDelay = 10000;
 
 CurrentTime: any;
 days: any ;
@@ -46,8 +54,11 @@ year : string;
 numberTime : number = 0 ;
 events: any[] = [];
     datefull :any={}
+ now = new Date();
+dt1 : any;
+dt2 : any;
     public API = '//localhost:8080';  //for test
-//public API = 'http://192.168.1.56:8080/BookMeetingRoom';  //for build
+//public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
 
 dateshow : String;
 
@@ -79,9 +90,7 @@ ngOnDestroy() {
 }
 
 
-geeks(s){
-  console.log(s);
-}
+
   ngOnInit() {
 
 
@@ -99,21 +108,21 @@ geeks(s){
 
                 })
 
-    this.in =  setInterval(() => {
+
     this.service.findDate(this.datefull.datefull).subscribe(data=>{
     this.report = data;
 
-
-    this.events = [];
-    this.appendRoomname();
+    setTimeout(() => {
      this.appendTime();
+       }, 1000); //interval
     //console.log(data);
 
     })
 
-    }, 500); //interval
 
-
+    setTimeout(() => {
+    window.location.reload();
+    }, 60000); //interval
     this.dateshow = this.dateShow(this.datefull.datefull);
 
 
@@ -1327,6 +1336,7 @@ public appendTime(){
                   this.events[j][k][7] = this.report[i].bookMeetingRoom.attendees ;
                   this.events[j][k][14] = this.report[i].bookMeetingRoom.telbookingby ;
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
+                  console.log(this.events[j][k][8].length);
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
                   this.events[j][k][12] = this.report[i].users.username;
@@ -1345,6 +1355,7 @@ public appendTime(){
                    }
                 }
               }
+
             }
             if(this.report[i].bookMeetingRoom.roomname == this.roomnames[j].roomnames && this.report[i].bookMeetingRoom.starttime == '11.30'){
 
@@ -1921,7 +1932,7 @@ dateShow(datefull){
            //   console.log(data);
               if(data != null){
 
-                    if(parseInt(this.time4) > parseInt(this.time2) && new Date().getDate().toString() == this.day){
+                    if(parseInt(this.time4) >= parseInt(this.time2) && new Date().getDate().toString() == this.day){
                           alert("This time has passed");
                     }else{
 
@@ -1948,7 +1959,7 @@ dateShow(datefull){
                 }
               }else{
                   if(localStorage.getItem('tokenidadmin') == "JWT" || localStorage.getItem('tokenidhr') == "JWT"){
-                       if(parseInt(this.time4) > parseInt(this.time2) && new Date().getDate().toString() == this.day){
+                       if(parseInt(this.time4) >= parseInt(this.time2) && new Date().getDate().toString() == this.day){
                           alert("This time has passed");
                          }else{
                                      const dialogRef = this.dialog.open(CheckoutComponent, {

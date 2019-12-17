@@ -51,10 +51,11 @@ checkOut(){
                                data => {
                                    console.log('PUT Request is successful');
                                    alert("Checkout Success!");
-
+                                    window.location.reload();
                                },
                                error => {
                                    console.log('Error', error);
+                                    window.location.reload();
                                }
                               );
 }

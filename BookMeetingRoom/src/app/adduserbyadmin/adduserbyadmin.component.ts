@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+  import { Component, OnInit } from '@angular/core';
 import { BehaviorSubject } from 'rxjs/Rx';
 import { AuthService } from '../auth.service';
 import { Observable } from "rxjs";
@@ -31,7 +31,7 @@ departments : Array<any>;
 positions : Array<any>;
 roles : Array<any>;
 public API = '//localhost:8080';   //for test
-//public API = 'http://192.168.1.56:8080/BookMeetingRoom';  //for build
+//public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
 firstFormGroup: FormGroup;
 
 constructor( public authService : AuthService,private router: Router , private service : ServiceService, private http: HttpClient,private  _formBuilder: FormBuilder) {

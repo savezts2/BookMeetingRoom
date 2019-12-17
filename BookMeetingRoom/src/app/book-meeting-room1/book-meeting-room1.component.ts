@@ -31,9 +31,11 @@ export class BookMeetingRoom1Component implements OnInit {
     isLoggedIn : Observable<boolean>;
     isLoggedInAdmin : Observable<boolean>;
     isLoggedInHR : Observable<boolean>;
+username : string = '' ;
+password : string = '' ;
 
 
-    isLoginSubject = new BehaviorSubject<boolean>(false);
+isLoginSubject = new BehaviorSubject<boolean>(false);
     isLoginSubjectAdmin = new BehaviorSubject<boolean>(false);
     isLoginSubjectHR = new BehaviorSubject<boolean>(false);
 
@@ -132,6 +134,19 @@ if(this.splitted.length == 1){
 }
 
 
+}
+
+login(){
+  if(this.username == '' || this.password == ''){
+    alert("please check your field");
+  }else{
+    this.authService.login(this.username,this.password);
+  }
+}
+
+reset(){
+  this.username = '';
+  this.password = '';
 }
 
 

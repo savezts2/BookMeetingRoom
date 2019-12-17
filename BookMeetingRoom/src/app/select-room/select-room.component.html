@@ -7,7 +7,7 @@
 <mat-sidenav-container *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)"
                        class="card" (backdropClick)="close()">
   <mat-sidenav #sidenav (keydown.escape)="close()" class="sidenavs">
-    <button mat-button (click)="close()" routerLink="/selectDate" class="botton">Book MeetingRoom</button><br>
+    <button mat-button (click)="close()" routerLink="/" class="botton">Book MeetingRoom</button><br>
     <button mat-button (click)="close()" routerLink="/dashboard" class="botton">Dashboard</button>
 
     <mat-accordion *ngIf="(isLoggedInAdmin | async)">
@@ -20,7 +20,7 @@
         </mat-expansion-panel-header>
 
         <button mat-button (click)="close()" routerLink="/systemadmin" class="botton">System Admin</button>
-
+        <button mat-button (click)="close()" routerLink="/addroom" class="botton">Add MeetingRoom</button>
       </mat-expansion-panel>
 
     </mat-accordion>
@@ -36,7 +36,7 @@
     <div *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)">
 
 
-      <h2 style="margin-left:5%;">Date: {{dateshow}}</h2>
+      <h2 style="margin-left:5%;" >Date: {{dateshow}}</h2>
 
       <table border="1" align="center" bordercolor=black bgcolor="black">
 
@@ -86,6 +86,17 @@
               (click)="cell[11] ? Reserved(cell[4],cell[1],cell[12],cell[7],cell[8],cell[9],cell[13],cell[14]) :
               cell[0] == 18 ? 1 :selectTable(cell[4],cell[1])"
               style="text-align:center; color:black; vertical-align: middle;"
+              matTooltipClass="custom-tooltip-blue"
+              [matTooltip]="cell[11] ?
+                           'Booking by: ' + cell[6]+
+                           '\nAttendees: ' +cell[7]+
+                           '\nTopic: ' +cell[8] +
+                           '\nTel: ' + cell[14]+'\n'+
+                            (cell[3] == '#3366FF' ? 'Checkout' : '' )+
+                            (cell[3] == '#C0C0C0' ? 'Booking On Time' : '' )+
+                            (cell[3] == '#A0FF7D' ? 'Checkin' : '' )+
+                            (cell[3] == '#FF3333' ? 'Not Checkin' : '' ): '' "
+              [matTooltipPosition]="position.value"
 
           >
 
@@ -124,7 +135,10 @@
 </mat-sidenav-container>
 
 
+
+
 </body>
+
 
 </html>
 

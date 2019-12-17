@@ -42,8 +42,10 @@ import { EditordeletebookComponent } from './editordeletebook/editordeletebook.c
 import { EditbookComponent } from './editbook/editbook.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { AddroombyadminComponent } from './addroombyadmin/addroombyadmin.component';
-import { HomeComponent } from './home/home.component';
+import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import { EditroomnameComponent } from './editroomname/editroomname.component';
+import { DeleteroomComponent } from './deleteroom/deleteroom.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -62,7 +64,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     EditbookComponent,
     CheckoutComponent,
     AddroombyadminComponent,
-    HomeComponent
+    EditroomnameComponent,
+    DeleteroomComponent
   ],
   imports: [
     BrowserModule,
@@ -89,7 +92,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatStepperModule,
     MatProgressBarModule,
     MatExpansionModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatTooltipModule
   ],
     entryComponents: [ DialogOverviewExampleDialog ],
   providers: [],

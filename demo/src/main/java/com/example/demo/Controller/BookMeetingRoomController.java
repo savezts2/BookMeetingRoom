@@ -3,9 +3,11 @@ package com.example.demo.Controller;
 
 import com.example.demo.entity.BookMeetingRoom;
 import com.example.demo.entity.Report;
+import com.example.demo.entity.Roomname;
 import com.example.demo.entity.Users;
 import com.example.demo.repository.BookMeetingRoomRepository;
 import com.example.demo.repository.ReportRepository;
+import com.example.demo.repository.RoomnameRepository;
 import com.example.demo.repository.UsersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -25,9 +27,50 @@ public class BookMeetingRoomController {
     private UsersRepository usersRepository;
     @Autowired
     private ReportRepository reportRepository;
+    @Autowired
+    private RoomnameRepository roomnameRepository;
 
 
 
+    @PostMapping(path = "/Addroom/{firstname}/{roomname}")
+    public Roomname AddRoom(@PathVariable String firstname, @PathVariable String roomname) {
+        Roomname roomname1 = new Roomname();
+        roomname1.setRoomnames(roomname);
+        roomname1.setIsActive("1");
+        Date date = new Date();
+        roomname1.setCreate_by(firstname);
+        roomname1.setCreate_date(date);
+        roomname1.setUpdate_by(null);
+        roomname1.setUpdate_date(null);
+        roomnameRepository.save(roomname1);
+
+        return roomname1;
+    }
+
+    @PostMapping(path = "/Editroom/{firstname}/{roomname}/{newroomname}")
+    public Roomname Editroom(@PathVariable String firstname, @PathVariable String roomname, @PathVariable String newroomname) {
+        Roomname roomname1 = roomnameRepository.findByRoomnames(roomname);
+        roomname1.setRoomnames(newroomname);
+        roomname1.setIsActive("1");
+        Date date = new Date();
+        roomname1.setUpdate_by(firstname);
+        roomname1.setUpdate_date(date);
+        roomnameRepository.save(roomname1);
+
+        return roomname1;
+    }
+
+    @PostMapping(path = "/Deleteroom/{firstname}/{roomname}")
+    public Roomname Deleteroom(@PathVariable String firstname, @PathVariable String roomname) {
+        Roomname roomname1 = roomnameRepository.findByRoomnames(roomname);
+        roomname1.setIsActive("0");
+        Date date = new Date();
+        roomname1.setUpdate_by(firstname);
+        roomname1.setUpdate_date(date);
+        roomnameRepository.save(roomname1);
+
+        return roomname1;
+    }
 
     @PostMapping(path = "/Changstatusbook/{roomname}/{starttime}/{dateBookMeetingRoom}")
     public BookMeetingRoom chackstatusbook(@PathVariable String roomname, @PathVariable String starttime, @PathVariable String dateBookMeetingRoom) {

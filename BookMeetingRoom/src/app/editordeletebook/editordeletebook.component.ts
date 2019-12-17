@@ -40,7 +40,7 @@ isLoggedIn : Observable<boolean>;
 isLoggedInAdmin : Observable<boolean>;
 isLoggedInHR : Observable<boolean>;
 public API = '//localhost:8080';   //for test
-//public API = 'http://192.168.1.56:8080/BookMeetingRoom';  //for build
+//public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
 timenum : number;
 totimenum : number;
 datetimenow : number;
@@ -97,6 +97,7 @@ checkin(){
                                    console.log('PUT Request is successful');
                                    alert("Checkin Success!");
                                    this.dialogRef.close();
+                                    window.location.reload(true);
                                },
                                error => {
                                    console.log('Error', error);
@@ -115,6 +116,7 @@ delete(){
                                data => {
                                    console.log('PUT Request is successful');
                                    alert("Cancel Success!");
+                                    window.location.reload(true);
                                    this.dialogRef.close();
                                },
                                error => {

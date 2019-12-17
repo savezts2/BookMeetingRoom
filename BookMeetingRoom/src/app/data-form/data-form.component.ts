@@ -34,7 +34,7 @@ totimesplited : Array<any>;
 countTime : number;
 spiner : boolean = false;
 public API = '//localhost:8080';  //for test
-//public API = 'http://192.168.1.56:8080/BookMeetingRoom';  //for build
+//public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
 firstFormGroup: FormGroup;
 secondFormGroup: FormGroup;
 events: any[] = [];

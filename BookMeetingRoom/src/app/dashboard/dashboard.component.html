@@ -7,7 +7,7 @@
 <mat-sidenav-container *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)"
                        class="card" (backdropClick)="close()">
   <mat-sidenav #sidenav (keydown.escape)="close()" class="sidenavs">
-    <button mat-button (click)="close()" routerLink="/selectDate" class="botton">Book MeetingRoom</button><br>
+    <button mat-button (click)="close()" routerLink="/" class="botton">Book MeetingRoom</button><br>
     <button mat-button (click)="close()" routerLink="/dashboard" class="botton">Dashboard</button>
 
     <mat-accordion *ngIf="(isLoggedInAdmin | async)">
@@ -20,7 +20,7 @@
         </mat-expansion-panel-header>
 
         <button mat-button (click)="close()" routerLink="/systemadmin" class="botton">System Admin</button>
-        <button mat-button (click)="close()" routerLink="/addroom" class="botton">Add Room</button>
+        <button mat-button (click)="close()" routerLink="/addroom" class="botton">Add MeetingRoom</button>
       </mat-expansion-panel>
 
     </mat-accordion>

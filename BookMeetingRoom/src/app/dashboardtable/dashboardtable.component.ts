@@ -1033,8 +1033,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                            this.events1[j][k][3] = '#C0C0C0' ;
                                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                           this.events1[j][k][3] = '#A0FF7D' ;
-                                       }else{
+                        this.events1[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events1[j][k][3] = '#3366FF' ;
+                    }else{
                                            this.events1[j][k][3] = '#FF3333' ;
                                        }
 
@@ -1074,8 +1076,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                            this.events1[j][k][3] = '#C0C0C0' ;
                                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                           this.events1[j][k][3] = '#A0FF7D' ;
-                                       }else{
+                        this.events1[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events1[j][k][3] = '#3366FF' ;
+                    }else{
                                            this.events1[j][k][3] = '#FF3333' ;
                                        }
 
@@ -1115,8 +1119,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                            this.events1[j][k][3] = '#C0C0C0' ;
                                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                           this.events1[j][k][3] = '#A0FF7D' ;
-                                       }else{
+                        this.events1[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events1[j][k][3] = '#3366FF' ;
+                    }else{
                                            this.events1[j][k][3] = '#FF3333' ;
                                        }
 
@@ -1156,8 +1162,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                            this.events1[j][k][3] = '#C0C0C0' ;
                                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                           this.events1[j][k][3] = '#A0FF7D' ;
-                                       }else{
+                        this.events1[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events1[j][k][3] = '#3366FF' ;
+                    }else{
                                            this.events1[j][k][3] = '#FF3333' ;
                                        }
 
@@ -1197,8 +1205,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                            this.events1[j][k][3] = '#C0C0C0' ;
                                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                           this.events1[j][k][3] = '#A0FF7D' ;
-                                       }else{
+                        this.events1[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events1[j][k][3] = '#3366FF' ;
+                    }else{
                                            this.events1[j][k][3] = '#FF3333' ;
                                        }
 
@@ -1238,8 +1248,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                            this.events1[j][k][3] = '#C0C0C0' ;
                                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                           this.events1[j][k][3] = '#A0FF7D' ;
-                                       }else{
+                        this.events1[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events1[j][k][3] = '#3366FF' ;
+                    }else{
                                            this.events1[j][k][3] = '#FF3333' ;
                                        }
 
@@ -1279,8 +1291,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                            this.events1[j][k][3] = '#C0C0C0' ;
                                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                           this.events1[j][k][3] = '#A0FF7D' ;
-                                       }else{
+                        this.events1[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events1[j][k][3] = '#3366FF' ;
+                    }else{
                                            this.events1[j][k][3] = '#FF3333' ;
                                        }
 
@@ -1320,8 +1334,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                            this.events1[j][k][3] = '#C0C0C0' ;
                                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                           this.events1[j][k][3] = '#A0FF7D' ;
-                                       }else{
+                        this.events1[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events1[j][k][3] = '#3366FF' ;
+                    }else{
                                            this.events1[j][k][3] = '#FF3333' ;
                                        }
 
@@ -1361,8 +1377,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                            this.events1[j][k][3] = '#C0C0C0' ;
                                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                           this.events1[j][k][3] = '#A0FF7D' ;
-                                       }else{
+                        this.events1[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events1[j][k][3] = '#3366FF' ;
+                    }else{
                                            this.events1[j][k][3] = '#FF3333' ;
                                        }
 
@@ -1402,8 +1420,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                            this.events1[j][k][3] = '#C0C0C0' ;
                                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                           this.events1[j][k][3] = '#A0FF7D' ;
-                                       }else{
+                        this.events1[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events1[j][k][3] = '#3366FF' ;
+                    }else{
                                            this.events1[j][k][3] = '#FF3333' ;
                                        }
 
@@ -1443,8 +1463,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                            this.events1[j][k][3] = '#C0C0C0' ;
                                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                           this.events1[j][k][3] = '#A0FF7D' ;
-                                       }else{
+                        this.events1[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events1[j][k][3] = '#3366FF' ;
+                    }else{
                                            this.events1[j][k][3] = '#FF3333' ;
                                        }
 
@@ -1484,8 +1506,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                            this.events1[j][k][3] = '#C0C0C0' ;
                                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                           this.events1[j][k][3] = '#A0FF7D' ;
-                                       }else{
+                        this.events1[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events1[j][k][3] = '#3366FF' ;
+                    }else{
                                            this.events1[j][k][3] = '#FF3333' ;
                                        }
 
@@ -1525,8 +1549,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                            this.events1[j][k][3] = '#C0C0C0' ;
                                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                           this.events1[j][k][3] = '#A0FF7D' ;
-                                       }else{
+                        this.events1[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events1[j][k][3] = '#3366FF' ;
+                    }else{
                                            this.events1[j][k][3] = '#FF3333' ;
                                        }
 
@@ -1566,8 +1592,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                            this.events1[j][k][3] = '#C0C0C0' ;
                                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                           this.events1[j][k][3] = '#A0FF7D' ;
-                                       }else{
+                        this.events1[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events1[j][k][3] = '#3366FF' ;
+                    }else{
                                            this.events1[j][k][3] = '#FF3333' ;
                                        }
 
@@ -1607,8 +1635,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                            this.events1[j][k][3] = '#C0C0C0' ;
                                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                           this.events1[j][k][3] = '#A0FF7D' ;
-                                       }else{
+                        this.events1[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events1[j][k][3] = '#3366FF' ;
+                    }else{
                                            this.events1[j][k][3] = '#FF3333' ;
                                        }
 
@@ -1648,8 +1678,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                            this.events1[j][k][3] = '#C0C0C0' ;
                                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                           this.events1[j][k][3] = '#A0FF7D' ;
-                                       }else{
+                        this.events1[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events1[j][k][3] = '#3366FF' ;
+                    }else{
                                            this.events1[j][k][3] = '#FF3333' ;
                                        }
 
@@ -1689,8 +1721,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                            this.events1[j][k][3] = '#C0C0C0' ;
                                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                           this.events1[j][k][3] = '#A0FF7D' ;
-                                       }else{
+                        this.events1[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events1[j][k][3] = '#3366FF' ;
+                    }else{
                                            this.events1[j][k][3] = '#FF3333' ;
                                        }
 
@@ -1730,8 +1764,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                            this.events1[j][k][3] = '#C0C0C0' ;
                                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                           this.events1[j][k][3] = '#A0FF7D' ;
-                                       }else{
+                        this.events1[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events1[j][k][3] = '#3366FF' ;
+                    }else{
                                            this.events1[j][k][3] = '#FF3333' ;
                                        }
 
@@ -1771,8 +1807,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                            this.events1[j][k][3] = '#C0C0C0' ;
                                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                           this.events1[j][k][3] = '#A0FF7D' ;
-                                       }else{
+                        this.events1[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events1[j][k][3] = '#3366FF' ;
+                    }else{
                                            this.events1[j][k][3] = '#FF3333' ;
                                        }
 
@@ -1813,8 +1851,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                            this.events2[j][k][3] = '#C0C0C0' ;
                                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                           this.events2[j][k][3] = '#A0FF7D' ;
-                                       }else{
+                        this.events2[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events2[j][k][3] = '#3366FF' ;
+                    }else{
                                            this.events2[j][k][3] = '#FF3333' ;
                                        }
 
@@ -1854,8 +1894,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                            this.events2[j][k][3] = '#C0C0C0' ;
                                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                           this.events2[j][k][3] = '#A0FF7D' ;
-                                       }else{
+                        this.events2[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events2[j][k][3] = '#3366FF' ;
+                    }else{
                                            this.events2[j][k][3] = '#FF3333' ;
                                        }
 
@@ -1895,8 +1937,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                            this.events2[j][k][3] = '#C0C0C0' ;
                                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                           this.events2[j][k][3] = '#A0FF7D' ;
-                                       }else{
+                        this.events2[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events2[j][k][3] = '#3366FF' ;
+                    }else{
                                            this.events2[j][k][3] = '#FF3333' ;
                                        }
 
@@ -1936,8 +1980,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                            this.events2[j][k][3] = '#C0C0C0' ;
                                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                           this.events2[j][k][3] = '#A0FF7D' ;
-                                       }else{
+                        this.events2[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events2[j][k][3] = '#3366FF' ;
+                    }else{
                                            this.events2[j][k][3] = '#FF3333' ;
                                        }
 
@@ -1977,8 +2023,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                            this.events2[j][k][3] = '#C0C0C0' ;
                                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                           this.events2[j][k][3] = '#A0FF7D' ;
-                                       }else{
+                        this.events2[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events2[j][k][3] = '#3366FF' ;
+                    }else{
                                            this.events2[j][k][3] = '#FF3333' ;
                                        }
 
@@ -2018,8 +2066,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                            this.events2[j][k][3] = '#C0C0C0' ;
                                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                           this.events2[j][k][3] = '#A0FF7D' ;
-                                       }else{
+                        this.events2[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events2[j][k][3] = '#3366FF' ;
+                    }else{
                                            this.events2[j][k][3] = '#FF3333' ;
                                        }
 
@@ -2059,8 +2109,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                            this.events2[j][k][3] = '#C0C0C0' ;
                                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                           this.events2[j][k][3] = '#A0FF7D' ;
-                                       }else{
+                        this.events2[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events2[j][k][3] = '#3366FF' ;
+                    }else{
                                            this.events2[j][k][3] = '#FF3333' ;
                                        }
 
@@ -2100,8 +2152,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                            this.events2[j][k][3] = '#C0C0C0' ;
                                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                           this.events2[j][k][3] = '#A0FF7D' ;
-                                       }else{
+                        this.events2[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events2[j][k][3] = '#3366FF' ;
+                    }else{
                                            this.events2[j][k][3] = '#FF3333' ;
                                        }
 
@@ -2141,8 +2195,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                            this.events2[j][k][3] = '#C0C0C0' ;
                                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                           this.events2[j][k][3] = '#A0FF7D' ;
-                                       }else{
+                        this.events2[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events2[j][k][3] = '#3366FF' ;
+                    }else{
                                            this.events2[j][k][3] = '#FF3333' ;
                                        }
 
@@ -2182,8 +2238,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                            this.events2[j][k][3] = '#C0C0C0' ;
                                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                           this.events2[j][k][3] = '#A0FF7D' ;
-                                       }else{
+                        this.events2[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events2[j][k][3] = '#3366FF' ;
+                    }else{
                                            this.events2[j][k][3] = '#FF3333' ;
                                        }
 
@@ -2223,8 +2281,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                            this.events2[j][k][3] = '#C0C0C0' ;
                                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                           this.events2[j][k][3] = '#A0FF7D' ;
-                                       }else{
+                        this.events2[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events2[j][k][3] = '#3366FF' ;
+                    }else{
                                            this.events2[j][k][3] = '#FF3333' ;
                                        }
 
@@ -2264,8 +2324,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                            this.events2[j][k][3] = '#C0C0C0' ;
                                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                           this.events2[j][k][3] = '#A0FF7D' ;
-                                       }else{
+                        this.events2[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events2[j][k][3] = '#3366FF' ;
+                    }else{
                                            this.events2[j][k][3] = '#FF3333' ;
                                        }
 
@@ -2305,8 +2367,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                            this.events2[j][k][3] = '#C0C0C0' ;
                                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                           this.events2[j][k][3] = '#A0FF7D' ;
-                                       }else{
+                        this.events2[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events2[j][k][3] = '#3366FF' ;
+                    }else{
                                            this.events2[j][k][3] = '#FF3333' ;
                                        }
 
@@ -2346,8 +2410,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                            this.events2[j][k][3] = '#C0C0C0' ;
                                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                           this.events2[j][k][3] = '#A0FF7D' ;
-                                       }else{
+                        this.events2[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events2[j][k][3] = '#3366FF' ;
+                    }else{
                                            this.events2[j][k][3] = '#FF3333' ;
                                        }
 
@@ -2387,8 +2453,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                            this.events2[j][k][3] = '#C0C0C0' ;
                                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                           this.events2[j][k][3] = '#A0FF7D' ;
-                                       }else{
+                        this.events2[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events2[j][k][3] = '#3366FF' ;
+                    }else{
                                            this.events2[j][k][3] = '#FF3333' ;
                                        }
 
@@ -2428,8 +2496,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                            this.events2[j][k][3] = '#C0C0C0' ;
                                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                           this.events2[j][k][3] = '#A0FF7D' ;
-                                       }else{
+                        this.events2[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events2[j][k][3] = '#3366FF' ;
+                    }else{
                                            this.events2[j][k][3] = '#FF3333' ;
                                        }
 
@@ -2469,8 +2539,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                            this.events2[j][k][3] = '#C0C0C0' ;
                                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                           this.events2[j][k][3] = '#A0FF7D' ;
-                                       }else{
+                        this.events2[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events2[j][k][3] = '#3366FF' ;
+                    }else{
                                            this.events2[j][k][3] = '#FF3333' ;
                                        }
 
@@ -2510,8 +2582,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                            this.events2[j][k][3] = '#C0C0C0' ;
                                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                           this.events2[j][k][3] = '#A0FF7D' ;
-                                       }else{
+                        this.events2[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events2[j][k][3] = '#3366FF' ;
+                    }else{
                                            this.events2[j][k][3] = '#FF3333' ;
                                        }
 
@@ -2551,8 +2625,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                            this.events2[j][k][3] = '#C0C0C0' ;
                                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                           this.events2[j][k][3] = '#A0FF7D' ;
-                                       }else{
+                        this.events2[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events2[j][k][3] = '#3366FF' ;
+                    }else{
                                            this.events2[j][k][3] = '#FF3333' ;
                                        }
 
@@ -2594,8 +2670,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events3[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events3[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events3[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events3[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events3[j][k][3] = '#FF3333' ;
                        }
 
@@ -2635,8 +2713,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events3[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events3[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events3[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events3[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events3[j][k][3] = '#FF3333' ;
                        }
 
@@ -2676,8 +2756,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events3[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events3[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events3[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events3[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events3[j][k][3] = '#FF3333' ;
                        }
 
@@ -2717,8 +2799,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events3[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events3[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events3[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events3[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events3[j][k][3] = '#FF3333' ;
                        }
 
@@ -2758,8 +2842,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events3[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events3[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events3[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events3[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events3[j][k][3] = '#FF3333' ;
                        }
 
@@ -2799,8 +2885,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events3[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events3[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events3[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events3[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events3[j][k][3] = '#FF3333' ;
                        }
 
@@ -2840,8 +2928,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events3[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events3[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events3[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events3[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events3[j][k][3] = '#FF3333' ;
                        }
 
@@ -2881,8 +2971,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events3[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events3[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events3[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events3[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events3[j][k][3] = '#FF3333' ;
                        }
 
@@ -2922,8 +3014,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events3[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events3[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events3[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events3[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events3[j][k][3] = '#FF3333' ;
                        }
 
@@ -2963,8 +3057,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events3[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events3[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events3[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events3[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events3[j][k][3] = '#FF3333' ;
                        }
 
@@ -3004,8 +3100,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events3[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events3[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events3[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events3[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events3[j][k][3] = '#FF3333' ;
                        }
 
@@ -3045,8 +3143,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events3[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events3[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events3[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events3[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events3[j][k][3] = '#FF3333' ;
                        }
 
@@ -3086,8 +3186,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events3[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events3[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events3[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events3[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events3[j][k][3] = '#FF3333' ;
                        }
 
@@ -3127,8 +3229,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events3[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events3[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events3[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events3[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events3[j][k][3] = '#FF3333' ;
                        }
 
@@ -3168,8 +3272,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events3[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events3[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events3[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events3[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events3[j][k][3] = '#FF3333' ;
                        }
 
@@ -3209,8 +3315,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events3[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events3[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events3[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events3[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events3[j][k][3] = '#FF3333' ;
                        }
 
@@ -3250,8 +3358,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events3[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events3[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events3[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events3[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events3[j][k][3] = '#FF3333' ;
                        }
 
@@ -3291,8 +3401,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events3[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events3[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events3[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events3[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events3[j][k][3] = '#FF3333' ;
                        }
 
@@ -3332,8 +3444,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events3[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events3[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events3[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events3[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events3[j][k][3] = '#FF3333' ;
                        }
 
@@ -3375,8 +3489,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events4[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events4[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events4[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events4[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events4[j][k][3] = '#FF3333' ;
                        }
 
@@ -3416,8 +3532,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events4[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events4[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events4[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events4[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events4[j][k][3] = '#FF3333' ;
                        }
 
@@ -3457,8 +3575,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events4[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events4[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events4[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events4[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events4[j][k][3] = '#FF3333' ;
                        }
 
@@ -3498,8 +3618,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events4[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events4[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events4[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events4[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events4[j][k][3] = '#FF3333' ;
                        }
 
@@ -3539,8 +3661,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events4[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events4[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events4[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events4[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events4[j][k][3] = '#FF3333' ;
                        }
 
@@ -3580,8 +3704,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events4[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events4[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events4[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events4[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events4[j][k][3] = '#FF3333' ;
                        }
 
@@ -3621,8 +3747,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events4[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events4[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events4[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events4[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events4[j][k][3] = '#FF3333' ;
                        }
 
@@ -3662,8 +3790,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events4[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events4[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events4[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events4[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events4[j][k][3] = '#FF3333' ;
                        }
 
@@ -3703,8 +3833,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events4[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events4[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events4[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events4[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events4[j][k][3] = '#FF3333' ;
                        }
 
@@ -3744,8 +3876,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events4[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events4[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events4[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events4[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events4[j][k][3] = '#FF3333' ;
                        }
 
@@ -3785,8 +3919,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events4[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events4[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events4[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events4[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events4[j][k][3] = '#FF3333' ;
                        }
 
@@ -3826,8 +3962,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events4[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events4[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events4[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events4[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events4[j][k][3] = '#FF3333' ;
                        }
 
@@ -3867,8 +4005,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events4[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events4[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events4[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events4[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events4[j][k][3] = '#FF3333' ;
                        }
 
@@ -3908,8 +4048,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events4[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events4[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events4[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events4[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events4[j][k][3] = '#FF3333' ;
                        }
 
@@ -3949,8 +4091,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events4[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events4[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events4[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events4[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events4[j][k][3] = '#FF3333' ;
                        }
 
@@ -3990,8 +4134,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events4[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events4[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events4[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events4[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events4[j][k][3] = '#FF3333' ;
                        }
 
@@ -4031,8 +4177,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events4[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events4[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events4[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events4[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events4[j][k][3] = '#FF3333' ;
                        }
 
@@ -4072,8 +4220,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events4[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events4[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events4[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events4[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events4[j][k][3] = '#FF3333' ;
                        }
 
@@ -4113,8 +4263,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events4[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events4[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events4[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events4[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events4[j][k][3] = '#FF3333' ;
                        }
 
@@ -4156,8 +4308,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events5[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events5[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events5[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events5[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events5[j][k][3] = '#FF3333' ;
                        }
 
@@ -4197,8 +4351,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events5[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events5[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events5[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events5[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events5[j][k][3] = '#FF3333' ;
                        }
 
@@ -4238,8 +4394,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events5[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events5[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events5[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events5[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events5[j][k][3] = '#FF3333' ;
                        }
 
@@ -4279,8 +4437,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events5[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events5[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events5[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events5[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events5[j][k][3] = '#FF3333' ;
                        }
 
@@ -4320,8 +4480,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events5[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events5[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events5[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events5[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events5[j][k][3] = '#FF3333' ;
                        }
 
@@ -4361,8 +4523,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events5[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events5[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events5[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events5[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events5[j][k][3] = '#FF3333' ;
                        }
 
@@ -4402,8 +4566,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events5[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events5[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events5[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events5[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events5[j][k][3] = '#FF3333' ;
                        }
 
@@ -4443,8 +4609,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events5[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events5[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events5[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events5[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events5[j][k][3] = '#FF3333' ;
                        }
 
@@ -4484,8 +4652,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events5[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events5[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events5[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events5[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events5[j][k][3] = '#FF3333' ;
                        }
 
@@ -4525,8 +4695,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events5[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events5[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events5[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events5[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events5[j][k][3] = '#FF3333' ;
                        }
 
@@ -4566,8 +4738,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events5[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events5[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events5[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events5[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events5[j][k][3] = '#FF3333' ;
                        }
 
@@ -4607,8 +4781,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events5[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events5[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events5[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events5[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events5[j][k][3] = '#FF3333' ;
                        }
 
@@ -4648,8 +4824,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events5[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events5[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events5[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events5[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events5[j][k][3] = '#FF3333' ;
                        }
 
@@ -4689,8 +4867,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events5[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events5[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events5[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events5[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events5[j][k][3] = '#FF3333' ;
                        }
 
@@ -4730,8 +4910,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events5[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events5[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events5[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events5[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events5[j][k][3] = '#FF3333' ;
                        }
 
@@ -4771,8 +4953,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events5[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events5[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events5[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events5[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events5[j][k][3] = '#FF3333' ;
                        }
 
@@ -4812,8 +4996,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events5[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events5[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events5[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events5[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events5[j][k][3] = '#FF3333' ;
                        }
 
@@ -4853,8 +5039,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events5[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events5[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events5[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events5[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events5[j][k][3] = '#FF3333' ;
                        }
 
@@ -4894,8 +5082,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events5[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events5[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events5[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events5[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events5[j][k][3] = '#FF3333' ;
                        }
 
@@ -4938,8 +5128,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events6[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events6[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events6[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events6[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events6[j][k][3] = '#FF3333' ;
                        }
 
@@ -4979,8 +5171,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events6[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events6[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events6[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events6[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events6[j][k][3] = '#FF3333' ;
                        }
 
@@ -5020,8 +5214,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events6[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events6[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events6[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events6[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events6[j][k][3] = '#FF3333' ;
                        }
 
@@ -5061,8 +5257,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events6[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events6[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events6[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events6[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events6[j][k][3] = '#FF3333' ;
                        }
 
@@ -5102,8 +5300,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events6[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events6[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events6[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events6[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events6[j][k][3] = '#FF3333' ;
                        }
 
@@ -5143,8 +5343,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events6[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events6[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events6[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events6[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events6[j][k][3] = '#FF3333' ;
                        }
 
@@ -5184,8 +5386,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events6[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events6[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events6[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events6[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events6[j][k][3] = '#FF3333' ;
                        }
 
@@ -5225,8 +5429,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events6[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events6[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events6[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events6[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events6[j][k][3] = '#FF3333' ;
                        }
 
@@ -5266,8 +5472,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events6[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events6[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events6[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events6[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events6[j][k][3] = '#FF3333' ;
                        }
 
@@ -5307,8 +5515,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events6[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events6[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events6[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events6[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events6[j][k][3] = '#FF3333' ;
                        }
 
@@ -5348,8 +5558,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events6[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events6[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events6[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events6[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events6[j][k][3] = '#FF3333' ;
                        }
 
@@ -5389,8 +5601,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events6[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events6[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events6[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events6[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events6[j][k][3] = '#FF3333' ;
                        }
 
@@ -5430,8 +5644,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events6[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events6[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events6[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events6[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events6[j][k][3] = '#FF3333' ;
                        }
 
@@ -5471,8 +5687,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events6[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events6[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events6[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events6[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events6[j][k][3] = '#FF3333' ;
                        }
 
@@ -5512,8 +5730,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events6[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events6[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events6[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events6[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events6[j][k][3] = '#FF3333' ;
                        }
 
@@ -5553,8 +5773,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events6[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events6[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events6[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events6[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events6[j][k][3] = '#FF3333' ;
                        }
 
@@ -5594,8 +5816,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events6[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events6[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events6[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events6[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events6[j][k][3] = '#FF3333' ;
                        }
 
@@ -5635,8 +5859,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events6[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events6[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events6[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events6[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events6[j][k][3] = '#FF3333' ;
                        }
 
@@ -5676,8 +5902,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events6[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events6[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events6[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events6[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events6[j][k][3] = '#FF3333' ;
                        }
 
@@ -5720,8 +5948,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events7[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events7[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events7[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events7[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events7[j][k][3] = '#FF3333' ;
                        }
 
@@ -5761,8 +5991,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events7[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events7[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events7[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events7[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events7[j][k][3] = '#FF3333' ;
                        }
 
@@ -5802,8 +6034,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events7[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events7[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events7[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events7[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events7[j][k][3] = '#FF3333' ;
                        }
 
@@ -5843,8 +6077,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events7[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events7[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events7[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events7[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events7[j][k][3] = '#FF3333' ;
                        }
 
@@ -5884,8 +6120,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events7[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events7[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events7[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events7[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events7[j][k][3] = '#FF3333' ;
                        }
 
@@ -5925,8 +6163,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events7[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events7[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events7[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events7[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events7[j][k][3] = '#FF3333' ;
                        }
 
@@ -5966,8 +6206,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events7[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events7[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events7[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events7[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events7[j][k][3] = '#FF3333' ;
                        }
 
@@ -6007,8 +6249,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events7[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events7[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events7[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events7[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events7[j][k][3] = '#FF3333' ;
                        }
 
@@ -6048,8 +6292,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events7[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events7[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events7[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events7[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events7[j][k][3] = '#FF3333' ;
                        }
 
@@ -6089,8 +6335,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events7[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events7[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events7[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events7[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events7[j][k][3] = '#FF3333' ;
                        }
 
@@ -6130,8 +6378,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events7[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events7[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events7[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events7[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events7[j][k][3] = '#FF3333' ;
                        }
 
@@ -6171,8 +6421,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events7[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events7[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events7[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events7[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events7[j][k][3] = '#FF3333' ;
                        }
 
@@ -6212,8 +6464,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events7[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events7[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events7[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events7[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events7[j][k][3] = '#FF3333' ;
                        }
 
@@ -6253,8 +6507,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events7[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events7[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events7[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events7[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events7[j][k][3] = '#FF3333' ;
                        }
 
@@ -6294,8 +6550,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events7[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events7[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events7[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events7[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events7[j][k][3] = '#FF3333' ;
                        }
 
@@ -6335,8 +6593,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events7[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events7[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events7[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events7[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events7[j][k][3] = '#FF3333' ;
                        }
 
@@ -6376,8 +6636,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events7[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events7[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events7[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events7[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events7[j][k][3] = '#FF3333' ;
                        }
 
@@ -6417,8 +6679,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events7[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events7[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events7[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events7[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events7[j][k][3] = '#FF3333' ;
                        }
 
@@ -6458,8 +6722,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events7[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events7[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events7[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events7[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events7[j][k][3] = '#FF3333' ;
                        }
 
@@ -6501,8 +6767,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events8[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events8[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events8[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events8[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events8[j][k][3] = '#FF3333' ;
                        }
 
@@ -6542,8 +6810,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events8[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events8[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events8[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events8[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events8[j][k][3] = '#FF3333' ;
                        }
 
@@ -6583,8 +6853,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events8[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events8[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events8[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events8[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events8[j][k][3] = '#FF3333' ;
                        }
 
@@ -6624,8 +6896,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events8[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events8[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events8[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events8[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events8[j][k][3] = '#FF3333' ;
                        }
 
@@ -6665,8 +6939,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events8[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events8[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events8[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events8[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events8[j][k][3] = '#FF3333' ;
                        }
 
@@ -6706,8 +6982,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events8[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events8[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events8[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events8[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events8[j][k][3] = '#FF3333' ;
                        }
 
@@ -6747,8 +7025,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events8[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events8[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events8[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events8[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events8[j][k][3] = '#FF3333' ;
                        }
 
@@ -6788,8 +7068,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events8[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events8[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events8[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events8[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events8[j][k][3] = '#FF3333' ;
                        }
 
@@ -6829,8 +7111,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events8[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events8[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events8[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events8[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events8[j][k][3] = '#FF3333' ;
                        }
 
@@ -6870,8 +7154,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events8[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events8[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events8[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events8[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events8[j][k][3] = '#FF3333' ;
                        }
 
@@ -6911,8 +7197,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events8[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events8[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events8[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events8[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events8[j][k][3] = '#FF3333' ;
                        }
 
@@ -6952,8 +7240,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events8[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events8[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events8[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events8[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events8[j][k][3] = '#FF3333' ;
                        }
 
@@ -6993,8 +7283,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events8[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events8[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events8[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events8[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events8[j][k][3] = '#FF3333' ;
                        }
 
@@ -7034,8 +7326,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events8[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events8[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events8[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events8[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events8[j][k][3] = '#FF3333' ;
                        }
 
@@ -7075,8 +7369,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events8[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events8[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events8[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events8[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events8[j][k][3] = '#FF3333' ;
                        }
 
@@ -7116,8 +7412,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events8[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events8[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events8[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events8[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events8[j][k][3] = '#FF3333' ;
                        }
 
@@ -7157,8 +7455,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events8[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events8[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events8[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events8[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events8[j][k][3] = '#FF3333' ;
                        }
 
@@ -7198,8 +7498,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events8[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events8[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events8[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events8[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events8[j][k][3] = '#FF3333' ;
                        }
 
@@ -7239,8 +7541,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events8[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events8[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events8[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events8[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events8[j][k][3] = '#FF3333' ;
                        }
 
@@ -7281,8 +7585,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events9[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events9[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events9[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events9[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events9[j][k][3] = '#FF3333' ;
                        }
 
@@ -7322,8 +7628,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events9[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events9[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events9[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events9[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events9[j][k][3] = '#FF3333' ;
                        }
 
@@ -7363,8 +7671,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events9[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events9[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events9[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events9[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events9[j][k][3] = '#FF3333' ;
                        }
 
@@ -7404,8 +7714,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events9[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events9[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events9[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events9[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events9[j][k][3] = '#FF3333' ;
                        }
 
@@ -7445,8 +7757,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events9[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events9[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events9[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events9[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events9[j][k][3] = '#FF3333' ;
                        }
 
@@ -7486,8 +7800,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events9[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events9[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events9[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events9[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events9[j][k][3] = '#FF3333' ;
                        }
 
@@ -7527,8 +7843,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events9[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events9[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events9[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events9[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events9[j][k][3] = '#FF3333' ;
                        }
 
@@ -7568,8 +7886,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events9[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events9[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events9[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events9[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events9[j][k][3] = '#FF3333' ;
                        }
 
@@ -7609,8 +7929,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events9[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events9[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events9[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events9[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events9[j][k][3] = '#FF3333' ;
                        }
 
@@ -7650,8 +7972,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events9[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events9[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events9[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events9[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events9[j][k][3] = '#FF3333' ;
                        }
 
@@ -7691,8 +8015,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events9[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events9[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events9[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events9[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events9[j][k][3] = '#FF3333' ;
                        }
 
@@ -7732,8 +8058,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events9[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events9[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events9[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events9[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events9[j][k][3] = '#FF3333' ;
                        }
 
@@ -7773,8 +8101,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events9[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events9[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events9[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events9[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events9[j][k][3] = '#FF3333' ;
                        }
 
@@ -7814,8 +8144,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events9[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events9[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events9[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events9[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events9[j][k][3] = '#FF3333' ;
                        }
 
@@ -7855,8 +8187,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events9[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events9[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events9[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events9[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events9[j][k][3] = '#FF3333' ;
                        }
 
@@ -7896,8 +8230,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events9[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events9[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events9[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events9[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events9[j][k][3] = '#FF3333' ;
                        }
 
@@ -7937,8 +8273,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events9[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events9[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events9[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events9[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events9[j][k][3] = '#FF3333' ;
                        }
 
@@ -7978,8 +8316,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events9[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events9[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events9[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events9[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events9[j][k][3] = '#FF3333' ;
                        }
 
@@ -8019,8 +8359,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events9[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events9[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events9[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events9[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events9[j][k][3] = '#FF3333' ;
                        }
 
@@ -8062,8 +8404,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events10[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events10[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events10[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events10[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events10[j][k][3] = '#FF3333' ;
                        }
 
@@ -8103,8 +8447,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events10[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events10[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events10[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events10[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events10[j][k][3] = '#FF3333' ;
                        }
 
@@ -8144,8 +8490,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events10[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events10[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events10[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events10[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events10[j][k][3] = '#FF3333' ;
                        }
 
@@ -8185,8 +8533,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events10[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events10[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events10[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events10[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events10[j][k][3] = '#FF3333' ;
                        }
 
@@ -8226,8 +8576,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events10[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events10[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events10[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events10[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events10[j][k][3] = '#FF3333' ;
                        }
 
@@ -8267,8 +8619,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events10[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events10[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events10[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events10[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events10[j][k][3] = '#FF3333' ;
                        }
 
@@ -8308,8 +8662,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events10[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events10[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events10[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events10[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events10[j][k][3] = '#FF3333' ;
                        }
 
@@ -8349,8 +8705,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events10[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events10[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events10[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events10[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events10[j][k][3] = '#FF3333' ;
                        }
 
@@ -8390,8 +8748,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events10[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events10[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events10[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events10[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events10[j][k][3] = '#FF3333' ;
                        }
 
@@ -8431,8 +8791,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events10[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events10[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events10[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events10[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events10[j][k][3] = '#FF3333' ;
                        }
 
@@ -8472,8 +8834,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events10[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events10[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events10[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events10[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events10[j][k][3] = '#FF3333' ;
                        }
 
@@ -8513,8 +8877,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events10[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events10[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events10[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events10[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events10[j][k][3] = '#FF3333' ;
                        }
 
@@ -8554,8 +8920,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events10[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events10[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events10[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events10[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events10[j][k][3] = '#FF3333' ;
                        }
 
@@ -8595,8 +8963,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events10[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events10[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events10[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events10[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events10[j][k][3] = '#FF3333' ;
                        }
 
@@ -8636,8 +9006,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events10[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events10[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events10[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events10[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events10[j][k][3] = '#FF3333' ;
                        }
 
@@ -8677,8 +9049,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events10[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events10[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events10[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events10[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events10[j][k][3] = '#FF3333' ;
                        }
 
@@ -8718,8 +9092,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events10[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events10[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events10[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events10[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events10[j][k][3] = '#FF3333' ;
                        }
 
@@ -8759,8 +9135,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events10[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events10[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events10[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events10[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events10[j][k][3] = '#FF3333' ;
                        }
 
@@ -8800,8 +9178,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events10[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events10[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events10[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events10[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events10[j][k][3] = '#FF3333' ;
                        }
 
@@ -8841,8 +9221,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events11[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events11[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events11[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events11[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events11[j][k][3] = '#FF3333' ;
                        }
 
@@ -8882,8 +9264,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events11[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events11[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events11[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events11[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events11[j][k][3] = '#FF3333' ;
                        }
 
@@ -8923,8 +9307,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events11[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events11[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events11[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events11[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events11[j][k][3] = '#FF3333' ;
                        }
 
@@ -8964,8 +9350,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events11[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events11[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events11[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events11[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events11[j][k][3] = '#FF3333' ;
                        }
 
@@ -9005,8 +9393,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events11[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events11[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events11[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events11[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events11[j][k][3] = '#FF3333' ;
                        }
 
@@ -9046,8 +9436,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events11[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events11[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events11[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events11[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events11[j][k][3] = '#FF3333' ;
                        }
 
@@ -9087,8 +9479,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events11[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events11[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events11[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events11[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events11[j][k][3] = '#FF3333' ;
                        }
 
@@ -9128,8 +9522,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events11[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events11[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events11[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events11[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events11[j][k][3] = '#FF3333' ;
                        }
 
@@ -9169,8 +9565,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events11[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events11[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events11[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events11[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events11[j][k][3] = '#FF3333' ;
                        }
 
@@ -9210,8 +9608,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events11[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events11[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events11[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events11[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events11[j][k][3] = '#FF3333' ;
                        }
 
@@ -9251,8 +9651,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events11[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events11[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events11[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events11[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events11[j][k][3] = '#FF3333' ;
                        }
 
@@ -9292,8 +9694,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events11[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events11[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events11[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events11[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events11[j][k][3] = '#FF3333' ;
                        }
 
@@ -9333,8 +9737,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events11[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events11[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events11[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events11[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events11[j][k][3] = '#FF3333' ;
                        }
 
@@ -9374,8 +9780,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events11[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events11[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events11[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events11[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events11[j][k][3] = '#FF3333' ;
                        }
 
@@ -9415,8 +9823,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events11[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events11[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events11[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events11[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events11[j][k][3] = '#FF3333' ;
                        }
 
@@ -9456,8 +9866,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events11[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events11[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events11[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events11[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events11[j][k][3] = '#FF3333' ;
                        }
 
@@ -9497,8 +9909,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events11[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events11[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events11[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events11[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events11[j][k][3] = '#FF3333' ;
                        }
 
@@ -9538,8 +9952,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events11[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events11[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events11[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events11[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events11[j][k][3] = '#FF3333' ;
                        }
 
@@ -9579,8 +9995,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events11[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events11[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events11[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events11[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events11[j][k][3] = '#FF3333' ;
                        }
 
@@ -9622,8 +10040,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events12[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events12[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events12[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events12[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events12[j][k][3] = '#FF3333' ;
                        }
 
@@ -9663,8 +10083,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events12[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events12[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events12[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events12[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events12[j][k][3] = '#FF3333' ;
                        }
 
@@ -9704,8 +10126,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events12[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events12[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events12[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events12[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events12[j][k][3] = '#FF3333' ;
                        }
 
@@ -9745,8 +10169,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events12[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events12[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events12[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events12[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events12[j][k][3] = '#FF3333' ;
                        }
 
@@ -9786,8 +10212,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events12[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events12[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events12[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events12[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events12[j][k][3] = '#FF3333' ;
                        }
 
@@ -9827,8 +10255,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events12[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events12[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events12[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events12[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events12[j][k][3] = '#FF3333' ;
                        }
 
@@ -9868,8 +10298,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events12[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events12[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events12[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events12[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events12[j][k][3] = '#FF3333' ;
                        }
 
@@ -9909,8 +10341,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events12[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events12[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events12[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events12[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events12[j][k][3] = '#FF3333' ;
                        }
 
@@ -9950,8 +10384,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events12[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events12[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events12[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events12[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events12[j][k][3] = '#FF3333' ;
                        }
 
@@ -9991,8 +10427,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events12[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events12[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events12[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events12[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events12[j][k][3] = '#FF3333' ;
                        }
 
@@ -10032,8 +10470,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events12[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events12[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events12[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events12[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events12[j][k][3] = '#FF3333' ;
                        }
 
@@ -10073,8 +10513,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events12[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events12[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events12[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events12[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events12[j][k][3] = '#FF3333' ;
                        }
 
@@ -10114,8 +10556,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events12[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events12[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events12[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events12[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events12[j][k][3] = '#FF3333' ;
                        }
 
@@ -10155,8 +10599,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events12[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events12[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events12[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events12[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events12[j][k][3] = '#FF3333' ;
                        }
 
@@ -10196,8 +10642,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events12[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events12[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events12[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events12[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events12[j][k][3] = '#FF3333' ;
                        }
 
@@ -10237,8 +10685,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events12[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events12[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events12[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events12[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events12[j][k][3] = '#FF3333' ;
                        }
 
@@ -10278,8 +10728,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events12[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events12[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events12[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events12[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events12[j][k][3] = '#FF3333' ;
                        }
 
@@ -10319,8 +10771,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events12[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events12[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events12[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events12[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events12[j][k][3] = '#FF3333' ;
                        }
 
@@ -10360,8 +10814,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events12[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events12[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events12[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events12[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events12[j][k][3] = '#FF3333' ;
                        }
 
@@ -10403,8 +10859,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events13[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events13[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events13[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events13[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events13[j][k][3] = '#FF3333' ;
                        }
 
@@ -10444,8 +10902,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events13[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events13[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events13[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events13[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events13[j][k][3] = '#FF3333' ;
                        }
 
@@ -10485,8 +10945,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events13[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events13[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events13[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events13[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events13[j][k][3] = '#FF3333' ;
                        }
 
@@ -10526,8 +10988,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events13[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events13[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events13[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events13[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events13[j][k][3] = '#FF3333' ;
                        }
 
@@ -10567,8 +11031,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events13[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events13[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events13[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events13[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events13[j][k][3] = '#FF3333' ;
                        }
 
@@ -10608,8 +11074,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events13[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events13[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events13[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events13[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events13[j][k][3] = '#FF3333' ;
                        }
 
@@ -10649,8 +11117,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events13[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events13[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events13[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events13[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events13[j][k][3] = '#FF3333' ;
                        }
 
@@ -10690,8 +11160,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events13[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events13[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events13[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events13[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events13[j][k][3] = '#FF3333' ;
                        }
 
@@ -10731,8 +11203,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events13[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events13[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events13[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events13[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events13[j][k][3] = '#FF3333' ;
                        }
 
@@ -10772,8 +11246,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events13[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events13[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events13[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events13[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events13[j][k][3] = '#FF3333' ;
                        }
 
@@ -10813,8 +11289,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events13[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events13[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events13[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events13[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events13[j][k][3] = '#FF3333' ;
                        }
 
@@ -10854,8 +11332,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events13[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events13[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events13[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events13[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events13[j][k][3] = '#FF3333' ;
                        }
 
@@ -10895,8 +11375,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events13[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events13[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events13[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events13[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events13[j][k][3] = '#FF3333' ;
                        }
 
@@ -10936,8 +11418,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events13[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events13[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events13[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events13[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events13[j][k][3] = '#FF3333' ;
                        }
 
@@ -10977,8 +11461,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events13[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events13[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events13[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events13[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events13[j][k][3] = '#FF3333' ;
                        }
 
@@ -11018,8 +11504,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events13[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events13[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events13[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events13[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events13[j][k][3] = '#FF3333' ;
                        }
 
@@ -11059,8 +11547,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events13[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events13[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events13[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events13[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events13[j][k][3] = '#FF3333' ;
                        }
 
@@ -11100,8 +11590,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events13[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events13[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events13[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events13[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events13[j][k][3] = '#FF3333' ;
                        }
 
@@ -11141,8 +11633,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events13[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events13[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events13[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events13[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events13[j][k][3] = '#FF3333' ;
                        }
 
@@ -11183,8 +11677,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events14[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events14[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events14[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events14[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events14[j][k][3] = '#FF3333' ;
                        }
 
@@ -11224,8 +11720,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events14[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events14[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events14[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events14[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events14[j][k][3] = '#FF3333' ;
                        }
 
@@ -11265,8 +11763,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events14[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events14[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events14[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events14[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events14[j][k][3] = '#FF3333' ;
                        }
 
@@ -11306,8 +11806,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events14[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events14[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events14[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events14[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events14[j][k][3] = '#FF3333' ;
                        }
 
@@ -11347,8 +11849,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events14[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events14[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events14[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events14[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events14[j][k][3] = '#FF3333' ;
                        }
 
@@ -11388,8 +11892,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events14[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events14[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events14[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events14[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events14[j][k][3] = '#FF3333' ;
                        }
 
@@ -11429,8 +11935,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events14[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events14[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events14[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events14[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events14[j][k][3] = '#FF3333' ;
                        }
 
@@ -11470,8 +11978,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events14[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events14[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events14[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events14[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events14[j][k][3] = '#FF3333' ;
                        }
 
@@ -11511,8 +12021,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events14[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events14[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events14[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events14[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events14[j][k][3] = '#FF3333' ;
                        }
 
@@ -11552,8 +12064,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events14[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events14[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events14[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events14[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events14[j][k][3] = '#FF3333' ;
                        }
 
@@ -11593,8 +12107,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events14[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events14[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events14[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events14[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events14[j][k][3] = '#FF3333' ;
                        }
 
@@ -11634,8 +12150,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events14[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events14[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events14[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events14[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events14[j][k][3] = '#FF3333' ;
                        }
 
@@ -11675,8 +12193,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events14[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events14[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events14[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events14[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events14[j][k][3] = '#FF3333' ;
                        }
 
@@ -11716,8 +12236,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events14[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events14[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events14[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events14[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events14[j][k][3] = '#FF3333' ;
                        }
 
@@ -11757,8 +12279,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events14[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events14[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events14[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events14[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events14[j][k][3] = '#FF3333' ;
                        }
 
@@ -11798,8 +12322,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events14[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events14[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events14[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events14[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events14[j][k][3] = '#FF3333' ;
                        }
 
@@ -11839,8 +12365,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events14[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events14[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events14[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events14[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events14[j][k][3] = '#FF3333' ;
                        }
 
@@ -11880,8 +12408,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events14[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events14[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events14[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events14[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events14[j][k][3] = '#FF3333' ;
                        }
 
@@ -11921,8 +12451,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events14[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events14[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events14[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events14[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events14[j][k][3] = '#FF3333' ;
                        }
 
@@ -11964,8 +12496,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events15[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events15[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events15[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events15[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events15[j][k][3] = '#FF3333' ;
                        }
 
@@ -12005,8 +12539,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events15[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events15[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events15[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events15[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events15[j][k][3] = '#FF3333' ;
                        }
 
@@ -12046,8 +12582,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events15[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events15[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events15[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events15[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events15[j][k][3] = '#FF3333' ;
                        }
 
@@ -12087,8 +12625,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events15[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events15[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events15[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events15[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events15[j][k][3] = '#FF3333' ;
                        }
 
@@ -12128,8 +12668,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events15[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events15[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events15[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events15[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events15[j][k][3] = '#FF3333' ;
                        }
 
@@ -12169,8 +12711,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events15[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events15[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events15[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events15[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events15[j][k][3] = '#FF3333' ;
                        }
 
@@ -12210,8 +12754,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events15[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events15[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events15[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events15[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events15[j][k][3] = '#FF3333' ;
                        }
 
@@ -12251,8 +12797,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events15[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events15[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events15[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events15[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events15[j][k][3] = '#FF3333' ;
                        }
 
@@ -12292,8 +12840,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events15[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events15[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events15[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events15[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events15[j][k][3] = '#FF3333' ;
                        }
 
@@ -12333,8 +12883,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events15[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events15[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events15[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events15[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events15[j][k][3] = '#FF3333' ;
                        }
 
@@ -12374,8 +12926,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events15[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events15[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events15[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events15[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events15[j][k][3] = '#FF3333' ;
                        }
 
@@ -12415,8 +12969,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events15[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events15[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events15[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events15[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events15[j][k][3] = '#FF3333' ;
                        }
 
@@ -12456,8 +13012,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events15[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events15[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events15[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events15[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events15[j][k][3] = '#FF3333' ;
                        }
 
@@ -12497,8 +13055,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events15[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events15[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events15[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events15[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events15[j][k][3] = '#FF3333' ;
                        }
 
@@ -12538,8 +13098,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events15[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events15[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events15[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events15[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events15[j][k][3] = '#FF3333' ;
                        }
 
@@ -12579,8 +13141,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events15[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events15[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events15[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events15[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events15[j][k][3] = '#FF3333' ;
                        }
 
@@ -12620,8 +13184,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events15[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events15[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events15[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events15[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events15[j][k][3] = '#FF3333' ;
                        }
 
@@ -12661,8 +13227,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events15[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events15[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events15[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events15[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events15[j][k][3] = '#FF3333' ;
                        }
 
@@ -12702,8 +13270,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events15[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events15[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events15[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events15[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events15[j][k][3] = '#FF3333' ;
                        }
 
@@ -12745,8 +13315,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events16[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events16[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events16[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events16[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events16[j][k][3] = '#FF3333' ;
                        }
 
@@ -12786,8 +13358,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events16[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events16[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events16[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events16[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events16[j][k][3] = '#FF3333' ;
                        }
 
@@ -12827,8 +13401,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events16[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events16[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events16[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events16[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events16[j][k][3] = '#FF3333' ;
                        }
 
@@ -12868,8 +13444,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events16[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events16[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events16[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events16[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events16[j][k][3] = '#FF3333' ;
                        }
 
@@ -12909,8 +13487,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events16[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events16[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events16[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events16[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events16[j][k][3] = '#FF3333' ;
                        }
 
@@ -12950,8 +13530,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events16[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events16[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events16[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events16[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events16[j][k][3] = '#FF3333' ;
                        }
 
@@ -12991,8 +13573,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events16[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events16[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events16[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events16[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events16[j][k][3] = '#FF3333' ;
                        }
 
@@ -13032,8 +13616,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events16[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events16[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events16[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events16[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events16[j][k][3] = '#FF3333' ;
                        }
 
@@ -13073,8 +13659,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events16[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events16[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events16[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events16[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events16[j][k][3] = '#FF3333' ;
                        }
 
@@ -13114,8 +13702,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events16[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events16[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events16[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events16[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events16[j][k][3] = '#FF3333' ;
                        }
 
@@ -13155,8 +13745,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events16[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events16[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events16[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events16[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events16[j][k][3] = '#FF3333' ;
                        }
 
@@ -13196,8 +13788,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events16[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events16[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events16[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events16[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events16[j][k][3] = '#FF3333' ;
                        }
 
@@ -13237,8 +13831,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events16[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events16[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events16[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events16[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events16[j][k][3] = '#FF3333' ;
                        }
 
@@ -13278,8 +13874,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events16[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events16[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events16[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events16[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events16[j][k][3] = '#FF3333' ;
                        }
 
@@ -13319,8 +13917,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events16[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events16[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events16[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events16[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events16[j][k][3] = '#FF3333' ;
                        }
 
@@ -13360,8 +13960,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events16[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events16[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events16[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events16[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events16[j][k][3] = '#FF3333' ;
                        }
 
@@ -13401,8 +14003,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events16[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events16[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events16[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events16[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events16[j][k][3] = '#FF3333' ;
                        }
 
@@ -13442,8 +14046,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events16[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events16[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events16[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events16[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events16[j][k][3] = '#FF3333' ;
                        }
 
@@ -13483,8 +14089,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events16[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events16[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events16[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events16[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events16[j][k][3] = '#FF3333' ;
                        }
 
@@ -13525,8 +14133,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events17[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events17[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events17[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events17[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events17[j][k][3] = '#FF3333' ;
                        }
 
@@ -13566,8 +14176,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events17[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events17[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events17[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events17[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events17[j][k][3] = '#FF3333' ;
                        }
 
@@ -13607,8 +14219,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events17[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events17[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events17[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events17[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events17[j][k][3] = '#FF3333' ;
                        }
 
@@ -13648,8 +14262,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events17[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events17[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events17[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events17[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events17[j][k][3] = '#FF3333' ;
                        }
 
@@ -13689,8 +14305,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events17[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events17[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events17[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events17[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events17[j][k][3] = '#FF3333' ;
                        }
 
@@ -13730,8 +14348,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events17[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events17[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events17[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events17[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events17[j][k][3] = '#FF3333' ;
                        }
 
@@ -13771,8 +14391,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events17[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events17[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events17[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events17[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events17[j][k][3] = '#FF3333' ;
                        }
 
@@ -13812,8 +14434,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events17[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events17[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events17[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events17[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events17[j][k][3] = '#FF3333' ;
                        }
 
@@ -13853,8 +14477,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events17[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events17[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events17[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events17[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events17[j][k][3] = '#FF3333' ;
                        }
 
@@ -13894,8 +14520,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events17[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events17[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events17[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events17[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events17[j][k][3] = '#FF3333' ;
                        }
 
@@ -13935,8 +14563,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events17[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events17[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events17[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events17[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events17[j][k][3] = '#FF3333' ;
                        }
 
@@ -13976,8 +14606,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events17[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events17[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events17[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events17[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events17[j][k][3] = '#FF3333' ;
                        }
 
@@ -14017,8 +14649,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events17[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events17[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events17[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events17[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events17[j][k][3] = '#FF3333' ;
                        }
 
@@ -14058,8 +14692,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events17[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events17[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events17[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events17[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events17[j][k][3] = '#FF3333' ;
                        }
 
@@ -14099,8 +14735,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events17[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events17[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events17[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events17[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events17[j][k][3] = '#FF3333' ;
                        }
 
@@ -14140,8 +14778,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events17[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events17[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events17[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events17[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events17[j][k][3] = '#FF3333' ;
                        }
 
@@ -14181,8 +14821,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events17[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events17[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events17[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events17[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events17[j][k][3] = '#FF3333' ;
                        }
 
@@ -14222,8 +14864,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events17[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events17[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events17[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events17[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events17[j][k][3] = '#FF3333' ;
                        }
 
@@ -14263,8 +14907,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                        if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                            this.events17[j][k][3] = '#C0C0C0' ;
                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                           this.events17[j][k][3] = '#A0FF7D' ;
-                       }else{
+                        this.events17[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events17[j][k][3] = '#3366FF' ;
+                    }else{
                            this.events17[j][k][3] = '#FF3333' ;
                        }
 
@@ -14307,7 +14953,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             this.events18[j][k][3] = '#C0C0C0' ;
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                             this.events18[j][k][3] = '#A0FF7D' ;
-                        }else{
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events18[j][k][3] = '#3366FF' ;
+                    }else{
                             this.events18[j][k][3] = '#FF3333' ;
                         }
 
@@ -14348,7 +14996,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             this.events18[j][k][3] = '#C0C0C0' ;
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                             this.events18[j][k][3] = '#A0FF7D' ;
-                        }else{
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events18[j][k][3] = '#3366FF' ;
+                    }else{
                             this.events18[j][k][3] = '#FF3333' ;
                         }
 
@@ -14389,7 +15039,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             this.events18[j][k][3] = '#C0C0C0' ;
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                             this.events18[j][k][3] = '#A0FF7D' ;
-                        }else{
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events18[j][k][3] = '#3366FF' ;
+                    }else{
                             this.events18[j][k][3] = '#FF3333' ;
                         }
 
@@ -14430,7 +15082,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             this.events18[j][k][3] = '#C0C0C0' ;
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                             this.events18[j][k][3] = '#A0FF7D' ;
-                        }else{
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events18[j][k][3] = '#3366FF' ;
+                    }else{
                             this.events18[j][k][3] = '#FF3333' ;
                         }
 
@@ -14471,7 +15125,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             this.events18[j][k][3] = '#C0C0C0' ;
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                             this.events18[j][k][3] = '#A0FF7D' ;
-                        }else{
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events18[j][k][3] = '#3366FF' ;
+                    }else{
                             this.events18[j][k][3] = '#FF3333' ;
                         }
 
@@ -14512,7 +15168,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             this.events18[j][k][3] = '#C0C0C0' ;
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                             this.events18[j][k][3] = '#A0FF7D' ;
-                        }else{
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events18[j][k][3] = '#3366FF' ;
+                    }else{
                             this.events18[j][k][3] = '#FF3333' ;
                         }
 
@@ -14553,7 +15211,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             this.events18[j][k][3] = '#C0C0C0' ;
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                             this.events18[j][k][3] = '#A0FF7D' ;
-                        }else{
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events18[j][k][3] = '#3366FF' ;
+                    }else{
                             this.events18[j][k][3] = '#FF3333' ;
                         }
 
@@ -14594,7 +15254,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             this.events18[j][k][3] = '#C0C0C0' ;
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                             this.events18[j][k][3] = '#A0FF7D' ;
-                        }else{
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events18[j][k][3] = '#3366FF' ;
+                    }else{
                             this.events18[j][k][3] = '#FF3333' ;
                         }
 
@@ -14635,7 +15297,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             this.events18[j][k][3] = '#C0C0C0' ;
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                             this.events18[j][k][3] = '#A0FF7D' ;
-                        }else{
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events18[j][k][3] = '#3366FF' ;
+                    }else{
                             this.events18[j][k][3] = '#FF3333' ;
                         }
 
@@ -14676,7 +15340,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             this.events18[j][k][3] = '#C0C0C0' ;
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                             this.events18[j][k][3] = '#A0FF7D' ;
-                        }else{
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events18[j][k][3] = '#3366FF' ;
+                    }else{
                             this.events18[j][k][3] = '#FF3333' ;
                         }
 
@@ -14717,7 +15383,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             this.events18[j][k][3] = '#C0C0C0' ;
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                             this.events18[j][k][3] = '#A0FF7D' ;
-                        }else{
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events18[j][k][3] = '#3366FF' ;
+                    }else{
                             this.events18[j][k][3] = '#FF3333' ;
                         }
 
@@ -14758,7 +15426,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             this.events18[j][k][3] = '#C0C0C0' ;
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                             this.events18[j][k][3] = '#A0FF7D' ;
-                        }else{
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events18[j][k][3] = '#3366FF' ;
+                    }else{
                             this.events18[j][k][3] = '#FF3333' ;
                         }
 
@@ -14799,7 +15469,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             this.events18[j][k][3] = '#C0C0C0' ;
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                             this.events18[j][k][3] = '#A0FF7D' ;
-                        }else{
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events18[j][k][3] = '#3366FF' ;
+                    }else{
                             this.events18[j][k][3] = '#FF3333' ;
                         }
 
@@ -14840,7 +15512,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             this.events18[j][k][3] = '#C0C0C0' ;
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                             this.events18[j][k][3] = '#A0FF7D' ;
-                        }else{
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events18[j][k][3] = '#3366FF' ;
+                    }else{
                             this.events18[j][k][3] = '#FF3333' ;
                         }
 
@@ -14881,7 +15555,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             this.events18[j][k][3] = '#C0C0C0' ;
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                             this.events18[j][k][3] = '#A0FF7D' ;
-                        }else{
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events18[j][k][3] = '#3366FF' ;
+                    }else{
                             this.events18[j][k][3] = '#FF3333' ;
                         }
 
@@ -14922,7 +15598,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             this.events18[j][k][3] = '#C0C0C0' ;
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                             this.events18[j][k][3] = '#A0FF7D' ;
-                        }else{
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events18[j][k][3] = '#3366FF' ;
+                    }else{
                             this.events18[j][k][3] = '#FF3333' ;
                         }
 
@@ -14963,7 +15641,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             this.events18[j][k][3] = '#C0C0C0' ;
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                             this.events18[j][k][3] = '#A0FF7D' ;
-                        }else{
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events18[j][k][3] = '#3366FF' ;
+                    }else{
                             this.events18[j][k][3] = '#FF3333' ;
                         }
 
@@ -15004,7 +15684,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             this.events18[j][k][3] = '#C0C0C0' ;
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                             this.events18[j][k][3] = '#A0FF7D' ;
-                        }else{
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events18[j][k][3] = '#3366FF' ;
+                    }else{
                             this.events18[j][k][3] = '#FF3333' ;
                         }
 
@@ -15045,7 +15727,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             this.events18[j][k][3] = '#C0C0C0' ;
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                             this.events18[j][k][3] = '#A0FF7D' ;
-                        }else{
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events18[j][k][3] = '#3366FF' ;
+                    }else{
                             this.events18[j][k][3] = '#FF3333' ;
                         }
 
@@ -15087,8 +15771,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events19[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events19[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events19[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events19[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events19[j][k][3] = '#FF3333' ;
                           }
 
@@ -15128,8 +15814,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events19[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events19[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events19[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events19[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events19[j][k][3] = '#FF3333' ;
                           }
 
@@ -15169,8 +15857,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events19[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events19[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events19[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events19[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events19[j][k][3] = '#FF3333' ;
                           }
 
@@ -15210,8 +15900,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events19[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events19[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events19[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events19[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events19[j][k][3] = '#FF3333' ;
                           }
 
@@ -15251,8 +15943,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events19[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events19[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events19[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events19[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events19[j][k][3] = '#FF3333' ;
                           }
 
@@ -15292,8 +15986,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events19[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events19[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events19[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events19[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events19[j][k][3] = '#FF3333' ;
                           }
 
@@ -15333,8 +16029,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events19[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events19[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events19[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events19[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events19[j][k][3] = '#FF3333' ;
                           }
 
@@ -15374,8 +16072,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events19[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events19[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events19[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events19[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events19[j][k][3] = '#FF3333' ;
                           }
 
@@ -15415,8 +16115,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events19[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events19[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events19[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events19[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events19[j][k][3] = '#FF3333' ;
                           }
 
@@ -15456,8 +16158,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events19[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events19[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events19[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events19[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events19[j][k][3] = '#FF3333' ;
                           }
 
@@ -15497,8 +16201,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events19[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events19[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events19[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events19[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events19[j][k][3] = '#FF3333' ;
                           }
 
@@ -15538,8 +16244,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events19[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events19[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events19[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events19[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events19[j][k][3] = '#FF3333' ;
                           }
 
@@ -15579,8 +16287,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events19[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events19[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events19[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events19[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events19[j][k][3] = '#FF3333' ;
                           }
 
@@ -15620,8 +16330,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events19[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events19[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events19[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events19[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events19[j][k][3] = '#FF3333' ;
                           }
 
@@ -15661,8 +16373,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events19[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events19[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events19[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events19[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events19[j][k][3] = '#FF3333' ;
                           }
 
@@ -15702,8 +16416,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events19[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events19[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events19[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events19[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events19[j][k][3] = '#FF3333' ;
                           }
 
@@ -15743,8 +16459,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events19[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events19[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events19[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events19[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events19[j][k][3] = '#FF3333' ;
                           }
 
@@ -15784,8 +16502,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events19[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events19[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events19[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events19[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events19[j][k][3] = '#FF3333' ;
                           }
 
@@ -15825,8 +16545,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events19[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events19[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events19[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events19[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events19[j][k][3] = '#FF3333' ;
                           }
 
@@ -15868,8 +16590,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events20[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events20[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events20[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events20[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events20[j][k][3] = '#FF3333' ;
                           }
 
@@ -15909,8 +16633,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events20[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events20[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events20[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events20[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events20[j][k][3] = '#FF3333' ;
                           }
 
@@ -15950,8 +16676,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events20[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events20[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events20[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events20[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events20[j][k][3] = '#FF3333' ;
                           }
 
@@ -15991,8 +16719,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events20[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events20[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events20[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events20[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events20[j][k][3] = '#FF3333' ;
                           }
 
@@ -16032,8 +16762,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events20[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events20[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events20[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events20[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events20[j][k][3] = '#FF3333' ;
                           }
 
@@ -16073,8 +16805,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events20[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events20[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events20[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events20[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events20[j][k][3] = '#FF3333' ;
                           }
 
@@ -16114,8 +16848,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events20[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events20[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events20[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events20[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events20[j][k][3] = '#FF3333' ;
                           }
 
@@ -16155,8 +16891,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events20[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events20[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events20[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events20[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events20[j][k][3] = '#FF3333' ;
                           }
 
@@ -16196,8 +16934,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events20[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events20[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events20[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events20[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events20[j][k][3] = '#FF3333' ;
                           }
 
@@ -16237,8 +16977,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events20[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events20[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events20[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events20[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events20[j][k][3] = '#FF3333' ;
                           }
 
@@ -16278,8 +17020,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events20[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events20[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events20[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events20[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events20[j][k][3] = '#FF3333' ;
                           }
 
@@ -16319,8 +17063,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events20[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events20[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events20[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events20[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events20[j][k][3] = '#FF3333' ;
                           }
 
@@ -16360,8 +17106,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events20[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events20[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events20[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events20[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events20[j][k][3] = '#FF3333' ;
                           }
 
@@ -16401,8 +17149,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events20[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events20[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events20[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events20[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events20[j][k][3] = '#FF3333' ;
                           }
 
@@ -16442,8 +17192,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events20[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events20[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events20[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events20[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events20[j][k][3] = '#FF3333' ;
                           }
 
@@ -16483,8 +17235,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events20[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events20[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events20[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events20[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events20[j][k][3] = '#FF3333' ;
                           }
 
@@ -16524,8 +17278,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events20[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events20[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events20[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events20[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events20[j][k][3] = '#FF3333' ;
                           }
 
@@ -16565,8 +17321,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events20[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events20[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events20[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events20[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events20[j][k][3] = '#FF3333' ;
                           }
 
@@ -16606,8 +17364,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events20[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events20[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events20[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events20[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events20[j][k][3] = '#FF3333' ;
                           }
 
@@ -16649,8 +17409,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events21[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events21[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events21[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events21[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events21[j][k][3] = '#FF3333' ;
                           }
 
@@ -16690,8 +17452,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events21[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events21[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events21[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events21[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events21[j][k][3] = '#FF3333' ;
                           }
 
@@ -16731,8 +17495,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events21[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events21[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events21[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events21[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events21[j][k][3] = '#FF3333' ;
                           }
 
@@ -16772,8 +17538,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events21[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events21[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events21[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events21[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events21[j][k][3] = '#FF3333' ;
                           }
 
@@ -16813,8 +17581,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events21[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events21[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events21[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events21[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events21[j][k][3] = '#FF3333' ;
                           }
 
@@ -16854,8 +17624,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events21[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events21[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events21[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events21[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events21[j][k][3] = '#FF3333' ;
                           }
 
@@ -16895,8 +17667,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events21[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events21[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events21[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events21[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events21[j][k][3] = '#FF3333' ;
                           }
 
@@ -16936,8 +17710,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events21[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events21[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events21[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events21[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events21[j][k][3] = '#FF3333' ;
                           }
 
@@ -16977,8 +17753,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events21[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events21[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events21[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events21[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events21[j][k][3] = '#FF3333' ;
                           }
 
@@ -17018,8 +17796,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events21[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events21[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events21[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events21[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events21[j][k][3] = '#FF3333' ;
                           }
 
@@ -17059,8 +17839,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events21[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events21[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events21[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events21[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events21[j][k][3] = '#FF3333' ;
                           }
 
@@ -17100,8 +17882,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events21[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events21[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events21[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events21[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events21[j][k][3] = '#FF3333' ;
                           }
 
@@ -17141,8 +17925,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events21[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events21[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events21[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events21[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events21[j][k][3] = '#FF3333' ;
                           }
 
@@ -17182,8 +17968,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events21[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events21[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events21[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events21[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events21[j][k][3] = '#FF3333' ;
                           }
 
@@ -17223,8 +18011,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events21[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events21[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events21[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events21[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events21[j][k][3] = '#FF3333' ;
                           }
 
@@ -17264,8 +18054,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events21[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events21[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events21[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events21[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events21[j][k][3] = '#FF3333' ;
                           }
 
@@ -17305,8 +18097,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events21[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events21[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events21[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events21[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events21[j][k][3] = '#FF3333' ;
                           }
 
@@ -17346,8 +18140,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events21[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events21[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events21[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events21[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events21[j][k][3] = '#FF3333' ;
                           }
 
@@ -17387,8 +18183,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events21[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events21[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events21[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events21[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events21[j][k][3] = '#FF3333' ;
                           }
 
@@ -17429,8 +18227,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events22[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events22[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events22[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events22[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events22[j][k][3] = '#FF3333' ;
                           }
 
@@ -17470,8 +18270,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events22[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events22[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events22[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events22[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events22[j][k][3] = '#FF3333' ;
                           }
 
@@ -17511,8 +18313,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events22[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events22[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events22[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events22[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events22[j][k][3] = '#FF3333' ;
                           }
 
@@ -17552,8 +18356,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events22[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events22[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events22[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events22[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events22[j][k][3] = '#FF3333' ;
                           }
 
@@ -17593,8 +18399,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events22[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events22[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events22[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events22[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events22[j][k][3] = '#FF3333' ;
                           }
 
@@ -17634,8 +18442,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events22[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events22[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events22[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events22[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events22[j][k][3] = '#FF3333' ;
                           }
 
@@ -17675,8 +18485,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events22[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events22[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events22[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events22[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events22[j][k][3] = '#FF3333' ;
                           }
 
@@ -17716,8 +18528,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events22[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events22[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events22[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events22[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events22[j][k][3] = '#FF3333' ;
                           }
 
@@ -17757,8 +18571,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events22[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events22[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events22[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events22[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events22[j][k][3] = '#FF3333' ;
                           }
 
@@ -17798,8 +18614,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events22[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events22[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events22[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events22[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events22[j][k][3] = '#FF3333' ;
                           }
 
@@ -17839,8 +18657,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events22[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events22[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events22[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events22[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events22[j][k][3] = '#FF3333' ;
                           }
 
@@ -17880,8 +18700,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events22[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events22[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events22[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events22[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events22[j][k][3] = '#FF3333' ;
                           }
 
@@ -17921,8 +18743,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events22[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events22[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events22[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events22[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events22[j][k][3] = '#FF3333' ;
                           }
 
@@ -17962,8 +18786,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events22[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events22[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events22[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events22[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events22[j][k][3] = '#FF3333' ;
                           }
 
@@ -18003,8 +18829,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events22[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events22[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events22[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events22[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events22[j][k][3] = '#FF3333' ;
                           }
 
@@ -18044,8 +18872,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events22[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events22[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events22[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events22[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events22[j][k][3] = '#FF3333' ;
                           }
 
@@ -18085,8 +18915,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events22[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events22[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events22[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events22[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events22[j][k][3] = '#FF3333' ;
                           }
 
@@ -18126,8 +18958,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events22[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events22[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events22[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events22[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events22[j][k][3] = '#FF3333' ;
                           }
 
@@ -18167,8 +19001,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                               this.events22[j][k][3] = '#C0C0C0' ;
                           }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                              this.events22[j][k][3] = '#A0FF7D' ;
-                          }else{
+                            this.events22[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events22[j][k][3] = '#3366FF' ;
+                    }else{
                               this.events22[j][k][3] = '#FF3333' ;
                           }
 
@@ -18209,8 +19045,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events23[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events23[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events23[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events23[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events23[j][k][3] = '#FF3333' ;
                            }
 
@@ -18250,8 +19088,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events23[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events23[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events23[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events23[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events23[j][k][3] = '#FF3333' ;
                            }
 
@@ -18291,8 +19131,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events23[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events23[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events23[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events23[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events23[j][k][3] = '#FF3333' ;
                            }
 
@@ -18332,8 +19174,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events23[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events23[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events23[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events23[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events23[j][k][3] = '#FF3333' ;
                            }
 
@@ -18373,8 +19217,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events23[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events23[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events23[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events23[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events23[j][k][3] = '#FF3333' ;
                            }
 
@@ -18414,8 +19260,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events23[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events23[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events23[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events23[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events23[j][k][3] = '#FF3333' ;
                            }
 
@@ -18455,8 +19303,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events23[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events23[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events23[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events23[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events23[j][k][3] = '#FF3333' ;
                            }
 
@@ -18496,8 +19346,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events23[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events23[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events23[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events23[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events23[j][k][3] = '#FF3333' ;
                            }
 
@@ -18537,8 +19389,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events23[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events23[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events23[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events23[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events23[j][k][3] = '#FF3333' ;
                            }
 
@@ -18578,8 +19432,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events23[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events23[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events23[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events23[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events23[j][k][3] = '#FF3333' ;
                            }
 
@@ -18619,8 +19475,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events23[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events23[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events23[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events23[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events23[j][k][3] = '#FF3333' ;
                            }
 
@@ -18660,8 +19518,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events23[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events23[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events23[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events23[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events23[j][k][3] = '#FF3333' ;
                            }
 
@@ -18701,8 +19561,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events23[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events23[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events23[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events23[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events23[j][k][3] = '#FF3333' ;
                            }
 
@@ -18742,8 +19604,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events23[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events23[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events23[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events23[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events23[j][k][3] = '#FF3333' ;
                            }
 
@@ -18783,8 +19647,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events23[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events23[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events23[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events23[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events23[j][k][3] = '#FF3333' ;
                            }
 
@@ -18824,8 +19690,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events23[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events23[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events23[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events23[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events23[j][k][3] = '#FF3333' ;
                            }
 
@@ -18865,8 +19733,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events23[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events23[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events23[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events23[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events23[j][k][3] = '#FF3333' ;
                            }
 
@@ -18906,8 +19776,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events23[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events23[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events23[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events23[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events23[j][k][3] = '#FF3333' ;
                            }
 
@@ -18947,8 +19819,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events23[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events23[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events23[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events23[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events23[j][k][3] = '#FF3333' ;
                            }
 
@@ -18990,8 +19864,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events24[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events24[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events24[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events24[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events24[j][k][3] = '#FF3333' ;
                            }
 
@@ -19031,8 +19907,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events24[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events24[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events24[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events24[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events24[j][k][3] = '#FF3333' ;
                            }
 
@@ -19072,8 +19950,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events24[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events24[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events24[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events24[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events24[j][k][3] = '#FF3333' ;
                            }
 
@@ -19113,8 +19993,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events24[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events24[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events24[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events24[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events24[j][k][3] = '#FF3333' ;
                            }
 
@@ -19154,8 +20036,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events24[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events24[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events24[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events24[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events24[j][k][3] = '#FF3333' ;
                            }
 
@@ -19195,8 +20079,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events24[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events24[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events24[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events24[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events24[j][k][3] = '#FF3333' ;
                            }
 
@@ -19236,8 +20122,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events24[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events24[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events24[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events24[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events24[j][k][3] = '#FF3333' ;
                            }
 
@@ -19277,8 +20165,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events24[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events24[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events24[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events24[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events24[j][k][3] = '#FF3333' ;
                            }
 
@@ -19318,8 +20208,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events24[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events24[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events24[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events24[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events24[j][k][3] = '#FF3333' ;
                            }
 
@@ -19359,8 +20251,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events24[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events24[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events24[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events24[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events24[j][k][3] = '#FF3333' ;
                            }
 
@@ -19400,8 +20294,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events24[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events24[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events24[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events24[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events24[j][k][3] = '#FF3333' ;
                            }
 
@@ -19441,8 +20337,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events24[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events24[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events24[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events24[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events24[j][k][3] = '#FF3333' ;
                            }
 
@@ -19482,8 +20380,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events24[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events24[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events24[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events24[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events24[j][k][3] = '#FF3333' ;
                            }
 
@@ -19523,8 +20423,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events24[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events24[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events24[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events24[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events24[j][k][3] = '#FF3333' ;
                            }
 
@@ -19564,8 +20466,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events24[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events24[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events24[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events24[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events24[j][k][3] = '#FF3333' ;
                            }
 
@@ -19605,8 +20509,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events24[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events24[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events24[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events24[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events24[j][k][3] = '#FF3333' ;
                            }
 
@@ -19646,8 +20552,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events24[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events24[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events24[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events24[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events24[j][k][3] = '#FF3333' ;
                            }
 
@@ -19687,8 +20595,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events24[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events24[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events24[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events24[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events24[j][k][3] = '#FF3333' ;
                            }
 
@@ -19728,8 +20638,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events24[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events24[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events24[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events24[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events24[j][k][3] = '#FF3333' ;
                            }
 
@@ -19770,8 +20682,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events25[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events25[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events25[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events25[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events25[j][k][3] = '#FF3333' ;
                            }
 
@@ -19811,8 +20725,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events25[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events25[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events25[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events25[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events25[j][k][3] = '#FF3333' ;
                            }
 
@@ -19852,8 +20768,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events25[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events25[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events25[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events25[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events25[j][k][3] = '#FF3333' ;
                            }
 
@@ -19893,8 +20811,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events25[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events25[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events25[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events25[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events25[j][k][3] = '#FF3333' ;
                            }
 
@@ -19934,8 +20854,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events25[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events25[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events25[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events25[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events25[j][k][3] = '#FF3333' ;
                            }
 
@@ -19975,8 +20897,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events25[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events25[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events25[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events25[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events25[j][k][3] = '#FF3333' ;
                            }
 
@@ -20016,8 +20940,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events25[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events25[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events25[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events25[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events25[j][k][3] = '#FF3333' ;
                            }
 
@@ -20057,8 +20983,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events25[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events25[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events25[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events25[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events25[j][k][3] = '#FF3333' ;
                            }
 
@@ -20098,8 +21026,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events25[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events25[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events25[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events25[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events25[j][k][3] = '#FF3333' ;
                            }
 
@@ -20139,8 +21069,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events25[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events25[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events25[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events25[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events25[j][k][3] = '#FF3333' ;
                            }
 
@@ -20180,8 +21112,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events25[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events25[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events25[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events25[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events25[j][k][3] = '#FF3333' ;
                            }
 
@@ -20221,8 +21155,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events25[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events25[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events25[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events25[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events25[j][k][3] = '#FF3333' ;
                            }
 
@@ -20262,8 +21198,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events25[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events25[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events25[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events25[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events25[j][k][3] = '#FF3333' ;
                            }
 
@@ -20303,8 +21241,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events25[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events25[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events25[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events25[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events25[j][k][3] = '#FF3333' ;
                            }
 
@@ -20344,8 +21284,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events25[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events25[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events25[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events25[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events25[j][k][3] = '#FF3333' ;
                            }
 
@@ -20385,8 +21327,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events25[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events25[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events25[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events25[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events25[j][k][3] = '#FF3333' ;
                            }
 
@@ -20426,8 +21370,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events25[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events25[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events25[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events25[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events25[j][k][3] = '#FF3333' ;
                            }
 
@@ -20467,8 +21413,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events25[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events25[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events25[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events25[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events25[j][k][3] = '#FF3333' ;
                            }
 
@@ -20508,8 +21456,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                this.events25[j][k][3] = '#C0C0C0' ;
                            }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                               this.events25[j][k][3] = '#A0FF7D' ;
-                           }else{
+                            this.events25[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events25[j][k][3] = '#3366FF' ;
+                    }else{
                                this.events25[j][k][3] = '#FF3333' ;
                            }
 
@@ -20550,8 +21500,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                 this.events26[j][k][3] = '#C0C0C0' ;
                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                this.events26[j][k][3] = '#A0FF7D' ;
-                            }else{
+                            this.events26[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events26[j][k][3] = '#3366FF' ;
+                    }else{
                                 this.events26[j][k][3] = '#FF3333' ;
                             }
 
@@ -20591,8 +21543,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                 this.events26[j][k][3] = '#C0C0C0' ;
                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                this.events26[j][k][3] = '#A0FF7D' ;
-                            }else{
+                            this.events26[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events26[j][k][3] = '#3366FF' ;
+                    }else{
                                 this.events26[j][k][3] = '#FF3333' ;
                             }
 
@@ -20632,8 +21586,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                 this.events26[j][k][3] = '#C0C0C0' ;
                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                this.events26[j][k][3] = '#A0FF7D' ;
-                            }else{
+                            this.events26[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events26[j][k][3] = '#3366FF' ;
+                    }else{
                                 this.events26[j][k][3] = '#FF3333' ;
                             }
 
@@ -20673,8 +21629,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                 this.events26[j][k][3] = '#C0C0C0' ;
                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                this.events26[j][k][3] = '#A0FF7D' ;
-                            }else{
+                            this.events26[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events26[j][k][3] = '#3366FF' ;
+                    }else{
                                 this.events26[j][k][3] = '#FF3333' ;
                             }
 
@@ -20714,8 +21672,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                 this.events26[j][k][3] = '#C0C0C0' ;
                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                this.events26[j][k][3] = '#A0FF7D' ;
-                            }else{
+                            this.events26[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events26[j][k][3] = '#3366FF' ;
+                    }else{
                                 this.events26[j][k][3] = '#FF3333' ;
                             }
 
@@ -20755,8 +21715,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                 this.events26[j][k][3] = '#C0C0C0' ;
                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                this.events26[j][k][3] = '#A0FF7D' ;
-                            }else{
+                            this.events26[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events26[j][k][3] = '#3366FF' ;
+                    }else{
                                 this.events26[j][k][3] = '#FF3333' ;
                             }
 
@@ -20796,8 +21758,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                 this.events26[j][k][3] = '#C0C0C0' ;
                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                this.events26[j][k][3] = '#A0FF7D' ;
-                            }else{
+                            this.events26[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events26[j][k][3] = '#3366FF' ;
+                    }else{
                                 this.events26[j][k][3] = '#FF3333' ;
                             }
 
@@ -20837,8 +21801,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                 this.events26[j][k][3] = '#C0C0C0' ;
                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                this.events26[j][k][3] = '#A0FF7D' ;
-                            }else{
+                            this.events26[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events26[j][k][3] = '#3366FF' ;
+                    }else{
                                 this.events26[j][k][3] = '#FF3333' ;
                             }
 
@@ -20878,8 +21844,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                 this.events26[j][k][3] = '#C0C0C0' ;
                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                this.events26[j][k][3] = '#A0FF7D' ;
-                            }else{
+                            this.events26[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events26[j][k][3] = '#3366FF' ;
+                    }else{
                                 this.events26[j][k][3] = '#FF3333' ;
                             }
 
@@ -20919,8 +21887,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                 this.events26[j][k][3] = '#C0C0C0' ;
                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                this.events26[j][k][3] = '#A0FF7D' ;
-                            }else{
+                            this.events26[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events26[j][k][3] = '#3366FF' ;
+                    }else{
                                 this.events26[j][k][3] = '#FF3333' ;
                             }
 
@@ -20960,8 +21930,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                 this.events26[j][k][3] = '#C0C0C0' ;
                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                this.events26[j][k][3] = '#A0FF7D' ;
-                            }else{
+                            this.events26[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events26[j][k][3] = '#3366FF' ;
+                    }else{
                                 this.events26[j][k][3] = '#FF3333' ;
                             }
 
@@ -21001,8 +21973,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                 this.events26[j][k][3] = '#C0C0C0' ;
                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                this.events26[j][k][3] = '#A0FF7D' ;
-                            }else{
+                            this.events26[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events26[j][k][3] = '#3366FF' ;
+                    }else{
                                 this.events26[j][k][3] = '#FF3333' ;
                             }
 
@@ -21042,8 +22016,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                 this.events26[j][k][3] = '#C0C0C0' ;
                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                this.events26[j][k][3] = '#A0FF7D' ;
-                            }else{
+                            this.events26[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events26[j][k][3] = '#3366FF' ;
+                    }else{
                                 this.events26[j][k][3] = '#FF3333' ;
                             }
 
@@ -21083,8 +22059,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                 this.events26[j][k][3] = '#C0C0C0' ;
                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                this.events26[j][k][3] = '#A0FF7D' ;
-                            }else{
+                            this.events26[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events26[j][k][3] = '#3366FF' ;
+                    }else{
                                 this.events26[j][k][3] = '#FF3333' ;
                             }
 
@@ -21124,8 +22102,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                 this.events26[j][k][3] = '#C0C0C0' ;
                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                this.events26[j][k][3] = '#A0FF7D' ;
-                            }else{
+                            this.events26[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events26[j][k][3] = '#3366FF' ;
+                    }else{
                                 this.events26[j][k][3] = '#FF3333' ;
                             }
 
@@ -21165,8 +22145,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                 this.events26[j][k][3] = '#C0C0C0' ;
                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                this.events26[j][k][3] = '#A0FF7D' ;
-                            }else{
+                            this.events26[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events26[j][k][3] = '#3366FF' ;
+                    }else{
                                 this.events26[j][k][3] = '#FF3333' ;
                             }
 
@@ -21206,8 +22188,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                 this.events26[j][k][3] = '#C0C0C0' ;
                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                this.events26[j][k][3] = '#A0FF7D' ;
-                            }else{
+                            this.events26[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events26[j][k][3] = '#3366FF' ;
+                    }else{
                                 this.events26[j][k][3] = '#FF3333' ;
                             }
 
@@ -21247,8 +22231,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                 this.events26[j][k][3] = '#C0C0C0' ;
                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                this.events26[j][k][3] = '#A0FF7D' ;
-                            }else{
+                            this.events26[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events26[j][k][3] = '#3366FF' ;
+                    }else{
                                 this.events26[j][k][3] = '#FF3333' ;
                             }
 
@@ -21288,8 +22274,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                 this.events26[j][k][3] = '#C0C0C0' ;
                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                this.events26[j][k][3] = '#A0FF7D' ;
-                            }else{
+                            this.events26[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events26[j][k][3] = '#3366FF' ;
+                    }else{
                                 this.events26[j][k][3] = '#FF3333' ;
                             }
 
@@ -21330,8 +22318,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events27[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events27[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events27[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events27[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events27[j][k][3] = '#FF3333' ;
                              }
 
@@ -21371,8 +22361,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events27[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events27[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events27[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events27[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events27[j][k][3] = '#FF3333' ;
                              }
 
@@ -21412,8 +22404,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events27[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events27[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events27[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events27[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events27[j][k][3] = '#FF3333' ;
                              }
 
@@ -21453,8 +22447,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events27[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events27[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events27[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events27[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events27[j][k][3] = '#FF3333' ;
                              }
 
@@ -21494,8 +22490,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events27[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events27[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events27[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events27[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events27[j][k][3] = '#FF3333' ;
                              }
 
@@ -21535,8 +22533,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events27[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events27[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events27[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events27[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events27[j][k][3] = '#FF3333' ;
                              }
 
@@ -21576,8 +22576,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events27[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events27[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events27[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events27[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events27[j][k][3] = '#FF3333' ;
                              }
 
@@ -21617,8 +22619,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events27[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events27[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events27[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events27[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events27[j][k][3] = '#FF3333' ;
                              }
 
@@ -21658,8 +22662,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events27[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events27[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events27[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events27[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events27[j][k][3] = '#FF3333' ;
                              }
 
@@ -21699,8 +22705,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events27[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events27[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events27[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events27[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events27[j][k][3] = '#FF3333' ;
                              }
 
@@ -21740,8 +22748,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events27[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events27[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events27[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events27[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events27[j][k][3] = '#FF3333' ;
                              }
 
@@ -21781,8 +22791,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events27[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events27[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events27[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events27[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events27[j][k][3] = '#FF3333' ;
                              }
 
@@ -21822,8 +22834,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events27[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events27[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events27[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events27[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events27[j][k][3] = '#FF3333' ;
                              }
 
@@ -21863,8 +22877,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events27[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events27[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events27[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events27[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events27[j][k][3] = '#FF3333' ;
                              }
 
@@ -21904,8 +22920,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events27[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events27[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events27[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events27[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events27[j][k][3] = '#FF3333' ;
                              }
 
@@ -21945,8 +22963,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events27[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events27[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events27[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events27[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events27[j][k][3] = '#FF3333' ;
                              }
 
@@ -21986,8 +23006,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events27[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events27[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events27[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events27[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events27[j][k][3] = '#FF3333' ;
                              }
 
@@ -22027,8 +23049,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events27[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events27[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events27[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events27[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events27[j][k][3] = '#FF3333' ;
                              }
 
@@ -22068,8 +23092,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events27[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events27[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events27[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events27[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events27[j][k][3] = '#FF3333' ;
                              }
 
@@ -22111,8 +23137,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events28[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events28[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events28[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events28[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events28[j][k][3] = '#FF3333' ;
                              }
 
@@ -22152,8 +23180,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events28[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events28[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events28[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events28[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events28[j][k][3] = '#FF3333' ;
                              }
 
@@ -22193,8 +23223,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events28[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events28[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events28[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events28[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events28[j][k][3] = '#FF3333' ;
                              }
 
@@ -22234,8 +23266,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events28[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events28[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events28[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events28[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events28[j][k][3] = '#FF3333' ;
                              }
 
@@ -22275,8 +23309,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events28[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events28[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events28[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events28[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events28[j][k][3] = '#FF3333' ;
                              }
 
@@ -22316,8 +23352,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events28[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events28[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events28[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events28[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events28[j][k][3] = '#FF3333' ;
                              }
 
@@ -22357,8 +23395,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events28[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events28[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events28[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events28[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events28[j][k][3] = '#FF3333' ;
                              }
 
@@ -22398,8 +23438,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events28[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events28[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events28[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events28[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events28[j][k][3] = '#FF3333' ;
                              }
 
@@ -22439,8 +23481,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events28[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events28[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events28[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events28[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events28[j][k][3] = '#FF3333' ;
                              }
 
@@ -22480,8 +23524,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events28[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events28[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events28[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events28[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events28[j][k][3] = '#FF3333' ;
                              }
 
@@ -22521,8 +23567,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events28[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events28[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events28[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events28[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events28[j][k][3] = '#FF3333' ;
                              }
 
@@ -22562,8 +23610,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events28[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events28[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events28[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events28[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events28[j][k][3] = '#FF3333' ;
                              }
 
@@ -22603,8 +23653,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events28[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events28[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events28[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events28[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events28[j][k][3] = '#FF3333' ;
                              }
 
@@ -22644,8 +23696,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events28[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events28[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events28[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events28[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events28[j][k][3] = '#FF3333' ;
                              }
 
@@ -22685,8 +23739,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events28[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events28[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events28[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events28[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events28[j][k][3] = '#FF3333' ;
                              }
 
@@ -22726,8 +23782,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events28[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events28[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events28[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events28[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events28[j][k][3] = '#FF3333' ;
                              }
 
@@ -22767,8 +23825,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events28[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events28[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events28[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events28[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events28[j][k][3] = '#FF3333' ;
                              }
 
@@ -22808,8 +23868,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events28[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events28[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events28[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events28[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events28[j][k][3] = '#FF3333' ;
                              }
 
@@ -22849,8 +23911,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events28[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events28[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events28[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events28[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events28[j][k][3] = '#FF3333' ;
                              }
 
@@ -22892,8 +23956,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events29[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events29[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events29[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events29[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events29[j][k][3] = '#FF3333' ;
                              }
 
@@ -22933,8 +23999,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events29[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events29[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events29[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events29[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events29[j][k][3] = '#FF3333' ;
                              }
 
@@ -22974,8 +24042,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events29[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events29[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events29[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events29[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events29[j][k][3] = '#FF3333' ;
                              }
 
@@ -23015,8 +24085,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events29[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events29[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events29[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events29[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events29[j][k][3] = '#FF3333' ;
                              }
 
@@ -23056,8 +24128,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events29[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events29[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events29[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events29[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events29[j][k][3] = '#FF3333' ;
                              }
 
@@ -23097,8 +24171,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events29[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events29[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events29[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events29[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events29[j][k][3] = '#FF3333' ;
                              }
 
@@ -23138,8 +24214,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events29[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events29[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events29[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events29[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events29[j][k][3] = '#FF3333' ;
                              }
 
@@ -23179,8 +24257,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events29[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events29[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events29[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events29[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events29[j][k][3] = '#FF3333' ;
                              }
 
@@ -23220,8 +24300,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events29[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events29[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events29[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events29[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events29[j][k][3] = '#FF3333' ;
                              }
 
@@ -23261,8 +24343,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events29[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events29[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events29[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events29[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events29[j][k][3] = '#FF3333' ;
                              }
 
@@ -23302,8 +24386,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events29[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events29[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events29[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events29[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events29[j][k][3] = '#FF3333' ;
                              }
 
@@ -23343,8 +24429,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events29[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events29[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events29[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events29[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events29[j][k][3] = '#FF3333' ;
                              }
 
@@ -23384,8 +24472,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events29[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events29[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events29[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events29[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events29[j][k][3] = '#FF3333' ;
                              }
 
@@ -23425,8 +24515,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events29[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events29[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events29[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events29[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events29[j][k][3] = '#FF3333' ;
                              }
 
@@ -23466,8 +24558,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events29[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events29[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events29[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events29[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events29[j][k][3] = '#FF3333' ;
                              }
 
@@ -23507,8 +24601,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events29[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events29[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events29[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events29[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events29[j][k][3] = '#FF3333' ;
                              }
 
@@ -23548,8 +24644,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events29[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events29[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events29[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events29[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events29[j][k][3] = '#FF3333' ;
                              }
 
@@ -23589,8 +24687,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events29[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events29[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events29[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events29[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events29[j][k][3] = '#FF3333' ;
                              }
 
@@ -23630,8 +24730,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                  this.events29[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                 this.events29[j][k][3] = '#A0FF7D' ;
-                             }else{
+                            this.events29[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events29[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events29[j][k][3] = '#FF3333' ;
                              }
 
@@ -23673,7 +24775,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                  this.events30[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                                  this.events30[j][k][3] = '#A0FF7D' ;
-                             }else{
+                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events30[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events30[j][k][3] = '#FF3333' ;
                              }
 
@@ -23714,7 +24818,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                  this.events30[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                                  this.events30[j][k][3] = '#A0FF7D' ;
-                             }else{
+                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events30[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events30[j][k][3] = '#FF3333' ;
                              }
 
@@ -23755,7 +24861,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                  this.events30[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                                  this.events30[j][k][3] = '#A0FF7D' ;
-                             }else{
+                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events30[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events30[j][k][3] = '#FF3333' ;
                              }
 
@@ -23796,7 +24904,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                  this.events30[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                                  this.events30[j][k][3] = '#A0FF7D' ;
-                             }else{
+                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events30[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events30[j][k][3] = '#FF3333' ;
                              }
 
@@ -23837,7 +24947,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                  this.events30[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                                  this.events30[j][k][3] = '#A0FF7D' ;
-                             }else{
+                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events30[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events30[j][k][3] = '#FF3333' ;
                              }
 
@@ -23878,7 +24990,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                  this.events30[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                                  this.events30[j][k][3] = '#A0FF7D' ;
-                             }else{
+                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events30[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events30[j][k][3] = '#FF3333' ;
                              }
 
@@ -23919,7 +25033,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                  this.events30[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                                  this.events30[j][k][3] = '#A0FF7D' ;
-                             }else{
+                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events30[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events30[j][k][3] = '#FF3333' ;
                              }
 
@@ -23960,7 +25076,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                  this.events30[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                                  this.events30[j][k][3] = '#A0FF7D' ;
-                             }else{
+                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events30[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events30[j][k][3] = '#FF3333' ;
                              }
 
@@ -24001,7 +25119,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                  this.events30[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                                  this.events30[j][k][3] = '#A0FF7D' ;
-                             }else{
+                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events30[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events30[j][k][3] = '#FF3333' ;
                              }
 
@@ -24042,7 +25162,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                  this.events30[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                                  this.events30[j][k][3] = '#A0FF7D' ;
-                             }else{
+                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events30[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events30[j][k][3] = '#FF3333' ;
                              }
 
@@ -24083,7 +25205,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                  this.events30[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                                  this.events30[j][k][3] = '#A0FF7D' ;
-                             }else{
+                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events30[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events30[j][k][3] = '#FF3333' ;
                              }
 
@@ -24124,7 +25248,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                  this.events30[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                                  this.events30[j][k][3] = '#A0FF7D' ;
-                             }else{
+                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events30[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events30[j][k][3] = '#FF3333' ;
                              }
 
@@ -24165,7 +25291,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                  this.events30[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                                  this.events30[j][k][3] = '#A0FF7D' ;
-                             }else{
+                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events30[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events30[j][k][3] = '#FF3333' ;
                              }
 
@@ -24206,7 +25334,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                  this.events30[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                                  this.events30[j][k][3] = '#A0FF7D' ;
-                             }else{
+                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events30[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events30[j][k][3] = '#FF3333' ;
                              }
 
@@ -24247,7 +25377,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                  this.events30[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                                  this.events30[j][k][3] = '#A0FF7D' ;
-                             }else{
+                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events30[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events30[j][k][3] = '#FF3333' ;
                              }
 
@@ -24288,7 +25420,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                  this.events30[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                                  this.events30[j][k][3] = '#A0FF7D' ;
-                             }else{
+                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events30[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events30[j][k][3] = '#FF3333' ;
                              }
 
@@ -24329,7 +25463,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                  this.events30[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                                  this.events30[j][k][3] = '#A0FF7D' ;
-                             }else{
+                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events30[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events30[j][k][3] = '#FF3333' ;
                              }
 
@@ -24370,7 +25506,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                  this.events30[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                                  this.events30[j][k][3] = '#A0FF7D' ;
-                             }else{
+                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events30[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events30[j][k][3] = '#FF3333' ;
                              }
 
@@ -24411,7 +25549,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                  this.events30[j][k][3] = '#C0C0C0' ;
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                                  this.events30[j][k][3] = '#A0FF7D' ;
-                             }else{
+                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events30[j][k][3] = '#3366FF' ;
+                    }else{
                                  this.events30[j][k][3] = '#FF3333' ;
                              }
 
@@ -24452,8 +25592,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                               if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                   this.events31[j][k][3] = '#C0C0C0' ;
                               }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                  this.events31[j][k][3] = '#A0FF7D' ;
-                              }else{
+                                 this.events31[j][k][3] = '#A0FF7D' ;
+                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events31[j][k][3] = '#3366FF' ;
+                    }else{
                                   this.events31[j][k][3] = '#FF3333' ;
                               }
 
@@ -24493,8 +25635,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                               if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                   this.events31[j][k][3] = '#C0C0C0' ;
                               }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                  this.events31[j][k][3] = '#A0FF7D' ;
-                              }else{
+                                 this.events31[j][k][3] = '#A0FF7D' ;
+                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events31[j][k][3] = '#3366FF' ;
+                    }else{
                                   this.events31[j][k][3] = '#FF3333' ;
                               }
 
@@ -24534,8 +25678,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                               if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                   this.events31[j][k][3] = '#C0C0C0' ;
                               }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                  this.events31[j][k][3] = '#A0FF7D' ;
-                              }else{
+                                 this.events31[j][k][3] = '#A0FF7D' ;
+                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events31[j][k][3] = '#3366FF' ;
+                    }else{
                                   this.events31[j][k][3] = '#FF3333' ;
                               }
 
@@ -24575,8 +25721,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                               if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                   this.events31[j][k][3] = '#C0C0C0' ;
                               }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                  this.events31[j][k][3] = '#A0FF7D' ;
-                              }else{
+                                 this.events31[j][k][3] = '#A0FF7D' ;
+                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events31[j][k][3] = '#3366FF' ;
+                    }else{
                                   this.events31[j][k][3] = '#FF3333' ;
                               }
 
@@ -24616,8 +25764,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                               if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                   this.events31[j][k][3] = '#C0C0C0' ;
                               }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                  this.events31[j][k][3] = '#A0FF7D' ;
-                              }else{
+                                 this.events31[j][k][3] = '#A0FF7D' ;
+                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events31[j][k][3] = '#3366FF' ;
+                    }else{
                                   this.events31[j][k][3] = '#FF3333' ;
                               }
 
@@ -24657,8 +25807,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                               if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                   this.events31[j][k][3] = '#C0C0C0' ;
                               }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                  this.events31[j][k][3] = '#A0FF7D' ;
-                              }else{
+                                 this.events31[j][k][3] = '#A0FF7D' ;
+                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events31[j][k][3] = '#3366FF' ;
+                    }else{
                                   this.events31[j][k][3] = '#FF3333' ;
                               }
 
@@ -24698,8 +25850,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                               if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                   this.events31[j][k][3] = '#C0C0C0' ;
                               }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                  this.events31[j][k][3] = '#A0FF7D' ;
-                              }else{
+                                 this.events31[j][k][3] = '#A0FF7D' ;
+                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events31[j][k][3] = '#3366FF' ;
+                    }else{
                                   this.events31[j][k][3] = '#FF3333' ;
                               }
 
@@ -24739,8 +25893,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                               if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                   this.events31[j][k][3] = '#C0C0C0' ;
                               }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                  this.events31[j][k][3] = '#A0FF7D' ;
-                              }else{
+                                 this.events31[j][k][3] = '#A0FF7D' ;
+                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events31[j][k][3] = '#3366FF' ;
+                    }else{
                                   this.events31[j][k][3] = '#FF3333' ;
                               }
 
@@ -24780,8 +25936,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                               if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                   this.events31[j][k][3] = '#C0C0C0' ;
                               }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                  this.events31[j][k][3] = '#A0FF7D' ;
-                              }else{
+                                 this.events31[j][k][3] = '#A0FF7D' ;
+                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events31[j][k][3] = '#3366FF' ;
+                    }else{
                                   this.events31[j][k][3] = '#FF3333' ;
                               }
 
@@ -24821,8 +25979,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                               if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                   this.events31[j][k][3] = '#C0C0C0' ;
                               }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                  this.events31[j][k][3] = '#A0FF7D' ;
-                              }else{
+                                 this.events31[j][k][3] = '#A0FF7D' ;
+                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events31[j][k][3] = '#3366FF' ;
+                    }else{
                                   this.events31[j][k][3] = '#FF3333' ;
                               }
 
@@ -24862,8 +26022,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                               if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                   this.events31[j][k][3] = '#C0C0C0' ;
                               }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                  this.events31[j][k][3] = '#A0FF7D' ;
-                              }else{
+                                 this.events31[j][k][3] = '#A0FF7D' ;
+                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events31[j][k][3] = '#3366FF' ;
+                    }else{
                                   this.events31[j][k][3] = '#FF3333' ;
                               }
 
@@ -24903,8 +26065,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                               if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                   this.events31[j][k][3] = '#C0C0C0' ;
                               }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                  this.events31[j][k][3] = '#A0FF7D' ;
-                              }else{
+                                 this.events31[j][k][3] = '#A0FF7D' ;
+                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events31[j][k][3] = '#3366FF' ;
+                    }else{
                                   this.events31[j][k][3] = '#FF3333' ;
                               }
 
@@ -24944,8 +26108,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                               if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                   this.events31[j][k][3] = '#C0C0C0' ;
                               }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                  this.events31[j][k][3] = '#A0FF7D' ;
-                              }else{
+                                 this.events31[j][k][3] = '#A0FF7D' ;
+                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events31[j][k][3] = '#3366FF' ;
+                    }else{
                                   this.events31[j][k][3] = '#FF3333' ;
                               }
 
@@ -24985,8 +26151,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                               if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                   this.events31[j][k][3] = '#C0C0C0' ;
                               }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                  this.events31[j][k][3] = '#A0FF7D' ;
-                              }else{
+                                 this.events31[j][k][3] = '#A0FF7D' ;
+                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events31[j][k][3] = '#3366FF' ;
+                    }else{
                                   this.events31[j][k][3] = '#FF3333' ;
                               }
 
@@ -25026,8 +26194,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                               if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                   this.events31[j][k][3] = '#C0C0C0' ;
                               }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                  this.events31[j][k][3] = '#A0FF7D' ;
-                              }else{
+                                 this.events31[j][k][3] = '#A0FF7D' ;
+                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events31[j][k][3] = '#3366FF' ;
+                    }else{
                                   this.events31[j][k][3] = '#FF3333' ;
                               }
 
@@ -25067,8 +26237,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                               if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                   this.events31[j][k][3] = '#C0C0C0' ;
                               }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                  this.events31[j][k][3] = '#A0FF7D' ;
-                              }else{
+                                 this.events31[j][k][3] = '#A0FF7D' ;
+                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events31[j][k][3] = '#3366FF' ;
+                    }else{
                                   this.events31[j][k][3] = '#FF3333' ;
                               }
 
@@ -25108,8 +26280,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                               if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                   this.events31[j][k][3] = '#C0C0C0' ;
                               }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                  this.events31[j][k][3] = '#A0FF7D' ;
-                              }else{
+                                 this.events31[j][k][3] = '#A0FF7D' ;
+                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events31[j][k][3] = '#3366FF' ;
+                    }else{
                                   this.events31[j][k][3] = '#FF3333' ;
                               }
 
@@ -25149,8 +26323,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                               if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                   this.events31[j][k][3] = '#C0C0C0' ;
                               }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                  this.events31[j][k][3] = '#A0FF7D' ;
-                              }else{
+                                 this.events31[j][k][3] = '#A0FF7D' ;
+                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events31[j][k][3] = '#3366FF' ;
+                    }else{
                                   this.events31[j][k][3] = '#FF3333' ;
                               }
 
@@ -25190,8 +26366,10 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                               if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
                                   this.events31[j][k][3] = '#C0C0C0' ;
                               }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                                  this.events31[j][k][3] = '#A0FF7D' ;
-                              }else{
+                                 this.events31[j][k][3] = '#A0FF7D' ;
+                             }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                        this.events31[j][k][3] = '#3366FF' ;
+                    }else{
                                   this.events31[j][k][3] = '#FF3333' ;
                               }
 

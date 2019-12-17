@@ -3,12 +3,58 @@
 
 
 
+<mat-sidenav-container *ngIf="!(isLoggedInAdmin | async) && !(isLoggedIn | async) && !(isLoggedInHR | async)"
+                       class="card1" (backdropClick)="close()">
+
+  <br/><br/>
+  <div style="text-align: center;">
+    <img src="http://www.ils.co.th/wp-content/themes/ils/images/logo.png" alt="ILS"/>
+
+  </div>
+
+  <div align="center">
+    <div class="field" style="width: 80%;">
+      <p class="control has-icons-left has-icons-right">
+        <input class="input" type="email" placeholder="Username" [(ngModel)]="username" (keydown.enter)="login()">
+        <span class="icon is-small is-left">
+      <i class="fas fa-envelope"></i>
+    </span>
+        <span class="icon is-small is-right">
+      <i class="fas fa-check"></i>
+    </span>
+      </p>
+    </div>
+
+    <div class="field" style="width: 80%;">
+      <p class="control has-icons-left">
+        <input class="input" type="password" placeholder="Password" [(ngModel)]="password" (keydown.enter)="login()">
+        <span class="icon is-small is-left">
+      <i class="fas fa-lock"></i>
+    </span>
+      </p>
+    </div>
+
+    <button class="button is-info is-active" style="width:60%" (click)="login()"><b>Login</b></button><br/><br/>
+    <button class="button is-info is-active" style="width:60%" (click)="reset()"><b>Reset</b></button>
+  </div>
+
+  <br/><br/>
+
+
+
+
+
+</mat-sidenav-container>
+
+
+
+
   <mat-sidenav-container *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)"
     class="card" (backdropClick)="close()">
 
     <mat-sidenav #sidenav (keydown.escape)="close()" class="sidenavs">
 
-      <button mat-button (click)="close()" routerLink="/selectDate" class="botton">Book MeetingRoom</button><br>
+      <button mat-button (click)="close()" routerLink="/" class="botton">Book MeetingRoom</button><br>
       <button mat-button (click)="close()" routerLink="/dashboard" class="botton">Dashboard</button>
 
       <mat-accordion *ngIf="(isLoggedInAdmin | async)" >
@@ -21,7 +67,7 @@
           </mat-expansion-panel-header>
 
           <button mat-button (click)="close()" routerLink="/systemadmin" class="botton">System Admin</button>
-          <button mat-button (click)="close()" routerLink="/addroom" class="botton">Add Room</button>
+          <button mat-button (click)="close()" routerLink="/addroom" class="botton">Add MeetingRoom</button>
         </mat-expansion-panel>
 
       </mat-accordion>

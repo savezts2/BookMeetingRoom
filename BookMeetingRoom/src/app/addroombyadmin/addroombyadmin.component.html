@@ -1,1 +1,92 @@
-<p>addroombyadmin works!</p>
+
+<body class="bgimg" bgproperties="fixed">
+
+
+
+<mat-sidenav-container *ngIf="(isLoggedInAdmin | async)"
+                       class="card" (backdropClick)="close()">
+  <mat-sidenav #sidenav (keydown.escape)="close()" class="sidenavs">
+    <button mat-button (click)="close()" routerLink="/" class="botton">Book MeetingRoom</button><br>
+    <button mat-button (click)="close()" routerLink="/dashboard" class="botton">Dashboard</button>
+
+    <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Admin
+          </mat-panel-title>
+
+        </mat-expansion-panel-header>
+
+        <button mat-button (click)="close()" routerLink="/systemadmin" class="botton">System Admin</button>
+        <button mat-button (click)="close()" routerLink="/addroom" class="botton">Add MeetingRoom</button>
+      </mat-expansion-panel>
+
+    </mat-accordion>
+
+
+  </mat-sidenav>
+
+
+  <mat-sidenav-content>
+
+    <button type="button" mat-button (click)="sidenav.open()">
+      <mat-icon aria-hidden="false" aria-label="Example home icon" class="mat-icon2">list
+      </mat-icon><p>Menu</p>
+    </button>
+
+
+    <h1 align ="center">Add MeetingRoom</h1>
+    <br/><br/>
+    <div align="center">
+
+    <input class="input is-rounded" type="text" placeholder="Roomname" style="width:35%;" [(ngModel)]="roominput">
+    <button mat-flat-button class="bottonadd" (click)="onAddroom()">Add</button>
+
+    </div>
+
+    <br/><br/>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" align="center" style="width: 600px;">
+
+      <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+
+      <!-- Position Column -->
+
+      <ng-container matColumnDef="roomnames">
+        <th mat-header-cell *matHeaderCellDef style="text-align:left; color:black; vertical-align: middle;"> Roomname </th>
+        <td mat-cell *matCellDef="let element" style="text-align:left; color:black; vertical-align: middle;"> {{element.roomnames}} </td>
+      </ng-container>
+
+
+      <ng-container matColumnDef="edit">
+        <th mat-header-cell *matHeaderCellDef style="text-align:left; color:black; vertical-align: middle;"> Edit </th>
+        <td mat-cell *matCellDef="let element">
+          <button mat-icon-button matTooltipPosition="left" (click)="onEdit(element)">
+            <mat-icon>edit</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="delete" stickyEnd>
+        <th mat-header-cell *matHeaderCellDef style="text-align:left; color:black; vertical-align: middle;"> Delete </th>
+        <td mat-cell *matCellDef="let element"> <button mat-icon-button matTooltipPosition="left" (click)="onDelete(element)">
+          <mat-icon>delete_forever</mat-icon>
+        </button> </td>
+      </ng-container>
+
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns" ></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="example-element-row"></tr>
+
+    </table>
+
+
+    <br/><br/><br/><br/>
+  </mat-sidenav-content>
+
+
+</mat-sidenav-container>
+
+
+</body>
