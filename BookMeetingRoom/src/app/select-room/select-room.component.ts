@@ -1014,43 +1014,43 @@ appendRoomname(){
     for(let j = 0 ; j < 19 ; j++){
 
       if(j == 0){
-        this.events[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
+        this.events[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
       }else if(j == 1){
-        this.events[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
+        this.events[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
       }else if(j == 2){
-        this.events[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
+        this.events[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
       }else if(j == 3){
-        this.events[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
+        this.events[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
       }else if(j == 4){
-        this.events[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
+        this.events[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
       }else if(j == 5){
-        this.events[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
+        this.events[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
       }else if(j == 6){
-        this.events[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
+        this.events[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
       }else if(j == 7){
-        this.events[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
+        this.events[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
       }else if(j == 8){
-        this.events[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
+        this.events[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
       }else if(j == 9){
-        this.events[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
+        this.events[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
       }else if(j == 10){
-        this.events[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
+        this.events[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
       }else if(j == 11){
-        this.events[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
+        this.events[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
       }else if(j == 12){
-        this.events[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
+        this.events[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
       }else if(j == 13){
-        this.events[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
+        this.events[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
       }else if(j == 14){
-        this.events[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
+        this.events[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
       }else if(j == 15){
-        this.events[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
+        this.events[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
       }else if(j == 16){
-        this.events[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
+        this.events[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
       }else if(j == 17){
-        this.events[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
+        this.events[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
       }else if(j == 18){
-        this.events[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
+        this.events[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
       }
 
     }
@@ -1091,7 +1091,9 @@ public appendTime(){
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-                  this.events[j][k][12] = this.report[i].users.username;
+                  this.events[j][k][12] = this.report[i].users.username;if(this.events[j][k][8].length > 15){
+                       this.events[j][k][15] = false;
+                  }
 
                    if(this.events[j][k][2] > 1){
                       this.counting = k + 1;
@@ -1133,7 +1135,9 @@ public appendTime(){
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-                  this.events[j][k][12] = this.report[i].users.username;
+                  this.events[j][k][12] = this.report[i].users.username;if(this.events[j][k][8].length > 15){
+                       this.events[j][k][15] = false;
+                  }
 
                    if(this.events[j][k][2] > 1){
                       this.counting = k + 1;
@@ -1174,7 +1178,9 @@ public appendTime(){
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-                  this.events[j][k][12] = this.report[i].users.username;
+                  this.events[j][k][12] = this.report[i].users.username;if(this.events[j][k][8].length > 15){
+                       this.events[j][k][15] = false;
+                  }
 
                    if(this.events[j][k][2] > 1){
                       this.counting = k + 1;
@@ -1215,7 +1221,9 @@ public appendTime(){
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-                  this.events[j][k][12] = this.report[i].users.username;
+                  this.events[j][k][12] = this.report[i].users.username;if(this.events[j][k][8].length > 15){
+                       this.events[j][k][15] = false;
+                  }
 
                    if(this.events[j][k][2] > 1){
                       this.counting = k + 1;
@@ -1256,7 +1264,9 @@ public appendTime(){
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-                  this.events[j][k][12] = this.report[i].users.username;
+                  this.events[j][k][12] = this.report[i].users.username;if(this.events[j][k][8].length > 15){
+                       this.events[j][k][15] = false;
+                  }
 
                    if(this.events[j][k][2] > 1){
                       this.counting = k + 1;
@@ -1297,7 +1307,9 @@ public appendTime(){
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-                  this.events[j][k][12] = this.report[i].users.username;
+                  this.events[j][k][12] = this.report[i].users.username;if(this.events[j][k][8].length > 15){
+                       this.events[j][k][15] = false;
+                  }
 
                    if(this.events[j][k][2] > 1){
                       this.counting = k + 1;
@@ -1336,10 +1348,12 @@ public appendTime(){
                   this.events[j][k][7] = this.report[i].bookMeetingRoom.attendees ;
                   this.events[j][k][14] = this.report[i].bookMeetingRoom.telbookingby ;
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
-                  console.log(this.events[j][k][8].length);
+
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-                  this.events[j][k][12] = this.report[i].users.username;
+                  this.events[j][k][12] = this.report[i].users.username;if(this.events[j][k][8].length > 15){
+                       this.events[j][k][15] = false;
+                  }
 
                    if(this.events[j][k][2] > 1){
                       this.counting = k + 1;
@@ -1381,7 +1395,11 @@ public appendTime(){
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-                  this.events[j][k][12] = this.report[i].users.username;
+                  this.events[j][k][12] = this.report[i].users.username;if(this.events[j][k][8].length > 15){
+                       this.events[j][k][15] = false;
+                  }
+
+
 
                    if(this.events[j][k][2] > 1){
                       this.counting = k + 1;
@@ -1422,7 +1440,9 @@ public appendTime(){
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-                  this.events[j][k][12] = this.report[i].users.username;
+                  this.events[j][k][12] = this.report[i].users.username;if(this.events[j][k][8].length > 15){
+                       this.events[j][k][15] = false;
+                  }
 
                    if(this.events[j][k][2] > 1){
                       this.counting = k + 1;
@@ -1463,7 +1483,9 @@ public appendTime(){
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-                  this.events[j][k][12] = this.report[i].users.username;
+                  this.events[j][k][12] = this.report[i].users.username;if(this.events[j][k][8].length > 15){
+                       this.events[j][k][15] = false;
+                  }
 
                    if(this.events[j][k][2] > 1){
                       this.counting = k + 1;
@@ -1504,7 +1526,9 @@ public appendTime(){
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-                  this.events[j][k][12] = this.report[i].users.username;
+                  this.events[j][k][12] = this.report[i].users.username;if(this.events[j][k][8].length > 15){
+                       this.events[j][k][15] = false;
+                  }
 
                    if(this.events[j][k][2] > 1){
                       this.counting = k + 1;
@@ -1545,7 +1569,9 @@ public appendTime(){
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-                  this.events[j][k][12] = this.report[i].users.username;
+                  this.events[j][k][12] = this.report[i].users.username;if(this.events[j][k][8].length > 15){
+                       this.events[j][k][15] = false;
+                  }
 
                    if(this.events[j][k][2] > 1){
                       this.counting = k + 1;
@@ -1586,7 +1612,9 @@ public appendTime(){
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-                  this.events[j][k][12] = this.report[i].users.username;
+                  this.events[j][k][12] = this.report[i].users.username;if(this.events[j][k][8].length > 15){
+                       this.events[j][k][15] = false;
+                  }
 
                    if(this.events[j][k][2] > 1){
                       this.counting = k + 1;
@@ -1627,7 +1655,9 @@ public appendTime(){
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-                  this.events[j][k][12] = this.report[i].users.username;
+                  this.events[j][k][12] = this.report[i].users.username;if(this.events[j][k][8].length > 15){
+                       this.events[j][k][15] = false;
+                  }
 
                    if(this.events[j][k][2] > 1){
                       this.counting = k + 1;
@@ -1668,7 +1698,9 @@ public appendTime(){
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-                  this.events[j][k][12] = this.report[i].users.username;
+                  this.events[j][k][12] = this.report[i].users.username;if(this.events[j][k][8].length > 15){
+                       this.events[j][k][15] = false;
+                  }
 
                    if(this.events[j][k][2] > 1){
                       this.counting = k + 1;
@@ -1709,7 +1741,9 @@ public appendTime(){
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-                  this.events[j][k][12] = this.report[i].users.username;
+                  this.events[j][k][12] = this.report[i].users.username;if(this.events[j][k][8].length > 15){
+                       this.events[j][k][15] = false;
+                  }
 
                    if(this.events[j][k][2] > 1){
                       this.counting = k + 1;
@@ -1750,7 +1784,9 @@ public appendTime(){
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-                  this.events[j][k][12] = this.report[i].users.username;
+                  this.events[j][k][12] = this.report[i].users.username;if(this.events[j][k][8].length > 15){
+                       this.events[j][k][15] = false;
+                  }
 
                    if(this.events[j][k][2] > 1){
                       this.counting = k + 1;
@@ -1791,7 +1827,9 @@ public appendTime(){
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-                  this.events[j][k][12] = this.report[i].users.username;
+                  this.events[j][k][12] = this.report[i].users.username;if(this.events[j][k][8].length > 15){
+                       this.events[j][k][15] = false;
+                  }
 
                    if(this.events[j][k][2] > 1){
                       this.counting = k + 1;
@@ -1832,7 +1870,9 @@ public appendTime(){
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-                  this.events[j][k][12] = this.report[i].users.username;
+                  this.events[j][k][12] = this.report[i].users.username;if(this.events[j][k][8].length > 15){
+                       this.events[j][k][15] = false;
+                  }
 
                    if(this.events[j][k][2] > 1){
                       this.counting = k + 1;

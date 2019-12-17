@@ -105,7 +105,9 @@
 
                 Booking by: {{cell[6]}}<br>
                 Attendees: {{cell[7]}}<br>
+                <div *ngIf="cell[15]">
                 Topic: {{cell[8]}}<br>
+                </div>
                 <div *ngIf="cell[10]">
                   Remark: {{cell[9]}}
                 </div>

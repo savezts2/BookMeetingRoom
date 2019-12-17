@@ -50,7 +50,24 @@ public class BookMeetingRoom {
     private String create_by;
     private String update_by;
 
+        private int latetime;
+        private String late;
 
+    public int getLatetime() {
+        return latetime;
+    }
+
+    public void setLatetime(int latetime) {
+        this.latetime = latetime;
+    }
+
+    public String getLate() {
+        return late;
+    }
+
+    public void setLate(String late) {
+        this.late = late;
+    }
 
     public Date getUpdate_date() {
         return update_date;

@@ -87,13 +87,26 @@
 
           <td *ngFor="let cell of event1"
               [attr.colspan]="cell[2]" [attr.bgcolor]="cell[3]" style="text-align:center; color:black; vertical-align: middle;"
+              matTooltipClass="custom-tooltip-blue"
+              [matTooltip]="cell[11] ?
+                           'Booking by: ' + cell[6]+
+                           '\nAttendees: ' +cell[7]+
+                           '\nTopic: ' +cell[8] +
+                           '\nTel: ' + cell[14]+'\n'+
+                            (cell[3] == '#3366FF' ? 'Checkout' : '' )+
+                            (cell[3] == '#C0C0C0' ? 'Booking On Time' : '' )+
+                            (cell[3] == '#A0FF7D' ? 'Checkin' : '' )+
+                            (cell[3] == '#FF3333' ? 'Not Checkin' : '' ): '' "
+              [matTooltipPosition]="position.value"
           >
 
             <div *ngIf="cell[5]">
               <font color="black">
                 Booking by: {{cell[6]}}<br>
                 Attendees: {{cell[7]}}<br>
+                <div *ngIf="cell[15]">
                 Topic: {{cell[8]}}<br>
+                </div>
                 <div *ngIf="cell[10]">
                   Remark: {{cell[9]}}
                 </div>
@@ -148,13 +161,26 @@
 
           <td *ngFor="let cell of event2"
               [attr.colspan]="cell[2]" [attr.bgcolor]="cell[3]" style="text-align:center; color:black; vertical-align: middle;"
+              matTooltipClass="custom-tooltip-blue"
+              [matTooltip]="cell[11] ?
+                           'Booking by: ' + cell[6]+
+                           '\nAttendees: ' +cell[7]+
+                           '\nTopic: ' +cell[8] +
+                           '\nTel: ' + cell[14]+'\n'+
+                            (cell[3] == '#3366FF' ? 'Checkout' : '' )+
+                            (cell[3] == '#C0C0C0' ? 'Booking On Time' : '' )+
+                            (cell[3] == '#A0FF7D' ? 'Checkin' : '' )+
+                            (cell[3] == '#FF3333' ? 'Not Checkin' : '' ): '' "
+              [matTooltipPosition]="position.value"
           >
 
             <div *ngIf="cell[5]">
               <font color="black">
                 Booking by: {{cell[6]}}<br>
                 Attendees: {{cell[7]}}<br>
+                <div *ngIf="cell[15]">
                 Topic: {{cell[8]}}<br>
+                </div>
                 <div *ngIf="cell[10]">
                   Remark: {{cell[9]}}
                 </div>
@@ -211,13 +237,26 @@
 
           <td *ngFor="let cell of event3"
               [attr.colspan]="cell[2]" [attr.bgcolor]="cell[3]" style="text-align:center; color:black; vertical-align: middle;"
+              matTooltipClass="custom-tooltip-blue"
+              [matTooltip]="cell[11] ?
+                           'Booking by: ' + cell[6]+
+                           '\nAttendees: ' +cell[7]+
+                           '\nTopic: ' +cell[8] +
+                           '\nTel: ' + cell[14]+'\n'+
+                            (cell[3] == '#3366FF' ? 'Checkout' : '' )+
+                            (cell[3] == '#C0C0C0' ? 'Booking On Time' : '' )+
+                            (cell[3] == '#A0FF7D' ? 'Checkin' : '' )+
+                            (cell[3] == '#FF3333' ? 'Not Checkin' : '' ): '' "
+              [matTooltipPosition]="position.value"
           >
 
             <div *ngIf="cell[5]">
               <font color="black">
                 Booking by: {{cell[6]}}<br>
                 Attendees: {{cell[7]}}<br>
+                <div *ngIf="cell[15]">
                 Topic: {{cell[8]}}<br>
+                </div>
                 <div *ngIf="cell[10]">
                   Remark: {{cell[9]}}
                 </div>
@@ -272,13 +311,26 @@
 
           <td *ngFor="let cell of event4"
               [attr.colspan]="cell[2]" [attr.bgcolor]="cell[3]" style="text-align:center; color:black; vertical-align: middle;"
+              matTooltipClass="custom-tooltip-blue"
+              [matTooltip]="cell[11] ?
+                           'Booking by: ' + cell[6]+
+                           '\nAttendees: ' +cell[7]+
+                           '\nTopic: ' +cell[8] +
+                           '\nTel: ' + cell[14]+'\n'+
+                            (cell[3] == '#3366FF' ? 'Checkout' : '' )+
+                            (cell[3] == '#C0C0C0' ? 'Booking On Time' : '' )+
+                            (cell[3] == '#A0FF7D' ? 'Checkin' : '' )+
+                            (cell[3] == '#FF3333' ? 'Not Checkin' : '' ): '' "
+              [matTooltipPosition]="position.value"
           >
 
             <div *ngIf="cell[5]">
               <font color="black">
                 Booking by: {{cell[6]}}<br>
                 Attendees: {{cell[7]}}<br>
+                <div *ngIf="cell[15]">
                 Topic: {{cell[8]}}<br>
+                </div>
                 <div *ngIf="cell[10]">
                   Remark: {{cell[9]}}
                 </div>
@@ -333,13 +385,26 @@
 
           <td *ngFor="let cell of event5"
               [attr.colspan]="cell[2]" [attr.bgcolor]="cell[3]" style="text-align:center; color:black; vertical-align: middle;"
+              matTooltipClass="custom-tooltip-blue"
+              [matTooltip]="cell[11] ?
+                           'Booking by: ' + cell[6]+
+                           '\nAttendees: ' +cell[7]+
+                           '\nTopic: ' +cell[8] +
+                           '\nTel: ' + cell[14]+'\n'+
+                            (cell[3] == '#3366FF' ? 'Checkout' : '' )+
+                            (cell[3] == '#C0C0C0' ? 'Booking On Time' : '' )+
+                            (cell[3] == '#A0FF7D' ? 'Checkin' : '' )+
+                            (cell[3] == '#FF3333' ? 'Not Checkin' : '' ): '' "
+              [matTooltipPosition]="position.value"
           >
 
             <div *ngIf="cell[5]">
               <font color="black">
                 Booking by: {{cell[6]}}<br>
                 Attendees: {{cell[7]}}<br>
+                <div *ngIf="cell[15]">
                 Topic: {{cell[8]}}<br>
+                </div>
                 <div *ngIf="cell[10]">
                   Remark: {{cell[9]}}
                 </div>
@@ -394,13 +459,26 @@
 
           <td *ngFor="let cell of event6"
               [attr.colspan]="cell[2]" [attr.bgcolor]="cell[3]" style="text-align:center; color:black; vertical-align: middle;"
+              matTooltipClass="custom-tooltip-blue"
+              [matTooltip]="cell[11] ?
+                           'Booking by: ' + cell[6]+
+                           '\nAttendees: ' +cell[7]+
+                           '\nTopic: ' +cell[8] +
+                           '\nTel: ' + cell[14]+'\n'+
+                            (cell[3] == '#3366FF' ? 'Checkout' : '' )+
+                            (cell[3] == '#C0C0C0' ? 'Booking On Time' : '' )+
+                            (cell[3] == '#A0FF7D' ? 'Checkin' : '' )+
+                            (cell[3] == '#FF3333' ? 'Not Checkin' : '' ): '' "
+              [matTooltipPosition]="position.value"
           >
 
             <div *ngIf="cell[5]">
               <font color="black">
                 Booking by: {{cell[6]}}<br>
                 Attendees: {{cell[7]}}<br>
+                <div *ngIf="cell[15]">
                 Topic: {{cell[8]}}<br>
+                </div>
                 <div *ngIf="cell[10]">
                   Remark: {{cell[9]}}
                 </div>
@@ -455,13 +533,26 @@
 
           <td *ngFor="let cell of event7"
               [attr.colspan]="cell[2]" [attr.bgcolor]="cell[3]" style="text-align:center; color:black; vertical-align: middle;"
+              matTooltipClass="custom-tooltip-blue"
+              [matTooltip]="cell[11] ?
+                           'Booking by: ' + cell[6]+
+                           '\nAttendees: ' +cell[7]+
+                           '\nTopic: ' +cell[8] +
+                           '\nTel: ' + cell[14]+'\n'+
+                            (cell[3] == '#3366FF' ? 'Checkout' : '' )+
+                            (cell[3] == '#C0C0C0' ? 'Booking On Time' : '' )+
+                            (cell[3] == '#A0FF7D' ? 'Checkin' : '' )+
+                            (cell[3] == '#FF3333' ? 'Not Checkin' : '' ): '' "
+              [matTooltipPosition]="position.value"
           >
 
             <div *ngIf="cell[5]">
               <font color="black">
                 Booking by: {{cell[6]}}<br>
                 Attendees: {{cell[7]}}<br>
+                <div *ngIf="cell[15]">
                 Topic: {{cell[8]}}<br>
+                </div>
                 <div *ngIf="cell[10]">
                   Remark: {{cell[9]}}
                 </div>
@@ -516,13 +607,26 @@
 
           <td *ngFor="let cell of event8"
               [attr.colspan]="cell[2]" [attr.bgcolor]="cell[3]" style="text-align:center; color:black; vertical-align: middle;"
+              matTooltipClass="custom-tooltip-blue"
+              [matTooltip]="cell[11] ?
+                           'Booking by: ' + cell[6]+
+                           '\nAttendees: ' +cell[7]+
+                           '\nTopic: ' +cell[8] +
+                           '\nTel: ' + cell[14]+'\n'+
+                            (cell[3] == '#3366FF' ? 'Checkout' : '' )+
+                            (cell[3] == '#C0C0C0' ? 'Booking On Time' : '' )+
+                            (cell[3] == '#A0FF7D' ? 'Checkin' : '' )+
+                            (cell[3] == '#FF3333' ? 'Not Checkin' : '' ): '' "
+              [matTooltipPosition]="position.value"
           >
 
             <div *ngIf="cell[5]">
               <font color="black">
                 Booking by: {{cell[6]}}<br>
                 Attendees: {{cell[7]}}<br>
+                <div *ngIf="cell[15]">
                 Topic: {{cell[8]}}<br>
+                </div>
                 <div *ngIf="cell[10]">
                   Remark: {{cell[9]}}
                 </div>
@@ -577,13 +681,26 @@
 
           <td *ngFor="let cell of event9"
               [attr.colspan]="cell[2]" [attr.bgcolor]="cell[3]" style="text-align:center; color:black; vertical-align: middle;"
+              matTooltipClass="custom-tooltip-blue"
+              [matTooltip]="cell[11] ?
+                           'Booking by: ' + cell[6]+
+                           '\nAttendees: ' +cell[7]+
+                           '\nTopic: ' +cell[8] +
+                           '\nTel: ' + cell[14]+'\n'+
+                            (cell[3] == '#3366FF' ? 'Checkout' : '' )+
+                            (cell[3] == '#C0C0C0' ? 'Booking On Time' : '' )+
+                            (cell[3] == '#A0FF7D' ? 'Checkin' : '' )+
+                            (cell[3] == '#FF3333' ? 'Not Checkin' : '' ): '' "
+              [matTooltipPosition]="position.value"
           >
 
             <div *ngIf="cell[5]">
               <font color="black">
                 Booking by: {{cell[6]}}<br>
                 Attendees: {{cell[7]}}<br>
+                <div *ngIf="cell[15]">
                 Topic: {{cell[8]}}<br>
+                </div>
                 <div *ngIf="cell[10]">
                   Remark: {{cell[9]}}
                 </div>
@@ -638,13 +755,26 @@
 
           <td *ngFor="let cell of event10"
               [attr.colspan]="cell[2]" [attr.bgcolor]="cell[3]" style="text-align:center; color:black; vertical-align: middle;"
+              matTooltipClass="custom-tooltip-blue"
+              [matTooltip]="cell[11] ?
+                           'Booking by: ' + cell[6]+
+                           '\nAttendees: ' +cell[7]+
+                           '\nTopic: ' +cell[8] +
+                           '\nTel: ' + cell[14]+'\n'+
+                            (cell[3] == '#3366FF' ? 'Checkout' : '' )+
+                            (cell[3] == '#C0C0C0' ? 'Booking On Time' : '' )+
+                            (cell[3] == '#A0FF7D' ? 'Checkin' : '' )+
+                            (cell[3] == '#FF3333' ? 'Not Checkin' : '' ): '' "
+              [matTooltipPosition]="position.value"
           >
 
             <div *ngIf="cell[5]">
               <font color="black">
                 Booking by: {{cell[6]}}<br>
                 Attendees: {{cell[7]}}<br>
+                <div *ngIf="cell[15]">
                 Topic: {{cell[8]}}<br>
+                </div>
                 <div *ngIf="cell[10]">
                   Remark: {{cell[9]}}
                 </div>
@@ -699,13 +829,26 @@
 
           <td *ngFor="let cell of event11"
               [attr.colspan]="cell[2]" [attr.bgcolor]="cell[3]" style="text-align:center; color:black; vertical-align: middle;"
+              matTooltipClass="custom-tooltip-blue"
+              [matTooltip]="cell[11] ?
+                           'Booking by: ' + cell[6]+
+                           '\nAttendees: ' +cell[7]+
+                           '\nTopic: ' +cell[8] +
+                           '\nTel: ' + cell[14]+'\n'+
+                            (cell[3] == '#3366FF' ? 'Checkout' : '' )+
+                            (cell[3] == '#C0C0C0' ? 'Booking On Time' : '' )+
+                            (cell[3] == '#A0FF7D' ? 'Checkin' : '' )+
+                            (cell[3] == '#FF3333' ? 'Not Checkin' : '' ): '' "
+              [matTooltipPosition]="position.value"
           >
 
             <div *ngIf="cell[5]">
               <font color="black">
                 Booking by: {{cell[6]}}<br>
                 Attendees: {{cell[7]}}<br>
+                <div *ngIf="cell[15]">
                 Topic: {{cell[8]}}<br>
+                </div>
                 <div *ngIf="cell[10]">
                   Remark: {{cell[9]}}
                 </div>
@@ -761,13 +904,26 @@
 
           <td *ngFor="let cell of event12"
               [attr.colspan]="cell[2]" [attr.bgcolor]="cell[3]" style="text-align:center; color:black; vertical-align: middle;"
+              matTooltipClass="custom-tooltip-blue"
+              [matTooltip]="cell[11] ?
+                           'Booking by: ' + cell[6]+
+                           '\nAttendees: ' +cell[7]+
+                           '\nTopic: ' +cell[8] +
+                           '\nTel: ' + cell[14]+'\n'+
+                            (cell[3] == '#3366FF' ? 'Checkout' : '' )+
+                            (cell[3] == '#C0C0C0' ? 'Booking On Time' : '' )+
+                            (cell[3] == '#A0FF7D' ? 'Checkin' : '' )+
+                            (cell[3] == '#FF3333' ? 'Not Checkin' : '' ): '' "
+              [matTooltipPosition]="position.value"
           >
 
             <div *ngIf="cell[5]">
               <font color="black">
                 Booking by: {{cell[6]}}<br>
                 Attendees: {{cell[7]}}<br>
+                <div *ngIf="cell[15]">
                 Topic: {{cell[8]}}<br>
+                </div>
                 <div *ngIf="cell[10]">
                   Remark: {{cell[9]}}
                 </div>
@@ -824,13 +980,26 @@
 
           <td *ngFor="let cell of event13"
               [attr.colspan]="cell[2]" [attr.bgcolor]="cell[3]" style="text-align:center; color:black; vertical-align: middle;"
+              matTooltipClass="custom-tooltip-blue"
+              [matTooltip]="cell[11] ?
+                           'Booking by: ' + cell[6]+
+                           '\nAttendees: ' +cell[7]+
+                           '\nTopic: ' +cell[8] +
+                           '\nTel: ' + cell[14]+'\n'+
+                            (cell[3] == '#3366FF' ? 'Checkout' : '' )+
+                            (cell[3] == '#C0C0C0' ? 'Booking On Time' : '' )+
+                            (cell[3] == '#A0FF7D' ? 'Checkin' : '' )+
+                            (cell[3] == '#FF3333' ? 'Not Checkin' : '' ): '' "
+              [matTooltipPosition]="position.value"
           >
 
             <div *ngIf="cell[5]">
               <font color="black">
                 Booking by: {{cell[6]}}<br>
                 Attendees: {{cell[7]}}<br>
+                <div *ngIf="cell[15]">
                 Topic: {{cell[8]}}<br>
+                </div>
                 <div *ngIf="cell[10]">
                   Remark: {{cell[9]}}
                 </div>
@@ -884,13 +1053,26 @@
 
           <td *ngFor="let cell of event14"
               [attr.colspan]="cell[2]" [attr.bgcolor]="cell[3]" style="text-align:center; color:black; vertical-align: middle;"
+              matTooltipClass="custom-tooltip-blue"
+              [matTooltip]="cell[11] ?
+                           'Booking by: ' + cell[6]+
+                           '\nAttendees: ' +cell[7]+
+                           '\nTopic: ' +cell[8] +
+                           '\nTel: ' + cell[14]+'\n'+
+                            (cell[3] == '#3366FF' ? 'Checkout' : '' )+
+                            (cell[3] == '#C0C0C0' ? 'Booking On Time' : '' )+
+                            (cell[3] == '#A0FF7D' ? 'Checkin' : '' )+
+                            (cell[3] == '#FF3333' ? 'Not Checkin' : '' ): '' "
+              [matTooltipPosition]="position.value"
           >
 
             <div *ngIf="cell[5]">
               <font color="black">
                 Booking by: {{cell[6]}}<br>
                 Attendees: {{cell[7]}}<br>
+                <div *ngIf="cell[15]">
                 Topic: {{cell[8]}}<br>
+                </div>
                 <div *ngIf="cell[10]">
                   Remark: {{cell[9]}}
                 </div>
@@ -945,13 +1127,26 @@
 
           <td *ngFor="let cell of event15"
               [attr.colspan]="cell[2]" [attr.bgcolor]="cell[3]" style="text-align:center; color:black; vertical-align: middle;"
+              matTooltipClass="custom-tooltip-blue"
+              [matTooltip]="cell[11] ?
+                           'Booking by: ' + cell[6]+
+                           '\nAttendees: ' +cell[7]+
+                           '\nTopic: ' +cell[8] +
+                           '\nTel: ' + cell[14]+'\n'+
+                            (cell[3] == '#3366FF' ? 'Checkout' : '' )+
+                            (cell[3] == '#C0C0C0' ? 'Booking On Time' : '' )+
+                            (cell[3] == '#A0FF7D' ? 'Checkin' : '' )+
+                            (cell[3] == '#FF3333' ? 'Not Checkin' : '' ): '' "
+              [matTooltipPosition]="position.value"
           >
 
             <div *ngIf="cell[5]">
               <font color="black">
                 Booking by: {{cell[6]}}<br>
                 Attendees: {{cell[7]}}<br>
+                <div *ngIf="cell[15]">
                 Topic: {{cell[8]}}<br>
+                </div>
                 <div *ngIf="cell[10]">
                   Remark: {{cell[9]}}
                 </div>
@@ -1006,13 +1201,28 @@
 
           <td *ngFor="let cell of event16"
               [attr.colspan]="cell[2]" [attr.bgcolor]="cell[3]" style="text-align:center; color:black; vertical-align: middle;"
+              matTooltipClass="custom-tooltip-blue"
+              [matTooltip]="cell[11] ?
+                           'Booking by: ' + cell[6]+
+                           '\nAttendees: ' +cell[7]+
+                           '\nTopic: ' +cell[8] +
+                           '\nTel: ' + cell[14]+'\n'+
+                            (cell[3] == '#3366FF' ? 'Checkout' : '' )+
+                            (cell[3] == '#C0C0C0' ? 'Booking On Time' : '' )+
+                            (cell[3] == '#A0FF7D' ? 'Checkin' : '' )+
+                            (cell[3] == '#FF3333' ? 'Not Checkin' : '' ): '' "
+              [matTooltipPosition]="position.value"
+
+
           >
 
             <div *ngIf="cell[5]">
               <font color="black">
                 Booking by: {{cell[6]}}<br>
                 Attendees: {{cell[7]}}<br>
+                <div *ngIf="cell[15]">
                 Topic: {{cell[8]}}<br>
+                </div>
                 <div *ngIf="cell[10]">
                   Remark: {{cell[9]}}
                 </div>
@@ -1066,13 +1276,26 @@
 
           <td *ngFor="let cell of event17"
               [attr.colspan]="cell[2]" [attr.bgcolor]="cell[3]" style="text-align:center; color:black; vertical-align: middle;"
+              matTooltipClass="custom-tooltip-blue"
+              [matTooltip]="cell[11] ?
+                           'Booking by: ' + cell[6]+
+                           '\nAttendees: ' +cell[7]+
+                           '\nTopic: ' +cell[8] +
+                           '\nTel: ' + cell[14]+'\n'+
+                            (cell[3] == '#3366FF' ? 'Checkout' : '' )+
+                            (cell[3] == '#C0C0C0' ? 'Booking On Time' : '' )+
+                            (cell[3] == '#A0FF7D' ? 'Checkin' : '' )+
+                            (cell[3] == '#FF3333' ? 'Not Checkin' : '' ): '' "
+              [matTooltipPosition]="position.value"
           >
 
             <div *ngIf="cell[5]">
               <font color="black">
                 Booking by: {{cell[6]}}<br>
                 Attendees: {{cell[7]}}<br>
+                <div *ngIf="cell[15]">
                 Topic: {{cell[8]}}<br>
+                </div>
                 <div *ngIf="cell[10]">
                   Remark: {{cell[9]}}
                 </div>
@@ -1126,13 +1349,26 @@
 
           <td *ngFor="let cell of event18"
               [attr.colspan]="cell[2]" [attr.bgcolor]="cell[3]" style="text-align:center; color:black; vertical-align: middle;"
+              matTooltipClass="custom-tooltip-blue"
+              [matTooltip]="cell[11] ?
+                           'Booking by: ' + cell[6]+
+                           '\nAttendees: ' +cell[7]+
+                           '\nTopic: ' +cell[8] +
+                           '\nTel: ' + cell[14]+'\n'+
+                            (cell[3] == '#3366FF' ? 'Checkout' : '' )+
+                            (cell[3] == '#C0C0C0' ? 'Booking On Time' : '' )+
+                            (cell[3] == '#A0FF7D' ? 'Checkin' : '' )+
+                            (cell[3] == '#FF3333' ? 'Not Checkin' : '' ): '' "
+              [matTooltipPosition]="position.value"
           >
 
             <div *ngIf="cell[5]">
               <font color="black">
                 Booking by: {{cell[6]}}<br>
                 Attendees: {{cell[7]}}<br>
+                <div *ngIf="cell[15]">
                 Topic: {{cell[8]}}<br>
+                </div>
                 <div *ngIf="cell[10]">
                   Remark: {{cell[9]}}
                 </div>
@@ -1186,13 +1422,26 @@
 
           <td *ngFor="let cell of event19"
               [attr.colspan]="cell[2]" [attr.bgcolor]="cell[3]" style="text-align:center; color:black; vertical-align: middle;"
+              matTooltipClass="custom-tooltip-blue"
+              [matTooltip]="cell[11] ?
+                           'Booking by: ' + cell[6]+
+                           '\nAttendees: ' +cell[7]+
+                           '\nTopic: ' +cell[8] +
+                           '\nTel: ' + cell[14]+'\n'+
+                            (cell[3] == '#3366FF' ? 'Checkout' : '' )+
+                            (cell[3] == '#C0C0C0' ? 'Booking On Time' : '' )+
+                            (cell[3] == '#A0FF7D' ? 'Checkin' : '' )+
+                            (cell[3] == '#FF3333' ? 'Not Checkin' : '' ): '' "
+              [matTooltipPosition]="position.value"
           >
 
             <div *ngIf="cell[5]">
               <font color="black">
                 Booking by: {{cell[6]}}<br>
                 Attendees: {{cell[7]}}<br>
+                <div *ngIf="cell[15]">
                 Topic: {{cell[8]}}<br>
+                </div>
                 <div *ngIf="cell[10]">
                   Remark: {{cell[9]}}
                 </div>
@@ -1246,13 +1495,26 @@
 
           <td *ngFor="let cell of event20"
               [attr.colspan]="cell[2]" [attr.bgcolor]="cell[3]" style="text-align:center; color:black; vertical-align: middle;"
+              matTooltipClass="custom-tooltip-blue"
+              [matTooltip]="cell[11] ?
+                           'Booking by: ' + cell[6]+
+                           '\nAttendees: ' +cell[7]+
+                           '\nTopic: ' +cell[8] +
+                           '\nTel: ' + cell[14]+'\n'+
+                            (cell[3] == '#3366FF' ? 'Checkout' : '' )+
+                            (cell[3] == '#C0C0C0' ? 'Booking On Time' : '' )+
+                            (cell[3] == '#A0FF7D' ? 'Checkin' : '' )+
+                            (cell[3] == '#FF3333' ? 'Not Checkin' : '' ): '' "
+              [matTooltipPosition]="position.value"
           >
 
             <div *ngIf="cell[5]">
               <font color="black">
                 Booking by: {{cell[6]}}<br>
                 Attendees: {{cell[7]}}<br>
+                <div *ngIf="cell[15]">
                 Topic: {{cell[8]}}<br>
+                </div>
                 <div *ngIf="cell[10]">
                   Remark: {{cell[9]}}
                 </div>
@@ -1306,13 +1568,26 @@
 
           <td *ngFor="let cell of event21"
               [attr.colspan]="cell[2]" [attr.bgcolor]="cell[3]" style="text-align:center; color:black; vertical-align: middle;"
+              matTooltipClass="custom-tooltip-blue"
+              [matTooltip]="cell[11] ?
+                           'Booking by: ' + cell[6]+
+                           '\nAttendees: ' +cell[7]+
+                           '\nTopic: ' +cell[8] +
+                           '\nTel: ' + cell[14]+'\n'+
+                            (cell[3] == '#3366FF' ? 'Checkout' : '' )+
+                            (cell[3] == '#C0C0C0' ? 'Booking On Time' : '' )+
+                            (cell[3] == '#A0FF7D' ? 'Checkin' : '' )+
+                            (cell[3] == '#FF3333' ? 'Not Checkin' : '' ): '' "
+              [matTooltipPosition]="position.value"
           >
 
             <div *ngIf="cell[5]">
               <font color="black">
                 Booking by: {{cell[6]}}<br>
                 Attendees: {{cell[7]}}<br>
+                <div *ngIf="cell[15]">
                 Topic: {{cell[8]}}<br>
+                </div>
                 <div *ngIf="cell[10]">
                   Remark: {{cell[9]}}
                 </div>
@@ -1366,13 +1641,26 @@
 
           <td *ngFor="let cell of event22"
               [attr.colspan]="cell[2]" [attr.bgcolor]="cell[3]" style="text-align:center; color:black; vertical-align: middle;"
+              matTooltipClass="custom-tooltip-blue"
+              [matTooltip]="cell[11] ?
+                           'Booking by: ' + cell[6]+
+                           '\nAttendees: ' +cell[7]+
+                           '\nTopic: ' +cell[8] +
+                           '\nTel: ' + cell[14]+'\n'+
+                            (cell[3] == '#3366FF' ? 'Checkout' : '' )+
+                            (cell[3] == '#C0C0C0' ? 'Booking On Time' : '' )+
+                            (cell[3] == '#A0FF7D' ? 'Checkin' : '' )+
+                            (cell[3] == '#FF3333' ? 'Not Checkin' : '' ): '' "
+              [matTooltipPosition]="position.value"
           >
 
             <div *ngIf="cell[5]">
               <font color="black">
                 Booking by: {{cell[6]}}<br>
                 Attendees: {{cell[7]}}<br>
+                <div *ngIf="cell[15]">
                 Topic: {{cell[8]}}<br>
+                </div>
                 <div *ngIf="cell[10]">
                   Remark: {{cell[9]}}
                 </div>
@@ -1429,13 +1717,26 @@
 
           <td *ngFor="let cell of event23"
               [attr.colspan]="cell[2]" [attr.bgcolor]="cell[3]" style="text-align:center; color:black; vertical-align: middle;"
+              matTooltipClass="custom-tooltip-blue"
+              [matTooltip]="cell[11] ?
+                           'Booking by: ' + cell[6]+
+                           '\nAttendees: ' +cell[7]+
+                           '\nTopic: ' +cell[8] +
+                           '\nTel: ' + cell[14]+'\n'+
+                            (cell[3] == '#3366FF' ? 'Checkout' : '' )+
+                            (cell[3] == '#C0C0C0' ? 'Booking On Time' : '' )+
+                            (cell[3] == '#A0FF7D' ? 'Checkin' : '' )+
+                            (cell[3] == '#FF3333' ? 'Not Checkin' : '' ): '' "
+              [matTooltipPosition]="position.value"
           >
 
             <div *ngIf="cell[5]">
               <font color="black">
                 Booking by: {{cell[6]}}<br>
                 Attendees: {{cell[7]}}<br>
+                <div *ngIf="cell[15]">
                 Topic: {{cell[8]}}<br>
+                </div>
                 <div *ngIf="cell[10]">
                   Remark: {{cell[9]}}
                 </div>
@@ -1489,13 +1790,26 @@
 
           <td *ngFor="let cell of event24"
               [attr.colspan]="cell[2]" [attr.bgcolor]="cell[3]" style="text-align:center; color:black; vertical-align: middle;"
+              matTooltipClass="custom-tooltip-blue"
+              [matTooltip]="cell[11] ?
+                           'Booking by: ' + cell[6]+
+                           '\nAttendees: ' +cell[7]+
+                           '\nTopic: ' +cell[8] +
+                           '\nTel: ' + cell[14]+'\n'+
+                            (cell[3] == '#3366FF' ? 'Checkout' : '' )+
+                            (cell[3] == '#C0C0C0' ? 'Booking On Time' : '' )+
+                            (cell[3] == '#A0FF7D' ? 'Checkin' : '' )+
+                            (cell[3] == '#FF3333' ? 'Not Checkin' : '' ): '' "
+              [matTooltipPosition]="position.value"
           >
 
             <div *ngIf="cell[5]">
               <font color="black">
                 Booking by: {{cell[6]}}<br>
                 Attendees: {{cell[7]}}<br>
+                <div *ngIf="cell[15]">
                 Topic: {{cell[8]}}<br>
+                </div>
                 <div *ngIf="cell[10]">
                   Remark: {{cell[9]}}
                 </div>
@@ -1549,13 +1863,26 @@
 
           <td *ngFor="let cell of event25"
               [attr.colspan]="cell[2]" [attr.bgcolor]="cell[3]" style="text-align:center; color:black; vertical-align: middle;"
+              matTooltipClass="custom-tooltip-blue"
+              [matTooltip]="cell[11] ?
+                           'Booking by: ' + cell[6]+
+                           '\nAttendees: ' +cell[7]+
+                           '\nTopic: ' +cell[8] +
+                           '\nTel: ' + cell[14]+'\n'+
+                            (cell[3] == '#3366FF' ? 'Checkout' : '' )+
+                            (cell[3] == '#C0C0C0' ? 'Booking On Time' : '' )+
+                            (cell[3] == '#A0FF7D' ? 'Checkin' : '' )+
+                            (cell[3] == '#FF3333' ? 'Not Checkin' : '' ): '' "
+              [matTooltipPosition]="position.value"
           >
 
             <div *ngIf="cell[5]">
               <font color="black">
                 Booking by: {{cell[6]}}<br>
                 Attendees: {{cell[7]}}<br>
+                <div *ngIf="cell[15]">
                 Topic: {{cell[8]}}<br>
+                </div>
                 <div *ngIf="cell[10]">
                   Remark: {{cell[9]}}
                 </div>
@@ -1608,13 +1935,26 @@
 
           <td *ngFor="let cell of event26"
               [attr.colspan]="cell[2]" [attr.bgcolor]="cell[3]" style="text-align:center; color:black; vertical-align: middle;"
+              matTooltipClass="custom-tooltip-blue"
+              [matTooltip]="cell[11] ?
+                           'Booking by: ' + cell[6]+
+                           '\nAttendees: ' +cell[7]+
+                           '\nTopic: ' +cell[8] +
+                           '\nTel: ' + cell[14]+'\n'+
+                            (cell[3] == '#3366FF' ? 'Checkout' : '' )+
+                            (cell[3] == '#C0C0C0' ? 'Booking On Time' : '' )+
+                            (cell[3] == '#A0FF7D' ? 'Checkin' : '' )+
+                            (cell[3] == '#FF3333' ? 'Not Checkin' : '' ): '' "
+              [matTooltipPosition]="position.value"
           >
 
             <div *ngIf="cell[5]">
               <font color="black">
                 Booking by: {{cell[6]}}<br>
                 Attendees: {{cell[7]}}<br>
+                <div *ngIf="cell[15]">
                 Topic: {{cell[8]}}<br>
+                </div>
                 <div *ngIf="cell[10]">
                   Remark: {{cell[9]}}
                 </div>
@@ -1667,13 +2007,26 @@
 
           <td *ngFor="let cell of event27"
               [attr.colspan]="cell[2]" [attr.bgcolor]="cell[3]" style="text-align:center; color:black; vertical-align: middle;"
+              matTooltipClass="custom-tooltip-blue"
+              [matTooltip]="cell[11] ?
+                           'Booking by: ' + cell[6]+
+                           '\nAttendees: ' +cell[7]+
+                           '\nTopic: ' +cell[8] +
+                           '\nTel: ' + cell[14]+'\n'+
+                            (cell[3] == '#3366FF' ? 'Checkout' : '' )+
+                            (cell[3] == '#C0C0C0' ? 'Booking On Time' : '' )+
+                            (cell[3] == '#A0FF7D' ? 'Checkin' : '' )+
+                            (cell[3] == '#FF3333' ? 'Not Checkin' : '' ): '' "
+              [matTooltipPosition]="position.value"
           >
 
             <div *ngIf="cell[5]">
               <font color="black">
                 Booking by: {{cell[6]}}<br>
                 Attendees: {{cell[7]}}<br>
+                <div *ngIf="cell[15]">
                 Topic: {{cell[8]}}<br>
+                </div>
                 <div *ngIf="cell[10]">
                   Remark: {{cell[9]}}
                 </div>
@@ -1726,13 +2079,26 @@
 
           <td *ngFor="let cell of event28"
               [attr.colspan]="cell[2]" [attr.bgcolor]="cell[3]" style="text-align:center; color:black; vertical-align: middle;"
+              matTooltipClass="custom-tooltip-blue"
+              [matTooltip]="cell[11] ?
+                           'Booking by: ' + cell[6]+
+                           '\nAttendees: ' +cell[7]+
+                           '\nTopic: ' +cell[8] +
+                           '\nTel: ' + cell[14]+'\n'+
+                            (cell[3] == '#3366FF' ? 'Checkout' : '' )+
+                            (cell[3] == '#C0C0C0' ? 'Booking On Time' : '' )+
+                            (cell[3] == '#A0FF7D' ? 'Checkin' : '' )+
+                            (cell[3] == '#FF3333' ? 'Not Checkin' : '' ): '' "
+              [matTooltipPosition]="position.value"
           >
 
             <div *ngIf="cell[5]">
               <font color="black">
                 Booking by: {{cell[6]}}<br>
                 Attendees: {{cell[7]}}<br>
+                <div *ngIf="cell[15]">
                 Topic: {{cell[8]}}<br>
+                </div>
                 <div *ngIf="cell[10]">
                   Remark: {{cell[9]}}
                 </div>
@@ -1785,13 +2151,26 @@
 
           <td *ngFor="let cell of event29"
               [attr.colspan]="cell[2]" [attr.bgcolor]="cell[3]" style="text-align:center; color:black; vertical-align: middle;"
+              matTooltipClass="custom-tooltip-blue"
+              [matTooltip]="cell[11] ?
+                           'Booking by: ' + cell[6]+
+                           '\nAttendees: ' +cell[7]+
+                           '\nTopic: ' +cell[8] +
+                           '\nTel: ' + cell[14]+'\n'+
+                            (cell[3] == '#3366FF' ? 'Checkout' : '' )+
+                            (cell[3] == '#C0C0C0' ? 'Booking On Time' : '' )+
+                            (cell[3] == '#A0FF7D' ? 'Checkin' : '' )+
+                            (cell[3] == '#FF3333' ? 'Not Checkin' : '' ): '' "
+              [matTooltipPosition]="position.value"
           >
 
             <div *ngIf="cell[5]">
               <font color="black">
                 Booking by: {{cell[6]}}<br>
                 Attendees: {{cell[7]}}<br>
+                <div *ngIf="cell[15]">
                 Topic: {{cell[8]}}<br>
+                </div>
                 <div *ngIf="cell[10]">
                   Remark: {{cell[9]}}
                 </div>
@@ -1844,13 +2223,26 @@
 
           <td *ngFor="let cell of event30"
               [attr.colspan]="cell[2]" [attr.bgcolor]="cell[3]" style="text-align:center; color:black; vertical-align: middle;"
+              matTooltipClass="custom-tooltip-blue"
+              [matTooltip]="cell[11] ?
+                           'Booking by: ' + cell[6]+
+                           '\nAttendees: ' +cell[7]+
+                           '\nTopic: ' +cell[8] +
+                           '\nTel: ' + cell[14]+'\n'+
+                            (cell[3] == '#3366FF' ? 'Checkout' : '' )+
+                            (cell[3] == '#C0C0C0' ? 'Booking On Time' : '' )+
+                            (cell[3] == '#A0FF7D' ? 'Checkin' : '' )+
+                            (cell[3] == '#FF3333' ? 'Not Checkin' : '' ): '' "
+              [matTooltipPosition]="position.value"
           >
 
             <div *ngIf="cell[5]">
               <font color="black">
                 Booking by: {{cell[6]}}<br>
                 Attendees: {{cell[7]}}<br>
+                <div *ngIf="cell[15]">
                 Topic: {{cell[8]}}<br>
+                </div>
                 <div *ngIf="cell[10]">
                   Remark: {{cell[9]}}
                 </div>
@@ -1904,13 +2296,26 @@
 
           <td *ngFor="let cell of event31"
               [attr.colspan]="cell[2]" [attr.bgcolor]="cell[3]" style="text-align:center; color:black; vertical-align: middle;"
+              matTooltipClass="custom-tooltip-blue"
+              [matTooltip]="cell[11] ?
+                           'Booking by: ' + cell[6]+
+                           '\nAttendees: ' +cell[7]+
+                           '\nTopic: ' +cell[8] +
+                           '\nTel: ' + cell[14]+'\n'+
+                            (cell[3] == '#3366FF' ? 'Checkout' : '' )+
+                            (cell[3] == '#C0C0C0' ? 'Booking On Time' : '' )+
+                            (cell[3] == '#A0FF7D' ? 'Checkin' : '' )+
+                            (cell[3] == '#FF3333' ? 'Not Checkin' : '' ): '' "
+              [matTooltipPosition]="position.value"
           >
 
             <div *ngIf="cell[5]">
               <font color="black">
                 Booking by: {{cell[6]}}<br>
                 Attendees: {{cell[7]}}<br>
+                <div *ngIf="cell[15]">
                 Topic: {{cell[8]}}<br>
+                </div>
                 <div *ngIf="cell[10]">
                   Remark: {{cell[9]}}
                 </div>

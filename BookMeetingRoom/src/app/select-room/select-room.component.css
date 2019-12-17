@@ -173,4 +173,6 @@ div:hover span.only-show-on-hover  {
     color: #ffffff;
     font-size: 15px;
     white-space: pre-line;
+    max-width: 1000px !important;
 }
+

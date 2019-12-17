@@ -152,3 +152,10 @@ h1.example-app-name {
   background-color: white;
   width : 20%;
 }
+/deep/.custom-tooltip-blue{
+    background-color: #0C6A9E;
+    color: #ffffff;
+    font-size: 15px;
+    white-space: pre-line;
+    max-width: 1000px !important;
+}

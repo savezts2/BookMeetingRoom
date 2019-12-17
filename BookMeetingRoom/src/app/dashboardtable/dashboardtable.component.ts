@@ -6,6 +6,8 @@ import {ServiceService}from '../Service/service.service';
 import {DashboardService}from './dashboard.service';
 import {ActivatedRoute}from "@angular/router";
 import {MatSidenav}from '@angular/material/sidenav';
+import {FormControl} from '@angular/forms';
+import {TooltipPosition} from '@angular/material/tooltip';
 @Component({
 selector: 'app-dashboardtable',
 templateUrl: './dashboardtable.component.html',
@@ -17,7 +19,8 @@ export class DashboardtableComponent implements OnInit {
 isLoggedIn : Observable < boolean>;
 isLoggedInAdmin : Observable < boolean>;
 isLoggedInHR : Observable < boolean>;
-
+positionOptions: TooltipPosition[] = ['after', 'before', 'above', 'below', 'left', 'right'];
+position = new FormControl(this.positionOptions[2]);
 dddays : Array <any>;
 dateFull:any = {}
 report : Array < any>;
@@ -397,615 +400,615 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
       for(let j = 0 ; j < 19 ; j++){
 
         if(j == 0){
-          this.events1[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events2[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events3[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events4[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events5[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events6[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events7[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events8[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events9[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events10[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events11[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events12[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events13[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events14[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events15[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events16[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events17[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events18[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events19[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events20[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events21[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events22[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events23[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events24[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events25[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events26[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events27[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events28[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events29[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events30[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events31[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
+          this.events1[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events2[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events3[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events4[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events5[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events6[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events7[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events8[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events9[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events10[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events11[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events12[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events13[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events14[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events15[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events16[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events17[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events18[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events19[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events20[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events21[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events22[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events23[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events24[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events25[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events26[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events27[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events28[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events29[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events30[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events31[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
 
         }else if(j == 1){
-          this.events1[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events2[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events3[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events4[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events5[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events6[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events7[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events8[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events9[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events10[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events11[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events12[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events13[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events14[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events15[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events16[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events17[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events18[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events19[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events20[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events21[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events22[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events23[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events24[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events25[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events26[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events27[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events28[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events29[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events30[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events31[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
+          this.events1[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events2[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events3[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events4[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events5[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events6[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events7[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events8[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events9[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events10[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events11[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events12[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events13[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events14[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events15[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events16[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events17[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events18[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events19[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events20[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events21[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events22[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events23[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events24[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events25[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events26[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events27[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events28[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events29[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events30[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events31[i].push([j,'08.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
 
         }else if(j == 2){
-          this.events1[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events2[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events3[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events4[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events5[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events6[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events7[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events8[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events9[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events10[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events11[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events12[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events13[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events14[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events15[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events16[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events17[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events18[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events19[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events20[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events21[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events22[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events23[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events24[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events25[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events26[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events27[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events28[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events29[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events30[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events31[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
+          this.events1[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events2[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events3[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events4[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events5[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events6[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events7[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events8[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events9[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events10[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events11[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events12[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events13[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events14[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events15[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events16[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events17[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events18[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events19[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events20[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events21[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events22[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events23[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events24[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events25[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events26[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events27[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events28[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events29[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events30[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events31[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
         }else if(j == 3){
-          this.events1[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events2[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events3[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events4[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events5[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events6[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events7[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events8[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events9[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events10[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events11[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events12[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events13[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events14[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events15[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events16[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events17[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events18[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events19[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events20[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events21[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events22[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events23[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events24[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events25[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events26[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events27[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events28[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events29[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events30[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events31[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
+          this.events1[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events2[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events3[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events4[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events5[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events6[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events7[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events8[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events9[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events10[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events11[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events12[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events13[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events14[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events15[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events16[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events17[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events18[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events19[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events20[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events21[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events22[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events23[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events24[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events25[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events26[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events27[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events28[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events29[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events30[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events31[i].push([j,'09.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
         }else if(j == 4){
-          this.events1[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events2[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events3[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events4[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events5[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events6[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events7[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events8[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events9[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events10[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events11[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events12[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events13[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events14[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events15[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events16[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events17[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events18[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events19[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events20[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events21[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events22[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events23[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events24[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events25[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events26[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events27[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events28[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events29[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events30[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events31[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
+          this.events1[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events2[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events3[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events4[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events5[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events6[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events7[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events8[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events9[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events10[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events11[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events12[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events13[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events14[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events15[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events16[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events17[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events18[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events19[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events20[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events21[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events22[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events23[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events24[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events25[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events26[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events27[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events28[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events29[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events30[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events31[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
         }else if(j == 5){
-          this.events1[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events2[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events3[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events4[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events5[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events6[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events7[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events8[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events9[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events10[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events11[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events12[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events13[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events14[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events15[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events16[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events17[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events18[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events19[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events20[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events21[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events22[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events23[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events24[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events25[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events26[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events27[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events28[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events29[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events30[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events31[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
+          this.events1[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events2[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events3[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events4[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events5[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events6[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events7[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events8[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events9[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events10[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events11[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events12[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events13[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events14[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events15[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events16[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events17[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events18[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events19[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events20[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events21[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events22[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events23[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events24[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events25[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events26[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events27[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events28[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events29[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events30[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events31[i].push([j,'10.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
         }else if(j == 6){
-          this.events1[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events2[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events3[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events4[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events5[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events6[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events7[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events8[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events9[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events10[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events11[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events12[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events13[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events14[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events15[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events16[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events17[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events18[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events19[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events20[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events21[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events22[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events23[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events24[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events25[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events26[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events27[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events28[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events29[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events30[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events31[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
+          this.events1[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events2[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events3[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events4[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events5[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events6[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events7[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events8[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events9[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events10[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events11[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events12[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events13[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events14[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events15[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events16[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events17[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events18[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events19[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events20[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events21[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events22[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events23[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events24[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events25[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events26[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events27[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events28[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events29[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events30[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events31[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
         }else if(j == 7){
-          this.events1[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events2[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events3[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events4[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events5[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events6[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events7[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events8[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events9[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events10[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events11[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events12[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events13[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events14[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events15[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events16[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events17[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events18[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events19[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events20[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events21[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events22[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events23[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events24[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events25[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events26[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events27[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events28[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events29[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events30[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events31[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
+          this.events1[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events2[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events3[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events4[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events5[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events6[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events7[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events8[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events9[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events10[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events11[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events12[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events13[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events14[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events15[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events16[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events17[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events18[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events19[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events20[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events21[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events22[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events23[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events24[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events25[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events26[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events27[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events28[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events29[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events30[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events31[i].push([j,'11.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
         }else if(j == 8){
-          this.events1[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events2[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events3[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events4[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events5[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events6[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events7[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events8[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events9[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events10[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events11[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events12[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events13[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events14[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events15[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events16[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events17[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events18[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events19[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events20[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events21[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events22[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events23[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events24[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events25[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events26[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events27[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events28[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events29[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events30[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events31[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
+          this.events1[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events2[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events3[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events4[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events5[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events6[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events7[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events8[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events9[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events10[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events11[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events12[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events13[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events14[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events15[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events16[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events17[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events18[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events19[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events20[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events21[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events22[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events23[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events24[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events25[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events26[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events27[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events28[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events29[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events30[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events31[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
         }else if(j == 9){
-          this.events1[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events2[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events3[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events4[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events5[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events6[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events7[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events8[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events9[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events10[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events11[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events12[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events13[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events14[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events15[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events16[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events17[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events18[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events19[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events20[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events21[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events22[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events23[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events24[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events25[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events26[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events27[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events28[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events29[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events30[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events31[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
+          this.events1[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events2[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events3[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events4[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events5[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events6[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events7[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events8[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events9[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events10[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events11[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events12[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events13[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events14[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events15[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events16[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events17[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events18[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events19[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events20[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events21[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events22[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events23[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events24[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events25[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events26[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events27[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events28[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events29[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events30[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events31[i].push([j,'12.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
         }else if(j == 10){
-          this.events1[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events2[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events3[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events4[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events5[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events6[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events7[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events8[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events9[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events10[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events11[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events12[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events13[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events14[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events15[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events16[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events17[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events18[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events19[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events20[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events21[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events22[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events23[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events24[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events25[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events26[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events27[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events28[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events29[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events30[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events31[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
+          this.events1[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events2[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events3[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events4[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events5[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events6[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events7[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events8[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events9[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events10[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events11[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events12[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events13[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events14[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events15[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events16[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events17[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events18[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events19[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events20[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events21[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events22[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events23[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events24[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events25[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events26[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events27[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events28[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events29[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events30[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events31[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
         }else if(j == 11){
-          this.events1[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events2[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events3[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events4[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events5[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events6[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events7[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events8[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events9[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events10[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events11[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events12[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events13[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events14[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events15[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events16[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events17[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events18[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events19[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events20[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events21[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events22[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events23[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events24[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events25[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events26[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events27[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events28[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events29[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events30[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events31[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
+          this.events1[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events2[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events3[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events4[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events5[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events6[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events7[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events8[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events9[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events10[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events11[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events12[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events13[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events14[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events15[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events16[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events17[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events18[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events19[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events20[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events21[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events22[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events23[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events24[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events25[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events26[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events27[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events28[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events29[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events30[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events31[i].push([j,'13.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
         }else if(j == 12){
-          this.events1[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events2[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events3[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events4[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events5[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events6[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events7[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events8[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events9[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events10[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events11[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events12[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events13[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events14[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events15[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events16[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events17[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events18[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events19[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events20[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events21[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events22[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events23[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events24[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events25[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events26[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events27[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events28[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events29[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events30[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events31[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
+          this.events1[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events2[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events3[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events4[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events5[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events6[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events7[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events8[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events9[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events10[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events11[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events12[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events13[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events14[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events15[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events16[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events17[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events18[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events19[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events20[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events21[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events22[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events23[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events24[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events25[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events26[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events27[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events28[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events29[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events30[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events31[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
         }else if(j == 13){
-          this.events1[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events2[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events3[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events4[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events5[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events6[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events7[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events8[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events9[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events10[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events11[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events12[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events13[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events14[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events15[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events16[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events17[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events18[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events19[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events20[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events21[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events22[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events23[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events24[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events25[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events26[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events27[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events28[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events29[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events30[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events31[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
+          this.events1[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events2[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events3[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events4[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events5[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events6[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events7[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events8[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events9[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events10[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events11[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events12[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events13[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events14[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events15[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events16[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events17[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events18[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events19[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events20[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events21[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events22[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events23[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events24[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events25[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events26[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events27[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events28[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events29[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events30[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events31[i].push([j,'14.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
         }else if(j == 14){
-          this.events1[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events2[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events3[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events4[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events5[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events6[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events7[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events8[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events9[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events10[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events11[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events12[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events13[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events14[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events15[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events16[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events17[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events18[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events19[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events20[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events21[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events22[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events23[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events24[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events25[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events26[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events27[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events28[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events29[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events30[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events31[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
+          this.events1[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events2[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events3[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events4[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events5[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events6[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events7[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events8[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events9[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events10[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events11[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events12[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events13[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events14[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events15[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events16[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events17[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events18[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events19[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events20[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events21[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events22[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events23[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events24[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events25[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events26[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events27[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events28[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events29[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events30[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events31[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
         }else if(j == 15){
-          this.events1[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events2[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events3[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events4[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events5[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events6[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events7[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events8[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events9[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events10[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events11[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events12[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events13[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events14[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events15[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events16[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events17[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events18[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events19[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events20[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events21[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events22[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events23[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events24[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events25[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events26[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events27[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events28[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events29[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events30[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events31[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
+          this.events1[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events2[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events3[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events4[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events5[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events6[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events7[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events8[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events9[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events10[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events11[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events12[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events13[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events14[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events15[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events16[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events17[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events18[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events19[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events20[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events21[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events22[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events23[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events24[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events25[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events26[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events27[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events28[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events29[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events30[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events31[i].push([j,'15.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
         }else if(j == 16){
-          this.events1[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events2[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events3[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events4[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events5[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events6[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events7[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events8[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events9[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events10[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events11[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events12[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events13[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events14[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events15[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events16[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events17[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events18[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events19[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events20[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events21[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events22[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events23[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events24[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events25[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events26[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events27[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events28[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events29[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events30[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events31[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
+          this.events1[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events2[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events3[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events4[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events5[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events6[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events7[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events8[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events9[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events10[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events11[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events12[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events13[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events14[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events15[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events16[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events17[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events18[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events19[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events20[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events21[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events22[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events23[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events24[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events25[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events26[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events27[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events28[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events29[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events30[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events31[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
         }else if(j == 17){
-          this.events1[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events2[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events3[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events4[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events5[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events6[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events7[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events8[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events9[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events10[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events11[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events12[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events13[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events14[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events15[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events16[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events17[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events18[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events19[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events20[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events21[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events22[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events23[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events24[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events25[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events26[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events27[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events28[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events29[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events30[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events31[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
+          this.events1[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events2[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events3[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events4[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events5[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events6[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events7[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events8[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events9[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events10[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events11[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events12[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events13[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events14[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events15[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events16[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events17[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events18[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events19[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events20[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events21[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events22[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events23[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events24[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events25[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events26[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events27[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events28[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events29[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events30[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events31[i].push([j,'16.30',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
         }else if(j == 18){
-          this.events1[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events2[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events3[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events4[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events5[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events6[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events7[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events8[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events9[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events10[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events11[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events12[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events13[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events14[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events15[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events16[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events17[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events18[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events19[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events20[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events21[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events22[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events23[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events24[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events25[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events26[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events27[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events28[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events29[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events30[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
-          this.events31[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
+          this.events1[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events2[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events3[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events4[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events5[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events6[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events7[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events8[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events9[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events10[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events11[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events12[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events13[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events14[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events15[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events16[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events17[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events18[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events19[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events20[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events21[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events22[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events23[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events24[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events25[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events26[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events27[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events28[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events29[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events30[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+          this.events31[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
         }
 
       }
@@ -1047,7 +1050,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                      this.events1[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                                      this.events1[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                                      this.events1[j][k][11] = true ;
-                                     this.events1[j][k][12] = this.report[i].users.username;
+                                     this.events1[j][k][12] = this.report[i].users.username;if(this.events1[j][k][8].length > 15){
+                     this.events1[j][k][15] = false;
+                  }
 
                                       if(this.events1[j][k][2] > 1){
                                          this.counting = k + 1;
@@ -1090,7 +1095,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                      this.events1[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                                      this.events1[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                                      this.events1[j][k][11] = true ;
-                                     this.events1[j][k][12] = this.report[i].users.username;
+                                     this.events1[j][k][12] = this.report[i].users.username;if(this.events1[j][k][8].length > 15){
+                     this.events1[j][k][15] = false;
+                  }
 
                                       if(this.events1[j][k][2] > 1){
                                          this.counting = k + 1;
@@ -1133,7 +1140,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                      this.events1[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                                      this.events1[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                                      this.events1[j][k][11] = true ;
-                                     this.events1[j][k][12] = this.report[i].users.username;
+                                     this.events1[j][k][12] = this.report[i].users.username;if(this.events1[j][k][8].length > 15){
+                     this.events1[j][k][15] = false;
+                  }
 
                                       if(this.events1[j][k][2] > 1){
                                          this.counting = k + 1;
@@ -1176,7 +1185,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                      this.events1[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                                      this.events1[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                                      this.events1[j][k][11] = true ;
-                                     this.events1[j][k][12] = this.report[i].users.username;
+                                     this.events1[j][k][12] = this.report[i].users.username;if(this.events1[j][k][8].length > 15){
+                     this.events1[j][k][15] = false;
+                  }
 
                                       if(this.events1[j][k][2] > 1){
                                          this.counting = k + 1;
@@ -1219,7 +1230,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                      this.events1[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                                      this.events1[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                                      this.events1[j][k][11] = true ;
-                                     this.events1[j][k][12] = this.report[i].users.username;
+                                     this.events1[j][k][12] = this.report[i].users.username;if(this.events1[j][k][8].length > 15){
+                     this.events1[j][k][15] = false;
+                  }
 
                                       if(this.events1[j][k][2] > 1){
                                          this.counting = k + 1;
@@ -1262,7 +1275,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                      this.events1[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                                      this.events1[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                                      this.events1[j][k][11] = true ;
-                                     this.events1[j][k][12] = this.report[i].users.username;
+                                     this.events1[j][k][12] = this.report[i].users.username;if(this.events1[j][k][8].length > 15){
+                     this.events1[j][k][15] = false;
+                  }
 
                                       if(this.events1[j][k][2] > 1){
                                          this.counting = k + 1;
@@ -1305,7 +1320,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                      this.events1[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                                      this.events1[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                                      this.events1[j][k][11] = true ;
-                                     this.events1[j][k][12] = this.report[i].users.username;
+                                     this.events1[j][k][12] = this.report[i].users.username;if(this.events1[j][k][8].length > 15){
+                     this.events1[j][k][15] = false;
+                  }
 
                                       if(this.events1[j][k][2] > 1){
                                          this.counting = k + 1;
@@ -1348,7 +1365,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                      this.events1[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                                      this.events1[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                                      this.events1[j][k][11] = true ;
-                                     this.events1[j][k][12] = this.report[i].users.username;
+                                     this.events1[j][k][12] = this.report[i].users.username;if(this.events1[j][k][8].length > 15){
+                     this.events1[j][k][15] = false;
+                  }
 
                                       if(this.events1[j][k][2] > 1){
                                          this.counting = k + 1;
@@ -1391,7 +1410,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                      this.events1[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                                      this.events1[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                                      this.events1[j][k][11] = true ;
-                                     this.events1[j][k][12] = this.report[i].users.username;
+                                     this.events1[j][k][12] = this.report[i].users.username;if(this.events1[j][k][8].length > 15){
+                     this.events1[j][k][15] = false;
+                  }
 
                                       if(this.events1[j][k][2] > 1){
                                          this.counting = k + 1;
@@ -1434,7 +1455,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                      this.events1[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                                      this.events1[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                                      this.events1[j][k][11] = true ;
-                                     this.events1[j][k][12] = this.report[i].users.username;
+                                     this.events1[j][k][12] = this.report[i].users.username;if(this.events1[j][k][8].length > 15){
+                     this.events1[j][k][15] = false;
+                  }
 
                                       if(this.events1[j][k][2] > 1){
                                          this.counting = k + 1;
@@ -1477,7 +1500,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                      this.events1[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                                      this.events1[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                                      this.events1[j][k][11] = true ;
-                                     this.events1[j][k][12] = this.report[i].users.username;
+                                     this.events1[j][k][12] = this.report[i].users.username;if(this.events1[j][k][8].length > 15){
+                     this.events1[j][k][15] = false;
+                  }
 
                                       if(this.events1[j][k][2] > 1){
                                          this.counting = k + 1;
@@ -1520,7 +1545,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                      this.events1[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                                      this.events1[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                                      this.events1[j][k][11] = true ;
-                                     this.events1[j][k][12] = this.report[i].users.username;
+                                     this.events1[j][k][12] = this.report[i].users.username;if(this.events1[j][k][8].length > 15){
+                     this.events1[j][k][15] = false;
+                  }
 
                                       if(this.events1[j][k][2] > 1){
                                          this.counting = k + 1;
@@ -1563,7 +1590,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                      this.events1[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                                      this.events1[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                                      this.events1[j][k][11] = true ;
-                                     this.events1[j][k][12] = this.report[i].users.username;
+                                     this.events1[j][k][12] = this.report[i].users.username;if(this.events1[j][k][8].length > 15){
+                     this.events1[j][k][15] = false;
+                  }
 
                                       if(this.events1[j][k][2] > 1){
                                          this.counting = k + 1;
@@ -1606,7 +1635,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                      this.events1[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                                      this.events1[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                                      this.events1[j][k][11] = true ;
-                                     this.events1[j][k][12] = this.report[i].users.username;
+                                     this.events1[j][k][12] = this.report[i].users.username;if(this.events1[j][k][8].length > 15){
+                     this.events1[j][k][15] = false;
+                  }
 
                                       if(this.events1[j][k][2] > 1){
                                          this.counting = k + 1;
@@ -1649,7 +1680,12 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                      this.events1[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                                      this.events1[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                                      this.events1[j][k][11] = true ;
-                                     this.events1[j][k][12] = this.report[i].users.username;
+                                     this.events1[j][k][12] = this.report[i].users.username;if(this.events1[j][k][8].length > 15){
+                     this.events1[j][k][15] = false;
+                  }
+                                    if(this.events1[j][k][8].length > 15){
+                                          this.events1[j][k][15] = false;
+                                       }
 
                                       if(this.events1[j][k][2] > 1){
                                          this.counting = k + 1;
@@ -1692,7 +1728,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                      this.events1[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                                      this.events1[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                                      this.events1[j][k][11] = true ;
-                                     this.events1[j][k][12] = this.report[i].users.username;
+                                     this.events1[j][k][12] = this.report[i].users.username;if(this.events1[j][k][8].length > 15){
+                     this.events1[j][k][15] = false;
+                  }
 
                                       if(this.events1[j][k][2] > 1){
                                          this.counting = k + 1;
@@ -1735,7 +1773,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                      this.events1[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                                      this.events1[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                                      this.events1[j][k][11] = true ;
-                                     this.events1[j][k][12] = this.report[i].users.username;
+                                     this.events1[j][k][12] = this.report[i].users.username;if(this.events1[j][k][8].length > 15){
+                     this.events1[j][k][15] = false;
+                  }
 
                                       if(this.events1[j][k][2] > 1){
                                          this.counting = k + 1;
@@ -1778,7 +1818,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                      this.events1[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                                      this.events1[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                                      this.events1[j][k][11] = true ;
-                                     this.events1[j][k][12] = this.report[i].users.username;
+                                     this.events1[j][k][12] = this.report[i].users.username;if(this.events1[j][k][8].length > 15){
+                     this.events1[j][k][15] = false;
+                  }
 
                                       if(this.events1[j][k][2] > 1){
                                          this.counting = k + 1;
@@ -1821,7 +1863,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                      this.events1[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                                      this.events1[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                                      this.events1[j][k][11] = true ;
-                                     this.events1[j][k][12] = this.report[i].users.username;
+                                     this.events1[j][k][12] = this.report[i].users.username;if(this.events1[j][k][8].length > 15){
+                     this.events1[j][k][15] = false;
+                  }
 
                                       if(this.events1[j][k][2] > 1){
                                          this.counting = k + 1;
@@ -1865,7 +1909,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                      this.events2[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                                      this.events2[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                                      this.events2[j][k][11] = true ;
-                                     this.events2[j][k][12] = this.report[i].users.username;
+                                     this.events2[j][k][12] = this.report[i].users.username;if(this.events2[j][k][8].length > 15){
+                     this.events2[j][k][15] = false;
+                  }
 
                                       if(this.events2[j][k][2] > 1){
                                          this.counting = k + 1;
@@ -1908,7 +1954,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                      this.events2[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                                      this.events2[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                                      this.events2[j][k][11] = true ;
-                                     this.events2[j][k][12] = this.report[i].users.username;
+                                     this.events2[j][k][12] = this.report[i].users.username;if(this.events2[j][k][8].length > 15){
+                     this.events2[j][k][15] = false;
+                  }
 
                                       if(this.events2[j][k][2] > 1){
                                          this.counting = k + 1;
@@ -1951,7 +1999,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                      this.events2[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                                      this.events2[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                                      this.events2[j][k][11] = true ;
-                                     this.events2[j][k][12] = this.report[i].users.username;
+                                     this.events2[j][k][12] = this.report[i].users.username;if(this.events2[j][k][8].length > 15){
+                     this.events2[j][k][15] = false;
+                  }
 
                                       if(this.events2[j][k][2] > 1){
                                          this.counting = k + 1;
@@ -1994,7 +2044,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                      this.events2[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                                      this.events2[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                                      this.events2[j][k][11] = true ;
-                                     this.events2[j][k][12] = this.report[i].users.username;
+                                     this.events2[j][k][12] = this.report[i].users.username;if(this.events2[j][k][8].length > 15){
+                     this.events2[j][k][15] = false;
+                  }
 
                                       if(this.events2[j][k][2] > 1){
                                          this.counting = k + 1;
@@ -2037,7 +2089,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                      this.events2[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                                      this.events2[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                                      this.events2[j][k][11] = true ;
-                                     this.events2[j][k][12] = this.report[i].users.username;
+                                     this.events2[j][k][12] = this.report[i].users.username;if(this.events2[j][k][8].length > 15){
+                     this.events2[j][k][15] = false;
+                  }
 
                                       if(this.events2[j][k][2] > 1){
                                          this.counting = k + 1;
@@ -2080,7 +2134,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                      this.events2[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                                      this.events2[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                                      this.events2[j][k][11] = true ;
-                                     this.events2[j][k][12] = this.report[i].users.username;
+                                     this.events2[j][k][12] = this.report[i].users.username;if(this.events2[j][k][8].length > 15){
+                     this.events2[j][k][15] = false;
+                  }
 
                                       if(this.events2[j][k][2] > 1){
                                          this.counting = k + 1;
@@ -2123,7 +2179,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                      this.events2[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                                      this.events2[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                                      this.events2[j][k][11] = true ;
-                                     this.events2[j][k][12] = this.report[i].users.username;
+                                     this.events2[j][k][12] = this.report[i].users.username;if(this.events2[j][k][8].length > 15){
+                     this.events2[j][k][15] = false;
+                  }
 
                                       if(this.events2[j][k][2] > 1){
                                          this.counting = k + 1;
@@ -2166,7 +2224,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                      this.events2[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                                      this.events2[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                                      this.events2[j][k][11] = true ;
-                                     this.events2[j][k][12] = this.report[i].users.username;
+                                     this.events2[j][k][12] = this.report[i].users.username;if(this.events2[j][k][8].length > 15){
+                     this.events2[j][k][15] = false;
+                  }
 
                                       if(this.events2[j][k][2] > 1){
                                          this.counting = k + 1;
@@ -2209,7 +2269,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                      this.events2[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                                      this.events2[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                                      this.events2[j][k][11] = true ;
-                                     this.events2[j][k][12] = this.report[i].users.username;
+                                     this.events2[j][k][12] = this.report[i].users.username;if(this.events2[j][k][8].length > 15){
+                     this.events2[j][k][15] = false;
+                  }
 
                                       if(this.events2[j][k][2] > 1){
                                          this.counting = k + 1;
@@ -2252,7 +2314,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                      this.events2[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                                      this.events2[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                                      this.events2[j][k][11] = true ;
-                                     this.events2[j][k][12] = this.report[i].users.username;
+                                     this.events2[j][k][12] = this.report[i].users.username;if(this.events2[j][k][8].length > 15){
+                     this.events2[j][k][15] = false;
+                  }
 
                                       if(this.events2[j][k][2] > 1){
                                          this.counting = k + 1;
@@ -2295,7 +2359,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                      this.events2[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                                      this.events2[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                                      this.events2[j][k][11] = true ;
-                                     this.events2[j][k][12] = this.report[i].users.username;
+                                     this.events2[j][k][12] = this.report[i].users.username;if(this.events2[j][k][8].length > 15){
+                     this.events2[j][k][15] = false;
+                  }
 
                                       if(this.events2[j][k][2] > 1){
                                          this.counting = k + 1;
@@ -2338,7 +2404,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                      this.events2[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                                      this.events2[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                                      this.events2[j][k][11] = true ;
-                                     this.events2[j][k][12] = this.report[i].users.username;
+                                     this.events2[j][k][12] = this.report[i].users.username;if(this.events2[j][k][8].length > 15){
+                     this.events2[j][k][15] = false;
+                  }
 
                                       if(this.events2[j][k][2] > 1){
                                          this.counting = k + 1;
@@ -2381,7 +2449,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                      this.events2[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                                      this.events2[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                                      this.events2[j][k][11] = true ;
-                                     this.events2[j][k][12] = this.report[i].users.username;
+                                     this.events2[j][k][12] = this.report[i].users.username;if(this.events2[j][k][8].length > 15){
+                     this.events2[j][k][15] = false;
+                  }
 
                                       if(this.events2[j][k][2] > 1){
                                          this.counting = k + 1;
@@ -2424,7 +2494,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                      this.events2[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                                      this.events2[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                                      this.events2[j][k][11] = true ;
-                                     this.events2[j][k][12] = this.report[i].users.username;
+                                     this.events2[j][k][12] = this.report[i].users.username;if(this.events2[j][k][8].length > 15){
+                     this.events2[j][k][15] = false;
+                  }
 
                                       if(this.events2[j][k][2] > 1){
                                          this.counting = k + 1;
@@ -2467,7 +2539,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                      this.events2[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                                      this.events2[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                                      this.events2[j][k][11] = true ;
-                                     this.events2[j][k][12] = this.report[i].users.username;
+                                     this.events2[j][k][12] = this.report[i].users.username;if(this.events2[j][k][8].length > 15){
+                     this.events2[j][k][15] = false;
+                  }
 
                                       if(this.events2[j][k][2] > 1){
                                          this.counting = k + 1;
@@ -2510,7 +2584,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                      this.events2[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                                      this.events2[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                                      this.events2[j][k][11] = true ;
-                                     this.events2[j][k][12] = this.report[i].users.username;
+                                     this.events2[j][k][12] = this.report[i].users.username;if(this.events2[j][k][8].length > 15){
+                     this.events2[j][k][15] = false;
+                  }
 
                                       if(this.events2[j][k][2] > 1){
                                          this.counting = k + 1;
@@ -2553,7 +2629,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                      this.events2[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                                      this.events2[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                                      this.events2[j][k][11] = true ;
-                                     this.events2[j][k][12] = this.report[i].users.username;
+                                     this.events2[j][k][12] = this.report[i].users.username;if(this.events2[j][k][8].length > 15){
+                     this.events2[j][k][15] = false;
+                  }
 
                                       if(this.events2[j][k][2] > 1){
                                          this.counting = k + 1;
@@ -2596,7 +2674,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                      this.events2[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                                      this.events2[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                                      this.events2[j][k][11] = true ;
-                                     this.events2[j][k][12] = this.report[i].users.username;
+                                     this.events2[j][k][12] = this.report[i].users.username;if(this.events2[j][k][8].length > 15){
+                     this.events2[j][k][15] = false;
+                  }
 
                                       if(this.events2[j][k][2] > 1){
                                          this.counting = k + 1;
@@ -2639,7 +2719,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                                      this.events2[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                                      this.events2[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                                      this.events2[j][k][11] = true ;
-                                     this.events2[j][k][12] = this.report[i].users.username;
+                                     this.events2[j][k][12] = this.report[i].users.username;if(this.events2[j][k][8].length > 15){
+                     this.events2[j][k][15] = false;
+                  }
 
                                       if(this.events2[j][k][2] > 1){
                                          this.counting = k + 1;
@@ -2684,7 +2766,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events3[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events3[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events3[j][k][11] = true ;
-                     this.events3[j][k][12] = this.report[i].users.username;
+                     this.events3[j][k][12] = this.report[i].users.username;if(this.events3[j][k][8].length > 15){
+                     this.events3[j][k][15] = false;
+                  }
 
                       if(this.events3[j][k][2] > 1){
                          this.counting = k + 1;
@@ -2727,7 +2811,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events3[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events3[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events3[j][k][11] = true ;
-                     this.events3[j][k][12] = this.report[i].users.username;
+                     this.events3[j][k][12] = this.report[i].users.username;if(this.events3[j][k][8].length > 15){
+                     this.events3[j][k][15] = false;
+                  }
 
                       if(this.events3[j][k][2] > 1){
                          this.counting = k + 1;
@@ -2770,7 +2856,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events3[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events3[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events3[j][k][11] = true ;
-                     this.events3[j][k][12] = this.report[i].users.username;
+                     this.events3[j][k][12] = this.report[i].users.username;if(this.events3[j][k][8].length > 15){
+                     this.events3[j][k][15] = false;
+                  }
 
                       if(this.events3[j][k][2] > 1){
                          this.counting = k + 1;
@@ -2813,7 +2901,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events3[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events3[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events3[j][k][11] = true ;
-                     this.events3[j][k][12] = this.report[i].users.username;
+                     this.events3[j][k][12] = this.report[i].users.username;if(this.events3[j][k][8].length > 15){
+                     this.events3[j][k][15] = false;
+                  }
 
                       if(this.events3[j][k][2] > 1){
                          this.counting = k + 1;
@@ -2856,7 +2946,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events3[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events3[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events3[j][k][11] = true ;
-                     this.events3[j][k][12] = this.report[i].users.username;
+                     this.events3[j][k][12] = this.report[i].users.username;if(this.events3[j][k][8].length > 15){
+                     this.events3[j][k][15] = false;
+                  }
 
                       if(this.events3[j][k][2] > 1){
                          this.counting = k + 1;
@@ -2899,7 +2991,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events3[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events3[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events3[j][k][11] = true ;
-                     this.events3[j][k][12] = this.report[i].users.username;
+                     this.events3[j][k][12] = this.report[i].users.username;if(this.events3[j][k][8].length > 15){
+                     this.events3[j][k][15] = false;
+                  }
 
                       if(this.events3[j][k][2] > 1){
                          this.counting = k + 1;
@@ -2942,7 +3036,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events3[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events3[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events3[j][k][11] = true ;
-                     this.events3[j][k][12] = this.report[i].users.username;
+                     this.events3[j][k][12] = this.report[i].users.username;if(this.events3[j][k][8].length > 15){
+                     this.events3[j][k][15] = false;
+                  }
 
                       if(this.events3[j][k][2] > 1){
                          this.counting = k + 1;
@@ -2985,7 +3081,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events3[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events3[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events3[j][k][11] = true ;
-                     this.events3[j][k][12] = this.report[i].users.username;
+                     this.events3[j][k][12] = this.report[i].users.username;if(this.events3[j][k][8].length > 15){
+                     this.events3[j][k][15] = false;
+                  }
 
                       if(this.events3[j][k][2] > 1){
                          this.counting = k + 1;
@@ -3028,7 +3126,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events3[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events3[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events3[j][k][11] = true ;
-                     this.events3[j][k][12] = this.report[i].users.username;
+                     this.events3[j][k][12] = this.report[i].users.username;if(this.events3[j][k][8].length > 15){
+                     this.events3[j][k][15] = false;
+                  }
 
                       if(this.events3[j][k][2] > 1){
                          this.counting = k + 1;
@@ -3071,7 +3171,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events3[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events3[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events3[j][k][11] = true ;
-                     this.events3[j][k][12] = this.report[i].users.username;
+                     this.events3[j][k][12] = this.report[i].users.username;if(this.events3[j][k][8].length > 15){
+                     this.events3[j][k][15] = false;
+                  }
 
                       if(this.events3[j][k][2] > 1){
                          this.counting = k + 1;
@@ -3114,7 +3216,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events3[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events3[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events3[j][k][11] = true ;
-                     this.events3[j][k][12] = this.report[i].users.username;
+                     this.events3[j][k][12] = this.report[i].users.username;if(this.events3[j][k][8].length > 15){
+                     this.events3[j][k][15] = false;
+                  }
 
                       if(this.events3[j][k][2] > 1){
                          this.counting = k + 1;
@@ -3157,7 +3261,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events3[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events3[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events3[j][k][11] = true ;
-                     this.events3[j][k][12] = this.report[i].users.username;
+                     this.events3[j][k][12] = this.report[i].users.username;if(this.events3[j][k][8].length > 15){
+                     this.events3[j][k][15] = false;
+                  }
 
                       if(this.events3[j][k][2] > 1){
                          this.counting = k + 1;
@@ -3200,7 +3306,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events3[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events3[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events3[j][k][11] = true ;
-                     this.events3[j][k][12] = this.report[i].users.username;
+                     this.events3[j][k][12] = this.report[i].users.username;if(this.events3[j][k][8].length > 15){
+                     this.events3[j][k][15] = false;
+                  }
 
                       if(this.events3[j][k][2] > 1){
                          this.counting = k + 1;
@@ -3243,7 +3351,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events3[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events3[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events3[j][k][11] = true ;
-                     this.events3[j][k][12] = this.report[i].users.username;
+                     this.events3[j][k][12] = this.report[i].users.username;if(this.events3[j][k][8].length > 15){
+                     this.events3[j][k][15] = false;
+                  }
 
                       if(this.events3[j][k][2] > 1){
                          this.counting = k + 1;
@@ -3286,7 +3396,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events3[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events3[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events3[j][k][11] = true ;
-                     this.events3[j][k][12] = this.report[i].users.username;
+                     this.events3[j][k][12] = this.report[i].users.username;if(this.events3[j][k][8].length > 15){
+                     this.events3[j][k][15] = false;
+                  }
 
                       if(this.events3[j][k][2] > 1){
                          this.counting = k + 1;
@@ -3329,7 +3441,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events3[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events3[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events3[j][k][11] = true ;
-                     this.events3[j][k][12] = this.report[i].users.username;
+                     this.events3[j][k][12] = this.report[i].users.username;if(this.events3[j][k][8].length > 15){
+                     this.events3[j][k][15] = false;
+                  }
 
                       if(this.events3[j][k][2] > 1){
                          this.counting = k + 1;
@@ -3372,7 +3486,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events3[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events3[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events3[j][k][11] = true ;
-                     this.events3[j][k][12] = this.report[i].users.username;
+                     this.events3[j][k][12] = this.report[i].users.username;if(this.events3[j][k][8].length > 15){
+                     this.events3[j][k][15] = false;
+                  }
 
                       if(this.events3[j][k][2] > 1){
                          this.counting = k + 1;
@@ -3415,7 +3531,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events3[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events3[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events3[j][k][11] = true ;
-                     this.events3[j][k][12] = this.report[i].users.username;
+                     this.events3[j][k][12] = this.report[i].users.username;if(this.events3[j][k][8].length > 15){
+                     this.events3[j][k][15] = false;
+                  }
 
                       if(this.events3[j][k][2] > 1){
                          this.counting = k + 1;
@@ -3458,7 +3576,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events3[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events3[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events3[j][k][11] = true ;
-                     this.events3[j][k][12] = this.report[i].users.username;
+                     this.events3[j][k][12] = this.report[i].users.username;if(this.events3[j][k][8].length > 15){
+                     this.events3[j][k][15] = false;
+                  }
 
                       if(this.events3[j][k][2] > 1){
                          this.counting = k + 1;
@@ -3503,7 +3623,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events4[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events4[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events4[j][k][11] = true ;
-                     this.events4[j][k][12] = this.report[i].users.username;
+                     this.events4[j][k][12] = this.report[i].users.username;if(this.events4[j][k][8].length > 15){
+                     this.events4[j][k][15] = false;
+                  }
 
                       if(this.events4[j][k][2] > 1){
                          this.counting = k + 1;
@@ -3546,7 +3668,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events4[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events4[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events4[j][k][11] = true ;
-                     this.events4[j][k][12] = this.report[i].users.username;
+                     this.events4[j][k][12] = this.report[i].users.username;if(this.events4[j][k][8].length > 15){
+                     this.events4[j][k][15] = false;
+                  }
 
                       if(this.events4[j][k][2] > 1){
                          this.counting = k + 1;
@@ -3589,7 +3713,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events4[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events4[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events4[j][k][11] = true ;
-                     this.events4[j][k][12] = this.report[i].users.username;
+                     this.events4[j][k][12] = this.report[i].users.username;if(this.events4[j][k][8].length > 15){
+                     this.events4[j][k][15] = false;
+                  }
 
                       if(this.events4[j][k][2] > 1){
                          this.counting = k + 1;
@@ -3632,7 +3758,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events4[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events4[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events4[j][k][11] = true ;
-                     this.events4[j][k][12] = this.report[i].users.username;
+                     this.events4[j][k][12] = this.report[i].users.username;if(this.events4[j][k][8].length > 15){
+                     this.events4[j][k][15] = false;
+                  }
 
                       if(this.events4[j][k][2] > 1){
                          this.counting = k + 1;
@@ -3675,7 +3803,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events4[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events4[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events4[j][k][11] = true ;
-                     this.events4[j][k][12] = this.report[i].users.username;
+                     this.events4[j][k][12] = this.report[i].users.username;if(this.events4[j][k][8].length > 15){
+                     this.events4[j][k][15] = false;
+                  }
 
                       if(this.events4[j][k][2] > 1){
                          this.counting = k + 1;
@@ -3718,7 +3848,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events4[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events4[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events4[j][k][11] = true ;
-                     this.events4[j][k][12] = this.report[i].users.username;
+                     this.events4[j][k][12] = this.report[i].users.username;if(this.events4[j][k][8].length > 15){
+                     this.events4[j][k][15] = false;
+                  }
 
                       if(this.events4[j][k][2] > 1){
                          this.counting = k + 1;
@@ -3761,7 +3893,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events4[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events4[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events4[j][k][11] = true ;
-                     this.events4[j][k][12] = this.report[i].users.username;
+                     this.events4[j][k][12] = this.report[i].users.username;if(this.events4[j][k][8].length > 15){
+                     this.events4[j][k][15] = false;
+                  }
 
                       if(this.events4[j][k][2] > 1){
                          this.counting = k + 1;
@@ -3804,7 +3938,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events4[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events4[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events4[j][k][11] = true ;
-                     this.events4[j][k][12] = this.report[i].users.username;
+                     this.events4[j][k][12] = this.report[i].users.username;if(this.events4[j][k][8].length > 15){
+                     this.events4[j][k][15] = false;
+                  }
 
                       if(this.events4[j][k][2] > 1){
                          this.counting = k + 1;
@@ -3847,7 +3983,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events4[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events4[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events4[j][k][11] = true ;
-                     this.events4[j][k][12] = this.report[i].users.username;
+                     this.events4[j][k][12] = this.report[i].users.username;if(this.events4[j][k][8].length > 15){
+                     this.events4[j][k][15] = false;
+                  }
 
                       if(this.events4[j][k][2] > 1){
                          this.counting = k + 1;
@@ -3890,7 +4028,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events4[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events4[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events4[j][k][11] = true ;
-                     this.events4[j][k][12] = this.report[i].users.username;
+                     this.events4[j][k][12] = this.report[i].users.username;if(this.events4[j][k][8].length > 15){
+                     this.events4[j][k][15] = false;
+                  }
 
                       if(this.events4[j][k][2] > 1){
                          this.counting = k + 1;
@@ -3933,7 +4073,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events4[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events4[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events4[j][k][11] = true ;
-                     this.events4[j][k][12] = this.report[i].users.username;
+                     this.events4[j][k][12] = this.report[i].users.username;if(this.events4[j][k][8].length > 15){
+                     this.events4[j][k][15] = false;
+                  }
 
                       if(this.events4[j][k][2] > 1){
                          this.counting = k + 1;
@@ -3976,7 +4118,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events4[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events4[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events4[j][k][11] = true ;
-                     this.events4[j][k][12] = this.report[i].users.username;
+                     this.events4[j][k][12] = this.report[i].users.username;if(this.events4[j][k][8].length > 15){
+                     this.events4[j][k][15] = false;
+                  }
 
                       if(this.events4[j][k][2] > 1){
                          this.counting = k + 1;
@@ -4019,7 +4163,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events4[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events4[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events4[j][k][11] = true ;
-                     this.events4[j][k][12] = this.report[i].users.username;
+                     this.events4[j][k][12] = this.report[i].users.username;if(this.events4[j][k][8].length > 15){
+                     this.events4[j][k][15] = false;
+                  }
 
                       if(this.events4[j][k][2] > 1){
                          this.counting = k + 1;
@@ -4062,7 +4208,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events4[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events4[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events4[j][k][11] = true ;
-                     this.events4[j][k][12] = this.report[i].users.username;
+                     this.events4[j][k][12] = this.report[i].users.username;if(this.events4[j][k][8].length > 15){
+                     this.events4[j][k][15] = false;
+                  }
 
                       if(this.events4[j][k][2] > 1){
                          this.counting = k + 1;
@@ -4105,7 +4253,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events4[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events4[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events4[j][k][11] = true ;
-                     this.events4[j][k][12] = this.report[i].users.username;
+                     this.events4[j][k][12] = this.report[i].users.username;if(this.events4[j][k][8].length > 15){
+                     this.events4[j][k][15] = false;
+                  }
 
                       if(this.events4[j][k][2] > 1){
                          this.counting = k + 1;
@@ -4148,7 +4298,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events4[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events4[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events4[j][k][11] = true ;
-                     this.events4[j][k][12] = this.report[i].users.username;
+                     this.events4[j][k][12] = this.report[i].users.username;if(this.events4[j][k][8].length > 15){
+                     this.events4[j][k][15] = false;
+                  }
 
                       if(this.events4[j][k][2] > 1){
                          this.counting = k + 1;
@@ -4191,7 +4343,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events4[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events4[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events4[j][k][11] = true ;
-                     this.events4[j][k][12] = this.report[i].users.username;
+                     this.events4[j][k][12] = this.report[i].users.username;if(this.events4[j][k][8].length > 15){
+                     this.events4[j][k][15] = false;
+                  }
 
                       if(this.events4[j][k][2] > 1){
                          this.counting = k + 1;
@@ -4234,7 +4388,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events4[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events4[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events4[j][k][11] = true ;
-                     this.events4[j][k][12] = this.report[i].users.username;
+                     this.events4[j][k][12] = this.report[i].users.username;if(this.events4[j][k][8].length > 15){
+                     this.events4[j][k][15] = false;
+                  }
 
                       if(this.events4[j][k][2] > 1){
                          this.counting = k + 1;
@@ -4277,7 +4433,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events4[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events4[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events4[j][k][11] = true ;
-                     this.events4[j][k][12] = this.report[i].users.username;
+                     this.events4[j][k][12] = this.report[i].users.username;if(this.events4[j][k][8].length > 15){
+                     this.events4[j][k][15] = false;
+                  }
 
                       if(this.events4[j][k][2] > 1){
                          this.counting = k + 1;
@@ -4322,7 +4480,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events5[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events5[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events5[j][k][11] = true ;
-                     this.events5[j][k][12] = this.report[i].users.username;
+                     this.events5[j][k][12] = this.report[i].users.username;if(this.events5[j][k][8].length > 15){
+                     this.events5[j][k][15] = false;
+                  }
 
                       if(this.events5[j][k][2] > 1){
                          this.counting = k + 1;
@@ -4365,7 +4525,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events5[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events5[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events5[j][k][11] = true ;
-                     this.events5[j][k][12] = this.report[i].users.username;
+                     this.events5[j][k][12] = this.report[i].users.username;if(this.events5[j][k][8].length > 15){
+                     this.events5[j][k][15] = false;
+                  }
 
                       if(this.events5[j][k][2] > 1){
                          this.counting = k + 1;
@@ -4408,7 +4570,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events5[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events5[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events5[j][k][11] = true ;
-                     this.events5[j][k][12] = this.report[i].users.username;
+                     this.events5[j][k][12] = this.report[i].users.username;if(this.events5[j][k][8].length > 15){
+                     this.events5[j][k][15] = false;
+                  }
 
                       if(this.events5[j][k][2] > 1){
                          this.counting = k + 1;
@@ -4451,7 +4615,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events5[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events5[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events5[j][k][11] = true ;
-                     this.events5[j][k][12] = this.report[i].users.username;
+                     this.events5[j][k][12] = this.report[i].users.username;if(this.events5[j][k][8].length > 15){
+                     this.events5[j][k][15] = false;
+                  }
 
                       if(this.events5[j][k][2] > 1){
                          this.counting = k + 1;
@@ -4494,7 +4660,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events5[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events5[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events5[j][k][11] = true ;
-                     this.events5[j][k][12] = this.report[i].users.username;
+                     this.events5[j][k][12] = this.report[i].users.username;if(this.events5[j][k][8].length > 15){
+                     this.events5[j][k][15] = false;
+                  }
 
                       if(this.events5[j][k][2] > 1){
                          this.counting = k + 1;
@@ -4537,7 +4705,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events5[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events5[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events5[j][k][11] = true ;
-                     this.events5[j][k][12] = this.report[i].users.username;
+                     this.events5[j][k][12] = this.report[i].users.username;if(this.events5[j][k][8].length > 15){
+                     this.events5[j][k][15] = false;
+                  }
 
                       if(this.events5[j][k][2] > 1){
                          this.counting = k + 1;
@@ -4580,7 +4750,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events5[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events5[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events5[j][k][11] = true ;
-                     this.events5[j][k][12] = this.report[i].users.username;
+                     this.events5[j][k][12] = this.report[i].users.username;if(this.events5[j][k][8].length > 15){
+                     this.events5[j][k][15] = false;
+                  }
 
                       if(this.events5[j][k][2] > 1){
                          this.counting = k + 1;
@@ -4623,7 +4795,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events5[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events5[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events5[j][k][11] = true ;
-                     this.events5[j][k][12] = this.report[i].users.username;
+                     this.events5[j][k][12] = this.report[i].users.username;if(this.events5[j][k][8].length > 15){
+                     this.events5[j][k][15] = false;
+                  }
 
                       if(this.events5[j][k][2] > 1){
                          this.counting = k + 1;
@@ -4666,7 +4840,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events5[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events5[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events5[j][k][11] = true ;
-                     this.events5[j][k][12] = this.report[i].users.username;
+                     this.events5[j][k][12] = this.report[i].users.username;if(this.events5[j][k][8].length > 15){
+                     this.events5[j][k][15] = false;
+                  }
 
                       if(this.events5[j][k][2] > 1){
                          this.counting = k + 1;
@@ -4709,7 +4885,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events5[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events5[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events5[j][k][11] = true ;
-                     this.events5[j][k][12] = this.report[i].users.username;
+                     this.events5[j][k][12] = this.report[i].users.username;if(this.events5[j][k][8].length > 15){
+                     this.events5[j][k][15] = false;
+                  }
 
                       if(this.events5[j][k][2] > 1){
                          this.counting = k + 1;
@@ -4752,7 +4930,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events5[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events5[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events5[j][k][11] = true ;
-                     this.events5[j][k][12] = this.report[i].users.username;
+                     this.events5[j][k][12] = this.report[i].users.username;if(this.events5[j][k][8].length > 15){
+                     this.events5[j][k][15] = false;
+                  }
 
                       if(this.events5[j][k][2] > 1){
                          this.counting = k + 1;
@@ -4795,7 +4975,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events5[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events5[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events5[j][k][11] = true ;
-                     this.events5[j][k][12] = this.report[i].users.username;
+                     this.events5[j][k][12] = this.report[i].users.username;if(this.events5[j][k][8].length > 15){
+                     this.events5[j][k][15] = false;
+                  }
 
                       if(this.events5[j][k][2] > 1){
                          this.counting = k + 1;
@@ -4838,7 +5020,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events5[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events5[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events5[j][k][11] = true ;
-                     this.events5[j][k][12] = this.report[i].users.username;
+                     this.events5[j][k][12] = this.report[i].users.username;if(this.events5[j][k][8].length > 15){
+                     this.events5[j][k][15] = false;
+                  }
 
                       if(this.events5[j][k][2] > 1){
                          this.counting = k + 1;
@@ -4881,7 +5065,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events5[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events5[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events5[j][k][11] = true ;
-                     this.events5[j][k][12] = this.report[i].users.username;
+                     this.events5[j][k][12] = this.report[i].users.username;if(this.events5[j][k][8].length > 15){
+                     this.events5[j][k][15] = false;
+                  }
 
                       if(this.events5[j][k][2] > 1){
                          this.counting = k + 1;
@@ -4924,7 +5110,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events5[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events5[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events5[j][k][11] = true ;
-                     this.events5[j][k][12] = this.report[i].users.username;
+                     this.events5[j][k][12] = this.report[i].users.username;if(this.events5[j][k][8].length > 15){
+                     this.events5[j][k][15] = false;
+                  }
 
                       if(this.events5[j][k][2] > 1){
                          this.counting = k + 1;
@@ -4967,7 +5155,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events5[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events5[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events5[j][k][11] = true ;
-                     this.events5[j][k][12] = this.report[i].users.username;
+                     this.events5[j][k][12] = this.report[i].users.username;if(this.events5[j][k][8].length > 15){
+                     this.events5[j][k][15] = false;
+                  }
 
                       if(this.events5[j][k][2] > 1){
                          this.counting = k + 1;
@@ -5010,7 +5200,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events5[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events5[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events5[j][k][11] = true ;
-                     this.events5[j][k][12] = this.report[i].users.username;
+                     this.events5[j][k][12] = this.report[i].users.username;if(this.events5[j][k][8].length > 15){
+                     this.events5[j][k][15] = false;
+                  }
 
                       if(this.events5[j][k][2] > 1){
                          this.counting = k + 1;
@@ -5053,7 +5245,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events5[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events5[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events5[j][k][11] = true ;
-                     this.events5[j][k][12] = this.report[i].users.username;
+                     this.events5[j][k][12] = this.report[i].users.username;if(this.events5[j][k][8].length > 15){
+                     this.events5[j][k][15] = false;
+                  }
 
                       if(this.events5[j][k][2] > 1){
                          this.counting = k + 1;
@@ -5096,7 +5290,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events5[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events5[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events5[j][k][11] = true ;
-                     this.events5[j][k][12] = this.report[i].users.username;
+                     this.events5[j][k][12] = this.report[i].users.username;if(this.events5[j][k][8].length > 15){
+                     this.events5[j][k][15] = false;
+                  }
 
                       if(this.events5[j][k][2] > 1){
                          this.counting = k + 1;
@@ -5142,7 +5338,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events6[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events6[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events6[j][k][11] = true ;
-                     this.events6[j][k][12] = this.report[i].users.username;
+                     this.events6[j][k][12] = this.report[i].users.username;if(this.events6[j][k][8].length > 15){
+                     this.events6[j][k][15] = false;
+                  }
 
                       if(this.events6[j][k][2] > 1){
                          this.counting = k + 1;
@@ -5185,7 +5383,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events6[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events6[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events6[j][k][11] = true ;
-                     this.events6[j][k][12] = this.report[i].users.username;
+                     this.events6[j][k][12] = this.report[i].users.username;if(this.events6[j][k][8].length > 15){
+                     this.events6[j][k][15] = false;
+                  }
 
                       if(this.events6[j][k][2] > 1){
                          this.counting = k + 1;
@@ -5228,7 +5428,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events6[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events6[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events6[j][k][11] = true ;
-                     this.events6[j][k][12] = this.report[i].users.username;
+                     this.events6[j][k][12] = this.report[i].users.username;if(this.events6[j][k][8].length > 15){
+                     this.events6[j][k][15] = false;
+                  }
 
                       if(this.events6[j][k][2] > 1){
                          this.counting = k + 1;
@@ -5271,7 +5473,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events6[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events6[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events6[j][k][11] = true ;
-                     this.events6[j][k][12] = this.report[i].users.username;
+                     this.events6[j][k][12] = this.report[i].users.username;if(this.events6[j][k][8].length > 15){
+                     this.events6[j][k][15] = false;
+                  }
 
                       if(this.events6[j][k][2] > 1){
                          this.counting = k + 1;
@@ -5314,7 +5518,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events6[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events6[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events6[j][k][11] = true ;
-                     this.events6[j][k][12] = this.report[i].users.username;
+                     this.events6[j][k][12] = this.report[i].users.username;if(this.events6[j][k][8].length > 15){
+                     this.events6[j][k][15] = false;
+                  }
 
                       if(this.events6[j][k][2] > 1){
                          this.counting = k + 1;
@@ -5357,7 +5563,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events6[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events6[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events6[j][k][11] = true ;
-                     this.events6[j][k][12] = this.report[i].users.username;
+                     this.events6[j][k][12] = this.report[i].users.username;if(this.events6[j][k][8].length > 15){
+                     this.events6[j][k][15] = false;
+                  }
 
                       if(this.events6[j][k][2] > 1){
                          this.counting = k + 1;
@@ -5400,7 +5608,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events6[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events6[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events6[j][k][11] = true ;
-                     this.events6[j][k][12] = this.report[i].users.username;
+                     this.events6[j][k][12] = this.report[i].users.username;if(this.events6[j][k][8].length > 15){
+                     this.events6[j][k][15] = false;
+                  }
 
                       if(this.events6[j][k][2] > 1){
                          this.counting = k + 1;
@@ -5443,7 +5653,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events6[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events6[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events6[j][k][11] = true ;
-                     this.events6[j][k][12] = this.report[i].users.username;
+                     this.events6[j][k][12] = this.report[i].users.username;if(this.events6[j][k][8].length > 15){
+                     this.events6[j][k][15] = false;
+                  }
 
                       if(this.events6[j][k][2] > 1){
                          this.counting = k + 1;
@@ -5486,7 +5698,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events6[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events6[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events6[j][k][11] = true ;
-                     this.events6[j][k][12] = this.report[i].users.username;
+                     this.events6[j][k][12] = this.report[i].users.username;if(this.events6[j][k][8].length > 15){
+                     this.events6[j][k][15] = false;
+                  }
 
                       if(this.events6[j][k][2] > 1){
                          this.counting = k + 1;
@@ -5529,7 +5743,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events6[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events6[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events6[j][k][11] = true ;
-                     this.events6[j][k][12] = this.report[i].users.username;
+                     this.events6[j][k][12] = this.report[i].users.username;if(this.events6[j][k][8].length > 15){
+                     this.events6[j][k][15] = false;
+                  }
 
                       if(this.events6[j][k][2] > 1){
                          this.counting = k + 1;
@@ -5572,7 +5788,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events6[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events6[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events6[j][k][11] = true ;
-                     this.events6[j][k][12] = this.report[i].users.username;
+                     this.events6[j][k][12] = this.report[i].users.username;if(this.events6[j][k][8].length > 15){
+                     this.events6[j][k][15] = false;
+                  }
 
                       if(this.events6[j][k][2] > 1){
                          this.counting = k + 1;
@@ -5615,7 +5833,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events6[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events6[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events6[j][k][11] = true ;
-                     this.events6[j][k][12] = this.report[i].users.username;
+                     this.events6[j][k][12] = this.report[i].users.username;if(this.events6[j][k][8].length > 15){
+                     this.events6[j][k][15] = false;
+                  }
 
                       if(this.events6[j][k][2] > 1){
                          this.counting = k + 1;
@@ -5658,7 +5878,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events6[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events6[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events6[j][k][11] = true ;
-                     this.events6[j][k][12] = this.report[i].users.username;
+                     this.events6[j][k][12] = this.report[i].users.username;if(this.events6[j][k][8].length > 15){
+                     this.events6[j][k][15] = false;
+                  }
 
                       if(this.events6[j][k][2] > 1){
                          this.counting = k + 1;
@@ -5701,7 +5923,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events6[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events6[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events6[j][k][11] = true ;
-                     this.events6[j][k][12] = this.report[i].users.username;
+                     this.events6[j][k][12] = this.report[i].users.username;if(this.events6[j][k][8].length > 15){
+                     this.events6[j][k][15] = false;
+                  }
 
                       if(this.events6[j][k][2] > 1){
                          this.counting = k + 1;
@@ -5744,7 +5968,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events6[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events6[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events6[j][k][11] = true ;
-                     this.events6[j][k][12] = this.report[i].users.username;
+                     this.events6[j][k][12] = this.report[i].users.username;if(this.events6[j][k][8].length > 15){
+                     this.events6[j][k][15] = false;
+                  }
 
                       if(this.events6[j][k][2] > 1){
                          this.counting = k + 1;
@@ -5787,7 +6013,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events6[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events6[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events6[j][k][11] = true ;
-                     this.events6[j][k][12] = this.report[i].users.username;
+                     this.events6[j][k][12] = this.report[i].users.username;if(this.events6[j][k][8].length > 15){
+                     this.events6[j][k][15] = false;
+                  }
 
                       if(this.events6[j][k][2] > 1){
                          this.counting = k + 1;
@@ -5830,7 +6058,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events6[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events6[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events6[j][k][11] = true ;
-                     this.events6[j][k][12] = this.report[i].users.username;
+                     this.events6[j][k][12] = this.report[i].users.username;if(this.events6[j][k][8].length > 15){
+                     this.events6[j][k][15] = false;
+                  }
 
                       if(this.events6[j][k][2] > 1){
                          this.counting = k + 1;
@@ -5873,7 +6103,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events6[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events6[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events6[j][k][11] = true ;
-                     this.events6[j][k][12] = this.report[i].users.username;
+                     this.events6[j][k][12] = this.report[i].users.username;if(this.events6[j][k][8].length > 15){
+                     this.events6[j][k][15] = false;
+                  }
 
                       if(this.events6[j][k][2] > 1){
                          this.counting = k + 1;
@@ -5916,7 +6148,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events6[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events6[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events6[j][k][11] = true ;
-                     this.events6[j][k][12] = this.report[i].users.username;
+                     this.events6[j][k][12] = this.report[i].users.username;if(this.events6[j][k][8].length > 15){
+                     this.events6[j][k][15] = false;
+                  }
 
                       if(this.events6[j][k][2] > 1){
                          this.counting = k + 1;
@@ -5962,7 +6196,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events7[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events7[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events7[j][k][11] = true ;
-                     this.events7[j][k][12] = this.report[i].users.username;
+                     this.events7[j][k][12] = this.report[i].users.username;if(this.events7[j][k][8].length > 15){
+                     this.events7[j][k][15] = false;
+                  }
 
                       if(this.events7[j][k][2] > 1){
                          this.counting = k + 1;
@@ -6005,7 +6241,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events7[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events7[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events7[j][k][11] = true ;
-                     this.events7[j][k][12] = this.report[i].users.username;
+                     this.events7[j][k][12] = this.report[i].users.username;if(this.events7[j][k][8].length > 15){
+                     this.events7[j][k][15] = false;
+                  }
 
                       if(this.events7[j][k][2] > 1){
                          this.counting = k + 1;
@@ -6048,7 +6286,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events7[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events7[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events7[j][k][11] = true ;
-                     this.events7[j][k][12] = this.report[i].users.username;
+                     this.events7[j][k][12] = this.report[i].users.username;if(this.events7[j][k][8].length > 15){
+                     this.events7[j][k][15] = false;
+                  }
 
                       if(this.events7[j][k][2] > 1){
                          this.counting = k + 1;
@@ -6091,7 +6331,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events7[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events7[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events7[j][k][11] = true ;
-                     this.events7[j][k][12] = this.report[i].users.username;
+                     this.events7[j][k][12] = this.report[i].users.username;if(this.events7[j][k][8].length > 15){
+                     this.events7[j][k][15] = false;
+                  }
 
                       if(this.events7[j][k][2] > 1){
                          this.counting = k + 1;
@@ -6134,7 +6376,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events7[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events7[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events7[j][k][11] = true ;
-                     this.events7[j][k][12] = this.report[i].users.username;
+                     this.events7[j][k][12] = this.report[i].users.username;if(this.events7[j][k][8].length > 15){
+                     this.events7[j][k][15] = false;
+                  }
 
                       if(this.events7[j][k][2] > 1){
                          this.counting = k + 1;
@@ -6177,7 +6421,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events7[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events7[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events7[j][k][11] = true ;
-                     this.events7[j][k][12] = this.report[i].users.username;
+                     this.events7[j][k][12] = this.report[i].users.username;if(this.events7[j][k][8].length > 15){
+                     this.events7[j][k][15] = false;
+                  }
 
                       if(this.events7[j][k][2] > 1){
                          this.counting = k + 1;
@@ -6220,7 +6466,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events7[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events7[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events7[j][k][11] = true ;
-                     this.events7[j][k][12] = this.report[i].users.username;
+                     this.events7[j][k][12] = this.report[i].users.username;if(this.events7[j][k][8].length > 15){
+                     this.events7[j][k][15] = false;
+                  }
 
                       if(this.events7[j][k][2] > 1){
                          this.counting = k + 1;
@@ -6263,7 +6511,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events7[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events7[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events7[j][k][11] = true ;
-                     this.events7[j][k][12] = this.report[i].users.username;
+                     this.events7[j][k][12] = this.report[i].users.username;if(this.events7[j][k][8].length > 15){
+                     this.events7[j][k][15] = false;
+                  }
 
                       if(this.events7[j][k][2] > 1){
                          this.counting = k + 1;
@@ -6306,7 +6556,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events7[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events7[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events7[j][k][11] = true ;
-                     this.events7[j][k][12] = this.report[i].users.username;
+                     this.events7[j][k][12] = this.report[i].users.username;if(this.events7[j][k][8].length > 15){
+                     this.events7[j][k][15] = false;
+                  }
 
                       if(this.events7[j][k][2] > 1){
                          this.counting = k + 1;
@@ -6349,7 +6601,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events7[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events7[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events7[j][k][11] = true ;
-                     this.events7[j][k][12] = this.report[i].users.username;
+                     this.events7[j][k][12] = this.report[i].users.username;if(this.events7[j][k][8].length > 15){
+                     this.events7[j][k][15] = false;
+                  }
 
                       if(this.events7[j][k][2] > 1){
                          this.counting = k + 1;
@@ -6392,7 +6646,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events7[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events7[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events7[j][k][11] = true ;
-                     this.events7[j][k][12] = this.report[i].users.username;
+                     this.events7[j][k][12] = this.report[i].users.username;if(this.events7[j][k][8].length > 15){
+                     this.events7[j][k][15] = false;
+                  }
 
                       if(this.events7[j][k][2] > 1){
                          this.counting = k + 1;
@@ -6435,7 +6691,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events7[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events7[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events7[j][k][11] = true ;
-                     this.events7[j][k][12] = this.report[i].users.username;
+                     this.events7[j][k][12] = this.report[i].users.username;if(this.events7[j][k][8].length > 15){
+                     this.events7[j][k][15] = false;
+                  }
 
                       if(this.events7[j][k][2] > 1){
                          this.counting = k + 1;
@@ -6478,7 +6736,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events7[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events7[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events7[j][k][11] = true ;
-                     this.events7[j][k][12] = this.report[i].users.username;
+                     this.events7[j][k][12] = this.report[i].users.username;if(this.events7[j][k][8].length > 15){
+                     this.events7[j][k][15] = false;
+                  }
 
                       if(this.events7[j][k][2] > 1){
                          this.counting = k + 1;
@@ -6521,7 +6781,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events7[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events7[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events7[j][k][11] = true ;
-                     this.events7[j][k][12] = this.report[i].users.username;
+                     this.events7[j][k][12] = this.report[i].users.username;if(this.events7[j][k][8].length > 15){
+                     this.events7[j][k][15] = false;
+                  }
 
                       if(this.events7[j][k][2] > 1){
                          this.counting = k + 1;
@@ -6564,7 +6826,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events7[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events7[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events7[j][k][11] = true ;
-                     this.events7[j][k][12] = this.report[i].users.username;
+                     this.events7[j][k][12] = this.report[i].users.username;if(this.events7[j][k][8].length > 15){
+                     this.events7[j][k][15] = false;
+                  }
 
                       if(this.events7[j][k][2] > 1){
                          this.counting = k + 1;
@@ -6607,7 +6871,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events7[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events7[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events7[j][k][11] = true ;
-                     this.events7[j][k][12] = this.report[i].users.username;
+                     this.events7[j][k][12] = this.report[i].users.username;if(this.events7[j][k][8].length > 15){
+                     this.events7[j][k][15] = false;
+                  }
 
                       if(this.events7[j][k][2] > 1){
                          this.counting = k + 1;
@@ -6650,7 +6916,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events7[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events7[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events7[j][k][11] = true ;
-                     this.events7[j][k][12] = this.report[i].users.username;
+                     this.events7[j][k][12] = this.report[i].users.username;if(this.events7[j][k][8].length > 15){
+                     this.events7[j][k][15] = false;
+                  }
 
                       if(this.events7[j][k][2] > 1){
                          this.counting = k + 1;
@@ -6693,7 +6961,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events7[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events7[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events7[j][k][11] = true ;
-                     this.events7[j][k][12] = this.report[i].users.username;
+                     this.events7[j][k][12] = this.report[i].users.username;if(this.events7[j][k][8].length > 15){
+                     this.events7[j][k][15] = false;
+                  }
 
                       if(this.events7[j][k][2] > 1){
                          this.counting = k + 1;
@@ -6736,7 +7006,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events7[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events7[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events7[j][k][11] = true ;
-                     this.events7[j][k][12] = this.report[i].users.username;
+                     this.events7[j][k][12] = this.report[i].users.username;if(this.events7[j][k][8].length > 15){
+                     this.events7[j][k][15] = false;
+                  }
 
                       if(this.events7[j][k][2] > 1){
                          this.counting = k + 1;
@@ -6781,7 +7053,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events8[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events8[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events8[j][k][11] = true ;
-                     this.events8[j][k][12] = this.report[i].users.username;
+                     this.events8[j][k][12] = this.report[i].users.username;if(this.events8[j][k][8].length > 15){
+                     this.events8[j][k][15] = false;
+                  }
 
                       if(this.events8[j][k][2] > 1){
                          this.counting = k + 1;
@@ -6824,7 +7098,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events8[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events8[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events8[j][k][11] = true ;
-                     this.events8[j][k][12] = this.report[i].users.username;
+                     this.events8[j][k][12] = this.report[i].users.username;if(this.events8[j][k][8].length > 15){
+                     this.events8[j][k][15] = false;
+                  }
 
                       if(this.events8[j][k][2] > 1){
                          this.counting = k + 1;
@@ -6867,7 +7143,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events8[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events8[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events8[j][k][11] = true ;
-                     this.events8[j][k][12] = this.report[i].users.username;
+                     this.events8[j][k][12] = this.report[i].users.username;if(this.events8[j][k][8].length > 15){
+                     this.events8[j][k][15] = false;
+                  }
 
                       if(this.events8[j][k][2] > 1){
                          this.counting = k + 1;
@@ -6910,7 +7188,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events8[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events8[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events8[j][k][11] = true ;
-                     this.events8[j][k][12] = this.report[i].users.username;
+                     this.events8[j][k][12] = this.report[i].users.username;if(this.events8[j][k][8].length > 15){
+                     this.events8[j][k][15] = false;
+                  }
 
                       if(this.events8[j][k][2] > 1){
                          this.counting = k + 1;
@@ -6953,7 +7233,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events8[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events8[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events8[j][k][11] = true ;
-                     this.events8[j][k][12] = this.report[i].users.username;
+                     this.events8[j][k][12] = this.report[i].users.username;if(this.events8[j][k][8].length > 15){
+                     this.events8[j][k][15] = false;
+                  }
 
                       if(this.events8[j][k][2] > 1){
                          this.counting = k + 1;
@@ -6996,7 +7278,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events8[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events8[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events8[j][k][11] = true ;
-                     this.events8[j][k][12] = this.report[i].users.username;
+                     this.events8[j][k][12] = this.report[i].users.username;if(this.events8[j][k][8].length > 15){
+                     this.events8[j][k][15] = false;
+                  }
 
                       if(this.events8[j][k][2] > 1){
                          this.counting = k + 1;
@@ -7039,7 +7323,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events8[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events8[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events8[j][k][11] = true ;
-                     this.events8[j][k][12] = this.report[i].users.username;
+                     this.events8[j][k][12] = this.report[i].users.username;if(this.events8[j][k][8].length > 15){
+                     this.events8[j][k][15] = false;
+                  }
 
                       if(this.events8[j][k][2] > 1){
                          this.counting = k + 1;
@@ -7082,7 +7368,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events8[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events8[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events8[j][k][11] = true ;
-                     this.events8[j][k][12] = this.report[i].users.username;
+                     this.events8[j][k][12] = this.report[i].users.username;if(this.events8[j][k][8].length > 15){
+                     this.events8[j][k][15] = false;
+                  }
 
                       if(this.events8[j][k][2] > 1){
                          this.counting = k + 1;
@@ -7125,7 +7413,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events8[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events8[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events8[j][k][11] = true ;
-                     this.events8[j][k][12] = this.report[i].users.username;
+                     this.events8[j][k][12] = this.report[i].users.username;if(this.events8[j][k][8].length > 15){
+                     this.events8[j][k][15] = false;
+                  }
 
                       if(this.events8[j][k][2] > 1){
                          this.counting = k + 1;
@@ -7168,7 +7458,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events8[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events8[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events8[j][k][11] = true ;
-                     this.events8[j][k][12] = this.report[i].users.username;
+                     this.events8[j][k][12] = this.report[i].users.username;if(this.events8[j][k][8].length > 15){
+                     this.events8[j][k][15] = false;
+                  }
 
                       if(this.events8[j][k][2] > 1){
                          this.counting = k + 1;
@@ -7211,7 +7503,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events8[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events8[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events8[j][k][11] = true ;
-                     this.events8[j][k][12] = this.report[i].users.username;
+                     this.events8[j][k][12] = this.report[i].users.username;if(this.events8[j][k][8].length > 15){
+                     this.events8[j][k][15] = false;
+                  }
 
                       if(this.events8[j][k][2] > 1){
                          this.counting = k + 1;
@@ -7254,7 +7548,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events8[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events8[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events8[j][k][11] = true ;
-                     this.events8[j][k][12] = this.report[i].users.username;
+                     this.events8[j][k][12] = this.report[i].users.username;if(this.events8[j][k][8].length > 15){
+                     this.events8[j][k][15] = false;
+                  }
 
                       if(this.events8[j][k][2] > 1){
                          this.counting = k + 1;
@@ -7297,7 +7593,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events8[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events8[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events8[j][k][11] = true ;
-                     this.events8[j][k][12] = this.report[i].users.username;
+                     this.events8[j][k][12] = this.report[i].users.username;if(this.events8[j][k][8].length > 15){
+                     this.events8[j][k][15] = false;
+                  }
 
                       if(this.events8[j][k][2] > 1){
                          this.counting = k + 1;
@@ -7340,7 +7638,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events8[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events8[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events8[j][k][11] = true ;
-                     this.events8[j][k][12] = this.report[i].users.username;
+                     this.events8[j][k][12] = this.report[i].users.username;if(this.events8[j][k][8].length > 15){
+                     this.events8[j][k][15] = false;
+                  }
 
                       if(this.events8[j][k][2] > 1){
                          this.counting = k + 1;
@@ -7383,7 +7683,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events8[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events8[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events8[j][k][11] = true ;
-                     this.events8[j][k][12] = this.report[i].users.username;
+                     this.events8[j][k][12] = this.report[i].users.username;if(this.events8[j][k][8].length > 15){
+                     this.events8[j][k][15] = false;
+                  }
 
                       if(this.events8[j][k][2] > 1){
                          this.counting = k + 1;
@@ -7426,7 +7728,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events8[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events8[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events8[j][k][11] = true ;
-                     this.events8[j][k][12] = this.report[i].users.username;
+                     this.events8[j][k][12] = this.report[i].users.username;if(this.events8[j][k][8].length > 15){
+                     this.events8[j][k][15] = false;
+                  }
 
                       if(this.events8[j][k][2] > 1){
                          this.counting = k + 1;
@@ -7469,7 +7773,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events8[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events8[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events8[j][k][11] = true ;
-                     this.events8[j][k][12] = this.report[i].users.username;
+                     this.events8[j][k][12] = this.report[i].users.username;if(this.events8[j][k][8].length > 15){
+                     this.events8[j][k][15] = false;
+                  }
 
                       if(this.events8[j][k][2] > 1){
                          this.counting = k + 1;
@@ -7512,7 +7818,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events8[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events8[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events8[j][k][11] = true ;
-                     this.events8[j][k][12] = this.report[i].users.username;
+                     this.events8[j][k][12] = this.report[i].users.username;if(this.events8[j][k][8].length > 15){
+                     this.events8[j][k][15] = false;
+                  }
 
                       if(this.events8[j][k][2] > 1){
                          this.counting = k + 1;
@@ -7555,7 +7863,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events8[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events8[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events8[j][k][11] = true ;
-                     this.events8[j][k][12] = this.report[i].users.username;
+                     this.events8[j][k][12] = this.report[i].users.username;if(this.events8[j][k][8].length > 15){
+                     this.events8[j][k][15] = false;
+                  }
 
                       if(this.events8[j][k][2] > 1){
                          this.counting = k + 1;
@@ -7599,7 +7909,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events9[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events9[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events9[j][k][11] = true ;
-                     this.events9[j][k][12] = this.report[i].users.username;
+                     this.events9[j][k][12] = this.report[i].users.username;if(this.events9[j][k][8].length > 15){
+                     this.events9[j][k][15] = false;
+                  }
 
                       if(this.events9[j][k][2] > 1){
                          this.counting = k + 1;
@@ -7642,7 +7954,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events9[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events9[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events9[j][k][11] = true ;
-                     this.events9[j][k][12] = this.report[i].users.username;
+                     this.events9[j][k][12] = this.report[i].users.username;if(this.events9[j][k][8].length > 15){
+                     this.events9[j][k][15] = false;
+                  }
 
                       if(this.events9[j][k][2] > 1){
                          this.counting = k + 1;
@@ -7685,7 +7999,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events9[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events9[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events9[j][k][11] = true ;
-                     this.events9[j][k][12] = this.report[i].users.username;
+                     this.events9[j][k][12] = this.report[i].users.username;if(this.events9[j][k][8].length > 15){
+                     this.events9[j][k][15] = false;
+                  }
 
                       if(this.events9[j][k][2] > 1){
                          this.counting = k + 1;
@@ -7728,7 +8044,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events9[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events9[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events9[j][k][11] = true ;
-                     this.events9[j][k][12] = this.report[i].users.username;
+                     this.events9[j][k][12] = this.report[i].users.username;if(this.events9[j][k][8].length > 15){
+                     this.events9[j][k][15] = false;
+                  }
 
                       if(this.events9[j][k][2] > 1){
                          this.counting = k + 1;
@@ -7771,7 +8089,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events9[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events9[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events9[j][k][11] = true ;
-                     this.events9[j][k][12] = this.report[i].users.username;
+                     this.events9[j][k][12] = this.report[i].users.username;if(this.events9[j][k][8].length > 15){
+                     this.events9[j][k][15] = false;
+                  }
 
                       if(this.events9[j][k][2] > 1){
                          this.counting = k + 1;
@@ -7814,7 +8134,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events9[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events9[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events9[j][k][11] = true ;
-                     this.events9[j][k][12] = this.report[i].users.username;
+                     this.events9[j][k][12] = this.report[i].users.username;if(this.events9[j][k][8].length > 15){
+                     this.events9[j][k][15] = false;
+                  }
 
                       if(this.events9[j][k][2] > 1){
                          this.counting = k + 1;
@@ -7857,7 +8179,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events9[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events9[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events9[j][k][11] = true ;
-                     this.events9[j][k][12] = this.report[i].users.username;
+                     this.events9[j][k][12] = this.report[i].users.username;if(this.events9[j][k][8].length > 15){
+                     this.events9[j][k][15] = false;
+                  }
 
                       if(this.events9[j][k][2] > 1){
                          this.counting = k + 1;
@@ -7900,7 +8224,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events9[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events9[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events9[j][k][11] = true ;
-                     this.events9[j][k][12] = this.report[i].users.username;
+                     this.events9[j][k][12] = this.report[i].users.username;if(this.events9[j][k][8].length > 15){
+                     this.events9[j][k][15] = false;
+                  }
 
                       if(this.events9[j][k][2] > 1){
                          this.counting = k + 1;
@@ -7943,7 +8269,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events9[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events9[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events9[j][k][11] = true ;
-                     this.events9[j][k][12] = this.report[i].users.username;
+                     this.events9[j][k][12] = this.report[i].users.username;if(this.events9[j][k][8].length > 15){
+                     this.events9[j][k][15] = false;
+                  }
 
                       if(this.events9[j][k][2] > 1){
                          this.counting = k + 1;
@@ -7986,7 +8314,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events9[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events9[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events9[j][k][11] = true ;
-                     this.events9[j][k][12] = this.report[i].users.username;
+                     this.events9[j][k][12] = this.report[i].users.username;if(this.events9[j][k][8].length > 15){
+                     this.events9[j][k][15] = false;
+                  }
 
                       if(this.events9[j][k][2] > 1){
                          this.counting = k + 1;
@@ -8029,7 +8359,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events9[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events9[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events9[j][k][11] = true ;
-                     this.events9[j][k][12] = this.report[i].users.username;
+                     this.events9[j][k][12] = this.report[i].users.username;if(this.events9[j][k][8].length > 15){
+                     this.events9[j][k][15] = false;
+                  }
 
                       if(this.events9[j][k][2] > 1){
                          this.counting = k + 1;
@@ -8072,7 +8404,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events9[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events9[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events9[j][k][11] = true ;
-                     this.events9[j][k][12] = this.report[i].users.username;
+                     this.events9[j][k][12] = this.report[i].users.username;if(this.events9[j][k][8].length > 15){
+                     this.events9[j][k][15] = false;
+                  }
 
                       if(this.events9[j][k][2] > 1){
                          this.counting = k + 1;
@@ -8115,7 +8449,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events9[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events9[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events9[j][k][11] = true ;
-                     this.events9[j][k][12] = this.report[i].users.username;
+                     this.events9[j][k][12] = this.report[i].users.username;if(this.events9[j][k][8].length > 15){
+                     this.events9[j][k][15] = false;
+                  }
 
                       if(this.events9[j][k][2] > 1){
                          this.counting = k + 1;
@@ -8158,7 +8494,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events9[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events9[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events9[j][k][11] = true ;
-                     this.events9[j][k][12] = this.report[i].users.username;
+                     this.events9[j][k][12] = this.report[i].users.username;if(this.events9[j][k][8].length > 15){
+                     this.events9[j][k][15] = false;
+                  }
 
                       if(this.events9[j][k][2] > 1){
                          this.counting = k + 1;
@@ -8201,7 +8539,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events9[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events9[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events9[j][k][11] = true ;
-                     this.events9[j][k][12] = this.report[i].users.username;
+                     this.events9[j][k][12] = this.report[i].users.username;if(this.events9[j][k][8].length > 15){
+                     this.events9[j][k][15] = false;
+                  }
 
                       if(this.events9[j][k][2] > 1){
                          this.counting = k + 1;
@@ -8244,7 +8584,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events9[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events9[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events9[j][k][11] = true ;
-                     this.events9[j][k][12] = this.report[i].users.username;
+                     this.events9[j][k][12] = this.report[i].users.username;if(this.events9[j][k][8].length > 15){
+                     this.events9[j][k][15] = false;
+                  }
 
                       if(this.events9[j][k][2] > 1){
                          this.counting = k + 1;
@@ -8287,7 +8629,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events9[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events9[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events9[j][k][11] = true ;
-                     this.events9[j][k][12] = this.report[i].users.username;
+                     this.events9[j][k][12] = this.report[i].users.username;if(this.events9[j][k][8].length > 15){
+                     this.events9[j][k][15] = false;
+                  }
 
                       if(this.events9[j][k][2] > 1){
                          this.counting = k + 1;
@@ -8330,7 +8674,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events9[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events9[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events9[j][k][11] = true ;
-                     this.events9[j][k][12] = this.report[i].users.username;
+                     this.events9[j][k][12] = this.report[i].users.username;if(this.events9[j][k][8].length > 15){
+                     this.events9[j][k][15] = false;
+                  }
 
                       if(this.events9[j][k][2] > 1){
                          this.counting = k + 1;
@@ -8373,7 +8719,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events9[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events9[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events9[j][k][11] = true ;
-                     this.events9[j][k][12] = this.report[i].users.username;
+                     this.events9[j][k][12] = this.report[i].users.username;if(this.events9[j][k][8].length > 15){
+                     this.events9[j][k][15] = false;
+                  }
 
                       if(this.events9[j][k][2] > 1){
                          this.counting = k + 1;
@@ -8418,7 +8766,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events10[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events10[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events10[j][k][11] = true ;
-                     this.events10[j][k][12] = this.report[i].users.username;
+                     this.events10[j][k][12] = this.report[i].users.username;if(this.events10[j][k][8].length > 15){
+                     this.events10[j][k][15] = false;
+                  }
 
                       if(this.events10[j][k][2] > 1){
                          this.counting = k + 1;
@@ -8461,7 +8811,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events10[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events10[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events10[j][k][11] = true ;
-                     this.events10[j][k][12] = this.report[i].users.username;
+                     this.events10[j][k][12] = this.report[i].users.username;if(this.events10[j][k][8].length > 15){
+                     this.events10[j][k][15] = false;
+                  }
 
                       if(this.events10[j][k][2] > 1){
                          this.counting = k + 1;
@@ -8504,7 +8856,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events10[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events10[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events10[j][k][11] = true ;
-                     this.events10[j][k][12] = this.report[i].users.username;
+                     this.events10[j][k][12] = this.report[i].users.username;if(this.events10[j][k][8].length > 15){
+                     this.events10[j][k][15] = false;
+                  }
 
                       if(this.events10[j][k][2] > 1){
                          this.counting = k + 1;
@@ -8547,7 +8901,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events10[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events10[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events10[j][k][11] = true ;
-                     this.events10[j][k][12] = this.report[i].users.username;
+                     this.events10[j][k][12] = this.report[i].users.username;if(this.events10[j][k][8].length > 15){
+                     this.events10[j][k][15] = false;
+                  }
 
                       if(this.events10[j][k][2] > 1){
                          this.counting = k + 1;
@@ -8590,7 +8946,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events10[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events10[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events10[j][k][11] = true ;
-                     this.events10[j][k][12] = this.report[i].users.username;
+                     this.events10[j][k][12] = this.report[i].users.username;if(this.events10[j][k][8].length > 15){
+                     this.events10[j][k][15] = false;
+                  }
 
                       if(this.events10[j][k][2] > 1){
                          this.counting = k + 1;
@@ -8633,7 +8991,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events10[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events10[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events10[j][k][11] = true ;
-                     this.events10[j][k][12] = this.report[i].users.username;
+                     this.events10[j][k][12] = this.report[i].users.username;if(this.events10[j][k][8].length > 15){
+                     this.events10[j][k][15] = false;
+                  }
 
                       if(this.events10[j][k][2] > 1){
                          this.counting = k + 1;
@@ -8676,7 +9036,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events10[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events10[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events10[j][k][11] = true ;
-                     this.events10[j][k][12] = this.report[i].users.username;
+                     this.events10[j][k][12] = this.report[i].users.username;if(this.events10[j][k][8].length > 15){
+                     this.events10[j][k][15] = false;
+                  }
 
                       if(this.events10[j][k][2] > 1){
                          this.counting = k + 1;
@@ -8719,7 +9081,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events10[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events10[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events10[j][k][11] = true ;
-                     this.events10[j][k][12] = this.report[i].users.username;
+                     this.events10[j][k][12] = this.report[i].users.username;if(this.events10[j][k][8].length > 15){
+                     this.events10[j][k][15] = false;
+                  }
 
                       if(this.events10[j][k][2] > 1){
                          this.counting = k + 1;
@@ -8762,7 +9126,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events10[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events10[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events10[j][k][11] = true ;
-                     this.events10[j][k][12] = this.report[i].users.username;
+                     this.events10[j][k][12] = this.report[i].users.username;if(this.events10[j][k][8].length > 15){
+                     this.events10[j][k][15] = false;
+                  }
 
                       if(this.events10[j][k][2] > 1){
                          this.counting = k + 1;
@@ -8805,7 +9171,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events10[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events10[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events10[j][k][11] = true ;
-                     this.events10[j][k][12] = this.report[i].users.username;
+                     this.events10[j][k][12] = this.report[i].users.username;if(this.events10[j][k][8].length > 15){
+                     this.events10[j][k][15] = false;
+                  }
 
                       if(this.events10[j][k][2] > 1){
                          this.counting = k + 1;
@@ -8848,7 +9216,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events10[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events10[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events10[j][k][11] = true ;
-                     this.events10[j][k][12] = this.report[i].users.username;
+                     this.events10[j][k][12] = this.report[i].users.username;if(this.events10[j][k][8].length > 15){
+                     this.events10[j][k][15] = false;
+                  }
 
                       if(this.events10[j][k][2] > 1){
                          this.counting = k + 1;
@@ -8891,7 +9261,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events10[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events10[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events10[j][k][11] = true ;
-                     this.events10[j][k][12] = this.report[i].users.username;
+                     this.events10[j][k][12] = this.report[i].users.username;if(this.events10[j][k][8].length > 15){
+                     this.events10[j][k][15] = false;
+                  }
 
                       if(this.events10[j][k][2] > 1){
                          this.counting = k + 1;
@@ -8934,7 +9306,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events10[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events10[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events10[j][k][11] = true ;
-                     this.events10[j][k][12] = this.report[i].users.username;
+                     this.events10[j][k][12] = this.report[i].users.username;if(this.events10[j][k][8].length > 15){
+                     this.events10[j][k][15] = false;
+                  }
 
                       if(this.events10[j][k][2] > 1){
                          this.counting = k + 1;
@@ -8977,7 +9351,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events10[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events10[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events10[j][k][11] = true ;
-                     this.events10[j][k][12] = this.report[i].users.username;
+                     this.events10[j][k][12] = this.report[i].users.username;if(this.events10[j][k][8].length > 15){
+                     this.events10[j][k][15] = false;
+                  }
 
                       if(this.events10[j][k][2] > 1){
                          this.counting = k + 1;
@@ -9020,7 +9396,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events10[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events10[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events10[j][k][11] = true ;
-                     this.events10[j][k][12] = this.report[i].users.username;
+                     this.events10[j][k][12] = this.report[i].users.username;if(this.events10[j][k][8].length > 15){
+                     this.events10[j][k][15] = false;
+                  }
 
                       if(this.events10[j][k][2] > 1){
                          this.counting = k + 1;
@@ -9063,7 +9441,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events10[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events10[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events10[j][k][11] = true ;
-                     this.events10[j][k][12] = this.report[i].users.username;
+                     this.events10[j][k][12] = this.report[i].users.username;if(this.events10[j][k][8].length > 15){
+                     this.events10[j][k][15] = false;
+                  }
 
                       if(this.events10[j][k][2] > 1){
                          this.counting = k + 1;
@@ -9106,7 +9486,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events10[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events10[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events10[j][k][11] = true ;
-                     this.events10[j][k][12] = this.report[i].users.username;
+                     this.events10[j][k][12] = this.report[i].users.username;if(this.events10[j][k][8].length > 15){
+                     this.events10[j][k][15] = false;
+                  }
 
                       if(this.events10[j][k][2] > 1){
                          this.counting = k + 1;
@@ -9149,7 +9531,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events10[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events10[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events10[j][k][11] = true ;
-                     this.events10[j][k][12] = this.report[i].users.username;
+                     this.events10[j][k][12] = this.report[i].users.username;if(this.events10[j][k][8].length > 15){
+                     this.events10[j][k][15] = false;
+                  }
 
                       if(this.events10[j][k][2] > 1){
                          this.counting = k + 1;
@@ -9192,7 +9576,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events10[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events10[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events10[j][k][11] = true ;
-                     this.events10[j][k][12] = this.report[i].users.username;
+                     this.events10[j][k][12] = this.report[i].users.username;if(this.events10[j][k][8].length > 15){
+                     this.events10[j][k][15] = false;
+                  }
 
                       if(this.events10[j][k][2] > 1){
                          this.counting = k + 1;
@@ -9235,7 +9621,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events11[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events11[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events11[j][k][11] = true ;
-                     this.events11[j][k][12] = this.report[i].users.username;
+                     this.events11[j][k][12] = this.report[i].users.username;if(this.events11[j][k][8].length > 15){
+                     this.events11[j][k][15] = false;
+                  }
 
                       if(this.events11[j][k][2] > 1){
                          this.counting = k + 1;
@@ -9278,7 +9666,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events11[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events11[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events11[j][k][11] = true ;
-                     this.events11[j][k][12] = this.report[i].users.username;
+                     this.events11[j][k][12] = this.report[i].users.username;if(this.events11[j][k][8].length > 15){
+                     this.events11[j][k][15] = false;
+                  }
 
                       if(this.events11[j][k][2] > 1){
                          this.counting = k + 1;
@@ -9321,7 +9711,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events11[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events11[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events11[j][k][11] = true ;
-                     this.events11[j][k][12] = this.report[i].users.username;
+                     this.events11[j][k][12] = this.report[i].users.username;if(this.events11[j][k][8].length > 15){
+                     this.events11[j][k][15] = false;
+                  }
 
                       if(this.events11[j][k][2] > 1){
                          this.counting = k + 1;
@@ -9364,7 +9756,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events11[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events11[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events11[j][k][11] = true ;
-                     this.events11[j][k][12] = this.report[i].users.username;
+                     this.events11[j][k][12] = this.report[i].users.username;if(this.events11[j][k][8].length > 15){
+                     this.events11[j][k][15] = false;
+                  }
 
                       if(this.events11[j][k][2] > 1){
                          this.counting = k + 1;
@@ -9407,7 +9801,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events11[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events11[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events11[j][k][11] = true ;
-                     this.events11[j][k][12] = this.report[i].users.username;
+                     this.events11[j][k][12] = this.report[i].users.username;if(this.events11[j][k][8].length > 15){
+                     this.events11[j][k][15] = false;
+                  }
 
                       if(this.events11[j][k][2] > 1){
                          this.counting = k + 1;
@@ -9450,7 +9846,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events11[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events11[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events11[j][k][11] = true ;
-                     this.events11[j][k][12] = this.report[i].users.username;
+                     this.events11[j][k][12] = this.report[i].users.username;if(this.events11[j][k][8].length > 15){
+                     this.events11[j][k][15] = false;
+                  }
 
                       if(this.events11[j][k][2] > 1){
                          this.counting = k + 1;
@@ -9493,7 +9891,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events11[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events11[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events11[j][k][11] = true ;
-                     this.events11[j][k][12] = this.report[i].users.username;
+                     this.events11[j][k][12] = this.report[i].users.username;if(this.events11[j][k][8].length > 15){
+                     this.events11[j][k][15] = false;
+                  }
 
                       if(this.events11[j][k][2] > 1){
                          this.counting = k + 1;
@@ -9536,7 +9936,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events11[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events11[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events11[j][k][11] = true ;
-                     this.events11[j][k][12] = this.report[i].users.username;
+                     this.events11[j][k][12] = this.report[i].users.username;if(this.events11[j][k][8].length > 15){
+                     this.events11[j][k][15] = false;
+                  }
 
                       if(this.events11[j][k][2] > 1){
                          this.counting = k + 1;
@@ -9579,7 +9981,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events11[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events11[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events11[j][k][11] = true ;
-                     this.events11[j][k][12] = this.report[i].users.username;
+                     this.events11[j][k][12] = this.report[i].users.username;if(this.events11[j][k][8].length > 15){
+                     this.events11[j][k][15] = false;
+                  }
 
                       if(this.events11[j][k][2] > 1){
                          this.counting = k + 1;
@@ -9622,7 +10026,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events11[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events11[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events11[j][k][11] = true ;
-                     this.events11[j][k][12] = this.report[i].users.username;
+                     this.events11[j][k][12] = this.report[i].users.username;if(this.events11[j][k][8].length > 15){
+                     this.events11[j][k][15] = false;
+                  }
 
                       if(this.events11[j][k][2] > 1){
                          this.counting = k + 1;
@@ -9665,7 +10071,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events11[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events11[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events11[j][k][11] = true ;
-                     this.events11[j][k][12] = this.report[i].users.username;
+                     this.events11[j][k][12] = this.report[i].users.username;if(this.events11[j][k][8].length > 15){
+                     this.events11[j][k][15] = false;
+                  }
 
                       if(this.events11[j][k][2] > 1){
                          this.counting = k + 1;
@@ -9708,7 +10116,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events11[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events11[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events11[j][k][11] = true ;
-                     this.events11[j][k][12] = this.report[i].users.username;
+                     this.events11[j][k][12] = this.report[i].users.username;if(this.events11[j][k][8].length > 15){
+                     this.events11[j][k][15] = false;
+                  }
 
                       if(this.events11[j][k][2] > 1){
                          this.counting = k + 1;
@@ -9751,7 +10161,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events11[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events11[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events11[j][k][11] = true ;
-                     this.events11[j][k][12] = this.report[i].users.username;
+                     this.events11[j][k][12] = this.report[i].users.username;if(this.events11[j][k][8].length > 15){
+                     this.events11[j][k][15] = false;
+                  }
 
                       if(this.events11[j][k][2] > 1){
                          this.counting = k + 1;
@@ -9794,7 +10206,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events11[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events11[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events11[j][k][11] = true ;
-                     this.events11[j][k][12] = this.report[i].users.username;
+                     this.events11[j][k][12] = this.report[i].users.username;if(this.events11[j][k][8].length > 15){
+                     this.events11[j][k][15] = false;
+                  }
 
                       if(this.events11[j][k][2] > 1){
                          this.counting = k + 1;
@@ -9837,7 +10251,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events11[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events11[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events11[j][k][11] = true ;
-                     this.events11[j][k][12] = this.report[i].users.username;
+                     this.events11[j][k][12] = this.report[i].users.username;if(this.events11[j][k][8].length > 15){
+                     this.events11[j][k][15] = false;
+                  }
 
                       if(this.events11[j][k][2] > 1){
                          this.counting = k + 1;
@@ -9880,7 +10296,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events11[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events11[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events11[j][k][11] = true ;
-                     this.events11[j][k][12] = this.report[i].users.username;
+                     this.events11[j][k][12] = this.report[i].users.username;if(this.events11[j][k][8].length > 15){
+                     this.events11[j][k][15] = false;
+                  }
 
                       if(this.events11[j][k][2] > 1){
                          this.counting = k + 1;
@@ -9923,7 +10341,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events11[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events11[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events11[j][k][11] = true ;
-                     this.events11[j][k][12] = this.report[i].users.username;
+                     this.events11[j][k][12] = this.report[i].users.username;if(this.events11[j][k][8].length > 15){
+                     this.events11[j][k][15] = false;
+                  }
 
                       if(this.events11[j][k][2] > 1){
                          this.counting = k + 1;
@@ -9966,7 +10386,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events11[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events11[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events11[j][k][11] = true ;
-                     this.events11[j][k][12] = this.report[i].users.username;
+                     this.events11[j][k][12] = this.report[i].users.username;if(this.events11[j][k][8].length > 15){
+                     this.events11[j][k][15] = false;
+                  }
 
                       if(this.events11[j][k][2] > 1){
                          this.counting = k + 1;
@@ -10009,7 +10431,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events11[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events11[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events11[j][k][11] = true ;
-                     this.events11[j][k][12] = this.report[i].users.username;
+                     this.events11[j][k][12] = this.report[i].users.username;if(this.events11[j][k][8].length > 15){
+                     this.events11[j][k][15] = false;
+                  }
 
                       if(this.events11[j][k][2] > 1){
                          this.counting = k + 1;
@@ -10054,7 +10478,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events12[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events12[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events12[j][k][11] = true ;
-                     this.events12[j][k][12] = this.report[i].users.username;
+                     this.events12[j][k][12] = this.report[i].users.username;if(this.events12[j][k][8].length > 15){
+                     this.events12[j][k][15] = false;
+                  }
 
                       if(this.events12[j][k][2] > 1){
                          this.counting = k + 1;
@@ -10097,7 +10523,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events12[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events12[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events12[j][k][11] = true ;
-                     this.events12[j][k][12] = this.report[i].users.username;
+                     this.events12[j][k][12] = this.report[i].users.username;if(this.events12[j][k][8].length > 15){
+                     this.events12[j][k][15] = false;
+                  }
 
                       if(this.events12[j][k][2] > 1){
                          this.counting = k + 1;
@@ -10140,7 +10568,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events12[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events12[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events12[j][k][11] = true ;
-                     this.events12[j][k][12] = this.report[i].users.username;
+                     this.events12[j][k][12] = this.report[i].users.username;if(this.events12[j][k][8].length > 15){
+                     this.events12[j][k][15] = false;
+                  }
 
                       if(this.events12[j][k][2] > 1){
                          this.counting = k + 1;
@@ -10183,7 +10613,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events12[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events12[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events12[j][k][11] = true ;
-                     this.events12[j][k][12] = this.report[i].users.username;
+                     this.events12[j][k][12] = this.report[i].users.username;if(this.events12[j][k][8].length > 15){
+                     this.events12[j][k][15] = false;
+                  }
 
                       if(this.events12[j][k][2] > 1){
                          this.counting = k + 1;
@@ -10226,7 +10658,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events12[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events12[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events12[j][k][11] = true ;
-                     this.events12[j][k][12] = this.report[i].users.username;
+                     this.events12[j][k][12] = this.report[i].users.username;if(this.events12[j][k][8].length > 15){
+                     this.events12[j][k][15] = false;
+                  }
 
                       if(this.events12[j][k][2] > 1){
                          this.counting = k + 1;
@@ -10269,7 +10703,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events12[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events12[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events12[j][k][11] = true ;
-                     this.events12[j][k][12] = this.report[i].users.username;
+                     this.events12[j][k][12] = this.report[i].users.username;if(this.events12[j][k][8].length > 15){
+                     this.events12[j][k][15] = false;
+                  }
 
                       if(this.events12[j][k][2] > 1){
                          this.counting = k + 1;
@@ -10312,7 +10748,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events12[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events12[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events12[j][k][11] = true ;
-                     this.events12[j][k][12] = this.report[i].users.username;
+                     this.events12[j][k][12] = this.report[i].users.username;if(this.events12[j][k][8].length > 15){
+                     this.events12[j][k][15] = false;
+                  }
 
                       if(this.events12[j][k][2] > 1){
                          this.counting = k + 1;
@@ -10355,7 +10793,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events12[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events12[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events12[j][k][11] = true ;
-                     this.events12[j][k][12] = this.report[i].users.username;
+                     this.events12[j][k][12] = this.report[i].users.username;if(this.events12[j][k][8].length > 15){
+                     this.events12[j][k][15] = false;
+                  }
 
                       if(this.events12[j][k][2] > 1){
                          this.counting = k + 1;
@@ -10398,7 +10838,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events12[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events12[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events12[j][k][11] = true ;
-                     this.events12[j][k][12] = this.report[i].users.username;
+                     this.events12[j][k][12] = this.report[i].users.username;if(this.events12[j][k][8].length > 15){
+                     this.events12[j][k][15] = false;
+                  }
 
                       if(this.events12[j][k][2] > 1){
                          this.counting = k + 1;
@@ -10441,7 +10883,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events12[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events12[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events12[j][k][11] = true ;
-                     this.events12[j][k][12] = this.report[i].users.username;
+                     this.events12[j][k][12] = this.report[i].users.username;if(this.events12[j][k][8].length > 15){
+                     this.events12[j][k][15] = false;
+                  }
 
                       if(this.events12[j][k][2] > 1){
                          this.counting = k + 1;
@@ -10484,7 +10928,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events12[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events12[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events12[j][k][11] = true ;
-                     this.events12[j][k][12] = this.report[i].users.username;
+                     this.events12[j][k][12] = this.report[i].users.username;if(this.events12[j][k][8].length > 15){
+                     this.events12[j][k][15] = false;
+                  }
 
                       if(this.events12[j][k][2] > 1){
                          this.counting = k + 1;
@@ -10527,7 +10973,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events12[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events12[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events12[j][k][11] = true ;
-                     this.events12[j][k][12] = this.report[i].users.username;
+                     this.events12[j][k][12] = this.report[i].users.username;if(this.events12[j][k][8].length > 15){
+                     this.events12[j][k][15] = false;
+                  }
 
                       if(this.events12[j][k][2] > 1){
                          this.counting = k + 1;
@@ -10570,7 +11018,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events12[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events12[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events12[j][k][11] = true ;
-                     this.events12[j][k][12] = this.report[i].users.username;
+                     this.events12[j][k][12] = this.report[i].users.username;if(this.events12[j][k][8].length > 15){
+                     this.events12[j][k][15] = false;
+                  }
 
                       if(this.events12[j][k][2] > 1){
                          this.counting = k + 1;
@@ -10613,7 +11063,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events12[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events12[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events12[j][k][11] = true ;
-                     this.events12[j][k][12] = this.report[i].users.username;
+                     this.events12[j][k][12] = this.report[i].users.username;if(this.events12[j][k][8].length > 15){
+                     this.events12[j][k][15] = false;
+                  }
 
                       if(this.events12[j][k][2] > 1){
                          this.counting = k + 1;
@@ -10656,7 +11108,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events12[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events12[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events12[j][k][11] = true ;
-                     this.events12[j][k][12] = this.report[i].users.username;
+                     this.events12[j][k][12] = this.report[i].users.username;if(this.events12[j][k][8].length > 15){
+                     this.events12[j][k][15] = false;
+                  }
 
                       if(this.events12[j][k][2] > 1){
                          this.counting = k + 1;
@@ -10699,7 +11153,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events12[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events12[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events12[j][k][11] = true ;
-                     this.events12[j][k][12] = this.report[i].users.username;
+                     this.events12[j][k][12] = this.report[i].users.username;if(this.events12[j][k][8].length > 15){
+                     this.events12[j][k][15] = false;
+                  }
 
                       if(this.events12[j][k][2] > 1){
                          this.counting = k + 1;
@@ -10742,7 +11198,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events12[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events12[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events12[j][k][11] = true ;
-                     this.events12[j][k][12] = this.report[i].users.username;
+                     this.events12[j][k][12] = this.report[i].users.username;if(this.events12[j][k][8].length > 15){
+                     this.events12[j][k][15] = false;
+                  }
 
                       if(this.events12[j][k][2] > 1){
                          this.counting = k + 1;
@@ -10785,7 +11243,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events12[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events12[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events12[j][k][11] = true ;
-                     this.events12[j][k][12] = this.report[i].users.username;
+                     this.events12[j][k][12] = this.report[i].users.username;if(this.events12[j][k][8].length > 15){
+                     this.events12[j][k][15] = false;
+                  }
 
                       if(this.events12[j][k][2] > 1){
                          this.counting = k + 1;
@@ -10828,7 +11288,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events12[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events12[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events12[j][k][11] = true ;
-                     this.events12[j][k][12] = this.report[i].users.username;
+                     this.events12[j][k][12] = this.report[i].users.username;if(this.events12[j][k][8].length > 15){
+                     this.events12[j][k][15] = false;
+                  }
 
                       if(this.events12[j][k][2] > 1){
                          this.counting = k + 1;
@@ -10873,7 +11335,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events13[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events13[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events13[j][k][11] = true ;
-                     this.events13[j][k][12] = this.report[i].users.username;
+                     this.events13[j][k][12] = this.report[i].users.username;if(this.events13[j][k][8].length > 15){
+                     this.events13[j][k][15] = false;
+                  }
 
                       if(this.events13[j][k][2] > 1){
                          this.counting = k + 1;
@@ -10916,7 +11380,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events13[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events13[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events13[j][k][11] = true ;
-                     this.events13[j][k][12] = this.report[i].users.username;
+                     this.events13[j][k][12] = this.report[i].users.username;if(this.events13[j][k][8].length > 15){
+                     this.events13[j][k][15] = false;
+                  }
 
                       if(this.events13[j][k][2] > 1){
                          this.counting = k + 1;
@@ -10959,7 +11425,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events13[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events13[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events13[j][k][11] = true ;
-                     this.events13[j][k][12] = this.report[i].users.username;
+                     this.events13[j][k][12] = this.report[i].users.username;if(this.events13[j][k][8].length > 15){
+                     this.events13[j][k][15] = false;
+                  }
 
                       if(this.events13[j][k][2] > 1){
                          this.counting = k + 1;
@@ -11002,7 +11470,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events13[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events13[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events13[j][k][11] = true ;
-                     this.events13[j][k][12] = this.report[i].users.username;
+                     this.events13[j][k][12] = this.report[i].users.username;if(this.events13[j][k][8].length > 15){
+                     this.events13[j][k][15] = false;
+                  }
 
                       if(this.events13[j][k][2] > 1){
                          this.counting = k + 1;
@@ -11045,7 +11515,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events13[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events13[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events13[j][k][11] = true ;
-                     this.events13[j][k][12] = this.report[i].users.username;
+                     this.events13[j][k][12] = this.report[i].users.username;if(this.events13[j][k][8].length > 15){
+                     this.events13[j][k][15] = false;
+                  }
 
                       if(this.events13[j][k][2] > 1){
                          this.counting = k + 1;
@@ -11088,7 +11560,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events13[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events13[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events13[j][k][11] = true ;
-                     this.events13[j][k][12] = this.report[i].users.username;
+                     this.events13[j][k][12] = this.report[i].users.username;if(this.events13[j][k][8].length > 15){
+                     this.events13[j][k][15] = false;
+                  }
 
                       if(this.events13[j][k][2] > 1){
                          this.counting = k + 1;
@@ -11131,7 +11605,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events13[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events13[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events13[j][k][11] = true ;
-                     this.events13[j][k][12] = this.report[i].users.username;
+                     this.events13[j][k][12] = this.report[i].users.username;if(this.events13[j][k][8].length > 15){
+                     this.events13[j][k][15] = false;
+                  }
 
                       if(this.events13[j][k][2] > 1){
                          this.counting = k + 1;
@@ -11174,7 +11650,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events13[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events13[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events13[j][k][11] = true ;
-                     this.events13[j][k][12] = this.report[i].users.username;
+                     this.events13[j][k][12] = this.report[i].users.username;if(this.events13[j][k][8].length > 15){
+                     this.events13[j][k][15] = false;
+                  }
 
                       if(this.events13[j][k][2] > 1){
                          this.counting = k + 1;
@@ -11217,7 +11695,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events13[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events13[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events13[j][k][11] = true ;
-                     this.events13[j][k][12] = this.report[i].users.username;
+                     this.events13[j][k][12] = this.report[i].users.username;if(this.events13[j][k][8].length > 15){
+                     this.events13[j][k][15] = false;
+                  }
 
                       if(this.events13[j][k][2] > 1){
                          this.counting = k + 1;
@@ -11260,7 +11740,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events13[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events13[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events13[j][k][11] = true ;
-                     this.events13[j][k][12] = this.report[i].users.username;
+                     this.events13[j][k][12] = this.report[i].users.username;if(this.events13[j][k][8].length > 15){
+                     this.events13[j][k][15] = false;
+                  }
 
                       if(this.events13[j][k][2] > 1){
                          this.counting = k + 1;
@@ -11303,7 +11785,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events13[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events13[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events13[j][k][11] = true ;
-                     this.events13[j][k][12] = this.report[i].users.username;
+                     this.events13[j][k][12] = this.report[i].users.username;if(this.events13[j][k][8].length > 15){
+                     this.events13[j][k][15] = false;
+                  }
 
                       if(this.events13[j][k][2] > 1){
                          this.counting = k + 1;
@@ -11346,7 +11830,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events13[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events13[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events13[j][k][11] = true ;
-                     this.events13[j][k][12] = this.report[i].users.username;
+                     this.events13[j][k][12] = this.report[i].users.username;if(this.events13[j][k][8].length > 15){
+                     this.events13[j][k][15] = false;
+                  }
 
                       if(this.events13[j][k][2] > 1){
                          this.counting = k + 1;
@@ -11389,7 +11875,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events13[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events13[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events13[j][k][11] = true ;
-                     this.events13[j][k][12] = this.report[i].users.username;
+                     this.events13[j][k][12] = this.report[i].users.username;if(this.events13[j][k][8].length > 15){
+                     this.events13[j][k][15] = false;
+                  }
 
                       if(this.events13[j][k][2] > 1){
                          this.counting = k + 1;
@@ -11432,7 +11920,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events13[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events13[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events13[j][k][11] = true ;
-                     this.events13[j][k][12] = this.report[i].users.username;
+                     this.events13[j][k][12] = this.report[i].users.username;if(this.events13[j][k][8].length > 15){
+                     this.events13[j][k][15] = false;
+                  }
 
                       if(this.events13[j][k][2] > 1){
                          this.counting = k + 1;
@@ -11475,7 +11965,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events13[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events13[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events13[j][k][11] = true ;
-                     this.events13[j][k][12] = this.report[i].users.username;
+                     this.events13[j][k][12] = this.report[i].users.username;if(this.events13[j][k][8].length > 15){
+                     this.events13[j][k][15] = false;
+                  }
 
                       if(this.events13[j][k][2] > 1){
                          this.counting = k + 1;
@@ -11518,7 +12010,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events13[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events13[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events13[j][k][11] = true ;
-                     this.events13[j][k][12] = this.report[i].users.username;
+                     this.events13[j][k][12] = this.report[i].users.username;if(this.events13[j][k][8].length > 15){
+                     this.events13[j][k][15] = false;
+                  }
 
                       if(this.events13[j][k][2] > 1){
                          this.counting = k + 1;
@@ -11561,7 +12055,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events13[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events13[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events13[j][k][11] = true ;
-                     this.events13[j][k][12] = this.report[i].users.username;
+                     this.events13[j][k][12] = this.report[i].users.username;if(this.events13[j][k][8].length > 15){
+                     this.events13[j][k][15] = false;
+                  }
 
                       if(this.events13[j][k][2] > 1){
                          this.counting = k + 1;
@@ -11604,7 +12100,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events13[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events13[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events13[j][k][11] = true ;
-                     this.events13[j][k][12] = this.report[i].users.username;
+                     this.events13[j][k][12] = this.report[i].users.username;if(this.events13[j][k][8].length > 15){
+                     this.events13[j][k][15] = false;
+                  }
 
                       if(this.events13[j][k][2] > 1){
                          this.counting = k + 1;
@@ -11647,7 +12145,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events13[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events13[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events13[j][k][11] = true ;
-                     this.events13[j][k][12] = this.report[i].users.username;
+                     this.events13[j][k][12] = this.report[i].users.username;if(this.events13[j][k][8].length > 15){
+                     this.events13[j][k][15] = false;
+                  }
 
                       if(this.events13[j][k][2] > 1){
                          this.counting = k + 1;
@@ -11691,7 +12191,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events14[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events14[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events14[j][k][11] = true ;
-                     this.events14[j][k][12] = this.report[i].users.username;
+                     this.events14[j][k][12] = this.report[i].users.username;if(this.events14[j][k][8].length > 15){
+                     this.events14[j][k][15] = false;
+                  }
 
                       if(this.events14[j][k][2] > 1){
                          this.counting = k + 1;
@@ -11734,7 +12236,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events14[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events14[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events14[j][k][11] = true ;
-                     this.events14[j][k][12] = this.report[i].users.username;
+                     this.events14[j][k][12] = this.report[i].users.username;if(this.events14[j][k][8].length > 15){
+                     this.events14[j][k][15] = false;
+                  }
 
                       if(this.events14[j][k][2] > 1){
                          this.counting = k + 1;
@@ -11777,7 +12281,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events14[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events14[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events14[j][k][11] = true ;
-                     this.events14[j][k][12] = this.report[i].users.username;
+                     this.events14[j][k][12] = this.report[i].users.username;if(this.events14[j][k][8].length > 15){
+                     this.events14[j][k][15] = false;
+                  }
 
                       if(this.events14[j][k][2] > 1){
                          this.counting = k + 1;
@@ -11820,7 +12326,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events14[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events14[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events14[j][k][11] = true ;
-                     this.events14[j][k][12] = this.report[i].users.username;
+                     this.events14[j][k][12] = this.report[i].users.username;if(this.events14[j][k][8].length > 15){
+                     this.events14[j][k][15] = false;
+                  }
 
                       if(this.events14[j][k][2] > 1){
                          this.counting = k + 1;
@@ -11863,7 +12371,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events14[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events14[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events14[j][k][11] = true ;
-                     this.events14[j][k][12] = this.report[i].users.username;
+                     this.events14[j][k][12] = this.report[i].users.username;if(this.events14[j][k][8].length > 15){
+                     this.events14[j][k][15] = false;
+                  }
 
                       if(this.events14[j][k][2] > 1){
                          this.counting = k + 1;
@@ -11906,7 +12416,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events14[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events14[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events14[j][k][11] = true ;
-                     this.events14[j][k][12] = this.report[i].users.username;
+                     this.events14[j][k][12] = this.report[i].users.username;if(this.events14[j][k][8].length > 15){
+                     this.events14[j][k][15] = false;
+                  }
 
                       if(this.events14[j][k][2] > 1){
                          this.counting = k + 1;
@@ -11949,7 +12461,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events14[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events14[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events14[j][k][11] = true ;
-                     this.events14[j][k][12] = this.report[i].users.username;
+                     this.events14[j][k][12] = this.report[i].users.username;if(this.events14[j][k][8].length > 15){
+                     this.events14[j][k][15] = false;
+                  }
 
                       if(this.events14[j][k][2] > 1){
                          this.counting = k + 1;
@@ -11992,7 +12506,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events14[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events14[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events14[j][k][11] = true ;
-                     this.events14[j][k][12] = this.report[i].users.username;
+                     this.events14[j][k][12] = this.report[i].users.username;if(this.events14[j][k][8].length > 15){
+                     this.events14[j][k][15] = false;
+                  }
 
                       if(this.events14[j][k][2] > 1){
                          this.counting = k + 1;
@@ -12035,7 +12551,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events14[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events14[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events14[j][k][11] = true ;
-                     this.events14[j][k][12] = this.report[i].users.username;
+                     this.events14[j][k][12] = this.report[i].users.username;if(this.events14[j][k][8].length > 15){
+                     this.events14[j][k][15] = false;
+                  }
 
                       if(this.events14[j][k][2] > 1){
                          this.counting = k + 1;
@@ -12078,7 +12596,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events14[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events14[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events14[j][k][11] = true ;
-                     this.events14[j][k][12] = this.report[i].users.username;
+                     this.events14[j][k][12] = this.report[i].users.username;if(this.events14[j][k][8].length > 15){
+                     this.events14[j][k][15] = false;
+                  }
 
                       if(this.events14[j][k][2] > 1){
                          this.counting = k + 1;
@@ -12121,7 +12641,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events14[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events14[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events14[j][k][11] = true ;
-                     this.events14[j][k][12] = this.report[i].users.username;
+                     this.events14[j][k][12] = this.report[i].users.username;if(this.events14[j][k][8].length > 15){
+                     this.events14[j][k][15] = false;
+                  }
 
                       if(this.events14[j][k][2] > 1){
                          this.counting = k + 1;
@@ -12164,7 +12686,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events14[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events14[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events14[j][k][11] = true ;
-                     this.events14[j][k][12] = this.report[i].users.username;
+                     this.events14[j][k][12] = this.report[i].users.username;if(this.events14[j][k][8].length > 15){
+                     this.events14[j][k][15] = false;
+                  }
 
                       if(this.events14[j][k][2] > 1){
                          this.counting = k + 1;
@@ -12207,7 +12731,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events14[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events14[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events14[j][k][11] = true ;
-                     this.events14[j][k][12] = this.report[i].users.username;
+                     this.events14[j][k][12] = this.report[i].users.username;if(this.events14[j][k][8].length > 15){
+                     this.events14[j][k][15] = false;
+                  }
 
                       if(this.events14[j][k][2] > 1){
                          this.counting = k + 1;
@@ -12250,7 +12776,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events14[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events14[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events14[j][k][11] = true ;
-                     this.events14[j][k][12] = this.report[i].users.username;
+                     this.events14[j][k][12] = this.report[i].users.username;if(this.events14[j][k][8].length > 15){
+                     this.events14[j][k][15] = false;
+                  }
 
                       if(this.events14[j][k][2] > 1){
                          this.counting = k + 1;
@@ -12293,7 +12821,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events14[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events14[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events14[j][k][11] = true ;
-                     this.events14[j][k][12] = this.report[i].users.username;
+                     this.events14[j][k][12] = this.report[i].users.username;if(this.events14[j][k][8].length > 15){
+                     this.events14[j][k][15] = false;
+                  }
 
                       if(this.events14[j][k][2] > 1){
                          this.counting = k + 1;
@@ -12336,7 +12866,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events14[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events14[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events14[j][k][11] = true ;
-                     this.events14[j][k][12] = this.report[i].users.username;
+                     this.events14[j][k][12] = this.report[i].users.username;if(this.events14[j][k][8].length > 15){
+                     this.events14[j][k][15] = false;
+                  }
 
                       if(this.events14[j][k][2] > 1){
                          this.counting = k + 1;
@@ -12379,7 +12911,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events14[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events14[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events14[j][k][11] = true ;
-                     this.events14[j][k][12] = this.report[i].users.username;
+                     this.events14[j][k][12] = this.report[i].users.username;if(this.events14[j][k][8].length > 15){
+                     this.events14[j][k][15] = false;
+                  }
 
                       if(this.events14[j][k][2] > 1){
                          this.counting = k + 1;
@@ -12422,7 +12956,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events14[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events14[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events14[j][k][11] = true ;
-                     this.events14[j][k][12] = this.report[i].users.username;
+                     this.events14[j][k][12] = this.report[i].users.username;if(this.events14[j][k][8].length > 15){
+                     this.events14[j][k][15] = false;
+                  }
 
                       if(this.events14[j][k][2] > 1){
                          this.counting = k + 1;
@@ -12465,7 +13001,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events14[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events14[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events14[j][k][11] = true ;
-                     this.events14[j][k][12] = this.report[i].users.username;
+                     this.events14[j][k][12] = this.report[i].users.username;if(this.events14[j][k][8].length > 15){
+                     this.events14[j][k][15] = false;
+                  }
 
                       if(this.events14[j][k][2] > 1){
                          this.counting = k + 1;
@@ -12510,7 +13048,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events15[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events15[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events15[j][k][11] = true ;
-                     this.events15[j][k][12] = this.report[i].users.username;
+                     this.events15[j][k][12] = this.report[i].users.username;if(this.events15[j][k][8].length > 15){
+                     this.events15[j][k][15] = false;
+                  }
 
                       if(this.events15[j][k][2] > 1){
                          this.counting = k + 1;
@@ -12553,7 +13093,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events15[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events15[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events15[j][k][11] = true ;
-                     this.events15[j][k][12] = this.report[i].users.username;
+                     this.events15[j][k][12] = this.report[i].users.username;if(this.events15[j][k][8].length > 15){
+                     this.events15[j][k][15] = false;
+                  }
 
                       if(this.events15[j][k][2] > 1){
                          this.counting = k + 1;
@@ -12596,7 +13138,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events15[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events15[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events15[j][k][11] = true ;
-                     this.events15[j][k][12] = this.report[i].users.username;
+                     this.events15[j][k][12] = this.report[i].users.username;if(this.events15[j][k][8].length > 15){
+                     this.events15[j][k][15] = false;
+                  }
 
                       if(this.events15[j][k][2] > 1){
                          this.counting = k + 1;
@@ -12639,7 +13183,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events15[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events15[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events15[j][k][11] = true ;
-                     this.events15[j][k][12] = this.report[i].users.username;
+                     this.events15[j][k][12] = this.report[i].users.username;if(this.events15[j][k][8].length > 15){
+                     this.events15[j][k][15] = false;
+                  }
 
                       if(this.events15[j][k][2] > 1){
                          this.counting = k + 1;
@@ -12682,7 +13228,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events15[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events15[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events15[j][k][11] = true ;
-                     this.events15[j][k][12] = this.report[i].users.username;
+                     this.events15[j][k][12] = this.report[i].users.username;if(this.events15[j][k][8].length > 15){
+                     this.events15[j][k][15] = false;
+                  }
 
                       if(this.events15[j][k][2] > 1){
                          this.counting = k + 1;
@@ -12725,7 +13273,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events15[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events15[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events15[j][k][11] = true ;
-                     this.events15[j][k][12] = this.report[i].users.username;
+                     this.events15[j][k][12] = this.report[i].users.username;if(this.events15[j][k][8].length > 15){
+                     this.events15[j][k][15] = false;
+                  }
 
                       if(this.events15[j][k][2] > 1){
                          this.counting = k + 1;
@@ -12768,7 +13318,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events15[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events15[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events15[j][k][11] = true ;
-                     this.events15[j][k][12] = this.report[i].users.username;
+                     this.events15[j][k][12] = this.report[i].users.username;if(this.events15[j][k][8].length > 15){
+                     this.events15[j][k][15] = false;
+                  }
 
                       if(this.events15[j][k][2] > 1){
                          this.counting = k + 1;
@@ -12811,7 +13363,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events15[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events15[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events15[j][k][11] = true ;
-                     this.events15[j][k][12] = this.report[i].users.username;
+                     this.events15[j][k][12] = this.report[i].users.username;if(this.events15[j][k][8].length > 15){
+                     this.events15[j][k][15] = false;
+                  }
 
                       if(this.events15[j][k][2] > 1){
                          this.counting = k + 1;
@@ -12854,7 +13408,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events15[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events15[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events15[j][k][11] = true ;
-                     this.events15[j][k][12] = this.report[i].users.username;
+                     this.events15[j][k][12] = this.report[i].users.username;if(this.events15[j][k][8].length > 15){
+                     this.events15[j][k][15] = false;
+                  }
 
                       if(this.events15[j][k][2] > 1){
                          this.counting = k + 1;
@@ -12897,7 +13453,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events15[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events15[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events15[j][k][11] = true ;
-                     this.events15[j][k][12] = this.report[i].users.username;
+                     this.events15[j][k][12] = this.report[i].users.username;if(this.events15[j][k][8].length > 15){
+                     this.events15[j][k][15] = false;
+                  }
 
                       if(this.events15[j][k][2] > 1){
                          this.counting = k + 1;
@@ -12940,7 +13498,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events15[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events15[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events15[j][k][11] = true ;
-                     this.events15[j][k][12] = this.report[i].users.username;
+                     this.events15[j][k][12] = this.report[i].users.username;if(this.events15[j][k][8].length > 15){
+                     this.events15[j][k][15] = false;
+                  }
 
                       if(this.events15[j][k][2] > 1){
                          this.counting = k + 1;
@@ -12983,7 +13543,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events15[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events15[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events15[j][k][11] = true ;
-                     this.events15[j][k][12] = this.report[i].users.username;
+                     this.events15[j][k][12] = this.report[i].users.username;if(this.events15[j][k][8].length > 15){
+                     this.events15[j][k][15] = false;
+                  }
 
                       if(this.events15[j][k][2] > 1){
                          this.counting = k + 1;
@@ -13026,7 +13588,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events15[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events15[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events15[j][k][11] = true ;
-                     this.events15[j][k][12] = this.report[i].users.username;
+                     this.events15[j][k][12] = this.report[i].users.username;if(this.events15[j][k][8].length > 15){
+                     this.events15[j][k][15] = false;
+                  }
 
                       if(this.events15[j][k][2] > 1){
                          this.counting = k + 1;
@@ -13069,7 +13633,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events15[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events15[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events15[j][k][11] = true ;
-                     this.events15[j][k][12] = this.report[i].users.username;
+                     this.events15[j][k][12] = this.report[i].users.username;if(this.events15[j][k][8].length > 15){
+                     this.events15[j][k][15] = false;
+                  }
 
                       if(this.events15[j][k][2] > 1){
                          this.counting = k + 1;
@@ -13112,7 +13678,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events15[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events15[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events15[j][k][11] = true ;
-                     this.events15[j][k][12] = this.report[i].users.username;
+                     this.events15[j][k][12] = this.report[i].users.username;if(this.events15[j][k][8].length > 15){
+                     this.events15[j][k][15] = false;
+                  }
 
                       if(this.events15[j][k][2] > 1){
                          this.counting = k + 1;
@@ -13155,7 +13723,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events15[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events15[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events15[j][k][11] = true ;
-                     this.events15[j][k][12] = this.report[i].users.username;
+                     this.events15[j][k][12] = this.report[i].users.username;if(this.events15[j][k][8].length > 15){
+                     this.events15[j][k][15] = false;
+                  }
 
                       if(this.events15[j][k][2] > 1){
                          this.counting = k + 1;
@@ -13198,7 +13768,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events15[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events15[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events15[j][k][11] = true ;
-                     this.events15[j][k][12] = this.report[i].users.username;
+                     this.events15[j][k][12] = this.report[i].users.username;if(this.events15[j][k][8].length > 15){
+                     this.events15[j][k][15] = false;
+                  }
 
                       if(this.events15[j][k][2] > 1){
                          this.counting = k + 1;
@@ -13241,7 +13813,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events15[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events15[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events15[j][k][11] = true ;
-                     this.events15[j][k][12] = this.report[i].users.username;
+                     this.events15[j][k][12] = this.report[i].users.username;if(this.events15[j][k][8].length > 15){
+                     this.events15[j][k][15] = false;
+                  }
 
                       if(this.events15[j][k][2] > 1){
                          this.counting = k + 1;
@@ -13284,7 +13858,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events15[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events15[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events15[j][k][11] = true ;
-                     this.events15[j][k][12] = this.report[i].users.username;
+                     this.events15[j][k][12] = this.report[i].users.username;if(this.events15[j][k][8].length > 15){
+                     this.events15[j][k][15] = false;
+                  }
 
                       if(this.events15[j][k][2] > 1){
                          this.counting = k + 1;
@@ -13329,7 +13905,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events16[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events16[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events16[j][k][11] = true ;
-                     this.events16[j][k][12] = this.report[i].users.username;
+                     this.events16[j][k][12] = this.report[i].users.username;if(this.events16[j][k][8].length > 15){
+                     this.events16[j][k][15] = false;
+                  }
 
                       if(this.events16[j][k][2] > 1){
                          this.counting = k + 1;
@@ -13372,7 +13950,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events16[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events16[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events16[j][k][11] = true ;
-                     this.events16[j][k][12] = this.report[i].users.username;
+                     this.events16[j][k][12] = this.report[i].users.username;if(this.events16[j][k][8].length > 15){
+                     this.events16[j][k][15] = false;
+                  }
 
                       if(this.events16[j][k][2] > 1){
                          this.counting = k + 1;
@@ -13415,7 +13995,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events16[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events16[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events16[j][k][11] = true ;
-                     this.events16[j][k][12] = this.report[i].users.username;
+                     this.events16[j][k][12] = this.report[i].users.username;if(this.events16[j][k][8].length > 15){
+                     this.events16[j][k][15] = false;
+                  }
 
                       if(this.events16[j][k][2] > 1){
                          this.counting = k + 1;
@@ -13458,7 +14040,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events16[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events16[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events16[j][k][11] = true ;
-                     this.events16[j][k][12] = this.report[i].users.username;
+                     this.events16[j][k][12] = this.report[i].users.username;if(this.events16[j][k][8].length > 15){
+                     this.events16[j][k][15] = false;
+                  }
 
                       if(this.events16[j][k][2] > 1){
                          this.counting = k + 1;
@@ -13501,7 +14085,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events16[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events16[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events16[j][k][11] = true ;
-                     this.events16[j][k][12] = this.report[i].users.username;
+                     this.events16[j][k][12] = this.report[i].users.username;if(this.events16[j][k][8].length > 15){
+                     this.events16[j][k][15] = false;
+                  }
 
                       if(this.events16[j][k][2] > 1){
                          this.counting = k + 1;
@@ -13544,7 +14130,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events16[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events16[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events16[j][k][11] = true ;
-                     this.events16[j][k][12] = this.report[i].users.username;
+                     this.events16[j][k][12] = this.report[i].users.username;if(this.events16[j][k][8].length > 15){
+                     this.events16[j][k][15] = false;
+                  }
 
                       if(this.events16[j][k][2] > 1){
                          this.counting = k + 1;
@@ -13587,7 +14175,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events16[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events16[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events16[j][k][11] = true ;
-                     this.events16[j][k][12] = this.report[i].users.username;
+                     this.events16[j][k][12] = this.report[i].users.username;if(this.events16[j][k][8].length > 15){
+                     this.events16[j][k][15] = false;
+                  }
 
                       if(this.events16[j][k][2] > 1){
                          this.counting = k + 1;
@@ -13630,7 +14220,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events16[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events16[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events16[j][k][11] = true ;
-                     this.events16[j][k][12] = this.report[i].users.username;
+                     this.events16[j][k][12] = this.report[i].users.username;if(this.events16[j][k][8].length > 15){
+                     this.events16[j][k][15] = false;
+                  }
 
                       if(this.events16[j][k][2] > 1){
                          this.counting = k + 1;
@@ -13673,7 +14265,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events16[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events16[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events16[j][k][11] = true ;
-                     this.events16[j][k][12] = this.report[i].users.username;
+                     this.events16[j][k][12] = this.report[i].users.username;if(this.events16[j][k][8].length > 15){
+                     this.events16[j][k][15] = false;
+                  }
 
                       if(this.events16[j][k][2] > 1){
                          this.counting = k + 1;
@@ -13716,7 +14310,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events16[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events16[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events16[j][k][11] = true ;
-                     this.events16[j][k][12] = this.report[i].users.username;
+                     this.events16[j][k][12] = this.report[i].users.username;if(this.events16[j][k][8].length > 15){
+                     this.events16[j][k][15] = false;
+                  }
 
                       if(this.events16[j][k][2] > 1){
                          this.counting = k + 1;
@@ -13759,7 +14355,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events16[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events16[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events16[j][k][11] = true ;
-                     this.events16[j][k][12] = this.report[i].users.username;
+                     this.events16[j][k][12] = this.report[i].users.username;if(this.events16[j][k][8].length > 15){
+                     this.events16[j][k][15] = false;
+                  }
 
                       if(this.events16[j][k][2] > 1){
                          this.counting = k + 1;
@@ -13802,7 +14400,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events16[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events16[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events16[j][k][11] = true ;
-                     this.events16[j][k][12] = this.report[i].users.username;
+                     this.events16[j][k][12] = this.report[i].users.username;if(this.events16[j][k][8].length > 15){
+                     this.events16[j][k][15] = false;
+                  }
 
                       if(this.events16[j][k][2] > 1){
                          this.counting = k + 1;
@@ -13845,7 +14445,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events16[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events16[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events16[j][k][11] = true ;
-                     this.events16[j][k][12] = this.report[i].users.username;
+                     this.events16[j][k][12] = this.report[i].users.username;if(this.events16[j][k][8].length > 15){
+                     this.events16[j][k][15] = false;
+                  }
 
                       if(this.events16[j][k][2] > 1){
                          this.counting = k + 1;
@@ -13888,7 +14490,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events16[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events16[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events16[j][k][11] = true ;
-                     this.events16[j][k][12] = this.report[i].users.username;
+                     this.events16[j][k][12] = this.report[i].users.username;if(this.events16[j][k][8].length > 15){
+                     this.events16[j][k][15] = false;
+                  }
 
                       if(this.events16[j][k][2] > 1){
                          this.counting = k + 1;
@@ -13931,7 +14535,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events16[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events16[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events16[j][k][11] = true ;
-                     this.events16[j][k][12] = this.report[i].users.username;
+                     this.events16[j][k][12] = this.report[i].users.username;if(this.events16[j][k][8].length > 15){
+                     this.events16[j][k][15] = false;
+                  }
 
                       if(this.events16[j][k][2] > 1){
                          this.counting = k + 1;
@@ -13974,7 +14580,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events16[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events16[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events16[j][k][11] = true ;
-                     this.events16[j][k][12] = this.report[i].users.username;
+                     this.events16[j][k][12] = this.report[i].users.username;if(this.events16[j][k][8].length > 15){
+                     this.events16[j][k][15] = false;
+                  }
 
                       if(this.events16[j][k][2] > 1){
                          this.counting = k + 1;
@@ -14017,7 +14625,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events16[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events16[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events16[j][k][11] = true ;
-                     this.events16[j][k][12] = this.report[i].users.username;
+                     this.events16[j][k][12] = this.report[i].users.username;if(this.events16[j][k][8].length > 15){
+                     this.events16[j][k][15] = false;
+                  }
 
                       if(this.events16[j][k][2] > 1){
                          this.counting = k + 1;
@@ -14060,7 +14670,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events16[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events16[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events16[j][k][11] = true ;
-                     this.events16[j][k][12] = this.report[i].users.username;
+                     this.events16[j][k][12] = this.report[i].users.username;if(this.events16[j][k][8].length > 15){
+                     this.events16[j][k][15] = false;
+                  }
 
                       if(this.events16[j][k][2] > 1){
                          this.counting = k + 1;
@@ -14103,7 +14715,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events16[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events16[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events16[j][k][11] = true ;
-                     this.events16[j][k][12] = this.report[i].users.username;
+                     this.events16[j][k][12] = this.report[i].users.username;if(this.events16[j][k][8].length > 15){
+                     this.events16[j][k][15] = false;
+                  }
 
                       if(this.events16[j][k][2] > 1){
                          this.counting = k + 1;
@@ -14147,7 +14761,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events17[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events17[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events17[j][k][11] = true ;
-                     this.events17[j][k][12] = this.report[i].users.username;
+                     this.events17[j][k][12] = this.report[i].users.username;if(this.events17[j][k][8].length > 15){
+                     this.events17[j][k][15] = false;
+                  }
 
                       if(this.events17[j][k][2] > 1){
                          this.counting = k + 1;
@@ -14190,7 +14806,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events17[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events17[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events17[j][k][11] = true ;
-                     this.events17[j][k][12] = this.report[i].users.username;
+                     this.events17[j][k][12] = this.report[i].users.username;if(this.events17[j][k][8].length > 15){
+                     this.events17[j][k][15] = false;
+                  }
 
                       if(this.events17[j][k][2] > 1){
                          this.counting = k + 1;
@@ -14233,7 +14851,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events17[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events17[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events17[j][k][11] = true ;
-                     this.events17[j][k][12] = this.report[i].users.username;
+                     this.events17[j][k][12] = this.report[i].users.username;if(this.events17[j][k][8].length > 15){
+                     this.events17[j][k][15] = false;
+                  }
 
                       if(this.events17[j][k][2] > 1){
                          this.counting = k + 1;
@@ -14276,7 +14896,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events17[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events17[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events17[j][k][11] = true ;
-                     this.events17[j][k][12] = this.report[i].users.username;
+                     this.events17[j][k][12] = this.report[i].users.username;if(this.events17[j][k][8].length > 15){
+                     this.events17[j][k][15] = false;
+                  }
 
                       if(this.events17[j][k][2] > 1){
                          this.counting = k + 1;
@@ -14319,7 +14941,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events17[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events17[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events17[j][k][11] = true ;
-                     this.events17[j][k][12] = this.report[i].users.username;
+                     this.events17[j][k][12] = this.report[i].users.username;if(this.events17[j][k][8].length > 15){
+                     this.events17[j][k][15] = false;
+                  }
 
                       if(this.events17[j][k][2] > 1){
                          this.counting = k + 1;
@@ -14362,7 +14986,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events17[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events17[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events17[j][k][11] = true ;
-                     this.events17[j][k][12] = this.report[i].users.username;
+                     this.events17[j][k][12] = this.report[i].users.username;if(this.events17[j][k][8].length > 15){
+                     this.events17[j][k][15] = false;
+                  }
 
                       if(this.events17[j][k][2] > 1){
                          this.counting = k + 1;
@@ -14405,7 +15031,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events17[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events17[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events17[j][k][11] = true ;
-                     this.events17[j][k][12] = this.report[i].users.username;
+                     this.events17[j][k][12] = this.report[i].users.username;if(this.events17[j][k][8].length > 15){
+                     this.events17[j][k][15] = false;
+                  }
 
                       if(this.events17[j][k][2] > 1){
                          this.counting = k + 1;
@@ -14448,7 +15076,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events17[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events17[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events17[j][k][11] = true ;
-                     this.events17[j][k][12] = this.report[i].users.username;
+                     this.events17[j][k][12] = this.report[i].users.username;if(this.events17[j][k][8].length > 15){
+                     this.events17[j][k][15] = false;
+                  }
 
                       if(this.events17[j][k][2] > 1){
                          this.counting = k + 1;
@@ -14491,7 +15121,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events17[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events17[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events17[j][k][11] = true ;
-                     this.events17[j][k][12] = this.report[i].users.username;
+                     this.events17[j][k][12] = this.report[i].users.username;if(this.events17[j][k][8].length > 15){
+                     this.events17[j][k][15] = false;
+                  }
 
                       if(this.events17[j][k][2] > 1){
                          this.counting = k + 1;
@@ -14534,7 +15166,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events17[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events17[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events17[j][k][11] = true ;
-                     this.events17[j][k][12] = this.report[i].users.username;
+                     this.events17[j][k][12] = this.report[i].users.username;if(this.events17[j][k][8].length > 15){
+                     this.events17[j][k][15] = false;
+                  }
 
                       if(this.events17[j][k][2] > 1){
                          this.counting = k + 1;
@@ -14577,7 +15211,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events17[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events17[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events17[j][k][11] = true ;
-                     this.events17[j][k][12] = this.report[i].users.username;
+                     this.events17[j][k][12] = this.report[i].users.username;if(this.events17[j][k][8].length > 15){
+                     this.events17[j][k][15] = false;
+                  }
 
                       if(this.events17[j][k][2] > 1){
                          this.counting = k + 1;
@@ -14620,7 +15256,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events17[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events17[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events17[j][k][11] = true ;
-                     this.events17[j][k][12] = this.report[i].users.username;
+                     this.events17[j][k][12] = this.report[i].users.username;if(this.events17[j][k][8].length > 15){
+                     this.events17[j][k][15] = false;
+                  }
 
                       if(this.events17[j][k][2] > 1){
                          this.counting = k + 1;
@@ -14663,7 +15301,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events17[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events17[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events17[j][k][11] = true ;
-                     this.events17[j][k][12] = this.report[i].users.username;
+                     this.events17[j][k][12] = this.report[i].users.username;if(this.events17[j][k][8].length > 15){
+                     this.events17[j][k][15] = false;
+                  }
 
                       if(this.events17[j][k][2] > 1){
                          this.counting = k + 1;
@@ -14706,7 +15346,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events17[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events17[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events17[j][k][11] = true ;
-                     this.events17[j][k][12] = this.report[i].users.username;
+                     this.events17[j][k][12] = this.report[i].users.username;if(this.events17[j][k][8].length > 15){
+                     this.events17[j][k][15] = false;
+                  }
 
                       if(this.events17[j][k][2] > 1){
                          this.counting = k + 1;
@@ -14749,7 +15391,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events17[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events17[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events17[j][k][11] = true ;
-                     this.events17[j][k][12] = this.report[i].users.username;
+                     this.events17[j][k][12] = this.report[i].users.username;if(this.events17[j][k][8].length > 15){
+                     this.events17[j][k][15] = false;
+                  }
 
                       if(this.events17[j][k][2] > 1){
                          this.counting = k + 1;
@@ -14792,7 +15436,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events17[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events17[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events17[j][k][11] = true ;
-                     this.events17[j][k][12] = this.report[i].users.username;
+                     this.events17[j][k][12] = this.report[i].users.username;if(this.events17[j][k][8].length > 15){
+                     this.events17[j][k][15] = false;
+                  }
 
                       if(this.events17[j][k][2] > 1){
                          this.counting = k + 1;
@@ -14835,7 +15481,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events17[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events17[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events17[j][k][11] = true ;
-                     this.events17[j][k][12] = this.report[i].users.username;
+                     this.events17[j][k][12] = this.report[i].users.username;if(this.events17[j][k][8].length > 15){
+                     this.events17[j][k][15] = false;
+                  }
 
                       if(this.events17[j][k][2] > 1){
                          this.counting = k + 1;
@@ -14878,7 +15526,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events17[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events17[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events17[j][k][11] = true ;
-                     this.events17[j][k][12] = this.report[i].users.username;
+                     this.events17[j][k][12] = this.report[i].users.username;if(this.events17[j][k][8].length > 15){
+                     this.events17[j][k][15] = false;
+                  }
 
                       if(this.events17[j][k][2] > 1){
                          this.counting = k + 1;
@@ -14921,7 +15571,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                      this.events17[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                      this.events17[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                      this.events17[j][k][11] = true ;
-                     this.events17[j][k][12] = this.report[i].users.username;
+                     this.events17[j][k][12] = this.report[i].users.username;if(this.events17[j][k][8].length > 15){
+                     this.events17[j][k][15] = false;
+                  }
 
                       if(this.events17[j][k][2] > 1){
                          this.counting = k + 1;
@@ -14966,7 +15618,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                       this.events18[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                       this.events18[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                       this.events18[j][k][11] = true ;
-                      this.events18[j][k][12] = this.report[i].users.username;
+                      this.events18[j][k][12] = this.report[i].users.username;if(this.events18[j][k][8].length > 15){
+                     this.events18[j][k][15] = false;
+                  }
 
                        if(this.events18[j][k][2] > 1){
                           this.counting = k + 1;
@@ -15009,7 +15663,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                       this.events18[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                       this.events18[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                       this.events18[j][k][11] = true ;
-                      this.events18[j][k][12] = this.report[i].users.username;
+                      this.events18[j][k][12] = this.report[i].users.username;if(this.events18[j][k][8].length > 15){
+                     this.events18[j][k][15] = false;
+                  }
 
                        if(this.events18[j][k][2] > 1){
                           this.counting = k + 1;
@@ -15052,7 +15708,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                       this.events18[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                       this.events18[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                       this.events18[j][k][11] = true ;
-                      this.events18[j][k][12] = this.report[i].users.username;
+                      this.events18[j][k][12] = this.report[i].users.username;if(this.events18[j][k][8].length > 15){
+                     this.events18[j][k][15] = false;
+                  }
 
                        if(this.events18[j][k][2] > 1){
                           this.counting = k + 1;
@@ -15095,7 +15753,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                       this.events18[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                       this.events18[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                       this.events18[j][k][11] = true ;
-                      this.events18[j][k][12] = this.report[i].users.username;
+                      this.events18[j][k][12] = this.report[i].users.username;if(this.events18[j][k][8].length > 15){
+                     this.events18[j][k][15] = false;
+                  }
 
                        if(this.events18[j][k][2] > 1){
                           this.counting = k + 1;
@@ -15138,7 +15798,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                       this.events18[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                       this.events18[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                       this.events18[j][k][11] = true ;
-                      this.events18[j][k][12] = this.report[i].users.username;
+                      this.events18[j][k][12] = this.report[i].users.username;if(this.events18[j][k][8].length > 15){
+                     this.events18[j][k][15] = false;
+                  }
 
                        if(this.events18[j][k][2] > 1){
                           this.counting = k + 1;
@@ -15181,7 +15843,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                       this.events18[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                       this.events18[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                       this.events18[j][k][11] = true ;
-                      this.events18[j][k][12] = this.report[i].users.username;
+                      this.events18[j][k][12] = this.report[i].users.username;if(this.events18[j][k][8].length > 15){
+                     this.events18[j][k][15] = false;
+                  }
 
                        if(this.events18[j][k][2] > 1){
                           this.counting = k + 1;
@@ -15224,7 +15888,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                       this.events18[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                       this.events18[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                       this.events18[j][k][11] = true ;
-                      this.events18[j][k][12] = this.report[i].users.username;
+                      this.events18[j][k][12] = this.report[i].users.username;if(this.events18[j][k][8].length > 15){
+                     this.events18[j][k][15] = false;
+                  }
 
                        if(this.events18[j][k][2] > 1){
                           this.counting = k + 1;
@@ -15267,7 +15933,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                       this.events18[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                       this.events18[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                       this.events18[j][k][11] = true ;
-                      this.events18[j][k][12] = this.report[i].users.username;
+                      this.events18[j][k][12] = this.report[i].users.username;if(this.events18[j][k][8].length > 15){
+                     this.events18[j][k][15] = false;
+                  }
 
                        if(this.events18[j][k][2] > 1){
                           this.counting = k + 1;
@@ -15310,7 +15978,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                       this.events18[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                       this.events18[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                       this.events18[j][k][11] = true ;
-                      this.events18[j][k][12] = this.report[i].users.username;
+                      this.events18[j][k][12] = this.report[i].users.username;if(this.events18[j][k][8].length > 15){
+                     this.events18[j][k][15] = false;
+                  }
 
                        if(this.events18[j][k][2] > 1){
                           this.counting = k + 1;
@@ -15353,7 +16023,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                       this.events18[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                       this.events18[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                       this.events18[j][k][11] = true ;
-                      this.events18[j][k][12] = this.report[i].users.username;
+                      this.events18[j][k][12] = this.report[i].users.username;if(this.events18[j][k][8].length > 15){
+                     this.events18[j][k][15] = false;
+                  }
 
                        if(this.events18[j][k][2] > 1){
                           this.counting = k + 1;
@@ -15396,7 +16068,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                       this.events18[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                       this.events18[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                       this.events18[j][k][11] = true ;
-                      this.events18[j][k][12] = this.report[i].users.username;
+                      this.events18[j][k][12] = this.report[i].users.username;if(this.events18[j][k][8].length > 15){
+                     this.events18[j][k][15] = false;
+                  }
 
                        if(this.events18[j][k][2] > 1){
                           this.counting = k + 1;
@@ -15439,7 +16113,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                       this.events18[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                       this.events18[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                       this.events18[j][k][11] = true ;
-                      this.events18[j][k][12] = this.report[i].users.username;
+                      this.events18[j][k][12] = this.report[i].users.username;if(this.events18[j][k][8].length > 15){
+                     this.events18[j][k][15] = false;
+                  }
 
                        if(this.events18[j][k][2] > 1){
                           this.counting = k + 1;
@@ -15482,7 +16158,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                       this.events18[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                       this.events18[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                       this.events18[j][k][11] = true ;
-                      this.events18[j][k][12] = this.report[i].users.username;
+                      this.events18[j][k][12] = this.report[i].users.username;if(this.events18[j][k][8].length > 15){
+                     this.events18[j][k][15] = false;
+                  }
 
                        if(this.events18[j][k][2] > 1){
                           this.counting = k + 1;
@@ -15525,7 +16203,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                       this.events18[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                       this.events18[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                       this.events18[j][k][11] = true ;
-                      this.events18[j][k][12] = this.report[i].users.username;
+                      this.events18[j][k][12] = this.report[i].users.username;if(this.events18[j][k][8].length > 15){
+                     this.events18[j][k][15] = false;
+                  }
 
                        if(this.events18[j][k][2] > 1){
                           this.counting = k + 1;
@@ -15568,7 +16248,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                       this.events18[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                       this.events18[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                       this.events18[j][k][11] = true ;
-                      this.events18[j][k][12] = this.report[i].users.username;
+                      this.events18[j][k][12] = this.report[i].users.username;if(this.events18[j][k][8].length > 15){
+                     this.events18[j][k][15] = false;
+                  }
 
                        if(this.events18[j][k][2] > 1){
                           this.counting = k + 1;
@@ -15611,7 +16293,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                       this.events18[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                       this.events18[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                       this.events18[j][k][11] = true ;
-                      this.events18[j][k][12] = this.report[i].users.username;
+                      this.events18[j][k][12] = this.report[i].users.username;if(this.events18[j][k][8].length > 15){
+                     this.events18[j][k][15] = false;
+                  }
 
                        if(this.events18[j][k][2] > 1){
                           this.counting = k + 1;
@@ -15654,7 +16338,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                       this.events18[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                       this.events18[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                       this.events18[j][k][11] = true ;
-                      this.events18[j][k][12] = this.report[i].users.username;
+                      this.events18[j][k][12] = this.report[i].users.username;if(this.events18[j][k][8].length > 15){
+                     this.events18[j][k][15] = false;
+                  }
 
                        if(this.events18[j][k][2] > 1){
                           this.counting = k + 1;
@@ -15697,7 +16383,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                       this.events18[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                       this.events18[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                       this.events18[j][k][11] = true ;
-                      this.events18[j][k][12] = this.report[i].users.username;
+                      this.events18[j][k][12] = this.report[i].users.username;if(this.events18[j][k][8].length > 15){
+                     this.events18[j][k][15] = false;
+                  }
 
                        if(this.events18[j][k][2] > 1){
                           this.counting = k + 1;
@@ -15740,7 +16428,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                       this.events18[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                       this.events18[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                       this.events18[j][k][11] = true ;
-                      this.events18[j][k][12] = this.report[i].users.username;
+                      this.events18[j][k][12] = this.report[i].users.username;if(this.events18[j][k][8].length > 15){
+                     this.events18[j][k][15] = false;
+                  }
 
                        if(this.events18[j][k][2] > 1){
                           this.counting = k + 1;
@@ -15785,7 +16475,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events19[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events19[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events19[j][k][11] = true ;
-                        this.events19[j][k][12] = this.report[i].users.username;
+                        this.events19[j][k][12] = this.report[i].users.username;if(this.events19[j][k][8].length > 15){
+                     this.events19[j][k][15] = false;
+                  }
 
                          if(this.events19[j][k][2] > 1){
                             this.counting = k + 1;
@@ -15828,7 +16520,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events19[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events19[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events19[j][k][11] = true ;
-                        this.events19[j][k][12] = this.report[i].users.username;
+                        this.events19[j][k][12] = this.report[i].users.username;if(this.events19[j][k][8].length > 15){
+                     this.events19[j][k][15] = false;
+                  }
 
                          if(this.events19[j][k][2] > 1){
                             this.counting = k + 1;
@@ -15871,7 +16565,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events19[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events19[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events19[j][k][11] = true ;
-                        this.events19[j][k][12] = this.report[i].users.username;
+                        this.events19[j][k][12] = this.report[i].users.username;if(this.events19[j][k][8].length > 15){
+                     this.events19[j][k][15] = false;
+                  }
 
                          if(this.events19[j][k][2] > 1){
                             this.counting = k + 1;
@@ -15914,7 +16610,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events19[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events19[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events19[j][k][11] = true ;
-                        this.events19[j][k][12] = this.report[i].users.username;
+                        this.events19[j][k][12] = this.report[i].users.username;if(this.events19[j][k][8].length > 15){
+                     this.events19[j][k][15] = false;
+                  }
 
                          if(this.events19[j][k][2] > 1){
                             this.counting = k + 1;
@@ -15957,7 +16655,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events19[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events19[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events19[j][k][11] = true ;
-                        this.events19[j][k][12] = this.report[i].users.username;
+                        this.events19[j][k][12] = this.report[i].users.username;if(this.events19[j][k][8].length > 15){
+                     this.events19[j][k][15] = false;
+                  }
 
                          if(this.events19[j][k][2] > 1){
                             this.counting = k + 1;
@@ -16000,7 +16700,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events19[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events19[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events19[j][k][11] = true ;
-                        this.events19[j][k][12] = this.report[i].users.username;
+                        this.events19[j][k][12] = this.report[i].users.username;if(this.events19[j][k][8].length > 15){
+                     this.events19[j][k][15] = false;
+                  }
 
                          if(this.events19[j][k][2] > 1){
                             this.counting = k + 1;
@@ -16043,7 +16745,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events19[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events19[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events19[j][k][11] = true ;
-                        this.events19[j][k][12] = this.report[i].users.username;
+                        this.events19[j][k][12] = this.report[i].users.username;if(this.events19[j][k][8].length > 15){
+                     this.events19[j][k][15] = false;
+                  }
 
                          if(this.events19[j][k][2] > 1){
                             this.counting = k + 1;
@@ -16086,7 +16790,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events19[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events19[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events19[j][k][11] = true ;
-                        this.events19[j][k][12] = this.report[i].users.username;
+                        this.events19[j][k][12] = this.report[i].users.username;if(this.events19[j][k][8].length > 15){
+                     this.events19[j][k][15] = false;
+                  }
 
                          if(this.events19[j][k][2] > 1){
                             this.counting = k + 1;
@@ -16129,7 +16835,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events19[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events19[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events19[j][k][11] = true ;
-                        this.events19[j][k][12] = this.report[i].users.username;
+                        this.events19[j][k][12] = this.report[i].users.username;if(this.events19[j][k][8].length > 15){
+                     this.events19[j][k][15] = false;
+                  }
 
                          if(this.events19[j][k][2] > 1){
                             this.counting = k + 1;
@@ -16172,7 +16880,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events19[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events19[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events19[j][k][11] = true ;
-                        this.events19[j][k][12] = this.report[i].users.username;
+                        this.events19[j][k][12] = this.report[i].users.username;if(this.events19[j][k][8].length > 15){
+                     this.events19[j][k][15] = false;
+                  }
 
                          if(this.events19[j][k][2] > 1){
                             this.counting = k + 1;
@@ -16215,7 +16925,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events19[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events19[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events19[j][k][11] = true ;
-                        this.events19[j][k][12] = this.report[i].users.username;
+                        this.events19[j][k][12] = this.report[i].users.username;if(this.events19[j][k][8].length > 15){
+                     this.events19[j][k][15] = false;
+                  }
 
                          if(this.events19[j][k][2] > 1){
                             this.counting = k + 1;
@@ -16258,7 +16970,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events19[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events19[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events19[j][k][11] = true ;
-                        this.events19[j][k][12] = this.report[i].users.username;
+                        this.events19[j][k][12] = this.report[i].users.username;if(this.events19[j][k][8].length > 15){
+                     this.events19[j][k][15] = false;
+                  }
 
                          if(this.events19[j][k][2] > 1){
                             this.counting = k + 1;
@@ -16301,7 +17015,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events19[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events19[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events19[j][k][11] = true ;
-                        this.events19[j][k][12] = this.report[i].users.username;
+                        this.events19[j][k][12] = this.report[i].users.username;if(this.events19[j][k][8].length > 15){
+                     this.events19[j][k][15] = false;
+                  }
 
                          if(this.events19[j][k][2] > 1){
                             this.counting = k + 1;
@@ -16344,7 +17060,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events19[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events19[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events19[j][k][11] = true ;
-                        this.events19[j][k][12] = this.report[i].users.username;
+                        this.events19[j][k][12] = this.report[i].users.username;if(this.events19[j][k][8].length > 15){
+                     this.events19[j][k][15] = false;
+                  }
 
                          if(this.events19[j][k][2] > 1){
                             this.counting = k + 1;
@@ -16387,7 +17105,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events19[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events19[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events19[j][k][11] = true ;
-                        this.events19[j][k][12] = this.report[i].users.username;
+                        this.events19[j][k][12] = this.report[i].users.username;if(this.events19[j][k][8].length > 15){
+                     this.events19[j][k][15] = false;
+                  }
 
                          if(this.events19[j][k][2] > 1){
                             this.counting = k + 1;
@@ -16430,7 +17150,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events19[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events19[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events19[j][k][11] = true ;
-                        this.events19[j][k][12] = this.report[i].users.username;
+                        this.events19[j][k][12] = this.report[i].users.username;if(this.events19[j][k][8].length > 15){
+                     this.events19[j][k][15] = false;
+                  }
 
                          if(this.events19[j][k][2] > 1){
                             this.counting = k + 1;
@@ -16473,7 +17195,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events19[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events19[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events19[j][k][11] = true ;
-                        this.events19[j][k][12] = this.report[i].users.username;
+                        this.events19[j][k][12] = this.report[i].users.username;if(this.events19[j][k][8].length > 15){
+                     this.events19[j][k][15] = false;
+                  }
 
                          if(this.events19[j][k][2] > 1){
                             this.counting = k + 1;
@@ -16516,7 +17240,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events19[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events19[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events19[j][k][11] = true ;
-                        this.events19[j][k][12] = this.report[i].users.username;
+                        this.events19[j][k][12] = this.report[i].users.username;if(this.events19[j][k][8].length > 15){
+                     this.events19[j][k][15] = false;
+                  }
 
                          if(this.events19[j][k][2] > 1){
                             this.counting = k + 1;
@@ -16559,7 +17285,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events19[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events19[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events19[j][k][11] = true ;
-                        this.events19[j][k][12] = this.report[i].users.username;
+                        this.events19[j][k][12] = this.report[i].users.username;if(this.events19[j][k][8].length > 15){
+                     this.events19[j][k][15] = false;
+                  }
 
                          if(this.events19[j][k][2] > 1){
                             this.counting = k + 1;
@@ -16604,7 +17332,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events20[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events20[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events20[j][k][11] = true ;
-                        this.events20[j][k][12] = this.report[i].users.username;
+                        this.events20[j][k][12] = this.report[i].users.username;if(this.events20[j][k][8].length > 15){
+                     this.events20[j][k][15] = false;
+                  }
 
                          if(this.events20[j][k][2] > 1){
                             this.counting = k + 1;
@@ -16647,7 +17377,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events20[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events20[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events20[j][k][11] = true ;
-                        this.events20[j][k][12] = this.report[i].users.username;
+                        this.events20[j][k][12] = this.report[i].users.username;if(this.events20[j][k][8].length > 15){
+                     this.events20[j][k][15] = false;
+                  }
 
                          if(this.events20[j][k][2] > 1){
                             this.counting = k + 1;
@@ -16690,7 +17422,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events20[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events20[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events20[j][k][11] = true ;
-                        this.events20[j][k][12] = this.report[i].users.username;
+                        this.events20[j][k][12] = this.report[i].users.username;if(this.events20[j][k][8].length > 15){
+                     this.events20[j][k][15] = false;
+                  }
 
                          if(this.events20[j][k][2] > 1){
                             this.counting = k + 1;
@@ -16733,7 +17467,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events20[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events20[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events20[j][k][11] = true ;
-                        this.events20[j][k][12] = this.report[i].users.username;
+                        this.events20[j][k][12] = this.report[i].users.username;if(this.events20[j][k][8].length > 15){
+                     this.events20[j][k][15] = false;
+                  }
 
                          if(this.events20[j][k][2] > 1){
                             this.counting = k + 1;
@@ -16776,7 +17512,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events20[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events20[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events20[j][k][11] = true ;
-                        this.events20[j][k][12] = this.report[i].users.username;
+                        this.events20[j][k][12] = this.report[i].users.username;if(this.events20[j][k][8].length > 15){
+                     this.events20[j][k][15] = false;
+                  }
 
                          if(this.events20[j][k][2] > 1){
                             this.counting = k + 1;
@@ -16819,7 +17557,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events20[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events20[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events20[j][k][11] = true ;
-                        this.events20[j][k][12] = this.report[i].users.username;
+                        this.events20[j][k][12] = this.report[i].users.username;if(this.events20[j][k][8].length > 15){
+                     this.events20[j][k][15] = false;
+                  }
 
                          if(this.events20[j][k][2] > 1){
                             this.counting = k + 1;
@@ -16862,7 +17602,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events20[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events20[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events20[j][k][11] = true ;
-                        this.events20[j][k][12] = this.report[i].users.username;
+                        this.events20[j][k][12] = this.report[i].users.username;if(this.events20[j][k][8].length > 15){
+                     this.events20[j][k][15] = false;
+                  }
 
                          if(this.events20[j][k][2] > 1){
                             this.counting = k + 1;
@@ -16905,7 +17647,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events20[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events20[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events20[j][k][11] = true ;
-                        this.events20[j][k][12] = this.report[i].users.username;
+                        this.events20[j][k][12] = this.report[i].users.username;if(this.events20[j][k][8].length > 15){
+                     this.events20[j][k][15] = false;
+                  }
 
                          if(this.events20[j][k][2] > 1){
                             this.counting = k + 1;
@@ -16948,7 +17692,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events20[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events20[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events20[j][k][11] = true ;
-                        this.events20[j][k][12] = this.report[i].users.username;
+                        this.events20[j][k][12] = this.report[i].users.username;if(this.events20[j][k][8].length > 15){
+                     this.events20[j][k][15] = false;
+                  }
 
                          if(this.events20[j][k][2] > 1){
                             this.counting = k + 1;
@@ -16991,7 +17737,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events20[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events20[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events20[j][k][11] = true ;
-                        this.events20[j][k][12] = this.report[i].users.username;
+                        this.events20[j][k][12] = this.report[i].users.username;if(this.events20[j][k][8].length > 15){
+                     this.events20[j][k][15] = false;
+                  }
 
                          if(this.events20[j][k][2] > 1){
                             this.counting = k + 1;
@@ -17034,7 +17782,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events20[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events20[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events20[j][k][11] = true ;
-                        this.events20[j][k][12] = this.report[i].users.username;
+                        this.events20[j][k][12] = this.report[i].users.username;if(this.events20[j][k][8].length > 15){
+                     this.events20[j][k][15] = false;
+                  }
 
                          if(this.events20[j][k][2] > 1){
                             this.counting = k + 1;
@@ -17077,7 +17827,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events20[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events20[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events20[j][k][11] = true ;
-                        this.events20[j][k][12] = this.report[i].users.username;
+                        this.events20[j][k][12] = this.report[i].users.username;if(this.events20[j][k][8].length > 15){
+                     this.events20[j][k][15] = false;
+                  }
 
                          if(this.events20[j][k][2] > 1){
                             this.counting = k + 1;
@@ -17120,7 +17872,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events20[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events20[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events20[j][k][11] = true ;
-                        this.events20[j][k][12] = this.report[i].users.username;
+                        this.events20[j][k][12] = this.report[i].users.username;if(this.events20[j][k][8].length > 15){
+                     this.events20[j][k][15] = false;
+                  }
 
                          if(this.events20[j][k][2] > 1){
                             this.counting = k + 1;
@@ -17163,7 +17917,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events20[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events20[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events20[j][k][11] = true ;
-                        this.events20[j][k][12] = this.report[i].users.username;
+                        this.events20[j][k][12] = this.report[i].users.username;if(this.events20[j][k][8].length > 15){
+                     this.events20[j][k][15] = false;
+                  }
 
                          if(this.events20[j][k][2] > 1){
                             this.counting = k + 1;
@@ -17206,7 +17962,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events20[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events20[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events20[j][k][11] = true ;
-                        this.events20[j][k][12] = this.report[i].users.username;
+                        this.events20[j][k][12] = this.report[i].users.username;if(this.events20[j][k][8].length > 15){
+                     this.events20[j][k][15] = false;
+                  }
 
                          if(this.events20[j][k][2] > 1){
                             this.counting = k + 1;
@@ -17249,7 +18007,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events20[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events20[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events20[j][k][11] = true ;
-                        this.events20[j][k][12] = this.report[i].users.username;
+                        this.events20[j][k][12] = this.report[i].users.username;if(this.events20[j][k][8].length > 15){
+                     this.events20[j][k][15] = false;
+                  }
 
                          if(this.events20[j][k][2] > 1){
                             this.counting = k + 1;
@@ -17292,7 +18052,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events20[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events20[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events20[j][k][11] = true ;
-                        this.events20[j][k][12] = this.report[i].users.username;
+                        this.events20[j][k][12] = this.report[i].users.username;if(this.events20[j][k][8].length > 15){
+                     this.events20[j][k][15] = false;
+                  }
 
                          if(this.events20[j][k][2] > 1){
                             this.counting = k + 1;
@@ -17335,7 +18097,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events20[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events20[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events20[j][k][11] = true ;
-                        this.events20[j][k][12] = this.report[i].users.username;
+                        this.events20[j][k][12] = this.report[i].users.username;if(this.events20[j][k][8].length > 15){
+                     this.events20[j][k][15] = false;
+                  }
 
                          if(this.events20[j][k][2] > 1){
                             this.counting = k + 1;
@@ -17378,7 +18142,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events20[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events20[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events20[j][k][11] = true ;
-                        this.events20[j][k][12] = this.report[i].users.username;
+                        this.events20[j][k][12] = this.report[i].users.username;if(this.events20[j][k][8].length > 15){
+                     this.events20[j][k][15] = false;
+                  }
 
                          if(this.events20[j][k][2] > 1){
                             this.counting = k + 1;
@@ -17423,7 +18189,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events21[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events21[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events21[j][k][11] = true ;
-                        this.events21[j][k][12] = this.report[i].users.username;
+                        this.events21[j][k][12] = this.report[i].users.username;if(this.events21[j][k][8].length > 15){
+                     this.events21[j][k][15] = false;
+                  }
 
                          if(this.events21[j][k][2] > 1){
                             this.counting = k + 1;
@@ -17466,7 +18234,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events21[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events21[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events21[j][k][11] = true ;
-                        this.events21[j][k][12] = this.report[i].users.username;
+                        this.events21[j][k][12] = this.report[i].users.username;if(this.events21[j][k][8].length > 15){
+                     this.events21[j][k][15] = false;
+                  }
 
                          if(this.events21[j][k][2] > 1){
                             this.counting = k + 1;
@@ -17509,7 +18279,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events21[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events21[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events21[j][k][11] = true ;
-                        this.events21[j][k][12] = this.report[i].users.username;
+                        this.events21[j][k][12] = this.report[i].users.username;if(this.events21[j][k][8].length > 15){
+                     this.events21[j][k][15] = false;
+                  }
 
                          if(this.events21[j][k][2] > 1){
                             this.counting = k + 1;
@@ -17552,7 +18324,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events21[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events21[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events21[j][k][11] = true ;
-                        this.events21[j][k][12] = this.report[i].users.username;
+                        this.events21[j][k][12] = this.report[i].users.username;if(this.events21[j][k][8].length > 15){
+                     this.events21[j][k][15] = false;
+                  }
 
                          if(this.events21[j][k][2] > 1){
                             this.counting = k + 1;
@@ -17595,7 +18369,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events21[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events21[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events21[j][k][11] = true ;
-                        this.events21[j][k][12] = this.report[i].users.username;
+                        this.events21[j][k][12] = this.report[i].users.username;if(this.events21[j][k][8].length > 15){
+                     this.events21[j][k][15] = false;
+                  }
 
                          if(this.events21[j][k][2] > 1){
                             this.counting = k + 1;
@@ -17638,7 +18414,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events21[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events21[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events21[j][k][11] = true ;
-                        this.events21[j][k][12] = this.report[i].users.username;
+                        this.events21[j][k][12] = this.report[i].users.username;if(this.events21[j][k][8].length > 15){
+                     this.events21[j][k][15] = false;
+                  }
 
                          if(this.events21[j][k][2] > 1){
                             this.counting = k + 1;
@@ -17681,7 +18459,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events21[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events21[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events21[j][k][11] = true ;
-                        this.events21[j][k][12] = this.report[i].users.username;
+                        this.events21[j][k][12] = this.report[i].users.username;if(this.events21[j][k][8].length > 15){
+                     this.events21[j][k][15] = false;
+                  }
 
                          if(this.events21[j][k][2] > 1){
                             this.counting = k + 1;
@@ -17724,7 +18504,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events21[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events21[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events21[j][k][11] = true ;
-                        this.events21[j][k][12] = this.report[i].users.username;
+                        this.events21[j][k][12] = this.report[i].users.username;if(this.events21[j][k][8].length > 15){
+                     this.events21[j][k][15] = false;
+                  }
 
                          if(this.events21[j][k][2] > 1){
                             this.counting = k + 1;
@@ -17767,7 +18549,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events21[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events21[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events21[j][k][11] = true ;
-                        this.events21[j][k][12] = this.report[i].users.username;
+                        this.events21[j][k][12] = this.report[i].users.username;if(this.events21[j][k][8].length > 15){
+                     this.events21[j][k][15] = false;
+                  }
 
                          if(this.events21[j][k][2] > 1){
                             this.counting = k + 1;
@@ -17810,7 +18594,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events21[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events21[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events21[j][k][11] = true ;
-                        this.events21[j][k][12] = this.report[i].users.username;
+                        this.events21[j][k][12] = this.report[i].users.username;if(this.events21[j][k][8].length > 15){
+                     this.events21[j][k][15] = false;
+                  }
 
                          if(this.events21[j][k][2] > 1){
                             this.counting = k + 1;
@@ -17853,7 +18639,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events21[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events21[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events21[j][k][11] = true ;
-                        this.events21[j][k][12] = this.report[i].users.username;
+                        this.events21[j][k][12] = this.report[i].users.username;if(this.events21[j][k][8].length > 15){
+                     this.events21[j][k][15] = false;
+                  }
 
                          if(this.events21[j][k][2] > 1){
                             this.counting = k + 1;
@@ -17896,7 +18684,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events21[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events21[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events21[j][k][11] = true ;
-                        this.events21[j][k][12] = this.report[i].users.username;
+                        this.events21[j][k][12] = this.report[i].users.username;if(this.events21[j][k][8].length > 15){
+                     this.events21[j][k][15] = false;
+                  }
 
                          if(this.events21[j][k][2] > 1){
                             this.counting = k + 1;
@@ -17939,7 +18729,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events21[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events21[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events21[j][k][11] = true ;
-                        this.events21[j][k][12] = this.report[i].users.username;
+                        this.events21[j][k][12] = this.report[i].users.username;if(this.events21[j][k][8].length > 15){
+                     this.events21[j][k][15] = false;
+                  }
 
                          if(this.events21[j][k][2] > 1){
                             this.counting = k + 1;
@@ -17982,7 +18774,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events21[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events21[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events21[j][k][11] = true ;
-                        this.events21[j][k][12] = this.report[i].users.username;
+                        this.events21[j][k][12] = this.report[i].users.username;if(this.events21[j][k][8].length > 15){
+                     this.events21[j][k][15] = false;
+                  }
 
                          if(this.events21[j][k][2] > 1){
                             this.counting = k + 1;
@@ -18025,7 +18819,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events21[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events21[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events21[j][k][11] = true ;
-                        this.events21[j][k][12] = this.report[i].users.username;
+                        this.events21[j][k][12] = this.report[i].users.username;if(this.events21[j][k][8].length > 15){
+                     this.events21[j][k][15] = false;
+                  }
 
                          if(this.events21[j][k][2] > 1){
                             this.counting = k + 1;
@@ -18068,7 +18864,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events21[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events21[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events21[j][k][11] = true ;
-                        this.events21[j][k][12] = this.report[i].users.username;
+                        this.events21[j][k][12] = this.report[i].users.username;if(this.events21[j][k][8].length > 15){
+                     this.events21[j][k][15] = false;
+                  }
 
                          if(this.events21[j][k][2] > 1){
                             this.counting = k + 1;
@@ -18111,7 +18909,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events21[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events21[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events21[j][k][11] = true ;
-                        this.events21[j][k][12] = this.report[i].users.username;
+                        this.events21[j][k][12] = this.report[i].users.username;if(this.events21[j][k][8].length > 15){
+                     this.events21[j][k][15] = false;
+                  }
 
                          if(this.events21[j][k][2] > 1){
                             this.counting = k + 1;
@@ -18154,7 +18954,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events21[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events21[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events21[j][k][11] = true ;
-                        this.events21[j][k][12] = this.report[i].users.username;
+                        this.events21[j][k][12] = this.report[i].users.username;if(this.events21[j][k][8].length > 15){
+                     this.events21[j][k][15] = false;
+                  }
 
                          if(this.events21[j][k][2] > 1){
                             this.counting = k + 1;
@@ -18197,7 +18999,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events21[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events21[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events21[j][k][11] = true ;
-                        this.events21[j][k][12] = this.report[i].users.username;
+                        this.events21[j][k][12] = this.report[i].users.username;if(this.events21[j][k][8].length > 15){
+                     this.events21[j][k][15] = false;
+                  }
 
                          if(this.events21[j][k][2] > 1){
                             this.counting = k + 1;
@@ -18241,7 +19045,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events22[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events22[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events22[j][k][11] = true ;
-                        this.events22[j][k][12] = this.report[i].users.username;
+                        this.events22[j][k][12] = this.report[i].users.username;if(this.events22[j][k][8].length > 15){
+                     this.events22[j][k][15] = false;
+                  }
 
                          if(this.events22[j][k][2] > 1){
                             this.counting = k + 1;
@@ -18284,7 +19090,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events22[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events22[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events22[j][k][11] = true ;
-                        this.events22[j][k][12] = this.report[i].users.username;
+                        this.events22[j][k][12] = this.report[i].users.username;if(this.events22[j][k][8].length > 15){
+                     this.events22[j][k][15] = false;
+                  }
 
                          if(this.events22[j][k][2] > 1){
                             this.counting = k + 1;
@@ -18327,7 +19135,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events22[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events22[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events22[j][k][11] = true ;
-                        this.events22[j][k][12] = this.report[i].users.username;
+                        this.events22[j][k][12] = this.report[i].users.username;if(this.events22[j][k][8].length > 15){
+                     this.events22[j][k][15] = false;
+                  }
 
                          if(this.events22[j][k][2] > 1){
                             this.counting = k + 1;
@@ -18370,7 +19180,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events22[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events22[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events22[j][k][11] = true ;
-                        this.events22[j][k][12] = this.report[i].users.username;
+                        this.events22[j][k][12] = this.report[i].users.username;if(this.events22[j][k][8].length > 15){
+                     this.events22[j][k][15] = false;
+                  }
 
                          if(this.events22[j][k][2] > 1){
                             this.counting = k + 1;
@@ -18413,7 +19225,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events22[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events22[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events22[j][k][11] = true ;
-                        this.events22[j][k][12] = this.report[i].users.username;
+                        this.events22[j][k][12] = this.report[i].users.username;if(this.events22[j][k][8].length > 15){
+                     this.events22[j][k][15] = false;
+                  }
 
                          if(this.events22[j][k][2] > 1){
                             this.counting = k + 1;
@@ -18456,7 +19270,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events22[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events22[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events22[j][k][11] = true ;
-                        this.events22[j][k][12] = this.report[i].users.username;
+                        this.events22[j][k][12] = this.report[i].users.username;if(this.events22[j][k][8].length > 15){
+                     this.events22[j][k][15] = false;
+                  }
 
                          if(this.events22[j][k][2] > 1){
                             this.counting = k + 1;
@@ -18499,7 +19315,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events22[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events22[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events22[j][k][11] = true ;
-                        this.events22[j][k][12] = this.report[i].users.username;
+                        this.events22[j][k][12] = this.report[i].users.username;if(this.events22[j][k][8].length > 15){
+                     this.events22[j][k][15] = false;
+                  }
 
                          if(this.events22[j][k][2] > 1){
                             this.counting = k + 1;
@@ -18542,7 +19360,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events22[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events22[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events22[j][k][11] = true ;
-                        this.events22[j][k][12] = this.report[i].users.username;
+                        this.events22[j][k][12] = this.report[i].users.username;if(this.events22[j][k][8].length > 15){
+                     this.events22[j][k][15] = false;
+                  }
 
                          if(this.events22[j][k][2] > 1){
                             this.counting = k + 1;
@@ -18585,7 +19405,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events22[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events22[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events22[j][k][11] = true ;
-                        this.events22[j][k][12] = this.report[i].users.username;
+                        this.events22[j][k][12] = this.report[i].users.username;if(this.events22[j][k][8].length > 15){
+                     this.events22[j][k][15] = false;
+                  }
 
                          if(this.events22[j][k][2] > 1){
                             this.counting = k + 1;
@@ -18628,7 +19450,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events22[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events22[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events22[j][k][11] = true ;
-                        this.events22[j][k][12] = this.report[i].users.username;
+                        this.events22[j][k][12] = this.report[i].users.username;if(this.events22[j][k][8].length > 15){
+                     this.events22[j][k][15] = false;
+                  }
 
                          if(this.events22[j][k][2] > 1){
                             this.counting = k + 1;
@@ -18671,7 +19495,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events22[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events22[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events22[j][k][11] = true ;
-                        this.events22[j][k][12] = this.report[i].users.username;
+                        this.events22[j][k][12] = this.report[i].users.username;if(this.events22[j][k][8].length > 15){
+                     this.events22[j][k][15] = false;
+                  }
 
                          if(this.events22[j][k][2] > 1){
                             this.counting = k + 1;
@@ -18714,7 +19540,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events22[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events22[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events22[j][k][11] = true ;
-                        this.events22[j][k][12] = this.report[i].users.username;
+                        this.events22[j][k][12] = this.report[i].users.username;if(this.events22[j][k][8].length > 15){
+                     this.events22[j][k][15] = false;
+                  }
 
                          if(this.events22[j][k][2] > 1){
                             this.counting = k + 1;
@@ -18757,7 +19585,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events22[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events22[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events22[j][k][11] = true ;
-                        this.events22[j][k][12] = this.report[i].users.username;
+                        this.events22[j][k][12] = this.report[i].users.username;if(this.events22[j][k][8].length > 15){
+                     this.events22[j][k][15] = false;
+                  }
 
                          if(this.events22[j][k][2] > 1){
                             this.counting = k + 1;
@@ -18800,7 +19630,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events22[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events22[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events22[j][k][11] = true ;
-                        this.events22[j][k][12] = this.report[i].users.username;
+                        this.events22[j][k][12] = this.report[i].users.username;if(this.events22[j][k][8].length > 15){
+                     this.events22[j][k][15] = false;
+                  }
 
                          if(this.events22[j][k][2] > 1){
                             this.counting = k + 1;
@@ -18843,7 +19675,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events22[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events22[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events22[j][k][11] = true ;
-                        this.events22[j][k][12] = this.report[i].users.username;
+                        this.events22[j][k][12] = this.report[i].users.username;if(this.events22[j][k][8].length > 15){
+                     this.events22[j][k][15] = false;
+                  }
 
                          if(this.events22[j][k][2] > 1){
                             this.counting = k + 1;
@@ -18886,7 +19720,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events22[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events22[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events22[j][k][11] = true ;
-                        this.events22[j][k][12] = this.report[i].users.username;
+                        this.events22[j][k][12] = this.report[i].users.username;if(this.events22[j][k][8].length > 15){
+                     this.events22[j][k][15] = false;
+                  }
 
                          if(this.events22[j][k][2] > 1){
                             this.counting = k + 1;
@@ -18929,7 +19765,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events22[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events22[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events22[j][k][11] = true ;
-                        this.events22[j][k][12] = this.report[i].users.username;
+                        this.events22[j][k][12] = this.report[i].users.username;if(this.events22[j][k][8].length > 15){
+                     this.events22[j][k][15] = false;
+                  }
 
                          if(this.events22[j][k][2] > 1){
                             this.counting = k + 1;
@@ -18972,7 +19810,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events22[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events22[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events22[j][k][11] = true ;
-                        this.events22[j][k][12] = this.report[i].users.username;
+                        this.events22[j][k][12] = this.report[i].users.username;if(this.events22[j][k][8].length > 15){
+                     this.events22[j][k][15] = false;
+                  }
 
                          if(this.events22[j][k][2] > 1){
                             this.counting = k + 1;
@@ -19015,7 +19855,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         this.events22[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                         this.events22[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events22[j][k][11] = true ;
-                        this.events22[j][k][12] = this.report[i].users.username;
+                        this.events22[j][k][12] = this.report[i].users.username;if(this.events22[j][k][8].length > 15){
+                     this.events22[j][k][15] = false;
+                  }
 
                          if(this.events22[j][k][2] > 1){
                             this.counting = k + 1;
@@ -19059,7 +19901,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events23[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events23[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events23[j][k][11] = true ;
-                         this.events23[j][k][12] = this.report[i].users.username;
+                         this.events23[j][k][12] = this.report[i].users.username;if(this.events23[j][k][8].length > 15){
+                     this.events23[j][k][15] = false;
+                  }
 
                           if(this.events23[j][k][2] > 1){
                              this.counting = k + 1;
@@ -19102,7 +19946,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events23[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events23[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events23[j][k][11] = true ;
-                         this.events23[j][k][12] = this.report[i].users.username;
+                         this.events23[j][k][12] = this.report[i].users.username;if(this.events23[j][k][8].length > 15){
+                     this.events23[j][k][15] = false;
+                  }
 
                           if(this.events23[j][k][2] > 1){
                              this.counting = k + 1;
@@ -19145,7 +19991,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events23[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events23[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events23[j][k][11] = true ;
-                         this.events23[j][k][12] = this.report[i].users.username;
+                         this.events23[j][k][12] = this.report[i].users.username;if(this.events23[j][k][8].length > 15){
+                     this.events23[j][k][15] = false;
+                  }
 
                           if(this.events23[j][k][2] > 1){
                              this.counting = k + 1;
@@ -19188,7 +20036,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events23[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events23[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events23[j][k][11] = true ;
-                         this.events23[j][k][12] = this.report[i].users.username;
+                         this.events23[j][k][12] = this.report[i].users.username;if(this.events23[j][k][8].length > 15){
+                     this.events23[j][k][15] = false;
+                  }
 
                           if(this.events23[j][k][2] > 1){
                              this.counting = k + 1;
@@ -19231,7 +20081,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events23[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events23[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events23[j][k][11] = true ;
-                         this.events23[j][k][12] = this.report[i].users.username;
+                         this.events23[j][k][12] = this.report[i].users.username;if(this.events23[j][k][8].length > 15){
+                     this.events23[j][k][15] = false;
+                  }
 
                           if(this.events23[j][k][2] > 1){
                              this.counting = k + 1;
@@ -19274,7 +20126,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events23[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events23[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events23[j][k][11] = true ;
-                         this.events23[j][k][12] = this.report[i].users.username;
+                         this.events23[j][k][12] = this.report[i].users.username;if(this.events23[j][k][8].length > 15){
+                     this.events23[j][k][15] = false;
+                  }
 
                           if(this.events23[j][k][2] > 1){
                              this.counting = k + 1;
@@ -19317,7 +20171,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events23[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events23[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events23[j][k][11] = true ;
-                         this.events23[j][k][12] = this.report[i].users.username;
+                         this.events23[j][k][12] = this.report[i].users.username;if(this.events23[j][k][8].length > 15){
+                     this.events23[j][k][15] = false;
+                  }
 
                           if(this.events23[j][k][2] > 1){
                              this.counting = k + 1;
@@ -19360,7 +20216,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events23[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events23[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events23[j][k][11] = true ;
-                         this.events23[j][k][12] = this.report[i].users.username;
+                         this.events23[j][k][12] = this.report[i].users.username;if(this.events23[j][k][8].length > 15){
+                     this.events23[j][k][15] = false;
+                  }
 
                           if(this.events23[j][k][2] > 1){
                              this.counting = k + 1;
@@ -19403,7 +20261,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events23[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events23[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events23[j][k][11] = true ;
-                         this.events23[j][k][12] = this.report[i].users.username;
+                         this.events23[j][k][12] = this.report[i].users.username;if(this.events23[j][k][8].length > 15){
+                     this.events23[j][k][15] = false;
+                  }
 
                           if(this.events23[j][k][2] > 1){
                              this.counting = k + 1;
@@ -19446,7 +20306,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events23[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events23[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events23[j][k][11] = true ;
-                         this.events23[j][k][12] = this.report[i].users.username;
+                         this.events23[j][k][12] = this.report[i].users.username;if(this.events23[j][k][8].length > 15){
+                     this.events23[j][k][15] = false;
+                  }
 
                           if(this.events23[j][k][2] > 1){
                              this.counting = k + 1;
@@ -19489,7 +20351,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events23[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events23[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events23[j][k][11] = true ;
-                         this.events23[j][k][12] = this.report[i].users.username;
+                         this.events23[j][k][12] = this.report[i].users.username;if(this.events23[j][k][8].length > 15){
+                     this.events23[j][k][15] = false;
+                  }
 
                           if(this.events23[j][k][2] > 1){
                              this.counting = k + 1;
@@ -19532,7 +20396,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events23[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events23[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events23[j][k][11] = true ;
-                         this.events23[j][k][12] = this.report[i].users.username;
+                         this.events23[j][k][12] = this.report[i].users.username;if(this.events23[j][k][8].length > 15){
+                     this.events23[j][k][15] = false;
+                  }
 
                           if(this.events23[j][k][2] > 1){
                              this.counting = k + 1;
@@ -19575,7 +20441,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events23[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events23[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events23[j][k][11] = true ;
-                         this.events23[j][k][12] = this.report[i].users.username;
+                         this.events23[j][k][12] = this.report[i].users.username;if(this.events23[j][k][8].length > 15){
+                     this.events23[j][k][15] = false;
+                  }
 
                           if(this.events23[j][k][2] > 1){
                              this.counting = k + 1;
@@ -19618,7 +20486,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events23[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events23[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events23[j][k][11] = true ;
-                         this.events23[j][k][12] = this.report[i].users.username;
+                         this.events23[j][k][12] = this.report[i].users.username;if(this.events23[j][k][8].length > 15){
+                     this.events23[j][k][15] = false;
+                  }
 
                           if(this.events23[j][k][2] > 1){
                              this.counting = k + 1;
@@ -19661,7 +20531,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events23[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events23[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events23[j][k][11] = true ;
-                         this.events23[j][k][12] = this.report[i].users.username;
+                         this.events23[j][k][12] = this.report[i].users.username;if(this.events23[j][k][8].length > 15){
+                     this.events23[j][k][15] = false;
+                  }
 
                           if(this.events23[j][k][2] > 1){
                              this.counting = k + 1;
@@ -19704,7 +20576,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events23[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events23[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events23[j][k][11] = true ;
-                         this.events23[j][k][12] = this.report[i].users.username;
+                         this.events23[j][k][12] = this.report[i].users.username;if(this.events23[j][k][8].length > 15){
+                     this.events23[j][k][15] = false;
+                  }
 
                           if(this.events23[j][k][2] > 1){
                              this.counting = k + 1;
@@ -19747,7 +20621,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events23[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events23[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events23[j][k][11] = true ;
-                         this.events23[j][k][12] = this.report[i].users.username;
+                         this.events23[j][k][12] = this.report[i].users.username;if(this.events23[j][k][8].length > 15){
+                     this.events23[j][k][15] = false;
+                  }
 
                           if(this.events23[j][k][2] > 1){
                              this.counting = k + 1;
@@ -19790,7 +20666,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events23[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events23[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events23[j][k][11] = true ;
-                         this.events23[j][k][12] = this.report[i].users.username;
+                         this.events23[j][k][12] = this.report[i].users.username;if(this.events23[j][k][8].length > 15){
+                     this.events23[j][k][15] = false;
+                  }
 
                           if(this.events23[j][k][2] > 1){
                              this.counting = k + 1;
@@ -19833,7 +20711,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events23[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events23[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events23[j][k][11] = true ;
-                         this.events23[j][k][12] = this.report[i].users.username;
+                         this.events23[j][k][12] = this.report[i].users.username;if(this.events23[j][k][8].length > 15){
+                     this.events23[j][k][15] = false;
+                  }
 
                           if(this.events23[j][k][2] > 1){
                              this.counting = k + 1;
@@ -19878,7 +20758,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events24[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events24[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events24[j][k][11] = true ;
-                         this.events24[j][k][12] = this.report[i].users.username;
+                         this.events24[j][k][12] = this.report[i].users.username;if(this.events24[j][k][8].length > 15){
+                     this.events24[j][k][15] = false;
+                  }
 
                           if(this.events24[j][k][2] > 1){
                              this.counting = k + 1;
@@ -19921,7 +20803,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events24[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events24[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events24[j][k][11] = true ;
-                         this.events24[j][k][12] = this.report[i].users.username;
+                         this.events24[j][k][12] = this.report[i].users.username;if(this.events24[j][k][8].length > 15){
+                     this.events24[j][k][15] = false;
+                  }
 
                           if(this.events24[j][k][2] > 1){
                              this.counting = k + 1;
@@ -19964,7 +20848,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events24[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events24[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events24[j][k][11] = true ;
-                         this.events24[j][k][12] = this.report[i].users.username;
+                         this.events24[j][k][12] = this.report[i].users.username;if(this.events24[j][k][8].length > 15){
+                     this.events24[j][k][15] = false;
+                  }
 
                           if(this.events24[j][k][2] > 1){
                              this.counting = k + 1;
@@ -20007,7 +20893,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events24[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events24[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events24[j][k][11] = true ;
-                         this.events24[j][k][12] = this.report[i].users.username;
+                         this.events24[j][k][12] = this.report[i].users.username;if(this.events24[j][k][8].length > 15){
+                     this.events24[j][k][15] = false;
+                  }
 
                           if(this.events24[j][k][2] > 1){
                              this.counting = k + 1;
@@ -20050,7 +20938,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events24[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events24[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events24[j][k][11] = true ;
-                         this.events24[j][k][12] = this.report[i].users.username;
+                         this.events24[j][k][12] = this.report[i].users.username;if(this.events24[j][k][8].length > 15){
+                     this.events24[j][k][15] = false;
+                  }
 
                           if(this.events24[j][k][2] > 1){
                              this.counting = k + 1;
@@ -20093,7 +20983,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events24[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events24[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events24[j][k][11] = true ;
-                         this.events24[j][k][12] = this.report[i].users.username;
+                         this.events24[j][k][12] = this.report[i].users.username;if(this.events24[j][k][8].length > 15){
+                     this.events24[j][k][15] = false;
+                  }
 
                           if(this.events24[j][k][2] > 1){
                              this.counting = k + 1;
@@ -20136,7 +21028,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events24[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events24[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events24[j][k][11] = true ;
-                         this.events24[j][k][12] = this.report[i].users.username;
+                         this.events24[j][k][12] = this.report[i].users.username;if(this.events24[j][k][8].length > 15){
+                     this.events24[j][k][15] = false;
+                  }
 
                           if(this.events24[j][k][2] > 1){
                              this.counting = k + 1;
@@ -20179,7 +21073,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events24[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events24[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events24[j][k][11] = true ;
-                         this.events24[j][k][12] = this.report[i].users.username;
+                         this.events24[j][k][12] = this.report[i].users.username;if(this.events24[j][k][8].length > 15){
+                     this.events24[j][k][15] = false;
+                  }
 
                           if(this.events24[j][k][2] > 1){
                              this.counting = k + 1;
@@ -20222,7 +21118,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events24[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events24[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events24[j][k][11] = true ;
-                         this.events24[j][k][12] = this.report[i].users.username;
+                         this.events24[j][k][12] = this.report[i].users.username;if(this.events24[j][k][8].length > 15){
+                     this.events24[j][k][15] = false;
+                  }
 
                           if(this.events24[j][k][2] > 1){
                              this.counting = k + 1;
@@ -20265,7 +21163,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events24[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events24[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events24[j][k][11] = true ;
-                         this.events24[j][k][12] = this.report[i].users.username;
+                         this.events24[j][k][12] = this.report[i].users.username;if(this.events24[j][k][8].length > 15){
+                     this.events24[j][k][15] = false;
+                  }
 
                           if(this.events24[j][k][2] > 1){
                              this.counting = k + 1;
@@ -20308,7 +21208,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events24[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events24[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events24[j][k][11] = true ;
-                         this.events24[j][k][12] = this.report[i].users.username;
+                         this.events24[j][k][12] = this.report[i].users.username;if(this.events24[j][k][8].length > 15){
+                     this.events24[j][k][15] = false;
+                  }
 
                           if(this.events24[j][k][2] > 1){
                              this.counting = k + 1;
@@ -20351,7 +21253,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events24[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events24[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events24[j][k][11] = true ;
-                         this.events24[j][k][12] = this.report[i].users.username;
+                         this.events24[j][k][12] = this.report[i].users.username;if(this.events24[j][k][8].length > 15){
+                     this.events24[j][k][15] = false;
+                  }
 
                           if(this.events24[j][k][2] > 1){
                              this.counting = k + 1;
@@ -20394,7 +21298,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events24[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events24[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events24[j][k][11] = true ;
-                         this.events24[j][k][12] = this.report[i].users.username;
+                         this.events24[j][k][12] = this.report[i].users.username;if(this.events24[j][k][8].length > 15){
+                     this.events24[j][k][15] = false;
+                  }
 
                           if(this.events24[j][k][2] > 1){
                              this.counting = k + 1;
@@ -20437,7 +21343,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events24[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events24[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events24[j][k][11] = true ;
-                         this.events24[j][k][12] = this.report[i].users.username;
+                         this.events24[j][k][12] = this.report[i].users.username;if(this.events24[j][k][8].length > 15){
+                     this.events24[j][k][15] = false;
+                  }
 
                           if(this.events24[j][k][2] > 1){
                              this.counting = k + 1;
@@ -20480,7 +21388,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events24[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events24[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events24[j][k][11] = true ;
-                         this.events24[j][k][12] = this.report[i].users.username;
+                         this.events24[j][k][12] = this.report[i].users.username;if(this.events24[j][k][8].length > 15){
+                     this.events24[j][k][15] = false;
+                  }
 
                           if(this.events24[j][k][2] > 1){
                              this.counting = k + 1;
@@ -20523,7 +21433,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events24[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events24[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events24[j][k][11] = true ;
-                         this.events24[j][k][12] = this.report[i].users.username;
+                         this.events24[j][k][12] = this.report[i].users.username;if(this.events24[j][k][8].length > 15){
+                     this.events24[j][k][15] = false;
+                  }
 
                           if(this.events24[j][k][2] > 1){
                              this.counting = k + 1;
@@ -20566,7 +21478,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events24[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events24[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events24[j][k][11] = true ;
-                         this.events24[j][k][12] = this.report[i].users.username;
+                         this.events24[j][k][12] = this.report[i].users.username;if(this.events24[j][k][8].length > 15){
+                     this.events24[j][k][15] = false;
+                  }
 
                           if(this.events24[j][k][2] > 1){
                              this.counting = k + 1;
@@ -20609,7 +21523,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events24[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events24[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events24[j][k][11] = true ;
-                         this.events24[j][k][12] = this.report[i].users.username;
+                         this.events24[j][k][12] = this.report[i].users.username;if(this.events24[j][k][8].length > 15){
+                     this.events24[j][k][15] = false;
+                  }
 
                           if(this.events24[j][k][2] > 1){
                              this.counting = k + 1;
@@ -20652,7 +21568,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events24[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events24[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events24[j][k][11] = true ;
-                         this.events24[j][k][12] = this.report[i].users.username;
+                         this.events24[j][k][12] = this.report[i].users.username;if(this.events24[j][k][8].length > 15){
+                     this.events24[j][k][15] = false;
+                  }
 
                           if(this.events24[j][k][2] > 1){
                              this.counting = k + 1;
@@ -20696,7 +21614,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events25[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events25[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events25[j][k][11] = true ;
-                         this.events25[j][k][12] = this.report[i].users.username;
+                         this.events25[j][k][12] = this.report[i].users.username;if(this.events25[j][k][8].length > 15){
+                     this.events25[j][k][15] = false;
+                  }
 
                           if(this.events25[j][k][2] > 1){
                              this.counting = k + 1;
@@ -20739,7 +21659,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events25[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events25[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events25[j][k][11] = true ;
-                         this.events25[j][k][12] = this.report[i].users.username;
+                         this.events25[j][k][12] = this.report[i].users.username;if(this.events25[j][k][8].length > 15){
+                     this.events25[j][k][15] = false;
+                  }
 
                           if(this.events25[j][k][2] > 1){
                              this.counting = k + 1;
@@ -20782,7 +21704,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events25[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events25[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events25[j][k][11] = true ;
-                         this.events25[j][k][12] = this.report[i].users.username;
+                         this.events25[j][k][12] = this.report[i].users.username;if(this.events25[j][k][8].length > 15){
+                     this.events25[j][k][15] = false;
+                  }
 
                           if(this.events25[j][k][2] > 1){
                              this.counting = k + 1;
@@ -20825,7 +21749,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events25[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events25[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events25[j][k][11] = true ;
-                         this.events25[j][k][12] = this.report[i].users.username;
+                         this.events25[j][k][12] = this.report[i].users.username;if(this.events25[j][k][8].length > 15){
+                     this.events25[j][k][15] = false;
+                  }
 
                           if(this.events25[j][k][2] > 1){
                              this.counting = k + 1;
@@ -20868,7 +21794,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events25[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events25[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events25[j][k][11] = true ;
-                         this.events25[j][k][12] = this.report[i].users.username;
+                         this.events25[j][k][12] = this.report[i].users.username;if(this.events25[j][k][8].length > 15){
+                     this.events25[j][k][15] = false;
+                  }
 
                           if(this.events25[j][k][2] > 1){
                              this.counting = k + 1;
@@ -20911,7 +21839,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events25[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events25[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events25[j][k][11] = true ;
-                         this.events25[j][k][12] = this.report[i].users.username;
+                         this.events25[j][k][12] = this.report[i].users.username;if(this.events25[j][k][8].length > 15){
+                     this.events25[j][k][15] = false;
+                  }
 
                           if(this.events25[j][k][2] > 1){
                              this.counting = k + 1;
@@ -20954,7 +21884,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events25[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events25[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events25[j][k][11] = true ;
-                         this.events25[j][k][12] = this.report[i].users.username;
+                         this.events25[j][k][12] = this.report[i].users.username;if(this.events25[j][k][8].length > 15){
+                     this.events25[j][k][15] = false;
+                  }
 
                           if(this.events25[j][k][2] > 1){
                              this.counting = k + 1;
@@ -20997,7 +21929,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events25[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events25[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events25[j][k][11] = true ;
-                         this.events25[j][k][12] = this.report[i].users.username;
+                         this.events25[j][k][12] = this.report[i].users.username;if(this.events25[j][k][8].length > 15){
+                     this.events25[j][k][15] = false;
+                  }
 
                           if(this.events25[j][k][2] > 1){
                              this.counting = k + 1;
@@ -21040,7 +21974,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events25[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events25[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events25[j][k][11] = true ;
-                         this.events25[j][k][12] = this.report[i].users.username;
+                         this.events25[j][k][12] = this.report[i].users.username;if(this.events25[j][k][8].length > 15){
+                     this.events25[j][k][15] = false;
+                  }
 
                           if(this.events25[j][k][2] > 1){
                              this.counting = k + 1;
@@ -21083,7 +22019,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events25[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events25[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events25[j][k][11] = true ;
-                         this.events25[j][k][12] = this.report[i].users.username;
+                         this.events25[j][k][12] = this.report[i].users.username;if(this.events25[j][k][8].length > 15){
+                     this.events25[j][k][15] = false;
+                  }
 
                           if(this.events25[j][k][2] > 1){
                              this.counting = k + 1;
@@ -21126,7 +22064,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events25[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events25[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events25[j][k][11] = true ;
-                         this.events25[j][k][12] = this.report[i].users.username;
+                         this.events25[j][k][12] = this.report[i].users.username;if(this.events25[j][k][8].length > 15){
+                     this.events25[j][k][15] = false;
+                  }
 
                           if(this.events25[j][k][2] > 1){
                              this.counting = k + 1;
@@ -21169,7 +22109,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events25[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events25[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events25[j][k][11] = true ;
-                         this.events25[j][k][12] = this.report[i].users.username;
+                         this.events25[j][k][12] = this.report[i].users.username;if(this.events25[j][k][8].length > 15){
+                     this.events25[j][k][15] = false;
+                  }
 
                           if(this.events25[j][k][2] > 1){
                              this.counting = k + 1;
@@ -21212,7 +22154,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events25[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events25[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events25[j][k][11] = true ;
-                         this.events25[j][k][12] = this.report[i].users.username;
+                         this.events25[j][k][12] = this.report[i].users.username;if(this.events25[j][k][8].length > 15){
+                     this.events25[j][k][15] = false;
+                  }
 
                           if(this.events25[j][k][2] > 1){
                              this.counting = k + 1;
@@ -21255,7 +22199,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events25[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events25[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events25[j][k][11] = true ;
-                         this.events25[j][k][12] = this.report[i].users.username;
+                         this.events25[j][k][12] = this.report[i].users.username;if(this.events25[j][k][8].length > 15){
+                     this.events25[j][k][15] = false;
+                  }
 
                           if(this.events25[j][k][2] > 1){
                              this.counting = k + 1;
@@ -21298,7 +22244,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events25[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events25[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events25[j][k][11] = true ;
-                         this.events25[j][k][12] = this.report[i].users.username;
+                         this.events25[j][k][12] = this.report[i].users.username;if(this.events25[j][k][8].length > 15){
+                     this.events25[j][k][15] = false;
+                  }
 
                           if(this.events25[j][k][2] > 1){
                              this.counting = k + 1;
@@ -21341,7 +22289,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events25[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events25[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events25[j][k][11] = true ;
-                         this.events25[j][k][12] = this.report[i].users.username;
+                         this.events25[j][k][12] = this.report[i].users.username;if(this.events25[j][k][8].length > 15){
+                     this.events25[j][k][15] = false;
+                  }
 
                           if(this.events25[j][k][2] > 1){
                              this.counting = k + 1;
@@ -21384,7 +22334,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events25[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events25[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events25[j][k][11] = true ;
-                         this.events25[j][k][12] = this.report[i].users.username;
+                         this.events25[j][k][12] = this.report[i].users.username;if(this.events25[j][k][8].length > 15){
+                     this.events25[j][k][15] = false;
+                  }
 
                           if(this.events25[j][k][2] > 1){
                              this.counting = k + 1;
@@ -21427,7 +22379,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events25[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events25[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events25[j][k][11] = true ;
-                         this.events25[j][k][12] = this.report[i].users.username;
+                         this.events25[j][k][12] = this.report[i].users.username;if(this.events25[j][k][8].length > 15){
+                     this.events25[j][k][15] = false;
+                  }
 
                           if(this.events25[j][k][2] > 1){
                              this.counting = k + 1;
@@ -21470,7 +22424,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                          this.events25[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events25[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                          this.events25[j][k][11] = true ;
-                         this.events25[j][k][12] = this.report[i].users.username;
+                         this.events25[j][k][12] = this.report[i].users.username;if(this.events25[j][k][8].length > 15){
+                     this.events25[j][k][15] = false;
+                  }
 
                           if(this.events25[j][k][2] > 1){
                              this.counting = k + 1;
@@ -21514,7 +22470,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           this.events26[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                           this.events26[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                           this.events26[j][k][11] = true ;
-                          this.events26[j][k][12] = this.report[i].users.username;
+                          this.events26[j][k][12] = this.report[i].users.username;if(this.events26[j][k][8].length > 15){
+                     this.events26[j][k][15] = false;
+                  }
 
                            if(this.events26[j][k][2] > 1){
                               this.counting = k + 1;
@@ -21557,7 +22515,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           this.events26[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                           this.events26[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                           this.events26[j][k][11] = true ;
-                          this.events26[j][k][12] = this.report[i].users.username;
+                          this.events26[j][k][12] = this.report[i].users.username;if(this.events26[j][k][8].length > 15){
+                     this.events26[j][k][15] = false;
+                  }
 
                            if(this.events26[j][k][2] > 1){
                               this.counting = k + 1;
@@ -21600,7 +22560,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           this.events26[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                           this.events26[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                           this.events26[j][k][11] = true ;
-                          this.events26[j][k][12] = this.report[i].users.username;
+                          this.events26[j][k][12] = this.report[i].users.username;if(this.events26[j][k][8].length > 15){
+                     this.events26[j][k][15] = false;
+                  }
 
                            if(this.events26[j][k][2] > 1){
                               this.counting = k + 1;
@@ -21643,7 +22605,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           this.events26[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                           this.events26[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                           this.events26[j][k][11] = true ;
-                          this.events26[j][k][12] = this.report[i].users.username;
+                          this.events26[j][k][12] = this.report[i].users.username;if(this.events26[j][k][8].length > 15){
+                     this.events26[j][k][15] = false;
+                  }
 
                            if(this.events26[j][k][2] > 1){
                               this.counting = k + 1;
@@ -21686,7 +22650,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           this.events26[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                           this.events26[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                           this.events26[j][k][11] = true ;
-                          this.events26[j][k][12] = this.report[i].users.username;
+                          this.events26[j][k][12] = this.report[i].users.username;if(this.events26[j][k][8].length > 15){
+                     this.events26[j][k][15] = false;
+                  }
 
                            if(this.events26[j][k][2] > 1){
                               this.counting = k + 1;
@@ -21729,7 +22695,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           this.events26[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                           this.events26[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                           this.events26[j][k][11] = true ;
-                          this.events26[j][k][12] = this.report[i].users.username;
+                          this.events26[j][k][12] = this.report[i].users.username;if(this.events26[j][k][8].length > 15){
+                     this.events26[j][k][15] = false;
+                  }
 
                            if(this.events26[j][k][2] > 1){
                               this.counting = k + 1;
@@ -21772,7 +22740,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           this.events26[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                           this.events26[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                           this.events26[j][k][11] = true ;
-                          this.events26[j][k][12] = this.report[i].users.username;
+                          this.events26[j][k][12] = this.report[i].users.username;if(this.events26[j][k][8].length > 15){
+                     this.events26[j][k][15] = false;
+                  }
 
                            if(this.events26[j][k][2] > 1){
                               this.counting = k + 1;
@@ -21815,7 +22785,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           this.events26[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                           this.events26[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                           this.events26[j][k][11] = true ;
-                          this.events26[j][k][12] = this.report[i].users.username;
+                          this.events26[j][k][12] = this.report[i].users.username;if(this.events26[j][k][8].length > 15){
+                     this.events26[j][k][15] = false;
+                  }
 
                            if(this.events26[j][k][2] > 1){
                               this.counting = k + 1;
@@ -21858,7 +22830,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           this.events26[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                           this.events26[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                           this.events26[j][k][11] = true ;
-                          this.events26[j][k][12] = this.report[i].users.username;
+                          this.events26[j][k][12] = this.report[i].users.username;if(this.events26[j][k][8].length > 15){
+                     this.events26[j][k][15] = false;
+                  }
 
                            if(this.events26[j][k][2] > 1){
                               this.counting = k + 1;
@@ -21901,7 +22875,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           this.events26[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                           this.events26[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                           this.events26[j][k][11] = true ;
-                          this.events26[j][k][12] = this.report[i].users.username;
+                          this.events26[j][k][12] = this.report[i].users.username;if(this.events26[j][k][8].length > 15){
+                     this.events26[j][k][15] = false;
+                  }
 
                            if(this.events26[j][k][2] > 1){
                               this.counting = k + 1;
@@ -21944,7 +22920,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           this.events26[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                           this.events26[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                           this.events26[j][k][11] = true ;
-                          this.events26[j][k][12] = this.report[i].users.username;
+                          this.events26[j][k][12] = this.report[i].users.username;if(this.events26[j][k][8].length > 15){
+                     this.events26[j][k][15] = false;
+                  }
 
                            if(this.events26[j][k][2] > 1){
                               this.counting = k + 1;
@@ -21987,7 +22965,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           this.events26[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                           this.events26[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                           this.events26[j][k][11] = true ;
-                          this.events26[j][k][12] = this.report[i].users.username;
+                          this.events26[j][k][12] = this.report[i].users.username;if(this.events26[j][k][8].length > 15){
+                     this.events26[j][k][15] = false;
+                  }
 
                            if(this.events26[j][k][2] > 1){
                               this.counting = k + 1;
@@ -22030,7 +23010,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           this.events26[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                           this.events26[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                           this.events26[j][k][11] = true ;
-                          this.events26[j][k][12] = this.report[i].users.username;
+                          this.events26[j][k][12] = this.report[i].users.username;if(this.events26[j][k][8].length > 15){
+                     this.events26[j][k][15] = false;
+                  }
 
                            if(this.events26[j][k][2] > 1){
                               this.counting = k + 1;
@@ -22073,7 +23055,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           this.events26[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                           this.events26[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                           this.events26[j][k][11] = true ;
-                          this.events26[j][k][12] = this.report[i].users.username;
+                          this.events26[j][k][12] = this.report[i].users.username;if(this.events26[j][k][8].length > 15){
+                     this.events26[j][k][15] = false;
+                  }
 
                            if(this.events26[j][k][2] > 1){
                               this.counting = k + 1;
@@ -22116,7 +23100,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           this.events26[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                           this.events26[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                           this.events26[j][k][11] = true ;
-                          this.events26[j][k][12] = this.report[i].users.username;
+                          this.events26[j][k][12] = this.report[i].users.username;if(this.events26[j][k][8].length > 15){
+                     this.events26[j][k][15] = false;
+                  }
 
                            if(this.events26[j][k][2] > 1){
                               this.counting = k + 1;
@@ -22159,7 +23145,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           this.events26[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                           this.events26[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                           this.events26[j][k][11] = true ;
-                          this.events26[j][k][12] = this.report[i].users.username;
+                          this.events26[j][k][12] = this.report[i].users.username;if(this.events26[j][k][8].length > 15){
+                     this.events26[j][k][15] = false;
+                  }
 
                            if(this.events26[j][k][2] > 1){
                               this.counting = k + 1;
@@ -22202,7 +23190,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           this.events26[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                           this.events26[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                           this.events26[j][k][11] = true ;
-                          this.events26[j][k][12] = this.report[i].users.username;
+                          this.events26[j][k][12] = this.report[i].users.username;if(this.events26[j][k][8].length > 15){
+                     this.events26[j][k][15] = false;
+                  }
 
                            if(this.events26[j][k][2] > 1){
                               this.counting = k + 1;
@@ -22245,7 +23235,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           this.events26[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                           this.events26[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                           this.events26[j][k][11] = true ;
-                          this.events26[j][k][12] = this.report[i].users.username;
+                          this.events26[j][k][12] = this.report[i].users.username;if(this.events26[j][k][8].length > 15){
+                     this.events26[j][k][15] = false;
+                  }
 
                            if(this.events26[j][k][2] > 1){
                               this.counting = k + 1;
@@ -22288,7 +23280,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                           this.events26[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                           this.events26[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                           this.events26[j][k][11] = true ;
-                          this.events26[j][k][12] = this.report[i].users.username;
+                          this.events26[j][k][12] = this.report[i].users.username;if(this.events26[j][k][8].length > 15){
+                     this.events26[j][k][15] = false;
+                  }
 
                            if(this.events26[j][k][2] > 1){
                               this.counting = k + 1;
@@ -22332,7 +23326,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events27[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events27[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events27[j][k][11] = true ;
-                           this.events27[j][k][12] = this.report[i].users.username;
+                           this.events27[j][k][12] = this.report[i].users.username;if(this.events27[j][k][8].length > 15){
+                     this.events27[j][k][15] = false;
+                  }
 
                             if(this.events27[j][k][2] > 1){
                                this.counting = k + 1;
@@ -22375,7 +23371,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events27[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events27[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events27[j][k][11] = true ;
-                           this.events27[j][k][12] = this.report[i].users.username;
+                           this.events27[j][k][12] = this.report[i].users.username;if(this.events27[j][k][8].length > 15){
+                     this.events27[j][k][15] = false;
+                  }
 
                             if(this.events27[j][k][2] > 1){
                                this.counting = k + 1;
@@ -22418,7 +23416,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events27[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events27[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events27[j][k][11] = true ;
-                           this.events27[j][k][12] = this.report[i].users.username;
+                           this.events27[j][k][12] = this.report[i].users.username;if(this.events27[j][k][8].length > 15){
+                     this.events27[j][k][15] = false;
+                  }
 
                             if(this.events27[j][k][2] > 1){
                                this.counting = k + 1;
@@ -22461,7 +23461,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events27[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events27[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events27[j][k][11] = true ;
-                           this.events27[j][k][12] = this.report[i].users.username;
+                           this.events27[j][k][12] = this.report[i].users.username;if(this.events27[j][k][8].length > 15){
+                     this.events27[j][k][15] = false;
+                  }
 
                             if(this.events27[j][k][2] > 1){
                                this.counting = k + 1;
@@ -22504,7 +23506,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events27[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events27[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events27[j][k][11] = true ;
-                           this.events27[j][k][12] = this.report[i].users.username;
+                           this.events27[j][k][12] = this.report[i].users.username;if(this.events27[j][k][8].length > 15){
+                     this.events27[j][k][15] = false;
+                  }
 
                             if(this.events27[j][k][2] > 1){
                                this.counting = k + 1;
@@ -22547,7 +23551,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events27[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events27[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events27[j][k][11] = true ;
-                           this.events27[j][k][12] = this.report[i].users.username;
+                           this.events27[j][k][12] = this.report[i].users.username;if(this.events27[j][k][8].length > 15){
+                     this.events27[j][k][15] = false;
+                  }
 
                             if(this.events27[j][k][2] > 1){
                                this.counting = k + 1;
@@ -22590,7 +23596,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events27[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events27[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events27[j][k][11] = true ;
-                           this.events27[j][k][12] = this.report[i].users.username;
+                           this.events27[j][k][12] = this.report[i].users.username;if(this.events27[j][k][8].length > 15){
+                     this.events27[j][k][15] = false;
+                  }
 
                             if(this.events27[j][k][2] > 1){
                                this.counting = k + 1;
@@ -22633,7 +23641,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events27[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events27[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events27[j][k][11] = true ;
-                           this.events27[j][k][12] = this.report[i].users.username;
+                           this.events27[j][k][12] = this.report[i].users.username;if(this.events27[j][k][8].length > 15){
+                     this.events27[j][k][15] = false;
+                  }
 
                             if(this.events27[j][k][2] > 1){
                                this.counting = k + 1;
@@ -22676,7 +23686,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events27[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events27[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events27[j][k][11] = true ;
-                           this.events27[j][k][12] = this.report[i].users.username;
+                           this.events27[j][k][12] = this.report[i].users.username;if(this.events27[j][k][8].length > 15){
+                     this.events27[j][k][15] = false;
+                  }
 
                             if(this.events27[j][k][2] > 1){
                                this.counting = k + 1;
@@ -22719,7 +23731,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events27[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events27[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events27[j][k][11] = true ;
-                           this.events27[j][k][12] = this.report[i].users.username;
+                           this.events27[j][k][12] = this.report[i].users.username;if(this.events27[j][k][8].length > 15){
+                     this.events27[j][k][15] = false;
+                  }
 
                             if(this.events27[j][k][2] > 1){
                                this.counting = k + 1;
@@ -22762,7 +23776,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events27[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events27[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events27[j][k][11] = true ;
-                           this.events27[j][k][12] = this.report[i].users.username;
+                           this.events27[j][k][12] = this.report[i].users.username;if(this.events27[j][k][8].length > 15){
+                     this.events27[j][k][15] = false;
+                  }
 
                             if(this.events27[j][k][2] > 1){
                                this.counting = k + 1;
@@ -22805,7 +23821,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events27[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events27[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events27[j][k][11] = true ;
-                           this.events27[j][k][12] = this.report[i].users.username;
+                           this.events27[j][k][12] = this.report[i].users.username;if(this.events27[j][k][8].length > 15){
+                     this.events27[j][k][15] = false;
+                  }
 
                             if(this.events27[j][k][2] > 1){
                                this.counting = k + 1;
@@ -22848,7 +23866,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events27[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events27[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events27[j][k][11] = true ;
-                           this.events27[j][k][12] = this.report[i].users.username;
+                           this.events27[j][k][12] = this.report[i].users.username;if(this.events27[j][k][8].length > 15){
+                     this.events27[j][k][15] = false;
+                  }
 
                             if(this.events27[j][k][2] > 1){
                                this.counting = k + 1;
@@ -22891,7 +23911,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events27[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events27[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events27[j][k][11] = true ;
-                           this.events27[j][k][12] = this.report[i].users.username;
+                           this.events27[j][k][12] = this.report[i].users.username;if(this.events27[j][k][8].length > 15){
+                     this.events27[j][k][15] = false;
+                  }
 
                             if(this.events27[j][k][2] > 1){
                                this.counting = k + 1;
@@ -22934,7 +23956,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events27[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events27[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events27[j][k][11] = true ;
-                           this.events27[j][k][12] = this.report[i].users.username;
+                           this.events27[j][k][12] = this.report[i].users.username;if(this.events27[j][k][8].length > 15){
+                     this.events27[j][k][15] = false;
+                  }
 
                             if(this.events27[j][k][2] > 1){
                                this.counting = k + 1;
@@ -22977,7 +24001,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events27[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events27[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events27[j][k][11] = true ;
-                           this.events27[j][k][12] = this.report[i].users.username;
+                           this.events27[j][k][12] = this.report[i].users.username;if(this.events27[j][k][8].length > 15){
+                     this.events27[j][k][15] = false;
+                  }
 
                             if(this.events27[j][k][2] > 1){
                                this.counting = k + 1;
@@ -23020,7 +24046,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events27[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events27[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events27[j][k][11] = true ;
-                           this.events27[j][k][12] = this.report[i].users.username;
+                           this.events27[j][k][12] = this.report[i].users.username;if(this.events27[j][k][8].length > 15){
+                     this.events27[j][k][15] = false;
+                  }
 
                             if(this.events27[j][k][2] > 1){
                                this.counting = k + 1;
@@ -23063,7 +24091,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events27[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events27[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events27[j][k][11] = true ;
-                           this.events27[j][k][12] = this.report[i].users.username;
+                           this.events27[j][k][12] = this.report[i].users.username;if(this.events27[j][k][8].length > 15){
+                     this.events27[j][k][15] = false;
+                  }
 
                             if(this.events27[j][k][2] > 1){
                                this.counting = k + 1;
@@ -23106,7 +24136,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events27[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events27[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events27[j][k][11] = true ;
-                           this.events27[j][k][12] = this.report[i].users.username;
+                           this.events27[j][k][12] = this.report[i].users.username;if(this.events27[j][k][8].length > 15){
+                     this.events27[j][k][15] = false;
+                  }
 
                             if(this.events27[j][k][2] > 1){
                                this.counting = k + 1;
@@ -23151,7 +24183,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events28[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events28[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events28[j][k][11] = true ;
-                           this.events28[j][k][12] = this.report[i].users.username;
+                           this.events28[j][k][12] = this.report[i].users.username;if(this.events28[j][k][8].length > 15){
+                     this.events28[j][k][15] = false;
+                  }
 
                             if(this.events28[j][k][2] > 1){
                                this.counting = k + 1;
@@ -23194,7 +24228,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events28[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events28[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events28[j][k][11] = true ;
-                           this.events28[j][k][12] = this.report[i].users.username;
+                           this.events28[j][k][12] = this.report[i].users.username;if(this.events28[j][k][8].length > 15){
+                     this.events28[j][k][15] = false;
+                  }
 
                             if(this.events28[j][k][2] > 1){
                                this.counting = k + 1;
@@ -23237,7 +24273,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events28[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events28[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events28[j][k][11] = true ;
-                           this.events28[j][k][12] = this.report[i].users.username;
+                           this.events28[j][k][12] = this.report[i].users.username;if(this.events28[j][k][8].length > 15){
+                     this.events28[j][k][15] = false;
+                  }
 
                             if(this.events28[j][k][2] > 1){
                                this.counting = k + 1;
@@ -23280,7 +24318,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events28[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events28[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events28[j][k][11] = true ;
-                           this.events28[j][k][12] = this.report[i].users.username;
+                           this.events28[j][k][12] = this.report[i].users.username;if(this.events28[j][k][8].length > 15){
+                     this.events28[j][k][15] = false;
+                  }
 
                             if(this.events28[j][k][2] > 1){
                                this.counting = k + 1;
@@ -23323,7 +24363,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events28[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events28[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events28[j][k][11] = true ;
-                           this.events28[j][k][12] = this.report[i].users.username;
+                           this.events28[j][k][12] = this.report[i].users.username;if(this.events28[j][k][8].length > 15){
+                     this.events28[j][k][15] = false;
+                  }
 
                             if(this.events28[j][k][2] > 1){
                                this.counting = k + 1;
@@ -23366,7 +24408,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events28[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events28[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events28[j][k][11] = true ;
-                           this.events28[j][k][12] = this.report[i].users.username;
+                           this.events28[j][k][12] = this.report[i].users.username;if(this.events28[j][k][8].length > 15){
+                     this.events28[j][k][15] = false;
+                  }
 
                             if(this.events28[j][k][2] > 1){
                                this.counting = k + 1;
@@ -23409,7 +24453,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events28[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events28[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events28[j][k][11] = true ;
-                           this.events28[j][k][12] = this.report[i].users.username;
+                           this.events28[j][k][12] = this.report[i].users.username;if(this.events28[j][k][8].length > 15){
+                     this.events28[j][k][15] = false;
+                  }
 
                             if(this.events28[j][k][2] > 1){
                                this.counting = k + 1;
@@ -23452,7 +24498,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events28[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events28[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events28[j][k][11] = true ;
-                           this.events28[j][k][12] = this.report[i].users.username;
+                           this.events28[j][k][12] = this.report[i].users.username;if(this.events28[j][k][8].length > 15){
+                     this.events28[j][k][15] = false;
+                  }
 
                             if(this.events28[j][k][2] > 1){
                                this.counting = k + 1;
@@ -23495,7 +24543,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events28[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events28[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events28[j][k][11] = true ;
-                           this.events28[j][k][12] = this.report[i].users.username;
+                           this.events28[j][k][12] = this.report[i].users.username;if(this.events28[j][k][8].length > 15){
+                     this.events28[j][k][15] = false;
+                  }
 
                             if(this.events28[j][k][2] > 1){
                                this.counting = k + 1;
@@ -23538,7 +24588,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events28[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events28[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events28[j][k][11] = true ;
-                           this.events28[j][k][12] = this.report[i].users.username;
+                           this.events28[j][k][12] = this.report[i].users.username;if(this.events28[j][k][8].length > 15){
+                     this.events28[j][k][15] = false;
+                  }
 
                             if(this.events28[j][k][2] > 1){
                                this.counting = k + 1;
@@ -23581,7 +24633,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events28[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events28[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events28[j][k][11] = true ;
-                           this.events28[j][k][12] = this.report[i].users.username;
+                           this.events28[j][k][12] = this.report[i].users.username;if(this.events28[j][k][8].length > 15){
+                     this.events28[j][k][15] = false;
+                  }
 
                             if(this.events28[j][k][2] > 1){
                                this.counting = k + 1;
@@ -23624,7 +24678,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events28[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events28[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events28[j][k][11] = true ;
-                           this.events28[j][k][12] = this.report[i].users.username;
+                           this.events28[j][k][12] = this.report[i].users.username;if(this.events28[j][k][8].length > 15){
+                     this.events28[j][k][15] = false;
+                  }
 
                             if(this.events28[j][k][2] > 1){
                                this.counting = k + 1;
@@ -23667,7 +24723,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events28[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events28[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events28[j][k][11] = true ;
-                           this.events28[j][k][12] = this.report[i].users.username;
+                           this.events28[j][k][12] = this.report[i].users.username;if(this.events28[j][k][8].length > 15){
+                     this.events28[j][k][15] = false;
+                  }
 
                             if(this.events28[j][k][2] > 1){
                                this.counting = k + 1;
@@ -23710,7 +24768,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events28[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events28[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events28[j][k][11] = true ;
-                           this.events28[j][k][12] = this.report[i].users.username;
+                           this.events28[j][k][12] = this.report[i].users.username;if(this.events28[j][k][8].length > 15){
+                     this.events28[j][k][15] = false;
+                  }
 
                             if(this.events28[j][k][2] > 1){
                                this.counting = k + 1;
@@ -23753,7 +24813,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events28[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events28[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events28[j][k][11] = true ;
-                           this.events28[j][k][12] = this.report[i].users.username;
+                           this.events28[j][k][12] = this.report[i].users.username;if(this.events28[j][k][8].length > 15){
+                     this.events28[j][k][15] = false;
+                  }
 
                             if(this.events28[j][k][2] > 1){
                                this.counting = k + 1;
@@ -23796,7 +24858,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events28[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events28[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events28[j][k][11] = true ;
-                           this.events28[j][k][12] = this.report[i].users.username;
+                           this.events28[j][k][12] = this.report[i].users.username;if(this.events28[j][k][8].length > 15){
+                     this.events28[j][k][15] = false;
+                  }
 
                             if(this.events28[j][k][2] > 1){
                                this.counting = k + 1;
@@ -23839,7 +24903,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events28[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events28[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events28[j][k][11] = true ;
-                           this.events28[j][k][12] = this.report[i].users.username;
+                           this.events28[j][k][12] = this.report[i].users.username;if(this.events28[j][k][8].length > 15){
+                     this.events28[j][k][15] = false;
+                  }
 
                             if(this.events28[j][k][2] > 1){
                                this.counting = k + 1;
@@ -23882,7 +24948,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events28[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events28[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events28[j][k][11] = true ;
-                           this.events28[j][k][12] = this.report[i].users.username;
+                           this.events28[j][k][12] = this.report[i].users.username;if(this.events28[j][k][8].length > 15){
+                     this.events28[j][k][15] = false;
+                  }
 
                             if(this.events28[j][k][2] > 1){
                                this.counting = k + 1;
@@ -23925,7 +24993,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events28[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events28[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events28[j][k][11] = true ;
-                           this.events28[j][k][12] = this.report[i].users.username;
+                           this.events28[j][k][12] = this.report[i].users.username;if(this.events28[j][k][8].length > 15){
+                     this.events28[j][k][15] = false;
+                  }
 
                             if(this.events28[j][k][2] > 1){
                                this.counting = k + 1;
@@ -23970,7 +25040,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events29[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events29[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events29[j][k][11] = true ;
-                           this.events29[j][k][12] = this.report[i].users.username;
+                           this.events29[j][k][12] = this.report[i].users.username;if(this.events29[j][k][8].length > 15){
+                     this.events29[j][k][15] = false;
+                  }
 
                             if(this.events29[j][k][2] > 1){
                                this.counting = k + 1;
@@ -24013,7 +25085,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events29[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events29[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events29[j][k][11] = true ;
-                           this.events29[j][k][12] = this.report[i].users.username;
+                           this.events29[j][k][12] = this.report[i].users.username;if(this.events29[j][k][8].length > 15){
+                     this.events29[j][k][15] = false;
+                  }
 
                             if(this.events29[j][k][2] > 1){
                                this.counting = k + 1;
@@ -24056,7 +25130,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events29[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events29[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events29[j][k][11] = true ;
-                           this.events29[j][k][12] = this.report[i].users.username;
+                           this.events29[j][k][12] = this.report[i].users.username;if(this.events29[j][k][8].length > 15){
+                     this.events29[j][k][15] = false;
+                  }
 
                             if(this.events29[j][k][2] > 1){
                                this.counting = k + 1;
@@ -24099,7 +25175,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events29[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events29[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events29[j][k][11] = true ;
-                           this.events29[j][k][12] = this.report[i].users.username;
+                           this.events29[j][k][12] = this.report[i].users.username;if(this.events29[j][k][8].length > 15){
+                     this.events29[j][k][15] = false;
+                  }
 
                             if(this.events29[j][k][2] > 1){
                                this.counting = k + 1;
@@ -24142,7 +25220,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events29[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events29[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events29[j][k][11] = true ;
-                           this.events29[j][k][12] = this.report[i].users.username;
+                           this.events29[j][k][12] = this.report[i].users.username;if(this.events29[j][k][8].length > 15){
+                     this.events29[j][k][15] = false;
+                  }
 
                             if(this.events29[j][k][2] > 1){
                                this.counting = k + 1;
@@ -24185,7 +25265,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events29[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events29[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events29[j][k][11] = true ;
-                           this.events29[j][k][12] = this.report[i].users.username;
+                           this.events29[j][k][12] = this.report[i].users.username;if(this.events29[j][k][8].length > 15){
+                     this.events29[j][k][15] = false;
+                  }
 
                             if(this.events29[j][k][2] > 1){
                                this.counting = k + 1;
@@ -24228,7 +25310,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events29[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events29[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events29[j][k][11] = true ;
-                           this.events29[j][k][12] = this.report[i].users.username;
+                           this.events29[j][k][12] = this.report[i].users.username;if(this.events29[j][k][8].length > 15){
+                     this.events29[j][k][15] = false;
+                  }
 
                             if(this.events29[j][k][2] > 1){
                                this.counting = k + 1;
@@ -24271,7 +25355,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events29[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events29[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events29[j][k][11] = true ;
-                           this.events29[j][k][12] = this.report[i].users.username;
+                           this.events29[j][k][12] = this.report[i].users.username;if(this.events29[j][k][8].length > 15){
+                     this.events29[j][k][15] = false;
+                  }
 
                             if(this.events29[j][k][2] > 1){
                                this.counting = k + 1;
@@ -24314,7 +25400,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events29[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events29[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events29[j][k][11] = true ;
-                           this.events29[j][k][12] = this.report[i].users.username;
+                           this.events29[j][k][12] = this.report[i].users.username;if(this.events29[j][k][8].length > 15){
+                     this.events29[j][k][15] = false;
+                  }
 
                             if(this.events29[j][k][2] > 1){
                                this.counting = k + 1;
@@ -24357,7 +25445,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events29[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events29[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events29[j][k][11] = true ;
-                           this.events29[j][k][12] = this.report[i].users.username;
+                           this.events29[j][k][12] = this.report[i].users.username;if(this.events29[j][k][8].length > 15){
+                     this.events29[j][k][15] = false;
+                  }
 
                             if(this.events29[j][k][2] > 1){
                                this.counting = k + 1;
@@ -24400,7 +25490,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events29[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events29[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events29[j][k][11] = true ;
-                           this.events29[j][k][12] = this.report[i].users.username;
+                           this.events29[j][k][12] = this.report[i].users.username;if(this.events29[j][k][8].length > 15){
+                     this.events29[j][k][15] = false;
+                  }
 
                             if(this.events29[j][k][2] > 1){
                                this.counting = k + 1;
@@ -24443,7 +25535,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events29[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events29[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events29[j][k][11] = true ;
-                           this.events29[j][k][12] = this.report[i].users.username;
+                           this.events29[j][k][12] = this.report[i].users.username;if(this.events29[j][k][8].length > 15){
+                     this.events29[j][k][15] = false;
+                  }
 
                             if(this.events29[j][k][2] > 1){
                                this.counting = k + 1;
@@ -24486,7 +25580,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events29[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events29[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events29[j][k][11] = true ;
-                           this.events29[j][k][12] = this.report[i].users.username;
+                           this.events29[j][k][12] = this.report[i].users.username;if(this.events29[j][k][8].length > 15){
+                     this.events29[j][k][15] = false;
+                  }
 
                             if(this.events29[j][k][2] > 1){
                                this.counting = k + 1;
@@ -24529,7 +25625,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events29[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events29[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events29[j][k][11] = true ;
-                           this.events29[j][k][12] = this.report[i].users.username;
+                           this.events29[j][k][12] = this.report[i].users.username;if(this.events29[j][k][8].length > 15){
+                     this.events29[j][k][15] = false;
+                  }
 
                             if(this.events29[j][k][2] > 1){
                                this.counting = k + 1;
@@ -24572,7 +25670,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events29[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events29[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events29[j][k][11] = true ;
-                           this.events29[j][k][12] = this.report[i].users.username;
+                           this.events29[j][k][12] = this.report[i].users.username;if(this.events29[j][k][8].length > 15){
+                     this.events29[j][k][15] = false;
+                  }
 
                             if(this.events29[j][k][2] > 1){
                                this.counting = k + 1;
@@ -24615,7 +25715,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events29[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events29[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events29[j][k][11] = true ;
-                           this.events29[j][k][12] = this.report[i].users.username;
+                           this.events29[j][k][12] = this.report[i].users.username;if(this.events29[j][k][8].length > 15){
+                     this.events29[j][k][15] = false;
+                  }
 
                             if(this.events29[j][k][2] > 1){
                                this.counting = k + 1;
@@ -24658,7 +25760,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events29[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events29[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events29[j][k][11] = true ;
-                           this.events29[j][k][12] = this.report[i].users.username;
+                           this.events29[j][k][12] = this.report[i].users.username;if(this.events29[j][k][8].length > 15){
+                     this.events29[j][k][15] = false;
+                  }
 
                             if(this.events29[j][k][2] > 1){
                                this.counting = k + 1;
@@ -24701,7 +25805,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events29[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events29[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events29[j][k][11] = true ;
-                           this.events29[j][k][12] = this.report[i].users.username;
+                           this.events29[j][k][12] = this.report[i].users.username;if(this.events29[j][k][8].length > 15){
+                     this.events29[j][k][15] = false;
+                  }
 
                             if(this.events29[j][k][2] > 1){
                                this.counting = k + 1;
@@ -24744,7 +25850,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events29[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events29[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events29[j][k][11] = true ;
-                           this.events29[j][k][12] = this.report[i].users.username;
+                           this.events29[j][k][12] = this.report[i].users.username;if(this.events29[j][k][8].length > 15){
+                     this.events29[j][k][15] = false;
+                  }
 
                             if(this.events29[j][k][2] > 1){
                                this.counting = k + 1;
@@ -24788,7 +25896,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events30[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events30[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events30[j][k][11] = true ;
-                           this.events30[j][k][12] = this.report[i].users.username;
+                           this.events30[j][k][12] = this.report[i].users.username;if(this.events30[j][k][8].length > 15){
+                     this.events30[j][k][15] = false;
+                  }
 
                             if(this.events30[j][k][2] > 1){
                                this.counting = k + 1;
@@ -24831,7 +25941,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events30[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events30[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events30[j][k][11] = true ;
-                           this.events30[j][k][12] = this.report[i].users.username;
+                           this.events30[j][k][12] = this.report[i].users.username;if(this.events30[j][k][8].length > 15){
+                     this.events30[j][k][15] = false;
+                  }
 
                             if(this.events30[j][k][2] > 1){
                                this.counting = k + 1;
@@ -24874,7 +25986,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events30[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events30[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events30[j][k][11] = true ;
-                           this.events30[j][k][12] = this.report[i].users.username;
+                           this.events30[j][k][12] = this.report[i].users.username;if(this.events30[j][k][8].length > 15){
+                     this.events30[j][k][15] = false;
+                  }
 
                             if(this.events30[j][k][2] > 1){
                                this.counting = k + 1;
@@ -24917,7 +26031,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events30[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events30[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events30[j][k][11] = true ;
-                           this.events30[j][k][12] = this.report[i].users.username;
+                           this.events30[j][k][12] = this.report[i].users.username;if(this.events30[j][k][8].length > 15){
+                     this.events30[j][k][15] = false;
+                  }
 
                             if(this.events30[j][k][2] > 1){
                                this.counting = k + 1;
@@ -24960,7 +26076,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events30[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events30[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events30[j][k][11] = true ;
-                           this.events30[j][k][12] = this.report[i].users.username;
+                           this.events30[j][k][12] = this.report[i].users.username;if(this.events30[j][k][8].length > 15){
+                     this.events30[j][k][15] = false;
+                  }
 
                             if(this.events30[j][k][2] > 1){
                                this.counting = k + 1;
@@ -25003,7 +26121,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events30[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events30[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events30[j][k][11] = true ;
-                           this.events30[j][k][12] = this.report[i].users.username;
+                           this.events30[j][k][12] = this.report[i].users.username;if(this.events30[j][k][8].length > 15){
+                     this.events30[j][k][15] = false;
+                  }
 
                             if(this.events30[j][k][2] > 1){
                                this.counting = k + 1;
@@ -25046,7 +26166,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events30[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events30[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events30[j][k][11] = true ;
-                           this.events30[j][k][12] = this.report[i].users.username;
+                           this.events30[j][k][12] = this.report[i].users.username;if(this.events30[j][k][8].length > 15){
+                     this.events30[j][k][15] = false;
+                  }
 
                             if(this.events30[j][k][2] > 1){
                                this.counting = k + 1;
@@ -25089,7 +26211,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events30[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events30[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events30[j][k][11] = true ;
-                           this.events30[j][k][12] = this.report[i].users.username;
+                           this.events30[j][k][12] = this.report[i].users.username;if(this.events30[j][k][8].length > 15){
+                     this.events30[j][k][15] = false;
+                  }
 
                             if(this.events30[j][k][2] > 1){
                                this.counting = k + 1;
@@ -25132,7 +26256,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events30[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events30[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events30[j][k][11] = true ;
-                           this.events30[j][k][12] = this.report[i].users.username;
+                           this.events30[j][k][12] = this.report[i].users.username;if(this.events30[j][k][8].length > 15){
+                     this.events30[j][k][15] = false;
+                  }
 
                             if(this.events30[j][k][2] > 1){
                                this.counting = k + 1;
@@ -25175,7 +26301,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events30[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events30[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events30[j][k][11] = true ;
-                           this.events30[j][k][12] = this.report[i].users.username;
+                           this.events30[j][k][12] = this.report[i].users.username;if(this.events30[j][k][8].length > 15){
+                     this.events30[j][k][15] = false;
+                  }
 
                             if(this.events30[j][k][2] > 1){
                                this.counting = k + 1;
@@ -25218,7 +26346,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events30[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events30[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events30[j][k][11] = true ;
-                           this.events30[j][k][12] = this.report[i].users.username;
+                           this.events30[j][k][12] = this.report[i].users.username;if(this.events30[j][k][8].length > 15){
+                     this.events30[j][k][15] = false;
+                  }
 
                             if(this.events30[j][k][2] > 1){
                                this.counting = k + 1;
@@ -25261,7 +26391,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events30[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events30[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events30[j][k][11] = true ;
-                           this.events30[j][k][12] = this.report[i].users.username;
+                           this.events30[j][k][12] = this.report[i].users.username;if(this.events30[j][k][8].length > 15){
+                     this.events30[j][k][15] = false;
+                  }
 
                             if(this.events30[j][k][2] > 1){
                                this.counting = k + 1;
@@ -25304,7 +26436,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events30[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events30[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events30[j][k][11] = true ;
-                           this.events30[j][k][12] = this.report[i].users.username;
+                           this.events30[j][k][12] = this.report[i].users.username;if(this.events30[j][k][8].length > 15){
+                     this.events30[j][k][15] = false;
+                  }
 
                             if(this.events30[j][k][2] > 1){
                                this.counting = k + 1;
@@ -25347,7 +26481,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events30[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events30[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events30[j][k][11] = true ;
-                           this.events30[j][k][12] = this.report[i].users.username;
+                           this.events30[j][k][12] = this.report[i].users.username;if(this.events30[j][k][8].length > 15){
+                     this.events30[j][k][15] = false;
+                  }
 
                             if(this.events30[j][k][2] > 1){
                                this.counting = k + 1;
@@ -25390,7 +26526,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events30[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events30[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events30[j][k][11] = true ;
-                           this.events30[j][k][12] = this.report[i].users.username;
+                           this.events30[j][k][12] = this.report[i].users.username;if(this.events30[j][k][8].length > 15){
+                     this.events30[j][k][15] = false;
+                  }
 
                             if(this.events30[j][k][2] > 1){
                                this.counting = k + 1;
@@ -25433,7 +26571,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events30[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events30[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events30[j][k][11] = true ;
-                           this.events30[j][k][12] = this.report[i].users.username;
+                           this.events30[j][k][12] = this.report[i].users.username;if(this.events30[j][k][8].length > 15){
+                     this.events30[j][k][15] = false;
+                  }
 
                             if(this.events30[j][k][2] > 1){
                                this.counting = k + 1;
@@ -25476,7 +26616,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events30[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events30[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events30[j][k][11] = true ;
-                           this.events30[j][k][12] = this.report[i].users.username;
+                           this.events30[j][k][12] = this.report[i].users.username;if(this.events30[j][k][8].length > 15){
+                     this.events30[j][k][15] = false;
+                  }
 
                             if(this.events30[j][k][2] > 1){
                                this.counting = k + 1;
@@ -25519,7 +26661,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events30[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events30[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events30[j][k][11] = true ;
-                           this.events30[j][k][12] = this.report[i].users.username;
+                           this.events30[j][k][12] = this.report[i].users.username;if(this.events30[j][k][8].length > 15){
+                     this.events30[j][k][15] = false;
+                  }
 
                             if(this.events30[j][k][2] > 1){
                                this.counting = k + 1;
@@ -25562,7 +26706,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                            this.events30[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                            this.events30[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                            this.events30[j][k][11] = true ;
-                           this.events30[j][k][12] = this.report[i].users.username;
+                           this.events30[j][k][12] = this.report[i].users.username;if(this.events30[j][k][8].length > 15){
+                     this.events30[j][k][15] = false;
+                  }
 
                             if(this.events30[j][k][2] > 1){
                                this.counting = k + 1;
@@ -25606,7 +26752,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             this.events31[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                             this.events31[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                             this.events31[j][k][11] = true ;
-                            this.events31[j][k][12] = this.report[i].users.username;
+                            this.events31[j][k][12] = this.report[i].users.username;if(this.events31[j][k][8].length > 15){
+                     this.events31[j][k][15] = false;
+                  }
 
                              if(this.events31[j][k][2] > 1){
                                 this.counting = k + 1;
@@ -25649,7 +26797,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             this.events31[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                             this.events31[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                             this.events31[j][k][11] = true ;
-                            this.events31[j][k][12] = this.report[i].users.username;
+                            this.events31[j][k][12] = this.report[i].users.username;if(this.events31[j][k][8].length > 15){
+                     this.events31[j][k][15] = false;
+                  }
 
                              if(this.events31[j][k][2] > 1){
                                 this.counting = k + 1;
@@ -25692,7 +26842,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             this.events31[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                             this.events31[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                             this.events31[j][k][11] = true ;
-                            this.events31[j][k][12] = this.report[i].users.username;
+                            this.events31[j][k][12] = this.report[i].users.username;if(this.events31[j][k][8].length > 15){
+                     this.events31[j][k][15] = false;
+                  }
 
                              if(this.events31[j][k][2] > 1){
                                 this.counting = k + 1;
@@ -25735,7 +26887,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             this.events31[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                             this.events31[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                             this.events31[j][k][11] = true ;
-                            this.events31[j][k][12] = this.report[i].users.username;
+                            this.events31[j][k][12] = this.report[i].users.username;if(this.events31[j][k][8].length > 15){
+                     this.events31[j][k][15] = false;
+                  }
 
                              if(this.events31[j][k][2] > 1){
                                 this.counting = k + 1;
@@ -25778,7 +26932,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             this.events31[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                             this.events31[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                             this.events31[j][k][11] = true ;
-                            this.events31[j][k][12] = this.report[i].users.username;
+                            this.events31[j][k][12] = this.report[i].users.username;if(this.events31[j][k][8].length > 15){
+                     this.events31[j][k][15] = false;
+                  }
 
                              if(this.events31[j][k][2] > 1){
                                 this.counting = k + 1;
@@ -25821,7 +26977,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             this.events31[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                             this.events31[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                             this.events31[j][k][11] = true ;
-                            this.events31[j][k][12] = this.report[i].users.username;
+                            this.events31[j][k][12] = this.report[i].users.username;if(this.events31[j][k][8].length > 15){
+                     this.events31[j][k][15] = false;
+                  }
 
                              if(this.events31[j][k][2] > 1){
                                 this.counting = k + 1;
@@ -25864,7 +27022,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             this.events31[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                             this.events31[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                             this.events31[j][k][11] = true ;
-                            this.events31[j][k][12] = this.report[i].users.username;
+                            this.events31[j][k][12] = this.report[i].users.username;if(this.events31[j][k][8].length > 15){
+                     this.events31[j][k][15] = false;
+                  }
 
                              if(this.events31[j][k][2] > 1){
                                 this.counting = k + 1;
@@ -25907,7 +27067,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             this.events31[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                             this.events31[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                             this.events31[j][k][11] = true ;
-                            this.events31[j][k][12] = this.report[i].users.username;
+                            this.events31[j][k][12] = this.report[i].users.username;if(this.events31[j][k][8].length > 15){
+                     this.events31[j][k][15] = false;
+                  }
 
                              if(this.events31[j][k][2] > 1){
                                 this.counting = k + 1;
@@ -25950,7 +27112,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             this.events31[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                             this.events31[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                             this.events31[j][k][11] = true ;
-                            this.events31[j][k][12] = this.report[i].users.username;
+                            this.events31[j][k][12] = this.report[i].users.username;if(this.events31[j][k][8].length > 15){
+                     this.events31[j][k][15] = false;
+                  }
 
                              if(this.events31[j][k][2] > 1){
                                 this.counting = k + 1;
@@ -25993,7 +27157,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             this.events31[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                             this.events31[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                             this.events31[j][k][11] = true ;
-                            this.events31[j][k][12] = this.report[i].users.username;
+                            this.events31[j][k][12] = this.report[i].users.username;if(this.events31[j][k][8].length > 15){
+                     this.events31[j][k][15] = false;
+                  }
 
                              if(this.events31[j][k][2] > 1){
                                 this.counting = k + 1;
@@ -26036,7 +27202,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             this.events31[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                             this.events31[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                             this.events31[j][k][11] = true ;
-                            this.events31[j][k][12] = this.report[i].users.username;
+                            this.events31[j][k][12] = this.report[i].users.username;if(this.events31[j][k][8].length > 15){
+                     this.events31[j][k][15] = false;
+                  }
 
                              if(this.events31[j][k][2] > 1){
                                 this.counting = k + 1;
@@ -26079,7 +27247,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             this.events31[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                             this.events31[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                             this.events31[j][k][11] = true ;
-                            this.events31[j][k][12] = this.report[i].users.username;
+                            this.events31[j][k][12] = this.report[i].users.username;if(this.events31[j][k][8].length > 15){
+                     this.events31[j][k][15] = false;
+                  }
 
                              if(this.events31[j][k][2] > 1){
                                 this.counting = k + 1;
@@ -26122,7 +27292,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             this.events31[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                             this.events31[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                             this.events31[j][k][11] = true ;
-                            this.events31[j][k][12] = this.report[i].users.username;
+                            this.events31[j][k][12] = this.report[i].users.username;if(this.events31[j][k][8].length > 15){
+                     this.events31[j][k][15] = false;
+                  }
 
                              if(this.events31[j][k][2] > 1){
                                 this.counting = k + 1;
@@ -26165,7 +27337,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             this.events31[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                             this.events31[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                             this.events31[j][k][11] = true ;
-                            this.events31[j][k][12] = this.report[i].users.username;
+                            this.events31[j][k][12] = this.report[i].users.username;if(this.events31[j][k][8].length > 15){
+                     this.events31[j][k][15] = false;
+                  }
 
                              if(this.events31[j][k][2] > 1){
                                 this.counting = k + 1;
@@ -26208,7 +27382,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             this.events31[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                             this.events31[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                             this.events31[j][k][11] = true ;
-                            this.events31[j][k][12] = this.report[i].users.username;
+                            this.events31[j][k][12] = this.report[i].users.username;if(this.events31[j][k][8].length > 15){
+                     this.events31[j][k][15] = false;
+                  }
 
                              if(this.events31[j][k][2] > 1){
                                 this.counting = k + 1;
@@ -26251,7 +27427,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             this.events31[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                             this.events31[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                             this.events31[j][k][11] = true ;
-                            this.events31[j][k][12] = this.report[i].users.username;
+                            this.events31[j][k][12] = this.report[i].users.username;if(this.events31[j][k][8].length > 15){
+                     this.events31[j][k][15] = false;
+                  }
 
                              if(this.events31[j][k][2] > 1){
                                 this.counting = k + 1;
@@ -26294,7 +27472,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             this.events31[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                             this.events31[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                             this.events31[j][k][11] = true ;
-                            this.events31[j][k][12] = this.report[i].users.username;
+                            this.events31[j][k][12] = this.report[i].users.username;if(this.events31[j][k][8].length > 15){
+                     this.events31[j][k][15] = false;
+                  }
 
                              if(this.events31[j][k][2] > 1){
                                 this.counting = k + 1;
@@ -26337,7 +27517,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             this.events31[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                             this.events31[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                             this.events31[j][k][11] = true ;
-                            this.events31[j][k][12] = this.report[i].users.username;
+                            this.events31[j][k][12] = this.report[i].users.username;if(this.events31[j][k][8].length > 15){
+                     this.events31[j][k][15] = false;
+                  }
 
                              if(this.events31[j][k][2] > 1){
                                 this.counting = k + 1;
@@ -26380,7 +27562,9 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                             this.events31[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                             this.events31[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                             this.events31[j][k][11] = true ;
-                            this.events31[j][k][12] = this.report[i].users.username;
+                            this.events31[j][k][12] = this.report[i].users.username;if(this.events31[j][k][8].length > 15){
+                     this.events31[j][k][15] = false;
+                  }
 
                              if(this.events31[j][k][2] > 1){
                                 this.counting = k + 1;
