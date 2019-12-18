@@ -64,8 +64,10 @@
     <label>Tel. Booking By :
       <mat-form-field>
 
-        <input matInput formControlName="tel" required placeholder=" " pattern="[0][1-9]{9}" maxlength="10"  #message>
-        <mat-hint align="end">{{message.value.length}} / 10</mat-hint>
+        <input matInput formControlName="tel" required placeholder=" "
+               maxlength="10" type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57'
+        >
+
       </mat-form-field>
     </label>
     &nbsp;&nbsp;
@@ -85,7 +87,9 @@
     <label>Attendees :
       <mat-form-field>
 
-        <input matInput formControlName="atten" required placeholder=" " type="number" >
+        <input matInput formControlName="atten" required placeholder=" "
+               maxlength="2" type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57'
+        >
 
       </mat-form-field>
     </label>

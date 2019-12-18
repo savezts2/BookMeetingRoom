@@ -76,7 +76,8 @@ public class BookMeetingRoomController {
     public BookMeetingRoom chackstatusbook(@PathVariable String roomname, @PathVariable String starttime, @PathVariable String dateBookMeetingRoom) {
         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findByRoomnameAndStarttimeAndDateBookMeetingRoomAndIsActive(roomname,starttime,dateBookMeetingRoom,"1");
         bookMeetingRoom.setStatusbooking("notcheckin");
-
+        bookMeetingRoom.setLate("late");
+        bookMeetingRoom.setLatetime(15);
         bookMeetingRoomRepository.save(bookMeetingRoom);
         System.out.println(dateBookMeetingRoom+roomname+starttime);
         return bookMeetingRoom;
@@ -121,6 +122,34 @@ public class BookMeetingRoomController {
         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findByRoomnameAndStarttimeAndDateBookMeetingRoomAndIsActive(roomname,starttime,datebook,"1");
        bookMeetingRoom.setStatusbooking("checkout");
        bookMeetingRoomRepository.save(bookMeetingRoom);
+        return bookMeetingRoom;
+    }
+
+    @PostMapping(path = "/Checkinlatefull/{roomname}/{starttime}/{datebook}")
+    public BookMeetingRoom checkoutlate(@PathVariable String roomname,@PathVariable String starttime, @PathVariable String datebook) {
+        BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findByRoomnameAndStarttimeAndDateBookMeetingRoomAndIsActive(roomname,starttime,datebook,"1");
+        if(bookMeetingRoom.getLengthtime() == 2){
+            bookMeetingRoom.setLatetime(30);
+        }else if(bookMeetingRoom.getLengthtime() == 3){
+            bookMeetingRoom.setLatetime(60);
+        }else if(bookMeetingRoom.getLengthtime() == 4){
+            bookMeetingRoom.setLatetime(90);
+        }else if(bookMeetingRoom.getLengthtime() == 5){
+            bookMeetingRoom.setLatetime(120);
+        }else if(bookMeetingRoom.getLengthtime() == 6){
+            bookMeetingRoom.setLatetime(150);
+        }else if(bookMeetingRoom.getLengthtime() == 7){
+            bookMeetingRoom.setLatetime(180);
+        }else if(bookMeetingRoom.getLengthtime() == 8){
+            bookMeetingRoom.setLatetime(210);
+        }else if(bookMeetingRoom.getLengthtime() == 9){
+            bookMeetingRoom.setLatetime(240);
+        }else if(bookMeetingRoom.getLengthtime() == 10){
+            bookMeetingRoom.setLatetime(270);
+        }else{
+            bookMeetingRoom.setLatetime(300);
+        }
+        bookMeetingRoomRepository.save(bookMeetingRoom);
         return bookMeetingRoom;
     }
 
