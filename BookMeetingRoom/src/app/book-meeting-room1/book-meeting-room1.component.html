@@ -47,44 +47,11 @@
 </mat-sidenav-container>
 
 
-
-
   <mat-sidenav-container *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)"
-    class="card" (backdropClick)="close()">
+    class="card">
 
-    <mat-sidenav #sidenav (keydown.escape)="close()" class="sidenavs">
-
-      <button mat-button (click)="close()" routerLink="/" class="botton">Book MeetingRoom</button><br>
-      <button mat-button (click)="close()" routerLink="/dashboard" class="botton">Dashboard</button>
-
-      <mat-accordion *ngIf="(isLoggedInAdmin | async)" >
-        <mat-expansion-panel>
-          <mat-expansion-panel-header >
-            <mat-panel-title >
-              Admin
-            </mat-panel-title>
-
-          </mat-expansion-panel-header>
-
-          <button mat-button (click)="close()" routerLink="/systemadmin" class="botton">System Admin</button>
-          <button mat-button (click)="close()" routerLink="/addroom" class="botton">Add MeetingRoom</button>
-        </mat-expansion-panel>
-
-      </mat-accordion>
-
-
-    </mat-sidenav>
-
-
-    <mat-sidenav-content>
-
-      <button type="button" mat-button (click)="sidenav.open()">
-        <mat-icon aria-hidden="false" aria-label="Example home icon" class="icon">list
-        </mat-icon><p>Menu</p> {{CurrentTime}}
-      </button>
-
-
-      <h1 align ="center">Book Meeting Rooms</h1>
+      <br/><br/>
+      <h1 align ="center">Book Meeting Room</h1>
       <br/>
       <div align="center">
       <mat-form-field>
@@ -96,13 +63,6 @@
       &nbsp;&nbsp;
       <button mat-raised-button color="primary" (click)="clicksearch()">Search</button>
       </div>
-
-
-
-
-
-
-    </mat-sidenav-content>
 
 
   </mat-sidenav-container>

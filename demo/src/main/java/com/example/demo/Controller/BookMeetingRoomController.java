@@ -49,7 +49,7 @@ public class BookMeetingRoomController {
 
     @PostMapping(path = "/Editroom/{firstname}/{roomname}/{newroomname}")
     public Roomname Editroom(@PathVariable String firstname, @PathVariable String roomname, @PathVariable String newroomname) {
-        Roomname roomname1 = roomnameRepository.findByRoomnames(roomname);
+        Roomname roomname1 = roomnameRepository.findByRoomnamesAndIsActive(roomname,"1");
         roomname1.setRoomnames(newroomname);
         roomname1.setIsActive("1");
         Date date = new Date();
@@ -62,7 +62,7 @@ public class BookMeetingRoomController {
 
     @PostMapping(path = "/Deleteroom/{firstname}/{roomname}")
     public Roomname Deleteroom(@PathVariable String firstname, @PathVariable String roomname) {
-        Roomname roomname1 = roomnameRepository.findByRoomnames(roomname);
+        Roomname roomname1 = roomnameRepository.findByRoomnamesAndIsActive(roomname,"1");
         roomname1.setIsActive("0");
         Date date = new Date();
         roomname1.setUpdate_by(firstname);
@@ -261,7 +261,8 @@ public class BookMeetingRoomController {
         int length = convertLengthTime(fromtime,totime);
 
         bookMeetingRoom.setLengthtime(length);
-        bookMeetingRoom.setRoomname(roomname);
+        Roomname roomname1 = roomnameRepository.findByRoomnamesAndIsActive(roomname,"1");
+        bookMeetingRoom.setRoomname(roomname1);
         bookMeetingRoom.setDateBookMeetingRoom(date);
         bookMeetingRoom.setIsActive("1");
         bookMeetingRoomRepository.save(bookMeetingRoom);
@@ -797,6 +798,12 @@ public class BookMeetingRoomController {
 
         return length ;
 
+    }
+
+
+    @GetMapping("/Getroomname/{roomnames}")
+    public  Roomname roomname(@PathVariable String roomnames){
+        return this.roomnameRepository.findByRoomnamesAndIsActive(roomnames,"1");
     }
 
 

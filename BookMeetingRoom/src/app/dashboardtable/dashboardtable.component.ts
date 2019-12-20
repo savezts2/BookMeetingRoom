@@ -62,7 +62,7 @@ day28 : String ;
 day29 : String ;
 day30 : String ;
 day31 : String ;
-
+checkdelete : number = 0;
 events1: any[] = [];
 events2: any[] = [];
 events3: any[] = [];
@@ -27590,180 +27590,381 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
 
 
     for(let q = 0 ; q < this.events1.length ; q++){
-        if(this.events1[q].length == 19){
-            this.events1.splice(q,1);
-            q = q-1 ;
-         }
-      }for(let q = 0 ; q < this.events2.length ; q++){
-        if(this.events2[q].length == 19){
-            this.events2.splice(q,1);
-            q = q-1 ;
-         }
-      }for(let q = 0 ; q < this.events3.length ; q++){
-        if(this.events3[q].length == 19){
-            this.events3.splice(q,1);
-            q = q-1 ;
-         }
-      }for(let q = 0 ; q < this.events4.length ; q++){
-        if(this.events4[q].length == 19){
-            this.events4.splice(q,1);
-            q = q-1 ;
-         }
-      }for(let q = 0 ; q < this.events5.length ; q++){
-        if(this.events5[q].length == 19){
-            this.events5.splice(q,1);
-            q = q-1 ;
-         }
-      }for(let q = 0 ; q < this.events6.length ; q++){
-        if(this.events6[q].length == 19){
-            this.events6.splice(q,1);
-            q = q-1 ;
-         }
-      }for(let q = 0 ; q < this.events7.length ; q++){
-        if(this.events7[q].length == 19){
-            this.events7.splice(q,1);
-            q = q-1 ;
-         }
-      }for(let q = 0 ; q < this.events8.length ; q++){
-        if(this.events8[q].length == 19){
-            this.events8.splice(q,1);
-            q = q-1 ;
-         }
-      }for(let q = 0 ; q < this.events9.length ; q++){
-        if(this.events9[q].length == 19){
-            this.events9.splice(q,1);
-            q = q-1 ;
-         }
-      }for(let q = 0 ; q < this.events10.length ; q++){
-        if(this.events10[q].length == 19){
-            this.events10.splice(q,1);
-            q = q-1 ;
-         }
-      }for(let q = 0 ; q < this.events11.length ; q++){
-        if(this.events11[q].length == 19){
-            this.events11.splice(q,1);
-            q = q-1 ;
-         }
-      }for(let q = 0 ; q < this.events12.length ; q++){
-        if(this.events12[q].length == 19){
-            this.events12.splice(q,1);
-            q = q-1 ;
-         }
+        this.checkdelete = 0 ;
+        for(let qq = 0 ; qq < this.events1[q].length ; qq++){
+            if(this.events1[q][qq][11] == true){
+               this.checkdelete = 1 ;
+            }
+        }
+        if( this.checkdelete == 0){
+           this.events1.splice(q,1);
+           q = q-1 ;
+        }
       }
-    for(let q = 0 ; q < this.events13.length ; q++){
-        if(this.events13[q].length == 19){
-            this.events13.splice(q,1);
-            q = q-1 ;
-         }
+for(let q = 0 ; q < this.events2.length ; q++){
+        this.checkdelete = 0 ;
+        for(let qq = 0 ; qq < this.events2[q].length ; qq++){
+            if(this.events2[q][qq][11] == true){
+               this.checkdelete = 1 ;
+            }
+        }
+        if( this.checkdelete == 0){
+           this.events2.splice(q,1);
+           q = q-1 ;
+        }
       }
-    for(let q = 0 ; q < this.events14.length ; q++){
-        if(this.events14[q].length == 19){
-            this.events14.splice(q,1);
-            q = q-1 ;
-         }
+for(let q = 0 ; q < this.events3.length ; q++){
+        this.checkdelete = 0 ;
+        for(let qq = 0 ; qq < this.events3[q].length ; qq++){
+            if(this.events3[q][qq][11] == true){
+               this.checkdelete = 1 ;
+            }
+        }
+        if( this.checkdelete == 0){
+           this.events3.splice(q,1);
+           q = q-1 ;
+        }
       }
-    for(let q = 0 ; q < this.events15.length ; q++){
-        if(this.events15[q].length == 19){
-            this.events15.splice(q,1);
-            q = q-1 ;
-         }
+for(let q = 0 ; q < this.events4.length ; q++){
+        this.checkdelete = 0 ;
+        for(let qq = 0 ; qq < this.events4[q].length ; qq++){
+            if(this.events4[q][qq][11] == true){
+               this.checkdelete = 1 ;
+            }
+        }
+        if( this.checkdelete == 0){
+           this.events4.splice(q,1);
+           q = q-1 ;
+        }
       }
-    for(let q = 0 ; q < this.events16.length ; q++){
-        if(this.events16[q].length == 19){
-            this.events16.splice(q,1);
-            q = q-1 ;
-         }
+for(let q = 0 ; q < this.events5.length ; q++){
+        this.checkdelete = 0 ;
+        for(let qq = 0 ; qq < this.events5[q].length ; qq++){
+            if(this.events5[q][qq][11] == true){
+               this.checkdelete = 1 ;
+            }
+        }
+        if( this.checkdelete == 0){
+           this.events5.splice(q,1);
+           q = q-1 ;
+        }
       }
-    for(let q = 0 ; q < this.events17.length ; q++){
-        if(this.events17[q].length == 19){
-            this.events17.splice(q,1);
-            q = q-1 ;
-         }
+for(let q = 0 ; q < this.events6.length ; q++){
+        this.checkdelete = 0 ;
+        for(let qq = 0 ; qq < this.events6[q].length ; qq++){
+            if(this.events6[q][qq][11] == true){
+               this.checkdelete = 1 ;
+            }
+        }
+        if( this.checkdelete == 0){
+           this.events6.splice(q,1);
+           q = q-1 ;
+        }
       }
+for(let q = 0 ; q < this.events7.length ; q++){
+        this.checkdelete = 0 ;
+        for(let qq = 0 ; qq < this.events7[q].length ; qq++){
+            if(this.events7[q][qq][11] == true){
+               this.checkdelete = 1 ;
+            }
+        }
+        if( this.checkdelete == 0){
+           this.events7.splice(q,1);
+           q = q-1 ;
+        }
+      }
+for(let q = 0 ; q < this.events8.length ; q++){
+        this.checkdelete = 0 ;
+        for(let qq = 0 ; qq < this.events8[q].length ; qq++){
+            if(this.events8[q][qq][11] == true){
+               this.checkdelete = 1 ;
+            }
+        }
+        if( this.checkdelete == 0){
+           this.events8.splice(q,1);
+           q = q-1 ;
+        }
+      }
+for(let q = 0 ; q < this.events9.length ; q++){
+        this.checkdelete = 0 ;
+        for(let qq = 0 ; qq < this.events9[q].length ; qq++){
+            if(this.events9[q][qq][11] == true){
+               this.checkdelete = 1 ;
+            }
+        }
+        if( this.checkdelete == 0){
+           this.events9.splice(q,1);
+           q = q-1 ;
+        }
+      }
+for(let q = 0 ; q < this.events10.length ; q++){
+        this.checkdelete = 0 ;
+        for(let qq = 0 ; qq < this.events10[q].length ; qq++){
+            if(this.events10[q][qq][11] == true){
+               this.checkdelete = 1 ;
+            }
+        }
+        if( this.checkdelete == 0){
+           this.events10.splice(q,1);
+           q = q-1 ;
+        }
+      }
+for(let q = 0 ; q < this.events11.length ; q++){
+        this.checkdelete = 0 ;
+        for(let qq = 0 ; qq < this.events11[q].length ; qq++){
+            if(this.events11[q][qq][11] == true){
+               this.checkdelete = 1 ;
+            }
+        }
+        if( this.checkdelete == 0){
+           this.events11.splice(q,1);
+           q = q-1 ;
+        }
+      }
+for(let q = 0 ; q < this.events12.length ; q++){
+        this.checkdelete = 0 ;
+        for(let qq = 0 ; qq < this.events12[q].length ; qq++){
+            if(this.events12[q][qq][11] == true){
+               this.checkdelete = 1 ;
+            }
+        }
+        if( this.checkdelete == 0){
+           this.events12.splice(q,1);
+           q = q-1 ;
+        }
+      }
+for(let q = 0 ; q < this.events13.length ; q++){
+        this.checkdelete = 0 ;
+        for(let qq = 0 ; qq < this.events13[q].length ; qq++){
+            if(this.events13[q][qq][11] == true){
+               this.checkdelete = 1 ;
+            }
+        }
+        if( this.checkdelete == 0){
+           this.events13.splice(q,1);
+           q = q-1 ;
+        }
+      }
+for(let q = 0 ; q < this.events14.length ; q++){
+        this.checkdelete = 0 ;
+        for(let qq = 0 ; qq < this.events14[q].length ; qq++){
+            if(this.events14[q][qq][11] == true){
+               this.checkdelete = 1 ;
+            }
+        }
+        if( this.checkdelete == 0){
+           this.events14.splice(q,1);
+           q = q-1 ;
+        }
+      }
+for(let q = 0 ; q < this.events15.length ; q++){
+        this.checkdelete = 0 ;
+        for(let qq = 0 ; qq < this.events15[q].length ; qq++){
+            if(this.events15[q][qq][11] == true){
+               this.checkdelete = 1 ;
+            }
+        }
+        if( this.checkdelete == 0){
+           this.events15.splice(q,1);
+           q = q-1 ;
+        }
+      }
+for(let q = 0 ; q < this.events16.length ; q++){
+        this.checkdelete = 0 ;
+        for(let qq = 0 ; qq < this.events16[q].length ; qq++){
+            if(this.events16[q][qq][11] == true){
+               this.checkdelete = 1 ;
+            }
+        }
+        if( this.checkdelete == 0){
+           this.events16.splice(q,1);
+           q = q-1 ;
+        }
+      }
+for(let q = 0 ; q < this.events17.length ; q++){
+        this.checkdelete = 0 ;
+        for(let qq = 0 ; qq < this.events17[q].length ; qq++){
+            if(this.events17[q][qq][11] == true){
+               this.checkdelete = 1 ;
+            }
+        }
+        if( this.checkdelete == 0){
+           this.events17.splice(q,1);
+           q = q-1 ;
+        }
+      }
+
+
     for(let q = 0 ; q < this.events18.length ; q++){
-        if(this.events18[q].length == 19){
-            this.events18.splice(q,1);
-            q = q-1 ;
-         }
+        this.checkdelete = 0 ;
+        for(let qq = 0 ; qq < this.events18[q].length ; qq++){
+            if(this.events18[q][qq][11] == true){
+               this.checkdelete = 1 ;
+            }
+        }
+        if( this.checkdelete == 0){
+           this.events18.splice(q,1);
+           q = q-1 ;
+        }
       }
     for(let q = 0 ; q < this.events19.length ; q++){
-        if(this.events19[q].length == 19){
-            this.events19.splice(q,1);
-            q = q-1 ;
-         }
+        this.checkdelete = 0 ;
+        for(let qq = 0 ; qq < this.events19[q].length ; qq++){
+            if(this.events19[q][qq][11] == true){
+               this.checkdelete = 1 ;
+            }
+        }
+        if( this.checkdelete == 0){
+           this.events19.splice(q,1);
+           q = q-1 ;
+        }
       }
     for(let q = 0 ; q < this.events20.length ; q++){
-        if(this.events20[q].length == 19){
-            this.events20.splice(q,1);
-            q = q-1 ;
-         }
+        this.checkdelete = 0 ;
+        for(let qq = 0 ; qq < this.events20[q].length ; qq++){
+            if(this.events20[q][qq][11] == true){
+               this.checkdelete = 1 ;
+            }
+        }
+        if( this.checkdelete == 0){
+           this.events20.splice(q,1);
+           q = q-1 ;
+        }
       }
     for(let q = 0 ; q < this.events21.length ; q++){
-        if(this.events21[q].length == 19){
-            this.events21.splice(q,1);
-            q = q-1 ;
-         }
+        this.checkdelete = 0 ;
+        for(let qq = 0 ; qq < this.events21[q].length ; qq++){
+            if(this.events21[q][qq][11] == true){
+               this.checkdelete = 1 ;
+            }
+        }
+        if( this.checkdelete == 0){
+           this.events21.splice(q,1);
+           q = q-1 ;
+        }
       }
     for(let q = 0 ; q < this.events22.length ; q++){
-        if(this.events22[q].length == 19){
-            this.events22.splice(q,1);
-            q = q-1 ;
-         }
+        this.checkdelete = 0 ;
+        for(let qq = 0 ; qq < this.events22[q].length ; qq++){
+            if(this.events22[q][qq][11] == true){
+               this.checkdelete = 1 ;
+            }
+        }
+        if( this.checkdelete == 0){
+           this.events22.splice(q,1);
+           q = q-1 ;
+        }
       }
     for(let q = 0 ; q < this.events23.length ; q++){
-        if(this.events23[q].length == 19){
-            this.events23.splice(q,1);
-            q = q-1 ;
-         }
+        this.checkdelete = 0 ;
+        for(let qq = 0 ; qq < this.events23[q].length ; qq++){
+            if(this.events23[q][qq][11] == true){
+               this.checkdelete = 1 ;
+            }
+        }
+        if( this.checkdelete == 0){
+           this.events23.splice(q,1);
+           q = q-1 ;
+        }
       }
     for(let q = 0 ; q < this.events24.length ; q++){
-        if(this.events24[q].length == 19){
-            this.events24.splice(q,1);
-            q = q-1 ;
-         }
+        this.checkdelete = 0 ;
+        for(let qq = 0 ; qq < this.events24[q].length ; qq++){
+            if(this.events24[q][qq][11] == true){
+               this.checkdelete = 1 ;
+            }
+        }
+        if( this.checkdelete == 0){
+           this.events24.splice(q,1);
+           q = q-1 ;
+        }
       }
     for(let q = 0 ; q < this.events25.length ; q++){
-        if(this.events25[q].length == 19){
-            this.events25.splice(q,1);
-            q = q-1 ;
-         }
+        this.checkdelete = 0 ;
+        for(let qq = 0 ; qq < this.events25[q].length ; qq++){
+            if(this.events25[q][qq][11] == true){
+               this.checkdelete = 1 ;
+            }
+        }
+        if( this.checkdelete == 0){
+           this.events25.splice(q,1);
+           q = q-1 ;
+        }
       }
     for(let q = 0 ; q < this.events26.length ; q++){
-        if(this.events26[q].length == 19){
-            this.events26.splice(q,1);
-            q = q-1 ;
-         }
+        this.checkdelete = 0 ;
+        for(let qq = 0 ; qq < this.events26[q].length ; qq++){
+            if(this.events26[q][qq][11] == true){
+               this.checkdelete = 1 ;
+            }
+        }
+        if( this.checkdelete == 0){
+           this.events26.splice(q,1);
+           q = q-1 ;
+        }
       }
     for(let q = 0 ; q < this.events27.length ; q++){
-        if(this.events27[q].length == 19){
-            this.events27.splice(q,1);
-            q = q-1 ;
-         }
+        this.checkdelete = 0 ;
+        for(let qq = 0 ; qq < this.events27[q].length ; qq++){
+            if(this.events27[q][qq][11] == true){
+               this.checkdelete = 1 ;
+            }
+        }
+        if( this.checkdelete == 0){
+           this.events27.splice(q,1);
+           q = q-1 ;
+        }
       }
     for(let q = 0 ; q < this.events28.length ; q++){
-        if(this.events28[q].length == 19){
-            this.events28.splice(q,1);
-            q = q-1 ;
-         }
+        this.checkdelete = 0 ;
+        for(let qq = 0 ; qq < this.events28[q].length ; qq++){
+            if(this.events28[q][qq][11] == true){
+               this.checkdelete = 1 ;
+            }
+        }
+        if( this.checkdelete == 0){
+           this.events28.splice(q,1);
+           q = q-1 ;
+        }
       }
     for(let q = 0 ; q < this.events29.length ; q++){
-        if(this.events29[q].length == 19){
-            this.events29.splice(q,1);
-            q = q-1 ;
-         }
+        this.checkdelete = 0 ;
+        for(let qq = 0 ; qq < this.events29[q].length ; qq++){
+            if(this.events29[q][qq][11] == true){
+               this.checkdelete = 1 ;
+            }
+        }
+        if( this.checkdelete == 0){
+           this.events29.splice(q,1);
+           q = q-1 ;
+        }
       }
     for(let q = 0 ; q < this.events30.length ; q++){
-        if(this.events30[q].length == 19){
-            this.events30.splice(q,1);
-            q = q-1 ;
-         }
+        this.checkdelete = 0 ;
+        for(let qq = 0 ; qq < this.events30[q].length ; qq++){
+            if(this.events30[q][qq][11] == true){
+               this.checkdelete = 1 ;
+            }
+        }
+        if( this.checkdelete == 0){
+           this.events30.splice(q,1);
+           q = q-1 ;
+        }
       }
     for(let q = 0 ; q < this.events31.length ; q++){
-        if(this.events31[q].length == 19){
-            this.events31.splice(q,1);
-            q = q-1 ;
-         }
+        this.checkdelete = 0 ;
+        for(let qq = 0 ; qq < this.events31[q].length ; qq++){
+            if(this.events31[q][qq][11] == true){
+               this.checkdelete = 1 ;
+            }
+        }
+        if( this.checkdelete == 0){
+           this.events31.splice(q,1);
+           q = q-1 ;
+        }
       }
+
+
 
 
 

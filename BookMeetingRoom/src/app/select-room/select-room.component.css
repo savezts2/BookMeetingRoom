@@ -50,11 +50,7 @@
     text-align : center;
 }
 
-table{
-  width:90%;
-  text-align:center;
 
-}
 
 tr:hover {background-color: #EEFF5A}
 
@@ -115,12 +111,12 @@ h1.example-app-name {
   background-color: white;
   box-shadow: rgba(0,0,0,0.2);
   transition: 0.3s;
-  margin-top: 30px;
+  margin-top: 10px;
   margin-bottom: auto;
   margin-right: auto;
   margin-left: auto;
-  width : 95%;
-  height : auto;
+  width : 98%;
+  height : 600px;
   opacity: 0.9;
 }
 .card:hover {
@@ -176,3 +172,23 @@ div:hover span.only-show-on-hover  {
     max-width: 1000px !important;
 }
 
+
+table{
+  width:90%;
+  text-align:center;
+
+}
+td {
+  min-width: 50px;
+  max-width: 50px;
+  max-height: 50px;
+  min-height: 50px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+span.description {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 150px;
+}

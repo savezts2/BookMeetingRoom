@@ -67,7 +67,8 @@ in : any ;
      this.appendTime();
 
 
-    //console.log(data);
+    console.log(data);
+
     })
 
   }, 500); //interval
@@ -924,7 +925,7 @@ public appendTime(){
       } //if active
   } //for report
 
- // console.log(this.events);
+  console.log(this.events);
 
 } // appendtime
 

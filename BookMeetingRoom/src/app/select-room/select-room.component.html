@@ -6,37 +6,24 @@
 
 <mat-sidenav-container *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)"
                        class="card" (backdropClick)="close()">
-  <mat-sidenav #sidenav (keydown.escape)="close()" class="sidenavs">
-    <button mat-button (click)="close()" routerLink="/" class="botton">Book MeetingRoom</button><br>
-    <button mat-button (click)="close()" routerLink="/dashboard" class="botton">Dashboard</button>
 
-    <mat-accordion *ngIf="(isLoggedInAdmin | async)">
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            Admin
-          </mat-panel-title>
-
-        </mat-expansion-panel-header>
-
-        <button mat-button (click)="close()" routerLink="/systemadmin" class="botton">System Admin</button>
-        <button mat-button (click)="close()" routerLink="/addroom" class="botton">Add MeetingRoom</button>
-      </mat-expansion-panel>
-
-    </mat-accordion>
-  </mat-sidenav>
 
   <mat-sidenav-content>
-
-    <button type="button" mat-button (click)="sidenav.open()">
-      <mat-icon aria-hidden="false" aria-label="Example home icon" class="icon">list
-      </mat-icon><p>Menu</p>{{CurrentTime}}
-    </button>
 
     <div *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)">
 
 
-      <h2 style="margin-left:5%;" >Date: {{dateshow}}</h2>
+        <br/><br/><br/>
+      <div style="margin-left: 6%;">
+        <mat-form-field>
+          <input matInput [matDatepickerFilter]="myFilter" [min]="today" [max]="maxDate" [matDatepicker]="picker" placeholder="DD/MM/yyyy"
+                 [formControl]="serializedDate">
+          <mat-datepicker-toggle matSuffix [for]="picker" ></mat-datepicker-toggle >
+          <mat-datepicker #picker ></mat-datepicker>
+        </mat-form-field>
+        &nbsp;&nbsp;
+        <button mat-raised-button color="primary" (click)="clicksearch()">Search</button>
+      </div>
 
       <table border="1" align="center" bordercolor=black bgcolor="black">
 
@@ -83,7 +70,7 @@
 
               [attr.colspan]="cell[2]" [attr.bgcolor]="cell[3]"
 
-              (click)="cell[11] ? Reserved(cell[4],cell[1],cell[12],cell[7],cell[8],cell[9],cell[13],cell[14]) :
+              (click)="cell[11] ? Reserved(cell[4],cell[1],cell[6],cell[7],cell[8],cell[9],cell[13],cell[14]) :
               cell[0] == 18 ? 1 :selectTable(cell[4],cell[1])"
               style="text-align:center; color:black; vertical-align: middle;"
               matTooltipClass="custom-tooltip-blue"
@@ -92,13 +79,15 @@
                            '\nAttendees: ' +cell[7]+
                            '\nTopic: ' +cell[8] +
                            '\nTel: ' + cell[14]+'\n'+
-                            (cell[3] == '#3366FF' ? 'Checkout' : '' )+
-                            (cell[3] == '#C0C0C0' ? 'Booking On Time' : '' )+
-                            (cell[3] == '#A0FF7D' ? 'Checkin' : '' )+
-                            (cell[3] == '#FF3333' ? 'Not Checkin' : '' ): '' "
+                            (cell[10] ? 'Remark: '+cell[9]+'\n' : '') +
+                            (cell[3] == '#3366FF' ? 'Status: Checkout' : '' )+
+                            (cell[3] == '#C0C0C0' ? 'Status: Booking On Time' : '' )+
+                            (cell[3] == '#A0FF7D' ? 'Status: Checkin' : '' )+
+                            (cell[3] == '#FF3333' ? 'Status: Not Checkin' : '' ): '' "
               [matTooltipPosition]="position.value"
 
           >
+
 
             <div *ngIf="cell[5]">
               <font color="black">
@@ -113,6 +102,7 @@
                 </div>
               </font>
             </div>
+
 
           </td>
 

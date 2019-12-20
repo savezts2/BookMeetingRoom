@@ -46,6 +46,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { EditroomnameComponent } from './editroomname/editroomname.component';
 import { DeleteroomComponent } from './deleteroom/deleteroom.component';
+import { SideNavComponent } from './side-nav/side-nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
 @NgModule({
   declarations: [
     AppComponent,
@@ -65,7 +67,8 @@ import { DeleteroomComponent } from './deleteroom/deleteroom.component';
     CheckoutComponent,
     AddroombyadminComponent,
     EditroomnameComponent,
-    DeleteroomComponent
+    DeleteroomComponent,
+    SideNavComponent
   ],
   imports: [
     BrowserModule,
@@ -93,7 +96,8 @@ import { DeleteroomComponent } from './deleteroom/deleteroom.component';
     MatProgressBarModule,
     MatExpansionModule,
     MatPaginatorModule,
-    MatTooltipModule
+    MatTooltipModule,
+    LayoutModule
   ],
     entryComponents: [ DialogOverviewExampleDialog ],
   providers: [],

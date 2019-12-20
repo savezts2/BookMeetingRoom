@@ -1,0 +1,41 @@
+.sidenav-container {
+ height: 100%;
+ position: fixed;
+ top: 0;
+ left: 0;
+ right: 0;
+}
+.sidenav {
+width: 250px;
+
+}
+.sidenav .mat-toolbar {
+background: #3f51b5;
+}
+.mat-toolbar.mat-primary {
+position: sticky;
+top: 0;
+z-index: 1;
+}
+.botton1{
+     max-width: 400px;
+     margin-left: auto;
+     margin-right: 0;
+}
+.wel{
+
+     margin-left: 60%;
+     margin-right: 0px;
+}
+
+.botton{
+  width:100%;
+  height: auto;
+  font-size: 20px;
+}
+.but{
+   width:100%;
+    height: 80px;
+    font-size: 20px;
+    text-align: center;
+}

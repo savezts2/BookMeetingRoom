@@ -1,0 +1,76 @@
+
+<mat-sidenav-container class="sidenav-container" >
+
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+               [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+               [mode]="(isHandset$ | async) ? 'over' : 'side'"
+               [opened]="!(isHandset$ | async) && ((isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async))"
+               style="background-color: rgb(0, 176, 80);">
+    <mat-toolbar style="background-color: green; color:white; width:100%;"><i class="material-icons">
+      supervised_user_circle
+    </i>&nbsp;{{nameuser}}  &nbsp;{{lastname}}<br/>
+
+    </mat-toolbar>
+    <mat-nav-list>
+      <button mat-button *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)"  routerLink="/"
+              class="but" style="color:white;"><i class="material-icons">
+        meeting_room
+      </i>&nbsp;Book MeetingRoom</button>
+
+      <button mat-button *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)"  routerLink="/dashboard"
+              class="but" style="color:white;"><i class="material-icons">
+        dashboard
+      </i> &nbsp;Dashboard</button>
+
+      <mat-accordion *ngIf="(isLoggedInAdmin | async)" style="text-align:center; color:white;">
+        <mat-expansion-panel style="background-color: rgb(0, 176, 80); color:white;">
+          <mat-expansion-panel-header class="but">
+            <mat-panel-title style="text-align:center; color:white"><i class="material-icons">
+              perm_data_setting
+            </i>
+              &nbsp; Admin
+            </mat-panel-title>
+
+          </mat-expansion-panel-header >
+
+          <button mat-button  routerLink="/systemadmin" class="but">System Admin</button>
+          <button mat-button  routerLink="/addroom" class="but">Add Meeting Room</button>
+        </mat-expansion-panel>
+
+      </mat-accordion>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar style="background-color: rgb(0, 176, 80);">
+
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)"
+        >
+        <mat-icon aria-label="Side nav toggle icon" style="color:white; ">menu</mat-icon>
+      </button>
+
+
+
+      <span style="color:white;">Book Meeting Room</span>&nbsp;
+      <i class="material-icons" style="color:white;">
+        menu_book
+      </i>
+
+
+      <div class="botton1">
+      <button mat-raised-button
+              *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)"
+              (click)="logout()">LogOut
+      </button>
+      </div>
+
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

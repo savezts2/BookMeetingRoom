@@ -26,7 +26,7 @@ export class DeleteroomComponent implements OnInit {
 roomnames : string ;
 firstname : string;
 public API = '//localhost:8080';   //for test
-//public API = 'http://192.168.1.56:8080/BookMeetingRoom';  //for build
+//public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
 constructor(public authService : AuthService, private route:ActivatedRoute, private service : ServiceService,private http: HttpClient,
 private router: Router,private _formBuilder: FormBuilder, @Inject(MAT_DIALOG_DATA) public data: DialogData, public dialogRef: MatDialogRef<DeleteroomComponent>) { }
 
@@ -53,7 +53,7 @@ Delete(){
                                },
                                error => {
                                    console.log('Error', error);
-                                    window.location.reload(true);
+
                                }
                               );
 

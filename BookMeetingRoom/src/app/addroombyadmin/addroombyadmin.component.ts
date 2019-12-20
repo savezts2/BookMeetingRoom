@@ -59,8 +59,12 @@ onAddroom(){
   if(this.roominput == '' || this.roominput == ' '){
     alert("Please check your filled.");
   }else{
+       this.service.getAddroomname(this.roominput).subscribe(data=>{
 
-        this.http.post(this.API + '/Addroom/'+this.firstname +'/' + this.roominput,{})
+              if(data != null){
+                alert("This room name already exists in the system.");
+              }else{
+                  this.http.post(this.API + '/Addroom/'+this.firstname +'/' + this.roominput,{})
                              .subscribe(
                                data => {
                                    console.log('PUT Request is successful');
@@ -73,6 +77,12 @@ onAddroom(){
                                     window.location.reload(true);
                                }
                               );
+
+              }
+
+       })
+
+
   }
 }
 

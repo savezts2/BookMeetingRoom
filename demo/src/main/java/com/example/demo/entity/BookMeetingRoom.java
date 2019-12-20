@@ -37,7 +37,9 @@ public class BookMeetingRoom {
 
     private String remark ;
 
-    private String roomname;
+
+    @ManyToOne
+    private Roomname roomname;
 
     private int lengthtime;
 
@@ -52,6 +54,50 @@ public class BookMeetingRoom {
 
         private int latetime;
         private String late;
+        private String checkintime;
+        private String checkouttime;
+        private String checkinby;
+        private String checkoutby;
+
+    public Roomname getRoomname() {
+        return roomname;
+    }
+
+    public String getCheckintime() {
+        return checkintime;
+    }
+
+    public void setCheckintime(String checkintime) {
+        this.checkintime = checkintime;
+    }
+
+    public String getCheckouttime() {
+        return checkouttime;
+    }
+
+    public void setCheckouttime(String checkouttime) {
+        this.checkouttime = checkouttime;
+    }
+
+    public String getCheckinby() {
+        return checkinby;
+    }
+
+    public void setCheckinby(String checkinby) {
+        this.checkinby = checkinby;
+    }
+
+    public String getCheckoutby() {
+        return checkoutby;
+    }
+
+    public void setCheckoutby(String checkoutby) {
+        this.checkoutby = checkoutby;
+    }
+
+    public void setRoomname(Roomname roomname) {
+        this.roomname = roomname;
+    }
 
     public int getLatetime() {
         return latetime;
@@ -181,13 +227,7 @@ public class BookMeetingRoom {
         this.remark = remark;
     }
 
-    public String getRoomname() {
-        return roomname;
-    }
 
-    public void setRoomname(String roomname) {
-        this.roomname = roomname;
-    }
 
     public int getLengthtime() {
         return lengthtime;

@@ -7,5 +7,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface RoomnameRepository extends JpaRepository<Roomname,Long> {
-    Roomname findByRoomnames(String roomnames);
+    Roomname findByRoomnamesAndIsActive(String roomnames,String isActive);
 }

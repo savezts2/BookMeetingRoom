@@ -50,54 +50,11 @@
     text-align : center;
 }
 
-table {
-  width: 90%;
-}
+table{
+  width:90%;
+  text-align:center;
 
-tr.example-detail-row {
-  height: 0;
 }
-
-tr.example-element-row:not(.example-expanded-row):hover {
-  background: #EEFF5A;
-}
-
-tr.example-element-row:not(.example-expanded-row):active {
-  background: #EEFF5A;
-}
-
-.example-element-row td {
-  border-bottom-width: 0;
-}
-
-.example-element-detail {
-  overflow: hidden;
-  display: flex;
-}
-
-.example-element-diagram {
-  min-width: 80px;
-  border: 2px solid black;
-  padding: 8px;
-  font-weight: lighter;
-  margin: 8px 0;
-  height: 104px;
-}
-
-.example-element-symbol {
-  font-weight: bold;
-  font-size: 40px;
-  line-height: normal;
-}
-
-.example-element-description {
-  padding: 16px;
-}
-
-.example-element-description-attribution {
-  opacity: 0.5;
-}
-
 
 
 
@@ -150,31 +107,23 @@ h1.example-app-name {
   background-color: white;
   box-shadow: rgba(0,0,0,0.2);
   transition: 0.3s;
-  margin-top: 30px;
+  margin-top: 10px;
   margin-bottom: auto;
   margin-right: auto;
   margin-left: auto;
-  width : 95%;
-  height : auto;
+  width : 98%;
+  height : 600px;
   opacity: 0.9;
-
 }
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 .bgimg{
-     background-image:url(src/app/img/ILS-LOGO.jpg);
-
-
-     background-repeat: no-repeat;
-     background-position: center center;
-     background-attachment: fixed;
-     -o-background-size: 100% 100%, auto;
-     -moz-background-size: 100% 100%, auto;
-     -webkit-background-size: 100% 100%, auto;
-     background-size: 100% 100%, auto;
-
+  background-image:url(src/app/img/ILS-LOGO.jpg);
+    border: thin silver solid;
+    background-attachment: fixed;
+    background-size: 100% 100%;
 
 }
 
@@ -186,15 +135,6 @@ h1.example-app-name {
   right: 0;
 }
 
-.mat-icon{
-  font-size: 25px;
-  width: 25px;
-}
-
-.mat-icon2{
-    font-size: 50px;
-      width: 50px;
-}
 
 
 .botton{
@@ -208,11 +148,29 @@ h1.example-app-name {
   width : 20%;
 }
 
+.card1{
+  background-color: white;
+  box-shadow: rgba(0,0,0,0.2);
+  transition: 0.3s;
+  margin-top: 100px;
+  margin-bottom: auto;
+  margin-right: auto;
+  margin-left: auto;
+  width : 30%;
+  height : auto;
+  opacity: 0.9;
+}
+.card1:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+
 .bottonadd{
   background-color: rgb(0, 176, 80);
   color: white;
-  margin-left: 2%;
+  margin-left: 5%;
 }
+
 
 
 
