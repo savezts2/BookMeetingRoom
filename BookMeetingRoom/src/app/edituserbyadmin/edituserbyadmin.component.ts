@@ -88,7 +88,7 @@ editUser(){
     this.firstFormGroup.get('password').value == '' || this.firstFormGroup.get('status').value == ''){
       alert("Please check your filled");
     }else{
-       this.http.post(this.API + '/Edituser/'+this.firstFormGroup.get('firstname').value +'/' + this.firstFormGroup.get('lastname').value +'/' +
+       this.http.post(this.API + '/Edituser/'+localStorage.getItem('nameid')+'/'+this.firstFormGroup.get('firstname').value +'/' + this.firstFormGroup.get('lastname').value +'/' +
                  this.firstFormGroup.get('department').value + '/' + this.firstFormGroup.get('position').value + '/' + this.username+ '/' + this.firstFormGroup.get('password').value+ '/' + this.firstFormGroup.get('status').value,{})
                              .subscribe(
                                data => {

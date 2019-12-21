@@ -55,6 +55,7 @@ checkOut(){
                                },
                                error => {
                                    console.log('Error', error);
+                                    alert("Checkout Success!");
                                     window.location.reload();
                                }
                               );

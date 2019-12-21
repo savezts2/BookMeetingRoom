@@ -54,7 +54,7 @@ closed(){
 deleteUser(){
 
 
-     this.http.post(this.API + '/Deleteuser/'+this.data.username,{})
+     this.http.post(this.API + '/Deleteuser/'+localStorage.getItem('nameid')+'/'+this.data.username,{})
                              .subscribe(
                                data => {
                                    console.log('PUT Request is successful');

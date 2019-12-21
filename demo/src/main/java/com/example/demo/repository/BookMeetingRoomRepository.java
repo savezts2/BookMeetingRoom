@@ -2,6 +2,7 @@ package com.example.demo.repository;
 
 
 import com.example.demo.entity.BookMeetingRoom;
+import com.example.demo.entity.Roomname;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
@@ -21,12 +22,12 @@ public interface BookMeetingRoomRepository extends JpaRepository<BookMeetingRoom
 
 
 
-    BookMeetingRoom findByDateBookMeetingRoomAndRoomnameAndStarttimeAndIsActive(String dateBookMeetingRoom , String roomname, String starttime, String IsActive);
+    BookMeetingRoom findByDateBookMeetingRoomAndRoomnameAndStarttimeAndIsActive(String dateBookMeetingRoom , Roomname roomname, String starttime, String IsActive);
 
 
     BookMeetingRoom findByRoomnameAndStarttimeAndDateBookMeetingRoomAndIsActive(String roomnamme , String starttime , String dateBookMeetingRoom , String IsActive);
 
-    @Query(value = "SELECT * FROM book_meeting_room WHERE date_book_meeting_room = :date_book_meeting_room AND roomname = :roomname AND starttime = :starttime AND is_active = :is_active AND (statusbooking = :statusbooking OR statusbooking = \'notcheckin\')",nativeQuery = true)
-    BookMeetingRoom getBookday(@Param("date_book_meeting_room") String date_book_meeting_room ,@Param("roomname") String roomname,
+    @Query(value = "SELECT * FROM book_meeting_room WHERE date_book_meeting_room = :date_book_meeting_room AND roomname_roomname_id = :roomname AND starttime = :starttime AND is_active = :is_active AND (statusbooking = :statusbooking OR statusbooking = \'notcheckin\')",nativeQuery = true)
+    BookMeetingRoom getBookday(@Param("date_book_meeting_room") String date_book_meeting_room ,@Param("roomname") Long roomname,
                                @Param("starttime") String starttime,@Param("is_active") String is_active,@Param("statusbooking") String statusbooking);
 }

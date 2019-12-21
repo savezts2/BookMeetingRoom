@@ -3,10 +3,12 @@ package com.example.demo.Controller;
 
 import com.example.demo.entity.*;
 import com.example.demo.repository.*;
+import org.hibernate.exception.DataException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
+import java.util.Date;
 import java.util.stream.Collectors;
 
 @RestController
@@ -107,8 +109,8 @@ public class UsersController {
     }
 
 
-    @PostMapping(path = "/Edituser/{firstname}/{lastname}/{department}/{position}/{username}/{password}/{status}")
-    public Users edituser(@PathVariable String firstname, @PathVariable String lastname, @PathVariable String department, @PathVariable String position,
+    @PostMapping(path = "/Edituser/{editby}/{firstname}/{lastname}/{department}/{position}/{username}/{password}/{status}")
+    public Users edituser(@PathVariable String editby,@PathVariable String firstname, @PathVariable String lastname, @PathVariable String department, @PathVariable String position,
                        @PathVariable String username,@PathVariable String password,@PathVariable String status) {
         Users users = usersRepository.findByUsernameAndIsActive(username,"1");
         users.setFirstname(firstname);
@@ -117,14 +119,20 @@ public class UsersController {
         users.setPosition(position);
         users.setLastname(lastname);
         users.setDepartment(department);
+        Date date = new Date();
+        users.setUpdate_by(editby);
+        users.setUpdate_date(date);
         usersRepository.save(users);
         return users;
     }
 
-    @PostMapping(path = "/Deleteuser/{username}")
-    public Users deleteuser(@PathVariable String username) {
+    @PostMapping(path = "/Deleteuser/{deleteby}/{username}")
+    public Users deleteuser(@PathVariable String deleteby,@PathVariable String username) {
         Users users = usersRepository.findByUsernameAndIsActive(username,"1");
         users.setIsActive("0");
+        Date date = new Date();
+        users.setUpdate_date(date);
+        users.setUpdate_by(deleteby);
         usersRepository.save(users);
         return users;
     }

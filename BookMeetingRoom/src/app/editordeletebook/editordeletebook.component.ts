@@ -101,6 +101,9 @@ checkin(){
                                },
                                error => {
                                    console.log('Error', error);
+                                  alert("Checkin Success!");
+                                  this.dialogRef.close();
+                                    window.location.reload(true);
                                }
                               );
   }
@@ -122,6 +125,7 @@ delete(){
                                error => {
                                    console.log('Error', error);
                                     alert("Cancel Success!");
+                                    window.location.reload(true);
                                   this.dialogRef.close();
                                }
                               );

@@ -51,9 +51,17 @@
 }
 
 table{
-  width:95%;
+  width:90%;
   text-align:center;
 
+}
+td {
+  min-width: 50px;
+  max-width: 50px;
+  max-height: 50px;
+  min-height: 50px;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .datepick{

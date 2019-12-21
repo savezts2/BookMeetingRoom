@@ -1127,6 +1127,13 @@ dateShow(datefull){
         time4 : string;
 
    Reserved(room,time,username,atten,topic,remark,totime,tel){
+
+        for(let i = 0 ; i < this.roomnames.length ; i++){
+
+            if(this.roomnames[i].roomnames == room){
+              room = this.roomnames[i].roomname_id ;
+            }
+        }
         let totimesplit: Array<string>;
          let fromtimesplit: Array<string>;
 
