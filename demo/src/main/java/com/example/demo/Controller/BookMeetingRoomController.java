@@ -32,6 +32,42 @@ public class BookMeetingRoomController {
 
 
 
+    @PostMapping(path = "/Notcheckin15min/{dateBookMeetingRoom}/{roomname}/{starttime}")
+    public BookMeetingRoom updatenotcheckinbysys(@PathVariable String dateBookMeetingRoom,@PathVariable Long roomname, @PathVariable String starttime) {
+        Roomname roomname1 = roomnameRepository.findById(roomname).get();
+
+        BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findByDateBookMeetingRoomAndRoomnameAndStarttimeAndIsActive(dateBookMeetingRoom,roomname1,starttime,"1");
+
+        bookMeetingRoom.setStatusbooking("notcheckin");
+        bookMeetingRoom.setLatetime(15);
+        bookMeetingRoom.setLate("late");
+        bookMeetingRoomRepository.save(bookMeetingRoom);
+        return bookMeetingRoom;
+    }
+
+    @PostMapping(path = "/Notcheckin30min/{dateBookMeetingRoom}/{roomname}/{starttime}")
+    public BookMeetingRoom updatenotcheckin30minbysys(@PathVariable String dateBookMeetingRoom,@PathVariable Long roomname, @PathVariable String starttime) {
+        Roomname roomname1 = roomnameRepository.findById(roomname).get();
+        String endtime;
+        BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findByDateBookMeetingRoomAndRoomnameAndStarttimeAndIsActive(dateBookMeetingRoom,roomname1,starttime,"1");
+        if(starttime.equals("08.00")){
+            endtime = "08.30";
+        }else if(starttime.equals("08.30")){endtime = "09.00";}else if(starttime.equals("09.00")){endtime = "09.30";}else if(starttime.equals("09.30")){endtime = "10.00";}
+        else if(starttime.equals("10.00")){endtime = "10.30";}else if(starttime.equals("10.30")){endtime = "11.00";}else if(starttime.equals("11.00")){endtime = "11.30";}
+        else if(starttime.equals("12.00")){endtime = "12.30";}else if(starttime.equals("12.30")){endtime = "13.00";}else if(starttime.equals("13.00")){endtime = "13.30";}
+        else if(starttime.equals("13.30")){endtime = "14.00";}else if(starttime.equals("14.00")){endtime = "14.30";}else if(starttime.equals("14.30")){endtime = "15.00";}
+        else if(starttime.equals("15.30")){endtime = "16.00";}else if(starttime.equals("16.00")){endtime = "16.30";}else{endtime = "17.00";}
+
+        bookMeetingRoom.setStatusbooking("notcheckin30min");
+        bookMeetingRoom.setLatetime(30);
+        bookMeetingRoom.setLate("late");
+        bookMeetingRoom.setLengthtime(2);
+        bookMeetingRoom.setEndtime(endtime);
+        bookMeetingRoomRepository.save(bookMeetingRoom);
+        return bookMeetingRoom;
+    }
+
+
     @PostMapping(path = "/Addroom/{firstname}/{roomname}")
     public Roomname AddRoom(@PathVariable String firstname, @PathVariable String roomname) {
         Roomname roomname1 = new Roomname();

@@ -67,6 +67,9 @@ getRoomname(): Observable<any> {
             return this.http.get(this.API + '/Roomname');
          }
 
+getAllReport(): Observable<any> {
+            return this.http.get(this.API + '/Report');
+         }
 
 
 

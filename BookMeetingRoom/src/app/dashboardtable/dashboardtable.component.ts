@@ -1040,7 +1040,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events1[j][k][3] = '#006633' ;
                     }else{
-                                           this.events1[j][k][3] = '#FF3333' ;
+                                          this.events1[j][k][3] = '#FF4040' ;
                                        }
 
                                      this.events1[j][k][5] = true; this.showday1 = true;
@@ -1083,7 +1083,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events1[j][k][3] = '#006633' ;
                     }else{
-                                           this.events1[j][k][3] = '#FF3333' ;
+                                          this.events1[j][k][3] = '#FF4040' ;
                                        }
 
                                      this.events1[j][k][5] = true; this.showday1 = true;
@@ -1126,7 +1126,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events1[j][k][3] = '#006633' ;
                     }else{
-                                           this.events1[j][k][3] = '#FF3333' ;
+                                          this.events1[j][k][3] = '#FF4040' ;
                                        }
 
                                      this.events1[j][k][5] = true; this.showday1 = true;
@@ -1169,7 +1169,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events1[j][k][3] = '#006633' ;
                     }else{
-                                           this.events1[j][k][3] = '#FF3333' ;
+                                          this.events1[j][k][3] = '#FF4040' ;
                                        }
 
                                      this.events1[j][k][5] = true; this.showday1 = true;
@@ -1212,7 +1212,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events1[j][k][3] = '#006633' ;
                     }else{
-                                           this.events1[j][k][3] = '#FF3333' ;
+                                          this.events1[j][k][3] = '#FF4040' ;
                                        }
 
                                      this.events1[j][k][5] = true; this.showday1 = true;
@@ -1255,7 +1255,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events1[j][k][3] = '#006633' ;
                     }else{
-                                           this.events1[j][k][3] = '#FF3333' ;
+                                          this.events1[j][k][3] = '#FF4040' ;
                                        }
 
                                      this.events1[j][k][5] = true; this.showday1 = true;
@@ -1298,7 +1298,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events1[j][k][3] = '#006633' ;
                     }else{
-                                           this.events1[j][k][3] = '#FF3333' ;
+                                          this.events1[j][k][3] = '#FF4040' ;
                                        }
 
                                      this.events1[j][k][5] = true; this.showday1 = true;
@@ -1341,7 +1341,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events1[j][k][3] = '#006633' ;
                     }else{
-                                           this.events1[j][k][3] = '#FF3333' ;
+                                          this.events1[j][k][3] = '#FF4040' ;
                                        }
 
                                      this.events1[j][k][5] = true; this.showday1 = true;
@@ -1384,7 +1384,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events1[j][k][3] = '#006633' ;
                     }else{
-                                           this.events1[j][k][3] = '#FF3333' ;
+                                          this.events1[j][k][3] = '#FF4040' ;
                                        }
 
                                      this.events1[j][k][5] = true; this.showday1 = true;
@@ -1427,7 +1427,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events1[j][k][3] = '#006633' ;
                     }else{
-                                           this.events1[j][k][3] = '#FF3333' ;
+                                          this.events1[j][k][3] = '#FF4040' ;
                                        }
 
                                      this.events1[j][k][5] = true; this.showday1 = true;
@@ -1470,7 +1470,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events1[j][k][3] = '#006633' ;
                     }else{
-                                           this.events1[j][k][3] = '#FF3333' ;
+                                          this.events1[j][k][3] = '#FF4040' ;
                                        }
 
                                      this.events1[j][k][5] = true; this.showday1 = true;
@@ -1513,7 +1513,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events1[j][k][3] = '#006633' ;
                     }else{
-                                           this.events1[j][k][3] = '#FF3333' ;
+                                          this.events1[j][k][3] = '#FF4040' ;
                                        }
 
                                      this.events1[j][k][5] = true; this.showday1 = true;
@@ -1556,7 +1556,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events1[j][k][3] = '#006633' ;
                     }else{
-                                           this.events1[j][k][3] = '#FF3333' ;
+                                          this.events1[j][k][3] = '#FF4040' ;
                                        }
 
                                      this.events1[j][k][5] = true; this.showday1 = true;
@@ -1599,7 +1599,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events1[j][k][3] = '#006633' ;
                     }else{
-                                           this.events1[j][k][3] = '#FF3333' ;
+                                          this.events1[j][k][3] = '#FF4040' ;
                                        }
 
                                      this.events1[j][k][5] = true; this.showday1 = true;
@@ -1642,7 +1642,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events1[j][k][3] = '#006633' ;
                     }else{
-                                           this.events1[j][k][3] = '#FF3333' ;
+                                          this.events1[j][k][3] = '#FF4040' ;
                                        }
 
                                      this.events1[j][k][5] = true; this.showday1 = true;
@@ -1688,7 +1688,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events1[j][k][3] = '#006633' ;
                     }else{
-                                           this.events1[j][k][3] = '#FF3333' ;
+                                          this.events1[j][k][3] = '#FF4040' ;
                                        }
 
                                      this.events1[j][k][5] = true; this.showday1 = true;
@@ -1731,7 +1731,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events1[j][k][3] = '#006633' ;
                     }else{
-                                           this.events1[j][k][3] = '#FF3333' ;
+                                          this.events1[j][k][3] = '#FF4040' ;
                                        }
 
                                      this.events1[j][k][5] = true; this.showday1 = true;
@@ -1774,7 +1774,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events1[j][k][3] = '#006633' ;
                     }else{
-                                           this.events1[j][k][3] = '#FF3333' ;
+                                          this.events1[j][k][3] = '#FF4040' ;
                                        }
 
                                      this.events1[j][k][5] = true; this.showday1 = true;
@@ -1817,7 +1817,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events1[j][k][3] = '#006633' ;
                     }else{
-                                           this.events1[j][k][3] = '#FF3333' ;
+                                          this.events1[j][k][3] = '#FF4040' ;
                                        }
 
                                      this.events1[j][k][5] = true; this.showday1 = true;
@@ -1861,7 +1861,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events2[j][k][3] = '#006633' ;
                     }else{
-                                           this.events2[j][k][3] = '#FF3333' ;
+                                          this.events2[j][k][3] = '#FF4040' ;
                                        }
 
                                      this.events2[j][k][5] = true; this.showday2 = true;
@@ -1904,7 +1904,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events2[j][k][3] = '#006633' ;
                     }else{
-                                           this.events2[j][k][3] = '#FF3333' ;
+                                          this.events2[j][k][3] = '#FF4040' ;
                                        }
 
                                      this.events2[j][k][5] = true; this.showday2 = true;
@@ -1947,7 +1947,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events2[j][k][3] = '#006633' ;
                     }else{
-                                           this.events2[j][k][3] = '#FF3333' ;
+                                          this.events2[j][k][3] = '#FF4040' ;
                                        }
 
                                      this.events2[j][k][5] = true; this.showday2 = true;
@@ -1990,7 +1990,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events2[j][k][3] = '#006633' ;
                     }else{
-                                           this.events2[j][k][3] = '#FF3333' ;
+                                          this.events2[j][k][3] = '#FF4040' ;
                                        }
 
                                      this.events2[j][k][5] = true; this.showday2 = true;
@@ -2033,7 +2033,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events2[j][k][3] = '#006633' ;
                     }else{
-                                           this.events2[j][k][3] = '#FF3333' ;
+                                          this.events2[j][k][3] = '#FF4040' ;
                                        }
 
                                      this.events2[j][k][5] = true; this.showday2 = true;
@@ -2076,7 +2076,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events2[j][k][3] = '#006633' ;
                     }else{
-                                           this.events2[j][k][3] = '#FF3333' ;
+                                          this.events2[j][k][3] = '#FF4040' ;
                                        }
 
                                      this.events2[j][k][5] = true; this.showday2 = true;
@@ -2119,7 +2119,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events2[j][k][3] = '#006633' ;
                     }else{
-                                           this.events2[j][k][3] = '#FF3333' ;
+                                          this.events2[j][k][3] = '#FF4040' ;
                                        }
 
                                      this.events2[j][k][5] = true; this.showday2 = true;
@@ -2162,7 +2162,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events2[j][k][3] = '#006633' ;
                     }else{
-                                           this.events2[j][k][3] = '#FF3333' ;
+                                          this.events2[j][k][3] = '#FF4040' ;
                                        }
 
                                      this.events2[j][k][5] = true; this.showday2 = true;
@@ -2205,7 +2205,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events2[j][k][3] = '#006633' ;
                     }else{
-                                           this.events2[j][k][3] = '#FF3333' ;
+                                          this.events2[j][k][3] = '#FF4040' ;
                                        }
 
                                      this.events2[j][k][5] = true; this.showday2 = true;
@@ -2248,7 +2248,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events2[j][k][3] = '#006633' ;
                     }else{
-                                           this.events2[j][k][3] = '#FF3333' ;
+                                          this.events2[j][k][3] = '#FF4040' ;
                                        }
 
                                      this.events2[j][k][5] = true; this.showday2 = true;
@@ -2291,7 +2291,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events2[j][k][3] = '#006633' ;
                     }else{
-                                           this.events2[j][k][3] = '#FF3333' ;
+                                          this.events2[j][k][3] = '#FF4040' ;
                                        }
 
                                      this.events2[j][k][5] = true; this.showday2 = true;
@@ -2334,7 +2334,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events2[j][k][3] = '#006633' ;
                     }else{
-                                           this.events2[j][k][3] = '#FF3333' ;
+                                          this.events2[j][k][3] = '#FF4040' ;
                                        }
 
                                      this.events2[j][k][5] = true; this.showday2 = true;
@@ -2377,7 +2377,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events2[j][k][3] = '#006633' ;
                     }else{
-                                           this.events2[j][k][3] = '#FF3333' ;
+                                          this.events2[j][k][3] = '#FF4040' ;
                                        }
 
                                      this.events2[j][k][5] = true; this.showday2 = true;
@@ -2420,7 +2420,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events2[j][k][3] = '#006633' ;
                     }else{
-                                           this.events2[j][k][3] = '#FF3333' ;
+                                          this.events2[j][k][3] = '#FF4040' ;
                                        }
 
                                      this.events2[j][k][5] = true; this.showday2 = true;
@@ -2463,7 +2463,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events2[j][k][3] = '#006633' ;
                     }else{
-                                           this.events2[j][k][3] = '#FF3333' ;
+                                          this.events2[j][k][3] = '#FF4040' ;
                                        }
 
                                      this.events2[j][k][5] = true; this.showday2 = true;
@@ -2506,7 +2506,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events2[j][k][3] = '#006633' ;
                     }else{
-                                           this.events2[j][k][3] = '#FF3333' ;
+                                          this.events2[j][k][3] = '#FF4040' ;
                                        }
 
                                      this.events2[j][k][5] = true; this.showday2 = true;
@@ -2549,7 +2549,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events2[j][k][3] = '#006633' ;
                     }else{
-                                           this.events2[j][k][3] = '#FF3333' ;
+                                          this.events2[j][k][3] = '#FF4040' ;
                                        }
 
                                      this.events2[j][k][5] = true; this.showday2 = true;
@@ -2592,7 +2592,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events2[j][k][3] = '#006633' ;
                     }else{
-                                           this.events2[j][k][3] = '#FF3333' ;
+                                          this.events2[j][k][3] = '#FF4040' ;
                                        }
 
                                      this.events2[j][k][5] = true; this.showday2 = true;
@@ -2635,7 +2635,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events2[j][k][3] = '#006633' ;
                     }else{
-                                           this.events2[j][k][3] = '#FF3333' ;
+                                          this.events2[j][k][3] = '#FF4040' ;
                                        }
 
                                      this.events2[j][k][5] = true; this.showday2 = true;
@@ -2680,7 +2680,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events3[j][k][3] = '#006633' ;
                     }else{
-                           this.events3[j][k][3] = '#FF3333' ;
+                          this.events3[j][k][3] = '#FF4040' ;
                        }
 
                      this.events3[j][k][5] = true; this.showday3 = true;
@@ -2723,7 +2723,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events3[j][k][3] = '#006633' ;
                     }else{
-                           this.events3[j][k][3] = '#FF3333' ;
+                          this.events3[j][k][3] = '#FF4040' ;
                        }
 
                      this.events3[j][k][5] = true; this.showday3 = true;
@@ -2766,7 +2766,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events3[j][k][3] = '#006633' ;
                     }else{
-                           this.events3[j][k][3] = '#FF3333' ;
+                          this.events3[j][k][3] = '#FF4040' ;
                        }
 
                      this.events3[j][k][5] = true; this.showday3 = true;
@@ -2809,7 +2809,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events3[j][k][3] = '#006633' ;
                     }else{
-                           this.events3[j][k][3] = '#FF3333' ;
+                          this.events3[j][k][3] = '#FF4040' ;
                        }
 
                      this.events3[j][k][5] = true; this.showday3 = true;
@@ -2852,7 +2852,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events3[j][k][3] = '#006633' ;
                     }else{
-                           this.events3[j][k][3] = '#FF3333' ;
+                          this.events3[j][k][3] = '#FF4040' ;
                        }
 
                      this.events3[j][k][5] = true; this.showday3 = true;
@@ -2895,7 +2895,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events3[j][k][3] = '#006633' ;
                     }else{
-                           this.events3[j][k][3] = '#FF3333' ;
+                          this.events3[j][k][3] = '#FF4040' ;
                        }
 
                      this.events3[j][k][5] = true; this.showday3 = true;
@@ -2938,7 +2938,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events3[j][k][3] = '#006633' ;
                     }else{
-                           this.events3[j][k][3] = '#FF3333' ;
+                          this.events3[j][k][3] = '#FF4040' ;
                        }
 
                      this.events3[j][k][5] = true; this.showday3 = true;
@@ -2981,7 +2981,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events3[j][k][3] = '#006633' ;
                     }else{
-                           this.events3[j][k][3] = '#FF3333' ;
+                          this.events3[j][k][3] = '#FF4040' ;
                        }
 
                      this.events3[j][k][5] = true; this.showday3 = true;
@@ -3024,7 +3024,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events3[j][k][3] = '#006633' ;
                     }else{
-                           this.events3[j][k][3] = '#FF3333' ;
+                          this.events3[j][k][3] = '#FF4040' ;
                        }
 
                      this.events3[j][k][5] = true; this.showday3 = true;
@@ -3067,7 +3067,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events3[j][k][3] = '#006633' ;
                     }else{
-                           this.events3[j][k][3] = '#FF3333' ;
+                          this.events3[j][k][3] = '#FF4040' ;
                        }
 
                      this.events3[j][k][5] = true; this.showday3 = true;
@@ -3110,7 +3110,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events3[j][k][3] = '#006633' ;
                     }else{
-                           this.events3[j][k][3] = '#FF3333' ;
+                          this.events3[j][k][3] = '#FF4040' ;
                        }
 
                      this.events3[j][k][5] = true; this.showday3 = true;
@@ -3153,7 +3153,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events3[j][k][3] = '#006633' ;
                     }else{
-                           this.events3[j][k][3] = '#FF3333' ;
+                          this.events3[j][k][3] = '#FF4040' ;
                        }
 
                      this.events3[j][k][5] = true; this.showday3 = true;
@@ -3196,7 +3196,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events3[j][k][3] = '#006633' ;
                     }else{
-                           this.events3[j][k][3] = '#FF3333' ;
+                          this.events3[j][k][3] = '#FF4040' ;
                        }
 
                      this.events3[j][k][5] = true; this.showday3 = true;
@@ -3239,7 +3239,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events3[j][k][3] = '#006633' ;
                     }else{
-                           this.events3[j][k][3] = '#FF3333' ;
+                          this.events3[j][k][3] = '#FF4040' ;
                        }
 
                      this.events3[j][k][5] = true; this.showday3 = true;
@@ -3282,7 +3282,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events3[j][k][3] = '#006633' ;
                     }else{
-                           this.events3[j][k][3] = '#FF3333' ;
+                          this.events3[j][k][3] = '#FF4040' ;
                        }
 
                      this.events3[j][k][5] = true; this.showday3 = true;
@@ -3325,7 +3325,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events3[j][k][3] = '#006633' ;
                     }else{
-                           this.events3[j][k][3] = '#FF3333' ;
+                          this.events3[j][k][3] = '#FF4040' ;
                        }
 
                      this.events3[j][k][5] = true; this.showday3 = true;
@@ -3368,7 +3368,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events3[j][k][3] = '#006633' ;
                     }else{
-                           this.events3[j][k][3] = '#FF3333' ;
+                          this.events3[j][k][3] = '#FF4040' ;
                        }
 
                      this.events3[j][k][5] = true; this.showday3 = true;
@@ -3411,7 +3411,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events3[j][k][3] = '#006633' ;
                     }else{
-                           this.events3[j][k][3] = '#FF3333' ;
+                          this.events3[j][k][3] = '#FF4040' ;
                        }
 
                      this.events3[j][k][5] = true; this.showday3 = true;
@@ -3454,7 +3454,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events3[j][k][3] = '#006633' ;
                     }else{
-                           this.events3[j][k][3] = '#FF3333' ;
+                          this.events3[j][k][3] = '#FF4040' ;
                        }
 
                      this.events3[j][k][5] = true; this.showday3 = true;
@@ -3499,7 +3499,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events4[j][k][3] = '#006633' ;
                     }else{
-                           this.events4[j][k][3] = '#FF3333' ;
+                          this.events4[j][k][3] = '#FF4040' ;
                        }
 
                      this.events4[j][k][5] = true; this.showday4 = true;
@@ -3542,7 +3542,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events4[j][k][3] = '#006633' ;
                     }else{
-                           this.events4[j][k][3] = '#FF3333' ;
+                          this.events4[j][k][3] = '#FF4040' ;
                        }
 
                      this.events4[j][k][5] = true; this.showday4 = true;
@@ -3585,7 +3585,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events4[j][k][3] = '#006633' ;
                     }else{
-                           this.events4[j][k][3] = '#FF3333' ;
+                          this.events4[j][k][3] = '#FF4040' ;
                        }
 
                      this.events4[j][k][5] = true; this.showday4 = true;
@@ -3628,7 +3628,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events4[j][k][3] = '#006633' ;
                     }else{
-                           this.events4[j][k][3] = '#FF3333' ;
+                          this.events4[j][k][3] = '#FF4040' ;
                        }
 
                      this.events4[j][k][5] = true; this.showday4 = true;
@@ -3671,7 +3671,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events4[j][k][3] = '#006633' ;
                     }else{
-                           this.events4[j][k][3] = '#FF3333' ;
+                          this.events4[j][k][3] = '#FF4040' ;
                        }
 
                      this.events4[j][k][5] = true; this.showday4 = true;
@@ -3714,7 +3714,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events4[j][k][3] = '#006633' ;
                     }else{
-                           this.events4[j][k][3] = '#FF3333' ;
+                          this.events4[j][k][3] = '#FF4040' ;
                        }
 
                      this.events4[j][k][5] = true; this.showday4 = true;
@@ -3757,7 +3757,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events4[j][k][3] = '#006633' ;
                     }else{
-                           this.events4[j][k][3] = '#FF3333' ;
+                          this.events4[j][k][3] = '#FF4040' ;
                        }
 
                      this.events4[j][k][5] = true; this.showday4 = true;
@@ -3800,7 +3800,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events4[j][k][3] = '#006633' ;
                     }else{
-                           this.events4[j][k][3] = '#FF3333' ;
+                          this.events4[j][k][3] = '#FF4040' ;
                        }
 
                      this.events4[j][k][5] = true; this.showday4 = true;
@@ -3843,7 +3843,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events4[j][k][3] = '#006633' ;
                     }else{
-                           this.events4[j][k][3] = '#FF3333' ;
+                          this.events4[j][k][3] = '#FF4040' ;
                        }
 
                      this.events4[j][k][5] = true; this.showday4 = true;
@@ -3886,7 +3886,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events4[j][k][3] = '#006633' ;
                     }else{
-                           this.events4[j][k][3] = '#FF3333' ;
+                          this.events4[j][k][3] = '#FF4040' ;
                        }
 
                      this.events4[j][k][5] = true; this.showday4 = true;
@@ -3929,7 +3929,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events4[j][k][3] = '#006633' ;
                     }else{
-                           this.events4[j][k][3] = '#FF3333' ;
+                          this.events4[j][k][3] = '#FF4040' ;
                        }
 
                      this.events4[j][k][5] = true; this.showday4 = true;
@@ -3972,7 +3972,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events4[j][k][3] = '#006633' ;
                     }else{
-                           this.events4[j][k][3] = '#FF3333' ;
+                          this.events4[j][k][3] = '#FF4040' ;
                        }
 
                      this.events4[j][k][5] = true; this.showday4 = true;
@@ -4015,7 +4015,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events4[j][k][3] = '#006633' ;
                     }else{
-                           this.events4[j][k][3] = '#FF3333' ;
+                          this.events4[j][k][3] = '#FF4040' ;
                        }
 
                      this.events4[j][k][5] = true; this.showday4 = true;
@@ -4058,7 +4058,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events4[j][k][3] = '#006633' ;
                     }else{
-                           this.events4[j][k][3] = '#FF3333' ;
+                          this.events4[j][k][3] = '#FF4040' ;
                        }
 
                      this.events4[j][k][5] = true; this.showday4 = true;
@@ -4101,7 +4101,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events4[j][k][3] = '#006633' ;
                     }else{
-                           this.events4[j][k][3] = '#FF3333' ;
+                          this.events4[j][k][3] = '#FF4040' ;
                        }
 
                      this.events4[j][k][5] = true; this.showday4 = true;
@@ -4144,7 +4144,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events4[j][k][3] = '#006633' ;
                     }else{
-                           this.events4[j][k][3] = '#FF3333' ;
+                          this.events4[j][k][3] = '#FF4040' ;
                        }
 
                      this.events4[j][k][5] = true; this.showday4 = true;
@@ -4187,7 +4187,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events4[j][k][3] = '#006633' ;
                     }else{
-                           this.events4[j][k][3] = '#FF3333' ;
+                          this.events4[j][k][3] = '#FF4040' ;
                        }
 
                      this.events4[j][k][5] = true; this.showday4 = true;
@@ -4230,7 +4230,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events4[j][k][3] = '#006633' ;
                     }else{
-                           this.events4[j][k][3] = '#FF3333' ;
+                          this.events4[j][k][3] = '#FF4040' ;
                        }
 
                      this.events4[j][k][5] = true; this.showday4 = true;
@@ -4273,7 +4273,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events4[j][k][3] = '#006633' ;
                     }else{
-                           this.events4[j][k][3] = '#FF3333' ;
+                          this.events4[j][k][3] = '#FF4040' ;
                        }
 
                      this.events4[j][k][5] = true; this.showday4 = true;
@@ -4318,7 +4318,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events5[j][k][3] = '#006633' ;
                     }else{
-                           this.events5[j][k][3] = '#FF3333' ;
+                          this.events5[j][k][3] = '#FF4040' ;
                        }
 
                      this.events5[j][k][5] = true; this.showday5 = true;
@@ -4361,7 +4361,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events5[j][k][3] = '#006633' ;
                     }else{
-                           this.events5[j][k][3] = '#FF3333' ;
+                          this.events5[j][k][3] = '#FF4040' ;
                        }
 
                      this.events5[j][k][5] = true; this.showday5 = true;
@@ -4404,7 +4404,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events5[j][k][3] = '#006633' ;
                     }else{
-                           this.events5[j][k][3] = '#FF3333' ;
+                          this.events5[j][k][3] = '#FF4040' ;
                        }
 
                      this.events5[j][k][5] = true; this.showday5 = true;
@@ -4447,7 +4447,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events5[j][k][3] = '#006633' ;
                     }else{
-                           this.events5[j][k][3] = '#FF3333' ;
+                          this.events5[j][k][3] = '#FF4040' ;
                        }
 
                      this.events5[j][k][5] = true; this.showday5 = true;
@@ -4490,7 +4490,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events5[j][k][3] = '#006633' ;
                     }else{
-                           this.events5[j][k][3] = '#FF3333' ;
+                          this.events5[j][k][3] = '#FF4040' ;
                        }
 
                      this.events5[j][k][5] = true; this.showday5 = true;
@@ -4533,7 +4533,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events5[j][k][3] = '#006633' ;
                     }else{
-                           this.events5[j][k][3] = '#FF3333' ;
+                          this.events5[j][k][3] = '#FF4040' ;
                        }
 
                      this.events5[j][k][5] = true; this.showday5 = true;
@@ -4576,7 +4576,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events5[j][k][3] = '#006633' ;
                     }else{
-                           this.events5[j][k][3] = '#FF3333' ;
+                          this.events5[j][k][3] = '#FF4040' ;
                        }
 
                      this.events5[j][k][5] = true; this.showday5 = true;
@@ -4619,7 +4619,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events5[j][k][3] = '#006633' ;
                     }else{
-                           this.events5[j][k][3] = '#FF3333' ;
+                          this.events5[j][k][3] = '#FF4040' ;
                        }
 
                      this.events5[j][k][5] = true; this.showday5 = true;
@@ -4662,7 +4662,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events5[j][k][3] = '#006633' ;
                     }else{
-                           this.events5[j][k][3] = '#FF3333' ;
+                          this.events5[j][k][3] = '#FF4040' ;
                        }
 
                      this.events5[j][k][5] = true; this.showday5 = true;
@@ -4705,7 +4705,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events5[j][k][3] = '#006633' ;
                     }else{
-                           this.events5[j][k][3] = '#FF3333' ;
+                          this.events5[j][k][3] = '#FF4040' ;
                        }
 
                      this.events5[j][k][5] = true; this.showday5 = true;
@@ -4748,7 +4748,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events5[j][k][3] = '#006633' ;
                     }else{
-                           this.events5[j][k][3] = '#FF3333' ;
+                          this.events5[j][k][3] = '#FF4040' ;
                        }
 
                      this.events5[j][k][5] = true; this.showday5 = true;
@@ -4791,7 +4791,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events5[j][k][3] = '#006633' ;
                     }else{
-                           this.events5[j][k][3] = '#FF3333' ;
+                          this.events5[j][k][3] = '#FF4040' ;
                        }
 
                      this.events5[j][k][5] = true; this.showday5 = true;
@@ -4834,7 +4834,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events5[j][k][3] = '#006633' ;
                     }else{
-                           this.events5[j][k][3] = '#FF3333' ;
+                          this.events5[j][k][3] = '#FF4040' ;
                        }
 
                      this.events5[j][k][5] = true; this.showday5 = true;
@@ -4877,7 +4877,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events5[j][k][3] = '#006633' ;
                     }else{
-                           this.events5[j][k][3] = '#FF3333' ;
+                          this.events5[j][k][3] = '#FF4040' ;
                        }
 
                      this.events5[j][k][5] = true; this.showday5 = true;
@@ -4920,7 +4920,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events5[j][k][3] = '#006633' ;
                     }else{
-                           this.events5[j][k][3] = '#FF3333' ;
+                          this.events5[j][k][3] = '#FF4040' ;
                        }
 
                      this.events5[j][k][5] = true; this.showday5 = true;
@@ -4963,7 +4963,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events5[j][k][3] = '#006633' ;
                     }else{
-                           this.events5[j][k][3] = '#FF3333' ;
+                          this.events5[j][k][3] = '#FF4040' ;
                        }
 
                      this.events5[j][k][5] = true; this.showday5 = true;
@@ -5006,7 +5006,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events5[j][k][3] = '#006633' ;
                     }else{
-                           this.events5[j][k][3] = '#FF3333' ;
+                          this.events5[j][k][3] = '#FF4040' ;
                        }
 
                      this.events5[j][k][5] = true; this.showday5 = true;
@@ -5049,7 +5049,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events5[j][k][3] = '#006633' ;
                     }else{
-                           this.events5[j][k][3] = '#FF3333' ;
+                          this.events5[j][k][3] = '#FF4040' ;
                        }
 
                      this.events5[j][k][5] = true; this.showday5 = true;
@@ -5092,7 +5092,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events5[j][k][3] = '#006633' ;
                     }else{
-                           this.events5[j][k][3] = '#FF3333' ;
+                          this.events5[j][k][3] = '#FF4040' ;
                        }
 
                      this.events5[j][k][5] = true; this.showday5 = true;
@@ -5138,7 +5138,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events6[j][k][3] = '#006633' ;
                     }else{
-                           this.events6[j][k][3] = '#FF3333' ;
+                          this.events6[j][k][3] = '#FF4040' ;
                        }
 
                      this.events6[j][k][5] = true; this.showday6 = true;
@@ -5181,7 +5181,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events6[j][k][3] = '#006633' ;
                     }else{
-                           this.events6[j][k][3] = '#FF3333' ;
+                          this.events6[j][k][3] = '#FF4040' ;
                        }
 
                      this.events6[j][k][5] = true; this.showday6 = true;
@@ -5224,7 +5224,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events6[j][k][3] = '#006633' ;
                     }else{
-                           this.events6[j][k][3] = '#FF3333' ;
+                          this.events6[j][k][3] = '#FF4040' ;
                        }
 
                      this.events6[j][k][5] = true; this.showday6 = true;
@@ -5267,7 +5267,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events6[j][k][3] = '#006633' ;
                     }else{
-                           this.events6[j][k][3] = '#FF3333' ;
+                          this.events6[j][k][3] = '#FF4040' ;
                        }
 
                      this.events6[j][k][5] = true; this.showday6 = true;
@@ -5310,7 +5310,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events6[j][k][3] = '#006633' ;
                     }else{
-                           this.events6[j][k][3] = '#FF3333' ;
+                          this.events6[j][k][3] = '#FF4040' ;
                        }
 
                      this.events6[j][k][5] = true; this.showday6 = true;
@@ -5353,7 +5353,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events6[j][k][3] = '#006633' ;
                     }else{
-                           this.events6[j][k][3] = '#FF3333' ;
+                          this.events6[j][k][3] = '#FF4040' ;
                        }
 
                      this.events6[j][k][5] = true; this.showday6 = true;
@@ -5396,7 +5396,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events6[j][k][3] = '#006633' ;
                     }else{
-                           this.events6[j][k][3] = '#FF3333' ;
+                          this.events6[j][k][3] = '#FF4040' ;
                        }
 
                      this.events6[j][k][5] = true; this.showday6 = true;
@@ -5439,7 +5439,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events6[j][k][3] = '#006633' ;
                     }else{
-                           this.events6[j][k][3] = '#FF3333' ;
+                          this.events6[j][k][3] = '#FF4040' ;
                        }
 
                      this.events6[j][k][5] = true; this.showday6 = true;
@@ -5482,7 +5482,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events6[j][k][3] = '#006633' ;
                     }else{
-                           this.events6[j][k][3] = '#FF3333' ;
+                          this.events6[j][k][3] = '#FF4040' ;
                        }
 
                      this.events6[j][k][5] = true; this.showday6 = true;
@@ -5525,7 +5525,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events6[j][k][3] = '#006633' ;
                     }else{
-                           this.events6[j][k][3] = '#FF3333' ;
+                          this.events6[j][k][3] = '#FF4040' ;
                        }
 
                      this.events6[j][k][5] = true; this.showday6 = true;
@@ -5568,7 +5568,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events6[j][k][3] = '#006633' ;
                     }else{
-                           this.events6[j][k][3] = '#FF3333' ;
+                          this.events6[j][k][3] = '#FF4040' ;
                        }
 
                      this.events6[j][k][5] = true; this.showday6 = true;
@@ -5611,7 +5611,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events6[j][k][3] = '#006633' ;
                     }else{
-                           this.events6[j][k][3] = '#FF3333' ;
+                          this.events6[j][k][3] = '#FF4040' ;
                        }
 
                      this.events6[j][k][5] = true; this.showday6 = true;
@@ -5654,7 +5654,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events6[j][k][3] = '#006633' ;
                     }else{
-                           this.events6[j][k][3] = '#FF3333' ;
+                          this.events6[j][k][3] = '#FF4040' ;
                        }
 
                      this.events6[j][k][5] = true; this.showday6 = true;
@@ -5697,7 +5697,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events6[j][k][3] = '#006633' ;
                     }else{
-                           this.events6[j][k][3] = '#FF3333' ;
+                          this.events6[j][k][3] = '#FF4040' ;
                        }
 
                      this.events6[j][k][5] = true; this.showday6 = true;
@@ -5740,7 +5740,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events6[j][k][3] = '#006633' ;
                     }else{
-                           this.events6[j][k][3] = '#FF3333' ;
+                          this.events6[j][k][3] = '#FF4040' ;
                        }
 
                      this.events6[j][k][5] = true; this.showday6 = true;
@@ -5783,7 +5783,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events6[j][k][3] = '#006633' ;
                     }else{
-                           this.events6[j][k][3] = '#FF3333' ;
+                          this.events6[j][k][3] = '#FF4040' ;
                        }
 
                      this.events6[j][k][5] = true; this.showday6 = true;
@@ -5826,7 +5826,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events6[j][k][3] = '#006633' ;
                     }else{
-                           this.events6[j][k][3] = '#FF3333' ;
+                          this.events6[j][k][3] = '#FF4040' ;
                        }
 
                      this.events6[j][k][5] = true; this.showday6 = true;
@@ -5869,7 +5869,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events6[j][k][3] = '#006633' ;
                     }else{
-                           this.events6[j][k][3] = '#FF3333' ;
+                          this.events6[j][k][3] = '#FF4040' ;
                        }
 
                      this.events6[j][k][5] = true; this.showday6 = true;
@@ -5912,7 +5912,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events6[j][k][3] = '#006633' ;
                     }else{
-                           this.events6[j][k][3] = '#FF3333' ;
+                          this.events6[j][k][3] = '#FF4040' ;
                        }
 
                      this.events6[j][k][5] = true; this.showday6 = true;
@@ -5958,7 +5958,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events7[j][k][3] = '#006633' ;
                     }else{
-                           this.events7[j][k][3] = '#FF3333' ;
+                          this.events7[j][k][3] = '#FF4040' ;
                        }
 
                      this.events7[j][k][5] = true; this.showday7 = true;
@@ -6001,7 +6001,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events7[j][k][3] = '#006633' ;
                     }else{
-                           this.events7[j][k][3] = '#FF3333' ;
+                          this.events7[j][k][3] = '#FF4040' ;
                        }
 
                      this.events7[j][k][5] = true; this.showday7 = true;
@@ -6044,7 +6044,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events7[j][k][3] = '#006633' ;
                     }else{
-                           this.events7[j][k][3] = '#FF3333' ;
+                          this.events7[j][k][3] = '#FF4040' ;
                        }
 
                      this.events7[j][k][5] = true; this.showday7 = true;
@@ -6087,7 +6087,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events7[j][k][3] = '#006633' ;
                     }else{
-                           this.events7[j][k][3] = '#FF3333' ;
+                          this.events7[j][k][3] = '#FF4040' ;
                        }
 
                      this.events7[j][k][5] = true; this.showday7 = true;
@@ -6130,7 +6130,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events7[j][k][3] = '#006633' ;
                     }else{
-                           this.events7[j][k][3] = '#FF3333' ;
+                          this.events7[j][k][3] = '#FF4040' ;
                        }
 
                      this.events7[j][k][5] = true; this.showday7 = true;
@@ -6173,7 +6173,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events7[j][k][3] = '#006633' ;
                     }else{
-                           this.events7[j][k][3] = '#FF3333' ;
+                          this.events7[j][k][3] = '#FF4040' ;
                        }
 
                      this.events7[j][k][5] = true; this.showday7 = true;
@@ -6216,7 +6216,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events7[j][k][3] = '#006633' ;
                     }else{
-                           this.events7[j][k][3] = '#FF3333' ;
+                          this.events7[j][k][3] = '#FF4040' ;
                        }
 
                      this.events7[j][k][5] = true; this.showday7 = true;
@@ -6259,7 +6259,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events7[j][k][3] = '#006633' ;
                     }else{
-                           this.events7[j][k][3] = '#FF3333' ;
+                          this.events7[j][k][3] = '#FF4040' ;
                        }
 
                      this.events7[j][k][5] = true; this.showday7 = true;
@@ -6302,7 +6302,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events7[j][k][3] = '#006633' ;
                     }else{
-                           this.events7[j][k][3] = '#FF3333' ;
+                          this.events7[j][k][3] = '#FF4040' ;
                        }
 
                      this.events7[j][k][5] = true; this.showday7 = true;
@@ -6345,7 +6345,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events7[j][k][3] = '#006633' ;
                     }else{
-                           this.events7[j][k][3] = '#FF3333' ;
+                          this.events7[j][k][3] = '#FF4040' ;
                        }
 
                      this.events7[j][k][5] = true; this.showday7 = true;
@@ -6388,7 +6388,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events7[j][k][3] = '#006633' ;
                     }else{
-                           this.events7[j][k][3] = '#FF3333' ;
+                          this.events7[j][k][3] = '#FF4040' ;
                        }
 
                      this.events7[j][k][5] = true; this.showday7 = true;
@@ -6431,7 +6431,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events7[j][k][3] = '#006633' ;
                     }else{
-                           this.events7[j][k][3] = '#FF3333' ;
+                          this.events7[j][k][3] = '#FF4040' ;
                        }
 
                      this.events7[j][k][5] = true; this.showday7 = true;
@@ -6474,7 +6474,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events7[j][k][3] = '#006633' ;
                     }else{
-                           this.events7[j][k][3] = '#FF3333' ;
+                          this.events7[j][k][3] = '#FF4040' ;
                        }
 
                      this.events7[j][k][5] = true; this.showday7 = true;
@@ -6517,7 +6517,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events7[j][k][3] = '#006633' ;
                     }else{
-                           this.events7[j][k][3] = '#FF3333' ;
+                          this.events7[j][k][3] = '#FF4040' ;
                        }
 
                      this.events7[j][k][5] = true; this.showday7 = true;
@@ -6560,7 +6560,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events7[j][k][3] = '#006633' ;
                     }else{
-                           this.events7[j][k][3] = '#FF3333' ;
+                          this.events7[j][k][3] = '#FF4040' ;
                        }
 
                      this.events7[j][k][5] = true; this.showday7 = true;
@@ -6603,7 +6603,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events7[j][k][3] = '#006633' ;
                     }else{
-                           this.events7[j][k][3] = '#FF3333' ;
+                          this.events7[j][k][3] = '#FF4040' ;
                        }
 
                      this.events7[j][k][5] = true; this.showday7 = true;
@@ -6646,7 +6646,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events7[j][k][3] = '#006633' ;
                     }else{
-                           this.events7[j][k][3] = '#FF3333' ;
+                          this.events7[j][k][3] = '#FF4040' ;
                        }
 
                      this.events7[j][k][5] = true; this.showday7 = true;
@@ -6689,7 +6689,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events7[j][k][3] = '#006633' ;
                     }else{
-                           this.events7[j][k][3] = '#FF3333' ;
+                          this.events7[j][k][3] = '#FF4040' ;
                        }
 
                      this.events7[j][k][5] = true; this.showday7 = true;
@@ -6732,7 +6732,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events7[j][k][3] = '#006633' ;
                     }else{
-                           this.events7[j][k][3] = '#FF3333' ;
+                          this.events7[j][k][3] = '#FF4040' ;
                        }
 
                      this.events7[j][k][5] = true; this.showday7 = true;
@@ -6777,7 +6777,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events8[j][k][3] = '#006633' ;
                     }else{
-                           this.events8[j][k][3] = '#FF3333' ;
+                          this.events8[j][k][3] = '#FF4040' ;
                        }
 
                      this.events8[j][k][5] = true; this.showday8 = true;
@@ -6820,7 +6820,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events8[j][k][3] = '#006633' ;
                     }else{
-                           this.events8[j][k][3] = '#FF3333' ;
+                          this.events8[j][k][3] = '#FF4040' ;
                        }
 
                      this.events8[j][k][5] = true; this.showday8 = true;
@@ -6863,7 +6863,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events8[j][k][3] = '#006633' ;
                     }else{
-                           this.events8[j][k][3] = '#FF3333' ;
+                          this.events8[j][k][3] = '#FF4040' ;
                        }
 
                      this.events8[j][k][5] = true; this.showday8 = true;
@@ -6906,7 +6906,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events8[j][k][3] = '#006633' ;
                     }else{
-                           this.events8[j][k][3] = '#FF3333' ;
+                          this.events8[j][k][3] = '#FF4040' ;
                        }
 
                      this.events8[j][k][5] = true; this.showday8 = true;
@@ -6949,7 +6949,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events8[j][k][3] = '#006633' ;
                     }else{
-                           this.events8[j][k][3] = '#FF3333' ;
+                          this.events8[j][k][3] = '#FF4040' ;
                        }
 
                      this.events8[j][k][5] = true; this.showday8 = true;
@@ -6992,7 +6992,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events8[j][k][3] = '#006633' ;
                     }else{
-                           this.events8[j][k][3] = '#FF3333' ;
+                          this.events8[j][k][3] = '#FF4040' ;
                        }
 
                      this.events8[j][k][5] = true; this.showday8 = true;
@@ -7035,7 +7035,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events8[j][k][3] = '#006633' ;
                     }else{
-                           this.events8[j][k][3] = '#FF3333' ;
+                          this.events8[j][k][3] = '#FF4040' ;
                        }
 
                      this.events8[j][k][5] = true; this.showday8 = true;
@@ -7078,7 +7078,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events8[j][k][3] = '#006633' ;
                     }else{
-                           this.events8[j][k][3] = '#FF3333' ;
+                          this.events8[j][k][3] = '#FF4040' ;
                        }
 
                      this.events8[j][k][5] = true; this.showday8 = true;
@@ -7121,7 +7121,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events8[j][k][3] = '#006633' ;
                     }else{
-                           this.events8[j][k][3] = '#FF3333' ;
+                          this.events8[j][k][3] = '#FF4040' ;
                        }
 
                      this.events8[j][k][5] = true; this.showday8 = true;
@@ -7164,7 +7164,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events8[j][k][3] = '#006633' ;
                     }else{
-                           this.events8[j][k][3] = '#FF3333' ;
+                          this.events8[j][k][3] = '#FF4040' ;
                        }
 
                      this.events8[j][k][5] = true; this.showday8 = true;
@@ -7207,7 +7207,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events8[j][k][3] = '#006633' ;
                     }else{
-                           this.events8[j][k][3] = '#FF3333' ;
+                          this.events8[j][k][3] = '#FF4040' ;
                        }
 
                      this.events8[j][k][5] = true; this.showday8 = true;
@@ -7250,7 +7250,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events8[j][k][3] = '#006633' ;
                     }else{
-                           this.events8[j][k][3] = '#FF3333' ;
+                          this.events8[j][k][3] = '#FF4040' ;
                        }
 
                      this.events8[j][k][5] = true; this.showday8 = true;
@@ -7293,7 +7293,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events8[j][k][3] = '#006633' ;
                     }else{
-                           this.events8[j][k][3] = '#FF3333' ;
+                          this.events8[j][k][3] = '#FF4040' ;
                        }
 
                      this.events8[j][k][5] = true; this.showday8 = true;
@@ -7336,7 +7336,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events8[j][k][3] = '#006633' ;
                     }else{
-                           this.events8[j][k][3] = '#FF3333' ;
+                          this.events8[j][k][3] = '#FF4040' ;
                        }
 
                      this.events8[j][k][5] = true; this.showday8 = true;
@@ -7379,7 +7379,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events8[j][k][3] = '#006633' ;
                     }else{
-                           this.events8[j][k][3] = '#FF3333' ;
+                          this.events8[j][k][3] = '#FF4040' ;
                        }
 
                      this.events8[j][k][5] = true; this.showday8 = true;
@@ -7422,7 +7422,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events8[j][k][3] = '#006633' ;
                     }else{
-                           this.events8[j][k][3] = '#FF3333' ;
+                          this.events8[j][k][3] = '#FF4040' ;
                        }
 
                      this.events8[j][k][5] = true; this.showday8 = true;
@@ -7465,7 +7465,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events8[j][k][3] = '#006633' ;
                     }else{
-                           this.events8[j][k][3] = '#FF3333' ;
+                          this.events8[j][k][3] = '#FF4040' ;
                        }
 
                      this.events8[j][k][5] = true; this.showday8 = true;
@@ -7508,7 +7508,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events8[j][k][3] = '#006633' ;
                     }else{
-                           this.events8[j][k][3] = '#FF3333' ;
+                          this.events8[j][k][3] = '#FF4040' ;
                        }
 
                      this.events8[j][k][5] = true; this.showday8 = true;
@@ -7551,7 +7551,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events8[j][k][3] = '#006633' ;
                     }else{
-                           this.events8[j][k][3] = '#FF3333' ;
+                          this.events8[j][k][3] = '#FF4040' ;
                        }
 
                      this.events8[j][k][5] = true; this.showday8 = true;
@@ -7595,7 +7595,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events9[j][k][3] = '#006633' ;
                     }else{
-                           this.events9[j][k][3] = '#FF3333' ;
+                          this.events9[j][k][3] = '#FF4040' ;
                        }
 
                      this.events9[j][k][5] = true; this.showday9 = true;
@@ -7638,7 +7638,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events9[j][k][3] = '#006633' ;
                     }else{
-                           this.events9[j][k][3] = '#FF3333' ;
+                          this.events9[j][k][3] = '#FF4040' ;
                        }
 
                      this.events9[j][k][5] = true; this.showday9 = true;
@@ -7681,7 +7681,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events9[j][k][3] = '#006633' ;
                     }else{
-                           this.events9[j][k][3] = '#FF3333' ;
+                          this.events9[j][k][3] = '#FF4040' ;
                        }
 
                      this.events9[j][k][5] = true; this.showday9 = true;
@@ -7724,7 +7724,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events9[j][k][3] = '#006633' ;
                     }else{
-                           this.events9[j][k][3] = '#FF3333' ;
+                          this.events9[j][k][3] = '#FF4040' ;
                        }
 
                      this.events9[j][k][5] = true; this.showday9 = true;
@@ -7767,7 +7767,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events9[j][k][3] = '#006633' ;
                     }else{
-                           this.events9[j][k][3] = '#FF3333' ;
+                          this.events9[j][k][3] = '#FF4040' ;
                        }
 
                      this.events9[j][k][5] = true; this.showday9 = true;
@@ -7810,7 +7810,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events9[j][k][3] = '#006633' ;
                     }else{
-                           this.events9[j][k][3] = '#FF3333' ;
+                          this.events9[j][k][3] = '#FF4040' ;
                        }
 
                      this.events9[j][k][5] = true; this.showday9 = true;
@@ -7853,7 +7853,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events9[j][k][3] = '#006633' ;
                     }else{
-                           this.events9[j][k][3] = '#FF3333' ;
+                          this.events9[j][k][3] = '#FF4040' ;
                        }
 
                      this.events9[j][k][5] = true; this.showday9 = true;
@@ -7896,7 +7896,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events9[j][k][3] = '#006633' ;
                     }else{
-                           this.events9[j][k][3] = '#FF3333' ;
+                          this.events9[j][k][3] = '#FF4040' ;
                        }
 
                      this.events9[j][k][5] = true; this.showday9 = true;
@@ -7939,7 +7939,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events9[j][k][3] = '#006633' ;
                     }else{
-                           this.events9[j][k][3] = '#FF3333' ;
+                          this.events9[j][k][3] = '#FF4040' ;
                        }
 
                      this.events9[j][k][5] = true; this.showday9 = true;
@@ -7982,7 +7982,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events9[j][k][3] = '#006633' ;
                     }else{
-                           this.events9[j][k][3] = '#FF3333' ;
+                          this.events9[j][k][3] = '#FF4040' ;
                        }
 
                      this.events9[j][k][5] = true; this.showday9 = true;
@@ -8025,7 +8025,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events9[j][k][3] = '#006633' ;
                     }else{
-                           this.events9[j][k][3] = '#FF3333' ;
+                          this.events9[j][k][3] = '#FF4040' ;
                        }
 
                      this.events9[j][k][5] = true; this.showday9 = true;
@@ -8068,7 +8068,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events9[j][k][3] = '#006633' ;
                     }else{
-                           this.events9[j][k][3] = '#FF3333' ;
+                          this.events9[j][k][3] = '#FF4040' ;
                        }
 
                      this.events9[j][k][5] = true; this.showday9 = true;
@@ -8111,7 +8111,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events9[j][k][3] = '#006633' ;
                     }else{
-                           this.events9[j][k][3] = '#FF3333' ;
+                          this.events9[j][k][3] = '#FF4040' ;
                        }
 
                      this.events9[j][k][5] = true; this.showday9 = true;
@@ -8154,7 +8154,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events9[j][k][3] = '#006633' ;
                     }else{
-                           this.events9[j][k][3] = '#FF3333' ;
+                          this.events9[j][k][3] = '#FF4040' ;
                        }
 
                      this.events9[j][k][5] = true; this.showday9 = true;
@@ -8197,7 +8197,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events9[j][k][3] = '#006633' ;
                     }else{
-                           this.events9[j][k][3] = '#FF3333' ;
+                          this.events9[j][k][3] = '#FF4040' ;
                        }
 
                      this.events9[j][k][5] = true; this.showday9 = true;
@@ -8240,7 +8240,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events9[j][k][3] = '#006633' ;
                     }else{
-                           this.events9[j][k][3] = '#FF3333' ;
+                          this.events9[j][k][3] = '#FF4040' ;
                        }
 
                      this.events9[j][k][5] = true; this.showday9 = true;
@@ -8283,7 +8283,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events9[j][k][3] = '#006633' ;
                     }else{
-                           this.events9[j][k][3] = '#FF3333' ;
+                          this.events9[j][k][3] = '#FF4040' ;
                        }
 
                      this.events9[j][k][5] = true; this.showday9 = true;
@@ -8326,7 +8326,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events9[j][k][3] = '#006633' ;
                     }else{
-                           this.events9[j][k][3] = '#FF3333' ;
+                          this.events9[j][k][3] = '#FF4040' ;
                        }
 
                      this.events9[j][k][5] = true; this.showday9 = true;
@@ -8369,7 +8369,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events9[j][k][3] = '#006633' ;
                     }else{
-                           this.events9[j][k][3] = '#FF3333' ;
+                          this.events9[j][k][3] = '#FF4040' ;
                        }
 
                      this.events9[j][k][5] = true; this.showday9 = true;
@@ -8414,7 +8414,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events10[j][k][3] = '#006633' ;
                     }else{
-                           this.events10[j][k][3] = '#FF3333' ;
+                          this.events10[j][k][3] = '#FF4040' ;
                        }
 
                      this.events10[j][k][5] = true; this.showday10 = true;
@@ -8457,7 +8457,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events10[j][k][3] = '#006633' ;
                     }else{
-                           this.events10[j][k][3] = '#FF3333' ;
+                          this.events10[j][k][3] = '#FF4040' ;
                        }
 
                      this.events10[j][k][5] = true; this.showday10 = true;
@@ -8500,7 +8500,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events10[j][k][3] = '#006633' ;
                     }else{
-                           this.events10[j][k][3] = '#FF3333' ;
+                          this.events10[j][k][3] = '#FF4040' ;
                        }
 
                      this.events10[j][k][5] = true; this.showday10 = true;
@@ -8543,7 +8543,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events10[j][k][3] = '#006633' ;
                     }else{
-                           this.events10[j][k][3] = '#FF3333' ;
+                          this.events10[j][k][3] = '#FF4040' ;
                        }
 
                      this.events10[j][k][5] = true; this.showday10 = true;
@@ -8586,7 +8586,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events10[j][k][3] = '#006633' ;
                     }else{
-                           this.events10[j][k][3] = '#FF3333' ;
+                          this.events10[j][k][3] = '#FF4040' ;
                        }
 
                      this.events10[j][k][5] = true; this.showday10 = true;
@@ -8629,7 +8629,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events10[j][k][3] = '#006633' ;
                     }else{
-                           this.events10[j][k][3] = '#FF3333' ;
+                          this.events10[j][k][3] = '#FF4040' ;
                        }
 
                      this.events10[j][k][5] = true; this.showday10 = true;
@@ -8672,7 +8672,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events10[j][k][3] = '#006633' ;
                     }else{
-                           this.events10[j][k][3] = '#FF3333' ;
+                          this.events10[j][k][3] = '#FF4040' ;
                        }
 
                      this.events10[j][k][5] = true; this.showday10 = true;
@@ -8715,7 +8715,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events10[j][k][3] = '#006633' ;
                     }else{
-                           this.events10[j][k][3] = '#FF3333' ;
+                          this.events10[j][k][3] = '#FF4040' ;
                        }
 
                      this.events10[j][k][5] = true; this.showday10 = true;
@@ -8758,7 +8758,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events10[j][k][3] = '#006633' ;
                     }else{
-                           this.events10[j][k][3] = '#FF3333' ;
+                          this.events10[j][k][3] = '#FF4040' ;
                        }
 
                      this.events10[j][k][5] = true; this.showday10 = true;
@@ -8801,7 +8801,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events10[j][k][3] = '#006633' ;
                     }else{
-                           this.events10[j][k][3] = '#FF3333' ;
+                          this.events10[j][k][3] = '#FF4040' ;
                        }
 
                      this.events10[j][k][5] = true; this.showday10 = true;
@@ -8844,7 +8844,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events10[j][k][3] = '#006633' ;
                     }else{
-                           this.events10[j][k][3] = '#FF3333' ;
+                          this.events10[j][k][3] = '#FF4040' ;
                        }
 
                      this.events10[j][k][5] = true; this.showday10 = true;
@@ -8887,7 +8887,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events10[j][k][3] = '#006633' ;
                     }else{
-                           this.events10[j][k][3] = '#FF3333' ;
+                          this.events10[j][k][3] = '#FF4040' ;
                        }
 
                      this.events10[j][k][5] = true; this.showday10 = true;
@@ -8930,7 +8930,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events10[j][k][3] = '#006633' ;
                     }else{
-                           this.events10[j][k][3] = '#FF3333' ;
+                          this.events10[j][k][3] = '#FF4040' ;
                        }
 
                      this.events10[j][k][5] = true; this.showday10 = true;
@@ -8973,7 +8973,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events10[j][k][3] = '#006633' ;
                     }else{
-                           this.events10[j][k][3] = '#FF3333' ;
+                          this.events10[j][k][3] = '#FF4040' ;
                        }
 
                      this.events10[j][k][5] = true; this.showday10 = true;
@@ -9016,7 +9016,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events10[j][k][3] = '#006633' ;
                     }else{
-                           this.events10[j][k][3] = '#FF3333' ;
+                          this.events10[j][k][3] = '#FF4040' ;
                        }
 
                      this.events10[j][k][5] = true; this.showday10 = true;
@@ -9059,7 +9059,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events10[j][k][3] = '#006633' ;
                     }else{
-                           this.events10[j][k][3] = '#FF3333' ;
+                          this.events10[j][k][3] = '#FF4040' ;
                        }
 
                      this.events10[j][k][5] = true; this.showday10 = true;
@@ -9102,7 +9102,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events10[j][k][3] = '#006633' ;
                     }else{
-                           this.events10[j][k][3] = '#FF3333' ;
+                          this.events10[j][k][3] = '#FF4040' ;
                        }
 
                      this.events10[j][k][5] = true; this.showday10 = true;
@@ -9145,7 +9145,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events10[j][k][3] = '#006633' ;
                     }else{
-                           this.events10[j][k][3] = '#FF3333' ;
+                          this.events10[j][k][3] = '#FF4040' ;
                        }
 
                      this.events10[j][k][5] = true; this.showday10 = true;
@@ -9188,7 +9188,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events10[j][k][3] = '#006633' ;
                     }else{
-                           this.events10[j][k][3] = '#FF3333' ;
+                          this.events10[j][k][3] = '#FF4040' ;
                        }
 
                      this.events10[j][k][5] = true; this.showday10 = true;
@@ -9231,7 +9231,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events11[j][k][3] = '#006633' ;
                     }else{
-                           this.events11[j][k][3] = '#FF3333' ;
+                          this.events11[j][k][3] = '#FF4040' ;
                        }
 
                      this.events11[j][k][5] = true; this.showday11 = true;
@@ -9274,7 +9274,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events11[j][k][3] = '#006633' ;
                     }else{
-                           this.events11[j][k][3] = '#FF3333' ;
+                          this.events11[j][k][3] = '#FF4040' ;
                        }
 
                      this.events11[j][k][5] = true; this.showday11 = true;
@@ -9317,7 +9317,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events11[j][k][3] = '#006633' ;
                     }else{
-                           this.events11[j][k][3] = '#FF3333' ;
+                          this.events11[j][k][3] = '#FF4040' ;
                        }
 
                      this.events11[j][k][5] = true; this.showday11 = true;
@@ -9360,7 +9360,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events11[j][k][3] = '#006633' ;
                     }else{
-                           this.events11[j][k][3] = '#FF3333' ;
+                          this.events11[j][k][3] = '#FF4040' ;
                        }
 
                      this.events11[j][k][5] = true; this.showday11 = true;
@@ -9403,7 +9403,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events11[j][k][3] = '#006633' ;
                     }else{
-                           this.events11[j][k][3] = '#FF3333' ;
+                          this.events11[j][k][3] = '#FF4040' ;
                        }
 
                      this.events11[j][k][5] = true; this.showday11 = true;
@@ -9446,7 +9446,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events11[j][k][3] = '#006633' ;
                     }else{
-                           this.events11[j][k][3] = '#FF3333' ;
+                          this.events11[j][k][3] = '#FF4040' ;
                        }
 
                      this.events11[j][k][5] = true; this.showday11 = true;
@@ -9489,7 +9489,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events11[j][k][3] = '#006633' ;
                     }else{
-                           this.events11[j][k][3] = '#FF3333' ;
+                          this.events11[j][k][3] = '#FF4040' ;
                        }
 
                      this.events11[j][k][5] = true; this.showday11 = true;
@@ -9532,7 +9532,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events11[j][k][3] = '#006633' ;
                     }else{
-                           this.events11[j][k][3] = '#FF3333' ;
+                          this.events11[j][k][3] = '#FF4040' ;
                        }
 
                      this.events11[j][k][5] = true; this.showday11 = true;
@@ -9575,7 +9575,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events11[j][k][3] = '#006633' ;
                     }else{
-                           this.events11[j][k][3] = '#FF3333' ;
+                          this.events11[j][k][3] = '#FF4040' ;
                        }
 
                      this.events11[j][k][5] = true; this.showday11 = true;
@@ -9618,7 +9618,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events11[j][k][3] = '#006633' ;
                     }else{
-                           this.events11[j][k][3] = '#FF3333' ;
+                          this.events11[j][k][3] = '#FF4040' ;
                        }
 
                      this.events11[j][k][5] = true; this.showday11 = true;
@@ -9661,7 +9661,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events11[j][k][3] = '#006633' ;
                     }else{
-                           this.events11[j][k][3] = '#FF3333' ;
+                          this.events11[j][k][3] = '#FF4040' ;
                        }
 
                      this.events11[j][k][5] = true; this.showday11 = true;
@@ -9704,7 +9704,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events11[j][k][3] = '#006633' ;
                     }else{
-                           this.events11[j][k][3] = '#FF3333' ;
+                          this.events11[j][k][3] = '#FF4040' ;
                        }
 
                      this.events11[j][k][5] = true; this.showday11 = true;
@@ -9747,7 +9747,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events11[j][k][3] = '#006633' ;
                     }else{
-                           this.events11[j][k][3] = '#FF3333' ;
+                          this.events11[j][k][3] = '#FF4040' ;
                        }
 
                      this.events11[j][k][5] = true; this.showday11 = true;
@@ -9790,7 +9790,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events11[j][k][3] = '#006633' ;
                     }else{
-                           this.events11[j][k][3] = '#FF3333' ;
+                          this.events11[j][k][3] = '#FF4040' ;
                        }
 
                      this.events11[j][k][5] = true; this.showday11 = true;
@@ -9833,7 +9833,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events11[j][k][3] = '#006633' ;
                     }else{
-                           this.events11[j][k][3] = '#FF3333' ;
+                          this.events11[j][k][3] = '#FF4040' ;
                        }
 
                      this.events11[j][k][5] = true; this.showday11 = true;
@@ -9876,7 +9876,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events11[j][k][3] = '#006633' ;
                     }else{
-                           this.events11[j][k][3] = '#FF3333' ;
+                          this.events11[j][k][3] = '#FF4040' ;
                        }
 
                      this.events11[j][k][5] = true; this.showday11 = true;
@@ -9919,7 +9919,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events11[j][k][3] = '#006633' ;
                     }else{
-                           this.events11[j][k][3] = '#FF3333' ;
+                          this.events11[j][k][3] = '#FF4040' ;
                        }
 
                      this.events11[j][k][5] = true; this.showday11 = true;
@@ -9962,7 +9962,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events11[j][k][3] = '#006633' ;
                     }else{
-                           this.events11[j][k][3] = '#FF3333' ;
+                          this.events11[j][k][3] = '#FF4040' ;
                        }
 
                      this.events11[j][k][5] = true; this.showday11 = true;
@@ -10005,7 +10005,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events11[j][k][3] = '#006633' ;
                     }else{
-                           this.events11[j][k][3] = '#FF3333' ;
+                          this.events11[j][k][3] = '#FF4040' ;
                        }
 
                      this.events11[j][k][5] = true; this.showday11 = true;
@@ -10050,7 +10050,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events12[j][k][3] = '#006633' ;
                     }else{
-                           this.events12[j][k][3] = '#FF3333' ;
+                          this.events12[j][k][3] = '#FF4040' ;
                        }
 
                      this.events12[j][k][5] = true; this.showday12= true;
@@ -10093,7 +10093,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events12[j][k][3] = '#006633' ;
                     }else{
-                           this.events12[j][k][3] = '#FF3333' ;
+                          this.events12[j][k][3] = '#FF4040' ;
                        }
 
                      this.events12[j][k][5] = true; this.showday12= true;
@@ -10136,7 +10136,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events12[j][k][3] = '#006633' ;
                     }else{
-                           this.events12[j][k][3] = '#FF3333' ;
+                          this.events12[j][k][3] = '#FF4040' ;
                        }
 
                      this.events12[j][k][5] = true; this.showday12= true;
@@ -10179,7 +10179,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events12[j][k][3] = '#006633' ;
                     }else{
-                           this.events12[j][k][3] = '#FF3333' ;
+                          this.events12[j][k][3] = '#FF4040' ;
                        }
 
                      this.events12[j][k][5] = true; this.showday12= true;
@@ -10222,7 +10222,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events12[j][k][3] = '#006633' ;
                     }else{
-                           this.events12[j][k][3] = '#FF3333' ;
+                          this.events12[j][k][3] = '#FF4040' ;
                        }
 
                      this.events12[j][k][5] = true; this.showday12= true;
@@ -10265,7 +10265,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events12[j][k][3] = '#006633' ;
                     }else{
-                           this.events12[j][k][3] = '#FF3333' ;
+                          this.events12[j][k][3] = '#FF4040' ;
                        }
 
                      this.events12[j][k][5] = true; this.showday12= true;
@@ -10308,7 +10308,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events12[j][k][3] = '#006633' ;
                     }else{
-                           this.events12[j][k][3] = '#FF3333' ;
+                          this.events12[j][k][3] = '#FF4040' ;
                        }
 
                      this.events12[j][k][5] = true; this.showday12= true;
@@ -10351,7 +10351,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events12[j][k][3] = '#006633' ;
                     }else{
-                           this.events12[j][k][3] = '#FF3333' ;
+                          this.events12[j][k][3] = '#FF4040' ;
                        }
 
                      this.events12[j][k][5] = true; this.showday12= true;
@@ -10394,7 +10394,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events12[j][k][3] = '#006633' ;
                     }else{
-                           this.events12[j][k][3] = '#FF3333' ;
+                          this.events12[j][k][3] = '#FF4040' ;
                        }
 
                      this.events12[j][k][5] = true; this.showday12= true;
@@ -10437,7 +10437,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events12[j][k][3] = '#006633' ;
                     }else{
-                           this.events12[j][k][3] = '#FF3333' ;
+                          this.events12[j][k][3] = '#FF4040' ;
                        }
 
                      this.events12[j][k][5] = true; this.showday12= true;
@@ -10480,7 +10480,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events12[j][k][3] = '#006633' ;
                     }else{
-                           this.events12[j][k][3] = '#FF3333' ;
+                          this.events12[j][k][3] = '#FF4040' ;
                        }
 
                      this.events12[j][k][5] = true; this.showday12= true;
@@ -10523,7 +10523,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events12[j][k][3] = '#006633' ;
                     }else{
-                           this.events12[j][k][3] = '#FF3333' ;
+                          this.events12[j][k][3] = '#FF4040' ;
                        }
 
                      this.events12[j][k][5] = true; this.showday12= true;
@@ -10566,7 +10566,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events12[j][k][3] = '#006633' ;
                     }else{
-                           this.events12[j][k][3] = '#FF3333' ;
+                          this.events12[j][k][3] = '#FF4040' ;
                        }
 
                      this.events12[j][k][5] = true; this.showday12= true;
@@ -10609,7 +10609,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events12[j][k][3] = '#006633' ;
                     }else{
-                           this.events12[j][k][3] = '#FF3333' ;
+                          this.events12[j][k][3] = '#FF4040' ;
                        }
 
                      this.events12[j][k][5] = true; this.showday12= true;
@@ -10652,7 +10652,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events12[j][k][3] = '#006633' ;
                     }else{
-                           this.events12[j][k][3] = '#FF3333' ;
+                          this.events12[j][k][3] = '#FF4040' ;
                        }
 
                      this.events12[j][k][5] = true; this.showday12= true;
@@ -10695,7 +10695,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events12[j][k][3] = '#006633' ;
                     }else{
-                           this.events12[j][k][3] = '#FF3333' ;
+                          this.events12[j][k][3] = '#FF4040' ;
                        }
 
                      this.events12[j][k][5] = true; this.showday12= true;
@@ -10738,7 +10738,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events12[j][k][3] = '#006633' ;
                     }else{
-                           this.events12[j][k][3] = '#FF3333' ;
+                          this.events12[j][k][3] = '#FF4040' ;
                        }
 
                      this.events12[j][k][5] = true; this.showday12= true;
@@ -10781,7 +10781,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events12[j][k][3] = '#006633' ;
                     }else{
-                           this.events12[j][k][3] = '#FF3333' ;
+                          this.events12[j][k][3] = '#FF4040' ;
                        }
 
                      this.events12[j][k][5] = true; this.showday12= true;
@@ -10824,7 +10824,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events12[j][k][3] = '#006633' ;
                     }else{
-                           this.events12[j][k][3] = '#FF3333' ;
+                          this.events12[j][k][3] = '#FF4040' ;
                        }
 
                      this.events12[j][k][5] = true; this.showday12= true;
@@ -10869,7 +10869,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events13[j][k][3] = '#006633' ;
                     }else{
-                           this.events13[j][k][3] = '#FF3333' ;
+                          this.events13[j][k][3] = '#FF4040' ;
                        }
 
                      this.events13[j][k][5] = true; this.showday13= true;
@@ -10912,7 +10912,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events13[j][k][3] = '#006633' ;
                     }else{
-                           this.events13[j][k][3] = '#FF3333' ;
+                          this.events13[j][k][3] = '#FF4040' ;
                        }
 
                      this.events13[j][k][5] = true; this.showday13= true;
@@ -10955,7 +10955,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events13[j][k][3] = '#006633' ;
                     }else{
-                           this.events13[j][k][3] = '#FF3333' ;
+                          this.events13[j][k][3] = '#FF4040' ;
                        }
 
                      this.events13[j][k][5] = true; this.showday13= true;
@@ -10998,7 +10998,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events13[j][k][3] = '#006633' ;
                     }else{
-                           this.events13[j][k][3] = '#FF3333' ;
+                          this.events13[j][k][3] = '#FF4040' ;
                        }
 
                      this.events13[j][k][5] = true; this.showday13= true;
@@ -11041,7 +11041,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events13[j][k][3] = '#006633' ;
                     }else{
-                           this.events13[j][k][3] = '#FF3333' ;
+                          this.events13[j][k][3] = '#FF4040' ;
                        }
 
                      this.events13[j][k][5] = true; this.showday13= true;
@@ -11084,7 +11084,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events13[j][k][3] = '#006633' ;
                     }else{
-                           this.events13[j][k][3] = '#FF3333' ;
+                          this.events13[j][k][3] = '#FF4040' ;
                        }
 
                      this.events13[j][k][5] = true; this.showday13= true;
@@ -11127,7 +11127,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events13[j][k][3] = '#006633' ;
                     }else{
-                           this.events13[j][k][3] = '#FF3333' ;
+                          this.events13[j][k][3] = '#FF4040' ;
                        }
 
                      this.events13[j][k][5] = true; this.showday13= true;
@@ -11170,7 +11170,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events13[j][k][3] = '#006633' ;
                     }else{
-                           this.events13[j][k][3] = '#FF3333' ;
+                          this.events13[j][k][3] = '#FF4040' ;
                        }
 
                      this.events13[j][k][5] = true; this.showday13= true;
@@ -11213,7 +11213,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events13[j][k][3] = '#006633' ;
                     }else{
-                           this.events13[j][k][3] = '#FF3333' ;
+                          this.events13[j][k][3] = '#FF4040' ;
                        }
 
                      this.events13[j][k][5] = true; this.showday13= true;
@@ -11256,7 +11256,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events13[j][k][3] = '#006633' ;
                     }else{
-                           this.events13[j][k][3] = '#FF3333' ;
+                          this.events13[j][k][3] = '#FF4040' ;
                        }
 
                      this.events13[j][k][5] = true; this.showday13= true;
@@ -11299,7 +11299,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events13[j][k][3] = '#006633' ;
                     }else{
-                           this.events13[j][k][3] = '#FF3333' ;
+                          this.events13[j][k][3] = '#FF4040' ;
                        }
 
                      this.events13[j][k][5] = true; this.showday13= true;
@@ -11342,7 +11342,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events13[j][k][3] = '#006633' ;
                     }else{
-                           this.events13[j][k][3] = '#FF3333' ;
+                          this.events13[j][k][3] = '#FF4040' ;
                        }
 
                      this.events13[j][k][5] = true; this.showday13= true;
@@ -11385,7 +11385,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events13[j][k][3] = '#006633' ;
                     }else{
-                           this.events13[j][k][3] = '#FF3333' ;
+                          this.events13[j][k][3] = '#FF4040' ;
                        }
 
                      this.events13[j][k][5] = true; this.showday13= true;
@@ -11428,7 +11428,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events13[j][k][3] = '#006633' ;
                     }else{
-                           this.events13[j][k][3] = '#FF3333' ;
+                          this.events13[j][k][3] = '#FF4040' ;
                        }
 
                      this.events13[j][k][5] = true; this.showday13= true;
@@ -11471,7 +11471,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events13[j][k][3] = '#006633' ;
                     }else{
-                           this.events13[j][k][3] = '#FF3333' ;
+                          this.events13[j][k][3] = '#FF4040' ;
                        }
 
                      this.events13[j][k][5] = true; this.showday13= true;
@@ -11514,7 +11514,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events13[j][k][3] = '#006633' ;
                     }else{
-                           this.events13[j][k][3] = '#FF3333' ;
+                          this.events13[j][k][3] = '#FF4040' ;
                        }
 
                      this.events13[j][k][5] = true; this.showday13= true;
@@ -11557,7 +11557,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events13[j][k][3] = '#006633' ;
                     }else{
-                           this.events13[j][k][3] = '#FF3333' ;
+                          this.events13[j][k][3] = '#FF4040' ;
                        }
 
                      this.events13[j][k][5] = true; this.showday13= true;
@@ -11600,7 +11600,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events13[j][k][3] = '#006633' ;
                     }else{
-                           this.events13[j][k][3] = '#FF3333' ;
+                          this.events13[j][k][3] = '#FF4040' ;
                        }
 
                      this.events13[j][k][5] = true; this.showday13= true;
@@ -11643,7 +11643,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events13[j][k][3] = '#006633' ;
                     }else{
-                           this.events13[j][k][3] = '#FF3333' ;
+                          this.events13[j][k][3] = '#FF4040' ;
                        }
 
                      this.events13[j][k][5] = true; this.showday13= true;
@@ -11687,7 +11687,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events14[j][k][3] = '#006633' ;
                     }else{
-                           this.events14[j][k][3] = '#FF3333' ;
+                          this.events14[j][k][3] = '#FF4040' ;
                        }
 
                      this.events14[j][k][5] = true; this.showday14= true;
@@ -11730,7 +11730,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events14[j][k][3] = '#006633' ;
                     }else{
-                           this.events14[j][k][3] = '#FF3333' ;
+                          this.events14[j][k][3] = '#FF4040' ;
                        }
 
                      this.events14[j][k][5] = true; this.showday14= true;
@@ -11773,7 +11773,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events14[j][k][3] = '#006633' ;
                     }else{
-                           this.events14[j][k][3] = '#FF3333' ;
+                          this.events14[j][k][3] = '#FF4040' ;
                        }
 
                      this.events14[j][k][5] = true; this.showday14= true;
@@ -11816,7 +11816,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events14[j][k][3] = '#006633' ;
                     }else{
-                           this.events14[j][k][3] = '#FF3333' ;
+                          this.events14[j][k][3] = '#FF4040' ;
                        }
 
                      this.events14[j][k][5] = true; this.showday14= true;
@@ -11859,7 +11859,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events14[j][k][3] = '#006633' ;
                     }else{
-                           this.events14[j][k][3] = '#FF3333' ;
+                          this.events14[j][k][3] = '#FF4040' ;
                        }
 
                      this.events14[j][k][5] = true; this.showday14= true;
@@ -11902,7 +11902,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events14[j][k][3] = '#006633' ;
                     }else{
-                           this.events14[j][k][3] = '#FF3333' ;
+                          this.events14[j][k][3] = '#FF4040' ;
                        }
 
                      this.events14[j][k][5] = true; this.showday14= true;
@@ -11945,7 +11945,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events14[j][k][3] = '#006633' ;
                     }else{
-                           this.events14[j][k][3] = '#FF3333' ;
+                          this.events14[j][k][3] = '#FF4040' ;
                        }
 
                      this.events14[j][k][5] = true; this.showday14= true;
@@ -11988,7 +11988,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events14[j][k][3] = '#006633' ;
                     }else{
-                           this.events14[j][k][3] = '#FF3333' ;
+                          this.events14[j][k][3] = '#FF4040' ;
                        }
 
                      this.events14[j][k][5] = true; this.showday14= true;
@@ -12031,7 +12031,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events14[j][k][3] = '#006633' ;
                     }else{
-                           this.events14[j][k][3] = '#FF3333' ;
+                          this.events14[j][k][3] = '#FF4040' ;
                        }
 
                      this.events14[j][k][5] = true; this.showday14= true;
@@ -12074,7 +12074,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events14[j][k][3] = '#006633' ;
                     }else{
-                           this.events14[j][k][3] = '#FF3333' ;
+                          this.events14[j][k][3] = '#FF4040' ;
                        }
 
                      this.events14[j][k][5] = true; this.showday14= true;
@@ -12117,7 +12117,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events14[j][k][3] = '#006633' ;
                     }else{
-                           this.events14[j][k][3] = '#FF3333' ;
+                          this.events14[j][k][3] = '#FF4040' ;
                        }
 
                      this.events14[j][k][5] = true; this.showday14= true;
@@ -12160,7 +12160,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events14[j][k][3] = '#006633' ;
                     }else{
-                           this.events14[j][k][3] = '#FF3333' ;
+                          this.events14[j][k][3] = '#FF4040' ;
                        }
 
                      this.events14[j][k][5] = true; this.showday14= true;
@@ -12203,7 +12203,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events14[j][k][3] = '#006633' ;
                     }else{
-                           this.events14[j][k][3] = '#FF3333' ;
+                          this.events14[j][k][3] = '#FF4040' ;
                        }
 
                      this.events14[j][k][5] = true; this.showday14= true;
@@ -12246,7 +12246,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events14[j][k][3] = '#006633' ;
                     }else{
-                           this.events14[j][k][3] = '#FF3333' ;
+                          this.events14[j][k][3] = '#FF4040' ;
                        }
 
                      this.events14[j][k][5] = true; this.showday14= true;
@@ -12289,7 +12289,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events14[j][k][3] = '#006633' ;
                     }else{
-                           this.events14[j][k][3] = '#FF3333' ;
+                          this.events14[j][k][3] = '#FF4040' ;
                        }
 
                      this.events14[j][k][5] = true; this.showday14= true;
@@ -12332,7 +12332,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events14[j][k][3] = '#006633' ;
                     }else{
-                           this.events14[j][k][3] = '#FF3333' ;
+                          this.events14[j][k][3] = '#FF4040' ;
                        }
 
                      this.events14[j][k][5] = true; this.showday14= true;
@@ -12375,7 +12375,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events14[j][k][3] = '#006633' ;
                     }else{
-                           this.events14[j][k][3] = '#FF3333' ;
+                          this.events14[j][k][3] = '#FF4040' ;
                        }
 
                      this.events14[j][k][5] = true; this.showday14= true;
@@ -12418,7 +12418,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events14[j][k][3] = '#006633' ;
                     }else{
-                           this.events14[j][k][3] = '#FF3333' ;
+                          this.events14[j][k][3] = '#FF4040' ;
                        }
 
                      this.events14[j][k][5] = true; this.showday14= true;
@@ -12461,7 +12461,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events14[j][k][3] = '#006633' ;
                     }else{
-                           this.events14[j][k][3] = '#FF3333' ;
+                          this.events14[j][k][3] = '#FF4040' ;
                        }
 
                      this.events14[j][k][5] = true; this.showday14= true;
@@ -12506,7 +12506,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events15[j][k][3] = '#006633' ;
                     }else{
-                           this.events15[j][k][3] = '#FF3333' ;
+                          this.events15[j][k][3] = '#FF4040' ;
                        }
 
                      this.events15[j][k][5] = true; this.showday15= true;
@@ -12549,7 +12549,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events15[j][k][3] = '#006633' ;
                     }else{
-                           this.events15[j][k][3] = '#FF3333' ;
+                          this.events15[j][k][3] = '#FF4040' ;
                        }
 
                      this.events15[j][k][5] = true; this.showday15= true;
@@ -12592,7 +12592,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events15[j][k][3] = '#006633' ;
                     }else{
-                           this.events15[j][k][3] = '#FF3333' ;
+                          this.events15[j][k][3] = '#FF4040' ;
                        }
 
                      this.events15[j][k][5] = true; this.showday15= true;
@@ -12635,7 +12635,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events15[j][k][3] = '#006633' ;
                     }else{
-                           this.events15[j][k][3] = '#FF3333' ;
+                          this.events15[j][k][3] = '#FF4040' ;
                        }
 
                      this.events15[j][k][5] = true; this.showday15= true;
@@ -12678,7 +12678,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events15[j][k][3] = '#006633' ;
                     }else{
-                           this.events15[j][k][3] = '#FF3333' ;
+                          this.events15[j][k][3] = '#FF4040' ;
                        }
 
                      this.events15[j][k][5] = true; this.showday15= true;
@@ -12721,7 +12721,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events15[j][k][3] = '#006633' ;
                     }else{
-                           this.events15[j][k][3] = '#FF3333' ;
+                          this.events15[j][k][3] = '#FF4040' ;
                        }
 
                      this.events15[j][k][5] = true; this.showday15= true;
@@ -12764,7 +12764,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events15[j][k][3] = '#006633' ;
                     }else{
-                           this.events15[j][k][3] = '#FF3333' ;
+                          this.events15[j][k][3] = '#FF4040' ;
                        }
 
                      this.events15[j][k][5] = true; this.showday15= true;
@@ -12807,7 +12807,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events15[j][k][3] = '#006633' ;
                     }else{
-                           this.events15[j][k][3] = '#FF3333' ;
+                          this.events15[j][k][3] = '#FF4040' ;
                        }
 
                      this.events15[j][k][5] = true; this.showday15= true;
@@ -12850,7 +12850,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events15[j][k][3] = '#006633' ;
                     }else{
-                           this.events15[j][k][3] = '#FF3333' ;
+                          this.events15[j][k][3] = '#FF4040' ;
                        }
 
                      this.events15[j][k][5] = true; this.showday15= true;
@@ -12893,7 +12893,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events15[j][k][3] = '#006633' ;
                     }else{
-                           this.events15[j][k][3] = '#FF3333' ;
+                          this.events15[j][k][3] = '#FF4040' ;
                        }
 
                      this.events15[j][k][5] = true; this.showday15= true;
@@ -12936,7 +12936,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events15[j][k][3] = '#006633' ;
                     }else{
-                           this.events15[j][k][3] = '#FF3333' ;
+                          this.events15[j][k][3] = '#FF4040' ;
                        }
 
                      this.events15[j][k][5] = true; this.showday15= true;
@@ -12979,7 +12979,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events15[j][k][3] = '#006633' ;
                     }else{
-                           this.events15[j][k][3] = '#FF3333' ;
+                          this.events15[j][k][3] = '#FF4040' ;
                        }
 
                      this.events15[j][k][5] = true; this.showday15= true;
@@ -13022,7 +13022,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events15[j][k][3] = '#006633' ;
                     }else{
-                           this.events15[j][k][3] = '#FF3333' ;
+                          this.events15[j][k][3] = '#FF4040' ;
                        }
 
                      this.events15[j][k][5] = true; this.showday15= true;
@@ -13065,7 +13065,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events15[j][k][3] = '#006633' ;
                     }else{
-                           this.events15[j][k][3] = '#FF3333' ;
+                          this.events15[j][k][3] = '#FF4040' ;
                        }
 
                      this.events15[j][k][5] = true; this.showday15= true;
@@ -13108,7 +13108,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events15[j][k][3] = '#006633' ;
                     }else{
-                           this.events15[j][k][3] = '#FF3333' ;
+                          this.events15[j][k][3] = '#FF4040' ;
                        }
 
                      this.events15[j][k][5] = true; this.showday15= true;
@@ -13151,7 +13151,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events15[j][k][3] = '#006633' ;
                     }else{
-                           this.events15[j][k][3] = '#FF3333' ;
+                          this.events15[j][k][3] = '#FF4040' ;
                        }
 
                      this.events15[j][k][5] = true; this.showday15= true;
@@ -13194,7 +13194,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events15[j][k][3] = '#006633' ;
                     }else{
-                           this.events15[j][k][3] = '#FF3333' ;
+                          this.events15[j][k][3] = '#FF4040' ;
                        }
 
                      this.events15[j][k][5] = true; this.showday15= true;
@@ -13237,7 +13237,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events15[j][k][3] = '#006633' ;
                     }else{
-                           this.events15[j][k][3] = '#FF3333' ;
+                          this.events15[j][k][3] = '#FF4040' ;
                        }
 
                      this.events15[j][k][5] = true; this.showday15= true;
@@ -13280,7 +13280,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events15[j][k][3] = '#006633' ;
                     }else{
-                           this.events15[j][k][3] = '#FF3333' ;
+                          this.events15[j][k][3] = '#FF4040' ;
                        }
 
                      this.events15[j][k][5] = true; this.showday15= true;
@@ -13325,7 +13325,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events16[j][k][3] = '#006633' ;
                     }else{
-                           this.events16[j][k][3] = '#FF3333' ;
+                          this.events16[j][k][3] = '#FF4040' ;
                        }
 
                      this.events16[j][k][5] = true; this.showday16= true;
@@ -13368,7 +13368,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events16[j][k][3] = '#006633' ;
                     }else{
-                           this.events16[j][k][3] = '#FF3333' ;
+                          this.events16[j][k][3] = '#FF4040' ;
                        }
 
                      this.events16[j][k][5] = true; this.showday16= true;
@@ -13411,7 +13411,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events16[j][k][3] = '#006633' ;
                     }else{
-                           this.events16[j][k][3] = '#FF3333' ;
+                          this.events16[j][k][3] = '#FF4040' ;
                        }
 
                      this.events16[j][k][5] = true; this.showday16= true;
@@ -13454,7 +13454,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events16[j][k][3] = '#006633' ;
                     }else{
-                           this.events16[j][k][3] = '#FF3333' ;
+                          this.events16[j][k][3] = '#FF4040' ;
                        }
 
                      this.events16[j][k][5] = true; this.showday16= true;
@@ -13497,7 +13497,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events16[j][k][3] = '#006633' ;
                     }else{
-                           this.events16[j][k][3] = '#FF3333' ;
+                          this.events16[j][k][3] = '#FF4040' ;
                        }
 
                      this.events16[j][k][5] = true; this.showday16= true;
@@ -13540,7 +13540,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events16[j][k][3] = '#006633' ;
                     }else{
-                           this.events16[j][k][3] = '#FF3333' ;
+                          this.events16[j][k][3] = '#FF4040' ;
                        }
 
                      this.events16[j][k][5] = true; this.showday16= true;
@@ -13583,7 +13583,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events16[j][k][3] = '#006633' ;
                     }else{
-                           this.events16[j][k][3] = '#FF3333' ;
+                          this.events16[j][k][3] = '#FF4040' ;
                        }
 
                      this.events16[j][k][5] = true; this.showday16= true;
@@ -13626,7 +13626,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events16[j][k][3] = '#006633' ;
                     }else{
-                           this.events16[j][k][3] = '#FF3333' ;
+                          this.events16[j][k][3] = '#FF4040' ;
                        }
 
                      this.events16[j][k][5] = true; this.showday16= true;
@@ -13669,7 +13669,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events16[j][k][3] = '#006633' ;
                     }else{
-                           this.events16[j][k][3] = '#FF3333' ;
+                          this.events16[j][k][3] = '#FF4040' ;
                        }
 
                      this.events16[j][k][5] = true; this.showday16= true;
@@ -13712,7 +13712,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events16[j][k][3] = '#006633' ;
                     }else{
-                           this.events16[j][k][3] = '#FF3333' ;
+                          this.events16[j][k][3] = '#FF4040' ;
                        }
 
                      this.events16[j][k][5] = true; this.showday16= true;
@@ -13755,7 +13755,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events16[j][k][3] = '#006633' ;
                     }else{
-                           this.events16[j][k][3] = '#FF3333' ;
+                          this.events16[j][k][3] = '#FF4040' ;
                        }
 
                      this.events16[j][k][5] = true; this.showday16= true;
@@ -13798,7 +13798,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events16[j][k][3] = '#006633' ;
                     }else{
-                           this.events16[j][k][3] = '#FF3333' ;
+                          this.events16[j][k][3] = '#FF4040' ;
                        }
 
                      this.events16[j][k][5] = true; this.showday16= true;
@@ -13841,7 +13841,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events16[j][k][3] = '#006633' ;
                     }else{
-                           this.events16[j][k][3] = '#FF3333' ;
+                          this.events16[j][k][3] = '#FF4040' ;
                        }
 
                      this.events16[j][k][5] = true; this.showday16= true;
@@ -13884,7 +13884,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events16[j][k][3] = '#006633' ;
                     }else{
-                           this.events16[j][k][3] = '#FF3333' ;
+                          this.events16[j][k][3] = '#FF4040' ;
                        }
 
                      this.events16[j][k][5] = true; this.showday16= true;
@@ -13927,7 +13927,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events16[j][k][3] = '#006633' ;
                     }else{
-                           this.events16[j][k][3] = '#FF3333' ;
+                          this.events16[j][k][3] = '#FF4040' ;
                        }
 
                      this.events16[j][k][5] = true; this.showday16= true;
@@ -13970,7 +13970,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events16[j][k][3] = '#006633' ;
                     }else{
-                           this.events16[j][k][3] = '#FF3333' ;
+                          this.events16[j][k][3] = '#FF4040' ;
                        }
 
                      this.events16[j][k][5] = true; this.showday16= true;
@@ -14013,7 +14013,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events16[j][k][3] = '#006633' ;
                     }else{
-                           this.events16[j][k][3] = '#FF3333' ;
+                          this.events16[j][k][3] = '#FF4040' ;
                        }
 
                      this.events16[j][k][5] = true; this.showday16= true;
@@ -14056,7 +14056,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events16[j][k][3] = '#006633' ;
                     }else{
-                           this.events16[j][k][3] = '#FF3333' ;
+                          this.events16[j][k][3] = '#FF4040' ;
                        }
 
                      this.events16[j][k][5] = true; this.showday16= true;
@@ -14099,7 +14099,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events16[j][k][3] = '#006633' ;
                     }else{
-                           this.events16[j][k][3] = '#FF3333' ;
+                          this.events16[j][k][3] = '#FF4040' ;
                        }
 
                      this.events16[j][k][5] = true; this.showday16= true;
@@ -14143,7 +14143,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events17[j][k][3] = '#006633' ;
                     }else{
-                           this.events17[j][k][3] = '#FF3333' ;
+                          this.events17[j][k][3] = '#FF4040' ;
                        }
 
                      this.events17[j][k][5] = true; this.showday17= true;
@@ -14186,7 +14186,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events17[j][k][3] = '#006633' ;
                     }else{
-                           this.events17[j][k][3] = '#FF3333' ;
+                          this.events17[j][k][3] = '#FF4040' ;
                        }
 
                      this.events17[j][k][5] = true; this.showday17= true;
@@ -14229,7 +14229,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events17[j][k][3] = '#006633' ;
                     }else{
-                           this.events17[j][k][3] = '#FF3333' ;
+                          this.events17[j][k][3] = '#FF4040' ;
                        }
 
                      this.events17[j][k][5] = true; this.showday17= true;
@@ -14272,7 +14272,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events17[j][k][3] = '#006633' ;
                     }else{
-                           this.events17[j][k][3] = '#FF3333' ;
+                          this.events17[j][k][3] = '#FF4040' ;
                        }
 
                      this.events17[j][k][5] = true; this.showday17= true;
@@ -14315,7 +14315,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events17[j][k][3] = '#006633' ;
                     }else{
-                           this.events17[j][k][3] = '#FF3333' ;
+                          this.events17[j][k][3] = '#FF4040' ;
                        }
 
                      this.events17[j][k][5] = true; this.showday17= true;
@@ -14358,7 +14358,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events17[j][k][3] = '#006633' ;
                     }else{
-                           this.events17[j][k][3] = '#FF3333' ;
+                          this.events17[j][k][3] = '#FF4040' ;
                        }
 
                      this.events17[j][k][5] = true; this.showday17= true;
@@ -14401,7 +14401,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events17[j][k][3] = '#006633' ;
                     }else{
-                           this.events17[j][k][3] = '#FF3333' ;
+                          this.events17[j][k][3] = '#FF4040' ;
                        }
 
                      this.events17[j][k][5] = true; this.showday17= true;
@@ -14444,7 +14444,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events17[j][k][3] = '#006633' ;
                     }else{
-                           this.events17[j][k][3] = '#FF3333' ;
+                          this.events17[j][k][3] = '#FF4040' ;
                        }
 
                      this.events17[j][k][5] = true; this.showday17= true;
@@ -14487,7 +14487,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events17[j][k][3] = '#006633' ;
                     }else{
-                           this.events17[j][k][3] = '#FF3333' ;
+                          this.events17[j][k][3] = '#FF4040' ;
                        }
 
                      this.events17[j][k][5] = true; this.showday17= true;
@@ -14530,7 +14530,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events17[j][k][3] = '#006633' ;
                     }else{
-                           this.events17[j][k][3] = '#FF3333' ;
+                          this.events17[j][k][3] = '#FF4040' ;
                        }
 
                      this.events17[j][k][5] = true; this.showday17= true;
@@ -14573,7 +14573,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events17[j][k][3] = '#006633' ;
                     }else{
-                           this.events17[j][k][3] = '#FF3333' ;
+                          this.events17[j][k][3] = '#FF4040' ;
                        }
 
                      this.events17[j][k][5] = true; this.showday17= true;
@@ -14616,7 +14616,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events17[j][k][3] = '#006633' ;
                     }else{
-                           this.events17[j][k][3] = '#FF3333' ;
+                          this.events17[j][k][3] = '#FF4040' ;
                        }
 
                      this.events17[j][k][5] = true; this.showday17= true;
@@ -14659,7 +14659,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events17[j][k][3] = '#006633' ;
                     }else{
-                           this.events17[j][k][3] = '#FF3333' ;
+                          this.events17[j][k][3] = '#FF4040' ;
                        }
 
                      this.events17[j][k][5] = true; this.showday17= true;
@@ -14702,7 +14702,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events17[j][k][3] = '#006633' ;
                     }else{
-                           this.events17[j][k][3] = '#FF3333' ;
+                          this.events17[j][k][3] = '#FF4040' ;
                        }
 
                      this.events17[j][k][5] = true; this.showday17= true;
@@ -14745,7 +14745,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events17[j][k][3] = '#006633' ;
                     }else{
-                           this.events17[j][k][3] = '#FF3333' ;
+                          this.events17[j][k][3] = '#FF4040' ;
                        }
 
                      this.events17[j][k][5] = true; this.showday17= true;
@@ -14788,7 +14788,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events17[j][k][3] = '#006633' ;
                     }else{
-                           this.events17[j][k][3] = '#FF3333' ;
+                          this.events17[j][k][3] = '#FF4040' ;
                        }
 
                      this.events17[j][k][5] = true; this.showday17= true;
@@ -14831,7 +14831,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events17[j][k][3] = '#006633' ;
                     }else{
-                           this.events17[j][k][3] = '#FF3333' ;
+                          this.events17[j][k][3] = '#FF4040' ;
                        }
 
                      this.events17[j][k][5] = true; this.showday17= true;
@@ -14874,7 +14874,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events17[j][k][3] = '#006633' ;
                     }else{
-                           this.events17[j][k][3] = '#FF3333' ;
+                          this.events17[j][k][3] = '#FF4040' ;
                        }
 
                      this.events17[j][k][5] = true; this.showday17= true;
@@ -14917,7 +14917,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events17[j][k][3] = '#006633' ;
                     }else{
-                           this.events17[j][k][3] = '#FF3333' ;
+                          this.events17[j][k][3] = '#FF4040' ;
                        }
 
                      this.events17[j][k][5] = true; this.showday17= true;
@@ -14962,7 +14962,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events18[j][k][3] = '#006633' ;
                     }else{
-                            this.events18[j][k][3] = '#FF3333' ;
+                           this.events18[j][k][3] = '#FF4040' ;
                         }
 
                       this.events18[j][k][5] = true; this.showday18= true;
@@ -15005,7 +15005,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events18[j][k][3] = '#006633' ;
                     }else{
-                            this.events18[j][k][3] = '#FF3333' ;
+                           this.events18[j][k][3] = '#FF4040' ;
                         }
 
                       this.events18[j][k][5] = true; this.showday18= true;
@@ -15048,7 +15048,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events18[j][k][3] = '#006633' ;
                     }else{
-                            this.events18[j][k][3] = '#FF3333' ;
+                           this.events18[j][k][3] = '#FF4040' ;
                         }
 
                       this.events18[j][k][5] = true; this.showday18= true;
@@ -15091,7 +15091,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events18[j][k][3] = '#006633' ;
                     }else{
-                            this.events18[j][k][3] = '#FF3333' ;
+                           this.events18[j][k][3] = '#FF4040' ;
                         }
 
                       this.events18[j][k][5] = true; this.showday18= true;
@@ -15134,7 +15134,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events18[j][k][3] = '#006633' ;
                     }else{
-                            this.events18[j][k][3] = '#FF3333' ;
+                           this.events18[j][k][3] = '#FF4040' ;
                         }
 
                       this.events18[j][k][5] = true; this.showday18= true;
@@ -15177,7 +15177,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events18[j][k][3] = '#006633' ;
                     }else{
-                            this.events18[j][k][3] = '#FF3333' ;
+                           this.events18[j][k][3] = '#FF4040' ;
                         }
 
                       this.events18[j][k][5] = true; this.showday18= true;
@@ -15220,7 +15220,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events18[j][k][3] = '#006633' ;
                     }else{
-                            this.events18[j][k][3] = '#FF3333' ;
+                           this.events18[j][k][3] = '#FF4040' ;
                         }
 
                       this.events18[j][k][5] = true; this.showday18= true;
@@ -15263,7 +15263,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events18[j][k][3] = '#006633' ;
                     }else{
-                            this.events18[j][k][3] = '#FF3333' ;
+                           this.events18[j][k][3] = '#FF4040' ;
                         }
 
                       this.events18[j][k][5] = true; this.showday18= true;
@@ -15306,7 +15306,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events18[j][k][3] = '#006633' ;
                     }else{
-                            this.events18[j][k][3] = '#FF3333' ;
+                           this.events18[j][k][3] = '#FF4040' ;
                         }
 
                       this.events18[j][k][5] = true; this.showday18= true;
@@ -15349,7 +15349,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events18[j][k][3] = '#006633' ;
                     }else{
-                            this.events18[j][k][3] = '#FF3333' ;
+                           this.events18[j][k][3] = '#FF4040' ;
                         }
 
                       this.events18[j][k][5] = true; this.showday18= true;
@@ -15392,7 +15392,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events18[j][k][3] = '#006633' ;
                     }else{
-                            this.events18[j][k][3] = '#FF3333' ;
+                           this.events18[j][k][3] = '#FF4040' ;
                         }
 
                       this.events18[j][k][5] = true; this.showday18= true;
@@ -15435,7 +15435,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events18[j][k][3] = '#006633' ;
                     }else{
-                            this.events18[j][k][3] = '#FF3333' ;
+                           this.events18[j][k][3] = '#FF4040' ;
                         }
 
                       this.events18[j][k][5] = true; this.showday18= true;
@@ -15478,7 +15478,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events18[j][k][3] = '#006633' ;
                     }else{
-                            this.events18[j][k][3] = '#FF3333' ;
+                           this.events18[j][k][3] = '#FF4040' ;
                         }
 
                       this.events18[j][k][5] = true; this.showday18= true;
@@ -15521,7 +15521,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events18[j][k][3] = '#006633' ;
                     }else{
-                            this.events18[j][k][3] = '#FF3333' ;
+                           this.events18[j][k][3] = '#FF4040' ;
                         }
 
                       this.events18[j][k][5] = true; this.showday18= true;
@@ -15564,7 +15564,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events18[j][k][3] = '#006633' ;
                     }else{
-                            this.events18[j][k][3] = '#FF3333' ;
+                           this.events18[j][k][3] = '#FF4040' ;
                         }
 
                       this.events18[j][k][5] = true; this.showday18= true;
@@ -15607,7 +15607,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events18[j][k][3] = '#006633' ;
                     }else{
-                            this.events18[j][k][3] = '#FF3333' ;
+                           this.events18[j][k][3] = '#FF4040' ;
                         }
 
                       this.events18[j][k][5] = true; this.showday18= true;
@@ -15650,7 +15650,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events18[j][k][3] = '#006633' ;
                     }else{
-                            this.events18[j][k][3] = '#FF3333' ;
+                           this.events18[j][k][3] = '#FF4040' ;
                         }
 
                       this.events18[j][k][5] = true; this.showday18= true;
@@ -15693,7 +15693,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events18[j][k][3] = '#006633' ;
                     }else{
-                            this.events18[j][k][3] = '#FF3333' ;
+                           this.events18[j][k][3] = '#FF4040' ;
                         }
 
                       this.events18[j][k][5] = true; this.showday18= true;
@@ -15736,7 +15736,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events18[j][k][3] = '#006633' ;
                     }else{
-                            this.events18[j][k][3] = '#FF3333' ;
+                           this.events18[j][k][3] = '#FF4040' ;
                         }
 
                       this.events18[j][k][5] = true; this.showday18= true;
@@ -15781,7 +15781,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events19[j][k][3] = '#006633' ;
                     }else{
-                              this.events19[j][k][3] = '#FF3333' ;
+                             this.events19[j][k][3] = '#FF4040' ;
                           }
 
                         this.events19[j][k][5] = true; this.showday19= true;
@@ -15824,7 +15824,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events19[j][k][3] = '#006633' ;
                     }else{
-                              this.events19[j][k][3] = '#FF3333' ;
+                             this.events19[j][k][3] = '#FF4040' ;
                           }
 
                         this.events19[j][k][5] = true; this.showday19= true;
@@ -15867,7 +15867,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events19[j][k][3] = '#006633' ;
                     }else{
-                              this.events19[j][k][3] = '#FF3333' ;
+                             this.events19[j][k][3] = '#FF4040' ;
                           }
 
                         this.events19[j][k][5] = true; this.showday19= true;
@@ -15910,7 +15910,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events19[j][k][3] = '#006633' ;
                     }else{
-                              this.events19[j][k][3] = '#FF3333' ;
+                             this.events19[j][k][3] = '#FF4040' ;
                           }
 
                         this.events19[j][k][5] = true; this.showday19= true;
@@ -15953,7 +15953,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events19[j][k][3] = '#006633' ;
                     }else{
-                              this.events19[j][k][3] = '#FF3333' ;
+                             this.events19[j][k][3] = '#FF4040' ;
                           }
 
                         this.events19[j][k][5] = true; this.showday19= true;
@@ -15996,7 +15996,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events19[j][k][3] = '#006633' ;
                     }else{
-                              this.events19[j][k][3] = '#FF3333' ;
+                             this.events19[j][k][3] = '#FF4040' ;
                           }
 
                         this.events19[j][k][5] = true; this.showday19= true;
@@ -16039,7 +16039,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events19[j][k][3] = '#006633' ;
                     }else{
-                              this.events19[j][k][3] = '#FF3333' ;
+                             this.events19[j][k][3] = '#FF4040' ;
                           }
 
                         this.events19[j][k][5] = true; this.showday19= true;
@@ -16082,7 +16082,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events19[j][k][3] = '#006633' ;
                     }else{
-                              this.events19[j][k][3] = '#FF3333' ;
+                             this.events19[j][k][3] = '#FF4040' ;
                           }
 
                         this.events19[j][k][5] = true; this.showday19= true;
@@ -16125,7 +16125,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events19[j][k][3] = '#006633' ;
                     }else{
-                              this.events19[j][k][3] = '#FF3333' ;
+                             this.events19[j][k][3] = '#FF4040' ;
                           }
 
                         this.events19[j][k][5] = true; this.showday19= true;
@@ -16168,7 +16168,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events19[j][k][3] = '#006633' ;
                     }else{
-                              this.events19[j][k][3] = '#FF3333' ;
+                             this.events19[j][k][3] = '#FF4040' ;
                           }
 
                         this.events19[j][k][5] = true; this.showday19= true;
@@ -16211,7 +16211,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events19[j][k][3] = '#006633' ;
                     }else{
-                              this.events19[j][k][3] = '#FF3333' ;
+                             this.events19[j][k][3] = '#FF4040' ;
                           }
 
                         this.events19[j][k][5] = true; this.showday19= true;
@@ -16254,7 +16254,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events19[j][k][3] = '#006633' ;
                     }else{
-                              this.events19[j][k][3] = '#FF3333' ;
+                             this.events19[j][k][3] = '#FF4040' ;
                           }
 
                         this.events19[j][k][5] = true; this.showday19= true;
@@ -16297,7 +16297,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events19[j][k][3] = '#006633' ;
                     }else{
-                              this.events19[j][k][3] = '#FF3333' ;
+                             this.events19[j][k][3] = '#FF4040' ;
                           }
 
                         this.events19[j][k][5] = true; this.showday19= true;
@@ -16340,7 +16340,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events19[j][k][3] = '#006633' ;
                     }else{
-                              this.events19[j][k][3] = '#FF3333' ;
+                             this.events19[j][k][3] = '#FF4040' ;
                           }
 
                         this.events19[j][k][5] = true; this.showday19= true;
@@ -16383,7 +16383,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events19[j][k][3] = '#006633' ;
                     }else{
-                              this.events19[j][k][3] = '#FF3333' ;
+                             this.events19[j][k][3] = '#FF4040' ;
                           }
 
                         this.events19[j][k][5] = true; this.showday19= true;
@@ -16426,7 +16426,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events19[j][k][3] = '#006633' ;
                     }else{
-                              this.events19[j][k][3] = '#FF3333' ;
+                             this.events19[j][k][3] = '#FF4040' ;
                           }
 
                         this.events19[j][k][5] = true; this.showday19= true;
@@ -16469,7 +16469,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events19[j][k][3] = '#006633' ;
                     }else{
-                              this.events19[j][k][3] = '#FF3333' ;
+                             this.events19[j][k][3] = '#FF4040' ;
                           }
 
                         this.events19[j][k][5] = true; this.showday19= true;
@@ -16512,7 +16512,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events19[j][k][3] = '#006633' ;
                     }else{
-                              this.events19[j][k][3] = '#FF3333' ;
+                             this.events19[j][k][3] = '#FF4040' ;
                           }
 
                         this.events19[j][k][5] = true; this.showday19= true;
@@ -16555,7 +16555,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events19[j][k][3] = '#006633' ;
                     }else{
-                              this.events19[j][k][3] = '#FF3333' ;
+                             this.events19[j][k][3] = '#FF4040' ;
                           }
 
                         this.events19[j][k][5] = true; this.showday19= true;
@@ -16600,7 +16600,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events20[j][k][3] = '#006633' ;
                     }else{
-                              this.events20[j][k][3] = '#FF3333' ;
+                             this.events20[j][k][3] = '#FF4040' ;
                           }
 
                         this.events20[j][k][5] = true; this.showday20= true;
@@ -16643,7 +16643,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events20[j][k][3] = '#006633' ;
                     }else{
-                              this.events20[j][k][3] = '#FF3333' ;
+                             this.events20[j][k][3] = '#FF4040' ;
                           }
 
                         this.events20[j][k][5] = true; this.showday20= true;
@@ -16686,7 +16686,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events20[j][k][3] = '#006633' ;
                     }else{
-                              this.events20[j][k][3] = '#FF3333' ;
+                             this.events20[j][k][3] = '#FF4040' ;
                           }
 
                         this.events20[j][k][5] = true; this.showday20= true;
@@ -16729,7 +16729,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events20[j][k][3] = '#006633' ;
                     }else{
-                              this.events20[j][k][3] = '#FF3333' ;
+                             this.events20[j][k][3] = '#FF4040' ;
                           }
 
                         this.events20[j][k][5] = true; this.showday20= true;
@@ -16772,7 +16772,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events20[j][k][3] = '#006633' ;
                     }else{
-                              this.events20[j][k][3] = '#FF3333' ;
+                             this.events20[j][k][3] = '#FF4040' ;
                           }
 
                         this.events20[j][k][5] = true; this.showday20= true;
@@ -16815,7 +16815,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events20[j][k][3] = '#006633' ;
                     }else{
-                              this.events20[j][k][3] = '#FF3333' ;
+                             this.events20[j][k][3] = '#FF4040' ;
                           }
 
                         this.events20[j][k][5] = true; this.showday20= true;
@@ -16858,7 +16858,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events20[j][k][3] = '#006633' ;
                     }else{
-                              this.events20[j][k][3] = '#FF3333' ;
+                             this.events20[j][k][3] = '#FF4040' ;
                           }
 
                         this.events20[j][k][5] = true; this.showday20= true;
@@ -16901,7 +16901,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events20[j][k][3] = '#006633' ;
                     }else{
-                              this.events20[j][k][3] = '#FF3333' ;
+                             this.events20[j][k][3] = '#FF4040' ;
                           }
 
                         this.events20[j][k][5] = true; this.showday20= true;
@@ -16944,7 +16944,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events20[j][k][3] = '#006633' ;
                     }else{
-                              this.events20[j][k][3] = '#FF3333' ;
+                             this.events20[j][k][3] = '#FF4040' ;
                           }
 
                         this.events20[j][k][5] = true; this.showday20= true;
@@ -16987,7 +16987,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events20[j][k][3] = '#006633' ;
                     }else{
-                              this.events20[j][k][3] = '#FF3333' ;
+                             this.events20[j][k][3] = '#FF4040' ;
                           }
 
                         this.events20[j][k][5] = true; this.showday20= true;
@@ -17030,7 +17030,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events20[j][k][3] = '#006633' ;
                     }else{
-                              this.events20[j][k][3] = '#FF3333' ;
+                             this.events20[j][k][3] = '#FF4040' ;
                           }
 
                         this.events20[j][k][5] = true; this.showday20= true;
@@ -17073,7 +17073,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events20[j][k][3] = '#006633' ;
                     }else{
-                              this.events20[j][k][3] = '#FF3333' ;
+                             this.events20[j][k][3] = '#FF4040' ;
                           }
 
                         this.events20[j][k][5] = true; this.showday20= true;
@@ -17116,7 +17116,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events20[j][k][3] = '#006633' ;
                     }else{
-                              this.events20[j][k][3] = '#FF3333' ;
+                             this.events20[j][k][3] = '#FF4040' ;
                           }
 
                         this.events20[j][k][5] = true; this.showday20= true;
@@ -17159,7 +17159,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events20[j][k][3] = '#006633' ;
                     }else{
-                              this.events20[j][k][3] = '#FF3333' ;
+                             this.events20[j][k][3] = '#FF4040' ;
                           }
 
                         this.events20[j][k][5] = true; this.showday20= true;
@@ -17202,7 +17202,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events20[j][k][3] = '#006633' ;
                     }else{
-                              this.events20[j][k][3] = '#FF3333' ;
+                             this.events20[j][k][3] = '#FF4040' ;
                           }
 
                         this.events20[j][k][5] = true; this.showday20= true;
@@ -17245,7 +17245,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events20[j][k][3] = '#006633' ;
                     }else{
-                              this.events20[j][k][3] = '#FF3333' ;
+                             this.events20[j][k][3] = '#FF4040' ;
                           }
 
                         this.events20[j][k][5] = true; this.showday20= true;
@@ -17288,7 +17288,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events20[j][k][3] = '#006633' ;
                     }else{
-                              this.events20[j][k][3] = '#FF3333' ;
+                             this.events20[j][k][3] = '#FF4040' ;
                           }
 
                         this.events20[j][k][5] = true; this.showday20= true;
@@ -17331,7 +17331,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events20[j][k][3] = '#006633' ;
                     }else{
-                              this.events20[j][k][3] = '#FF3333' ;
+                             this.events20[j][k][3] = '#FF4040' ;
                           }
 
                         this.events20[j][k][5] = true; this.showday20= true;
@@ -17374,7 +17374,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events20[j][k][3] = '#006633' ;
                     }else{
-                              this.events20[j][k][3] = '#FF3333' ;
+                             this.events20[j][k][3] = '#FF4040' ;
                           }
 
                         this.events20[j][k][5] = true; this.showday20= true;
@@ -17419,7 +17419,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events21[j][k][3] = '#006633' ;
                     }else{
-                              this.events21[j][k][3] = '#FF3333' ;
+                             this.events21[j][k][3] = '#FF4040' ;
                           }
 
                         this.events21[j][k][5] = true; this.showday21= true;
@@ -17462,7 +17462,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events21[j][k][3] = '#006633' ;
                     }else{
-                              this.events21[j][k][3] = '#FF3333' ;
+                             this.events21[j][k][3] = '#FF4040' ;
                           }
 
                         this.events21[j][k][5] = true; this.showday21= true;
@@ -17505,7 +17505,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events21[j][k][3] = '#006633' ;
                     }else{
-                              this.events21[j][k][3] = '#FF3333' ;
+                             this.events21[j][k][3] = '#FF4040' ;
                           }
 
                         this.events21[j][k][5] = true; this.showday21= true;
@@ -17548,7 +17548,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events21[j][k][3] = '#006633' ;
                     }else{
-                              this.events21[j][k][3] = '#FF3333' ;
+                             this.events21[j][k][3] = '#FF4040' ;
                           }
 
                         this.events21[j][k][5] = true; this.showday21= true;
@@ -17591,7 +17591,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events21[j][k][3] = '#006633' ;
                     }else{
-                              this.events21[j][k][3] = '#FF3333' ;
+                             this.events21[j][k][3] = '#FF4040' ;
                           }
 
                         this.events21[j][k][5] = true; this.showday21= true;
@@ -17634,7 +17634,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events21[j][k][3] = '#006633' ;
                     }else{
-                              this.events21[j][k][3] = '#FF3333' ;
+                             this.events21[j][k][3] = '#FF4040' ;
                           }
 
                         this.events21[j][k][5] = true; this.showday21= true;
@@ -17677,7 +17677,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events21[j][k][3] = '#006633' ;
                     }else{
-                              this.events21[j][k][3] = '#FF3333' ;
+                             this.events21[j][k][3] = '#FF4040' ;
                           }
 
                         this.events21[j][k][5] = true; this.showday21= true;
@@ -17720,7 +17720,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events21[j][k][3] = '#006633' ;
                     }else{
-                              this.events21[j][k][3] = '#FF3333' ;
+                             this.events21[j][k][3] = '#FF4040' ;
                           }
 
                         this.events21[j][k][5] = true; this.showday21= true;
@@ -17763,7 +17763,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events21[j][k][3] = '#006633' ;
                     }else{
-                              this.events21[j][k][3] = '#FF3333' ;
+                             this.events21[j][k][3] = '#FF4040' ;
                           }
 
                         this.events21[j][k][5] = true; this.showday21= true;
@@ -17806,7 +17806,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events21[j][k][3] = '#006633' ;
                     }else{
-                              this.events21[j][k][3] = '#FF3333' ;
+                             this.events21[j][k][3] = '#FF4040' ;
                           }
 
                         this.events21[j][k][5] = true; this.showday21= true;
@@ -17849,7 +17849,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events21[j][k][3] = '#006633' ;
                     }else{
-                              this.events21[j][k][3] = '#FF3333' ;
+                             this.events21[j][k][3] = '#FF4040' ;
                           }
 
                         this.events21[j][k][5] = true; this.showday21= true;
@@ -17892,7 +17892,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events21[j][k][3] = '#006633' ;
                     }else{
-                              this.events21[j][k][3] = '#FF3333' ;
+                             this.events21[j][k][3] = '#FF4040' ;
                           }
 
                         this.events21[j][k][5] = true; this.showday21= true;
@@ -17935,7 +17935,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events21[j][k][3] = '#006633' ;
                     }else{
-                              this.events21[j][k][3] = '#FF3333' ;
+                             this.events21[j][k][3] = '#FF4040' ;
                           }
 
                         this.events21[j][k][5] = true; this.showday21= true;
@@ -17978,7 +17978,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events21[j][k][3] = '#006633' ;
                     }else{
-                              this.events21[j][k][3] = '#FF3333' ;
+                             this.events21[j][k][3] = '#FF4040' ;
                           }
 
                         this.events21[j][k][5] = true; this.showday21= true;
@@ -18021,7 +18021,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events21[j][k][3] = '#006633' ;
                     }else{
-                              this.events21[j][k][3] = '#FF3333' ;
+                             this.events21[j][k][3] = '#FF4040' ;
                           }
 
                         this.events21[j][k][5] = true; this.showday21= true;
@@ -18064,7 +18064,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events21[j][k][3] = '#006633' ;
                     }else{
-                              this.events21[j][k][3] = '#FF3333' ;
+                             this.events21[j][k][3] = '#FF4040' ;
                           }
 
                         this.events21[j][k][5] = true; this.showday21= true;
@@ -18107,7 +18107,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events21[j][k][3] = '#006633' ;
                     }else{
-                              this.events21[j][k][3] = '#FF3333' ;
+                             this.events21[j][k][3] = '#FF4040' ;
                           }
 
                         this.events21[j][k][5] = true; this.showday21= true;
@@ -18150,7 +18150,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events21[j][k][3] = '#006633' ;
                     }else{
-                              this.events21[j][k][3] = '#FF3333' ;
+                             this.events21[j][k][3] = '#FF4040' ;
                           }
 
                         this.events21[j][k][5] = true; this.showday21= true;
@@ -18193,7 +18193,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events21[j][k][3] = '#006633' ;
                     }else{
-                              this.events21[j][k][3] = '#FF3333' ;
+                             this.events21[j][k][3] = '#FF4040' ;
                           }
 
                         this.events21[j][k][5] = true; this.showday21= true;
@@ -18237,7 +18237,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events22[j][k][3] = '#006633' ;
                     }else{
-                              this.events22[j][k][3] = '#FF3333' ;
+                             this.events22[j][k][3] = '#FF4040' ;
                           }
 
                         this.events22[j][k][5] = true; this.showday22= true;
@@ -18280,7 +18280,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events22[j][k][3] = '#006633' ;
                     }else{
-                              this.events22[j][k][3] = '#FF3333' ;
+                             this.events22[j][k][3] = '#FF4040' ;
                           }
 
                         this.events22[j][k][5] = true; this.showday22= true;
@@ -18323,7 +18323,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events22[j][k][3] = '#006633' ;
                     }else{
-                              this.events22[j][k][3] = '#FF3333' ;
+                             this.events22[j][k][3] = '#FF4040' ;
                           }
 
                         this.events22[j][k][5] = true; this.showday22= true;
@@ -18366,7 +18366,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events22[j][k][3] = '#006633' ;
                     }else{
-                              this.events22[j][k][3] = '#FF3333' ;
+                             this.events22[j][k][3] = '#FF4040' ;
                           }
 
                         this.events22[j][k][5] = true; this.showday22= true;
@@ -18409,7 +18409,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events22[j][k][3] = '#006633' ;
                     }else{
-                              this.events22[j][k][3] = '#FF3333' ;
+                             this.events22[j][k][3] = '#FF4040' ;
                           }
 
                         this.events22[j][k][5] = true; this.showday22= true;
@@ -18452,7 +18452,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events22[j][k][3] = '#006633' ;
                     }else{
-                              this.events22[j][k][3] = '#FF3333' ;
+                             this.events22[j][k][3] = '#FF4040' ;
                           }
 
                         this.events22[j][k][5] = true; this.showday22= true;
@@ -18495,7 +18495,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events22[j][k][3] = '#006633' ;
                     }else{
-                              this.events22[j][k][3] = '#FF3333' ;
+                             this.events22[j][k][3] = '#FF4040' ;
                           }
 
                         this.events22[j][k][5] = true; this.showday22= true;
@@ -18538,7 +18538,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events22[j][k][3] = '#006633' ;
                     }else{
-                              this.events22[j][k][3] = '#FF3333' ;
+                             this.events22[j][k][3] = '#FF4040' ;
                           }
 
                         this.events22[j][k][5] = true; this.showday22= true;
@@ -18581,7 +18581,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events22[j][k][3] = '#006633' ;
                     }else{
-                              this.events22[j][k][3] = '#FF3333' ;
+                             this.events22[j][k][3] = '#FF4040' ;
                           }
 
                         this.events22[j][k][5] = true; this.showday22= true;
@@ -18624,7 +18624,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events22[j][k][3] = '#006633' ;
                     }else{
-                              this.events22[j][k][3] = '#FF3333' ;
+                             this.events22[j][k][3] = '#FF4040' ;
                           }
 
                         this.events22[j][k][5] = true; this.showday22= true;
@@ -18667,7 +18667,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events22[j][k][3] = '#006633' ;
                     }else{
-                              this.events22[j][k][3] = '#FF3333' ;
+                             this.events22[j][k][3] = '#FF4040' ;
                           }
 
                         this.events22[j][k][5] = true; this.showday22= true;
@@ -18710,7 +18710,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events22[j][k][3] = '#006633' ;
                     }else{
-                              this.events22[j][k][3] = '#FF3333' ;
+                             this.events22[j][k][3] = '#FF4040' ;
                           }
 
                         this.events22[j][k][5] = true; this.showday22= true;
@@ -18753,7 +18753,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events22[j][k][3] = '#006633' ;
                     }else{
-                              this.events22[j][k][3] = '#FF3333' ;
+                             this.events22[j][k][3] = '#FF4040' ;
                           }
 
                         this.events22[j][k][5] = true; this.showday22= true;
@@ -18796,7 +18796,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events22[j][k][3] = '#006633' ;
                     }else{
-                              this.events22[j][k][3] = '#FF3333' ;
+                             this.events22[j][k][3] = '#FF4040' ;
                           }
 
                         this.events22[j][k][5] = true; this.showday22= true;
@@ -18839,7 +18839,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events22[j][k][3] = '#006633' ;
                     }else{
-                              this.events22[j][k][3] = '#FF3333' ;
+                             this.events22[j][k][3] = '#FF4040' ;
                           }
 
                         this.events22[j][k][5] = true; this.showday22= true;
@@ -18882,7 +18882,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events22[j][k][3] = '#006633' ;
                     }else{
-                              this.events22[j][k][3] = '#FF3333' ;
+                             this.events22[j][k][3] = '#FF4040' ;
                           }
 
                         this.events22[j][k][5] = true; this.showday22= true;
@@ -18925,7 +18925,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events22[j][k][3] = '#006633' ;
                     }else{
-                              this.events22[j][k][3] = '#FF3333' ;
+                             this.events22[j][k][3] = '#FF4040' ;
                           }
 
                         this.events22[j][k][5] = true; this.showday22= true;
@@ -18968,7 +18968,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events22[j][k][3] = '#006633' ;
                     }else{
-                              this.events22[j][k][3] = '#FF3333' ;
+                             this.events22[j][k][3] = '#FF4040' ;
                           }
 
                         this.events22[j][k][5] = true; this.showday22= true;
@@ -19011,7 +19011,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events22[j][k][3] = '#006633' ;
                     }else{
-                              this.events22[j][k][3] = '#FF3333' ;
+                             this.events22[j][k][3] = '#FF4040' ;
                           }
 
                         this.events22[j][k][5] = true; this.showday22= true;
@@ -19055,7 +19055,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events23[j][k][3] = '#006633' ;
                     }else{
-                               this.events23[j][k][3] = '#FF3333' ;
+                              this.events23[j][k][3] = '#FF4040' ;
                            }
 
                          this.events23[j][k][5] = true; this.showday23= true;
@@ -19098,7 +19098,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events23[j][k][3] = '#006633' ;
                     }else{
-                               this.events23[j][k][3] = '#FF3333' ;
+                              this.events23[j][k][3] = '#FF4040' ;
                            }
 
                          this.events23[j][k][5] = true; this.showday23= true;
@@ -19141,7 +19141,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events23[j][k][3] = '#006633' ;
                     }else{
-                               this.events23[j][k][3] = '#FF3333' ;
+                              this.events23[j][k][3] = '#FF4040' ;
                            }
 
                          this.events23[j][k][5] = true; this.showday23= true;
@@ -19184,7 +19184,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events23[j][k][3] = '#006633' ;
                     }else{
-                               this.events23[j][k][3] = '#FF3333' ;
+                              this.events23[j][k][3] = '#FF4040' ;
                            }
 
                          this.events23[j][k][5] = true; this.showday23= true;
@@ -19227,7 +19227,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events23[j][k][3] = '#006633' ;
                     }else{
-                               this.events23[j][k][3] = '#FF3333' ;
+                              this.events23[j][k][3] = '#FF4040' ;
                            }
 
                          this.events23[j][k][5] = true; this.showday23= true;
@@ -19270,7 +19270,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events23[j][k][3] = '#006633' ;
                     }else{
-                               this.events23[j][k][3] = '#FF3333' ;
+                              this.events23[j][k][3] = '#FF4040' ;
                            }
 
                          this.events23[j][k][5] = true; this.showday23= true;
@@ -19313,7 +19313,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events23[j][k][3] = '#006633' ;
                     }else{
-                               this.events23[j][k][3] = '#FF3333' ;
+                              this.events23[j][k][3] = '#FF4040' ;
                            }
 
                          this.events23[j][k][5] = true; this.showday23= true;
@@ -19356,7 +19356,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events23[j][k][3] = '#006633' ;
                     }else{
-                               this.events23[j][k][3] = '#FF3333' ;
+                              this.events23[j][k][3] = '#FF4040' ;
                            }
 
                          this.events23[j][k][5] = true; this.showday23= true;
@@ -19399,7 +19399,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events23[j][k][3] = '#006633' ;
                     }else{
-                               this.events23[j][k][3] = '#FF3333' ;
+                              this.events23[j][k][3] = '#FF4040' ;
                            }
 
                          this.events23[j][k][5] = true; this.showday23= true;
@@ -19442,7 +19442,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events23[j][k][3] = '#006633' ;
                     }else{
-                               this.events23[j][k][3] = '#FF3333' ;
+                              this.events23[j][k][3] = '#FF4040' ;
                            }
 
                          this.events23[j][k][5] = true; this.showday23= true;
@@ -19485,7 +19485,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events23[j][k][3] = '#006633' ;
                     }else{
-                               this.events23[j][k][3] = '#FF3333' ;
+                              this.events23[j][k][3] = '#FF4040' ;
                            }
 
                          this.events23[j][k][5] = true; this.showday23= true;
@@ -19528,7 +19528,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events23[j][k][3] = '#006633' ;
                     }else{
-                               this.events23[j][k][3] = '#FF3333' ;
+                              this.events23[j][k][3] = '#FF4040' ;
                            }
 
                          this.events23[j][k][5] = true; this.showday23= true;
@@ -19571,7 +19571,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events23[j][k][3] = '#006633' ;
                     }else{
-                               this.events23[j][k][3] = '#FF3333' ;
+                              this.events23[j][k][3] = '#FF4040' ;
                            }
 
                          this.events23[j][k][5] = true; this.showday23= true;
@@ -19614,7 +19614,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events23[j][k][3] = '#006633' ;
                     }else{
-                               this.events23[j][k][3] = '#FF3333' ;
+                              this.events23[j][k][3] = '#FF4040' ;
                            }
 
                          this.events23[j][k][5] = true; this.showday23= true;
@@ -19657,7 +19657,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events23[j][k][3] = '#006633' ;
                     }else{
-                               this.events23[j][k][3] = '#FF3333' ;
+                              this.events23[j][k][3] = '#FF4040' ;
                            }
 
                          this.events23[j][k][5] = true; this.showday23= true;
@@ -19700,7 +19700,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events23[j][k][3] = '#006633' ;
                     }else{
-                               this.events23[j][k][3] = '#FF3333' ;
+                              this.events23[j][k][3] = '#FF4040' ;
                            }
 
                          this.events23[j][k][5] = true; this.showday23= true;
@@ -19743,7 +19743,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events23[j][k][3] = '#006633' ;
                     }else{
-                               this.events23[j][k][3] = '#FF3333' ;
+                              this.events23[j][k][3] = '#FF4040' ;
                            }
 
                          this.events23[j][k][5] = true; this.showday23= true;
@@ -19786,7 +19786,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events23[j][k][3] = '#006633' ;
                     }else{
-                               this.events23[j][k][3] = '#FF3333' ;
+                              this.events23[j][k][3] = '#FF4040' ;
                            }
 
                          this.events23[j][k][5] = true; this.showday23= true;
@@ -19829,7 +19829,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events23[j][k][3] = '#006633' ;
                     }else{
-                               this.events23[j][k][3] = '#FF3333' ;
+                              this.events23[j][k][3] = '#FF4040' ;
                            }
 
                          this.events23[j][k][5] = true; this.showday23= true;
@@ -19874,7 +19874,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events24[j][k][3] = '#006633' ;
                     }else{
-                               this.events24[j][k][3] = '#FF3333' ;
+                               this.events24[j][k][3] = '#FF4040' ;
                            }
 
                          this.events24[j][k][5] = true; this.showday24= true;
@@ -19917,7 +19917,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events24[j][k][3] = '#006633' ;
                     }else{
-                               this.events24[j][k][3] = '#FF3333' ;
+                               this.events24[j][k][3] = '#FF4040' ;
                            }
 
                          this.events24[j][k][5] = true; this.showday24= true;
@@ -19960,7 +19960,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events24[j][k][3] = '#006633' ;
                     }else{
-                               this.events24[j][k][3] = '#FF3333' ;
+                               this.events24[j][k][3] = '#FF4040' ;
                            }
 
                          this.events24[j][k][5] = true; this.showday24= true;
@@ -20003,7 +20003,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events24[j][k][3] = '#006633' ;
                     }else{
-                               this.events24[j][k][3] = '#FF3333' ;
+                               this.events24[j][k][3] = '#FF4040' ;
                            }
 
                          this.events24[j][k][5] = true; this.showday24= true;
@@ -20046,7 +20046,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events24[j][k][3] = '#006633' ;
                     }else{
-                               this.events24[j][k][3] = '#FF3333' ;
+                               this.events24[j][k][3] = '#FF4040' ;
                            }
 
                          this.events24[j][k][5] = true; this.showday24= true;
@@ -20089,7 +20089,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events24[j][k][3] = '#006633' ;
                     }else{
-                               this.events24[j][k][3] = '#FF3333' ;
+                               this.events24[j][k][3] = '#FF4040' ;
                            }
 
                          this.events24[j][k][5] = true; this.showday24= true;
@@ -20132,7 +20132,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events24[j][k][3] = '#006633' ;
                     }else{
-                               this.events24[j][k][3] = '#FF3333' ;
+                               this.events24[j][k][3] = '#FF4040' ;
                            }
 
                          this.events24[j][k][5] = true; this.showday24= true;
@@ -20175,7 +20175,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events24[j][k][3] = '#006633' ;
                     }else{
-                               this.events24[j][k][3] = '#FF3333' ;
+                               this.events24[j][k][3] = '#FF4040' ;
                            }
 
                          this.events24[j][k][5] = true; this.showday24= true;
@@ -20218,7 +20218,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events24[j][k][3] = '#006633' ;
                     }else{
-                               this.events24[j][k][3] = '#FF3333' ;
+                               this.events24[j][k][3] = '#FF4040' ;
                            }
 
                          this.events24[j][k][5] = true; this.showday24= true;
@@ -20261,7 +20261,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events24[j][k][3] = '#006633' ;
                     }else{
-                               this.events24[j][k][3] = '#FF3333' ;
+                               this.events24[j][k][3] = '#FF4040' ;
                            }
 
                          this.events24[j][k][5] = true; this.showday24= true;
@@ -20304,7 +20304,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events24[j][k][3] = '#006633' ;
                     }else{
-                               this.events24[j][k][3] = '#FF3333' ;
+                               this.events24[j][k][3] = '#FF4040' ;
                            }
 
                          this.events24[j][k][5] = true; this.showday24= true;
@@ -20347,7 +20347,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events24[j][k][3] = '#006633' ;
                     }else{
-                               this.events24[j][k][3] = '#FF3333' ;
+                               this.events24[j][k][3] = '#FF4040' ;
                            }
 
                          this.events24[j][k][5] = true; this.showday24= true;
@@ -20390,7 +20390,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events24[j][k][3] = '#006633' ;
                     }else{
-                               this.events24[j][k][3] = '#FF3333' ;
+                               this.events24[j][k][3] = '#FF4040' ;
                            }
 
                          this.events24[j][k][5] = true; this.showday24= true;
@@ -20433,7 +20433,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events24[j][k][3] = '#006633' ;
                     }else{
-                               this.events24[j][k][3] = '#FF3333' ;
+                               this.events24[j][k][3] = '#FF4040' ;
                            }
 
                          this.events24[j][k][5] = true; this.showday24= true;
@@ -20476,7 +20476,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events24[j][k][3] = '#006633' ;
                     }else{
-                               this.events24[j][k][3] = '#FF3333' ;
+                               this.events24[j][k][3] = '#FF4040' ;
                            }
 
                          this.events24[j][k][5] = true; this.showday24= true;
@@ -20519,7 +20519,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events24[j][k][3] = '#006633' ;
                     }else{
-                               this.events24[j][k][3] = '#FF3333' ;
+                               this.events24[j][k][3] = '#FF4040' ;
                            }
 
                          this.events24[j][k][5] = true; this.showday24= true;
@@ -20562,7 +20562,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events24[j][k][3] = '#006633' ;
                     }else{
-                               this.events24[j][k][3] = '#FF3333' ;
+                               this.events24[j][k][3] = '#FF4040' ;
                            }
 
                          this.events24[j][k][5] = true; this.showday24= true;
@@ -20605,7 +20605,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events24[j][k][3] = '#006633' ;
                     }else{
-                               this.events24[j][k][3] = '#FF3333' ;
+                               this.events24[j][k][3] = '#FF4040' ;
                            }
 
                          this.events24[j][k][5] = true; this.showday24= true;
@@ -20648,7 +20648,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events24[j][k][3] = '#006633' ;
                     }else{
-                               this.events24[j][k][3] = '#FF3333' ;
+                               this.events24[j][k][3] = '#FF4040' ;
                            }
 
                          this.events24[j][k][5] = true; this.showday24= true;
@@ -20692,7 +20692,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events25[j][k][3] = '#006633' ;
                     }else{
-                               this.events25[j][k][3] = '#FF3333' ;
+                               this.events25[j][k][3] = '#FF4040' ;
                            }
 
                          this.events25[j][k][5] = true; this.showday25= true;
@@ -20735,7 +20735,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events25[j][k][3] = '#006633' ;
                     }else{
-                               this.events25[j][k][3] = '#FF3333' ;
+                               this.events25[j][k][3] = '#FF4040' ;
                            }
 
                          this.events25[j][k][5] = true; this.showday25= true;
@@ -20778,7 +20778,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events25[j][k][3] = '#006633' ;
                     }else{
-                               this.events25[j][k][3] = '#FF3333' ;
+                               this.events25[j][k][3] = '#FF4040' ;
                            }
 
                          this.events25[j][k][5] = true; this.showday25= true;
@@ -20821,7 +20821,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events25[j][k][3] = '#006633' ;
                     }else{
-                               this.events25[j][k][3] = '#FF3333' ;
+                               this.events25[j][k][3] = '#FF4040' ;
                            }
 
                          this.events25[j][k][5] = true; this.showday25= true;
@@ -20864,7 +20864,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events25[j][k][3] = '#006633' ;
                     }else{
-                               this.events25[j][k][3] = '#FF3333' ;
+                               this.events25[j][k][3] = '#FF4040' ;
                            }
 
                          this.events25[j][k][5] = true; this.showday25= true;
@@ -20907,7 +20907,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events25[j][k][3] = '#006633' ;
                     }else{
-                               this.events25[j][k][3] = '#FF3333' ;
+                               this.events25[j][k][3] = '#FF4040' ;
                            }
 
                          this.events25[j][k][5] = true; this.showday25= true;
@@ -20950,7 +20950,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events25[j][k][3] = '#006633' ;
                     }else{
-                               this.events25[j][k][3] = '#FF3333' ;
+                               this.events25[j][k][3] = '#FF4040' ;
                            }
 
                          this.events25[j][k][5] = true; this.showday25= true;
@@ -20993,7 +20993,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events25[j][k][3] = '#006633' ;
                     }else{
-                               this.events25[j][k][3] = '#FF3333' ;
+                               this.events25[j][k][3] = '#FF4040' ;
                            }
 
                          this.events25[j][k][5] = true; this.showday25= true;
@@ -21036,7 +21036,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events25[j][k][3] = '#006633' ;
                     }else{
-                               this.events25[j][k][3] = '#FF3333' ;
+                               this.events25[j][k][3] = '#FF4040' ;
                            }
 
                          this.events25[j][k][5] = true; this.showday25= true;
@@ -21079,7 +21079,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events25[j][k][3] = '#006633' ;
                     }else{
-                               this.events25[j][k][3] = '#FF3333' ;
+                               this.events25[j][k][3] = '#FF4040' ;
                            }
 
                          this.events25[j][k][5] = true; this.showday25= true;
@@ -21122,7 +21122,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events25[j][k][3] = '#006633' ;
                     }else{
-                               this.events25[j][k][3] = '#FF3333' ;
+                               this.events25[j][k][3] = '#FF4040' ;
                            }
 
                          this.events25[j][k][5] = true; this.showday25= true;
@@ -21165,7 +21165,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events25[j][k][3] = '#006633' ;
                     }else{
-                               this.events25[j][k][3] = '#FF3333' ;
+                               this.events25[j][k][3] = '#FF4040' ;
                            }
 
                          this.events25[j][k][5] = true; this.showday25= true;
@@ -21208,7 +21208,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events25[j][k][3] = '#006633' ;
                     }else{
-                               this.events25[j][k][3] = '#FF3333' ;
+                               this.events25[j][k][3] = '#FF4040' ;
                            }
 
                          this.events25[j][k][5] = true; this.showday25= true;
@@ -21251,7 +21251,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events25[j][k][3] = '#006633' ;
                     }else{
-                               this.events25[j][k][3] = '#FF3333' ;
+                               this.events25[j][k][3] = '#FF4040' ;
                            }
 
                          this.events25[j][k][5] = true; this.showday25= true;
@@ -21294,7 +21294,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events25[j][k][3] = '#006633' ;
                     }else{
-                               this.events25[j][k][3] = '#FF3333' ;
+                               this.events25[j][k][3] = '#FF4040' ;
                            }
 
                          this.events25[j][k][5] = true; this.showday25= true;
@@ -21337,7 +21337,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events25[j][k][3] = '#006633' ;
                     }else{
-                               this.events25[j][k][3] = '#FF3333' ;
+                               this.events25[j][k][3] = '#FF4040' ;
                            }
 
                          this.events25[j][k][5] = true; this.showday25= true;
@@ -21380,7 +21380,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events25[j][k][3] = '#006633' ;
                     }else{
-                               this.events25[j][k][3] = '#FF3333' ;
+                               this.events25[j][k][3] = '#FF4040' ;
                            }
 
                          this.events25[j][k][5] = true; this.showday25= true;
@@ -21423,7 +21423,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events25[j][k][3] = '#006633' ;
                     }else{
-                               this.events25[j][k][3] = '#FF3333' ;
+                               this.events25[j][k][3] = '#FF4040' ;
                            }
 
                          this.events25[j][k][5] = true; this.showday25= true;
@@ -21466,7 +21466,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events25[j][k][3] = '#006633' ;
                     }else{
-                               this.events25[j][k][3] = '#FF3333' ;
+                               this.events25[j][k][3] = '#FF4040' ;
                            }
 
                          this.events25[j][k][5] = true; this.showday25= true;
@@ -21510,7 +21510,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events26[j][k][3] = '#006633' ;
                     }else{
-                                this.events26[j][k][3] = '#FF3333' ;
+                                this.events26[j][k][3] = '#FF4040' ;
                             }
 
                           this.events26[j][k][5] = true; this.showday26= true;
@@ -21553,7 +21553,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events26[j][k][3] = '#006633' ;
                     }else{
-                                this.events26[j][k][3] = '#FF3333' ;
+                                this.events26[j][k][3] = '#FF4040' ;
                             }
 
                           this.events26[j][k][5] = true; this.showday26= true;
@@ -21596,7 +21596,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events26[j][k][3] = '#006633' ;
                     }else{
-                                this.events26[j][k][3] = '#FF3333' ;
+                                this.events26[j][k][3] = '#FF4040' ;
                             }
 
                           this.events26[j][k][5] = true; this.showday26= true;
@@ -21639,7 +21639,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events26[j][k][3] = '#006633' ;
                     }else{
-                                this.events26[j][k][3] = '#FF3333' ;
+                                this.events26[j][k][3] = '#FF4040' ;
                             }
 
                           this.events26[j][k][5] = true; this.showday26= true;
@@ -21682,7 +21682,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events26[j][k][3] = '#006633' ;
                     }else{
-                                this.events26[j][k][3] = '#FF3333' ;
+                                this.events26[j][k][3] = '#FF4040' ;
                             }
 
                           this.events26[j][k][5] = true; this.showday26= true;
@@ -21725,7 +21725,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events26[j][k][3] = '#006633' ;
                     }else{
-                                this.events26[j][k][3] = '#FF3333' ;
+                                this.events26[j][k][3] = '#FF4040' ;
                             }
 
                           this.events26[j][k][5] = true; this.showday26= true;
@@ -21768,7 +21768,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events26[j][k][3] = '#006633' ;
                     }else{
-                                this.events26[j][k][3] = '#FF3333' ;
+                                this.events26[j][k][3] = '#FF4040' ;
                             }
 
                           this.events26[j][k][5] = true; this.showday26= true;
@@ -21811,7 +21811,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events26[j][k][3] = '#006633' ;
                     }else{
-                                this.events26[j][k][3] = '#FF3333' ;
+                                this.events26[j][k][3] = '#FF4040' ;
                             }
 
                           this.events26[j][k][5] = true; this.showday26= true;
@@ -21854,7 +21854,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events26[j][k][3] = '#006633' ;
                     }else{
-                                this.events26[j][k][3] = '#FF3333' ;
+                                this.events26[j][k][3] = '#FF4040' ;
                             }
 
                           this.events26[j][k][5] = true; this.showday26= true;
@@ -21897,7 +21897,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events26[j][k][3] = '#006633' ;
                     }else{
-                                this.events26[j][k][3] = '#FF3333' ;
+                                this.events26[j][k][3] = '#FF4040' ;
                             }
 
                           this.events26[j][k][5] = true; this.showday26= true;
@@ -21940,7 +21940,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events26[j][k][3] = '#006633' ;
                     }else{
-                                this.events26[j][k][3] = '#FF3333' ;
+                                this.events26[j][k][3] = '#FF4040' ;
                             }
 
                           this.events26[j][k][5] = true; this.showday26= true;
@@ -21983,7 +21983,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events26[j][k][3] = '#006633' ;
                     }else{
-                                this.events26[j][k][3] = '#FF3333' ;
+                                this.events26[j][k][3] = '#FF4040' ;
                             }
 
                           this.events26[j][k][5] = true; this.showday26= true;
@@ -22026,7 +22026,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events26[j][k][3] = '#006633' ;
                     }else{
-                                this.events26[j][k][3] = '#FF3333' ;
+                                this.events26[j][k][3] = '#FF4040' ;
                             }
 
                           this.events26[j][k][5] = true; this.showday26= true;
@@ -22069,7 +22069,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events26[j][k][3] = '#006633' ;
                     }else{
-                                this.events26[j][k][3] = '#FF3333' ;
+                                this.events26[j][k][3] = '#FF4040' ;
                             }
 
                           this.events26[j][k][5] = true; this.showday26= true;
@@ -22112,7 +22112,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events26[j][k][3] = '#006633' ;
                     }else{
-                                this.events26[j][k][3] = '#FF3333' ;
+                                this.events26[j][k][3] = '#FF4040' ;
                             }
 
                           this.events26[j][k][5] = true; this.showday26= true;
@@ -22155,7 +22155,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events26[j][k][3] = '#006633' ;
                     }else{
-                                this.events26[j][k][3] = '#FF3333' ;
+                                this.events26[j][k][3] = '#FF4040' ;
                             }
 
                           this.events26[j][k][5] = true; this.showday26= true;
@@ -22198,7 +22198,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events26[j][k][3] = '#006633' ;
                     }else{
-                                this.events26[j][k][3] = '#FF3333' ;
+                                this.events26[j][k][3] = '#FF4040' ;
                             }
 
                           this.events26[j][k][5] = true; this.showday26= true;
@@ -22241,7 +22241,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events26[j][k][3] = '#006633' ;
                     }else{
-                                this.events26[j][k][3] = '#FF3333' ;
+                                this.events26[j][k][3] = '#FF4040' ;
                             }
 
                           this.events26[j][k][5] = true; this.showday26= true;
@@ -22284,7 +22284,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events26[j][k][3] = '#006633' ;
                     }else{
-                                this.events26[j][k][3] = '#FF3333' ;
+                                this.events26[j][k][3] = '#FF4040' ;
                             }
 
                           this.events26[j][k][5] = true; this.showday26= true;
@@ -22328,7 +22328,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events27[j][k][3] = '#006633' ;
                     }else{
-                                 this.events27[j][k][3] = '#FF3333' ;
+                                 this.events27[j][k][3] = '#FF4040' ;
                              }
 
                            this.events27[j][k][5] = true; this.showday27= true;
@@ -22371,7 +22371,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events27[j][k][3] = '#006633' ;
                     }else{
-                                 this.events27[j][k][3] = '#FF3333' ;
+                                 this.events27[j][k][3] = '#FF4040' ;
                              }
 
                            this.events27[j][k][5] = true; this.showday27= true;
@@ -22414,7 +22414,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events27[j][k][3] = '#006633' ;
                     }else{
-                                 this.events27[j][k][3] = '#FF3333' ;
+                                 this.events27[j][k][3] = '#FF4040' ;
                              }
 
                            this.events27[j][k][5] = true; this.showday27= true;
@@ -22457,7 +22457,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events27[j][k][3] = '#006633' ;
                     }else{
-                                 this.events27[j][k][3] = '#FF3333' ;
+                                 this.events27[j][k][3] = '#FF4040' ;
                              }
 
                            this.events27[j][k][5] = true; this.showday27= true;
@@ -22500,7 +22500,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events27[j][k][3] = '#006633' ;
                     }else{
-                                 this.events27[j][k][3] = '#FF3333' ;
+                                 this.events27[j][k][3] = '#FF4040' ;
                              }
 
                            this.events27[j][k][5] = true; this.showday27= true;
@@ -22543,7 +22543,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events27[j][k][3] = '#006633' ;
                     }else{
-                                 this.events27[j][k][3] = '#FF3333' ;
+                                 this.events27[j][k][3] = '#FF4040' ;
                              }
 
                            this.events27[j][k][5] = true; this.showday27= true;
@@ -22586,7 +22586,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events27[j][k][3] = '#006633' ;
                     }else{
-                                 this.events27[j][k][3] = '#FF3333' ;
+                                 this.events27[j][k][3] = '#FF4040' ;
                              }
 
                            this.events27[j][k][5] = true; this.showday27= true;
@@ -22629,7 +22629,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events27[j][k][3] = '#006633' ;
                     }else{
-                                 this.events27[j][k][3] = '#FF3333' ;
+                                 this.events27[j][k][3] = '#FF4040' ;
                              }
 
                            this.events27[j][k][5] = true; this.showday27= true;
@@ -22672,7 +22672,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events27[j][k][3] = '#006633' ;
                     }else{
-                                 this.events27[j][k][3] = '#FF3333' ;
+                                 this.events27[j][k][3] = '#FF4040' ;
                              }
 
                            this.events27[j][k][5] = true; this.showday27= true;
@@ -22715,7 +22715,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events27[j][k][3] = '#006633' ;
                     }else{
-                                 this.events27[j][k][3] = '#FF3333' ;
+                                 this.events27[j][k][3] = '#FF4040' ;
                              }
 
                            this.events27[j][k][5] = true; this.showday27= true;
@@ -22758,7 +22758,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events27[j][k][3] = '#006633' ;
                     }else{
-                                 this.events27[j][k][3] = '#FF3333' ;
+                                 this.events27[j][k][3] = '#FF4040' ;
                              }
 
                            this.events27[j][k][5] = true; this.showday27= true;
@@ -22801,7 +22801,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events27[j][k][3] = '#006633' ;
                     }else{
-                                 this.events27[j][k][3] = '#FF3333' ;
+                                 this.events27[j][k][3] = '#FF4040' ;
                              }
 
                            this.events27[j][k][5] = true; this.showday27= true;
@@ -22844,7 +22844,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events27[j][k][3] = '#006633' ;
                     }else{
-                                 this.events27[j][k][3] = '#FF3333' ;
+                                 this.events27[j][k][3] = '#FF4040' ;
                              }
 
                            this.events27[j][k][5] = true; this.showday27= true;
@@ -22887,7 +22887,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events27[j][k][3] = '#006633' ;
                     }else{
-                                 this.events27[j][k][3] = '#FF3333' ;
+                                 this.events27[j][k][3] = '#FF4040' ;
                              }
 
                            this.events27[j][k][5] = true; this.showday27= true;
@@ -22930,7 +22930,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events27[j][k][3] = '#006633' ;
                     }else{
-                                 this.events27[j][k][3] = '#FF3333' ;
+                                 this.events27[j][k][3] = '#FF4040' ;
                              }
 
                            this.events27[j][k][5] = true; this.showday27= true;
@@ -22973,7 +22973,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events27[j][k][3] = '#006633' ;
                     }else{
-                                 this.events27[j][k][3] = '#FF3333' ;
+                                 this.events27[j][k][3] = '#FF4040' ;
                              }
 
                            this.events27[j][k][5] = true; this.showday27= true;
@@ -23016,7 +23016,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events27[j][k][3] = '#006633' ;
                     }else{
-                                 this.events27[j][k][3] = '#FF3333' ;
+                                 this.events27[j][k][3] = '#FF4040' ;
                              }
 
                            this.events27[j][k][5] = true; this.showday27= true;
@@ -23059,7 +23059,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events27[j][k][3] = '#006633' ;
                     }else{
-                                 this.events27[j][k][3] = '#FF3333' ;
+                                 this.events27[j][k][3] = '#FF4040' ;
                              }
 
                            this.events27[j][k][5] = true; this.showday27= true;
@@ -23102,7 +23102,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events27[j][k][3] = '#006633' ;
                     }else{
-                                 this.events27[j][k][3] = '#FF3333' ;
+                                 this.events27[j][k][3] = '#FF4040' ;
                              }
 
                            this.events27[j][k][5] = true; this.showday27= true;
@@ -23147,7 +23147,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events28[j][k][3] = '#006633' ;
                     }else{
-                                 this.events28[j][k][3] = '#FF3333' ;
+                                 this.events28[j][k][3] = '#FF4040' ;
                              }
 
                            this.events28[j][k][5] = true; this.showday28= true;
@@ -23190,7 +23190,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events28[j][k][3] = '#006633' ;
                     }else{
-                                 this.events28[j][k][3] = '#FF3333' ;
+                                 this.events28[j][k][3] = '#FF4040' ;
                              }
 
                            this.events28[j][k][5] = true; this.showday28= true;
@@ -23233,7 +23233,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events28[j][k][3] = '#006633' ;
                     }else{
-                                 this.events28[j][k][3] = '#FF3333' ;
+                                 this.events28[j][k][3] = '#FF4040' ;
                              }
 
                            this.events28[j][k][5] = true; this.showday28= true;
@@ -23276,7 +23276,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events28[j][k][3] = '#006633' ;
                     }else{
-                                 this.events28[j][k][3] = '#FF3333' ;
+                                 this.events28[j][k][3] = '#FF4040' ;
                              }
 
                            this.events28[j][k][5] = true; this.showday28= true;
@@ -23319,7 +23319,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events28[j][k][3] = '#006633' ;
                     }else{
-                                 this.events28[j][k][3] = '#FF3333' ;
+                                 this.events28[j][k][3] = '#FF4040' ;
                              }
 
                            this.events28[j][k][5] = true; this.showday28= true;
@@ -23362,7 +23362,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events28[j][k][3] = '#006633' ;
                     }else{
-                                 this.events28[j][k][3] = '#FF3333' ;
+                                 this.events28[j][k][3] = '#FF4040' ;
                              }
 
                            this.events28[j][k][5] = true; this.showday28= true;
@@ -23405,7 +23405,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events28[j][k][3] = '#006633' ;
                     }else{
-                                 this.events28[j][k][3] = '#FF3333' ;
+                                 this.events28[j][k][3] = '#FF4040' ;
                              }
 
                            this.events28[j][k][5] = true; this.showday28= true;
@@ -23448,7 +23448,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events28[j][k][3] = '#006633' ;
                     }else{
-                                 this.events28[j][k][3] = '#FF3333' ;
+                                 this.events28[j][k][3] = '#FF4040' ;
                              }
 
                            this.events28[j][k][5] = true; this.showday28= true;
@@ -23491,7 +23491,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events28[j][k][3] = '#006633' ;
                     }else{
-                                 this.events28[j][k][3] = '#FF3333' ;
+                                 this.events28[j][k][3] = '#FF4040' ;
                              }
 
                            this.events28[j][k][5] = true; this.showday28= true;
@@ -23534,7 +23534,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events28[j][k][3] = '#006633' ;
                     }else{
-                                 this.events28[j][k][3] = '#FF3333' ;
+                                 this.events28[j][k][3] = '#FF4040' ;
                              }
 
                            this.events28[j][k][5] = true; this.showday28= true;
@@ -23577,7 +23577,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events28[j][k][3] = '#006633' ;
                     }else{
-                                 this.events28[j][k][3] = '#FF3333' ;
+                                 this.events28[j][k][3] = '#FF4040' ;
                              }
 
                            this.events28[j][k][5] = true; this.showday28= true;
@@ -23620,7 +23620,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events28[j][k][3] = '#006633' ;
                     }else{
-                                 this.events28[j][k][3] = '#FF3333' ;
+                                 this.events28[j][k][3] = '#FF4040' ;
                              }
 
                            this.events28[j][k][5] = true; this.showday28= true;
@@ -23663,7 +23663,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events28[j][k][3] = '#006633' ;
                     }else{
-                                 this.events28[j][k][3] = '#FF3333' ;
+                                 this.events28[j][k][3] = '#FF4040' ;
                              }
 
                            this.events28[j][k][5] = true; this.showday28= true;
@@ -23706,7 +23706,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events28[j][k][3] = '#006633' ;
                     }else{
-                                 this.events28[j][k][3] = '#FF3333' ;
+                                 this.events28[j][k][3] = '#FF4040' ;
                              }
 
                            this.events28[j][k][5] = true; this.showday28= true;
@@ -23749,7 +23749,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events28[j][k][3] = '#006633' ;
                     }else{
-                                 this.events28[j][k][3] = '#FF3333' ;
+                                 this.events28[j][k][3] = '#FF4040' ;
                              }
 
                            this.events28[j][k][5] = true; this.showday28= true;
@@ -23792,7 +23792,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events28[j][k][3] = '#006633' ;
                     }else{
-                                 this.events28[j][k][3] = '#FF3333' ;
+                                 this.events28[j][k][3] = '#FF4040' ;
                              }
 
                            this.events28[j][k][5] = true; this.showday28= true;
@@ -23835,7 +23835,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events28[j][k][3] = '#006633' ;
                     }else{
-                                 this.events28[j][k][3] = '#FF3333' ;
+                                 this.events28[j][k][3] = '#FF4040' ;
                              }
 
                            this.events28[j][k][5] = true; this.showday28= true;
@@ -23878,7 +23878,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events28[j][k][3] = '#006633' ;
                     }else{
-                                 this.events28[j][k][3] = '#FF3333' ;
+                                 this.events28[j][k][3] = '#FF4040' ;
                              }
 
                            this.events28[j][k][5] = true; this.showday28= true;
@@ -23921,7 +23921,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events28[j][k][3] = '#006633' ;
                     }else{
-                                 this.events28[j][k][3] = '#FF3333' ;
+                                 this.events28[j][k][3] = '#FF4040' ;
                              }
 
                            this.events28[j][k][5] = true; this.showday28= true;
@@ -23966,7 +23966,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events29[j][k][3] = '#006633' ;
                     }else{
-                                 this.events29[j][k][3] = '#FF3333' ;
+                                 this.events29[j][k][3] = '#FF4040' ;
                              }
 
                            this.events29[j][k][5] = true; this.showday29= true;
@@ -24009,7 +24009,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events29[j][k][3] = '#006633' ;
                     }else{
-                                 this.events29[j][k][3] = '#FF3333' ;
+                                 this.events29[j][k][3] = '#FF4040' ;
                              }
 
                            this.events29[j][k][5] = true; this.showday29= true;
@@ -24052,7 +24052,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events29[j][k][3] = '#006633' ;
                     }else{
-                                 this.events29[j][k][3] = '#FF3333' ;
+                                 this.events29[j][k][3] = '#FF4040' ;
                              }
 
                            this.events29[j][k][5] = true; this.showday29= true;
@@ -24095,7 +24095,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events29[j][k][3] = '#006633' ;
                     }else{
-                                 this.events29[j][k][3] = '#FF3333' ;
+                                 this.events29[j][k][3] = '#FF4040' ;
                              }
 
                            this.events29[j][k][5] = true; this.showday29= true;
@@ -24138,7 +24138,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events29[j][k][3] = '#006633' ;
                     }else{
-                                 this.events29[j][k][3] = '#FF3333' ;
+                                 this.events29[j][k][3] = '#FF4040' ;
                              }
 
                            this.events29[j][k][5] = true; this.showday29= true;
@@ -24181,7 +24181,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events29[j][k][3] = '#006633' ;
                     }else{
-                                 this.events29[j][k][3] = '#FF3333' ;
+                                 this.events29[j][k][3] = '#FF4040' ;
                              }
 
                            this.events29[j][k][5] = true; this.showday29= true;
@@ -24224,7 +24224,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events29[j][k][3] = '#006633' ;
                     }else{
-                                 this.events29[j][k][3] = '#FF3333' ;
+                                 this.events29[j][k][3] = '#FF4040' ;
                              }
 
                            this.events29[j][k][5] = true; this.showday29= true;
@@ -24267,7 +24267,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events29[j][k][3] = '#006633' ;
                     }else{
-                                 this.events29[j][k][3] = '#FF3333' ;
+                                 this.events29[j][k][3] = '#FF4040' ;
                              }
 
                            this.events29[j][k][5] = true; this.showday29= true;
@@ -24310,7 +24310,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events29[j][k][3] = '#006633' ;
                     }else{
-                                 this.events29[j][k][3] = '#FF3333' ;
+                                 this.events29[j][k][3] = '#FF4040' ;
                              }
 
                            this.events29[j][k][5] = true; this.showday29= true;
@@ -24353,7 +24353,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events29[j][k][3] = '#006633' ;
                     }else{
-                                 this.events29[j][k][3] = '#FF3333' ;
+                                 this.events29[j][k][3] = '#FF4040' ;
                              }
 
                            this.events29[j][k][5] = true; this.showday29= true;
@@ -24396,7 +24396,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events29[j][k][3] = '#006633' ;
                     }else{
-                                 this.events29[j][k][3] = '#FF3333' ;
+                                 this.events29[j][k][3] = '#FF4040' ;
                              }
 
                            this.events29[j][k][5] = true; this.showday29= true;
@@ -24439,7 +24439,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events29[j][k][3] = '#006633' ;
                     }else{
-                                 this.events29[j][k][3] = '#FF3333' ;
+                                 this.events29[j][k][3] = '#FF4040' ;
                              }
 
                            this.events29[j][k][5] = true; this.showday29= true;
@@ -24482,7 +24482,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events29[j][k][3] = '#006633' ;
                     }else{
-                                 this.events29[j][k][3] = '#FF3333' ;
+                                 this.events29[j][k][3] = '#FF4040' ;
                              }
 
                            this.events29[j][k][5] = true; this.showday29= true;
@@ -24525,7 +24525,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events29[j][k][3] = '#006633' ;
                     }else{
-                                 this.events29[j][k][3] = '#FF3333' ;
+                                 this.events29[j][k][3] = '#FF4040' ;
                              }
 
                            this.events29[j][k][5] = true; this.showday29= true;
@@ -24568,7 +24568,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events29[j][k][3] = '#006633' ;
                     }else{
-                                 this.events29[j][k][3] = '#FF3333' ;
+                                 this.events29[j][k][3] = '#FF4040' ;
                              }
 
                            this.events29[j][k][5] = true; this.showday29= true;
@@ -24611,7 +24611,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events29[j][k][3] = '#006633' ;
                     }else{
-                                 this.events29[j][k][3] = '#FF3333' ;
+                                 this.events29[j][k][3] = '#FF4040' ;
                              }
 
                            this.events29[j][k][5] = true; this.showday29= true;
@@ -24654,7 +24654,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events29[j][k][3] = '#006633' ;
                     }else{
-                                 this.events29[j][k][3] = '#FF3333' ;
+                                 this.events29[j][k][3] = '#FF4040' ;
                              }
 
                            this.events29[j][k][5] = true; this.showday29= true;
@@ -24697,7 +24697,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events29[j][k][3] = '#006633' ;
                     }else{
-                                 this.events29[j][k][3] = '#FF3333' ;
+                                 this.events29[j][k][3] = '#FF4040' ;
                              }
 
                            this.events29[j][k][5] = true; this.showday29= true;
@@ -24740,7 +24740,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                         }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events29[j][k][3] = '#006633' ;
                     }else{
-                                 this.events29[j][k][3] = '#FF3333' ;
+                                 this.events29[j][k][3] = '#FF4040' ;
                              }
 
                            this.events29[j][k][5] = true; this.showday29= true;
@@ -24784,7 +24784,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events30[j][k][3] = '#006633' ;
                     }else{
-                                 this.events30[j][k][3] = '#FF3333' ;
+                                 this.events30[j][k][3] = '#FF4040' ;
                              }
 
                            this.events30[j][k][5] = true; this.showday30= true;
@@ -24827,7 +24827,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events30[j][k][3] = '#006633' ;
                     }else{
-                                 this.events30[j][k][3] = '#FF3333' ;
+                                 this.events30[j][k][3] = '#FF4040' ;
                              }
 
                            this.events30[j][k][5] = true; this.showday30= true;
@@ -24870,7 +24870,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events30[j][k][3] = '#006633' ;
                     }else{
-                                 this.events30[j][k][3] = '#FF3333' ;
+                                 this.events30[j][k][3] = '#FF4040' ;
                              }
 
                            this.events30[j][k][5] = true; this.showday30= true;
@@ -24913,7 +24913,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events30[j][k][3] = '#006633' ;
                     }else{
-                                 this.events30[j][k][3] = '#FF3333' ;
+                                 this.events30[j][k][3] = '#FF4040' ;
                              }
 
                            this.events30[j][k][5] = true; this.showday30= true;
@@ -24956,7 +24956,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events30[j][k][3] = '#006633' ;
                     }else{
-                                 this.events30[j][k][3] = '#FF3333' ;
+                                 this.events30[j][k][3] = '#FF4040' ;
                              }
 
                            this.events30[j][k][5] = true; this.showday30= true;
@@ -24999,7 +24999,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events30[j][k][3] = '#006633' ;
                     }else{
-                                 this.events30[j][k][3] = '#FF3333' ;
+                                 this.events30[j][k][3] = '#FF4040' ;
                              }
 
                            this.events30[j][k][5] = true; this.showday30= true;
@@ -25042,7 +25042,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events30[j][k][3] = '#006633' ;
                     }else{
-                                 this.events30[j][k][3] = '#FF3333' ;
+                                 this.events30[j][k][3] = '#FF4040' ;
                              }
 
                            this.events30[j][k][5] = true; this.showday30= true;
@@ -25085,7 +25085,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events30[j][k][3] = '#006633' ;
                     }else{
-                                 this.events30[j][k][3] = '#FF3333' ;
+                                 this.events30[j][k][3] = '#FF4040' ;
                              }
 
                            this.events30[j][k][5] = true; this.showday30= true;
@@ -25128,7 +25128,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events30[j][k][3] = '#006633' ;
                     }else{
-                                 this.events30[j][k][3] = '#FF3333' ;
+                                 this.events30[j][k][3] = '#FF4040' ;
                              }
 
                            this.events30[j][k][5] = true; this.showday30= true;
@@ -25171,7 +25171,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events30[j][k][3] = '#006633' ;
                     }else{
-                                 this.events30[j][k][3] = '#FF3333' ;
+                                 this.events30[j][k][3] = '#FF4040' ;
                              }
 
                            this.events30[j][k][5] = true; this.showday30= true;
@@ -25214,7 +25214,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events30[j][k][3] = '#006633' ;
                     }else{
-                                 this.events30[j][k][3] = '#FF3333' ;
+                                 this.events30[j][k][3] = '#FF4040' ;
                              }
 
                            this.events30[j][k][5] = true; this.showday30= true;
@@ -25257,7 +25257,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events30[j][k][3] = '#006633' ;
                     }else{
-                                 this.events30[j][k][3] = '#FF3333' ;
+                                 this.events30[j][k][3] = '#FF4040' ;
                              }
 
                            this.events30[j][k][5] = true; this.showday30= true;
@@ -25300,7 +25300,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events30[j][k][3] = '#006633' ;
                     }else{
-                                 this.events30[j][k][3] = '#FF3333' ;
+                                 this.events30[j][k][3] = '#FF4040' ;
                              }
 
                            this.events30[j][k][5] = true; this.showday30= true;
@@ -25343,7 +25343,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events30[j][k][3] = '#006633' ;
                     }else{
-                                 this.events30[j][k][3] = '#FF3333' ;
+                                 this.events30[j][k][3] = '#FF4040' ;
                              }
 
                            this.events30[j][k][5] = true; this.showday30= true;
@@ -25386,7 +25386,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events30[j][k][3] = '#006633' ;
                     }else{
-                                 this.events30[j][k][3] = '#FF3333' ;
+                                 this.events30[j][k][3] = '#FF4040' ;
                              }
 
                            this.events30[j][k][5] = true; this.showday30= true;
@@ -25429,7 +25429,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events30[j][k][3] = '#006633' ;
                     }else{
-                                 this.events30[j][k][3] = '#FF3333' ;
+                                 this.events30[j][k][3] = '#FF4040' ;
                              }
 
                            this.events30[j][k][5] = true; this.showday30= true;
@@ -25472,7 +25472,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events30[j][k][3] = '#006633' ;
                     }else{
-                                 this.events30[j][k][3] = '#FF3333' ;
+                                 this.events30[j][k][3] = '#FF4040' ;
                              }
 
                            this.events30[j][k][5] = true; this.showday30= true;
@@ -25515,7 +25515,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events30[j][k][3] = '#006633' ;
                     }else{
-                                 this.events30[j][k][3] = '#FF3333' ;
+                                 this.events30[j][k][3] = '#FF4040' ;
                              }
 
                            this.events30[j][k][5] = true; this.showday30= true;
@@ -25558,7 +25558,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events30[j][k][3] = '#006633' ;
                     }else{
-                                 this.events30[j][k][3] = '#FF3333' ;
+                                 this.events30[j][k][3] = '#FF4040' ;
                              }
 
                            this.events30[j][k][5] = true; this.showday30= true;
@@ -25602,7 +25602,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events31[j][k][3] = '#006633' ;
                     }else{
-                                  this.events31[j][k][3] = '#FF3333' ;
+                                  this.events31[j][k][3] = '#FF4040' ;
                               }
 
                             this.events31[j][k][5] = true; this.showday31= true;
@@ -25645,7 +25645,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events31[j][k][3] = '#006633' ;
                     }else{
-                                  this.events31[j][k][3] = '#FF3333' ;
+                                  this.events31[j][k][3] = '#FF4040' ;
                               }
 
                             this.events31[j][k][5] = true; this.showday31= true;
@@ -25688,7 +25688,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events31[j][k][3] = '#006633' ;
                     }else{
-                                  this.events31[j][k][3] = '#FF3333' ;
+                                  this.events31[j][k][3] = '#FF4040' ;
                               }
 
                             this.events31[j][k][5] = true; this.showday31= true;
@@ -25731,7 +25731,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events31[j][k][3] = '#006633' ;
                     }else{
-                                  this.events31[j][k][3] = '#FF3333' ;
+                                  this.events31[j][k][3] = '#FF4040' ;
                               }
 
                             this.events31[j][k][5] = true; this.showday31= true;
@@ -25774,7 +25774,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events31[j][k][3] = '#006633' ;
                     }else{
-                                  this.events31[j][k][3] = '#FF3333' ;
+                                  this.events31[j][k][3] = '#FF4040' ;
                               }
 
                             this.events31[j][k][5] = true; this.showday31= true;
@@ -25817,7 +25817,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events31[j][k][3] = '#006633' ;
                     }else{
-                                  this.events31[j][k][3] = '#FF3333' ;
+                                  this.events31[j][k][3] = '#FF4040' ;
                               }
 
                             this.events31[j][k][5] = true; this.showday31= true;
@@ -25860,7 +25860,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events31[j][k][3] = '#006633' ;
                     }else{
-                                  this.events31[j][k][3] = '#FF3333' ;
+                                  this.events31[j][k][3] = '#FF4040' ;
                               }
 
                             this.events31[j][k][5] = true; this.showday31= true;
@@ -25903,7 +25903,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events31[j][k][3] = '#006633' ;
                     }else{
-                                  this.events31[j][k][3] = '#FF3333' ;
+                                  this.events31[j][k][3] = '#FF4040' ;
                               }
 
                             this.events31[j][k][5] = true; this.showday31= true;
@@ -25946,7 +25946,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events31[j][k][3] = '#006633' ;
                     }else{
-                                  this.events31[j][k][3] = '#FF3333' ;
+                                  this.events31[j][k][3] = '#FF4040' ;
                               }
 
                             this.events31[j][k][5] = true; this.showday31= true;
@@ -25989,7 +25989,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events31[j][k][3] = '#006633' ;
                     }else{
-                                  this.events31[j][k][3] = '#FF3333' ;
+                                  this.events31[j][k][3] = '#FF4040' ;
                               }
 
                             this.events31[j][k][5] = true; this.showday31= true;
@@ -26032,7 +26032,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events31[j][k][3] = '#006633' ;
                     }else{
-                                  this.events31[j][k][3] = '#FF3333' ;
+                                  this.events31[j][k][3] = '#FF4040' ;
                               }
 
                             this.events31[j][k][5] = true; this.showday31= true;
@@ -26075,7 +26075,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events31[j][k][3] = '#006633' ;
                     }else{
-                                  this.events31[j][k][3] = '#FF3333' ;
+                                  this.events31[j][k][3] = '#FF4040' ;
                               }
 
                             this.events31[j][k][5] = true; this.showday31= true;
@@ -26118,7 +26118,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events31[j][k][3] = '#006633' ;
                     }else{
-                                  this.events31[j][k][3] = '#FF3333' ;
+                                  this.events31[j][k][3] = '#FF4040' ;
                               }
 
                             this.events31[j][k][5] = true; this.showday31= true;
@@ -26161,7 +26161,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events31[j][k][3] = '#006633' ;
                     }else{
-                                  this.events31[j][k][3] = '#FF3333' ;
+                                  this.events31[j][k][3] = '#FF4040' ;
                               }
 
                             this.events31[j][k][5] = true; this.showday31= true;
@@ -26204,7 +26204,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events31[j][k][3] = '#006633' ;
                     }else{
-                                  this.events31[j][k][3] = '#FF3333' ;
+                                  this.events31[j][k][3] = '#FF4040' ;
                               }
 
                             this.events31[j][k][5] = true; this.showday31= true;
@@ -26247,7 +26247,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events31[j][k][3] = '#006633' ;
                     }else{
-                                  this.events31[j][k][3] = '#FF3333' ;
+                                  this.events31[j][k][3] = '#FF4040' ;
                               }
 
                             this.events31[j][k][5] = true; this.showday31= true;
@@ -26290,7 +26290,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events31[j][k][3] = '#006633' ;
                     }else{
-                                  this.events31[j][k][3] = '#FF3333' ;
+                                  this.events31[j][k][3] = '#FF4040' ;
                               }
 
                             this.events31[j][k][5] = true; this.showday31= true;
@@ -26333,7 +26333,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events31[j][k][3] = '#006633' ;
                     }else{
-                                  this.events31[j][k][3] = '#FF3333' ;
+                                  this.events31[j][k][3] = '#FF4040' ;
                               }
 
                             this.events31[j][k][5] = true; this.showday31= true;
@@ -26376,7 +26376,7 @@ this.dateSelectMonth = this.dateFull.dateStart.split("-");
                              }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                         this.events31[j][k][3] = '#006633' ;
                     }else{
-                                  this.events31[j][k][3] = '#FF3333' ;
+                                  this.events31[j][k][3] = '#FF4040' ;
                               }
 
                             this.events31[j][k][5] = true; this.showday31= true;

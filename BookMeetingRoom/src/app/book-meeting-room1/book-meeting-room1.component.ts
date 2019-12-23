@@ -47,7 +47,7 @@ isLoginSubject = new BehaviorSubject<boolean>(false);
     serializedDate = new FormControl((new Date()).toISOString());
 
     today=new Date();
-    maxDate = new Date(new Date().getFullYear(),new Date().getMonth(),new Date().getDate()+31);
+    maxDate = new Date(new Date().getFullYear(),new Date().getMonth()+1,new Date().getDate() == 31 ? 31 : 31);
 
     CurrentTime: any;
     days: any;
@@ -55,17 +55,9 @@ isLoginSubject = new BehaviorSubject<boolean>(false);
     minute: any;
     sec: any;
 
-myFilter = (d: Date): boolean => {
-const day = d.getDay();
-// Prevent Saturday and Sunday from being selected.
-return day !== 0 ;
-}
 
 
 
-close() {
-    this.sidenav.close();
-  }
 
 constructor(public authService : AuthService , private router: Router , private service : ServiceService) {
     this.isLoggedIn = authService.isLoggedIn();

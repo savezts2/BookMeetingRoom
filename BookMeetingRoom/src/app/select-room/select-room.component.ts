@@ -72,7 +72,7 @@ dt2 : any;
 
 dateshow : String;
 today=new Date();
-maxDate = new Date(new Date().getFullYear(),new Date().getMonth(),new Date().getDate()+31);
+maxDate = new Date(new Date().getFullYear(),new Date().getMonth()+1,new Date().getDate() == 31 ? 31 : 31);
 dateSelect : String ='';
 
 splitted : Array<any>;
@@ -173,7 +173,7 @@ if(this.splitted.length == 1){
 
     this.service.getRoomname().subscribe(data => {
                                  this.roomnames = data;
-                                console.log(this.roomnames);
+                               // console.log(this.roomnames);
                                 this.appendRoomname();
                                });
 
@@ -192,7 +192,7 @@ if(this.splitted.length == 1){
     setTimeout(() => {
      this.appendTime();
        }, 500); //interval
-    console.log(data);
+   // console.log(data);
 
     })
 
@@ -292,7 +292,7 @@ public appendTime(){
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                          this.events[j][k][3] = '#006633' ;
                     }else{
-                        this.events[j][k][3] = '#FF3333' ;
+                        this.events[j][k][3] = '#FF4040' ;
                     }
 
                   this.events[j][k][5] = true;
@@ -334,7 +334,7 @@ public appendTime(){
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                          this.events[j][k][3] = '#006633' ;
                     }else{
-                        this.events[j][k][3] = '#FF3333' ;
+                       this.events[j][k][3] = '#FF4040'  ;
                     }
 
                   this.events[j][k][5] = true;
@@ -375,7 +375,7 @@ public appendTime(){
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                          this.events[j][k][3] = '#006633' ;
                     }else{
-                        this.events[j][k][3] = '#FF3333' ;
+                       this.events[j][k][3] = '#FF4040'  ;
                     }
 
                   this.events[j][k][5] = true;
@@ -416,7 +416,7 @@ public appendTime(){
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                          this.events[j][k][3] = '#006633' ;
                     }else{
-                        this.events[j][k][3] = '#FF3333' ;
+                       this.events[j][k][3] = '#FF4040'  ;
                     }
 
                   this.events[j][k][5] = true;
@@ -457,7 +457,7 @@ public appendTime(){
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                          this.events[j][k][3] = '#006633' ;
                     }else{
-                        this.events[j][k][3] = '#FF3333' ;
+                       this.events[j][k][3] = '#FF4040'  ;
                     }
 
                   this.events[j][k][5] = true;
@@ -498,7 +498,7 @@ public appendTime(){
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                          this.events[j][k][3] = '#006633' ;
                     }else{
-                        this.events[j][k][3] = '#FF3333' ;
+                       this.events[j][k][3] = '#FF4040'  ;
                     }
 
                   this.events[j][k][5] = true;
@@ -539,7 +539,7 @@ public appendTime(){
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                          this.events[j][k][3] = '#006633' ;
                     }else{
-                        this.events[j][k][3] = '#FF3333' ;
+                       this.events[j][k][3] = '#FF4040'  ;
                     }
 
                   this.events[j][k][5] = true;
@@ -582,7 +582,7 @@ public appendTime(){
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                          this.events[j][k][3] = '#006633' ;
                     }else{
-                        this.events[j][k][3] = '#FF3333' ;
+                       this.events[j][k][3] = '#FF4040'  ;
                     }
 
                   this.events[j][k][5] = true;
@@ -625,7 +625,7 @@ public appendTime(){
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                          this.events[j][k][3] = '#006633' ;
                     }else{
-                        this.events[j][k][3] = '#FF3333' ;
+                       this.events[j][k][3] = '#FF4040'  ;
                     }
 
                   this.events[j][k][5] = true;
@@ -666,7 +666,7 @@ public appendTime(){
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                          this.events[j][k][3] = '#006633' ;
                     }else{
-                        this.events[j][k][3] = '#FF3333' ;
+                       this.events[j][k][3] = '#FF4040'  ;
                     }
 
                   this.events[j][k][5] = true;
@@ -707,7 +707,7 @@ public appendTime(){
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                          this.events[j][k][3] = '#006633' ;
                     }else{
-                        this.events[j][k][3] = '#FF3333' ;
+                       this.events[j][k][3] = '#FF4040'  ;
                     }
 
                   this.events[j][k][5] = true;
@@ -748,7 +748,7 @@ public appendTime(){
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                          this.events[j][k][3] = '#006633' ;
                     }else{
-                        this.events[j][k][3] = '#FF3333' ;
+                       this.events[j][k][3] = '#FF4040'  ;
                     }
 
                   this.events[j][k][5] = true;
@@ -789,7 +789,7 @@ public appendTime(){
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                          this.events[j][k][3] = '#006633' ;
                     }else{
-                        this.events[j][k][3] = '#FF3333' ;
+                       this.events[j][k][3] = '#FF4040'  ;
                     }
 
                   this.events[j][k][5] = true;
@@ -830,7 +830,7 @@ public appendTime(){
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                          this.events[j][k][3] = '#006633' ;
                     }else{
-                        this.events[j][k][3] = '#FF3333' ;
+                       this.events[j][k][3] = '#FF4040'  ;
                     }
 
                   this.events[j][k][5] = true;
@@ -871,7 +871,7 @@ public appendTime(){
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                          this.events[j][k][3] = '#006633' ;
                     }else{
-                        this.events[j][k][3] = '#FF3333' ;
+                       this.events[j][k][3] = '#FF4040'  ;
                     }
 
                   this.events[j][k][5] = true;
@@ -912,7 +912,7 @@ public appendTime(){
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                          this.events[j][k][3] = '#006633' ;
                     }else{
-                        this.events[j][k][3] = '#FF3333' ;
+                       this.events[j][k][3] = '#FF4040'  ;
                     }
 
                   this.events[j][k][5] = true;
@@ -953,7 +953,7 @@ public appendTime(){
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                          this.events[j][k][3] = '#006633' ;
                     }else{
-                        this.events[j][k][3] = '#FF3333' ;
+                       this.events[j][k][3] = '#FF4040'  ;
                     }
 
                   this.events[j][k][5] = true;
@@ -994,7 +994,7 @@ public appendTime(){
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                          this.events[j][k][3] = '#006633' ;
                     }else{
-                        this.events[j][k][3] = '#FF3333' ;
+                       this.events[j][k][3] = '#FF4040'  ;
                     }
 
                   this.events[j][k][5] = true;
@@ -1035,7 +1035,7 @@ public appendTime(){
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
                          this.events[j][k][3] = '#006633' ;
                     }else{
-                        this.events[j][k][3] = '#FF3333' ;
+                       this.events[j][k][3] = '#FF4040'  ;
                     }
 
                   this.events[j][k][5] = true;
@@ -1066,7 +1066,7 @@ public appendTime(){
       } //if active
   } //for report
 
-  console.log(this.events);
+ // console.log(this.events);
 
 } // appendtime
 
@@ -1083,15 +1083,15 @@ selectTable(room,time){
     let timesplit: Array<string>;
     timesplit = time.split(".");
 
-   // console.log(datetoday,datebook,timesplit);
-
-    if(parseInt(datetoday[2]) == parseInt(datebook[0])){
-    if(new Date().getHours() > parseInt(timesplit[0]) ){
-        alert("Cannot make a previous booking.");
-    }else if( new Date().getHours() == parseInt(timesplit[0]) ){
-      if( new Date().getMinutes() > parseInt(timesplit[1]) ){
-        alert("Cannot make a previous booking.");
-      }else{
+    console.log(datetoday,datebook,timesplit);
+    let monthnumString = this.convertMonthstring(datetoday[1]);
+    if(parseInt(datetoday[2]) == parseInt(datebook[0]) && monthnumString == datebook[1]){
+       if(new Date().getHours() > parseInt(timesplit[0]) ){
+         alert("Cannot make a previous booking.");
+       }else if( new Date().getHours() == parseInt(timesplit[0]) ){
+          if( new Date().getMinutes() > parseInt(timesplit[1]) ){
+         alert("Cannot make a previous booking.");
+       }else{
         this.router.navigate(['data-form',{roomname:room,roomtime:time,date:this.datefull.datefull}]);
       }
     }else{
@@ -1104,11 +1104,14 @@ selectTable(room,time){
 
   }
 
-
-
-close() {
-    this.sidenav.close();
-  }
+convertMonthstring(monthstring){
+    if(monthstring == 'Jan'){ return '01'}else if(monthstring == 'Feb'){ return '02' }
+    else if(monthstring == 'Mar'){ return '03' }else if(monthstring == 'Apr'){ return '04' }
+else if(monthstring == 'May'){ return '05' }else if(monthstring == 'Jun'){ return '06' }
+else if(monthstring == 'Jul'){ return '07' }else if(monthstring == 'Aug'){ return '08' }
+else if(monthstring == 'Sep'){ return '09' }else if(monthstring == 'Oct'){ return '10' }
+else if(monthstring == 'Nov'){ return '11' }else if(monthstring == 'Dec'){ return '12' }
+}
 
 dateShow(datefull){
 

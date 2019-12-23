@@ -2,10 +2,14 @@ package com.example.demo.Controller;
 
 
 import com.example.demo.entity.Report;
+import com.example.demo.entity.Users;
 import com.example.demo.repository.ReportRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.Collection;
+import java.util.stream.Collectors;
 
 @RestController
 @CrossOrigin("*")
@@ -15,6 +19,16 @@ public class ReportController {
 
     @Autowired
     private ReportRepository reportRepository;
+
+
+    @GetMapping("/Report")
+    public Collection<Report> Actives() {
+        return reportRepository.findAll().stream().filter(this::Reportactive).collect(Collectors.toList());
+    }
+
+    private boolean Reportactive(Report report) {
+        return report.getIsActive().equals("1");
+    }
 
     @GetMapping("/Report/{date}")
     public Iterable<Report> Report(@PathVariable String date) {
