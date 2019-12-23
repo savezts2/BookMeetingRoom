@@ -46,7 +46,8 @@ closed(){
 
 checkOut(){
 
-   this.http.post(this.API + '/Checkout/'+ this.nameuser+'/'+this.data.date+'/'+this.data.room+'/'+this.data.time+'/'+new Date().getHours()+'/'+new Date().getMinutes(),{})
+   this.http.post(this.API + '/Checkout/'+ this.nameuser+'/'+this.data.date+'/'+this.data.room+'/'+this.data.time+'/'+new Date().getHours()+'/'+new Date().getMinutes()+'/'+
+   new Date().toString().substring(16,18)+'.'+new Date().toString().substring(19,21),{})
                              .subscribe(
                                data => {
                                    console.log('PUT Request is successful');

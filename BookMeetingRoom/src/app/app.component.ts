@@ -21,13 +21,13 @@ ngOnInit() {
 
 this.service.getAllReport().subscribe(data=>{
     this.report = data;
-    console.log(data);
+   // console.log(data);
 
     })
 
 
 
-
+setTimeout(() => {
   setInterval(() => {
 
   let CurrentDate = new Date();
@@ -771,12 +771,376 @@ this.service.getAllReport().subscribe(data=>{
 
               }
           }
+          //////////////////////////////////////////////
+          ////////       checkoutby sys             /////////
+           /////////////////////////////////////////////
 
 
+          if(new Date().toString().substring(16,18)+'.'+new Date().toString().substring(19,21) > '08.29'){
+              if(this.report[i].bookMeetingRoom.endtime == '08.30' && this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+
+                   this.http.post(this.API + '/checkoutauto/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
+                   +'/' + this.report[i].bookMeetingRoom.starttime,{})
+                             .subscribe(
+                               data => {
+                                   console.log('PUT Request is successful');
+                                    window.location.reload();
+
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+                                  window.location.reload();
+                               }
+                              );
+
+              }
+          }
+          if(new Date().toString().substring(16,18)+'.'+new Date().toString().substring(19,21) > '08.59'){
+              if(this.report[i].bookMeetingRoom.endtime == '09.00' && this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+
+                   this.http.post(this.API + '/checkoutauto/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
+                   +'/' + this.report[i].bookMeetingRoom.starttime,{})
+                             .subscribe(
+                               data => {
+                                   console.log('PUT Request is successful');
+                                    window.location.reload();
+
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+                                  window.location.reload();
+                               }
+                              );
+
+              }
+          }
+          if(new Date().toString().substring(16,18)+'.'+new Date().toString().substring(19,21) > '09.29'){
+              if(this.report[i].bookMeetingRoom.endtime == '09.30' && this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+
+                   this.http.post(this.API + '/checkoutauto/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
+                   +'/' + this.report[i].bookMeetingRoom.starttime,{})
+                             .subscribe(
+                               data => {
+                                   console.log('PUT Request is successful');
+                                    window.location.reload();
+
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+                                  window.location.reload();
+                               }
+                              );
+
+              }
+          }
+          if(new Date().toString().substring(16,18)+'.'+new Date().toString().substring(19,21) > '09.59'){
+              if(this.report[i].bookMeetingRoom.endtime == '10.00' && this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+
+                   this.http.post(this.API + '/checkoutauto/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
+                   +'/' + this.report[i].bookMeetingRoom.starttime,{})
+                             .subscribe(
+                               data => {
+                                   console.log('PUT Request is successful');
+                                    window.location.reload();
+
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+                                  window.location.reload();
+                               }
+                              );
+
+              }
+          }
+          if(new Date().toString().substring(16,18)+'.'+new Date().toString().substring(19,21) > '10.29'){
+              if(this.report[i].bookMeetingRoom.endtime == '10.30' && this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+
+                   this.http.post(this.API + '/checkoutauto/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
+                   +'/' + this.report[i].bookMeetingRoom.starttime,{})
+                             .subscribe(
+                               data => {
+                                   console.log('PUT Request is successful');
+                                    window.location.reload();
+
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+                                  window.location.reload();
+                               }
+                              );
+
+              }
+          }
+          if(new Date().toString().substring(16,18)+'.'+new Date().toString().substring(19,21) > '10.59'){
+              if(this.report[i].bookMeetingRoom.endtime == '11.00' && this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+
+                   this.http.post(this.API + '/checkoutauto/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
+                   +'/' + this.report[i].bookMeetingRoom.starttime,{})
+                             .subscribe(
+                               data => {
+                                   console.log('PUT Request is successful');
+                                    window.location.reload();
+
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+                                  window.location.reload();
+                               }
+                              );
+
+              }
+          }
+          if(new Date().toString().substring(16,18)+'.'+new Date().toString().substring(19,21) > '11.29'){
+              if(this.report[i].bookMeetingRoom.endtime == '11.30' && this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+
+                   this.http.post(this.API + '/checkoutauto/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
+                   +'/' + this.report[i].bookMeetingRoom.starttime,{})
+                             .subscribe(
+                               data => {
+                                   console.log('PUT Request is successful');
+                                    window.location.reload();
+
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+                                  window.location.reload();
+                               }
+                              );
+
+              }
+          }
+          if(new Date().toString().substring(16,18)+'.'+new Date().toString().substring(19,21) > '11.59'){
+              if(this.report[i].bookMeetingRoom.endtime == '12.00' && this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+
+                   this.http.post(this.API + '/checkoutauto/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
+                   +'/' + this.report[i].bookMeetingRoom.starttime,{})
+                             .subscribe(
+                               data => {
+                                   console.log('PUT Request is successful');
+                                    window.location.reload();
+
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+                                  window.location.reload();
+                               }
+                              );
+
+              }
+          }
+          if(new Date().toString().substring(16,18)+'.'+new Date().toString().substring(19,21) > '12.29'){
+              if(this.report[i].bookMeetingRoom.endtime == '12.30' && this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+
+                   this.http.post(this.API + '/checkoutauto/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
+                   +'/' + this.report[i].bookMeetingRoom.starttime,{})
+                             .subscribe(
+                               data => {
+                                   console.log('PUT Request is successful');
+                                    window.location.reload();
+
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+                                  window.location.reload();
+                               }
+                              );
+
+              }
+          }
+          if(new Date().toString().substring(16,18)+'.'+new Date().toString().substring(19,21) > '12.59'){
+              if(this.report[i].bookMeetingRoom.endtime == '13.00' && this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+
+                   this.http.post(this.API + '/checkoutauto/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
+                   +'/' + this.report[i].bookMeetingRoom.starttime,{})
+                             .subscribe(
+                               data => {
+                                   console.log('PUT Request is successful');
+                                    window.location.reload();
+
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+                                  window.location.reload();
+                               }
+                              );
+
+              }
+          }
+          if(new Date().toString().substring(16,18)+'.'+new Date().toString().substring(19,21) > '13.29'){
+              if(this.report[i].bookMeetingRoom.endtime == '13.30' && this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+
+                   this.http.post(this.API + '/checkoutauto/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
+                   +'/' + this.report[i].bookMeetingRoom.starttime,{})
+                             .subscribe(
+                               data => {
+                                   console.log('PUT Request is successful');
+                                    window.location.reload();
+
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+                                  window.location.reload();
+                               }
+                              );
+
+              }
+          }
+          if(new Date().toString().substring(16,18)+'.'+new Date().toString().substring(19,21) > '13.59'){
+              if(this.report[i].bookMeetingRoom.endtime == '14.00' && this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+
+                   this.http.post(this.API + '/checkoutauto/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
+                   +'/' + this.report[i].bookMeetingRoom.starttime,{})
+                             .subscribe(
+                               data => {
+                                   console.log('PUT Request is successful');
+                                    window.location.reload();
+
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+
+                               }
+                              );
+
+              }
+          }
+          if(new Date().toString().substring(16,18)+'.'+new Date().toString().substring(19,21) > '14.29'){
+              if(this.report[i].bookMeetingRoom.endtime == '14.30' && this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+
+                   this.http.post(this.API + '/checkoutauto/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
+                   +'/' + this.report[i].bookMeetingRoom.starttime,{})
+                             .subscribe(
+                               data => {
+                                   console.log('PUT Request is successful');
+                                    window.location.reload();
+
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+
+                               }
+                              );
+
+              }
+          }
+          if(new Date().toString().substring(16,18)+'.'+new Date().toString().substring(19,21) > '14.59'){
+              if(this.report[i].bookMeetingRoom.endtime == '15.00' && this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+
+                   this.http.post(this.API + '/checkoutauto/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
+                   +'/' + this.report[i].bookMeetingRoom.starttime,{})
+                             .subscribe(
+                               data => {
+                                   console.log('PUT Request is successful');
+                                    window.location.reload();
+
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+                                  window.location.reload();
+                               }
+                              );
+
+              }
+          }
+          if(new Date().toString().substring(16,18)+'.'+new Date().toString().substring(19,21) > '15.29'){
+              if(this.report[i].bookMeetingRoom.endtime == '15.30' && this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+
+                   this.http.post(this.API + '/checkoutauto/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
+                   +'/' + this.report[i].bookMeetingRoom.starttime,{})
+                             .subscribe(
+                               data => {
+                                   console.log('PUT Request is successful');
+                                    window.location.reload();
+
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+                                  window.location.reload();
+                               }
+                              );
+
+              }
+          }
+          if(new Date().toString().substring(16,18)+'.'+new Date().toString().substring(19,21) > '15.59'){
+              if(this.report[i].bookMeetingRoom.endtime == '16.00' && this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+
+                   this.http.post(this.API + '/checkoutauto/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
+                   +'/' + this.report[i].bookMeetingRoom.starttime,{})
+                             .subscribe(
+                               data => {
+                                   console.log('PUT Request is successful');
+                                    window.location.reload();
+
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+                                  window.location.reload();
+                               }
+                              );
+
+              }
+          }
+          if(new Date().toString().substring(16,18)+'.'+new Date().toString().substring(19,21) > '16.29'){
+              if(this.report[i].bookMeetingRoom.endtime == '16.30' && this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+
+                   this.http.post(this.API + '/checkoutauto/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
+                   +'/' + this.report[i].bookMeetingRoom.starttime,{})
+                             .subscribe(
+                               data => {
+                                   console.log('PUT Request is successful');
+                                    window.location.reload();
+
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+                                  window.location.reload();
+                               }
+                              );
+
+              }
+          }
+          if(new Date().toString().substring(16,18)+'.'+new Date().toString().substring(19,21) > '16.59'){
+              if(this.report[i].bookMeetingRoom.endtime == '17.00' && this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+
+                   this.http.post(this.API + '/checkoutauto/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
+                   +'/' + this.report[i].bookMeetingRoom.starttime,{})
+                             .subscribe(
+                               data => {
+                                   console.log('PUT Request is successful');
+                                    window.location.reload();
+
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+                                  window.location.reload();
+                               }
+                              );
+
+              }
+          }
       }
+
   }//for report
 
-
+    }, 1000); //interval
   }, 1000); //interval
 
 

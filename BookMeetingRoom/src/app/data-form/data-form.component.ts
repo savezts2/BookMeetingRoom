@@ -66,11 +66,11 @@ this.in =  setInterval(() => {
     this.appendTime();
 
 
-    console.log(data);
+  //  console.log(data);
 
     })
 
-}, 500); //interval
+}, 1000); //interval
 
 
 
@@ -966,7 +966,7 @@ public appendTime(){
       } //if active
   } //for report
 
-  console.log(this.events);
+  //console.log(this.events);
 
 } // appendtime
 

@@ -18,9 +18,9 @@
     <div *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)">
 
       <h2 style="margin-left:5%;">{{dateFull.month}} {{dateFull.year}}</h2>
-      <br/><br/>
-
-      <table border="1" align="center" bordercolor=black bgcolor="black">
+      <br/>
+      <button mat-flat-button color="warn" style="margin-left:5%;" (click)="exportexcel()">Export</button><br/><br/>
+      <table border="1" align="center" bordercolor=black bgcolor="black" id="excel-table">
 
         <tr class="greentable" *ngIf="showday1">
           <th rowspan="2" style="text-align:center; color:black; vertical-align: middle;">Date</th>
@@ -72,10 +72,10 @@
                            '\nAttendees: ' +cell[7]+
                            '\nTopic: ' +cell[8] +
                            '\nTel: ' + cell[14]+'\n'+
-                            (cell[3] == '#3366FF' ? 'Status: Checkout' : '' )+
+                            (cell[3] == '#006633' ? 'Status: Checkout' : '' )+
                             (cell[3] == '#C0C0C0' ? 'Status: Booking On Time' : '' )+
                             (cell[3] == '#A0FF7D' ? 'Status: Checkin' : '' )+
-                            (cell[3] == '#FF3333' ? 'Status: Not Checkin' : '' ): '' "
+                           (cell[3] == '#FF4040' ? 'Status: Not Checkin' : '' ): '' "
               [matTooltipPosition]="position.value"
           >
 
@@ -146,10 +146,10 @@
                            '\nAttendees: ' +cell[7]+
                            '\nTopic: ' +cell[8] +
                            '\nTel: ' + cell[14]+'\n'+
-                            (cell[3] == '#3366FF' ? 'Status: Checkout' : '' )+
+                            (cell[3] == '#006633' ? 'Status: Checkout' : '' )+
                             (cell[3] == '#C0C0C0' ? 'Status: Booking On Time' : '' )+
                             (cell[3] == '#A0FF7D' ? 'Status: Checkin' : '' )+
-                            (cell[3] == '#FF3333' ? 'Status: Not Checkin' : '' ): '' "
+                           (cell[3] == '#FF4040' ? 'Status: Not Checkin' : '' ): '' "
               [matTooltipPosition]="position.value"
           >
 
@@ -222,10 +222,10 @@
                            '\nAttendees: ' +cell[7]+
                            '\nTopic: ' +cell[8] +
                            '\nTel: ' + cell[14]+'\n'+
-                            (cell[3] == '#3366FF' ? 'Status: Checkout' : '' )+
+                            (cell[3] == '#006633' ? 'Status: Checkout' : '' )+
                             (cell[3] == '#C0C0C0' ? 'Status: Booking On Time' : '' )+
                             (cell[3] == '#A0FF7D' ? 'Status: Checkin' : '' )+
-                            (cell[3] == '#FF3333' ? 'Status: Not Checkin' : '' ): '' "
+                           (cell[3] == '#FF4040' ? 'Status: Not Checkin' : '' ): '' "
               [matTooltipPosition]="position.value"
           >
 
@@ -296,10 +296,10 @@
                            '\nAttendees: ' +cell[7]+
                            '\nTopic: ' +cell[8] +
                            '\nTel: ' + cell[14]+'\n'+
-                            (cell[3] == '#3366FF' ? 'Status: Checkout' : '' )+
+                            (cell[3] == '#006633' ? 'Status: Checkout' : '' )+
                             (cell[3] == '#C0C0C0' ? 'Status: Booking On Time' : '' )+
                             (cell[3] == '#A0FF7D' ? 'Status: Checkin' : '' )+
-                            (cell[3] == '#FF3333' ? 'Status: Not Checkin' : '' ): '' "
+                           (cell[3] == '#FF4040' ? 'Status: Not Checkin' : '' ): '' "
               [matTooltipPosition]="position.value"
           >
 
@@ -370,10 +370,10 @@
                            '\nAttendees: ' +cell[7]+
                            '\nTopic: ' +cell[8] +
                            '\nTel: ' + cell[14]+'\n'+
-                            (cell[3] == '#3366FF' ? 'Status: Checkout' : '' )+
+                            (cell[3] == '#006633' ? 'Status: Checkout' : '' )+
                             (cell[3] == '#C0C0C0' ? 'Status: Booking On Time' : '' )+
                             (cell[3] == '#A0FF7D' ? 'Status: Checkin' : '' )+
-                            (cell[3] == '#FF3333' ? 'Status: Not Checkin' : '' ): '' "
+                           (cell[3] == '#FF4040' ? 'Status: Not Checkin' : '' ): '' "
               [matTooltipPosition]="position.value"
           >
 
@@ -444,10 +444,10 @@
                            '\nAttendees: ' +cell[7]+
                            '\nTopic: ' +cell[8] +
                            '\nTel: ' + cell[14]+'\n'+
-                            (cell[3] == '#3366FF' ? 'Status: Checkout' : '' )+
+                            (cell[3] == '#006633' ? 'Status: Checkout' : '' )+
                             (cell[3] == '#C0C0C0' ? 'Status: Booking On Time' : '' )+
                             (cell[3] == '#A0FF7D' ? 'Status: Checkin' : '' )+
-                            (cell[3] == '#FF3333' ? 'Status: Not Checkin' : '' ): '' "
+                           (cell[3] == '#FF4040' ? 'Status: Not Checkin' : '' ): '' "
               [matTooltipPosition]="position.value"
           >
 
@@ -518,10 +518,10 @@
                            '\nAttendees: ' +cell[7]+
                            '\nTopic: ' +cell[8] +
                            '\nTel: ' + cell[14]+'\n'+
-                            (cell[3] == '#3366FF' ? 'Status: Checkout' : '' )+
+                            (cell[3] == '#006633' ? 'Status: Checkout' : '' )+
                             (cell[3] == '#C0C0C0' ? 'Status: Booking On Time' : '' )+
                             (cell[3] == '#A0FF7D' ? 'Status: Checkin' : '' )+
-                            (cell[3] == '#FF3333' ? 'Status: Not Checkin' : '' ): '' "
+                           (cell[3] == '#FF4040' ? 'Status: Not Checkin' : '' ): '' "
               [matTooltipPosition]="position.value"
           >
 
@@ -592,10 +592,10 @@
                            '\nAttendees: ' +cell[7]+
                            '\nTopic: ' +cell[8] +
                            '\nTel: ' + cell[14]+'\n'+
-                            (cell[3] == '#3366FF' ? 'Status: Checkout' : '' )+
+                            (cell[3] == '#006633' ? 'Status: Checkout' : '' )+
                             (cell[3] == '#C0C0C0' ? 'Status: Booking On Time' : '' )+
                             (cell[3] == '#A0FF7D' ? 'Status: Checkin' : '' )+
-                            (cell[3] == '#FF3333' ? 'Status: Not Checkin' : '' ): '' "
+                           (cell[3] == '#FF4040' ? 'Status: Not Checkin' : '' ): '' "
               [matTooltipPosition]="position.value"
           >
 
@@ -666,10 +666,10 @@
                            '\nAttendees: ' +cell[7]+
                            '\nTopic: ' +cell[8] +
                            '\nTel: ' + cell[14]+'\n'+
-                            (cell[3] == '#3366FF' ? 'Status: Checkout' : '' )+
+                            (cell[3] == '#006633' ? 'Status: Checkout' : '' )+
                             (cell[3] == '#C0C0C0' ? 'Status: Booking On Time' : '' )+
                             (cell[3] == '#A0FF7D' ? 'Status: Checkin' : '' )+
-                            (cell[3] == '#FF3333' ? 'Status: Not Checkin' : '' ): '' "
+                           (cell[3] == '#FF4040' ? 'Status: Not Checkin' : '' ): '' "
               [matTooltipPosition]="position.value"
           >
 
@@ -740,10 +740,10 @@
                            '\nAttendees: ' +cell[7]+
                            '\nTopic: ' +cell[8] +
                            '\nTel: ' + cell[14]+'\n'+
-                            (cell[3] == '#3366FF' ? 'Status: Checkout' : '' )+
+                            (cell[3] == '#006633' ? 'Status: Checkout' : '' )+
                             (cell[3] == '#C0C0C0' ? 'Status: Booking On Time' : '' )+
                             (cell[3] == '#A0FF7D' ? 'Status: Checkin' : '' )+
-                            (cell[3] == '#FF3333' ? 'Status: Not Checkin' : '' ): '' "
+                           (cell[3] == '#FF4040' ? 'Status: Not Checkin' : '' ): '' "
               [matTooltipPosition]="position.value"
           >
 
@@ -814,10 +814,10 @@
                            '\nAttendees: ' +cell[7]+
                            '\nTopic: ' +cell[8] +
                            '\nTel: ' + cell[14]+'\n'+
-                            (cell[3] == '#3366FF' ? 'Status: Checkout' : '' )+
+                            (cell[3] == '#006633' ? 'Status: Checkout' : '' )+
                             (cell[3] == '#C0C0C0' ? 'Status: Booking On Time' : '' )+
                             (cell[3] == '#A0FF7D' ? 'Status: Checkin' : '' )+
-                            (cell[3] == '#FF3333' ? 'Status: Not Checkin' : '' ): '' "
+                           (cell[3] == '#FF4040' ? 'Status: Not Checkin' : '' ): '' "
               [matTooltipPosition]="position.value"
           >
 
@@ -889,10 +889,10 @@
                            '\nAttendees: ' +cell[7]+
                            '\nTopic: ' +cell[8] +
                            '\nTel: ' + cell[14]+'\n'+
-                            (cell[3] == '#3366FF' ? 'Status: Checkout' : '' )+
+                            (cell[3] == '#006633' ? 'Status: Checkout' : '' )+
                             (cell[3] == '#C0C0C0' ? 'Status: Booking On Time' : '' )+
                             (cell[3] == '#A0FF7D' ? 'Status: Checkin' : '' )+
-                            (cell[3] == '#FF3333' ? 'Status: Not Checkin' : '' ): '' "
+                           (cell[3] == '#FF4040' ? 'Status: Not Checkin' : '' ): '' "
               [matTooltipPosition]="position.value"
           >
 
@@ -965,10 +965,10 @@
                            '\nAttendees: ' +cell[7]+
                            '\nTopic: ' +cell[8] +
                            '\nTel: ' + cell[14]+'\n'+
-                            (cell[3] == '#3366FF' ? 'Status: Checkout' : '' )+
+                            (cell[3] == '#006633' ? 'Status: Checkout' : '' )+
                             (cell[3] == '#C0C0C0' ? 'Status: Booking On Time' : '' )+
                             (cell[3] == '#A0FF7D' ? 'Status: Checkin' : '' )+
-                            (cell[3] == '#FF3333' ? 'Status: Not Checkin' : '' ): '' "
+                           (cell[3] == '#FF4040' ? 'Status: Not Checkin' : '' ): '' "
               [matTooltipPosition]="position.value"
           >
 
@@ -1038,10 +1038,10 @@
                            '\nAttendees: ' +cell[7]+
                            '\nTopic: ' +cell[8] +
                            '\nTel: ' + cell[14]+'\n'+
-                            (cell[3] == '#3366FF' ? 'Status: Checkout' : '' )+
+                            (cell[3] == '#006633' ? 'Status: Checkout' : '' )+
                             (cell[3] == '#C0C0C0' ? 'Status: Booking On Time' : '' )+
                             (cell[3] == '#A0FF7D' ? 'Status: Checkin' : '' )+
-                            (cell[3] == '#FF3333' ? 'Status: Not Checkin' : '' ): '' "
+                           (cell[3] == '#FF4040' ? 'Status: Not Checkin' : '' ): '' "
               [matTooltipPosition]="position.value"
           >
 
@@ -1112,10 +1112,10 @@
                            '\nAttendees: ' +cell[7]+
                            '\nTopic: ' +cell[8] +
                            '\nTel: ' + cell[14]+'\n'+
-                            (cell[3] == '#3366FF' ? 'Status: Checkout' : '' )+
+                            (cell[3] == '#006633' ? 'Status: Checkout' : '' )+
                             (cell[3] == '#C0C0C0' ? 'Status: Booking On Time' : '' )+
                             (cell[3] == '#A0FF7D' ? 'Status: Checkin' : '' )+
-                            (cell[3] == '#FF3333' ? 'Status: Not Checkin' : '' ): '' "
+                           (cell[3] == '#FF4040' ? 'Status: Not Checkin' : '' ): '' "
               [matTooltipPosition]="position.value"
           >
 
@@ -1186,10 +1186,10 @@
                            '\nAttendees: ' +cell[7]+
                            '\nTopic: ' +cell[8] +
                            '\nTel: ' + cell[14]+'\n'+
-                            (cell[3] == '#3366FF' ? 'Status: Checkout' : '' )+
+                            (cell[3] == '#006633' ? 'Status: Checkout' : '' )+
                             (cell[3] == '#C0C0C0' ? 'Status: Booking On Time' : '' )+
                             (cell[3] == '#A0FF7D' ? 'Status: Checkin' : '' )+
-                            (cell[3] == '#FF3333' ? 'Status: Not Checkin' : '' ): '' "
+                           (cell[3] == '#FF4040' ? 'Status: Not Checkin' : '' ): '' "
               [matTooltipPosition]="position.value"
 
 
@@ -1261,10 +1261,10 @@
                            '\nAttendees: ' +cell[7]+
                            '\nTopic: ' +cell[8] +
                            '\nTel: ' + cell[14]+'\n'+
-                            (cell[3] == '#3366FF' ? 'Status: Checkout' : '' )+
+                            (cell[3] == '#006633' ? 'Status: Checkout' : '' )+
                             (cell[3] == '#C0C0C0' ? 'Status: Booking On Time' : '' )+
                             (cell[3] == '#A0FF7D' ? 'Status: Checkin' : '' )+
-                            (cell[3] == '#FF3333' ? 'Status: Not Checkin' : '' ): '' "
+                           (cell[3] == '#FF4040' ? 'Status: Not Checkin' : '' ): '' "
               [matTooltipPosition]="position.value"
           >
 
@@ -1334,10 +1334,10 @@
                            '\nAttendees: ' +cell[7]+
                            '\nTopic: ' +cell[8] +
                            '\nTel: ' + cell[14]+'\n'+
-                            (cell[3] == '#3366FF' ? 'Status: Checkout' : '' )+
+                            (cell[3] == '#006633' ? 'Status: Checkout' : '' )+
                             (cell[3] == '#C0C0C0' ? 'Status: Booking On Time' : '' )+
                             (cell[3] == '#A0FF7D' ? 'Status: Checkin' : '' )+
-                            (cell[3] == '#FF3333' ? 'Status: Not Checkin' : '' ): '' "
+                           (cell[3] == '#FF4040' ? 'Status: Not Checkin' : '' ): '' "
               [matTooltipPosition]="position.value"
           >
 
@@ -1407,10 +1407,10 @@
                            '\nAttendees: ' +cell[7]+
                            '\nTopic: ' +cell[8] +
                            '\nTel: ' + cell[14]+'\n'+
-                            (cell[3] == '#3366FF' ? 'Status: Checkout' : '' )+
+                            (cell[3] == '#006633' ? 'Status: Checkout' : '' )+
                             (cell[3] == '#C0C0C0' ? 'Status: Booking On Time' : '' )+
                             (cell[3] == '#A0FF7D' ? 'Status: Checkin' : '' )+
-                            (cell[3] == '#FF3333' ? 'Status: Not Checkin' : '' ): '' "
+                           (cell[3] == '#FF4040' ? 'Status: Not Checkin' : '' ): '' "
               [matTooltipPosition]="position.value"
           >
 
@@ -1480,10 +1480,10 @@
                            '\nAttendees: ' +cell[7]+
                            '\nTopic: ' +cell[8] +
                            '\nTel: ' + cell[14]+'\n'+
-                            (cell[3] == '#3366FF' ? 'Status: Checkout' : '' )+
+                            (cell[3] == '#006633' ? 'Status: Checkout' : '' )+
                             (cell[3] == '#C0C0C0' ? 'Status: Booking On Time' : '' )+
                             (cell[3] == '#A0FF7D' ? 'Status: Checkin' : '' )+
-                            (cell[3] == '#FF3333' ? 'Status: Not Checkin' : '' ): '' "
+                           (cell[3] == '#FF4040' ? 'Status: Not Checkin' : '' ): '' "
               [matTooltipPosition]="position.value"
           >
 
@@ -1553,10 +1553,10 @@
                            '\nAttendees: ' +cell[7]+
                            '\nTopic: ' +cell[8] +
                            '\nTel: ' + cell[14]+'\n'+
-                            (cell[3] == '#3366FF' ? 'Status: Checkout' : '' )+
+                            (cell[3] == '#006633' ? 'Status: Checkout' : '' )+
                             (cell[3] == '#C0C0C0' ? 'Status: Booking On Time' : '' )+
                             (cell[3] == '#A0FF7D' ? 'Status: Checkin' : '' )+
-                            (cell[3] == '#FF3333' ? 'Status: Not Checkin' : '' ): '' "
+                           (cell[3] == '#FF4040' ? 'Status: Not Checkin' : '' ): '' "
               [matTooltipPosition]="position.value"
           >
 
@@ -1626,10 +1626,10 @@
                            '\nAttendees: ' +cell[7]+
                            '\nTopic: ' +cell[8] +
                            '\nTel: ' + cell[14]+'\n'+
-                            (cell[3] == '#3366FF' ? 'Status: Checkout' : '' )+
+                            (cell[3] == '#006633' ? 'Status: Checkout' : '' )+
                             (cell[3] == '#C0C0C0' ? 'Status: Booking On Time' : '' )+
                             (cell[3] == '#A0FF7D' ? 'Status: Checkin' : '' )+
-                            (cell[3] == '#FF3333' ? 'Status: Not Checkin' : '' ): '' "
+                           (cell[3] == '#FF4040' ? 'Status: Not Checkin' : '' ): '' "
               [matTooltipPosition]="position.value"
           >
 
@@ -1702,10 +1702,10 @@
                            '\nAttendees: ' +cell[7]+
                            '\nTopic: ' +cell[8] +
                            '\nTel: ' + cell[14]+'\n'+
-                            (cell[3] == '#3366FF' ? 'Status: Checkout' : '' )+
+                            (cell[3] == '#006633' ? 'Status: Checkout' : '' )+
                             (cell[3] == '#C0C0C0' ? 'Status: Booking On Time' : '' )+
                             (cell[3] == '#A0FF7D' ? 'Status: Checkin' : '' )+
-                            (cell[3] == '#FF3333' ? 'Status: Not Checkin' : '' ): '' "
+                           (cell[3] == '#FF4040' ? 'Status: Not Checkin' : '' ): '' "
               [matTooltipPosition]="position.value"
           >
 
@@ -1775,10 +1775,10 @@
                            '\nAttendees: ' +cell[7]+
                            '\nTopic: ' +cell[8] +
                            '\nTel: ' + cell[14]+'\n'+
-                            (cell[3] == '#3366FF' ? 'Status: Checkout' : '' )+
+                            (cell[3] == '#006633' ? 'Status: Checkout' : '' )+
                             (cell[3] == '#C0C0C0' ? 'Status: Booking On Time' : '' )+
                             (cell[3] == '#A0FF7D' ? 'Status: Checkin' : '' )+
-                            (cell[3] == '#FF3333' ? 'Status: Not Checkin' : '' ): '' "
+                           (cell[3] == '#FF4040' ? 'Status: Not Checkin' : '' ): '' "
               [matTooltipPosition]="position.value"
           >
 
@@ -1848,10 +1848,10 @@
                            '\nAttendees: ' +cell[7]+
                            '\nTopic: ' +cell[8] +
                            '\nTel: ' + cell[14]+'\n'+
-                            (cell[3] == '#3366FF' ? 'Status: Checkout' : '' )+
+                            (cell[3] == '#006633' ? 'Status: Checkout' : '' )+
                             (cell[3] == '#C0C0C0' ? 'Status: Booking On Time' : '' )+
                             (cell[3] == '#A0FF7D' ? 'Status: Checkin' : '' )+
-                            (cell[3] == '#FF3333' ? 'Status: Not Checkin' : '' ): '' "
+                           (cell[3] == '#FF4040' ? 'Status: Not Checkin' : '' ): '' "
               [matTooltipPosition]="position.value"
           >
 
@@ -1920,10 +1920,10 @@
                            '\nAttendees: ' +cell[7]+
                            '\nTopic: ' +cell[8] +
                            '\nTel: ' + cell[14]+'\n'+
-                            (cell[3] == '#3366FF' ? 'Status: Checkout' : '' )+
+                            (cell[3] == '#006633' ? 'Status: Checkout' : '' )+
                             (cell[3] == '#C0C0C0' ? 'Status: Booking On Time' : '' )+
                             (cell[3] == '#A0FF7D' ? 'Status: Checkin' : '' )+
-                            (cell[3] == '#FF3333' ? 'Status: Not Checkin' : '' ): '' "
+                           (cell[3] == '#FF4040' ? 'Status: Not Checkin' : '' ): '' "
               [matTooltipPosition]="position.value"
           >
 
@@ -1992,10 +1992,10 @@
                            '\nAttendees: ' +cell[7]+
                            '\nTopic: ' +cell[8] +
                            '\nTel: ' + cell[14]+'\n'+
-                            (cell[3] == '#3366FF' ? 'Status: Checkout' : '' )+
+                            (cell[3] == '#006633' ? 'Status: Checkout' : '' )+
                             (cell[3] == '#C0C0C0' ? 'Status: Booking On Time' : '' )+
                             (cell[3] == '#A0FF7D' ? 'Status: Checkin' : '' )+
-                            (cell[3] == '#FF3333' ? 'Status: Not Checkin' : '' ): '' "
+                           (cell[3] == '#FF4040' ? 'Status: Not Checkin' : '' ): '' "
               [matTooltipPosition]="position.value"
           >
 
@@ -2064,10 +2064,10 @@
                            '\nAttendees: ' +cell[7]+
                            '\nTopic: ' +cell[8] +
                            '\nTel: ' + cell[14]+'\n'+
-                            (cell[3] == '#3366FF' ? 'Status: Checkout' : '' )+
+                            (cell[3] == '#006633' ? 'Status: Checkout' : '' )+
                             (cell[3] == '#C0C0C0' ? 'Status: Booking On Time' : '' )+
                             (cell[3] == '#A0FF7D' ? 'Status: Checkin' : '' )+
-                            (cell[3] == '#FF3333' ? 'Status: Not Checkin' : '' ): '' "
+                           (cell[3] == '#FF4040' ? 'Status: Not Checkin' : '' ): '' "
               [matTooltipPosition]="position.value"
           >
 
@@ -2136,10 +2136,10 @@
                            '\nAttendees: ' +cell[7]+
                            '\nTopic: ' +cell[8] +
                            '\nTel: ' + cell[14]+'\n'+
-                            (cell[3] == '#3366FF' ? 'Status: Checkout' : '' )+
+                            (cell[3] == '#006633' ? 'Status: Checkout' : '' )+
                             (cell[3] == '#C0C0C0' ? 'Status: Booking On Time' : '' )+
                             (cell[3] == '#A0FF7D' ? 'Status: Checkin' : '' )+
-                            (cell[3] == '#FF3333' ? 'Status: Not Checkin' : '' ): '' "
+                           (cell[3] == '#FF4040' ? 'Status: Not Checkin' : '' ): '' "
               [matTooltipPosition]="position.value"
           >
 
@@ -2208,10 +2208,10 @@
                            '\nAttendees: ' +cell[7]+
                            '\nTopic: ' +cell[8] +
                            '\nTel: ' + cell[14]+'\n'+
-                            (cell[3] == '#3366FF' ? 'Status: Checkout' : '' )+
+                            (cell[3] == '#006633' ? 'Status: Checkout' : '' )+
                             (cell[3] == '#C0C0C0' ? 'Status: Booking On Time' : '' )+
                             (cell[3] == '#A0FF7D' ? 'Status: Checkin' : '' )+
-                            (cell[3] == '#FF3333' ? 'Status: Not Checkin' : '' ): '' "
+                           (cell[3] == '#FF4040' ? 'Status: Not Checkin' : '' ): '' "
               [matTooltipPosition]="position.value"
           >
 
@@ -2281,10 +2281,10 @@
                            '\nAttendees: ' +cell[7]+
                            '\nTopic: ' +cell[8] +
                            '\nTel: ' + cell[14]+'\n'+
-                            (cell[3] == '#3366FF' ? 'Status: Checkout' : '' )+
+                            (cell[3] == '#006633' ? 'Status: Checkout' : '' )+
                             (cell[3] == '#C0C0C0' ? 'Status: Booking On Time' : '' )+
                             (cell[3] == '#A0FF7D' ? 'Status: Checkin' : '' )+
-                            (cell[3] == '#FF3333' ? 'Status: Not Checkin' : '' ): '' "
+                           (cell[3] == '#FF4040' ? 'Status: Not Checkin' : '' ): '' "
               [matTooltipPosition]="position.value"
           >
 

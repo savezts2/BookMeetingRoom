@@ -1083,7 +1083,7 @@ selectTable(room,time){
     let timesplit: Array<string>;
     timesplit = time.split(".");
 
-    console.log(datetoday,datebook,timesplit);
+   // console.log(datetoday,datebook,timesplit);
     let monthnumString = this.convertMonthstring(datetoday[1]);
     if(parseInt(datetoday[2]) == parseInt(datebook[0]) && monthnumString == datebook[1]){
        if(new Date().getHours() > parseInt(timesplit[0]) ){
@@ -1092,14 +1092,14 @@ selectTable(room,time){
           if( new Date().getMinutes() > parseInt(timesplit[1]) ){
          alert("Cannot make a previous booking.");
        }else{
-        this.router.navigate(['data-form',{roomname:room,roomtime:time,date:this.datefull.datefull}]);
+        this.router.navigate(['data-form',{roomname:room,roomtime:time,date:this.datefull.datefull,slowtime:false}]);
       }
     }else{
-        this.router.navigate(['data-form',{roomname:room,roomtime:time,date:this.datefull.datefull}]);
+        this.router.navigate(['data-form',{roomname:room,roomtime:time,date:this.datefull.datefull,slowtime:false}]);
     }
 
     }else{
-        this.router.navigate(['data-form',{roomname:room,roomtime:time,date:this.datefull.datefull}]);
+        this.router.navigate(['data-form',{roomname:room,roomtime:time,date:this.datefull.datefull,slowtime:false}]);
     }
 
   }

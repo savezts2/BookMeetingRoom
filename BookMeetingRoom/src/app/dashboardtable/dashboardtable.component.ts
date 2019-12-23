@@ -3,11 +3,13 @@ import {AuthService}from '../auth.service';
 import {Observable}from "rxjs";
 import {Router}from '@angular/router';
 import {ServiceService}from '../Service/service.service';
+import {CsvDataService}from '../csv-data.service';
 import {DashboardService}from './dashboard.service';
 import {ActivatedRoute}from "@angular/router";
 import {MatSidenav}from '@angular/material/sidenav';
 import {FormControl} from '@angular/forms';
 import {TooltipPosition} from '@angular/material/tooltip';
+import * as XLSX from 'xlsx';
 @Component({
 selector: 'app-dashboardtable',
 templateUrl: './dashboardtable.component.html',
@@ -126,12 +128,15 @@ showday28 : boolean = false;
 showday29 : boolean = false;
 showday30 : boolean = false;
 showday31 : boolean = false;
+fileName= 'ExcelSheet.xlsx';
 
 roomnames : Array<any>;
 CurrentTime: any;
 numroom : number;
+
+
 constructor(public authService : AuthService , private router: Router, private service : ServiceService,
-   private route:ActivatedRoute , private dashboardService : DashboardService) {
+   private route:ActivatedRoute , private dashboardService : DashboardService, private csv : CsvDataService) {
         this.isLoggedIn = authService.isLoggedIn();
         this.isLoggedInAdmin = authService.isLoggedInAdmin();
         this.isLoggedInHR = authService.isLoggedInHR();
@@ -146,9 +151,23 @@ constructor(public authService : AuthService , private router: Router, private s
 
    }
 
-close() {
-    this.sidenav.close();
+exportexcel(): void{
+    let bookMeetingRoom : any[] = [];
+
+  for(let i = 0 ; i < this.report.length ; i++){
+
+        bookMeetingRoom.push({book_id : this.report[i].bookMeetingRoom.book_id , create_by : this.report[i].bookMeetingRoom.create_by,
+        bookdate : this.report[i].bookMeetingRoom.create_date , roomname : this.report[i].bookMeetingRoom.roomname.roomnames,
+        starttime : this.report[i].bookMeetingRoom.starttime.substring(0,2)+':'+ this.report[i].bookMeetingRoom.starttime.substring(3,5)
+        , endtime : this.report[i].bookMeetingRoom.endtime.substring(0,2)+':'+ this.report[i].bookMeetingRoom.endtime.substring(3,5),
+        topic : this.report[i].bookMeetingRoom.topic , tel : this.report[i].bookMeetingRoom.telbookingby,
+        atten : this.report[i].bookMeetingRoom.attendees , remark : this.report[i].bookMeetingRoom.remark , status : this.report[i].bookMeetingRoom.statusbooking});
+
+
   }
+
+   CsvDataService.exportToCsv('BookMeetingRoom.csv', bookMeetingRoom);
+}
 
   ngOnInit() {
 

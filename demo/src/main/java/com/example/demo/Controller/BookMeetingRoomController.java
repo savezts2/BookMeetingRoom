@@ -67,6 +67,19 @@ public class BookMeetingRoomController {
         return bookMeetingRoom;
     }
 
+    @PostMapping(path = "/checkoutauto/{dateBookMeetingRoom}/{roomname}/{starttime}")
+    public BookMeetingRoom checkoutbysys(@PathVariable String dateBookMeetingRoom,@PathVariable Long roomname, @PathVariable String starttime) {
+        Roomname roomname1 = roomnameRepository.findById(roomname).get();
+        String endtime;
+        BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findByDateBookMeetingRoomAndRoomnameAndStarttimeAndIsActive(dateBookMeetingRoom,roomname1,starttime,"1");
+        bookMeetingRoom.setCheckoutby("checkoutsys");
+        bookMeetingRoom.setCheckouttime(bookMeetingRoom.getEndtime());
+
+        bookMeetingRoom.setStatusbooking("checkout");
+        bookMeetingRoomRepository.save(bookMeetingRoom);
+        return bookMeetingRoom;
+    }
+
 
     @PostMapping(path = "/Addroom/{firstname}/{roomname}")
     public Roomname AddRoom(@PathVariable String firstname, @PathVariable String roomname) {
@@ -128,8 +141,8 @@ public class BookMeetingRoomController {
         return bookMeetingRoom;
     }
 
-    @PostMapping(path = "/CheckIn/{firstname}/{dateBookMeetingRoom}/{roomname}/{starttime}")
-    public BookMeetingRoom bookMeetingRoom4(@PathVariable String firstname,@PathVariable String dateBookMeetingRoom, @PathVariable Long roomname, @PathVariable String starttime ) {
+    @PostMapping(path = "/CheckIn/{firstname}/{dateBookMeetingRoom}/{roomname}/{starttime}/{checkintime}")
+    public BookMeetingRoom bookMeetingRoom4(@PathVariable String firstname,@PathVariable String dateBookMeetingRoom, @PathVariable Long roomname, @PathVariable String starttime, @PathVariable String checkintime ) {
 
         Roomname roomname1 = roomnameRepository.findById(roomname).get();
         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findByDateBookMeetingRoomAndRoomnameAndStarttimeAndIsActive(dateBookMeetingRoom,roomname1,starttime,"1");
@@ -137,6 +150,8 @@ public class BookMeetingRoomController {
         bookMeetingRoom.setStatusbooking("checkin");
         bookMeetingRoom.setUpdate_date(date);
         bookMeetingRoom.setUpdate_by(firstname);
+        bookMeetingRoom.setCheckintime(checkintime);
+        bookMeetingRoom.setCheckinby("user");
         bookMeetingRoomRepository.save(bookMeetingRoom);
         Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
         report.setUpdate_by(firstname);
@@ -147,9 +162,9 @@ public class BookMeetingRoomController {
 
 
 
-    @PostMapping(path = "/Checkout/{firstname}/{dateBookMeetingRoom}/{roomname}/{starttime}/{hour}/{minute}")
+    @PostMapping(path = "/Checkout/{firstname}/{dateBookMeetingRoom}/{roomname}/{starttime}/{hour}/{minute}/{checkouttime}")
     public BookMeetingRoom checkout(@PathVariable String firstname,@PathVariable String dateBookMeetingRoom, @PathVariable Long roomname, @PathVariable String starttime
-            , @PathVariable int hour, @PathVariable int minute) {
+            , @PathVariable int hour, @PathVariable int minute, @PathVariable String checkouttime) {
         String endtime2;
         System.out.println(starttime);
         System.out.println(hour+""+minute);
@@ -194,7 +209,8 @@ public class BookMeetingRoomController {
 
         Roomname roomname1 = roomnameRepository.findById(roomname).get();
         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findByDateBookMeetingRoomAndRoomnameAndStarttimeAndIsActive(dateBookMeetingRoom,roomname1,starttime,"1");
-
+        bookMeetingRoom.setCheckoutby("checkoutusr");
+        bookMeetingRoom.setCheckouttime(checkouttime);
         int lengthh = convertLengthTime(starttime,endtime2);
         bookMeetingRoom.setLengthtime(lengthh);
         bookMeetingRoom.setEndtime(endtime2);
