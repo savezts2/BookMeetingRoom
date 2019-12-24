@@ -22,7 +22,11 @@ import { SelectRoomComponent } from './select-room/select-room.component';
 import {MatDialogModule} from '@angular/material/dialog';
 
 import {DialogOverviewExampleDialog} from './auth.service';
+
+import {DialogSubmitRoom} from './addroombyadmin/addroombyadmin.component';
+
 import { DashboardComponent } from './dashboard/dashboard.component';
+
 import { DashboardtableComponent } from './dashboardtable/dashboardtable.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { AdduserbyadminComponent } from './adduserbyadmin/adduserbyadmin.component';
@@ -68,7 +72,8 @@ import { LayoutModule } from '@angular/cdk/layout';
     AddroombyadminComponent,
     EditroomnameComponent,
     DeleteroomComponent,
-    SideNavComponent
+    SideNavComponent,
+    DialogSubmitRoom
   ],
   imports: [
     BrowserModule,
@@ -99,7 +104,7 @@ import { LayoutModule } from '@angular/cdk/layout';
     MatTooltipModule,
     LayoutModule
   ],
-    entryComponents: [ DialogOverviewExampleDialog ],
+    entryComponents: [ DialogOverviewExampleDialog,DialogSubmitRoom ],
   providers: [],
   bootstrap: [AppComponent]
 })

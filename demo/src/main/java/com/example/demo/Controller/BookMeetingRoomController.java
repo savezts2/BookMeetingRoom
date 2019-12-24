@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.Locale;
 
@@ -32,6 +33,17 @@ public class BookMeetingRoomController {
     private RoomnameRepository roomnameRepository;
 
 
+    @GetMapping(path = "/getHourCurrent")
+    public static String getHourCurrent() {
+        String hour = Integer.toString(LocalDateTime.now().getHour());
+        return hour;
+    }
+
+    @GetMapping(path = "/getMinuteCurrent")
+    public static String getMinuteCurrent() {
+        String minute = Integer.toString(LocalDateTime.now().getMinute());
+        return minute;
+    }
 
     @PostMapping(path = "/Notcheckin15min/{dateBookMeetingRoom}/{roomname}/{starttime}")
     public BookMeetingRoom updatenotcheckinbysys(@PathVariable String dateBookMeetingRoom,@PathVariable Long roomname, @PathVariable String starttime) {

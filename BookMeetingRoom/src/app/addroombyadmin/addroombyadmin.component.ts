@@ -1,4 +1,4 @@
-import { Component, OnInit ,ViewChild} from '@angular/core';
+import { Component, OnInit ,ViewChild, Inject} from '@angular/core';
 import {  MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { BehaviorSubject } from 'rxjs/Rx';
 import { AuthService } from '../auth.service';
@@ -10,8 +10,14 @@ import { MatPaginator, MatTableDataSource, MatSort } from '@angular/material';
 import { HttpClient} from '@angular/common/http';
 import {EditroomnameComponent} from '../editroomname/editroomname.component'
 import {DeleteroomComponent} from '../deleteroom/deleteroom.component'
+
 export interface PeriodicElement {
 roomnames : string;
+}
+
+export interface DialogData {
+roominput : string;
+firstname : string;
 }
 
 @Component({
@@ -54,37 +60,22 @@ close() {
     this.sidenav.close();
   }
 
+
 onAddroom(){
 
   if(this.roominput == '' || this.roominput == ' '){
     alert("Please check your filled.");
   }else{
-       this.service.getAddroomname(this.roominput).subscribe(data=>{
 
-              if(data != null){
-                alert("This room name already exists in the system.");
-              }else{
-                  this.http.post(this.API + '/Addroom/'+this.firstname +'/' + this.roominput,{})
-                             .subscribe(
-                               data => {
-                                   console.log('PUT Request is successful');
-                                   alert("Input Success!");
-                                   window.location.reload(true);
-
-                               },
-                               error => {
-                                   console.log('Error', error);
-                                    window.location.reload(true);
-                               }
-                              );
-
-              }
-
-       })
-
+      const dialogRef = this.dialog.open(DialogSubmitRoom, {
+      width: '250px',
+      data: {roominput: this.roominput , firstname : this.firstname}
+    });
 
   }
+
 }
+
 
 onDelete(row : any){
   const dialogRef = this.dialog.open(DeleteroomComponent, {
@@ -102,5 +93,52 @@ onEdit(row : any){
     });
 }
 
+
+}
+
+
+
+
+
+@Component({
+  selector: 'dialog-submit-room-dialog',
+  templateUrl: 'dialog-submit-room-dialog.html',
+})
+export class DialogSubmitRoom {
+//public API = '//localhost:8080';  //for test
+public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
+  constructor(
+    public dialogRef: MatDialogRef<DialogSubmitRoom>, @Inject(MAT_DIALOG_DATA) public data: DialogData,
+    private service : ServiceService, private http: HttpClient) {}
+
+  add(){
+
+    this.service.getAddroomname(this.data.roominput).subscribe(data=>{
+
+              if(data != null){
+                alert("This room name already exists in the system.");
+              }else{
+                  this.http.post(this.API + '/Addroom/'+this.data.firstname +'/' + this.data.roominput,{})
+                             .subscribe(
+                               data => {
+                                   console.log('PUT Request is successful');
+                                   alert("Input Success!");
+                                   window.location.reload(true);
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+                                    window.location.reload(true);
+                               }
+                              );
+
+              }
+
+       })
+  }
+
+  cancel(){
+  this.dialogRef.close();
+}
 
 }

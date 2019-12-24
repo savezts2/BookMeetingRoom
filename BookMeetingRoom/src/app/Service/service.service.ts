@@ -29,6 +29,14 @@ getUsers(): Observable<any>{
       return this.http.get(this.API+'/Users',{})
   }
 
+getHourCurrent(){
+    return this.http.get(this.API+'/getHourCurrent',{})
+}
+
+getMinuteCurrent(){
+    return this.http.get(this.API+'/getMinuteCurrent',{})
+}
+
 
   getDateDashBoard(startdate : String , enddate: String) : Observable<any>{
       return this.http.get(this.API+'/Report/'+startdate+'/'+enddate,{})

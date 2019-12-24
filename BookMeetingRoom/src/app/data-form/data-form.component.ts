@@ -966,7 +966,7 @@ public appendTime(){
       } //if active
   } //for report
 
-  console.log(this.events);
+  //console.log(this.events);
 
 } // appendtime
 
