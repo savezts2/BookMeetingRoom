@@ -30,8 +30,8 @@ isLoggedInHR : Observable<boolean>;
 roomnames : Array<any>;
 roominput : string = '';
 firstname : string;
-public API = '//localhost:8080';  //for test
-//public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
+//public API = '//localhost:8080';  //for test
+public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
 dataSource = new MatTableDataSource<PeriodicElement>(this.roomnames);
   constructor(public authService : AuthService , private router: Router , private service : ServiceService,public dialog: MatDialog
   ,private http: HttpClient) {

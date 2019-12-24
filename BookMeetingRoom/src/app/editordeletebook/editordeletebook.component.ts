@@ -39,8 +39,8 @@ export class EditordeletebookComponent implements OnInit {
 isLoggedIn : Observable<boolean>;
 isLoggedInAdmin : Observable<boolean>;
 isLoggedInHR : Observable<boolean>;
-public API = '//localhost:8080';   //for test
-//public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
+//public API = '//localhost:8080';   //for test
+public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
 timenum : number;
 totimenum : number;
 datetimenow : number;

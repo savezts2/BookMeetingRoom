@@ -33,8 +33,8 @@ fromtimesplited : Array<any>;
 totimesplited : Array<any>;
 countTime : number;
 spiner : boolean = false;
-public API = '//localhost:8080';  //for test
-//public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
+//public API = '//localhost:8080';  //for test
+public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
 firstFormGroup: FormGroup;
 secondFormGroup: FormGroup;
 events: any[] = [];
@@ -51,7 +51,7 @@ in : any ;
                 this.roomnameandtime = prams;
                 this.roomname =this.roomnameandtime.roomname;
                 this.date = this.roomnameandtime.date;
-            //    console.log(this.roomnameandtime);
+                console.log(this.roomnameandtime);
               })
     this.fromtimeSelect = this.roomnameandtime.roomtime;
     this.userid3 = localStorage.getItem('userid');
@@ -966,7 +966,7 @@ public appendTime(){
       } //if active
   } //for report
 
-  //console.log(this.events);
+  console.log(this.events);
 
 } // appendtime
 
@@ -984,9 +984,7 @@ SubmitData(){
             this.router.navigate(['selectRoom',{datefull : this.date}]);
       }
       else{
-
-
-
+              console.log(1);
             for(let i = 0 ; i < this.roomnames.length ; i++){
                 if(this.roomnames[i].roomnames == this.roomname  ){
                     for(let j = 0 ; j < this.events[i].length ; j++){
@@ -999,12 +997,13 @@ SubmitData(){
                               break;
                           }else{
 
+                              if(this.roomnameandtime.slowtime == 'false'){
 
-                              this.spiner = true;
+                                                                this.spiner = true;
                                       this.http.post(this.API + '/'+this.userid3 +'/' + this.fromtimeSelect +'/' + this.firstFormGroup.get('totime').value +'/'+ this.secondFormGroup.get('tel').value
                                     + '/' + this.secondFormGroup.get('topic').value+ '/' + this.secondFormGroup.get('atten').value+ '/' + this.secondFormGroup.get('remark').value+ '/' + this.roomname+ '/' + this.date,{})
-                             .subscribe(
-                               data => {
+                                  .subscribe(
+                                  data => {
                                    console.log('PUT Request is successful');
                                    alert("จองสำเร็จ");
                                    this.router.navigate(['selectRoom',{datefull : this.date}]);
@@ -1014,8 +1013,28 @@ SubmitData(){
                                    console.log('Error', error);
                                   this.router.navigate(['selectRoom',{datefull : this.date}]);
                                }
-                              );
-                            break;
+                                    );
+                                   break;
+                              }else{
+
+                                   this.spiner = true;
+                                      this.http.post(this.API + '/booklate/'+this.userid3 +'/' + this.fromtimeSelect +'/' + this.firstFormGroup.get('totime').value +'/'+ this.secondFormGroup.get('tel').value
+                                    + '/' + this.secondFormGroup.get('topic').value+ '/' + this.secondFormGroup.get('atten').value+ '/' + this.secondFormGroup.get('remark').value+ '/' + this.roomname+ '/' + this.date,{})
+                                  .subscribe(
+                                  data => {
+                                   console.log('PUT Request is successful');
+                                   alert("จองสำเร็จ");
+                                   this.router.navigate(['selectRoom',{datefull : this.date}]);
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+                                  this.router.navigate(['selectRoom',{datefull : this.date}]);
+                               }
+                                    );
+                                   break;
+                              }
+
                           }
                       }
                     }

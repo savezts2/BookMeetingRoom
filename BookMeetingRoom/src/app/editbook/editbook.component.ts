@@ -50,8 +50,8 @@
   spiner : boolean = false;
   in : any ;
   nameuser : string;
-  public API = '//localhost:8080';   //for test
- // public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
+  //public API = '//localhost:8080';   //for test
+  public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
 
     constructor(public authService : AuthService , private router: Router , private service : ServiceService,public dialog: MatDialog,
     @Inject(MAT_DIALOG_DATA) public data: DialogData, public dialogRef: MatDialogRef<EditbookComponent>, private http: HttpClient,
@@ -180,7 +180,7 @@ checkReserved (fromtime: String , totime: String , roomname:String){
     this.countTime = this.convertlengthTime(this.fromtimesplited[0],this.fromtimesplited[1],this.totimesplited[0],this.totimesplited[1]);
 
     for(let i = 0 ; i < this.roomnames.length ; i++){
-      if(this.roomnames[i].roomnames == roomname){
+      if(this.roomnames[i].roomname_id == roomname){
         for(let j = 0 ; j < this.events[i].length ; j++){
             if(this.events[i][j][1] == fromtime){
               for(let k = j + 1 ; k <  this.countTime + j - this.events[i][j][2] + 1 ; k++){
@@ -257,7 +257,7 @@ appendRoomname(){
 
           for(let j = 0 ; j < this.roomnames.length ; j++){ //หาห้อง
 
-            if(this.report[i].bookMeetingRoom.roomname == this.roomnames[j].roomnames && this.report[i].bookMeetingRoom.starttime == '08.00'){
+            if(this.report[i].bookMeetingRoom.roomname.roomname_id == this.roomnames[j].roomname_id && this.report[i].bookMeetingRoom.starttime == '08.00'){
 
               for(let k =0 ; k < this.events[j].length; k++){
 
@@ -268,6 +268,8 @@ appendRoomname(){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                         this.events[j][k][3] = '#006633' ;
                     }else{
                         this.events[j][k][3] = '#FF3333' ;
                     }
@@ -279,7 +281,7 @@ appendRoomname(){
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-                  this.events[j][k][12] = this.report[i].users.username;
+
 
                    if(this.events[j][k][2] > 1){
                       this.counting = k + 1;
@@ -297,7 +299,7 @@ appendRoomname(){
               }
             } // 8โมง
 
-            if(this.report[i].bookMeetingRoom.roomname == this.roomnames[j].roomnames && this.report[i].bookMeetingRoom.starttime == '08.30'){
+            if(this.report[i].bookMeetingRoom.roomname.roomname_id == this.roomnames[j].roomname_id && this.report[i].bookMeetingRoom.starttime == '08.30'){
 
               for(let k =0 ; k < this.events[j].length; k++){
 
@@ -308,6 +310,8 @@ appendRoomname(){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                         this.events[j][k][3] = '#006633' ;
                     }else{
                         this.events[j][k][3] = '#FF3333' ;
                     }
@@ -319,7 +323,7 @@ appendRoomname(){
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-                  this.events[j][k][12] = this.report[i].users.username;
+
 
                    if(this.events[j][k][2] > 1){
                       this.counting = k + 1;
@@ -336,7 +340,7 @@ appendRoomname(){
                 }
               }
             }
-            if(this.report[i].bookMeetingRoom.roomname == this.roomnames[j].roomnames && this.report[i].bookMeetingRoom.starttime == '09.00'){
+            if(this.report[i].bookMeetingRoom.roomname.roomname_id == this.roomnames[j].roomname_id && this.report[i].bookMeetingRoom.starttime == '09.00'){
 
               for(let k =0 ; k < this.events[j].length; k++){
 
@@ -347,6 +351,8 @@ appendRoomname(){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                         this.events[j][k][3] = '#006633' ;
                     }else{
                         this.events[j][k][3] = '#FF3333' ;
                     }
@@ -358,7 +364,7 @@ appendRoomname(){
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-                  this.events[j][k][12] = this.report[i].users.username;
+
 
                    if(this.events[j][k][2] > 1){
                       this.counting = k + 1;
@@ -375,7 +381,7 @@ appendRoomname(){
                 }
               }
             }
-            if(this.report[i].bookMeetingRoom.roomname == this.roomnames[j].roomnames && this.report[i].bookMeetingRoom.starttime == '09.30'){
+            if(this.report[i].bookMeetingRoom.roomname.roomname_id == this.roomnames[j].roomname_id && this.report[i].bookMeetingRoom.starttime == '09.30'){
 
               for(let k =0 ; k < this.events[j].length; k++){
 
@@ -386,6 +392,8 @@ appendRoomname(){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                         this.events[j][k][3] = '#006633' ;
                     }else{
                         this.events[j][k][3] = '#FF3333' ;
                     }
@@ -397,7 +405,7 @@ appendRoomname(){
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-                  this.events[j][k][12] = this.report[i].users.username;
+
 
                    if(this.events[j][k][2] > 1){
                       this.counting = k + 1;
@@ -414,7 +422,7 @@ appendRoomname(){
                 }
               }
             }
-            if(this.report[i].bookMeetingRoom.roomname == this.roomnames[j].roomnames && this.report[i].bookMeetingRoom.starttime == '10.00'){
+            if(this.report[i].bookMeetingRoom.roomname.roomname_id == this.roomnames[j].roomname_id && this.report[i].bookMeetingRoom.starttime == '10.00'){
 
               for(let k =0 ; k < this.events[j].length; k++){
 
@@ -425,6 +433,8 @@ appendRoomname(){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                         this.events[j][k][3] = '#006633' ;
                     }else{
                         this.events[j][k][3] = '#FF3333' ;
                     }
@@ -436,7 +446,7 @@ appendRoomname(){
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-                  this.events[j][k][12] = this.report[i].users.username;
+
 
                    if(this.events[j][k][2] > 1){
                       this.counting = k + 1;
@@ -453,7 +463,7 @@ appendRoomname(){
                 }
               }
             }
-            if(this.report[i].bookMeetingRoom.roomname == this.roomnames[j].roomnames && this.report[i].bookMeetingRoom.starttime == '10.30'){
+            if(this.report[i].bookMeetingRoom.roomname.roomname_id == this.roomnames[j].roomname_id && this.report[i].bookMeetingRoom.starttime == '10.30'){
 
               for(let k =0 ; k < this.events[j].length; k++){
 
@@ -464,6 +474,8 @@ appendRoomname(){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                         this.events[j][k][3] = '#006633' ;
                     }else{
                         this.events[j][k][3] = '#FF3333' ;
                     }
@@ -475,7 +487,7 @@ appendRoomname(){
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-                  this.events[j][k][12] = this.report[i].users.username;
+
 
                    if(this.events[j][k][2] > 1){
                       this.counting = k + 1;
@@ -492,7 +504,7 @@ appendRoomname(){
                 }
               }
             }
-            if(this.report[i].bookMeetingRoom.roomname == this.roomnames[j].roomnames && this.report[i].bookMeetingRoom.starttime == '11.00'){
+            if(this.report[i].bookMeetingRoom.roomname.roomname_id == this.roomnames[j].roomname_id && this.report[i].bookMeetingRoom.starttime == '11.00'){
 
               for(let k =0 ; k < this.events[j].length; k++){
 
@@ -503,6 +515,8 @@ appendRoomname(){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                         this.events[j][k][3] = '#006633' ;
                     }else{
                         this.events[j][k][3] = '#FF3333' ;
                     }
@@ -512,9 +526,10 @@ appendRoomname(){
                   this.events[j][k][7] = this.report[i].bookMeetingRoom.attendees ;
                   this.events[j][k][14] = this.report[i].bookMeetingRoom.telbookingby ;
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
+
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-                  this.events[j][k][12] = this.report[i].users.username;
+
 
                    if(this.events[j][k][2] > 1){
                       this.counting = k + 1;
@@ -530,8 +545,9 @@ appendRoomname(){
                    }
                 }
               }
+
             }
-            if(this.report[i].bookMeetingRoom.roomname == this.roomnames[j].roomnames && this.report[i].bookMeetingRoom.starttime == '11.30'){
+            if(this.report[i].bookMeetingRoom.roomname.roomname_id == this.roomnames[j].roomname_id && this.report[i].bookMeetingRoom.starttime == '11.30'){
 
               for(let k =0 ; k < this.events[j].length; k++){
 
@@ -542,6 +558,8 @@ appendRoomname(){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                         this.events[j][k][3] = '#006633' ;
                     }else{
                         this.events[j][k][3] = '#FF3333' ;
                     }
@@ -553,7 +571,9 @@ appendRoomname(){
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-                  this.events[j][k][12] = this.report[i].users.username;
+
+
+
 
                    if(this.events[j][k][2] > 1){
                       this.counting = k + 1;
@@ -570,7 +590,7 @@ appendRoomname(){
                 }
               }
             }
-            if(this.report[i].bookMeetingRoom.roomname == this.roomnames[j].roomnames && this.report[i].bookMeetingRoom.starttime == '12.00'){
+            if(this.report[i].bookMeetingRoom.roomname.roomname_id == this.roomnames[j].roomname_id && this.report[i].bookMeetingRoom.starttime == '12.00'){
 
               for(let k =0 ; k < this.events[j].length; k++){
 
@@ -581,6 +601,8 @@ appendRoomname(){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                         this.events[j][k][3] = '#006633' ;
                     }else{
                         this.events[j][k][3] = '#FF3333' ;
                     }
@@ -592,7 +614,7 @@ appendRoomname(){
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-                  this.events[j][k][12] = this.report[i].users.username;
+
 
                    if(this.events[j][k][2] > 1){
                       this.counting = k + 1;
@@ -609,7 +631,7 @@ appendRoomname(){
                 }
               }
             }
-            if(this.report[i].bookMeetingRoom.roomname == this.roomnames[j].roomnames && this.report[i].bookMeetingRoom.starttime == '12.30'){
+            if(this.report[i].bookMeetingRoom.roomname.roomname_id == this.roomnames[j].roomname_id&& this.report[i].bookMeetingRoom.starttime == '12.30'){
 
               for(let k =0 ; k < this.events[j].length; k++){
 
@@ -620,6 +642,8 @@ appendRoomname(){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                         this.events[j][k][3] = '#006633' ;
                     }else{
                         this.events[j][k][3] = '#FF3333' ;
                     }
@@ -631,7 +655,7 @@ appendRoomname(){
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-                  this.events[j][k][12] = this.report[i].users.username;
+
 
                    if(this.events[j][k][2] > 1){
                       this.counting = k + 1;
@@ -648,7 +672,7 @@ appendRoomname(){
                 }
               }
             }
-            if(this.report[i].bookMeetingRoom.roomname == this.roomnames[j].roomnames && this.report[i].bookMeetingRoom.starttime == '13.00'){
+            if(this.report[i].bookMeetingRoom.roomname.roomname_id == this.roomnames[j].roomname_id && this.report[i].bookMeetingRoom.starttime == '13.00'){
 
               for(let k =0 ; k < this.events[j].length; k++){
 
@@ -659,6 +683,8 @@ appendRoomname(){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                         this.events[j][k][3] = '#006633' ;
                     }else{
                         this.events[j][k][3] = '#FF3333' ;
                     }
@@ -670,7 +696,7 @@ appendRoomname(){
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-                  this.events[j][k][12] = this.report[i].users.username;
+
 
                    if(this.events[j][k][2] > 1){
                       this.counting = k + 1;
@@ -687,7 +713,7 @@ appendRoomname(){
                 }
               }
             }
-            if(this.report[i].bookMeetingRoom.roomname == this.roomnames[j].roomnames && this.report[i].bookMeetingRoom.starttime == '13.30'){
+            if(this.report[i].bookMeetingRoom.roomname.roomname_id == this.roomnames[j].roomname_id && this.report[i].bookMeetingRoom.starttime == '13.30'){
 
               for(let k =0 ; k < this.events[j].length; k++){
 
@@ -698,6 +724,8 @@ appendRoomname(){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                         this.events[j][k][3] = '#006633' ;
                     }else{
                         this.events[j][k][3] = '#FF3333' ;
                     }
@@ -709,7 +737,7 @@ appendRoomname(){
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-                  this.events[j][k][12] = this.report[i].users.username;
+
 
                    if(this.events[j][k][2] > 1){
                       this.counting = k + 1;
@@ -726,7 +754,7 @@ appendRoomname(){
                 }
               }
             }
-            if(this.report[i].bookMeetingRoom.roomname == this.roomnames[j].roomnames && this.report[i].bookMeetingRoom.starttime == '14.00'){
+            if(this.report[i].bookMeetingRoom.roomname.roomname_id == this.roomnames[j].roomname_id && this.report[i].bookMeetingRoom.starttime == '14.00'){
 
               for(let k =0 ; k < this.events[j].length; k++){
 
@@ -737,6 +765,8 @@ appendRoomname(){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                         this.events[j][k][3] = '#006633' ;
                     }else{
                         this.events[j][k][3] = '#FF3333' ;
                     }
@@ -748,7 +778,7 @@ appendRoomname(){
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-                  this.events[j][k][12] = this.report[i].users.username;
+
 
                    if(this.events[j][k][2] > 1){
                       this.counting = k + 1;
@@ -765,7 +795,7 @@ appendRoomname(){
                 }
               }
             }
-            if(this.report[i].bookMeetingRoom.roomname == this.roomnames[j].roomnames && this.report[i].bookMeetingRoom.starttime == '14.30'){
+            if(this.report[i].bookMeetingRoom.roomname.roomname_id == this.roomnames[j].roomname_id&& this.report[i].bookMeetingRoom.starttime == '14.30'){
 
               for(let k =0 ; k < this.events[j].length; k++){
 
@@ -776,6 +806,8 @@ appendRoomname(){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                         this.events[j][k][3] = '#006633' ;
                     }else{
                         this.events[j][k][3] = '#FF3333' ;
                     }
@@ -787,7 +819,7 @@ appendRoomname(){
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-                  this.events[j][k][12] = this.report[i].users.username;
+
 
                    if(this.events[j][k][2] > 1){
                       this.counting = k + 1;
@@ -804,7 +836,7 @@ appendRoomname(){
                 }
               }
             }
-            if(this.report[i].bookMeetingRoom.roomname == this.roomnames[j].roomnames && this.report[i].bookMeetingRoom.starttime == '15.00'){
+            if(this.report[i].bookMeetingRoom.roomname.roomname_id == this.roomnames[j].roomname_id && this.report[i].bookMeetingRoom.starttime == '15.00'){
 
               for(let k =0 ; k < this.events[j].length; k++){
 
@@ -815,6 +847,8 @@ appendRoomname(){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                         this.events[j][k][3] = '#006633' ;
                     }else{
                         this.events[j][k][3] = '#FF3333' ;
                     }
@@ -826,7 +860,7 @@ appendRoomname(){
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-                  this.events[j][k][12] = this.report[i].users.username;
+
 
                    if(this.events[j][k][2] > 1){
                       this.counting = k + 1;
@@ -843,7 +877,7 @@ appendRoomname(){
                 }
               }
             }
-            if(this.report[i].bookMeetingRoom.roomname == this.roomnames[j].roomnames && this.report[i].bookMeetingRoom.starttime == '15.30'){
+            if(this.report[i].bookMeetingRoom.roomname.roomname_id == this.roomnames[j].roomname_id && this.report[i].bookMeetingRoom.starttime == '15.30'){
 
               for(let k =0 ; k < this.events[j].length; k++){
 
@@ -854,6 +888,8 @@ appendRoomname(){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                         this.events[j][k][3] = '#006633' ;
                     }else{
                         this.events[j][k][3] = '#FF3333' ;
                     }
@@ -865,7 +901,7 @@ appendRoomname(){
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-                  this.events[j][k][12] = this.report[i].users.username;
+
 
                    if(this.events[j][k][2] > 1){
                       this.counting = k + 1;
@@ -882,7 +918,7 @@ appendRoomname(){
                 }
               }
             }
-            if(this.report[i].bookMeetingRoom.roomname == this.roomnames[j].roomnames && this.report[i].bookMeetingRoom.starttime == '16.00'){
+            if(this.report[i].bookMeetingRoom.roomname.roomname_id == this.roomnames[j].roomname_id && this.report[i].bookMeetingRoom.starttime == '16.00'){
 
               for(let k =0 ; k < this.events[j].length; k++){
 
@@ -893,6 +929,8 @@ appendRoomname(){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                         this.events[j][k][3] = '#006633' ;
                     }else{
                         this.events[j][k][3] = '#FF3333' ;
                     }
@@ -904,7 +942,7 @@ appendRoomname(){
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-                  this.events[j][k][12] = this.report[i].users.username;
+
 
                    if(this.events[j][k][2] > 1){
                       this.counting = k + 1;
@@ -921,7 +959,7 @@ appendRoomname(){
                 }
               }
             }
-            if(this.report[i].bookMeetingRoom.roomname == this.roomnames[j].roomnames && this.report[i].bookMeetingRoom.starttime == '16.30'){
+            if(this.report[i].bookMeetingRoom.roomname.roomname_id == this.roomnames[j].roomname_id && this.report[i].bookMeetingRoom.starttime == '16.30'){
 
               for(let k =0 ; k < this.events[j].length; k++){
 
@@ -932,6 +970,8 @@ appendRoomname(){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                         this.events[j][k][3] = '#006633' ;
                     }else{
                         this.events[j][k][3] = '#FF3333' ;
                     }
@@ -943,7 +983,7 @@ appendRoomname(){
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-                  this.events[j][k][12] = this.report[i].users.username;
+
 
                    if(this.events[j][k][2] > 1){
                       this.counting = k + 1;
@@ -960,7 +1000,7 @@ appendRoomname(){
                 }
               }
             }
-            if(this.report[i].bookMeetingRoom.roomname == this.roomnames[j].roomnames && this.report[i].bookMeetingRoom.starttime == '17.00'){
+            if(this.report[i].bookMeetingRoom.roomname.roomname_id == this.roomnames[j].roomname_id && this.report[i].bookMeetingRoom.starttime == '17.00'){
 
               for(let k =0 ; k < this.events[j].length; k++){
 
@@ -971,6 +1011,8 @@ appendRoomname(){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                         this.events[j][k][3] = '#006633' ;
                     }else{
                         this.events[j][k][3] = '#FF3333' ;
                     }
@@ -982,7 +1024,7 @@ appendRoomname(){
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-                  this.events[j][k][12] = this.report[i].users.username;
+
 
                    if(this.events[j][k][2] > 1){
                       this.counting = k + 1;

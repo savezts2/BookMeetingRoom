@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 
 @RestController
@@ -258,6 +259,54 @@ public class BookMeetingRoomController {
 
 
 
+    @PostMapping(path = "/booklate/{userid}/{fromtime}/{totime}/{tel}/{topic}/{atten}/{remark}/{roomname}/{date}")
+    public BookMeetingRoom booklate(@PathVariable String userid, @PathVariable String fromtime, @PathVariable String totime,
+                                           @PathVariable String  tel, @PathVariable String topic,@PathVariable String atten,@PathVariable String remark
+            ,@PathVariable String roomname ,@PathVariable String date) throws Exception {
+        BookMeetingRoom bookMeetingRoom = new BookMeetingRoom();
+        bookMeetingRoom.setStarttime(fromtime);
+        bookMeetingRoom.setEndtime(totime);
+        bookMeetingRoom.setTelbookingby(tel);
+        bookMeetingRoom.setTopic(topic);
+        bookMeetingRoom.setAttendees(atten);
+        bookMeetingRoom.setRemark(remark);
+        Date date1 = new Date();
+        int length = convertLengthTime(fromtime,totime);
+
+        bookMeetingRoom.setLengthtime(length);
+        Roomname roomname1 = roomnameRepository.findByRoomnamesAndIsActive(roomname,"1");
+        bookMeetingRoom.setRoomname(roomname1);
+        bookMeetingRoom.setDateBookMeetingRoom(date);
+        bookMeetingRoom.setIsActive("1");
+        bookMeetingRoomRepository.save(bookMeetingRoom);
+
+        bookMeetingRoom.setStatusbooking("checkin");
+        bookMeetingRoom.setCreate_date(date1);
+
+        Users users = usersRepository.findByUsernameAndIsActive(userid,"1");
+        bookMeetingRoom.setCreate_by(users.getFirstname());
+
+        Report report = new Report();
+        report.setBookMeetingRoom(bookMeetingRoom);
+        report.setDate(date);
+        report.setUsers(users);
+
+        SimpleDateFormat formatter2=new SimpleDateFormat("dd-MM-yyyy");
+        String[] dateSplit;
+        dateSplit = date.split("-");
+
+        int yearSplit = Integer.valueOf(dateSplit[2]) ;
+        String fullPatternyear = dateSplit[0] + '-' + dateSplit[1] + '-' + String.valueOf(yearSplit);
+        System.out.println(fullPatternyear);
+        Date date2=formatter2.parse(fullPatternyear);
+        report.setDateBook(date2);
+        report.setIsActive("1");
+        report.setCreate_by(users.getFirstname());
+        report.setCreate_date(date1);
+        reportRepository.save(report);
+
+        return bookMeetingRoom;
+    }
 
     @PostMapping(path = "/{userid}/{fromtime}/{totime}/{tel}/{topic}/{atten}/{remark}/{roomname}/{date}")
     public BookMeetingRoom bookMeetingRoom(@PathVariable String userid, @PathVariable String fromtime, @PathVariable String totime,
@@ -293,8 +342,8 @@ public class BookMeetingRoomController {
         SimpleDateFormat formatter2=new SimpleDateFormat("dd-MM-yyyy");
         String[] dateSplit;
         dateSplit = date.split("-");
-        int yearSplit = Integer.valueOf(dateSplit[2]) + 543 ;
-        String fullPatternyear = dateSplit[0] + '-' + dateSplit[1] + '-' + String.valueOf(yearSplit);//dateSplit[2];
+        int yearSplit = Integer.valueOf(dateSplit[2])  ;
+        String fullPatternyear = dateSplit[0] + '-' + dateSplit[1] + '-' + String.valueOf(yearSplit);
         Date date2=formatter2.parse(fullPatternyear);
         report.setDateBook(date2);
         report.setIsActive("1");

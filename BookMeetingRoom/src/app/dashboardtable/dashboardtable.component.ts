@@ -151,6 +151,10 @@ constructor(public authService : AuthService , private router: Router, private s
 
    }
 
+  close(){
+  this.sidenav.close();
+}
+
 exportexcel(): void{
     let bookMeetingRoom : any[] = [];
 
@@ -160,7 +164,7 @@ exportexcel(): void{
         bookdate : this.report[i].bookMeetingRoom.create_date , roomname : this.report[i].bookMeetingRoom.roomname.roomnames,
         starttime : this.report[i].bookMeetingRoom.starttime.substring(0,2)+':'+ this.report[i].bookMeetingRoom.starttime.substring(3,5)
         , endtime : this.report[i].bookMeetingRoom.endtime.substring(0,2)+':'+ this.report[i].bookMeetingRoom.endtime.substring(3,5),
-        topic : this.report[i].bookMeetingRoom.topic , tel : this.report[i].bookMeetingRoom.telbookingby,
+        topic : this.report[i].bookMeetingRoom.topic , tel : '\''+this.report[i].bookMeetingRoom.telbookingby+'\'',
         atten : this.report[i].bookMeetingRoom.attendees , remark : this.report[i].bookMeetingRoom.remark , status : this.report[i].bookMeetingRoom.statusbooking});
 
 

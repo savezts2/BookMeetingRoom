@@ -67,8 +67,8 @@ events: any[] = [];
  now = new Date();
 dt1 : any;
 dt2 : any;
-    public API = '//localhost:8080';  //for test
-//public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
+  //  public API = '//localhost:8080';  //for test
+public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
 
 dateshow : String;
 today=new Date();
@@ -98,7 +98,9 @@ return day !== 0 ;
 
 
    }
-
+close(){
+  this.sidenav.close();
+}
 
 ngOnDestroy() {
   if (this.intervals) {
@@ -1089,14 +1091,16 @@ selectTable(room,time){
        if(new Date().getHours() > parseInt(timesplit[0]) ){
          alert("Cannot make a previous booking.");
        }else if( new Date().getHours() == parseInt(timesplit[0]) ){
-          if( new Date().getMinutes() > parseInt(timesplit[1]) ){
-         alert("Cannot make a previous booking.");
+          if( new Date().getMinutes() - parseInt(timesplit[1])  < 30 && new Date().getMinutes() - parseInt(timesplit[1])  >= 0){
+              this.router.navigate(['data-form',{roomname:room,roomtime:time,date:this.datefull.datefull,slowtime:true}]);
+           }else if(new Date().getMinutes() - parseInt(timesplit[1])  >= 30){
+               alert("Cannot make a previous booking.");
+            }else{
+                this.router.navigate(['data-form',{roomname:room,roomtime:time,date:this.datefull.datefull,slowtime:false}]);
+            }
        }else{
-        this.router.navigate(['data-form',{roomname:room,roomtime:time,date:this.datefull.datefull,slowtime:false}]);
-      }
-    }else{
-        this.router.navigate(['data-form',{roomname:room,roomtime:time,date:this.datefull.datefull,slowtime:false}]);
-    }
+              this.router.navigate(['data-form',{roomname:room,roomtime:time,date:this.datefull.datefull,slowtime:false}]);
+       }
 
     }else{
         this.router.navigate(['data-form',{roomname:room,roomtime:time,date:this.datefull.datefull,slowtime:false}]);
