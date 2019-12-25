@@ -1068,7 +1068,7 @@ public appendTime(){
       } //if active
   } //for report
 
- // console.log(this.events);
+  console.log(this.events);
 
 } // appendtime
 
@@ -1155,7 +1155,7 @@ dateShow(datefull){
                this.time4 = this.time3.getHours().toString() +""+ this.time3.getMinutes().toString();
           }
 
-
+        console.log( this.time4, this.time2);
        this.service.getBookMeetingRoom(this.datefull.datefull,room,time).subscribe(data=>{
               if(data == null){
                   if(localStorage.getItem('tokenidadmin') == "JWT" || localStorage.getItem('tokenidhr') == "JWT"){

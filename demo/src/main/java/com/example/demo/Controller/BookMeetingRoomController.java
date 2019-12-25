@@ -69,6 +69,7 @@ public class BookMeetingRoomController {
         else if(starttime.equals("10.00")){endtime = "10.30";}else if(starttime.equals("10.30")){endtime = "11.00";}else if(starttime.equals("11.00")){endtime = "11.30";}
         else if(starttime.equals("12.00")){endtime = "12.30";}else if(starttime.equals("12.30")){endtime = "13.00";}else if(starttime.equals("13.00")){endtime = "13.30";}
         else if(starttime.equals("13.30")){endtime = "14.00";}else if(starttime.equals("14.00")){endtime = "14.30";}else if(starttime.equals("14.30")){endtime = "15.00";}
+        else if(starttime.equals("15.00")){endtime = "15.30";}
         else if(starttime.equals("15.30")){endtime = "16.00";}else if(starttime.equals("16.00")){endtime = "16.30";}else{endtime = "17.00";}
 
         bookMeetingRoom.setStatusbooking("notcheckin30min");
