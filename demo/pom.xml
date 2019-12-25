@@ -104,11 +104,11 @@
 				<artifactId>tomcat7-maven-plugin</artifactId>
 				<version>2.2</version>
 				<configuration>
-					<url>http://192.168.1.56:8080/manager/html</url>
+					<url>http://192.168.1.47:8080/manager/webapps</url>
                     <server>
                         <id>TomcatServer</id>
                         <username>webdev</username>
-                        <password>webdev2019</password>
+                        <password>webdev</password>
                     </server>
 					<path>/BookMeetingRoom</path>
 				</configuration>
