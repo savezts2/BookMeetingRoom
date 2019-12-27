@@ -90,7 +90,7 @@
 
 
             <div *ngIf="cell[5]">
-              <font color="black">
+              <font [ngStyle]="{'color':cell[3] === '#006633' || cell[3] === '#FF4040'  ? 'white' : 'black' }">
 
                 Booking by: {{cell[6]}}<br>
                 Attendees: {{cell[7]}}<br>

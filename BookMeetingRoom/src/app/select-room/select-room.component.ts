@@ -9,6 +9,7 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog
 import {MatSidenav} from '@angular/material/sidenav';
 import {EditordeletebookComponent} from '../editordeletebook/editordeletebook.component'
 import {CheckoutComponent} from '../checkout/checkout.component'
+import {CancelbookbyhrComponent} from '../cancelbookbyhr/cancelbookbyhr.component'
 import {TooltipPosition} from '@angular/material/tooltip';
 import {FormControl} from '@angular/forms';
 import { NativeDateAdapter, DateAdapter, MAT_DATE_FORMATS } from "@angular/material";
@@ -67,8 +68,8 @@ events: any[] = [];
  now = new Date();
 dt1 : any;
 dt2 : any;
-  //  public API = '//localhost:8080';  //for test
-public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
+    public API = '//localhost:8080';  //for test
+//public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
 
 dateshow : String;
 today=new Date();
@@ -82,7 +83,7 @@ const day = d.getDay();
 // Prevent Saturday and Sunday from being selected.
 return day !== 0 ;
 }
-
+countrepeatroom : number;
 
    constructor(public authService : AuthService , private router: Router, private service : ServiceService,private http: HttpClient,
    private route:ActivatedRoute, public dialog: MatDialog) {
@@ -282,16 +283,16 @@ public appendTime(){
 
             if(this.report[i].bookMeetingRoom.roomname.roomname_id == this.roomnames[j].roomname_id && this.report[i].bookMeetingRoom.starttime == '08.00'){
 
-              for(let k =0 ; k < this.events[j].length; k++){
+              this.countrepeatroom = 0 ; for(let k =0 ; k < this.events[j].length; k++){
 
                 if(this.events[j][k][0] == 0){
-                    this.events[j][k][2] = this.report[i].bookMeetingRoom.lengthtime ;
+                    this.countrepeatroom = 1 ;if(this.events[j][k][5] == false){this.events[j][k][2] = this.report[i].bookMeetingRoom.lengthtime ;
 
-                    if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                    if(this.report[i].bookMeetingRoom.statusbooking == 'Booking'){
                         this.events[j][k][3] = '#C0C0C0' ;
-                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
-                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkout'){
                          this.events[j][k][3] = '#006633' ;
                     }else{
                         this.events[j][k][3] = '#FF4040' ;
@@ -317,23 +318,48 @@ public appendTime(){
                    if(this.report[i].bookMeetingRoom.remark != "null" && this.report[i].bookMeetingRoom.remark != " "){
                        this.events[j][k][10] = true;
                        this.events[j][k][9] = this.report[i].bookMeetingRoom.remark;
-                   }
+                   }}else{
+                        this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                                  .subscribe(
+                                  data => {
+                                   console.log('PUT Request is successful');
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+
+                               }
+                                    );
+                    }
                 }
+              }
+              if(this.countrepeatroom == 0){
+                  this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                                  .subscribe(
+                                  data => {
+                                   console.log('PUT Request is successful');
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+
+                               }
+                                    );
               }
             } // 8โมง
 
             if(this.report[i].bookMeetingRoom.roomname.roomname_id == this.roomnames[j].roomname_id && this.report[i].bookMeetingRoom.starttime == '08.30'){
 
-              for(let k =0 ; k < this.events[j].length; k++){
+              this.countrepeatroom = 0 ; for(let k =0 ; k < this.events[j].length; k++){
 
                 if(this.events[j][k][0] == 1){
-                    this.events[j][k][2] = this.report[i].bookMeetingRoom.lengthtime ;
+                    this.countrepeatroom = 1 ;if(this.events[j][k][5] == false){this.events[j][k][2] = this.report[i].bookMeetingRoom.lengthtime ;
 
-                    if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                    if(this.report[i].bookMeetingRoom.statusbooking == 'Booking'){
                         this.events[j][k][3] = '#C0C0C0' ;
-                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
-                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkout'){
                          this.events[j][k][3] = '#006633' ;
                     }else{
                        this.events[j][k][3] = '#FF4040'  ;
@@ -359,22 +385,47 @@ public appendTime(){
                    if(this.report[i].bookMeetingRoom.remark != "null" && this.report[i].bookMeetingRoom.remark != " "){
                        this.events[j][k][10] = true;
                        this.events[j][k][9] = this.report[i].bookMeetingRoom.remark;
-                   }
+                   }}else{
+                        this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                                  .subscribe(
+                                  data => {
+                                   console.log('PUT Request is successful');
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+
+                               }
+                                    );
+                    }
                 }
+              }
+if(this.countrepeatroom == 0){
+                  this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                                  .subscribe(
+                                  data => {
+                                   console.log('PUT Request is successful');
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+
+                               }
+                                    );
               }
             }
             if(this.report[i].bookMeetingRoom.roomname.roomname_id == this.roomnames[j].roomname_id && this.report[i].bookMeetingRoom.starttime == '09.00'){
 
-              for(let k =0 ; k < this.events[j].length; k++){
+              this.countrepeatroom = 0 ; for(let k =0 ; k < this.events[j].length; k++){
 
                 if(this.events[j][k][0] == 2){
-                    this.events[j][k][2] = this.report[i].bookMeetingRoom.lengthtime ;
+                    this.countrepeatroom = 1 ;if(this.events[j][k][5] == false){this.events[j][k][2] = this.report[i].bookMeetingRoom.lengthtime ;
 
-                    if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                    if(this.report[i].bookMeetingRoom.statusbooking == 'Booking'){
                         this.events[j][k][3] = '#C0C0C0' ;
-                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
-                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkout'){
                          this.events[j][k][3] = '#006633' ;
                     }else{
                        this.events[j][k][3] = '#FF4040'  ;
@@ -400,22 +451,47 @@ public appendTime(){
                    if(this.report[i].bookMeetingRoom.remark != "null" && this.report[i].bookMeetingRoom.remark != " "){
                        this.events[j][k][10] = true;
                        this.events[j][k][9] = this.report[i].bookMeetingRoom.remark;
-                   }
+                   }}else{
+                            this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                                  .subscribe(
+                                  data => {
+                                   console.log('PUT Request is successful');
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+
+                               }
+                                    );
+                    }
                 }
+              }
+if(this.countrepeatroom == 0){
+                  this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                                  .subscribe(
+                                  data => {
+                                   console.log('PUT Request is successful');
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+
+                               }
+                                    );
               }
             }
             if(this.report[i].bookMeetingRoom.roomname.roomname_id == this.roomnames[j].roomname_id && this.report[i].bookMeetingRoom.starttime == '09.30'){
 
-              for(let k =0 ; k < this.events[j].length; k++){
+              this.countrepeatroom = 0 ; for(let k =0 ; k < this.events[j].length; k++){
 
                 if(this.events[j][k][0] == 3){
-                    this.events[j][k][2] = this.report[i].bookMeetingRoom.lengthtime ;
+                    this.countrepeatroom = 1 ;if(this.events[j][k][5] == false){this.events[j][k][2] = this.report[i].bookMeetingRoom.lengthtime ;
 
-                    if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                    if(this.report[i].bookMeetingRoom.statusbooking == 'Booking'){
                         this.events[j][k][3] = '#C0C0C0' ;
-                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
-                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkout'){
                          this.events[j][k][3] = '#006633' ;
                     }else{
                        this.events[j][k][3] = '#FF4040'  ;
@@ -441,22 +517,47 @@ public appendTime(){
                    if(this.report[i].bookMeetingRoom.remark != "null" && this.report[i].bookMeetingRoom.remark != " "){
                        this.events[j][k][10] = true;
                        this.events[j][k][9] = this.report[i].bookMeetingRoom.remark;
-                   }
+                   }}else{
+                        this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                                  .subscribe(
+                                  data => {
+                                   console.log('PUT Request is successful');
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+
+                               }
+                                    );
+                    }
                 }
+              }
+if(this.countrepeatroom == 0){
+                  this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                                  .subscribe(
+                                  data => {
+                                   console.log('PUT Request is successful');
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+
+                               }
+                                    );
               }
             }
             if(this.report[i].bookMeetingRoom.roomname.roomname_id == this.roomnames[j].roomname_id && this.report[i].bookMeetingRoom.starttime == '10.00'){
 
-              for(let k =0 ; k < this.events[j].length; k++){
+              this.countrepeatroom = 0 ; for(let k =0 ; k < this.events[j].length; k++){
 
                 if(this.events[j][k][0] == 4){
-                    this.events[j][k][2] = this.report[i].bookMeetingRoom.lengthtime ;
+                    this.countrepeatroom = 1 ;if(this.events[j][k][5] == false){this.events[j][k][2] = this.report[i].bookMeetingRoom.lengthtime ;
 
-                    if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                    if(this.report[i].bookMeetingRoom.statusbooking == 'Booking'){
                         this.events[j][k][3] = '#C0C0C0' ;
-                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
-                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkout'){
                          this.events[j][k][3] = '#006633' ;
                     }else{
                        this.events[j][k][3] = '#FF4040'  ;
@@ -482,22 +583,47 @@ public appendTime(){
                    if(this.report[i].bookMeetingRoom.remark != "null" && this.report[i].bookMeetingRoom.remark != " "){
                        this.events[j][k][10] = true;
                        this.events[j][k][9] = this.report[i].bookMeetingRoom.remark;
-                   }
+                   }}else{
+                        this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                                  .subscribe(
+                                  data => {
+                                   console.log('PUT Request is successful');
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+
+                               }
+                                    );
+                    }
                 }
+              }
+if(this.countrepeatroom == 0){
+                  this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                                  .subscribe(
+                                  data => {
+                                   console.log('PUT Request is successful');
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+
+                               }
+                                    );
               }
             }
             if(this.report[i].bookMeetingRoom.roomname.roomname_id == this.roomnames[j].roomname_id && this.report[i].bookMeetingRoom.starttime == '10.30'){
 
-              for(let k =0 ; k < this.events[j].length; k++){
+              this.countrepeatroom = 0 ; for(let k =0 ; k < this.events[j].length; k++){
 
                 if(this.events[j][k][0] == 5){
-                    this.events[j][k][2] = this.report[i].bookMeetingRoom.lengthtime ;
+                    this.countrepeatroom = 1 ;if(this.events[j][k][5] == false){this.events[j][k][2] = this.report[i].bookMeetingRoom.lengthtime ;
 
-                    if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                    if(this.report[i].bookMeetingRoom.statusbooking == 'Booking'){
                         this.events[j][k][3] = '#C0C0C0' ;
-                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
-                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkout'){
                          this.events[j][k][3] = '#006633' ;
                     }else{
                        this.events[j][k][3] = '#FF4040'  ;
@@ -523,22 +649,47 @@ public appendTime(){
                    if(this.report[i].bookMeetingRoom.remark != "null" && this.report[i].bookMeetingRoom.remark != " "){
                        this.events[j][k][10] = true;
                        this.events[j][k][9] = this.report[i].bookMeetingRoom.remark;
-                   }
+                   }}else{
+                        this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                                  .subscribe(
+                                  data => {
+                                   console.log('PUT Request is successful');
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+
+                               }
+                                    );
+                    }
                 }
+              }
+if(this.countrepeatroom == 0){
+                  this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                                  .subscribe(
+                                  data => {
+                                   console.log('PUT Request is successful');
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+
+                               }
+                                    );
               }
             }
             if(this.report[i].bookMeetingRoom.roomname.roomname_id == this.roomnames[j].roomname_id && this.report[i].bookMeetingRoom.starttime == '11.00'){
 
-              for(let k =0 ; k < this.events[j].length; k++){
+              this.countrepeatroom = 0 ; for(let k =0 ; k < this.events[j].length; k++){
 
                 if(this.events[j][k][0] == 6){
-                    this.events[j][k][2] = this.report[i].bookMeetingRoom.lengthtime ;
+                    this.countrepeatroom = 1 ;if(this.events[j][k][5] == false){this.events[j][k][2] = this.report[i].bookMeetingRoom.lengthtime ;
 
-                    if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                    if(this.report[i].bookMeetingRoom.statusbooking == 'Booking'){
                         this.events[j][k][3] = '#C0C0C0' ;
-                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
-                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkout'){
                          this.events[j][k][3] = '#006633' ;
                     }else{
                        this.events[j][k][3] = '#FF4040'  ;
@@ -565,23 +716,47 @@ public appendTime(){
                    if(this.report[i].bookMeetingRoom.remark != "null" && this.report[i].bookMeetingRoom.remark != " "){
                        this.events[j][k][10] = true;
                        this.events[j][k][9] = this.report[i].bookMeetingRoom.remark;
-                   }
+                   }}else{
+                        this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                                  .subscribe(
+                                  data => {
+                                   console.log('PUT Request is successful');
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+
+                               }
+                                    );
+                    }
                 }
               }
+if(this.countrepeatroom == 0){
+                  this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                                  .subscribe(
+                                  data => {
+                                   console.log('PUT Request is successful');
 
+                               },
+                               error => {
+                                   console.log('Error', error);
+
+                               }
+                                    );
+              }
             }
             if(this.report[i].bookMeetingRoom.roomname.roomname_id == this.roomnames[j].roomname_id && this.report[i].bookMeetingRoom.starttime == '11.30'){
 
-              for(let k =0 ; k < this.events[j].length; k++){
+              this.countrepeatroom = 0 ; for(let k =0 ; k < this.events[j].length; k++){
 
                 if(this.events[j][k][0] == 7){
-                    this.events[j][k][2] = this.report[i].bookMeetingRoom.lengthtime ;
+                    this.countrepeatroom = 1 ;if(this.events[j][k][5] == false){this.events[j][k][2] = this.report[i].bookMeetingRoom.lengthtime ;
 
-                    if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                    if(this.report[i].bookMeetingRoom.statusbooking == 'Booking'){
                         this.events[j][k][3] = '#C0C0C0' ;
-                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
-                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkout'){
                          this.events[j][k][3] = '#006633' ;
                     }else{
                        this.events[j][k][3] = '#FF4040'  ;
@@ -609,22 +784,48 @@ public appendTime(){
                    if(this.report[i].bookMeetingRoom.remark != "null" && this.report[i].bookMeetingRoom.remark != " "){
                        this.events[j][k][10] = true;
                        this.events[j][k][9] = this.report[i].bookMeetingRoom.remark;
-                   }
+                   }}else{
+                        this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                                  .subscribe(
+                                  data => {
+                                   console.log('PUT Request is successful');
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+
+                               }
+                                    );
+                    }
                 }
+
+              }
+if(this.countrepeatroom == 0){
+                  this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                                  .subscribe(
+                                  data => {
+                                   console.log('PUT Request is successful');
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+
+                               }
+                                    );
               }
             }
             if(this.report[i].bookMeetingRoom.roomname.roomname_id == this.roomnames[j].roomname_id && this.report[i].bookMeetingRoom.starttime == '12.00'){
 
-              for(let k =0 ; k < this.events[j].length; k++){
+              this.countrepeatroom = 0 ; for(let k =0 ; k < this.events[j].length; k++){
 
                 if(this.events[j][k][0] == 8){
-                    this.events[j][k][2] = this.report[i].bookMeetingRoom.lengthtime ;
+                    this.countrepeatroom = 1 ;if(this.events[j][k][5] == false){this.events[j][k][2] = this.report[i].bookMeetingRoom.lengthtime ;
 
-                    if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                    if(this.report[i].bookMeetingRoom.statusbooking == 'Booking'){
                         this.events[j][k][3] = '#C0C0C0' ;
-                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
-                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkout'){
                          this.events[j][k][3] = '#006633' ;
                     }else{
                        this.events[j][k][3] = '#FF4040'  ;
@@ -650,22 +851,47 @@ public appendTime(){
                    if(this.report[i].bookMeetingRoom.remark != "null" && this.report[i].bookMeetingRoom.remark != " "){
                        this.events[j][k][10] = true;
                        this.events[j][k][9] = this.report[i].bookMeetingRoom.remark;
-                   }
+                   }}else{
+                        this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                                  .subscribe(
+                                  data => {
+                                   console.log('PUT Request is successful');
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+
+                               }
+                                    );
+                    }
                 }
+              }
+if(this.countrepeatroom == 0){
+                  this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                                  .subscribe(
+                                  data => {
+                                   console.log('PUT Request is successful');
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+
+                               }
+                                    );
               }
             }
             if(this.report[i].bookMeetingRoom.roomname.roomname_id == this.roomnames[j].roomname_id&& this.report[i].bookMeetingRoom.starttime == '12.30'){
 
-              for(let k =0 ; k < this.events[j].length; k++){
+              this.countrepeatroom = 0 ; for(let k =0 ; k < this.events[j].length; k++){
 
                 if(this.events[j][k][0] == 9){
-                    this.events[j][k][2] = this.report[i].bookMeetingRoom.lengthtime ;
+                    this.countrepeatroom = 1 ;if(this.events[j][k][5] == false){this.events[j][k][2] = this.report[i].bookMeetingRoom.lengthtime ;
 
-                    if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                    if(this.report[i].bookMeetingRoom.statusbooking == 'Booking'){
                         this.events[j][k][3] = '#C0C0C0' ;
-                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
-                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkout'){
                          this.events[j][k][3] = '#006633' ;
                     }else{
                        this.events[j][k][3] = '#FF4040'  ;
@@ -691,22 +917,47 @@ public appendTime(){
                    if(this.report[i].bookMeetingRoom.remark != "null" && this.report[i].bookMeetingRoom.remark != " "){
                        this.events[j][k][10] = true;
                        this.events[j][k][9] = this.report[i].bookMeetingRoom.remark;
-                   }
+                   }}else{
+                        this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                                  .subscribe(
+                                  data => {
+                                   console.log('PUT Request is successful');
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+
+                               }
+                                    );
+                    }
                 }
+              }
+if(this.countrepeatroom == 0){
+                  this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                                  .subscribe(
+                                  data => {
+                                   console.log('PUT Request is successful');
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+
+                               }
+                                    );
               }
             }
             if(this.report[i].bookMeetingRoom.roomname.roomname_id == this.roomnames[j].roomname_id && this.report[i].bookMeetingRoom.starttime == '13.00'){
 
-              for(let k =0 ; k < this.events[j].length; k++){
+              this.countrepeatroom = 0 ; for(let k =0 ; k < this.events[j].length; k++){
 
                 if(this.events[j][k][0] == 10){
-                    this.events[j][k][2] = this.report[i].bookMeetingRoom.lengthtime ;
+                    this.countrepeatroom = 1 ;if(this.events[j][k][5] == false){this.events[j][k][2] = this.report[i].bookMeetingRoom.lengthtime ;
 
-                    if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                    if(this.report[i].bookMeetingRoom.statusbooking == 'Booking'){
                         this.events[j][k][3] = '#C0C0C0' ;
-                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
-                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkout'){
                          this.events[j][k][3] = '#006633' ;
                     }else{
                        this.events[j][k][3] = '#FF4040'  ;
@@ -732,22 +983,47 @@ public appendTime(){
                    if(this.report[i].bookMeetingRoom.remark != "null" && this.report[i].bookMeetingRoom.remark != " "){
                        this.events[j][k][10] = true;
                        this.events[j][k][9] = this.report[i].bookMeetingRoom.remark;
-                   }
+                   }}else{
+                        this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                                  .subscribe(
+                                  data => {
+                                   console.log('PUT Request is successful');
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+
+                               }
+                                    );
+                    }
                 }
+              }
+if(this.countrepeatroom == 0){
+                  this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                                  .subscribe(
+                                  data => {
+                                   console.log('PUT Request is successful');
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+
+                               }
+                                    );
               }
             }
             if(this.report[i].bookMeetingRoom.roomname.roomname_id == this.roomnames[j].roomname_id && this.report[i].bookMeetingRoom.starttime == '13.30'){
 
-              for(let k =0 ; k < this.events[j].length; k++){
+              this.countrepeatroom = 0 ; for(let k =0 ; k < this.events[j].length; k++){
 
                 if(this.events[j][k][0] == 11){
-                    this.events[j][k][2] = this.report[i].bookMeetingRoom.lengthtime ;
+                    this.countrepeatroom = 1 ;if(this.events[j][k][5] == false){this.events[j][k][2] = this.report[i].bookMeetingRoom.lengthtime ;
 
-                    if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                    if(this.report[i].bookMeetingRoom.statusbooking == 'Booking'){
                         this.events[j][k][3] = '#C0C0C0' ;
-                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
-                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkout'){
                          this.events[j][k][3] = '#006633' ;
                     }else{
                        this.events[j][k][3] = '#FF4040'  ;
@@ -773,22 +1049,47 @@ public appendTime(){
                    if(this.report[i].bookMeetingRoom.remark != "null" && this.report[i].bookMeetingRoom.remark != " "){
                        this.events[j][k][10] = true;
                        this.events[j][k][9] = this.report[i].bookMeetingRoom.remark;
-                   }
+                   }}else{
+                        this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                                  .subscribe(
+                                  data => {
+                                   console.log('PUT Request is successful');
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+
+                               }
+                                    );
+                    }
                 }
+              }
+if(this.countrepeatroom == 0){
+                  this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                                  .subscribe(
+                                  data => {
+                                   console.log('PUT Request is successful');
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+
+                               }
+                                    );
               }
             }
             if(this.report[i].bookMeetingRoom.roomname.roomname_id == this.roomnames[j].roomname_id && this.report[i].bookMeetingRoom.starttime == '14.00'){
 
-              for(let k =0 ; k < this.events[j].length; k++){
+              this.countrepeatroom = 0 ; for(let k =0 ; k < this.events[j].length; k++){
 
                 if(this.events[j][k][0] == 12){
-                    this.events[j][k][2] = this.report[i].bookMeetingRoom.lengthtime ;
+                    this.countrepeatroom = 1 ;if(this.events[j][k][5] == false){this.events[j][k][2] = this.report[i].bookMeetingRoom.lengthtime ;
 
-                    if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                    if(this.report[i].bookMeetingRoom.statusbooking == 'Booking'){
                         this.events[j][k][3] = '#C0C0C0' ;
-                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
-                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkout'){
                          this.events[j][k][3] = '#006633' ;
                     }else{
                        this.events[j][k][3] = '#FF4040'  ;
@@ -814,63 +1115,118 @@ public appendTime(){
                    if(this.report[i].bookMeetingRoom.remark != "null" && this.report[i].bookMeetingRoom.remark != " "){
                        this.events[j][k][10] = true;
                        this.events[j][k][9] = this.report[i].bookMeetingRoom.remark;
-                   }
+                   }}else{
+                        this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                                  .subscribe(
+                                  data => {
+                                   console.log('PUT Request is successful');
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+
+                               }
+                                    );
+                    }
                 }
+              }
+if(this.countrepeatroom == 0){
+                  this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                                  .subscribe(
+                                  data => {
+                                   console.log('PUT Request is successful');
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+
+                               }
+                                    );
               }
             }
             if(this.report[i].bookMeetingRoom.roomname.roomname_id == this.roomnames[j].roomname_id&& this.report[i].bookMeetingRoom.starttime == '14.30'){
 
-              for(let k =0 ; k < this.events[j].length; k++){
+              this.countrepeatroom = 0 ; for(let k =0 ; k < this.events[j].length; k++){
 
                 if(this.events[j][k][0] == 13){
-                    this.events[j][k][2] = this.report[i].bookMeetingRoom.lengthtime ;
 
-                    if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
-                        this.events[j][k][3] = '#C0C0C0' ;
-                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
-                        this.events[j][k][3] = '#A0FF7D' ;
-                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
-                         this.events[j][k][3] = '#006633' ;
+
+                        this.countrepeatroom = 1 ;if(this.events[j][k][5] == false){this.events[j][k][2] = this.report[i].bookMeetingRoom.lengthtime ;
+
+                        if(this.report[i].bookMeetingRoom.statusbooking == 'Booking'){
+                            this.events[j][k][3] = '#C0C0C0' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkin'){
+                            this.events[j][k][3] = '#A0FF7D' ;
+                        }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkout'){
+                           this.events[j][k][3] = '#006633' ;
+                        }else{
+                           this.events[j][k][3] = '#FF4040'  ;
+                        }
+
+                      this.events[j][k][5] = true;
+                      this.events[j][k][6] = this.report[i].users.firstname;
+                        this.events[j][k][7] = this.report[i].bookMeetingRoom.attendees ;
+                      this.events[j][k][14] = this.report[i].bookMeetingRoom.telbookingby ;
+                       this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
+                         this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
+                        this.events[j][k][11] = true ;
+
+
+                           if(this.events[j][k][2] > 1){
+                                this.counting = k + 1;
+
+                             for(let l = 1 ; l < this.events[j][k][2] ; l++){
+                                 this.events[j].splice(this.counting,1);
+                             }
+                            }
+
+                         if(this.report[i].bookMeetingRoom.remark != "null" && this.report[i].bookMeetingRoom.remark != " "){
+                            this.events[j][k][10] = true;
+                             this.events[j][k][9] = this.report[i].bookMeetingRoom.remark;
+                         }
                     }else{
-                       this.events[j][k][3] = '#FF4040'  ;
+                        this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                                  .subscribe(
+                                  data => {
+                                   console.log('PUT Request is successful');
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+
+                               }
+                                    );
                     }
-
-                  this.events[j][k][5] = true;
-                  this.events[j][k][6] = this.report[i].users.firstname;
-                  this.events[j][k][7] = this.report[i].bookMeetingRoom.attendees ;
-                  this.events[j][k][14] = this.report[i].bookMeetingRoom.telbookingby ;
-                  this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
-                  this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
-                  this.events[j][k][11] = true ;
-
-
-                   if(this.events[j][k][2] > 1){
-                      this.counting = k + 1;
-
-                      for(let l = 1 ; l < this.events[j][k][2] ; l++){
-                        this.events[j].splice(this.counting,1);
-                      }
-                   }
-
-                   if(this.report[i].bookMeetingRoom.remark != "null" && this.report[i].bookMeetingRoom.remark != " "){
-                       this.events[j][k][10] = true;
-                       this.events[j][k][9] = this.report[i].bookMeetingRoom.remark;
-                   }
                 }
+
+
+              }
+if(this.countrepeatroom == 0){
+                  this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                                  .subscribe(
+                                  data => {
+                                   console.log('PUT Request is successful');
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+
+                               }
+                                    );
               }
             }
             if(this.report[i].bookMeetingRoom.roomname.roomname_id == this.roomnames[j].roomname_id && this.report[i].bookMeetingRoom.starttime == '15.00'){
 
-              for(let k =0 ; k < this.events[j].length; k++){
+              this.countrepeatroom = 0 ; for(let k =0 ; k < this.events[j].length; k++){
 
                 if(this.events[j][k][0] == 14){
-                    this.events[j][k][2] = this.report[i].bookMeetingRoom.lengthtime ;
+                    this.countrepeatroom = 1 ;if(this.events[j][k][5] == false){this.events[j][k][2] = this.report[i].bookMeetingRoom.lengthtime ;
 
-                    if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                    if(this.report[i].bookMeetingRoom.statusbooking == 'Booking'){
                         this.events[j][k][3] = '#C0C0C0' ;
-                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
-                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkout'){
                          this.events[j][k][3] = '#006633' ;
                     }else{
                        this.events[j][k][3] = '#FF4040'  ;
@@ -896,22 +1252,47 @@ public appendTime(){
                    if(this.report[i].bookMeetingRoom.remark != "null" && this.report[i].bookMeetingRoom.remark != " "){
                        this.events[j][k][10] = true;
                        this.events[j][k][9] = this.report[i].bookMeetingRoom.remark;
-                   }
+                   }}else{
+                        this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                                  .subscribe(
+                                  data => {
+                                   console.log('PUT Request is successful');
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+
+                               }
+                                    );
+                    }
                 }
+              }
+if(this.countrepeatroom == 0){
+                  this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                                  .subscribe(
+                                  data => {
+                                   console.log('PUT Request is successful');
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+
+                               }
+                                    );
               }
             }
             if(this.report[i].bookMeetingRoom.roomname.roomname_id == this.roomnames[j].roomname_id && this.report[i].bookMeetingRoom.starttime == '15.30'){
 
-              for(let k =0 ; k < this.events[j].length; k++){
+              this.countrepeatroom = 0 ; for(let k =0 ; k < this.events[j].length; k++){
 
                 if(this.events[j][k][0] == 15){
-                    this.events[j][k][2] = this.report[i].bookMeetingRoom.lengthtime ;
+                    this.countrepeatroom = 1 ;if(this.events[j][k][5] == false){this.events[j][k][2] = this.report[i].bookMeetingRoom.lengthtime ;
 
-                    if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                    if(this.report[i].bookMeetingRoom.statusbooking == 'Booking'){
                         this.events[j][k][3] = '#C0C0C0' ;
-                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
-                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkout'){
                          this.events[j][k][3] = '#006633' ;
                     }else{
                        this.events[j][k][3] = '#FF4040'  ;
@@ -937,22 +1318,48 @@ public appendTime(){
                    if(this.report[i].bookMeetingRoom.remark != "null" && this.report[i].bookMeetingRoom.remark != " "){
                        this.events[j][k][10] = true;
                        this.events[j][k][9] = this.report[i].bookMeetingRoom.remark;
-                   }
+                   }}else{
+                        this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                                  .subscribe(
+                                  data => {
+                                   console.log('PUT Request is successful');
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+
+                               }
+                                    );
+                    }
                 }
+              }
+if(this.countrepeatroom == 0){
+                  this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                                  .subscribe(
+                                  data => {
+                                   console.log('PUT Request is successful');
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+
+                               }
+                                    );
               }
             }
             if(this.report[i].bookMeetingRoom.roomname.roomname_id == this.roomnames[j].roomname_id && this.report[i].bookMeetingRoom.starttime == '16.00'){
 
-              for(let k =0 ; k < this.events[j].length; k++){
+              this.countrepeatroom = 0 ; for(let k =0 ; k < this.events[j].length; k++){
 
                 if(this.events[j][k][0] == 16){
-                    this.events[j][k][2] = this.report[i].bookMeetingRoom.lengthtime ;
+                    this.countrepeatroom = 1 ;if(this.events[j][k][5] == false){this.events[j][k][2] = this.report[i].bookMeetingRoom.lengthtime ;
 
-                    if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                    if(this.report[i].bookMeetingRoom.statusbooking == 'Booking'){
+
                         this.events[j][k][3] = '#C0C0C0' ;
-                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
-                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkout'){
                          this.events[j][k][3] = '#006633' ;
                     }else{
                        this.events[j][k][3] = '#FF4040'  ;
@@ -978,22 +1385,47 @@ public appendTime(){
                    if(this.report[i].bookMeetingRoom.remark != "null" && this.report[i].bookMeetingRoom.remark != " "){
                        this.events[j][k][10] = true;
                        this.events[j][k][9] = this.report[i].bookMeetingRoom.remark;
-                   }
+                   }}else{
+                        this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                                  .subscribe(
+                                  data => {
+                                   console.log('PUT Request is successful');
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+
+                               }
+                                    );
+                    }
                 }
+              }
+if(this.countrepeatroom == 0){
+                  this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                                  .subscribe(
+                                  data => {
+                                   console.log('PUT Request is successful');
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+
+                               }
+                                    );
               }
             }
             if(this.report[i].bookMeetingRoom.roomname.roomname_id == this.roomnames[j].roomname_id && this.report[i].bookMeetingRoom.starttime == '16.30'){
 
-              for(let k =0 ; k < this.events[j].length; k++){
+              this.countrepeatroom = 0 ; for(let k =0 ; k < this.events[j].length; k++){
 
                 if(this.events[j][k][0] == 17){
-                    this.events[j][k][2] = this.report[i].bookMeetingRoom.lengthtime ;
+                    this.countrepeatroom = 1 ;if(this.events[j][k][5] == false){this.events[j][k][2] = this.report[i].bookMeetingRoom.lengthtime ;
 
-                    if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                    if(this.report[i].bookMeetingRoom.statusbooking == 'Booking'){
                         this.events[j][k][3] = '#C0C0C0' ;
-                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
-                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkout'){
                          this.events[j][k][3] = '#006633' ;
                     }else{
                        this.events[j][k][3] = '#FF4040'  ;
@@ -1019,22 +1451,47 @@ public appendTime(){
                    if(this.report[i].bookMeetingRoom.remark != "null" && this.report[i].bookMeetingRoom.remark != " "){
                        this.events[j][k][10] = true;
                        this.events[j][k][9] = this.report[i].bookMeetingRoom.remark;
-                   }
+                   }}else{
+                        this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                                  .subscribe(
+                                  data => {
+                                   console.log('PUT Request is successful');
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+
+                               }
+                                    );
+                    }
                 }
+              }
+if(this.countrepeatroom == 0){
+                  this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                                  .subscribe(
+                                  data => {
+                                   console.log('PUT Request is successful');
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+
+                               }
+                                    );
               }
             }
             if(this.report[i].bookMeetingRoom.roomname.roomname_id == this.roomnames[j].roomname_id && this.report[i].bookMeetingRoom.starttime == '17.00'){
 
-              for(let k =0 ; k < this.events[j].length; k++){
+              this.countrepeatroom = 0 ; for(let k =0 ; k < this.events[j].length; k++){
 
                 if(this.events[j][k][0] == 18){
-                    this.events[j][k][2] = this.report[i].bookMeetingRoom.lengthtime ;
+                    this.countrepeatroom = 1 ;if(this.events[j][k][5] == false){this.events[j][k][2] = this.report[i].bookMeetingRoom.lengthtime ;
 
-                    if(this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+                    if(this.report[i].bookMeetingRoom.statusbooking == 'Booking'){
                         this.events[j][k][3] = '#C0C0C0' ;
-                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
-                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'checkout'){
+                    }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkout'){
                          this.events[j][k][3] = '#006633' ;
                     }else{
                        this.events[j][k][3] = '#FF4040'  ;
@@ -1060,15 +1517,41 @@ public appendTime(){
                    if(this.report[i].bookMeetingRoom.remark != "null" && this.report[i].bookMeetingRoom.remark != " "){
                        this.events[j][k][10] = true;
                        this.events[j][k][9] = this.report[i].bookMeetingRoom.remark;
-                   }
+                   }}else{
+                        this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                                  .subscribe(
+                                  data => {
+                                   console.log('PUT Request is successful');
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+
+                               }
+                                    );
+                    }
                 }
+              }// for
+
+          if(this.countrepeatroom == 0){
+                  this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                                  .subscribe(
+                                  data => {
+                                   console.log('PUT Request is successful');
+
+                               },
+                               error => {
+                                   console.log('Error', error);
+
+                               }
+                                    );
               }
             }
           }// หาห้อง
       } //if active
   } //for report
 
-  console.log(this.events);
+  //console.log(this.events);
 
 } // appendtime
 
@@ -1089,12 +1572,12 @@ selectTable(room,time){
     let monthnumString = this.convertMonthstring(datetoday[1]);
     if(parseInt(datetoday[2]) == parseInt(datebook[0]) && monthnumString == datebook[1]){
        if(new Date().getHours() > parseInt(timesplit[0]) ){
-         alert("Cannot make a previous booking.");
+         alert("Cannot make a previous Booking.");
        }else if( new Date().getHours() == parseInt(timesplit[0]) ){
           if( new Date().getMinutes() - parseInt(timesplit[1])  < 30 && new Date().getMinutes() - parseInt(timesplit[1])  >= 0){
               this.router.navigate(['data-form',{roomname:room,roomtime:time,date:this.datefull.datefull,slowtime:true}]);
            }else if(new Date().getMinutes() - parseInt(timesplit[1])  >= 30){
-               alert("Cannot make a previous booking.");
+               alert("Cannot make a previous Booking.");
             }else{
                 this.router.navigate(['data-form',{roomname:room,roomtime:time,date:this.datefull.datefull,slowtime:false}]);
             }
@@ -1155,10 +1638,10 @@ dateShow(datefull){
                this.time4 = this.time3.getHours().toString() +""+ this.time3.getMinutes().toString();
           }
 
-        console.log( this.time4, this.time2);
+      //  console.log( this.time4, this.time2);
        this.service.getBookMeetingRoom(this.datefull.datefull,room,time).subscribe(data=>{
               if(data == null){
-                  if(localStorage.getItem('tokenidadmin') == "JWT" || localStorage.getItem('tokenidhr') == "JWT"){
+                  if(localStorage.getItem('tokenidadmin') == "JWT"){
                          if(parseInt(this.time4) >= parseInt(this.time2) && new Date().getDate().toString() == this.day){
                           alert("This time has passed");
                          }else{
@@ -1189,7 +1672,7 @@ dateShow(datefull){
                       alert("It's not your book.");
                   }
               }else{
-                  if(localStorage.getItem('tokenidadmin') == "JWT" || localStorage.getItem('tokenidhr') == "JWT"){
+                  if(localStorage.getItem('tokenidadmin') == "JWT"){
                          if(parseInt(this.time4) >= parseInt(this.time2) && new Date().getDate().toString() == this.day){
                           alert("This time has passed");
                          }else{
@@ -1214,6 +1697,14 @@ dateShow(datefull){
                            width:  'auto',
                            });
                           }
+
+                  }else if(localStorage.getItem('tokenidhr') == "JWT"){
+                      const dialogRef = this.dialog.open(CancelbookbyhrComponent, {
+                           data: {room:room , time:time , date : this.datefull.datefull,atten:atten,topic:topic,remark:remark,totime:totime,tel:tel},
+                           height: 'auto',
+                           width:  'auto',
+                           });
+
 
                   }else{
 

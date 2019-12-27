@@ -40,6 +40,11 @@ public class ReportController {
         return this.reportRepository.getDateDashBoard(datestart,dateend);
     }
 
+    @GetMapping("/ReportDashBoard/{datestart}/{dateend}")
+    public Iterable<Report> getDateDashBoardReport(@PathVariable String datestart , @PathVariable String dateend) {
+        return this.reportRepository.getDateDashBoardReport(datestart,dateend);
+    }
+
 
 
 

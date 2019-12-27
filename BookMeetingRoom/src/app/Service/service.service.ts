@@ -7,8 +7,8 @@ import { Observable } from 'rxjs';
 })
 export class ServiceService {
 
-//public API = '//localhost:8080';   //for test
-  public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
+public API = '//localhost:8080';   //for test
+  //public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
 
   constructor( private http: HttpClient ) { }
 
@@ -40,6 +40,10 @@ getMinuteCurrent(){
 
   getDateDashBoard(startdate : String , enddate: String) : Observable<any>{
       return this.http.get(this.API+'/Report/'+startdate+'/'+enddate,{})
+  }
+
+getDateDashBoardReport(startdate : String , enddate: String) : Observable<any>{
+      return this.http.get(this.API+'/ReportDashBoard/'+startdate+'/'+enddate,{})
   }
 
 findUserid(userid : String){

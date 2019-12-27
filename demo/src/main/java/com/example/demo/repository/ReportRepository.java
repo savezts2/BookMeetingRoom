@@ -20,4 +20,7 @@ public interface ReportRepository extends JpaRepository<Report,Long> {
     Collection<Report> getDateDashBoard(@Param("datestart") String datestart , @Param("dateend") String dateend );
 
     Report findByBookMeetingRoom(BookMeetingRoom bookMeetingRoom);
+
+    @Query(value = "SELECT * FROM report WHERE date_book BETWEEN :datestart AND :dateend",nativeQuery = true)
+    Collection<Report> getDateDashBoardReport(@Param("datestart") String datestart , @Param("dateend") String dateend );
 }

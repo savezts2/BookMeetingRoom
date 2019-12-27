@@ -51,7 +51,7 @@ public class BookMeetingRoomController {
 
         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findByDateBookMeetingRoomAndRoomnameAndStarttimeAndIsActive(dateBookMeetingRoom,roomname1,starttime,"1");
 
-        bookMeetingRoom.setStatusbooking("notcheckin");
+        bookMeetingRoom.setStatusbooking("Not Checkin");
         bookMeetingRoom.setLatetime(15);
         bookMeetingRoom.setLate("late");
         bookMeetingRoomRepository.save(bookMeetingRoom);
@@ -64,18 +64,18 @@ public class BookMeetingRoomController {
         String endtime;
         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findByDateBookMeetingRoomAndRoomnameAndStarttimeAndIsActive(dateBookMeetingRoom,roomname1,starttime,"1");
         if(starttime.equals("08.00")){
-            endtime = "08.30";
-        }else if(starttime.equals("08.30")){endtime = "09.00";}else if(starttime.equals("09.00")){endtime = "09.30";}else if(starttime.equals("09.30")){endtime = "10.00";}
-        else if(starttime.equals("10.00")){endtime = "10.30";}else if(starttime.equals("10.30")){endtime = "11.00";}else if(starttime.equals("11.00")){endtime = "11.30";}
-        else if(starttime.equals("12.00")){endtime = "12.30";}else if(starttime.equals("12.30")){endtime = "13.00";}else if(starttime.equals("13.00")){endtime = "13.30";}
-        else if(starttime.equals("13.30")){endtime = "14.00";}else if(starttime.equals("14.00")){endtime = "14.30";}else if(starttime.equals("14.30")){endtime = "15.00";}
-        else if(starttime.equals("15.00")){endtime = "15.30";}
-        else if(starttime.equals("15.30")){endtime = "16.00";}else if(starttime.equals("16.00")){endtime = "16.30";}else{endtime = "17.00";}
+            endtime = "08.00";
+        }else if(starttime.equals("08.30")){endtime = "08.30";}else if(starttime.equals("09.00")){endtime = "09.00";}else if(starttime.equals("09.30")){endtime = "09.30";}
+        else if(starttime.equals("10.00")){endtime = "10.00";}else if(starttime.equals("10.30")){endtime = "10.30";}else if(starttime.equals("11.00")){endtime = "11.00";}
+        else if(starttime.equals("12.00")){endtime = "12.00";}else if(starttime.equals("12.30")){endtime = "12.30";}else if(starttime.equals("13.00")){endtime = "14.00";}
+        else if(starttime.equals("13.30")){endtime = "13.30";}else if(starttime.equals("14.00")){endtime = "14.00";}else if(starttime.equals("14.30")){endtime = "15.30";}
+        else if(starttime.equals("15.00")){endtime = "15.00";}
+        else if(starttime.equals("15.30")){endtime = "15.30";}else if(starttime.equals("16.00")){endtime = "16.00";}else{endtime = "16.30";}
 
-        bookMeetingRoom.setStatusbooking("notcheckin30min");
+        bookMeetingRoom.setStatusbooking("Not Checkin");
         bookMeetingRoom.setLatetime(30);
         bookMeetingRoom.setLate("late");
-        bookMeetingRoom.setLengthtime(2);
+        bookMeetingRoom.setLengthtime(1);
         bookMeetingRoom.setEndtime(endtime);
         bookMeetingRoomRepository.save(bookMeetingRoom);
         return bookMeetingRoom;
@@ -86,13 +86,28 @@ public class BookMeetingRoomController {
         Roomname roomname1 = roomnameRepository.findById(roomname).get();
         String endtime;
         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findByDateBookMeetingRoomAndRoomnameAndStarttimeAndIsActive(dateBookMeetingRoom,roomname1,starttime,"1");
-        bookMeetingRoom.setCheckoutby("checkoutsys");
+        bookMeetingRoom.setCheckoutby("Checkoutsys");
         bookMeetingRoom.setCheckouttime(bookMeetingRoom.getEndtime());
 
-        bookMeetingRoom.setStatusbooking("checkout");
+        bookMeetingRoom.setStatusbooking("Checkout");
         bookMeetingRoomRepository.save(bookMeetingRoom);
         return bookMeetingRoom;
     }
+
+    @PostMapping(path = "/bookrepeat/{id_book}")
+    public BookMeetingRoom checkoutbysys(@PathVariable Long id_book) {
+        BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(id_book).get();
+        bookMeetingRoom.setStatusbooking("Not booking");
+        bookMeetingRoom.setIsActive("0");
+        bookMeetingRoomRepository.save(bookMeetingRoom);
+
+        Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
+        report.setIsActive("0");
+        reportRepository.save(report);
+        return bookMeetingRoom;
+    }
+
+
 
 
     @PostMapping(path = "/Addroom/{firstname}/{roomname}")
@@ -147,10 +162,12 @@ public class BookMeetingRoomController {
         Date date = new Date();
         bookMeetingRoom.setUpdate_date(date);
         bookMeetingRoom.setUpdate_by(firstname);
+        bookMeetingRoom.setStatusbooking("Cancel");
         Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
         report.setIsActive("0");
         report.setUpdate_by(firstname);
         report.setUpdate_date(date);
+
         reportRepository.save(report);
         return bookMeetingRoom;
     }
@@ -161,7 +178,7 @@ public class BookMeetingRoomController {
         Roomname roomname1 = roomnameRepository.findById(roomname).get();
         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findByDateBookMeetingRoomAndRoomnameAndStarttimeAndIsActive(dateBookMeetingRoom,roomname1,starttime,"1");
         Date date = new Date();
-        bookMeetingRoom.setStatusbooking("checkin");
+        bookMeetingRoom.setStatusbooking("Checkin");
         bookMeetingRoom.setUpdate_date(date);
         bookMeetingRoom.setUpdate_by(firstname);
         bookMeetingRoom.setCheckintime(checkintime);
@@ -223,12 +240,12 @@ public class BookMeetingRoomController {
 
         Roomname roomname1 = roomnameRepository.findById(roomname).get();
         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findByDateBookMeetingRoomAndRoomnameAndStarttimeAndIsActive(dateBookMeetingRoom,roomname1,starttime,"1");
-        bookMeetingRoom.setCheckoutby("checkoutusr");
+        bookMeetingRoom.setCheckoutby("Checkoutusr");
         bookMeetingRoom.setCheckouttime(checkouttime);
         int lengthh = convertLengthTime(starttime,endtime2);
         bookMeetingRoom.setLengthtime(lengthh);
         bookMeetingRoom.setEndtime(endtime2);
-        bookMeetingRoom.setStatusbooking("checkout");
+        bookMeetingRoom.setStatusbooking("Checkout");
         Date date = new Date();
         bookMeetingRoom.setUpdate_date(date);
         bookMeetingRoom.setUpdate_by(firstname);
@@ -293,7 +310,7 @@ public class BookMeetingRoomController {
         bookMeetingRoom.setIsActive("1");
         bookMeetingRoomRepository.save(bookMeetingRoom);
 
-        bookMeetingRoom.setStatusbooking("checkin");
+        bookMeetingRoom.setStatusbooking("Checkin");
         bookMeetingRoom.setCreate_date(date1);
 
         Users users = usersRepository.findByUsernameAndIsActive(userid,"1");
@@ -342,7 +359,7 @@ public class BookMeetingRoomController {
         bookMeetingRoom.setIsActive("1");
         bookMeetingRoomRepository.save(bookMeetingRoom);
 
-        bookMeetingRoom.setStatusbooking("booking");
+        bookMeetingRoom.setStatusbooking("Booking");
         bookMeetingRoom.setCreate_date(date1);
 
         Users users = usersRepository.findByUsernameAndIsActive(userid,"1");

@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1862622f-c599-4797-abf8-dcb6363f1fc3" name="Default" comment="" />
+    <list default="true" id="1862622f-c599-4797-abf8-dcb6363f1fc3" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/BookMeetingRoom/src/app/Service/service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/BookMeetingRoom/src/app/Service/service.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookMeetingRoom/src/app/addroombyadmin/addroombyadmin.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/BookMeetingRoom/src/app/addroombyadmin/addroombyadmin.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookMeetingRoom/src/app/adduserbyadmin/adduserbyadmin.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/BookMeetingRoom/src/app/adduserbyadmin/adduserbyadmin.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookMeetingRoom/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/BookMeetingRoom/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookMeetingRoom/src/app/checkout/checkout.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/BookMeetingRoom/src/app/checkout/checkout.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookMeetingRoom/src/app/dashboardtable/dashboardtable.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/BookMeetingRoom/src/app/dashboardtable/dashboardtable.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookMeetingRoom/src/app/data-form/data-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/BookMeetingRoom/src/app/data-form/data-form.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookMeetingRoom/src/app/deleteroom/deleteroom.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/BookMeetingRoom/src/app/deleteroom/deleteroom.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookMeetingRoom/src/app/deleteuserbyadmin/deleteuserbyadmin.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/BookMeetingRoom/src/app/deleteuserbyadmin/deleteuserbyadmin.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookMeetingRoom/src/app/editbook/editbook.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/BookMeetingRoom/src/app/editbook/editbook.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookMeetingRoom/src/app/editordeletebook/editordeletebook.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/BookMeetingRoom/src/app/editordeletebook/editordeletebook.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookMeetingRoom/src/app/editroomname/editroomname.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/BookMeetingRoom/src/app/editroomname/editroomname.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookMeetingRoom/src/app/edituserbyadmin/edituserbyadmin.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/BookMeetingRoom/src/app/edituserbyadmin/edituserbyadmin.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookMeetingRoom/src/app/select-room/select-room.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/BookMeetingRoom/src/app/select-room/select-room.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/Controller/BookMeetingRoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/Controller/BookMeetingRoomController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/Controller/ReportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/Controller/ReportController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/repository/ReportRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/repository/ReportRepository.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -9,23 +27,124 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="select-room.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BookMeetingRoom/src/app/select-room/select-room.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-247">
+              <caret line="1363" column="58" selection-start-line="1363" selection-start-column="58" selection-end-line="1363" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="book-meeting-room1.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BookMeetingRoom/src/app/book-meeting-room1/book-meeting-room1.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-816" />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dashboardtable.component.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/BookMeetingRoom/src/app/dashboardtable/dashboardtable.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="54" column="21" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BookMeetingRoom/src/app/app.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5618">
+              <caret line="778" column="181" selection-start-line="778" selection-start-column="181" selection-end-line="778" selection-end-column="181" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dashboardtable.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BookMeetingRoom/src/app/dashboardtable/dashboardtable.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="73">
+              <caret line="161" column="33" selection-start-line="161" selection-start-column="33" selection-end-line="161" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="data-form.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BookMeetingRoom/src/app/data-form/data-form.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="1033" column="38" selection-start-line="1020" selection-start-column="38" selection-end-line="1033" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>this.fulltime &gt;</find>
+      <find>undeundefined</find>
+      <find>window.location.reload();</find>
+      <find>if(this.events[j][k][0] == 13){</find>
+      <find>this.events[j][k][2] = this.report[i].bookMeetingRoom.lengthtime ;</find>
+      <find>API</find>
+      <find>console.log('ss');</find>
+      <find>for(let k =0 ; k &lt; this.events[j].length; k++){</find>
+      <find>if(this.events[j][k][5] == false){this.events[j][k][2] = this.report[i].bookMeetingRoom.lengthtime ;</find>
+      <find>report</find>
+      <find>this.report[i].bookMeetingRoom.statusbooking == 'notcheckin'</find>
+      <find>this.report[i].bookMeetingRoom.statusbooking == 'notcheckin'</find>
+      <find>Checkout</find>
+      <find>checkout</find>
+      <find>this.report[i].bookMeetingRoom.statusBooking</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>this.fulltime != 'undeundefined.undefined' &amp;&amp; this.fulltime &gt;</replace>
+      <replace>undefined</replace>
+      <replace>this.countrepeatroom = 0 ; for(let k =0 ; k &lt; this.events[j].length; k++){</replace>
+      <replace>this.countrepeatroom = 1 ;if(this.events[j][k][5] == false){this.events[j][k][2] = this.report[i].bookMeetingRoom.lengthtime ;</replace>
+      <replace>this.report[i].bookMeetingRoom.statusbooking == 'notcheckin' &amp;&amp; this.report[i].bookMeetingRoom.latetime == 15</replace>
+      <replace>Checkout</replace>
+      <replace>this.report[i].bookMeetingRoom.statusbooking</replace>
+    </replaceStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="81" />
-    <option name="y" value="51" />
-    <option name="width" value="1750" />
-    <option name="height" value="970" />
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/BookMeetingRoom/src/app/addroombyadmin/addroombyadmin.component.ts" />
+        <option value="$PROJECT_DIR$/BookMeetingRoom/src/app/adduserbyadmin/adduserbyadmin.component.ts" />
+        <option value="$PROJECT_DIR$/BookMeetingRoom/src/app/checkout/checkout.component.ts" />
+        <option value="$PROJECT_DIR$/BookMeetingRoom/src/app/deleteroom/deleteroom.component.ts" />
+        <option value="$PROJECT_DIR$/BookMeetingRoom/src/app/deleteuserbyadmin/deleteuserbyadmin.component.ts" />
+        <option value="$PROJECT_DIR$/BookMeetingRoom/src/app/editbook/editbook.component.ts" />
+        <option value="$PROJECT_DIR$/BookMeetingRoom/src/app/editordeletebook/editordeletebook.component.ts" />
+        <option value="$PROJECT_DIR$/BookMeetingRoom/src/app/editroomname/editroomname.component.ts" />
+        <option value="$PROJECT_DIR$/BookMeetingRoom/src/app/edituserbyadmin/edituserbyadmin.component.ts" />
+        <option value="$PROJECT_DIR$/BookMeetingRoom/src/app/data-form/data-form.component.ts" />
+        <option value="$PROJECT_DIR$/BookMeetingRoom/src/app/Service/service.service.ts" />
+        <option value="$PROJECT_DIR$/BookMeetingRoom/src/app/dashboardtable/dashboardtable.component.ts" />
+        <option value="$PROJECT_DIR$/BookMeetingRoom/src/app/app.component.ts" />
+        <option value="$PROJECT_DIR$/BookMeetingRoom/src/app/select-room/select-room.component.ts" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
+    <option name="width" value="1385" />
+    <option name="height" value="745" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -33,14 +152,91 @@
               <item name="BookMeetingRoom" type="b2602c69:ProjectViewProjectNode" />
               <item name="BookMeetingRoom" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="BookMeetingRoom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookMeetingRoom" type="462c0819:PsiDirectoryNode" />
+              <item name="BookMeetingRoom" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BookMeetingRoom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookMeetingRoom" type="462c0819:PsiDirectoryNode" />
+              <item name="BookMeetingRoom" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BookMeetingRoom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookMeetingRoom" type="462c0819:PsiDirectoryNode" />
+              <item name="BookMeetingRoom" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BookMeetingRoom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookMeetingRoom" type="462c0819:PsiDirectoryNode" />
+              <item name="BookMeetingRoom" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="addroombyadmin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BookMeetingRoom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookMeetingRoom" type="462c0819:PsiDirectoryNode" />
+              <item name="BookMeetingRoom" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="adduserbyadmin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BookMeetingRoom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookMeetingRoom" type="462c0819:PsiDirectoryNode" />
+              <item name="BookMeetingRoom" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="book-meeting-room1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BookMeetingRoom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookMeetingRoom" type="462c0819:PsiDirectoryNode" />
+              <item name="BookMeetingRoom" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="checkout" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BookMeetingRoom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookMeetingRoom" type="462c0819:PsiDirectoryNode" />
+              <item name="BookMeetingRoom" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="dashboardtable" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BookMeetingRoom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookMeetingRoom" type="462c0819:PsiDirectoryNode" />
+              <item name="BookMeetingRoom" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="data-form" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BookMeetingRoom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookMeetingRoom" type="462c0819:PsiDirectoryNode" />
+              <item name="BookMeetingRoom" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="select-room" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/BookMeetingRoom" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/demo" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -111,36 +307,198 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <layout>
-      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info id="Image Layers" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" />
-      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32905984" />
-      <window_info id="Capture Tool" />
-      <window_info id="Designer" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24966443" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32952926" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25268096" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info id="Favorites" side_tool="true" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/BookMeetingRoom/src/app/data-form/data-form.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="131" column="56" lean-forward="true" selection-start-line="131" selection-start-column="56" selection-end-line="131" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BookMeetingRoom/src/app/adduserbyadmin/adduserbyadmin.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="33" column="2" selection-start-line="33" selection-start-column="2" selection-end-line="33" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BookMeetingRoom/src/app/book-meeting-room1/book-meeting-room1.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2385" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BookMeetingRoom/src/app/checkout/checkout.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="33" column="2" selection-start-line="33" selection-start-column="2" selection-end-line="33" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BookMeetingRoom/src/app/dashboard/dashboard.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-357" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BookMeetingRoom/src/app/deleteroom/deleteroom.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="28" column="2" selection-start-line="28" selection-start-column="2" selection-end-line="28" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BookMeetingRoom/src/app/deleteuserbyadmin/deleteuserbyadmin.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="38" column="2" selection-start-line="38" selection-start-column="2" selection-end-line="38" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BookMeetingRoom/src/app/editbook/editbook.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="53" column="4" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BookMeetingRoom/src/app/editordeletebook/editordeletebook.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="42" column="2" selection-start-line="42" selection-start-column="2" selection-end-line="42" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BookMeetingRoom/src/app/editroomname/editroomname.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="27" column="2" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BookMeetingRoom/src/app/edituserbyadmin/edituserbyadmin.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="45" column="2" selection-start-line="45" selection-start-column="2" selection-end-line="45" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BookMeetingRoom/src/app/header/header.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-255" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BookMeetingRoom/src/app/side-nav/side-nav.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-51" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BookMeetingRoom/src/app/systemadmin/systemadmin.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1331" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BookMeetingRoom/src/app/app.component.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BookMeetingRoom/src/app/app.component.spec.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-22" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BookMeetingRoom/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="106" column="65" selection-start-line="106" selection-start-column="58" selection-end-line="106" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BookMeetingRoom/src/app/addroombyadmin/addroombyadmin.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="80" column="36" selection-start-line="80" selection-start-column="36" selection-end-line="80" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BookMeetingRoom/src/app/dashboard/dashboard.component.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BookMeetingRoom/src/app/Service/service.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="40" column="70" selection-start-line="40" selection-start-column="70" selection-end-line="40" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BookMeetingRoom/src/app/data-form/data-form.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="1033" column="38" selection-start-line="1020" selection-start-column="38" selection-end-line="1033" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BookMeetingRoom/src/app/dashboardtable/dashboardtable.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="161" column="33" selection-start-line="161" selection-start-column="33" selection-end-line="161" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BookMeetingRoom/src/app/app.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5618">
+          <caret line="778" column="181" selection-start-line="778" selection-start-column="181" selection-end-line="778" selection-end-column="181" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BookMeetingRoom/src/app/select-room/select-room.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-247">
+          <caret line="1363" column="58" selection-start-line="1363" selection-start-column="58" selection-end-line="1363" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BookMeetingRoom/src/app/book-meeting-room1/book-meeting-room1.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-816" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BookMeetingRoom/src/app/dashboardtable/dashboardtable.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="54" column="21" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

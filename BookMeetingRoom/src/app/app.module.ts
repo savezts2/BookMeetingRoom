@@ -52,6 +52,7 @@ import { EditroomnameComponent } from './editroomname/editroomname.component';
 import { DeleteroomComponent } from './deleteroom/deleteroom.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
+import { CancelbookbyhrComponent } from './cancelbookbyhr/cancelbookbyhr.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -73,7 +74,8 @@ import { LayoutModule } from '@angular/cdk/layout';
     EditroomnameComponent,
     DeleteroomComponent,
     SideNavComponent,
-    DialogSubmitRoom
+    DialogSubmitRoom,
+    CancelbookbyhrComponent
   ],
   imports: [
     BrowserModule,
