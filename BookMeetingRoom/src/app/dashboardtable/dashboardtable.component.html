@@ -13,11 +13,11 @@
 
 
 
-    <h1 align="center">Dashboard</h1>
+    <h1 align="center" style="font-family: 'Anton', sans-serif;">Dashboard</h1>
 
     <div *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)">
 
-      <h2 style="margin-left:5%;">{{dateFull.month}} {{dateFull.year}}</h2>
+      <h2 style="margin-left:5%; font-family: 'Anton', sans-serif;">{{dateFull.month}} {{dateFull.year}}</h2>
       <br/>
       <button class="button is-success is-rounded" style="margin-left:5%;" (click)="exportexcel()"><font color="black">Export</font></button>
      <br/><br/>
