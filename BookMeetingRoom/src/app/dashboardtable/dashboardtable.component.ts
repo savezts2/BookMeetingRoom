@@ -3,13 +3,14 @@ import {AuthService}from '../auth.service';
 import {Observable}from "rxjs";
 import {Router}from '@angular/router';
 import {ServiceService}from '../Service/service.service';
-import {CsvDataService}from '../csv-data.service';
+
 import {DashboardService}from './dashboard.service';
 import {ActivatedRoute}from "@angular/router";
 import {MatSidenav}from '@angular/material/sidenav';
 import {FormControl} from '@angular/forms';
 import {TooltipPosition} from '@angular/material/tooltip';
 import * as XLSX from 'xlsx';
+import {ExcelService} from '../excel.service';
 @Component({
 selector: 'app-dashboardtable',
 templateUrl: './dashboardtable.component.html',
@@ -137,7 +138,7 @@ numroom : number;
 
 
 constructor(public authService : AuthService , private router: Router, private service : ServiceService,
-   private route:ActivatedRoute , private dashboardService : DashboardService, private csv : CsvDataService) {
+   private route:ActivatedRoute , private dashboardService : DashboardService,private excelService:ExcelService) {
         this.isLoggedIn = authService.isLoggedIn();
         this.isLoggedInAdmin = authService.isLoggedInAdmin();
         this.isLoggedInHR = authService.isLoggedInHR();
@@ -156,27 +157,41 @@ constructor(public authService : AuthService , private router: Router, private s
   this.sidenav.close();
 }
 
+
+
+
+
 exportexcel(): void{
     let bookMeetingRoom : any[] = [];
 
   for(let i = 0 ; i < this.report2.length ; i++){
 
-        bookMeetingRoom.push({Book_by : this.report2[i].bookMeetingRoom.create_by,
-        Book_date : this.report2[i].bookMeetingRoom.create_date , Meeting_room : this.report2[i].bookMeetingRoom.roomname.roomnames,
-        Start_time : this.report2[i].bookMeetingRoom.starttime.substring(0,2)+':'+ this.report2[i].bookMeetingRoom.starttime.substring(3,5)
-        , End_time : this.report2[i].bookMeetingRoom.endtime.substring(0,2)+':'+ this.report2[i].bookMeetingRoom.endtime.substring(3,5),
-        Topic : this.report2[i].bookMeetingRoom.topic , Tel : '\''+this.report2[i].bookMeetingRoom.telbookingby+'\'',
-        Attendance : this.report2[i].bookMeetingRoom.attendees , Remark : this.report2[i].bookMeetingRoom.remark , Status : this.report2[i].bookMeetingRoom.statusbooking,
-        Update_date : this.report2[i].bookMeetingRoom.update_date, Update_by : this.report2[i].bookMeetingRoom.update_by,
-        Checkin_by : this.report2[i].bookMeetingRoom.checkinby,Checkin_time : this.report2[i].bookMeetingRoom.checkintime,
-        Checkout_by : this.report2[i].bookMeetingRoom.checkoutby,Checkout_time : this.report2[i].bookMeetingRoom.checkouttime,
-        Duration_time : this.report2[i].bookMeetingRoom.latetime,Late : this.report2[i].bookMeetingRoom.late});
+        bookMeetingRoom.push({Book_By : this.report2[i].bookMeetingRoom.create_by,
+        Book_Date : this.report2[i].bookMeetingRoom.create_date ,
+         Meeting_Room : this.report2[i].bookMeetingRoom.roomname.roomnames,
+        Start_Time : this.report2[i].bookMeetingRoom.starttime.substring(0,2)+':'+ this.report2[i].bookMeetingRoom.starttime.substring(3,5),
+         End_Time : this.report2[i].bookMeetingRoom.endtime.substring(0,2)+':'+ this.report2[i].bookMeetingRoom.endtime.substring(3,5),
+        Topic : this.report2[i].bookMeetingRoom.topic ,
+         Tel : '\''+this.report2[i].bookMeetingRoom.telbookingby+'\'',
+        Attendance : this.report2[i].bookMeetingRoom.attendees ,
+         Remark : this.report2[i].bookMeetingRoom.remark ,
+         Status : this.report2[i].bookMeetingRoom.statusbooking,
+        Update_Date : this.report2[i].bookMeetingRoom.update_date,
+         Update_By : this.report2[i].bookMeetingRoom.update_by,
+        Checkin_By : this.report2[i].bookMeetingRoom.checkinby,
+        Checkin_Time : this.report2[i].bookMeetingRoom.checkintime,
+        Checkout_By : this.report2[i].bookMeetingRoom.checkoutby,
+        Checkout_Time : this.report2[i].bookMeetingRoom.checkouttime,
+        Duration_Time : this.report2[i].bookMeetingRoom.latetime,
+        Late : this.report2[i].bookMeetingRoom.late});
 
 
   }
+   this.excelService.exportAsExcelFile(bookMeetingRoom, 'BookMeetingRoom');
 
-   CsvDataService.exportToCsv('BookMeetingRoom.csv', bookMeetingRoom);
 }
+
+
 
   ngOnInit() {
 

@@ -55,7 +55,7 @@ isLoggedInHR() : Observable<boolean> {
                       alert("this id hasn't active please contact IT Support");
                   }
                   else{
-                  if(data.status == "ADMIN"){
+                  if(data.role == "ADMIN"){
                       alert("Login Success !");
                       localStorage.setItem('tokenidadmin', 'JWT');
                       this.isLoginAdmin.next(true);
@@ -70,7 +70,7 @@ isLoggedInHR() : Observable<boolean> {
                       console.log("admin");
                       window.location.href='#/';
                       window.location.reload()
-                  }else if(data.status == "HR"){
+                  }else if(data.role == "HR"){
                       alert("Login Success !");
                       localStorage.setItem('tokenidhr', 'JWT');
                       this.isLoginHR.next(true);

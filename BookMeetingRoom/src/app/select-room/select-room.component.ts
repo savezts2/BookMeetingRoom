@@ -68,8 +68,11 @@ events: any[] = [];
  now = new Date();
 dt1 : any;
 dt2 : any;
+timehour : string;
+timeminute : string;
+fulltime : string;
     public API = '//localhost:8080';  //for test
-//public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
+//public API = 'http://172.27.209.27:8080/BookMeetingRoom';  //for build
 
 dateshow : String;
 today=new Date();
@@ -80,6 +83,7 @@ splitted : Array<any>;
 dateFull : String ;
 myFilter = (d: Date): boolean => {
 const day = d.getDay();
+
 // Prevent Saturday and Sunday from being selected.
 return day !== 0 ;
 }
@@ -97,6 +101,28 @@ countrepeatroom : number;
       this.days = new Date().getDay()
       }, 1);
 
+      setInterval(() => {
+this.service.getHourCurrent().subscribe(data=>{
+    this.timehour = data.toString();
+
+    })
+
+this.service.getMinuteCurrent().subscribe(data=>{
+    this.timeminute = data.toString();
+
+    })
+
+  if(parseInt(this.timehour) < 10){
+    this.timehour = '0'+ this.timehour;
+  }if( parseInt(this.timeminute) < 10){
+    this.timeminute = '0'+ this.timeminute;
+  }
+
+  this.fulltime =  this.timehour+':'+ this.timeminute +':'+ new Date().getSeconds();
+ // console.log(this.fulltime);
+
+
+  }, 100); //interval
 
    }
 close(){
@@ -1568,15 +1594,15 @@ selectTable(room,time){
     let timesplit: Array<string>;
     timesplit = time.split(".");
 
-   // console.log(datetoday,datebook,timesplit);
+    //console.log(datetoday,datebook,timesplit);
     let monthnumString = this.convertMonthstring(datetoday[1]);
     if(parseInt(datetoday[2]) == parseInt(datebook[0]) && monthnumString == datebook[1]){
-       if(new Date().getHours() > parseInt(timesplit[0]) ){
+       if(parseInt(this.fulltime.substring(0,2)) > parseInt(timesplit[0]) ){
          alert("Cannot make a previous Booking.");
-       }else if( new Date().getHours() == parseInt(timesplit[0]) ){
-          if( new Date().getMinutes() - parseInt(timesplit[1])  < 30 && new Date().getMinutes() - parseInt(timesplit[1])  >= 0){
+       }else if( parseInt(this.fulltime.substring(0,2)) == parseInt(timesplit[0]) ){
+          if( parseInt(this.fulltime.substring(3,5)) - parseInt(timesplit[1])  < 30 && parseInt(this.fulltime.substring(3,5)) - parseInt(timesplit[1])  >= 0){
               this.router.navigate(['data-form',{roomname:room,roomtime:time,date:this.datefull.datefull,slowtime:true}]);
-           }else if(new Date().getMinutes() - parseInt(timesplit[1])  >= 30){
+           }else if(parseInt(this.fulltime.substring(3,5)) - parseInt(timesplit[1])  >= 30){
                alert("Cannot make a previous Booking.");
             }else{
                 this.router.navigate(['data-form',{roomname:room,roomtime:time,date:this.datefull.datefull,slowtime:false}]);

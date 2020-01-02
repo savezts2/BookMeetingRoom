@@ -17,7 +17,7 @@ lastname : string;
 department : string;
 position : string;
 username: string;
-status: string;
+role: string;
 isActive: string;
 password: string;
 }
@@ -43,7 +43,7 @@ positions : Array<any>;
 roles : Array<any>;
 
 public API = '//localhost:8080/';   //for test
-//public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
+//public API = 'http://172.27.209.27:8080/BookMeetingRoom';  //for build
 
 username: String;
   constructor(public authService : AuthService, private route:ActivatedRoute, private service : ServiceService,private http: HttpClient,
@@ -76,7 +76,7 @@ this.service.getDepartment().subscribe(data => {
       department: [this.data.department, Validators.required],
       position: [this.data.position, Validators.required],
       password: [this.data.password, Validators.required],
-      status: [this.data.status, Validators.required],
+      status: [this.data.role, Validators.required],
       isActive: [this.data.isActive, Validators.required]
     });
 
@@ -104,6 +104,7 @@ editUser(){
 }
 
 closed(){
+
     this.dialogRef.close();
 }
 

@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { CsvDataService } from './csv-data.service';
+import { ExcelService } from './excel.service';
 
-describe('CsvDataService', () => {
+describe('ExcelService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: CsvDataService = TestBed.get(CsvDataService);
+    const service: ExcelService = TestBed.get(ExcelService);
     expect(service).toBeTruthy();
   });
 });

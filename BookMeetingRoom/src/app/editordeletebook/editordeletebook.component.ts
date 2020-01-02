@@ -40,17 +40,45 @@ isLoggedIn : Observable<boolean>;
 isLoggedInAdmin : Observable<boolean>;
 isLoggedInHR : Observable<boolean>;
 public API = '//localhost:8080';   //for test
-//public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
+//public API = 'http://172.27.209.27:8080/BookMeetingRoom';  //for build
 timenum : number;
 totimenum : number;
 datetimenow : number;
 spiner : boolean = false;
 nameuser : string;
+timehour : string;
+timeminute : string;
+fulltime : string;
   constructor(public authService : AuthService , private router: Router , private service : ServiceService,public dialog: MatDialog,
   @Inject(MAT_DIALOG_DATA) public data: DialogData, public dialogRef: MatDialogRef<EditordeletebookComponent>, private http: HttpClient) {
       this.isLoggedIn = authService.isLoggedIn();
     this.isLoggedInAdmin = authService.isLoggedInAdmin();
     this.isLoggedInHR = authService.isLoggedInHR();
+
+
+
+          setInterval(() => {
+this.service.getHourCurrent().subscribe(data=>{
+    this.timehour = data.toString();
+
+    })
+
+this.service.getMinuteCurrent().subscribe(data=>{
+    this.timeminute = data.toString();
+
+    })
+
+  if(parseInt(this.timehour) < 10){
+    this.timehour = '0'+ this.timehour;
+  }if( parseInt(this.timeminute) < 10){
+    this.timeminute = '0'+ this.timeminute;
+  }
+
+  this.fulltime =  this.timehour+':'+ this.timeminute +':'+ new Date().getSeconds();
+ // console.log(this.fulltime);
+
+
+  }, 100); //interval
   }
 
   ngOnInit() {
@@ -85,14 +113,15 @@ checkin(){
 
 
 
-  if(this.datetimenow <  this.timenum || this.datetimenow >  this.totimenum || datetoday[2] != datebook[0]){
+  if(this.fulltime.substring(0,2)+":"+this.fulltime.substring(3,5) <  this.data.time || this.datetimenow >  this.totimenum || datetoday[2] != datebook[0]){
 
     alert("Please Checkin in time "+this.data.time+" - "+this.data.totime + " Date: "+this.data.date);
 
 
   }else{
+
      this.http.post(this.API + '/CheckIn/'+this.nameuser+'/'+this.data.date+'/'+this.data.room+'/'+this.data.time+'/'+
-     new Date().toString().substring(16,18)+'.'+new Date().toString().substring(19,21),{})
+     this.fulltime.substring(0,2)+':'+this.fulltime.substring(3,5),{})
                              .subscribe(
                                data => {
                                    console.log('PUT Request is successful');

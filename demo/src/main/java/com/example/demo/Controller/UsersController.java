@@ -92,8 +92,8 @@ public class UsersController {
         return s_role.getIsActive().equals("1");
     }
 
-    @PostMapping(path = "/Adduser/{firstname}/{lastname}/{department}/{position}/{username}/{password}/{status}")
-    public Users users(@PathVariable String firstname, @PathVariable String lastname, @PathVariable String department, @PathVariable String position,
+    @PostMapping(path = "/Adduser/{addby}/{firstname}/{lastname}/{department}/{position}/{username}/{password}/{status}")
+    public Users users(@PathVariable String addby,@PathVariable String firstname, @PathVariable String lastname, @PathVariable String department, @PathVariable String position,
                        @PathVariable String username,@PathVariable String password,@PathVariable String status) {
         Users users = new Users();
         users.setFirstname(firstname);
@@ -102,8 +102,11 @@ public class UsersController {
         users.setPosition(position);
         users.setUsername(username);
         users.setPassword(password);
-        users.setStatus(status);
+        users.setRole(status);
         users.setIsActive("1");
+        users.setCreate_by(addby);
+        Date date= new Date();
+        users.setCreate_date(date);
         usersRepository.save(users);
         return users;
     }
@@ -114,7 +117,7 @@ public class UsersController {
                        @PathVariable String username,@PathVariable String password,@PathVariable String status) {
         Users users = usersRepository.findByUsernameAndIsActive(username,"1");
         users.setFirstname(firstname);
-        users.setStatus(status);
+        users.setRole(status);
         users.setPassword(password);
         users.setPosition(position);
         users.setLastname(lastname);

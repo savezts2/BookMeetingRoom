@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component ,HostListener,OnDestroy} from '@angular/core';
 import { ServiceService } from './Service/service.service';
 import { HttpClient} from '@angular/common/http';
-
+import { Observable } from "rxjs";
+import { AuthService } from './auth.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,11 +13,28 @@ export class AppComponent{
 report : Array<any>;
 
 public API = '//localhost:8080';  //for test
-//public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
+//public API = 'http://172.27.209.27:8080/BookMeetingRoom';  //for build
 timehour : string;
 timeminute : string;
 fulltime : string;
-constructor(private service : ServiceService,private http: HttpClient) {}
+isLoggedIn : Observable<boolean>;
+isLoggedInAdmin : Observable<boolean>;
+isLoggedInHR : Observable<boolean>;
+
+
+
+
+
+constructor(private service : ServiceService,private http: HttpClient , public authService : AuthService) {
+  this.isLoggedIn = authService.isLoggedIn();
+      this.isLoggedInAdmin = authService.isLoggedInAdmin();
+      this.isLoggedInHR = authService.isLoggedInHR();
+
+}
+
+
+
+
 
 ngOnInit() {
 
@@ -51,6 +69,8 @@ this.service.getMinuteCurrent().subscribe(data=>{
   }, 1500); //interval
 
 
+
+
 setTimeout(() => {
   setInterval(() => {
 
@@ -69,7 +89,7 @@ setTimeout(() => {
 
       if(CurrentDate >= GivenDate){
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '08.14'   ){
-              if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+              if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.statusbooking == 'Booking'){
 
                    this.http.post(this.API + '/Notcheckin15min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -89,7 +109,7 @@ setTimeout(() => {
               }
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '08.44'){
-              if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+              if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.statusbooking == 'Booking'){
 
                    this.http.post(this.API + '/Notcheckin15min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -109,7 +129,7 @@ setTimeout(() => {
               }
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '09.14'){
-              if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+              if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.statusbooking == 'Booking'){
 
                    this.http.post(this.API + '/Notcheckin15min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -129,7 +149,7 @@ setTimeout(() => {
               }
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '09.44'){
-              if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+              if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.statusbooking == 'Booking'){
 
                    this.http.post(this.API + '/Notcheckin15min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -149,7 +169,7 @@ setTimeout(() => {
               }
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '10.14'){
-              if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+              if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.statusbooking == 'Booking'){
 
                    this.http.post(this.API + '/Notcheckin15min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -169,7 +189,7 @@ setTimeout(() => {
               }
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '10.44'){
-              if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+              if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.statusbooking == 'Booking'){
 
                    this.http.post(this.API + '/Notcheckin15min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -189,7 +209,7 @@ setTimeout(() => {
               }
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '11.14'){
-              if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+              if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.statusbooking == 'Booking'){
 
                    this.http.post(this.API + '/Notcheckin15min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -208,8 +228,10 @@ setTimeout(() => {
 
               }
           }
+
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '11.44'){
-              if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+              //  console.log(1);
+              if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.statusbooking == 'Booking'){
 
                    this.http.post(this.API + '/Notcheckin15min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -229,7 +251,7 @@ setTimeout(() => {
               }
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '12.14'){
-              if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+              if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.statusbooking == 'Booking'){
 
                    this.http.post(this.API + '/Notcheckin15min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -249,7 +271,7 @@ setTimeout(() => {
               }
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '12.44'){
-              if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+              if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.statusbooking == 'Booking'){
 
                    this.http.post(this.API + '/Notcheckin15min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -269,7 +291,7 @@ setTimeout(() => {
               }
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '13.14'){
-              if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+              if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.statusbooking == 'Booking'){
 
                    this.http.post(this.API + '/Notcheckin15min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -290,7 +312,7 @@ setTimeout(() => {
           }
 
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '13.44'){
-              if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+              if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.statusbooking == 'Booking'){
 
                    this.http.post(this.API + '/Notcheckin15min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -310,7 +332,7 @@ setTimeout(() => {
               }
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '14.14'){
-              if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+              if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.statusbooking == 'Booking'){
 
                    this.http.post(this.API + '/Notcheckin15min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -330,7 +352,7 @@ setTimeout(() => {
               }
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '14.44'){
-              if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+              if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.statusbooking == 'Booking'){
 
                    this.http.post(this.API + '/Notcheckin15min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -350,7 +372,7 @@ setTimeout(() => {
               }
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '15.14'){
-              if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+              if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.statusbooking == 'Booking'){
 
                    this.http.post(this.API + '/Notcheckin15min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -370,7 +392,7 @@ setTimeout(() => {
               }
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '15.44'){
-              if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+              if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.statusbooking == 'Booking'){
 
                    this.http.post(this.API + '/Notcheckin15min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -390,7 +412,7 @@ setTimeout(() => {
               }
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '16.14'){
-              if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+              if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.statusbooking == 'Booking'){
 
                    this.http.post(this.API + '/Notcheckin15min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -410,7 +432,7 @@ setTimeout(() => {
               }
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '16.44'){
-              if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.statusbooking == 'booking'){
+              if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.statusbooking == 'Booking'){
 
                    this.http.post(this.API + '/Notcheckin15min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -437,7 +459,7 @@ setTimeout(() => {
 
 
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '08.29'){
-              if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.statusbooking == 'notcheckin' && this.report[i].bookMeetingRoom.latetime == 15){
+              if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' && this.report[i].bookMeetingRoom.latetime == 15){
                    this.http.post(this.API + '/Notcheckin30min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
                              .subscribe(
@@ -456,7 +478,7 @@ setTimeout(() => {
               }
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '08.59'){
-              if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.statusbooking == 'notcheckin' && this.report[i].bookMeetingRoom.latetime == 15){
+              if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' && this.report[i].bookMeetingRoom.latetime == 15){
 
                    this.http.post(this.API + '/Notcheckin30min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -476,7 +498,7 @@ setTimeout(() => {
               }
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '09.29'){
-              if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.statusbooking == 'notcheckin' && this.report[i].bookMeetingRoom.latetime == 15){
+              if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' && this.report[i].bookMeetingRoom.latetime == 15){
 
                    this.http.post(this.API + '/Notcheckin30min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -496,7 +518,7 @@ setTimeout(() => {
               }
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '09.59'){
-              if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.statusbooking == 'notcheckin' && this.report[i].bookMeetingRoom.latetime == 15){
+              if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' && this.report[i].bookMeetingRoom.latetime == 15){
 
                    this.http.post(this.API + '/Notcheckin30min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -516,7 +538,7 @@ setTimeout(() => {
               }
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '10.29'){
-              if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.statusbooking == 'notcheckin' && this.report[i].bookMeetingRoom.latetime == 15){
+              if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' && this.report[i].bookMeetingRoom.latetime == 15){
 
                    this.http.post(this.API + '/Notcheckin30min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -536,7 +558,7 @@ setTimeout(() => {
               }
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '10.59'){
-              if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.statusbooking == 'notcheckin' && this.report[i].bookMeetingRoom.latetime == 15){
+              if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' && this.report[i].bookMeetingRoom.latetime == 15){
 
                    this.http.post(this.API + '/Notcheckin30min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -556,7 +578,7 @@ setTimeout(() => {
               }
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '11.29'){
-              if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.statusbooking == 'notcheckin' && this.report[i].bookMeetingRoom.latetime == 15){
+              if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' && this.report[i].bookMeetingRoom.latetime == 15){
 
                    this.http.post(this.API + '/Notcheckin30min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -576,7 +598,7 @@ setTimeout(() => {
               }
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '11.59'){
-              if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.statusbooking == 'notcheckin' && this.report[i].bookMeetingRoom.latetime == 15){
+              if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' && this.report[i].bookMeetingRoom.latetime == 15){
 
                    this.http.post(this.API + '/Notcheckin30min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -596,7 +618,7 @@ setTimeout(() => {
               }
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '12.29'){
-              if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.statusbooking == 'notcheckin' && this.report[i].bookMeetingRoom.latetime == 15){
+              if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' && this.report[i].bookMeetingRoom.latetime == 15){
 
                    this.http.post(this.API + '/Notcheckin30min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -616,7 +638,7 @@ setTimeout(() => {
               }
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '12.59'){
-              if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.statusbooking == 'notcheckin' && this.report[i].bookMeetingRoom.latetime == 15){
+              if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' && this.report[i].bookMeetingRoom.latetime == 15){
 
                    this.http.post(this.API + '/Notcheckin30min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -636,7 +658,7 @@ setTimeout(() => {
               }
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '13.29'){
-              if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.statusbooking == 'notcheckin' && this.report[i].bookMeetingRoom.latetime == 15){
+              if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' && this.report[i].bookMeetingRoom.latetime == 15){
 
                    this.http.post(this.API + '/Notcheckin30min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -656,7 +678,7 @@ setTimeout(() => {
               }
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '13.59'){
-              if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.statusbooking == 'notcheckin' && this.report[i].bookMeetingRoom.latetime == 15){
+              if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' && this.report[i].bookMeetingRoom.latetime == 15){
 
                    this.http.post(this.API + '/Notcheckin30min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -676,7 +698,7 @@ setTimeout(() => {
               }
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '14.29'){
-              if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.statusbooking == 'notcheckin' && this.report[i].bookMeetingRoom.latetime == 15){
+              if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' && this.report[i].bookMeetingRoom.latetime == 15){
 
                    this.http.post(this.API + '/Notcheckin30min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -696,7 +718,7 @@ setTimeout(() => {
               }
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '14.59'){
-              if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.statusbooking == 'notcheckin' && this.report[i].bookMeetingRoom.latetime == 15){
+              if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' && this.report[i].bookMeetingRoom.latetime == 15){
 
                    this.http.post(this.API + '/Notcheckin30min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -716,7 +738,7 @@ setTimeout(() => {
               }
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '15.29'){
-              if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.statusbooking == 'notcheckin' && this.report[i].bookMeetingRoom.latetime == 15){
+              if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' && this.report[i].bookMeetingRoom.latetime == 15){
 
                    this.http.post(this.API + '/Notcheckin30min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -736,7 +758,7 @@ setTimeout(() => {
               }
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '15.59'){
-              if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.statusbooking == 'notcheckin' && this.report[i].bookMeetingRoom.latetime == 15){
+              if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' && this.report[i].bookMeetingRoom.latetime == 15){
 
                    this.http.post(this.API + '/Notcheckin30min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -756,7 +778,7 @@ setTimeout(() => {
               }
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '16.29'){
-              if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.statusbooking == 'notcheckin' && this.report[i].bookMeetingRoom.latetime == 15){
+              if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' && this.report[i].bookMeetingRoom.latetime == 15){
 
                    this.http.post(this.API + '/Notcheckin30min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -776,7 +798,7 @@ setTimeout(() => {
               }
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '16.59'){
-              if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.statusbooking == 'notcheckin' && this.report[i].bookMeetingRoom.latetime == 15){
+              if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' && this.report[i].bookMeetingRoom.latetime == 15){
 
                    this.http.post(this.API + '/Notcheckin30min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -801,7 +823,7 @@ setTimeout(() => {
 
 
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '08.29'){
-              if(this.report[i].bookMeetingRoom.endtime == '08.30' && this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+              if(this.report[i].bookMeetingRoom.endtime == '08.30' && this.report[i].bookMeetingRoom.statusbooking == 'Checkin'){
 
                    this.http.post(this.API + '/checkoutauto/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -821,7 +843,7 @@ setTimeout(() => {
               }
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '08.59'){
-              if(this.report[i].bookMeetingRoom.endtime == '09.00' && this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+              if(this.report[i].bookMeetingRoom.endtime == '09.00' && this.report[i].bookMeetingRoom.statusbooking == 'Checkin'){
 
                    this.http.post(this.API + '/checkoutauto/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -841,7 +863,7 @@ setTimeout(() => {
               }
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '09.29'){
-              if(this.report[i].bookMeetingRoom.endtime == '09.30' && this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+              if(this.report[i].bookMeetingRoom.endtime == '09.30' && this.report[i].bookMeetingRoom.statusbooking == 'Checkin'){
 
                    this.http.post(this.API + '/checkoutauto/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -861,7 +883,7 @@ setTimeout(() => {
               }
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '09.59'){
-              if(this.report[i].bookMeetingRoom.endtime == '10.00' && this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+              if(this.report[i].bookMeetingRoom.endtime == '10.00' && this.report[i].bookMeetingRoom.statusbooking == 'Checkin'){
 
                    this.http.post(this.API + '/checkoutauto/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -881,7 +903,7 @@ setTimeout(() => {
               }
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '10.29'){
-              if(this.report[i].bookMeetingRoom.endtime == '10.30' && this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+              if(this.report[i].bookMeetingRoom.endtime == '10.30' && this.report[i].bookMeetingRoom.statusbooking == 'Checkin'){
 
                    this.http.post(this.API + '/checkoutauto/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -901,7 +923,7 @@ setTimeout(() => {
               }
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '10.59'){
-              if(this.report[i].bookMeetingRoom.endtime == '11.00' && this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+              if(this.report[i].bookMeetingRoom.endtime == '11.00' && this.report[i].bookMeetingRoom.statusbooking == 'Checkin'){
 
                    this.http.post(this.API + '/checkoutauto/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -920,8 +942,9 @@ setTimeout(() => {
 
               }
           }
+
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '11.29'){
-              if(this.report[i].bookMeetingRoom.endtime == '11.30' && this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+              if(this.report[i].bookMeetingRoom.endtime == '11.30' && this.report[i].bookMeetingRoom.statusbooking == 'Checkin'){
 
                    this.http.post(this.API + '/checkoutauto/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -941,7 +964,7 @@ setTimeout(() => {
               }
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '11.59'){
-              if(this.report[i].bookMeetingRoom.endtime == '12.00' && this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+              if(this.report[i].bookMeetingRoom.endtime == '12.00' && this.report[i].bookMeetingRoom.statusbooking == 'Checkin'){
 
                    this.http.post(this.API + '/checkoutauto/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -961,7 +984,7 @@ setTimeout(() => {
               }
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '12.29'){
-              if(this.report[i].bookMeetingRoom.endtime == '12.30' && this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+              if(this.report[i].bookMeetingRoom.endtime == '12.30' && this.report[i].bookMeetingRoom.statusbooking == 'Checkin'){
 
                    this.http.post(this.API + '/checkoutauto/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -981,7 +1004,7 @@ setTimeout(() => {
               }
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '12.59'){
-              if(this.report[i].bookMeetingRoom.endtime == '13.00' && this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+              if(this.report[i].bookMeetingRoom.endtime == '13.00' && this.report[i].bookMeetingRoom.statusbooking == 'Checkin'){
 
                    this.http.post(this.API + '/checkoutauto/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -1001,7 +1024,7 @@ setTimeout(() => {
               }
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '13.29'){
-              if(this.report[i].bookMeetingRoom.endtime == '13.30' && this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+              if(this.report[i].bookMeetingRoom.endtime == '13.30' && this.report[i].bookMeetingRoom.statusbooking == 'Checkin'){
 
                    this.http.post(this.API + '/checkoutauto/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -1021,7 +1044,7 @@ setTimeout(() => {
               }
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '13.59'){
-              if(this.report[i].bookMeetingRoom.endtime == '14.00' && this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+              if(this.report[i].bookMeetingRoom.endtime == '14.00' && this.report[i].bookMeetingRoom.statusbooking == 'Checkin'){
 
                    this.http.post(this.API + '/checkoutauto/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -1041,7 +1064,7 @@ setTimeout(() => {
               }
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '14.29'){
-              if(this.report[i].bookMeetingRoom.endtime == '14.30' && this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+              if(this.report[i].bookMeetingRoom.endtime == '14.30' && this.report[i].bookMeetingRoom.statusbooking == 'Checkin'){
 
                    this.http.post(this.API + '/checkoutauto/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -1061,7 +1084,7 @@ setTimeout(() => {
               }
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '14.59'){
-              if(this.report[i].bookMeetingRoom.endtime == '15.00' && this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+              if(this.report[i].bookMeetingRoom.endtime == '15.00' && this.report[i].bookMeetingRoom.statusbooking == 'Checkin'){
 
                    this.http.post(this.API + '/checkoutauto/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -1081,7 +1104,7 @@ setTimeout(() => {
               }
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '15.29'){
-              if(this.report[i].bookMeetingRoom.endtime == '15.30' && this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+              if(this.report[i].bookMeetingRoom.endtime == '15.30' && this.report[i].bookMeetingRoom.statusbooking == 'Checkin'){
 
                    this.http.post(this.API + '/checkoutauto/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -1101,7 +1124,7 @@ setTimeout(() => {
               }
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '15.59'){
-              if(this.report[i].bookMeetingRoom.endtime == '16.00' && this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+              if(this.report[i].bookMeetingRoom.endtime == '16.00' && this.report[i].bookMeetingRoom.statusbooking == 'Checkin'){
 
                    this.http.post(this.API + '/checkoutauto/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -1122,7 +1145,7 @@ setTimeout(() => {
           }
 
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '16.29'){
-              if(this.report[i].bookMeetingRoom.endtime == '16.30' && this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+              if(this.report[i].bookMeetingRoom.endtime == '16.30' && this.report[i].bookMeetingRoom.statusbooking == 'Checkin'){
 
                    this.http.post(this.API + '/checkoutauto/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -1142,7 +1165,7 @@ setTimeout(() => {
               }
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '16.59'){
-              if(this.report[i].bookMeetingRoom.endtime == '17.00' && this.report[i].bookMeetingRoom.statusbooking == 'checkin'){
+              if(this.report[i].bookMeetingRoom.endtime == '17.00' && this.report[i].bookMeetingRoom.statusbooking == 'Checkin'){
 
                    this.http.post(this.API + '/checkoutauto/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
                    +'/' + this.report[i].bookMeetingRoom.starttime,{})
@@ -1165,8 +1188,8 @@ setTimeout(() => {
 
   }//for report
 
-    }, 1000); //interval
-  }, 1000); //interval
+    }, 1500); //interval
+  }, 1500); //interval
 
 
 

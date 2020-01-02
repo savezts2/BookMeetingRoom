@@ -11,10 +11,11 @@
   <mat-sidenav-content>
 
     <div *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)">
+      <br>
+      <font style="margin-left: 2%;">{{fulltime}}</font>
 
-
-        <br/><br/><br/>
-      <div style="margin-left: 6%;">
+        <br/><br/>
+      <div style="margin-left: 6%; ">
         <mat-form-field>
           <input matInput  [min]="today" [max]="maxDate" [matDatepicker]="picker" placeholder="DD/MM/yyyy" readonly="readonly"
                  [formControl]="serializedDate">
@@ -24,6 +25,7 @@
         &nbsp;&nbsp;
         <button mat-raised-button color="primary" (click)="clicksearch()">Search</button>
       </div>
+
 
       <table border="1" align="center" bordercolor=black bgcolor="black">
 

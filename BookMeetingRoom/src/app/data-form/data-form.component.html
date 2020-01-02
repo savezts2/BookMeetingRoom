@@ -81,13 +81,13 @@
 
       <mat-step [stepControl]="secondFormGroup" >
 
-        <form [formGroup]="secondFormGroup">
+        <form [formGroup]="secondFormGroup" autocomplete="off">
           <ng-template matStepLabel>Informations</ng-template>
           <div align="center">
             <label>Tel. Booking By :
               <mat-form-field>
 
-                <input matInput formControlName="tel" required placeholder=" "
+                <input matInput formControlName="tel" required placeholder=" "  onpaste="return false"
                        maxlength="10" type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57'
                 >
 
@@ -97,7 +97,7 @@
             <label>Topic :
               <mat-form-field>
 
-                <input matInput formControlName="topic" required placeholder=" " >
+                <input matInput formControlName="topic" required placeholder=" ">
 
               </mat-form-field>
             </label>

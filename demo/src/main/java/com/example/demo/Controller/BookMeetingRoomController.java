@@ -65,18 +65,33 @@ public class BookMeetingRoomController {
         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findByDateBookMeetingRoomAndRoomnameAndStarttimeAndIsActive(dateBookMeetingRoom,roomname1,starttime,"1");
         if(starttime.equals("08.00")){
             endtime = "08.00";
-        }else if(starttime.equals("08.30")){endtime = "08.30";}else if(starttime.equals("09.00")){endtime = "09.00";}else if(starttime.equals("09.30")){endtime = "09.30";}
-        else if(starttime.equals("10.00")){endtime = "10.00";}else if(starttime.equals("10.30")){endtime = "10.30";}else if(starttime.equals("11.00")){endtime = "11.00";}
-        else if(starttime.equals("12.00")){endtime = "12.00";}else if(starttime.equals("12.30")){endtime = "12.30";}else if(starttime.equals("13.00")){endtime = "14.00";}
-        else if(starttime.equals("13.30")){endtime = "13.30";}else if(starttime.equals("14.00")){endtime = "14.00";}else if(starttime.equals("14.30")){endtime = "15.30";}
+        }else if(starttime.equals("08.30")){endtime = "08.30";}
+        else if(starttime.equals("09.00")){endtime = "09.00";}
+        else if(starttime.equals("09.30")){endtime = "09.30";}
+        else if(starttime.equals("10.00")){endtime = "10.00";}
+        else if(starttime.equals("10.30")){endtime = "10.30";}
+        else if(starttime.equals("11.00")){endtime = "11.00";}
+        else if(starttime.equals("11.30")){endtime = "11.30";}
+        else if(starttime.equals("12.00")){endtime = "12.00";}
+        else if(starttime.equals("12.30")){endtime = "12.30";}
+        else if(starttime.equals("13.00")){endtime = "14.00";}
+        else if(starttime.equals("13.30")){endtime = "13.30";}
+        else if(starttime.equals("14.00")){endtime = "14.00";}
+        else if(starttime.equals("14.30")){endtime = "14.30";}
         else if(starttime.equals("15.00")){endtime = "15.00";}
-        else if(starttime.equals("15.30")){endtime = "15.30";}else if(starttime.equals("16.00")){endtime = "16.00";}else{endtime = "16.30";}
+        else if(starttime.equals("15.30")){endtime = "15.30";}
+        else if(starttime.equals("16.00")){endtime = "16.00";}
+        else{endtime = "16.30";}
 
         bookMeetingRoom.setStatusbooking("Not Checkin");
         bookMeetingRoom.setLatetime(30);
         bookMeetingRoom.setLate("late");
         bookMeetingRoom.setLengthtime(1);
         bookMeetingRoom.setEndtime(endtime);
+        bookMeetingRoom.setCheckoutby("Checkoutsys");
+        bookMeetingRoom.setCheckouttime(getHourCurrent() + ":" +getMinuteCurrent());
+        bookMeetingRoom.setUpdate_by("Updatebysys");
+        bookMeetingRoom.setUpdate_date(new Date());
         bookMeetingRoomRepository.save(bookMeetingRoom);
         return bookMeetingRoom;
     }
@@ -88,27 +103,37 @@ public class BookMeetingRoomController {
         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findByDateBookMeetingRoomAndRoomnameAndStarttimeAndIsActive(dateBookMeetingRoom,roomname1,starttime,"1");
         bookMeetingRoom.setCheckoutby("Checkoutsys");
         bookMeetingRoom.setCheckouttime(bookMeetingRoom.getEndtime());
-
+        bookMeetingRoom.setUpdate_by("Updatesys");
+        Date date = new Date();
+        bookMeetingRoom.setUpdate_date(date);
         bookMeetingRoom.setStatusbooking("Checkout");
         bookMeetingRoomRepository.save(bookMeetingRoom);
         return bookMeetingRoom;
     }
+
 
     @PostMapping(path = "/bookrepeat/{id_book}")
     public BookMeetingRoom checkoutbysys(@PathVariable Long id_book) {
         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(id_book).get();
         bookMeetingRoom.setStatusbooking("Not booking");
         bookMeetingRoom.setIsActive("0");
+        bookMeetingRoom.setUpdate_by("Updatesys");
+        bookMeetingRoom.setUpdate_date(new Date());
+        bookMeetingRoom.setCheckoutby("Checkoutsys");
+        bookMeetingRoom.setCheckouttime(getHourCurrent()+":"+getMinuteCurrent());
         bookMeetingRoomRepository.save(bookMeetingRoom);
 
         Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
         report.setIsActive("0");
+        report.setUpdate_by("Updatesys");
+        report.setUpdate_date(new Date());
+
         reportRepository.save(report);
         return bookMeetingRoom;
     }
 
 
-
+ //8888888888888888888888888888888888888
 
     @PostMapping(path = "/Addroom/{firstname}/{roomname}")
     public Roomname AddRoom(@PathVariable String firstname, @PathVariable String roomname) {
@@ -182,7 +207,7 @@ public class BookMeetingRoomController {
         bookMeetingRoom.setUpdate_date(date);
         bookMeetingRoom.setUpdate_by(firstname);
         bookMeetingRoom.setCheckintime(checkintime);
-        bookMeetingRoom.setCheckinby("user");
+        bookMeetingRoom.setCheckinby("Checkinusr");
         bookMeetingRoomRepository.save(bookMeetingRoom);
         Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
         report.setUpdate_by(firstname);
@@ -197,8 +222,7 @@ public class BookMeetingRoomController {
     public BookMeetingRoom checkout(@PathVariable String firstname,@PathVariable String dateBookMeetingRoom, @PathVariable Long roomname, @PathVariable String starttime
             , @PathVariable int hour, @PathVariable int minute, @PathVariable String checkouttime) {
         String endtime2;
-        System.out.println(starttime);
-        System.out.println(hour+""+minute);
+
 
         if(hour == 8 && minute <= 30){
             endtime2 = "08.00";
@@ -300,6 +324,8 @@ public class BookMeetingRoomController {
         bookMeetingRoom.setTopic(topic);
         bookMeetingRoom.setAttendees(atten);
         bookMeetingRoom.setRemark(remark);
+        bookMeetingRoom.setCheckinby("Checkinusr");
+        bookMeetingRoom.setCheckintime(getHourCurrent()+":"+getMinuteCurrent());
         Date date1 = new Date();
         int length = convertLengthTime(fromtime,totime);
 
@@ -327,7 +353,7 @@ public class BookMeetingRoomController {
 
         int yearSplit = Integer.valueOf(dateSplit[2]) ;
         String fullPatternyear = dateSplit[0] + '-' + dateSplit[1] + '-' + String.valueOf(yearSplit);
-        System.out.println(fullPatternyear);
+
         Date date2=formatter2.parse(fullPatternyear);
         report.setDateBook(date2);
         report.setIsActive("1");

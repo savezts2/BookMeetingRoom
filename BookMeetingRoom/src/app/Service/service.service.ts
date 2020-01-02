@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class ServiceService {
 
 public API = '//localhost:8080';   //for test
-  //public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
+//public API = 'http://172.27.209.27:8080/BookMeetingRoom';  //for build
 
   constructor( private http: HttpClient ) { }
 

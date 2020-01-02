@@ -32,7 +32,7 @@ public class Users {
 
     private String position;
 
-    private String status;
+    private String role;
 
     private Date update_date;
     private Date create_date;
@@ -103,12 +103,13 @@ public class Users {
         this.position = position;
     }
 
-    public String getStatus() {
-        return status;
+
+    public String getRole() {
+        return role;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setRole(String role) {
+        this.role = role;
     }
 
     public String getIsActive() {

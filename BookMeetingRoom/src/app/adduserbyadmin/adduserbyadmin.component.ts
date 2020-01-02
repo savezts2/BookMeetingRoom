@@ -31,7 +31,7 @@ departments : Array<any>;
 positions : Array<any>;
 roles : Array<any>;
 public API = '//localhost:8080';   //for test
-//public API = 'http://192.168.1.47:8080/BookMeetingRoom';  //for build
+  //public API = 'http://172.27.209.27:8080/BookMeetingRoom';  //for build
 firstFormGroup: FormGroup;
 
 constructor( public authService : AuthService,private router: Router , private service : ServiceService, private http: HttpClient,private  _formBuilder: FormBuilder) {
@@ -107,7 +107,7 @@ submit(){
 
               }else{
 
-                  this.http.post(this.API + '/Adduser/'+this.firstFormGroup.get('username').value +'/' + this.firstFormGroup.get('lastname').value +'/' +
+                  this.http.post(this.API + '/Adduser/'+localStorage.getItem('nameid')+'/'+this.firstFormGroup.get('username').value +'/' + this.firstFormGroup.get('lastname').value +'/' +
                  this.firstFormGroup.get('department').value + '/' + this.firstFormGroup.get('position').value + '/' + this.firstFormGroup.get('userid').value+ '/' + this.firstFormGroup.get('password').value+ '/' + this.firstFormGroup.get('status').value,{})
                              .subscribe(
                                data => {
