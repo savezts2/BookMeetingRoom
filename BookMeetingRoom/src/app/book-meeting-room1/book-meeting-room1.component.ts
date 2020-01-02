@@ -47,7 +47,7 @@ isLoginSubject = new BehaviorSubject<boolean>(false);
     serializedDate = new FormControl((new Date()).toISOString());
 
     today=new Date();
-    maxDate = new Date(new Date().getFullYear(),new Date().getMonth()+1,new Date().getDate() == 31 ? 31 : 31);
+    maxDate = new Date(new Date().getFullYear(),new Date().getMonth()+2,new Date().getDate());
 
     CurrentTime: any;
     days: any;

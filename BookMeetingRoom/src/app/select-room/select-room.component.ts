@@ -1657,7 +1657,7 @@ dateShow(datefull){
         fromtimesplit = totime.split(".");
         this.time1 = totimesplit[0]+""+totimesplit[1];
         this.time2 = fromtimesplit[0]+""+fromtimesplit[1];
-
+        let datestringeiei = new Date().getDate() < 10 ? '0'+new Date().getDate() : new Date().getDate();
          if(this.time3.getMinutes() < 10 ){
               this.time4 = this.time3.getHours().toString() +"0"+ this.time3.getMinutes().toString();
           }else{
@@ -1666,9 +1666,10 @@ dateShow(datefull){
 
       //  console.log( this.time4, this.time2);
        this.service.getBookMeetingRoom(this.datefull.datefull,room,time).subscribe(data=>{
+
               if(data == null){
                   if(localStorage.getItem('tokenidadmin') == "JWT"){
-                         if(parseInt(this.time4) >= parseInt(this.time2) && new Date().getDate().toString() == this.day){
+                         if(parseInt(this.time4) >= parseInt(this.time2) && datestringeiei == this.day){
                           alert("This time has passed");
                          }else{
 
@@ -1682,7 +1683,7 @@ dateShow(datefull){
 
                   else if(localStorage.getItem('nameid') == username){
 
-                          if(parseInt(this.time4) >= parseInt(this.time2) && new Date().getDate().toString() == this.day){
+                          if(parseInt(this.time4) >= parseInt(this.time2) && datestringeiei == this.day){
                           alert("This time has passed");
                          }else{
 
@@ -1699,7 +1700,7 @@ dateShow(datefull){
                   }
               }else{
                   if(localStorage.getItem('tokenidadmin') == "JWT"){
-                         if(parseInt(this.time4) >= parseInt(this.time2) && new Date().getDate().toString() == this.day){
+                         if(parseInt(this.time4) >= parseInt(this.time2) && datestringeiei == this.day){
                           alert("This time has passed");
                          }else{
 
@@ -1713,7 +1714,7 @@ dateShow(datefull){
 
                   else if(localStorage.getItem('nameid') == username){
 
-                          if(parseInt(this.time4) >= parseInt(this.time2) && new Date().getDate().toString() == this.day){
+                          if(parseInt(this.time4) >= parseInt(this.time2) && datestringeiei == this.day){
                           alert("This time has passed");
                          }else{
 

@@ -97,7 +97,7 @@
             <label>Topic :
               <mat-form-field>
 
-                <input matInput formControlName="topic" required placeholder=" ">
+                <input matInput formControlName="topic" required placeholder=" " onkeypress='return event.charCode > 47 || event.charCode < 47'>
 
               </mat-form-field>
             </label>
@@ -218,7 +218,7 @@
             <label>Remark :
               <mat-form-field>
 
-                <input matInput formControlName="remark" >
+                <input matInput formControlName="remark" onkeypress='return event.charCode > 47 || event.charCode < 47'>
 
               </mat-form-field>
             </label>

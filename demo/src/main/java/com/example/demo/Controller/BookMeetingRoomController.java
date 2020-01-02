@@ -54,6 +54,8 @@ public class BookMeetingRoomController {
         bookMeetingRoom.setStatusbooking("Not Checkin");
         bookMeetingRoom.setLatetime(15);
         bookMeetingRoom.setLate("late");
+        bookMeetingRoom.setUpdate_date(new Date());
+        bookMeetingRoom.setUpdate_by("Updatesys");
         bookMeetingRoomRepository.save(bookMeetingRoom);
         return bookMeetingRoom;
     }
@@ -87,6 +89,8 @@ public class BookMeetingRoomController {
         bookMeetingRoom.setLatetime(30);
         bookMeetingRoom.setLate("late");
         bookMeetingRoom.setLengthtime(1);
+        bookMeetingRoom.setUpdate_date(new Date());
+        bookMeetingRoom.setUpdate_by("Updatesys");
         bookMeetingRoom.setEndtime(endtime);
         bookMeetingRoom.setCheckoutby("Checkoutsys");
         int minutess = Integer.valueOf(getMinuteCurrent());
