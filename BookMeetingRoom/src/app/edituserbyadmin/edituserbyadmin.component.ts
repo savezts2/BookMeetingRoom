@@ -42,8 +42,8 @@ departments : Array<any>;
 positions : Array<any>;
 roles : Array<any>;
 
-public API = '//localhost:8080/';   //for test
-//public API = 'http://172.27.209.27:8080/BookMeetingRoom';  //for build
+//public API = '//localhost:8080/';   //for test
+public API = 'http://172.27.209.27:8080/BookMeetingRoom';  //for build
 
 username: String;
   constructor(public authService : AuthService, private route:ActivatedRoute, private service : ServiceService,private http: HttpClient,

@@ -50,8 +50,8 @@
   spiner : boolean = false;
   in : any ;
   nameuser : string;
-  public API = '//localhost:8080';   //for test
-  //public API = 'http://172.27.209.27:8080/BookMeetingRoom'; //for build
+ // public API = '//localhost:8080';   //for test
+  public API = 'http://172.27.209.27:8080/BookMeetingRoom'; //for build
 
     constructor(public authService : AuthService , private router: Router , private service : ServiceService,public dialog: MatDialog,
     @Inject(MAT_DIALOG_DATA) public data: DialogData, public dialogRef: MatDialogRef<EditbookComponent>, private http: HttpClient,

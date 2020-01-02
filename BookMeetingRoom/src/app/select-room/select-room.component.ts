@@ -71,8 +71,8 @@ dt2 : any;
 timehour : string;
 timeminute : string;
 fulltime : string;
-    public API = '//localhost:8080';  //for test
-//public API = 'http://172.27.209.27:8080/BookMeetingRoom';  //for build
+   // public API = '//localhost:8080';  //for test
+public API = 'http://172.27.209.27:8080/BookMeetingRoom';  //for build
 
 dateshow : String;
 today=new Date();
