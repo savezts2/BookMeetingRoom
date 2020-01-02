@@ -49,6 +49,7 @@ nameuser : string;
 timehour : string;
 timeminute : string;
 fulltime : string;
+in : any;
   constructor(public authService : AuthService , private router: Router , private service : ServiceService,public dialog: MatDialog,
   @Inject(MAT_DIALOG_DATA) public data: DialogData, public dialogRef: MatDialogRef<EditordeletebookComponent>, private http: HttpClient) {
       this.isLoggedIn = authService.isLoggedIn();
@@ -57,7 +58,7 @@ fulltime : string;
 
 
 
-          setInterval(() => {
+         this.in =  setInterval(() => {
 this.service.getHourCurrent().subscribe(data=>{
     this.timehour = data.toString();
 
@@ -84,6 +85,13 @@ this.service.getMinuteCurrent().subscribe(data=>{
   ngOnInit() {
     this.nameuser = localStorage.getItem('nameid');
   }
+
+ngOnDestroy() {
+  if(this.in){
+      clearInterval(this.in);
+  }
+
+}
 
 checkin(){
   let totimesplit: Array<string>;
@@ -119,7 +127,7 @@ checkin(){
 
 
   }else{
-
+      console.log(this.fulltime.substring(0,2)+':'+this.fulltime.substring(3,5));
      this.http.post(this.API + '/CheckIn/'+this.nameuser+'/'+this.data.date+'/'+this.data.room+'/'+this.data.time+'/'+
      this.fulltime.substring(0,2)+':'+this.fulltime.substring(3,5),{})
                              .subscribe(
