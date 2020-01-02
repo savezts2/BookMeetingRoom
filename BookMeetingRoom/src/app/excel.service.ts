@@ -7,6 +7,8 @@ const EXCEL_EXTENSION = '.xlsx';
 providedIn: 'root'
 })
 export class ExcelService {
+month : number;
+monthstring : string;
 constructor() { }
 public exportAsExcelFile(json: any[], excelFileName: string): void {
   const worksheet: XLSX.WorkSheet = XLSX.utils.json_to_sheet(json);
@@ -16,6 +18,10 @@ public exportAsExcelFile(json: any[], excelFileName: string): void {
 }
 private saveAsExcelFile(buffer: any, fileName: string): void {
    const data: Blob = new Blob([buffer], {type: EXCEL_TYPE});
-   FileSaver.saveAs(data, fileName + '_export_' + new Date().getDate()  + '-' + new Date().getMonth() + '-' + new Date().getFullYear());
+
+    this.month = new Date().getMonth()+1;
+    this.monthstring =  this.month.toString();
+
+   FileSaver.saveAs(data, fileName + '_export_' + new Date().getDate()  + '-'  +this.monthstring+ '-' + new Date().getFullYear());
 }
 }

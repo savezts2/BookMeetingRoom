@@ -89,7 +89,15 @@ public class BookMeetingRoomController {
         bookMeetingRoom.setLengthtime(1);
         bookMeetingRoom.setEndtime(endtime);
         bookMeetingRoom.setCheckoutby("Checkoutsys");
-        bookMeetingRoom.setCheckouttime(getHourCurrent() + ":" +getMinuteCurrent());
+        int minutess = Integer.valueOf(getMinuteCurrent());
+        String min ;
+        if(minutess < 10){
+            min = "0"+minutess;
+        }else{
+            min = String.valueOf(minutess);
+        }
+
+        bookMeetingRoom.setCheckouttime(getHourCurrent() + ":" +min);
         bookMeetingRoom.setUpdate_by("Updatebysys");
         bookMeetingRoom.setUpdate_date(new Date());
         bookMeetingRoomRepository.save(bookMeetingRoom);
@@ -120,7 +128,14 @@ public class BookMeetingRoomController {
         bookMeetingRoom.setUpdate_by("Updatesys");
         bookMeetingRoom.setUpdate_date(new Date());
         bookMeetingRoom.setCheckoutby("Checkoutsys");
-        bookMeetingRoom.setCheckouttime(getHourCurrent()+":"+getMinuteCurrent());
+        int minutess = Integer.valueOf(getMinuteCurrent());
+        String min ;
+        if(minutess < 10){
+            min = "0"+minutess;
+        }else{
+            min = String.valueOf(minutess);
+        }
+        bookMeetingRoom.setCheckouttime(getHourCurrent()+":"+min);
         bookMeetingRoomRepository.save(bookMeetingRoom);
 
         Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
@@ -206,7 +221,14 @@ public class BookMeetingRoomController {
         bookMeetingRoom.setStatusbooking("Checkin");
         bookMeetingRoom.setUpdate_date(date);
         bookMeetingRoom.setUpdate_by(firstname);
-        bookMeetingRoom.setCheckintime(checkintime);
+        int minutess = Integer.valueOf(getMinuteCurrent());
+        String min ;
+        if(minutess < 10){
+            min = "0"+minutess;
+        }else{
+            min = String.valueOf(minutess);
+        }
+        bookMeetingRoom.setCheckintime(getHourCurrent()+":"+min);
         bookMeetingRoom.setCheckinby("Checkinusr");
         bookMeetingRoomRepository.save(bookMeetingRoom);
         Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
@@ -325,7 +347,14 @@ public class BookMeetingRoomController {
         bookMeetingRoom.setAttendees(atten);
         bookMeetingRoom.setRemark(remark);
         bookMeetingRoom.setCheckinby("Checkinusr");
-        bookMeetingRoom.setCheckintime(getHourCurrent()+":"+getMinuteCurrent());
+        int minutess = Integer.valueOf(getMinuteCurrent());
+        String min ;
+        if(minutess < 10){
+            min = "0"+minutess;
+        }else{
+            min = String.valueOf(minutess);
+        }
+        bookMeetingRoom.setCheckintime(getHourCurrent()+":"+min);
         Date date1 = new Date();
         int length = convertLengthTime(fromtime,totime);
 

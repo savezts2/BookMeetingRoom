@@ -167,7 +167,7 @@ exportexcel(): void{
   for(let i = 0 ; i < this.report2.length ; i++){
 
         bookMeetingRoom.push({Book_By : this.report2[i].bookMeetingRoom.create_by,
-        Book_Date : this.report2[i].bookMeetingRoom.create_date ,
+        Book_Date : this.report2[i].bookMeetingRoom.create_date.substring(8,10)+'/'+this.report2[i].bookMeetingRoom.create_date.substring(5,7)+'/'+this.report2[i].bookMeetingRoom.create_date.substring(0,4) ,
          Meeting_Room : this.report2[i].bookMeetingRoom.roomname.roomnames,
         Start_Time : this.report2[i].bookMeetingRoom.starttime.substring(0,2)+':'+ this.report2[i].bookMeetingRoom.starttime.substring(3,5),
          End_Time : this.report2[i].bookMeetingRoom.endtime.substring(0,2)+':'+ this.report2[i].bookMeetingRoom.endtime.substring(3,5),
