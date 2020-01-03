@@ -18,14 +18,19 @@
       </i>&nbsp;Book Meeting Room</button>
 
       <button mat-button *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)"  routerLink="/dashboard"
-              class="but" style="color:white; font-family: 'Libre Franklin', sans-serif;"><i class="material-icons">
+              class="but" style="text-align: left;color:white; font-family: 'Libre Franklin', sans-serif;"><i class="material-icons">
         dashboard
       </i> &nbsp;Dashboard</button>
 
-      <mat-accordion *ngIf="(isLoggedInAdmin | async)" style="text-align:center; color:white; font-family: 'Libre Franklin', sans-serif;">
+      <button mat-button  routerLink="/addroom"  *ngIf="(isLoggedInHR | async)"
+              class="but" style="text-align: left;color:white; font-family: 'Libre Franklin', sans-serif;"><i class="material-icons">
+        add_circle_outline
+      </i> Add Meeting Room</button>
+
+      <mat-accordion *ngIf="(isLoggedInAdmin | async)" style=" color:white; font-family: 'Libre Franklin', sans-serif;">
         <mat-expansion-panel style="background-color: rgb(0, 176, 80); color:white; font-family: 'Libre Franklin', sans-serif;">
           <mat-expansion-panel-header class="but">
-            <mat-panel-title style="text-align:center; color:white"><i class="material-icons">
+            <mat-panel-title style=" color:white"><i class="material-icons">
               perm_data_setting
             </i>
               &nbsp; Admin
@@ -33,8 +38,8 @@
 
           </mat-expansion-panel-header >
 
-          <button mat-button  routerLink="/systemadmin" class="but" style="font-family: 'Libre Franklin', sans-serif;">System Admin</button>
-          <button mat-button  routerLink="/addroom" class="but" style="font-family: 'Libre Franklin', sans-serif;">Add Meeting Room</button>
+          <button mat-button  routerLink="/systemadmin" class="but" style="text-align : left;font-size: 17px;font-family: 'Libre Franklin', sans-serif;">- System Admin</button>
+          <button mat-button  routerLink="/addroom" class="but" style=" text-align : left;font-size: 17px;font-family: 'Libre Franklin', sans-serif;">- Add Meeting Room</button>
         </mat-expansion-panel>
 
       </mat-accordion>

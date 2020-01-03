@@ -35,8 +35,8 @@ isLoggedIn : Observable<boolean>;
 isLoggedInAdmin : Observable<boolean>;
 isLoggedInHR : Observable<boolean>;
 
-//public API = '//localhost:8080';   //for test
-public API = 'http://172.27.209.27:8080/BookMeetingRoom';  //for build
+public API = '//localhost:8080';   //for test
+//public API = 'http://172.27.209.27:8080/BookMeetingRoom';  //for build
 
   constructor(public authService : AuthService, private route:ActivatedRoute, private service : ServiceService,private http: HttpClient,
 private router: Router,private _formBuilder: FormBuilder, @Inject(MAT_DIALOG_DATA) public data: DialogData, public dialogRef: MatDialogRef<DeleteuserbyadminComponent>) {

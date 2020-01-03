@@ -455,494 +455,248 @@ public class BookMeetingRoomController {
         toback = totime.substring(3,5);
 
 
-        if(from.equals("08")  && to.equals("08")){
-            if(fromback.equals("30") && toback.equals("30")){
-                length = 1 ;
-            }else if(fromback.equals("00") && toback.equals("00")){
-                length = 1 ;
-            }else{
-                length = 2 ;
-            }
-        }else if(from.equals("08")  && to.equals("09")){
-            if(fromback.equals("00") && toback.equals("00")){
-                length = 3 ;
-            }else if(fromback.equals("00") && toback.equals("30")){
-                length = 4 ;
-            }else if(fromback.equals("30") && toback.equals("00")){
-                length = 2;
-            }else{
-                length = 3;
-            }
+        if(from.equals("08")  && to.equals("09")){
+                length = 1;
         }else if(from.equals("08")  && to.equals("10")){
-            if(fromback.equals("00") && toback.equals("00")){
-                length = 5 ;
-            }else if(fromback.equals("00") && toback.equals("30")){
-                length = 6 ;
-            }else if(fromback.equals("30") && toback.equals("00")){
-                length = 4;
-            }else{
-                length = 5;
-            }
+                length = 2;
         }else if(from.equals("08")  && to.equals("11")){
-            if(fromback.equals("00") && toback.equals("00")){
-                length = 7 ;
-            }else if(fromback.equals("00") && toback.equals("30")){
-                length = 8 ;
-            }else if(fromback.equals("30") && toback.equals("00")){
-                length = 6;
-            }else{
-                length = 7;
-            }
+                length = 3;
         }else if(from.equals("08")  && to.equals("12")){
-            if(fromback.equals("00") && toback.equals("00")){
-                length = 9 ;
-            }else if(fromback.equals("00") && toback.equals("30")){
-                length = 10 ;
-            }else if(fromback.equals("30") && toback.equals("00")){
-                length = 8;
-            }else{
-                length = 9;
-            }
+                length = 4;
         }else if(from.equals("08")  && to.equals("13")){
-            if(fromback.equals("00") && toback.equals("00")){
-                length = 11 ;
-            }else if(fromback.equals("00") && toback.equals("30")){
-                length = 12 ;
-            }else if(fromback.equals("30") && toback.equals("00")){
-                length = 10;
-            }else{
-                length = 11;
-            }
+                length = 5;
         }else if(from.equals("08")  && to.equals("14")){
-            if(fromback.equals("00") && toback.equals("00")){
-                length = 13 ;
-            }else if(fromback.equals("00") && toback.equals("30")){
-                length = 14 ;
-            }else if(fromback.equals("30") && toback.equals("00")){
-                length = 12;
-            }else{
-                length = 13;
-            }
+                length = 6;
         }else if(from.equals("08")  && to.equals("15")){
-            if(fromback.equals("00") && toback.equals("00")){
-                length = 15 ;
-            }else if(fromback.equals("00") && toback.equals("30")){
-                length = 16 ;
-            }else if(fromback.equals("30") && toback.equals("00")){
-                length = 14;
-            }else{
-                length = 15;
-            }
+                length = 7;
         }else if(from.equals("08")  && to.equals("16")){
-            if(fromback.equals("00") && toback.equals("00")){
-                length = 17 ;
-            }else if(fromback.equals("00") && toback.equals("30")){
-                length = 18 ;
-            }else if(fromback.equals("30") && toback.equals("00")){
-                length = 16;
-            }else{
-                length = 17;
-            }
+                length = 8;
         }else if(from.equals("08")  && to.equals("17")){
-            if(fromback.equals("00") && toback.equals("00")){
-                length = 19 ;
-            }else if(fromback.equals("30") && toback.equals("00")){
-                length = 18 ;
-            }
-        }else if(from.equals("09")  && to.equals("09")){
-            if(fromback.equals("30") && toback.equals("30")){
-                length = 1;
-            }else if(fromback.equals("00") && toback.equals("00")){
-                length = 1 ;
-            }else{
-                length = 2 ;
-            }
-        }else if(from.equals("09")  && to.equals("10")){
-            if(fromback.equals("00") && toback.equals("00")){
-                length = 3 ;
-            }else if(fromback.equals("00") && toback.equals("30")){
-                length = 4 ;
-            }else if(fromback.equals("30") && toback.equals("00")){
-                length = 2;
-            }else{
-                length = 3;
-            }
+            length = 9;
+        }else if(from.equals("08")  && to.equals("18")){
+            length = 10;
+        }else if(from.equals("08")  && to.equals("19")){
+            length = 11;
+        }else if(from.equals("08")  && to.equals("20")){
+            length = 12;
+        }else if(from.equals("08")  && to.equals("21")){
+            length = 13;
+        }else if(from.equals("08")  && to.equals("22")){
+            length = 14;
+        }
+
+
+        else if(from.equals("09")  && to.equals("10")){
+            length = 1;
         }else if(from.equals("09")  && to.equals("11")){
-            if(fromback.equals("00") && toback.equals("00")){
-                length = 5 ;
-            }else if(fromback.equals("00") && toback.equals("30")){
-                length = 6 ;
-            }else if(fromback.equals("30") && toback.equals("00")){
-                length = 4;
-            }else{
-                length = 5;
-            }
+            length = 2;
         }else if(from.equals("09")  && to.equals("12")){
-            if(fromback.equals("00") && toback.equals("00")){
-                length = 7 ;
-            }else if(fromback.equals("00") && toback.equals("30")){
-                length = 8 ;
-            }else if(fromback.equals("30") && toback.equals("00")){
-                length = 6;
-            }else{
-                length = 7;
-            }
+            length = 3;
         }else if(from.equals("09")  && to.equals("13")){
-            if(fromback.equals("00") && toback.equals("00")){
-                length = 9 ;
-            }else if(fromback.equals("00") && toback.equals("30")){
-                length = 10 ;
-            }else if(fromback.equals("30") && toback.equals("00")){
-                length = 8;
-            }else{
-                length = 9;
-            }
+            length = 4;
         }else if(from.equals("09")  && to.equals("14")){
-            if(fromback.equals("00") && toback.equals("00")){
-                length = 11 ;
-            }else if(fromback.equals("00") && toback.equals("30")){
-                length = 12 ;
-            }else if(fromback.equals("30") && toback.equals("00")){
-                length = 10;
-            }else{
-                length = 11;
-            }
+            length = 5;
         }else if(from.equals("09")  && to.equals("15")){
-            if(fromback.equals("00") && toback.equals("00")){
-                length = 13 ;
-            }else if(fromback.equals("00") && toback.equals("30")){
-                length = 14 ;
-            }else if(fromback.equals("30") && toback.equals("00")){
-                length = 12;
-            }else{
-                length = 13;
-            }
+            length = 6;
         }else if(from.equals("09")  && to.equals("16")){
-            if(fromback.equals("00") && toback.equals("00")){
-                length = 15 ;
-            }else if(fromback.equals("00") && toback.equals("30")){
-                length = 16 ;
-            }else if(fromback.equals("30") && toback.equals("00")){
-                length = 14;
-            }else{
-                length = 15;
-            }
+            length = 7;
         }else if(from.equals("09")  && to.equals("17")){
-            if (fromback.equals("00") && toback.equals("00")) {
-                length = 17;
-            } else if (fromback.equals("30") && toback.equals("00")) {
-                length = 16;
-            }
-        }else if(from.equals("10")  && to.equals("10")){
-            if(fromback.equals("30") && toback.equals("30")){
-                length = 1;
-            }else if(fromback.equals("00") && toback.equals("00")){
-                length = 1 ;
-            }else{
-                length = 2 ;
-            }
-        }else if(from.equals("10")  && to.equals("11")){
-            if(fromback.equals("00") && toback.equals("00")){
-                length = 3 ;
-            }else if(fromback.equals("00") && toback.equals("30")){
-                length = 4 ;
-            }else if(fromback.equals("30") && toback.equals("00")){
-                length = 2;
-            }else{
-                length = 3;
-            }
+            length = 8;
+        }else if(from.equals("09")  && to.equals("18")){
+            length = 9;
+        }else if(from.equals("09")  && to.equals("19")){
+            length = 10;
+        }else if(from.equals("09")  && to.equals("20")){
+            length = 11;
+        }else if(from.equals("09")  && to.equals("21")){
+            length = 12;
+        }else if(from.equals("09")  && to.equals("22")) {
+            length = 13;
+        }
+
+
+        else if(from.equals("10")  && to.equals("11")){
+            length = 1;
         }else if(from.equals("10")  && to.equals("12")){
-            if(fromback.equals("00") && toback.equals("00")){
-                length = 5 ;
-            }else if(fromback.equals("00") && toback.equals("30")){
-                length = 6 ;
-            }else if(fromback.equals("30") && toback.equals("00")){
-                length = 4;
-            }else{
-                length = 5;
-            }
+            length = 2;
         }else if(from.equals("10")  && to.equals("13")){
-            if(fromback.equals("00") && toback.equals("00")){
-                length = 7 ;
-            }else if(fromback.equals("00") && toback.equals("30")){
-                length = 8 ;
-            }else if(fromback.equals("30") && toback.equals("00")){
-                length = 6;
-            }else{
-                length = 7;
-            }
+            length = 3;
         }else if(from.equals("10")  && to.equals("14")){
-            if(fromback.equals("00") && toback.equals("00")){
-                length = 9 ;
-            }else if(fromback.equals("00") && toback.equals("30")){
-                length = 10 ;
-            }else if(fromback.equals("30") && toback.equals("00")){
-                length = 8;
-            }else{
-                length = 9;
-            }
+            length = 4;
         }else if(from.equals("10")  && to.equals("15")){
-            if(fromback.equals("00") && toback.equals("00")){
-                length = 11 ;
-            }else if(fromback.equals("00") && toback.equals("30")){
-                length = 12 ;
-            }else if(fromback.equals("30") && toback.equals("00")){
-                length = 10;
-            }else{
-                length = 11;
-            }
+            length = 5;
         }else if(from.equals("10")  && to.equals("16")){
-            if(fromback.equals("00") && toback.equals("00")){
-                length = 13 ;
-            }else if(fromback.equals("00") && toback.equals("30")){
-                length = 14 ;
-            }else if(fromback.equals("30") && toback.equals("00")){
-                length = 12;
-            }else{
-                length = 13;
-            }
+            length = 6;
         }else if(from.equals("10")  && to.equals("17")){
-            if (fromback.equals("00") && toback.equals("00")) {
-                length = 15;
-            } else if (fromback.equals("30") && toback.equals("00")) {
-                length = 14;
-            }
-        }else if(from.equals("11")  && to.equals("11")){
-            if(fromback.equals("30") && toback.equals("30")){
-                length = 1;
-            }else if(fromback.equals("00") && toback.equals("00")){
-                length = 1 ;
-            }else{
-                length = 2 ;
-            }
-        }else if(from.equals("11")  && to.equals("12")){
-            if(fromback.equals("00") && toback.equals("00")){
-                length = 3 ;
-            }else if(fromback.equals("00") && toback.equals("30")){
-                length = 4 ;
-            }else if(fromback.equals("30") && toback.equals("00")){
-                length = 2;
-            }else{
-                length = 3;
-            }
+            length = 7;
+        }else if(from.equals("10")  && to.equals("18")){
+            length = 8;
+        }else if(from.equals("10")  && to.equals("19")){
+            length = 9;
+        }else if(from.equals("10")  && to.equals("20")){
+            length = 10;
+        }else if(from.equals("10")  && to.equals("21")){
+            length = 11;
+        }else if(from.equals("10")  && to.equals("22")){
+            length = 12;
+        }
+
+
+        else if(from.equals("11")  && to.equals("12")){
+            length = 1;
         }else if(from.equals("11")  && to.equals("13")){
-            if(fromback.equals("00") && toback.equals("00")){
-                length = 5 ;
-            }else if(fromback.equals("00") && toback.equals("30")){
-                length = 6 ;
-            }else if(fromback.equals("30") && toback.equals("00")){
-                length = 4;
-            }else{
-                length = 5;
-            }
+            length = 2;
         }else if(from.equals("11")  && to.equals("14")){
-            if(fromback.equals("00") && toback.equals("00")){
-                length = 7 ;
-            }else if(fromback.equals("00") && toback.equals("30")){
-                length = 8 ;
-            }else if(fromback.equals("30") && toback.equals("00")){
-                length = 6;
-            }else{
-                length = 7;
-            }
+            length = 3;
         }else if(from.equals("11")  && to.equals("15")){
-            if(fromback.equals("00") && toback.equals("00")){
-                length = 9 ;
-            }else if(fromback.equals("00") && toback.equals("30")){
-                length = 10 ;
-            }else if(fromback.equals("30") && toback.equals("00")){
-                length = 8;
-            }else{
-                length = 9;
-            }
+            length = 4;
         }else if(from.equals("11")  && to.equals("16")){
-            if(fromback.equals("00") && toback.equals("00")){
-                length = 11 ;
-            }else if(fromback.equals("00") && toback.equals("30")){
-                length = 12 ;
-            }else if(fromback.equals("30") && toback.equals("00")){
-                length = 10;
-            }else{
-                length = 11;
-            }
+            length = 5;
         }else if(from.equals("11")  && to.equals("17")){
-            if (fromback.equals("00") && toback.equals("00")) {
-                length = 13;
-            } else if (fromback.equals("30") && toback.equals("00")) {
-                length = 12;
-            }
-        }else if(from.equals("12")  && to.equals("12")){
-            if(fromback.equals("30") && toback.equals("30")){
-                length = 1;
-            }else if(fromback.equals("00") && toback.equals("00")){
-                length = 1 ;
-            }else{
-                length = 2 ;
-            }
-        }else if(from.equals("12")  && to.equals("13")){
-            if(fromback.equals("00") && toback.equals("00")){
-                length = 3 ;
-            }else if(fromback.equals("00") && toback.equals("30")){
-                length = 4 ;
-            }else if(fromback.equals("30") && toback.equals("00")){
-                length = 2;
-            }else{
-                length = 3;
-            }
+            length = 6;
+        }else if(from.equals("11")  && to.equals("18")){
+            length = 7;
+        }else if(from.equals("11")  && to.equals("19")){
+            length = 8;
+        }else if(from.equals("11")  && to.equals("20")){
+            length = 9;
+        }else if(from.equals("11")  && to.equals("21")){
+            length = 10;
+        }else if(from.equals("11")  && to.equals("22")){
+            length = 11;
+        }
+
+
+        else if(from.equals("12")  && to.equals("13")){
+            length = 1;
         }else if(from.equals("12")  && to.equals("14")){
-            if(fromback.equals("00") && toback.equals("00")){
-                length = 5 ;
-            }else if(fromback.equals("00") && toback.equals("30")){
-                length = 6 ;
-            }else if(fromback.equals("30") && toback.equals("00")){
-                length = 4;
-            }else{
-                length = 5;
-            }
+            length = 2;
         }else if(from.equals("12")  && to.equals("15")){
-            if(fromback.equals("00") && toback.equals("00")){
-                length = 7 ;
-            }else if(fromback.equals("00") && toback.equals("30")){
-                length = 8 ;
-            }else if(fromback.equals("30") && toback.equals("00")){
-                length = 6;
-            }else{
-                length = 7;
-            }
+            length = 3;
         }else if(from.equals("12")  && to.equals("16")){
-            if(fromback.equals("00") && toback.equals("00")){
-                length = 9 ;
-            }else if(fromback.equals("00") && toback.equals("30")){
-                length = 10 ;
-            }else if(fromback.equals("30") && toback.equals("00")){
-                length = 8;
-            }else{
-                length = 9;
-            }
+            length = 4;
         }else if(from.equals("12")  && to.equals("17")){
-            if (fromback.equals("00") && toback.equals("00")) {
-                length = 11;
-            } else if (fromback.equals("30") && toback.equals("00")) {
-                length = 10;
-            }
-        }else if(from.equals("13")  && to.equals("13")){
-            if(fromback.equals("30") && toback.equals("30")){
-                length = 1;
-            }else if(fromback.equals("00") && toback.equals("00")){
-                length = 1 ;
-            }else{
-                length = 2 ;
-            }
-        }else if(from.equals("13")  && to.equals("14")){
-            if(fromback.equals("00") && toback.equals("00")){
-                length = 3 ;
-            }else if(fromback.equals("00") && toback.equals("30")){
-                length = 4 ;
-            }else if(fromback.equals("30") && toback.equals("00")){
-                length = 2;
-            }else{
-                length = 3;
-            }
+            length = 5;
+        }else if(from.equals("12")  && to.equals("18")){
+            length = 6;
+        }else if(from.equals("12")  && to.equals("19")){
+            length = 7;
+        }else if(from.equals("12")  && to.equals("20")){
+            length = 8;
+        }else if(from.equals("12")  && to.equals("21")){
+            length = 9;
+        }else if(from.equals("12")  && to.equals("22")){
+            length = 10;
+        }
+
+
+        else if(from.equals("13")  && to.equals("14")){
+            length = 1;
         }else if(from.equals("13")  && to.equals("15")){
-            if(fromback.equals("00") && toback.equals("00")){
-                length = 5 ;
-            }else if(fromback.equals("00") && toback.equals("30")){
-                length = 6 ;
-            }else if(fromback.equals("30") && toback.equals("00")){
-                length = 4;
-            }else{
-                length = 5;
-            }
+            length = 2;
         }else if(from.equals("13")  && to.equals("16")){
-            if(fromback.equals("00") && toback.equals("00")){
-                length = 7 ;
-            }else if(fromback.equals("00") && toback.equals("30")){
-                length = 8 ;
-            }else if(fromback.equals("30") && toback.equals("00")){
-                length = 6;
-            }else{
-                length = 7;
-            }
+            length = 3;
         }else if(from.equals("13")  && to.equals("17")){
-            if (fromback.equals("00") && toback.equals("00")) {
-                length = 9;
-            } else if (fromback.equals("30") && toback.equals("00")) {
-                length = 8;
-            }
-        }else if(from.equals("14")  && to.equals("14")){
-            if(fromback.equals("30") && toback.equals("30")){
-                length = 1;
-            }else if(fromback.equals("00") && toback.equals("00")){
-                length = 1 ;
-            }else{
-                length = 2 ;
-            }
-        }else if(from.equals("14")  && to.equals("15")){
-            if(fromback.equals("00") && toback.equals("00")){
-                length = 3 ;
-            }else if(fromback.equals("00") && toback.equals("30")){
-                length = 4 ;
-            }else if(fromback.equals("30") && toback.equals("00")){
-                length = 2;
-            }else{
-                length = 3;
-            }
+            length = 4;
+        }else if(from.equals("13")  && to.equals("18")){
+            length = 5;
+        }else if(from.equals("13")  && to.equals("19")){
+            length = 6;
+        }else if(from.equals("13")  && to.equals("20")){
+            length = 7;
+        }else if(from.equals("13")  && to.equals("21")){
+            length = 8;
+        }else if(from.equals("13")  && to.equals("22")){
+            length = 9;
+        }
+
+
+        else if(from.equals("14")  && to.equals("15")){
+            length = 1;
         }else if(from.equals("14")  && to.equals("16")){
-            if(fromback.equals("00") && toback.equals("00")){
-                length = 5 ;
-            }else if(fromback.equals("00") && toback.equals("30")){
-                length = 6 ;
-            }else if(fromback.equals("30") && toback.equals("00")){
-                length = 4;
-            }else{
-                length = 5;
-            }
+            length = 2;
         }else if(from.equals("14")  && to.equals("17")){
-            if (fromback.equals("00") && toback.equals("00")) {
-                length = 7;
-            } else if (fromback.equals("30") && toback.equals("00")) {
-                length = 6;
-            }
-        }else if(from.equals("15")  && to.equals("15")){
-            if(fromback.equals("30") && toback.equals("30")){
-                length = 1;
-            }else if(fromback.equals("00") && toback.equals("00")){
-                length = 1 ;
-            }else{
-                length = 2 ;
-            }
-        }else if(from.equals("15")  && to.equals("16")){
-            if(fromback.equals("00") && toback.equals("00")){
-                length = 3 ;
-            }else if(fromback.equals("00") && toback.equals("30")){
-                length = 4 ;
-            }else if(fromback.equals("30") && toback.equals("00")){
-                length = 2;
-            }else{
-                length = 3;
-            }
+            length = 3;
+        }else if(from.equals("14")  && to.equals("18")){
+            length = 4;
+        }else if(from.equals("14")  && to.equals("19")){
+            length = 5;
+        }else if(from.equals("14")  && to.equals("20")){
+            length = 6;
+        }else if(from.equals("14")  && to.equals("21")){
+            length = 7;
+        }else if(from.equals("14")  && to.equals("22")){
+            length = 8;
+        }
+
+        else if(from.equals("15")  && to.equals("16")){
+            length = 1;
         }else if(from.equals("15")  && to.equals("17")){
-            if (fromback.equals("00") && toback.equals("00")) {
-                length = 5;
-            } else if (fromback.equals("30") && toback.equals("00")) {
-                length = 4;
-            }
-        }else if(from.equals("16")  && to.equals("16")){
-            if(fromback.equals("30") && toback.equals("30")){
-                length = 1;
-            }else if(fromback.equals("00") && toback.equals("00")){
-                length = 1 ;
-            }else{
-                length = 2 ;
-            }
-        }else if(from.equals("16")  && to.equals("17")){
-            if (fromback.equals("00") && toback.equals("00")) {
-                length = 3;
-            } else if (fromback.equals("30") && toback.equals("00")) {
-                length = 2;
-            }
-        }else if(from.equals("17")  && to.equals("17")){
-                length = 1 ;
+            length = 2;
+        }else if(from.equals("15")  && to.equals("18")){
+            length = 3;
+        }else if(from.equals("15")  && to.equals("19")){
+            length = 4;
+        }else if(from.equals("15")  && to.equals("20")){
+            length = 5;
+        }else if(from.equals("15")  && to.equals("21")){
+            length = 6;
+        }else if(from.equals("15")  && to.equals("22")){
+            length = 7;
+        }
+
+        else if(from.equals("16")  && to.equals("17")){
+            length = 1;
+        }else if(from.equals("16")  && to.equals("18")){
+            length = 2;
+        }else if(from.equals("16")  && to.equals("19")){
+            length = 3;
+        }else if(from.equals("16")  && to.equals("20")){
+            length = 4;
+        }else if(from.equals("16")  && to.equals("21")){
+            length = 5;
+        }else if(from.equals("16")  && to.equals("22")){
+            length = 6;
+        }
+
+        else if(from.equals("17")  && to.equals("18")){
+            length = 1;
+        }else if(from.equals("17")  && to.equals("19")){
+            length = 2;
+        }else if(from.equals("17")  && to.equals("20")){
+            length = 3;
+        }else if(from.equals("17")  && to.equals("21")){
+            length = 4;
+        }else if(from.equals("17")  && to.equals("22")){
+            length = 5;
+        }
+
+        else if(from.equals("18")  && to.equals("19")){
+            length = 1;
+        }else if(from.equals("18")  && to.equals("20")){
+            length = 2;
+        }else if(from.equals("18")  && to.equals("21")){
+            length = 3;
+        }else if(from.equals("18")  && to.equals("22")){
+            length = 4;
+        }
+
+        else if(from.equals("19")  && to.equals("20")){
+            length = 1;
+        }else if(from.equals("19")  && to.equals("21")){
+            length = 2;
+        }else if(from.equals("19")  && to.equals("22")){
+            length = 3;
+        }
+
+        else if(from.equals("20")  && to.equals("21")){
+            length = 1;
+        }else if(from.equals("20")  && to.equals("22")){
+            length = 2;
+        }
+
+        else if(from.equals("21")  && to.equals("22")){
+            length = 1;
         }
 
 

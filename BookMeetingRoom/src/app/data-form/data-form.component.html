@@ -1,272 +1,215 @@
-<html>
+
 <body class="bgimg">
 
-
-<mat-sidenav-container *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)"
+<mat-sidenav-container *ngIf="(isLoggedInAdmin | async) || (isLoggedIn | async) || (isLoggedInHR | async)"
                        class="card" (backdropClick)="close()">
+  <br/><br/>
+  <h2 align="center" style="font-family: 'Anton', sans-serif;">{{roomname}}</h2><br/>
+<form [formGroup]="secondFormGroup" autocomplete="off">
 
-  <mat-sidenav-content>
+  <div style="margin-left : 25%">
+    <div >
+      <label>From Time :
+        <mat-form-field>
+          <mat-select [(ngModel)]="fromtimeSelect" [ngModelOptions]="{standalone: true}" >
+            <mat-option value="08.00" *ngIf="this.fulltime < '08.00' ? true : false">08.00</mat-option>
+            <mat-option value="09.00" *ngIf="this.fulltime < '09.00' ? true : false">09.00</mat-option>
+            <mat-option value="10.00" *ngIf="this.fulltime < '10.00' ? true : false">10.00</mat-option>
+            <mat-option value="11.00" *ngIf="this.fulltime < '11.00' ? true : false">11.00</mat-option>
+            <mat-option value="12.00" *ngIf="this.fulltime < '12.00' ? true : false">12.00</mat-option>
+            <mat-option value="13.00" *ngIf="this.fulltime < '13.00' ? true : false">13.00</mat-option>
+            <mat-option value="14.00" *ngIf="this.fulltime < '14.00' ? true : false">14.00</mat-option>
+            <mat-option value="15.00" *ngIf="this.fulltime < '15.00' ? true : false">15.00</mat-option>
+            <mat-option value="16.00" *ngIf="this.fulltime < '16.00' ? true : false">16.00</mat-option>
+            <mat-option value="17.00" *ngIf="this.fulltime < '17.00' ? true : false">17.00</mat-option>
+            <mat-option value="18.00" *ngIf="this.fulltime < '18.00' ? true : false">18.00</mat-option>
+            <mat-option value="19.00" *ngIf="this.fulltime < '19.00' ? true : false">19.00</mat-option>
+            <mat-option value="20.00" *ngIf="this.fulltime < '20.00' ? true : false">20.00</mat-option>
+            <mat-option value="21.00" *ngIf="this.fulltime < '21.00' ? true : false">21.00</mat-option>
+            <mat-option value="22.00" *ngIf="this.fulltime < '22.00' ? true : false">22.00</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </label>
+      &nbsp; &nbsp; &nbsp; &nbsp;
+      <label>To Time :
+        <mat-form-field>
+          <mat-select required placeholder=" " formControlName="totime" >
+            <mat-option value="08.00" *ngIf="this.fromtimeSelect < '08.00' ? true : false">08.00</mat-option>
+            <mat-option value="09.00" *ngIf="this.fromtimeSelect < '09.00' ? true : false">09.00</mat-option>
+            <mat-option value="10.00" *ngIf="this.fromtimeSelect < '10.00' ? true : false">10.00</mat-option>
+            <mat-option value="11.00" *ngIf="this.fromtimeSelect < '11.00' ? true : false">11.00</mat-option>
+            <mat-option value="12.00" *ngIf="this.fromtimeSelect < '12.00' ? true : false">12.00</mat-option>
+            <mat-option value="13.00" *ngIf="this.fromtimeSelect < '13.00' ? true : false">13.00</mat-option>
+            <mat-option value="14.00" *ngIf="this.fromtimeSelect < '14.00' ? true : false">14.00</mat-option>
+            <mat-option value="15.00" *ngIf="this.fromtimeSelect < '15.00' ? true : false">15.00</mat-option>
+            <mat-option value="16.00" *ngIf="this.fromtimeSelect < '16.00' ? true : false">16.00</mat-option>
+            <mat-option value="17.00" *ngIf="this.fromtimeSelect < '17.00' ? true : false">17.00</mat-option>
+            <mat-option value="18.00" *ngIf="this.fromtimeSelect < '18.00' ? true : false">18.00</mat-option>
+            <mat-option value="19.00" *ngIf="this.fromtimeSelect < '19.00' ? true : false">19.00</mat-option>
+            <mat-option value="20.00" *ngIf="this.fromtimeSelect < '20.00' ? true : false">20.00</mat-option>
+            <mat-option value="21.00" *ngIf="this.fromtimeSelect < '21.00' ? true : false">21.00</mat-option>
+            <mat-option value="22.00" *ngIf="this.fromtimeSelect < '22.00' ? true : false">22.00</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </label></div>
+    <label>Tel. Booking By :
+      <mat-form-field>
+
+        <input matInput formControlName="tel" required placeholder=" "  onpaste="return false"
+               maxlength="10" type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57'
+        >
+
+      </mat-form-field>
+    </label>
+    &nbsp;&nbsp;
+    <label>Topic :
+      <mat-form-field>
+
+        <input matInput formControlName="topic" required placeholder=" " onkeypress='return event.charCode > 47 || event.charCode < 47' onpaste="return false">
+
+      </mat-form-field>
+    </label>
+
+  </div>
+
+
+
+  <div style="margin-left : 25%">
+    <label>Attendees :
+      <mat-form-field>
+        <mat-select required placeholder=" " formControlName="atten" >
+          <mat-option value="1">1</mat-option>
+          <mat-option value="2">2</mat-option>
+          <mat-option value="3">3</mat-option>
+          <mat-option value="4">4</mat-option>
+          <mat-option value="5">5</mat-option>
+          <mat-option value="6">6</mat-option>
+          <mat-option value="7">7</mat-option>
+          <mat-option value="8">8</mat-option>
+          <mat-option value="9">9</mat-option>
+          <mat-option value="10">10</mat-option>
+          <mat-option value="11">11</mat-option>
+          <mat-option value="12">12</mat-option>
+          <mat-option value="13">13</mat-option>
+          <mat-option value="14">14</mat-option>
+          <mat-option value="15">15</mat-option>
+          <mat-option value="16">16</mat-option>
+          <mat-option value="17">17</mat-option>
+          <mat-option value="18">18</mat-option>
+          <mat-option value="19">19</mat-option>
+          <mat-option value="20">20</mat-option>
+          <mat-option value="21">21</mat-option>
+          <mat-option value="22">22</mat-option>
+          <mat-option value="23">23</mat-option>
+          <mat-option value="24">24</mat-option>
+          <mat-option value="25">25</mat-option>
+          <mat-option value="26">26</mat-option>
+          <mat-option value="27">27</mat-option>
+          <mat-option value="28">28</mat-option>
+          <mat-option value="29">29</mat-option>
+          <mat-option value="30">30</mat-option>
+          <mat-option value="31">31</mat-option>
+          <mat-option value="32">32</mat-option>
+          <mat-option value="33">33</mat-option>
+          <mat-option value="34">34</mat-option>
+          <mat-option value="35">35</mat-option>
+          <mat-option value="36">36</mat-option>
+          <mat-option value="37">37</mat-option>
+          <mat-option value="38">38</mat-option>
+          <mat-option value="39">39</mat-option>
+          <mat-option value="40">40</mat-option>
+          <mat-option value="41">41</mat-option>
+          <mat-option value="42">42</mat-option>
+          <mat-option value="43">43</mat-option>
+          <mat-option value="44">44</mat-option>
+          <mat-option value="45">45</mat-option>
+          <mat-option value="46">46</mat-option>
+          <mat-option value="47">47</mat-option>
+          <mat-option value="48">48</mat-option>
+          <mat-option value="49">49</mat-option>
+          <mat-option value="50">50</mat-option>
+          <mat-option value="51">51</mat-option>
+          <mat-option value="52">52</mat-option>
+          <mat-option value="53">53</mat-option>
+          <mat-option value="54">54</mat-option>
+          <mat-option value="55">55</mat-option>
+          <mat-option value="56">56</mat-option>
+          <mat-option value="57">57</mat-option>
+          <mat-option value="58">58</mat-option>
+          <mat-option value="59">59</mat-option>
+          <mat-option value="60">60</mat-option>
+          <mat-option value="61">61</mat-option>
+          <mat-option value="62">62</mat-option>
+          <mat-option value="63">63</mat-option>
+          <mat-option value="64">64</mat-option>
+          <mat-option value="65">65</mat-option>
+          <mat-option value="66">66</mat-option>
+          <mat-option value="67">67</mat-option>
+          <mat-option value="68">68</mat-option>
+          <mat-option value="69">69</mat-option>
+          <mat-option value="70">70</mat-option>
+          <mat-option value="71">71</mat-option>
+          <mat-option value="72">72</mat-option>
+          <mat-option value="73">73</mat-option>
+          <mat-option value="74">74</mat-option>
+          <mat-option value="75">75</mat-option>
+          <mat-option value="76">76</mat-option>
+          <mat-option value="77">77</mat-option>
+          <mat-option value="78">78</mat-option>
+          <mat-option value="79">79</mat-option>
+          <mat-option value="80">80</mat-option>
+          <mat-option value="81">81</mat-option>
+          <mat-option value="82">82</mat-option>
+          <mat-option value="83">83</mat-option>
+          <mat-option value="84">84</mat-option>
+          <mat-option value="85">85</mat-option>
+          <mat-option value="86">86</mat-option>
+          <mat-option value="87">87</mat-option>
+          <mat-option value="88">88</mat-option>
+          <mat-option value="89">89</mat-option>
+          <mat-option value="90">90</mat-option>
+          <mat-option value="91">91</mat-option>
+          <mat-option value="92">92</mat-option>
+          <mat-option value="93">93</mat-option>
+          <mat-option value="94">94</mat-option>
+          <mat-option value="95">95</mat-option>
+          <mat-option value="96">96</mat-option>
+          <mat-option value="97">97</mat-option>
+          <mat-option value="98">98</mat-option>
+          <mat-option value="99">99</mat-option>
+          <mat-option value="100">100</mat-option>
+
+        </mat-select>
+      </mat-form-field>
+    </label>
+    &nbsp;&nbsp;
+    <label>Remark :
+      <mat-form-field>
+
+        <input matInput formControlName="remark" onkeypress='return event.charCode > 47 || event.charCode < 47' onpaste="return false">
+
+      </mat-form-field>
+    </label>
+  </div>
+
+
+
+  <div align="center">
+
+
+
+    <button class="button is-link is-outlined" (click)="SubmitData()" style="width:40%">SAVE</button>
+    <br/><br/><button class="button is-link is-outlined" (click)="back()" style="width:40%">BACK</button>
+
+
+
     <br/><br/>
-    <h2 style="text-align:center; color:#6d7fcc;">{{this.roomnameandtime.roomname}}</h2>
+    <h2 align="center" style="color:red;">*Please check the information before saving.</h2>
 
-    <mat-horizontal-stepper linear #stepper>
-
-      <mat-step [stepControl]="firstFormGroup">
-
-        <form [formGroup]="firstFormGroup">
-          <ng-template matStepLabel>Time</ng-template>
-
-          <div style="margin-left:25%;">
-            <label>From Time :
-              <mat-form-field>
-                <mat-select [(ngModel)]="fromtimeSelect" [ngModelOptions]="{standalone: true}" [disabled]="true">
-                  <mat-option value="08.00">08.00</mat-option>
-                  <mat-option value="08.30">08.30</mat-option>
-                  <mat-option value="09.00">09.00</mat-option>
-                  <mat-option value="09.30">09.30</mat-option>
-                  <mat-option value="10.00">10.00</mat-option>
-                  <mat-option value="10.30">10.30</mat-option>
-                  <mat-option value="11.00">11.00</mat-option>
-                  <mat-option value="11.30">11.30</mat-option>
-                  <mat-option value="12.00">12.00</mat-option>
-                  <mat-option value="12.30">12.30</mat-option>
-                  <mat-option value="13.00">13.00</mat-option>
-                  <mat-option value="13.30">13.30</mat-option>
-                  <mat-option value="14.00">14.00</mat-option>
-                  <mat-option value="14.30">14.30</mat-option>
-                  <mat-option value="15.00">15.00</mat-option>
-                  <mat-option value="15.30">15.30</mat-option>
-                  <mat-option value="16.00">16.00</mat-option>
-                  <mat-option value="16.30">16.30</mat-option>
-                  <mat-option value="17.00">17.00</mat-option>
-                </mat-select>
-              </mat-form-field>
-            </label>
-            &nbsp; &nbsp; &nbsp; &nbsp;
-            <label>To Time :
-              <mat-form-field>
-                <mat-select required placeholder=" " formControlName="totime" >
-                  <mat-option value="08.00" *ngIf="this.fromtimeSelect < '08.00' ? true : false">08.00</mat-option>
-                  <mat-option value="08.30" *ngIf="this.fromtimeSelect < '08.30' ? true : false">08.30</mat-option>
-                  <mat-option value="09.00" *ngIf="this.fromtimeSelect < '09.00' ? true : false">09.00</mat-option>
-                  <mat-option value="09.30" *ngIf="this.fromtimeSelect < '09.30' ? true : false">09.30</mat-option>
-                  <mat-option value="10.00" *ngIf="this.fromtimeSelect < '10.00' ? true : false">10.00</mat-option>
-                  <mat-option value="10.30" *ngIf="this.fromtimeSelect < '10.30' ? true : false">10.30</mat-option>
-                  <mat-option value="11.00" *ngIf="this.fromtimeSelect < '11.00' ? true : false">11.00</mat-option>
-                  <mat-option value="11.30" *ngIf="this.fromtimeSelect < '11.30' ? true : false">11.30</mat-option>
-                  <mat-option value="12.00" *ngIf="this.fromtimeSelect < '12.00' ? true : false">12.00</mat-option>
-                  <mat-option value="12.30" *ngIf="this.fromtimeSelect < '12.30' ? true : false">12.30</mat-option>
-                  <mat-option value="13.00" *ngIf="this.fromtimeSelect < '13.00' ? true : false">13.00</mat-option>
-                  <mat-option value="13.30" *ngIf="this.fromtimeSelect < '13.30' ? true : false">13.30</mat-option>
-                  <mat-option value="14.00" *ngIf="this.fromtimeSelect < '14.00' ? true : false">14.00</mat-option>
-                  <mat-option value="14.30" *ngIf="this.fromtimeSelect < '14.30' ? true : false">14.30</mat-option>
-                  <mat-option value="15.00" *ngIf="this.fromtimeSelect < '15.00' ? true : false">15.00</mat-option>
-                  <mat-option value="15.30" *ngIf="this.fromtimeSelect < '15.30' ? true : false">15.30</mat-option>
-                  <mat-option value="16.00" *ngIf="this.fromtimeSelect < '16.00' ? true : false">16.00</mat-option>
-                  <mat-option value="16.30" *ngIf="this.fromtimeSelect < '16.30' ? true : false">16.30</mat-option>
-                  <mat-option value="17.00" *ngIf="this.fromtimeSelect < '17.00' ? true : false">17.00</mat-option>
-                </mat-select>
-              </mat-form-field>
-            </label></div>
-
-
-          <div class="example-button-row" align="center">
-            <button mat-fab matStepperNext mat-button color="accent" class="material-cust-large-button" (click)="checkOne()">Next</button>
-
-          </div>
-        </form>
-
-      </mat-step>
-
-
-      <mat-step [stepControl]="secondFormGroup" >
-
-        <form [formGroup]="secondFormGroup" autocomplete="off">
-          <ng-template matStepLabel>Informations</ng-template>
-          <div align="center">
-            <label>Tel. Booking By :
-              <mat-form-field>
-
-                <input matInput formControlName="tel" required placeholder=" "  onpaste="return false"
-                       maxlength="10" type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57'
-                >
-
-              </mat-form-field>
-            </label>
-            &nbsp;&nbsp;
-            <label>Topic :
-              <mat-form-field>
-
-                <input matInput formControlName="topic" required placeholder=" " onkeypress='return event.charCode > 47 || event.charCode < 47'>
-
-              </mat-form-field>
-            </label>
-
-          </div>
-
-
-
-          <div align="center">
-            <label>Attendees :
-              <mat-form-field>
-                <mat-select required placeholder=" " formControlName="atten" >
-                  <mat-option value="1">1</mat-option>
-                  <mat-option value="2">2</mat-option>
-                  <mat-option value="3">3</mat-option>
-                  <mat-option value="4">4</mat-option>
-                  <mat-option value="5">5</mat-option>
-                  <mat-option value="6">6</mat-option>
-                  <mat-option value="7">7</mat-option>
-                  <mat-option value="8">8</mat-option>
-                  <mat-option value="9">9</mat-option>
-                  <mat-option value="10">10</mat-option>
-                  <mat-option value="11">11</mat-option>
-                  <mat-option value="12">12</mat-option>
-                  <mat-option value="13">13</mat-option>
-                  <mat-option value="14">14</mat-option>
-                  <mat-option value="15">15</mat-option>
-                  <mat-option value="16">16</mat-option>
-                  <mat-option value="17">17</mat-option>
-                  <mat-option value="18">18</mat-option>
-                  <mat-option value="19">19</mat-option>
-                  <mat-option value="20">20</mat-option>
-                  <mat-option value="21">21</mat-option>
-                  <mat-option value="22">22</mat-option>
-                  <mat-option value="23">23</mat-option>
-                  <mat-option value="24">24</mat-option>
-                  <mat-option value="25">25</mat-option>
-                  <mat-option value="26">26</mat-option>
-                  <mat-option value="27">27</mat-option>
-                  <mat-option value="28">28</mat-option>
-                  <mat-option value="29">29</mat-option>
-                  <mat-option value="30">30</mat-option>
-                  <mat-option value="31">31</mat-option>
-                  <mat-option value="32">32</mat-option>
-                  <mat-option value="33">33</mat-option>
-                  <mat-option value="34">34</mat-option>
-                  <mat-option value="35">35</mat-option>
-                  <mat-option value="36">36</mat-option>
-                  <mat-option value="37">37</mat-option>
-                  <mat-option value="38">38</mat-option>
-                  <mat-option value="39">39</mat-option>
-                  <mat-option value="40">40</mat-option>
-                  <mat-option value="41">41</mat-option>
-                  <mat-option value="42">42</mat-option>
-                  <mat-option value="43">43</mat-option>
-                  <mat-option value="44">44</mat-option>
-                  <mat-option value="45">45</mat-option>
-                  <mat-option value="46">46</mat-option>
-                  <mat-option value="47">47</mat-option>
-                  <mat-option value="48">48</mat-option>
-                  <mat-option value="49">49</mat-option>
-                  <mat-option value="50">50</mat-option>
-                  <mat-option value="51">51</mat-option>
-                  <mat-option value="52">52</mat-option>
-                  <mat-option value="53">53</mat-option>
-                  <mat-option value="54">54</mat-option>
-                  <mat-option value="55">55</mat-option>
-                  <mat-option value="56">56</mat-option>
-                  <mat-option value="57">57</mat-option>
-                  <mat-option value="58">58</mat-option>
-                  <mat-option value="59">59</mat-option>
-                  <mat-option value="60">60</mat-option>
-                  <mat-option value="61">61</mat-option>
-                  <mat-option value="62">62</mat-option>
-                  <mat-option value="63">63</mat-option>
-                  <mat-option value="64">64</mat-option>
-                  <mat-option value="65">65</mat-option>
-                  <mat-option value="66">66</mat-option>
-                  <mat-option value="67">67</mat-option>
-                  <mat-option value="68">68</mat-option>
-                  <mat-option value="69">69</mat-option>
-                  <mat-option value="70">70</mat-option>
-                  <mat-option value="71">71</mat-option>
-                  <mat-option value="72">72</mat-option>
-                  <mat-option value="73">73</mat-option>
-                  <mat-option value="74">74</mat-option>
-                  <mat-option value="75">75</mat-option>
-                  <mat-option value="76">76</mat-option>
-                  <mat-option value="77">77</mat-option>
-                  <mat-option value="78">78</mat-option>
-                  <mat-option value="79">79</mat-option>
-                  <mat-option value="80">80</mat-option>
-                  <mat-option value="81">81</mat-option>
-                  <mat-option value="82">82</mat-option>
-                  <mat-option value="83">83</mat-option>
-                  <mat-option value="84">84</mat-option>
-                  <mat-option value="85">85</mat-option>
-                  <mat-option value="86">86</mat-option>
-                  <mat-option value="87">87</mat-option>
-                  <mat-option value="88">88</mat-option>
-                  <mat-option value="89">89</mat-option>
-                  <mat-option value="90">90</mat-option>
-                  <mat-option value="91">91</mat-option>
-                  <mat-option value="92">92</mat-option>
-                  <mat-option value="93">93</mat-option>
-                  <mat-option value="94">94</mat-option>
-                  <mat-option value="95">95</mat-option>
-                  <mat-option value="96">96</mat-option>
-                  <mat-option value="97">97</mat-option>
-                  <mat-option value="98">98</mat-option>
-                  <mat-option value="99">99</mat-option>
-                  <mat-option value="100">100</mat-option>
-
-                </mat-select>
-              </mat-form-field>
-            </label>
-            &nbsp;&nbsp;
-            <label>Remark :
-              <mat-form-field>
-
-                <input matInput formControlName="remark" onkeypress='return event.charCode > 47 || event.charCode < 47'>
-
-              </mat-form-field>
-            </label>
-          </div>
-
-
-
-          <div align="center">
-            <button mat-fab matStepperPrevious mat-button color="accent" class="material-cust-large-button">Back</button>
-            &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
-
-
-
-              <button mat-fab mat-button color="accent" class="material-cust-large-button" (click)="SubmitData()">Save</button>
-
-              &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
-              <button mat-fab mat-button color="accent" class="material-cust-large-button" (click)="stepper.reset()">Reset</button>
-
-
-            <br/><br/>
-            <h2 align="center" style="color:red;">*Please check the information before saving.</h2>
-
-            <div align="center" *ngIf="spiner">
-              <mat-progress-bar mode="indeterminate"></mat-progress-bar>
-            </div>
-          </div>
-        </form>
-
-      </mat-step>
-
-    </mat-horizontal-stepper>
-
-
-
-
-
-  </mat-sidenav-content>
-
-
+    <div align="center" *ngIf="spiner">
+      <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+    </div>
+  </div>
+</form>
 </mat-sidenav-container>
-
-
-
-
-
-
-
-
 </body>
-</html>
-

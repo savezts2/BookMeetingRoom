@@ -31,35 +31,31 @@
 
 
         <tr height="50" class="greentable" >
-          <th colspan="20" style="text-align:center; color:black; vertical-align: middle;">Booking Meeting Room</th>
+          <th colspan="16" style="text-align:center; color:black; vertical-align: middle;">Booking Meeting Room</th>
         </tr>
 
 
         <tr class="yellowtable">
           <th rowspan="2" height="50" style="text-align:center; color:black; vertical-align: middle;"> Meeting Room</th>
-          <th colspan="19" style="text-align:center; color:black; vertical-align: middle;">Time</th>
+          <th colspan="15" style="text-align:center; color:black; vertical-align: middle;">Time</th>
         </tr>
 
         <tr class="yellowtable" >
-          <th style="text-align:center; color:black; vertical-align: middle;">08.00</th>
-          <th style="text-align:center; color:black; vertical-align: middle;">08.30</th>
-          <th style="text-align:center; color:black; vertical-align: middle;">09.00</th>
-          <th style="text-align:center; color:black; vertical-align: middle;">09.30</th>
-          <th style="text-align:center; color:black; vertical-align: middle;">10.00</th>
-          <th style="text-align:center; color:black; vertical-align: middle;">10.30</th>
-          <th style="text-align:center; color:black; vertical-align: middle;">11.00</th>
-          <th style="text-align:center; color:black; vertical-align: middle;">11.30</th>
-          <th style="text-align:center; color:black; vertical-align: middle;">12.00</th>
-          <th style="text-align:center; color:black; vertical-align: middle;">12.30</th>
-          <th style="text-align:center; color:black; vertical-align: middle;">13.00</th>
-          <th style="text-align:center; color:black; vertical-align: middle;">13.30</th>
-          <th style="text-align:center; color:black; vertical-align: middle;">14.00</th>
-          <th style="text-align:center; color:black; vertical-align: middle;">14.30</th>
-          <th style="text-align:center; color:black; vertical-align: middle;">15.00</th>
-          <th style="text-align:center; color:black; vertical-align: middle;">15.30</th>
-          <th style="text-align:center; color:black; vertical-align: middle;">16.00</th>
-          <th style="text-align:center; color:black; vertical-align: middle;">16.30</th>
-          <th style="text-align:center; color:black; vertical-align: middle;">17.00</th>
+          <th style="text-align:left; color:black; vertical-align: middle; width: 70px;">08.00</th>
+          <th style="text-align:left; color:black; vertical-align: middle;width: 70px;">09.00</th>
+          <th style="text-align:left; color:black; vertical-align: middle;width: 70px;">10.00</th>
+          <th style="text-align:left; color:black; vertical-align: middle;width: 70px;">11.00</th>
+          <th style="text-align:left; color:black; vertical-align: middle;width: 70px;">12.00</th>
+          <th style="text-align:left; color:black; vertical-align: middle;width: 70px;">13.00</th>
+          <th style="text-align:left; color:black; vertical-align: middle;width: 70px;">14.00</th>
+          <th style="text-align:left; color:black; vertical-align: middle;width: 70px;">15.00</th>
+          <th style="text-align:left; color:black; vertical-align: middle;width: 70px;">16.00</th>
+          <th style="text-align:left; color:black; vertical-align: middle;width: 70px;">17.00</th>
+          <th style="text-align:left; color:black; vertical-align: middle;width: 70px;">18.00</th>
+          <th style="text-align:left; color:black; vertical-align: middle;width: 70px;">19.00</th>
+          <th style="text-align:left; color:black; vertical-align: middle;width: 70px;">20.00</th>
+          <th style="text-align:left; color:black; vertical-align: middle;width: 70px;">21.00</th>
+          <th style="text-align:left; color:black; vertical-align: middle;width: 70px;">22.00</th>
         </tr>
 
         <tr class="whitetable" *ngFor="let event of events; let i = index">
@@ -73,7 +69,7 @@
               [attr.colspan]="cell[2]" [attr.bgcolor]="cell[3]"
 
               (click)="cell[11] ? Reserved(cell[4],cell[1],cell[6],cell[7],cell[8],cell[9],cell[13],cell[14]) :
-              cell[0] == 18 ? 1 :selectTable(cell[4],cell[1])"
+              cell[0] == 14 ? 1 :selectTable(cell[4],cell[1])"
               style="text-align:center; color:black; vertical-align: middle;"
               matTooltipClass="custom-tooltip-blue"
               [matTooltip]="cell[11] ?

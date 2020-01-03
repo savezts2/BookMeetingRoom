@@ -36,8 +36,8 @@ isLoggedInHR : Observable<boolean>;
 roomnames : Array<any>;
 roominput : string = '';
 firstname : string;
-//public API = '//localhost:8080';  //for test
-public API = 'http://172.27.209.27:8080/BookMeetingRoom';  //for build
+public API = '//localhost:8080';  //for test
+//public API = 'http://172.27.209.27:8080/BookMeetingRoom';  //for build
 dataSource = new MatTableDataSource<PeriodicElement>(this.roomnames);
   constructor(public authService : AuthService , private router: Router , private service : ServiceService,public dialog: MatDialog
   ,private http: HttpClient) {
@@ -105,8 +105,8 @@ onEdit(row : any){
   templateUrl: 'dialog-submit-room-dialog.html',
 })
 export class DialogSubmitRoom {
-//public API = '//localhost:8080';  //for test
-public API = 'http://172.27.209.27:8080/BookMeetingRoom';  //for build
+public API = '//localhost:8080';  //for test
+//public API = 'http://172.27.209.27:8080/BookMeetingRoom';  //for build
   constructor(
     public dialogRef: MatDialogRef<DialogSubmitRoom>, @Inject(MAT_DIALOG_DATA) public data: DialogData,
     private service : ServiceService, private http: HttpClient) {}

@@ -15,7 +15,7 @@
 }
 
 #sidebar .sidebar-header {
-     padding: 24px;
+    padding: 24px;
     background: #6d7fcc;
 }
 
@@ -47,8 +47,7 @@
 }
 
 .form-data{
-    text-align: center;
-    margin-top: 5%;
+    text-align : center;
 }
 
 table{
@@ -56,6 +55,7 @@ table{
   text-align:center;
 
 }
+
 
 
 
@@ -150,6 +150,25 @@ h1.example-app-name {
   background-color: white;
   width : 20%;
 }
+
+.card1{
+  background-color: white;
+  box-shadow: rgba(0,0,0,0.2);
+  transition: 0.3s;
+  margin-top: 100px;
+  margin-bottom: auto;
+  margin-right: auto;
+  margin-left: auto;
+  width : 30%;
+  height : auto;
+  opacity: 0.9;
+}
+.card1:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+
+
 
 
 
