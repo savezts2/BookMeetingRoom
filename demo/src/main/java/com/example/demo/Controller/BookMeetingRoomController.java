@@ -60,33 +60,32 @@ public class BookMeetingRoomController {
         return bookMeetingRoom;
     }
 
-    @PostMapping(path = "/Notcheckin30min/{dateBookMeetingRoom}/{roomname}/{starttime}")
-    public BookMeetingRoom updatenotcheckin30minbysys(@PathVariable String dateBookMeetingRoom,@PathVariable Long roomname, @PathVariable String starttime) {
+    @PostMapping(path = "/Notcheckin30min/{dateBookMeetingRoom}/{roomname}/{starttime}/{latetime}")
+    public BookMeetingRoom updatenotcheckin30minbysys(@PathVariable String dateBookMeetingRoom,@PathVariable Long roomname,
+                                                      @PathVariable String starttime,@PathVariable int latetime) {
         Roomname roomname1 = roomnameRepository.findById(roomname).get();
         String endtime;
         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findByDateBookMeetingRoomAndRoomnameAndStarttimeAndIsActive(dateBookMeetingRoom,roomname1,starttime,"1");
         if(starttime.equals("08.00")){
-            endtime = "08.00";
-        }else if(starttime.equals("08.30")){endtime = "08.30";}
-        else if(starttime.equals("09.00")){endtime = "09.00";}
-        else if(starttime.equals("09.30")){endtime = "09.30";}
-        else if(starttime.equals("10.00")){endtime = "10.00";}
-        else if(starttime.equals("10.30")){endtime = "10.30";}
-        else if(starttime.equals("11.00")){endtime = "11.00";}
-        else if(starttime.equals("11.30")){endtime = "11.30";}
-        else if(starttime.equals("12.00")){endtime = "12.00";}
-        else if(starttime.equals("12.30")){endtime = "12.30";}
+            endtime = "09.00";
+        }else if(starttime.equals("09.00")){endtime = "10.00";}
+        else if(starttime.equals("10.00")){endtime = "11.00";}
+        else if(starttime.equals("11.00")){endtime = "12.00";}
+        else if(starttime.equals("12.00")){endtime = "13.00";}
         else if(starttime.equals("13.00")){endtime = "14.00";}
-        else if(starttime.equals("13.30")){endtime = "13.30";}
-        else if(starttime.equals("14.00")){endtime = "14.00";}
-        else if(starttime.equals("14.30")){endtime = "14.30";}
-        else if(starttime.equals("15.00")){endtime = "15.00";}
-        else if(starttime.equals("15.30")){endtime = "15.30";}
-        else if(starttime.equals("16.00")){endtime = "16.00";}
-        else{endtime = "16.30";}
+        else if(starttime.equals("14.00")){endtime = "15.00";}
+        else if(starttime.equals("15.00")){endtime = "16.00";}
+        else if(starttime.equals("16.00")){endtime = "17.00";}
+        else if(starttime.equals("17.00")){endtime = "18.00";}
+        else if(starttime.equals("18.00")){endtime = "19.00";}
+        else if(starttime.equals("19.00")){endtime = "20.00";}
+        else if(starttime.equals("20.00")){endtime = "21.00";}
+        else {endtime = "22.00";}
+
+
 
         bookMeetingRoom.setStatusbooking("Not Checkin");
-        bookMeetingRoom.setLatetime(30);
+        bookMeetingRoom.setLatetime(latetime);
         bookMeetingRoom.setLate("late");
         bookMeetingRoom.setLengthtime(1);
         bookMeetingRoom.setUpdate_date(new Date());

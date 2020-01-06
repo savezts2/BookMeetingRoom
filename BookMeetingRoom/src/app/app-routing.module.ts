@@ -19,6 +19,7 @@ import { AddroombyadminComponent } from './addroombyadmin/addroombyadmin.compone
 import { EditroomnameComponent } from './editroomname/editroomname.component';
 import { DeleteroomComponent } from './deleteroom/deleteroom.component';
 import { CancelbookbyhrComponent } from './cancelbookbyhr/cancelbookbyhr.component';
+import { SetlatetimeComponent } from './setlatetime/setlatetime.component';
 const routes: Routes = [
 
     { path: 'selectRoom', component: SelectRoomComponent },
@@ -36,7 +37,8 @@ const routes: Routes = [
 { path: 'editroomname', component: EditroomnameComponent },
 { path: 'deleteroom', component: DeleteroomComponent },
 { path: 'addroom', component: AddroombyadminComponent },
-{ path: 'cancelbookbyhr', component: CancelbookbyhrComponent }
+{ path: 'cancelbookbyhr', component: CancelbookbyhrComponent },
+{ path: 'setlatetime', component: SetlatetimeComponent }
 
 ];
 

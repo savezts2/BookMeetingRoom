@@ -1,0 +1,30 @@
+
+<body class="bgimg" >
+
+
+
+<mat-sidenav-container *ngIf="(isLoggedInAdmin | async)"
+                       class="card" (backdropClick)="close()">
+
+
+
+  <mat-sidenav-content>
+
+    <br/><br/><br/>
+
+
+    <h1 align ="center" style="font-family: 'Anton', sans-serif;">Set Late Time</h1>
+    <br/><br/>
+    <table border="1" align="center">
+      <tr><th align="center" >Late time</th><th align="center" >Edit</th></tr>
+      <tr><td align="center" style="vertical-align:middle">{{latetimes}}</td><td align="center"><button mat-icon-button (click)="openDialog()"><i class="material-icons">
+        edit
+      </i></button></td></tr>
+    </table>
+  </mat-sidenav-content>
+
+
+</mat-sidenav-container>
+
+
+</body>

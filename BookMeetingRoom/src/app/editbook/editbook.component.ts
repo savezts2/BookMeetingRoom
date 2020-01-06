@@ -104,8 +104,9 @@ this.service.getMinuteCurrent().subscribe(data=>{
     this.service.findDate(this.data.date).subscribe(data=>{
     this.report = data;
 
-
+    setTimeout(() => {
      this.appendTime();
+        }, 500); //interval
 
 
     //console.log(data);
@@ -152,7 +153,7 @@ this.service.getMinuteCurrent().subscribe(data=>{
             alert("Please check your filled.");
         }else if(this.checkReserved(this.firstFormGroup.get('time').value , this.firstFormGroup.get('totime').value , this.data.room)){
             alert("This time can't book");
-            this.dialogRef.close();
+            //this.dialogRef.close();
         }else{
               this.spiner = true;
 
@@ -212,12 +213,15 @@ checkReserved (fromtime: String , totime: String , roomname:String){
     this.countTimepast = this.convertlengthTime(fromtimepastsplited[0],fromtimepastsplited[1],totimepastsplited[0],totimepastsplited[1]);
 
    // console.log(this.countTime , this.countTimepast);
+
     this.events = [];
     this.appendRoomname();
     this.appendTime();
 
+
     for(let i = 0 ; i < this.roomnames.length ; i++){
       if(this.roomnames[i].roomname_id == roomname){
+
         for(let j = 0 ; j < this.events[i].length ; j++){
 
             if(this.events[i][j][1] == this.data.time){
@@ -225,8 +229,14 @@ checkReserved (fromtime: String , totime: String , roomname:String){
                   this.events[i].splice(j,1);
 
                   for(let k = 0 ; k < this.countTimepast ; k++){
-               //       console.log(1);
-                      this.events[i].splice(j+k,0,[j,String(parseInt(fromtimepastsplited[0])+k)+'.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
+               //       console.log(k);
+                        let addtime : string;
+                        addtime = String(parseInt(fromtimepastsplited[0])+k) + '.00';
+                        if(addtime == '8.00' || addtime == '9.00'){
+                         addtime = '0'+addtime;
+                        }
+
+                        this.events[i].splice(j+k,0,[j+k,addtime,1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','']);
                   }
 
                   console.log( this.events);
@@ -240,11 +250,14 @@ checkReserved (fromtime: String , totime: String , roomname:String){
     let numnum :number = 0  ;
     for(let i = 0 ; i < this.roomnames.length ; i++){
       if(this.roomnames[i].roomname_id == roomname){
+
         for(let j = 0 ; j < this.events[i].length ; j++){
 
             if(this.events[i][j][1] == fromtime){
                 numnum = 1 ;
+
                 if(this.events[i][j][5] == true){
+
                     return true;
                     break;
                 }else{
@@ -263,6 +276,7 @@ checkReserved (fromtime: String , totime: String , roomname:String){
     } // add book and check book
 
     if(numnum == 0){
+
         return true;
     }else{
         return false;

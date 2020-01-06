@@ -5,10 +5,7 @@ import com.example.demo.entity.BookMeetingRoom;
 import com.example.demo.entity.Latetime;
 import com.example.demo.repository.LatetimeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
 import java.util.stream.Collectors;
@@ -24,6 +21,15 @@ public class LatetimeController {
     public Latetime getLatetime(){
         long id = 1;
         Latetime latetime = latetimeRepository.findById(id).filter(this::Latetimeactive).get();
+        return latetime;
+    }
+
+    @PostMapping(path = "/setlatetime/{time}")
+    public Latetime latetime(@PathVariable int time) {
+        long id = 1 ;
+        Latetime latetime = latetimeRepository.findById(id).get();
+        latetime.setLatetimecheckout(time);
+        latetimeRepository.save(latetime);
         return latetime;
     }
 

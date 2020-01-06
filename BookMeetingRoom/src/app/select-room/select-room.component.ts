@@ -1304,7 +1304,7 @@ if(this.countrepeatroom == 0){
       } //if active
   } //for report
 
-  console.log(this.events);
+ // console.log(this.events);
 
 } // appendtime
 

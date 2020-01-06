@@ -62,6 +62,7 @@ isLoggedInHR() : Observable<boolean> {
                       localStorage.setItem('userid', data.username);
                       localStorage.setItem('nameid', data.firstname);
                       localStorage.setItem('lastname', data.lastname);
+                      localStorage.setItem('roleid', data.role);
                       localStorage.removeItem('tokenid');
                       localStorage.removeItem('tokenidhr');
                       this.isLoginSubject.next(false);
@@ -77,6 +78,7 @@ isLoggedInHR() : Observable<boolean> {
                       localStorage.setItem('userid', data.username);
                       localStorage.setItem('nameid', data.firstname);
                       localStorage.setItem('lastname', data.lastname);
+                      localStorage.setItem('roleid', data.role);
                       localStorage.removeItem('tokenid');
                       localStorage.removeItem('tokenidadmin');
                       this.isLoginSubject.next(false);
@@ -92,6 +94,7 @@ isLoggedInHR() : Observable<boolean> {
                      localStorage.setItem('userid', data.username);
                      localStorage.setItem('nameid', data.firstname);
                       localStorage.setItem('lastname', data.lastname);
+                      localStorage.setItem('roleid', data.role);
                       localStorage.removeItem('tokenidadmin');
                       localStorage.removeItem('tokenidhr');
                       this.isLoginHR.next(false);

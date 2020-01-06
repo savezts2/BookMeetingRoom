@@ -1,6 +1,6 @@
-import { Component, OnInit,ViewChild  } from '@angular/core';
+import { Component, OnInit,ViewChild,ChangeDetectorRef ,OnDestroy } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-
+import {MediaMatcher} from '@angular/cdk/layout';
 import { map, shareReplay } from 'rxjs/operators';
 import { AuthService } from '../auth.service';
 import { Observable } from "rxjs";
@@ -23,19 +23,23 @@ isLoggedInHR : Observable<boolean>;
 
 nameuser: string;
 lastname: string;
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-    .pipe(
-      map(result => result.matches),
-      shareReplay()
-    );
+role: string;
+mobileQuery: MediaQueryList;
 
 
-  constructor(private breakpointObserver: BreakpointObserver,public authService : AuthService , private router: Router , private service : ServiceService) {
+
+  constructor(private breakpointObserver: BreakpointObserver,public authService : AuthService , private router: Router , private service : ServiceService,
+  changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
        this.isLoggedIn = authService.isLoggedIn();
     this.isLoggedInAdmin = authService.isLoggedInAdmin();
     this.isLoggedInHR = authService.isLoggedInHR();
     this.nameuser = localStorage.getItem('nameid');
     this.lastname = localStorage.getItem('lastname');
+     this.mobileQuery = media.matchMedia('(max-width: 100px)');
+
+    this.nameuser = localStorage.getItem('nameid');
+    this.lastname = localStorage.getItem('lastname');
+    this.role = localStorage.getItem('roleid');
 
   }
 

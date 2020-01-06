@@ -53,6 +53,7 @@ import { DeleteroomComponent } from './deleteroom/deleteroom.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { CancelbookbyhrComponent } from './cancelbookbyhr/cancelbookbyhr.component';
+import { SetlatetimeComponent ,SetLateTimeDialog} from './setlatetime/setlatetime.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -75,7 +76,9 @@ import { CancelbookbyhrComponent } from './cancelbookbyhr/cancelbookbyhr.compone
     DeleteroomComponent,
     SideNavComponent,
     DialogSubmitRoom,
-    CancelbookbyhrComponent
+    CancelbookbyhrComponent,
+    SetlatetimeComponent,
+SetLateTimeDialog
   ],
   imports: [
     BrowserModule,
@@ -106,7 +109,7 @@ import { CancelbookbyhrComponent } from './cancelbookbyhr/cancelbookbyhr.compone
     MatTooltipModule,
     LayoutModule
   ],
-    entryComponents: [ DialogOverviewExampleDialog,DialogSubmitRoom ],
+    entryComponents: [ DialogOverviewExampleDialog,DialogSubmitRoom ,SetLateTimeDialog],
   providers: [],
   bootstrap: [AppComponent]
 })

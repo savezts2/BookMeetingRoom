@@ -70,7 +70,7 @@ this.service.getMinuteCurrent().subscribe(data=>{
 
 
   this.service.getLatetime().subscribe(data=>{
-              console.log(data);
+             // console.log(data);
               this.latetime = data.latetimecheckout ;
 
        })
@@ -84,10 +84,15 @@ setTimeout(() => {
   //////////////////////////////////////////////
   ////////       late 15              /////////
  /////////////////////////////////////////////
+     let latetimestring : string ;
+    if(this.latetime < 11){
+      latetimestring = '0'+String(this.latetime-1);
+    }else{
+      latetimestring = String(this.latetime-1);
+    }
+   // console.log(latetimestring);
 
-
-    console.log( this.latetime);
-  /*for(let i = 0 ; i < this.report.length ; i++){
+  for(let i = 0 ; i < this.report.length ; i++){
 
       let GivenDate  = new Date(this.convertDate(this.report[i].bookMeetingRoom.dateBookMeetingRoom));
 
@@ -382,10 +387,12 @@ setTimeout(() => {
           //////////////////////////////////////////////////////////
 
 
-          if( this.fulltime != 'undefined.undefined' && this.fulltime > '08.29'){
-              if(this.report[i].bookMeetingRoom.starttime == '08.00' && this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' && this.report[i].bookMeetingRoom.latetime == 15){
+          if( this.fulltime != 'undefined.undefined' && this.fulltime > '08.'+latetimestring){
+              if(this.report[i].bookMeetingRoom.starttime == '08.00' && (this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' ||
+              this.report[i].bookMeetingRoom.statusbooking == 'Booking') && (this.report[i].bookMeetingRoom.latetime == 15 || this.report[i].bookMeetingRoom.latetime == 0)){
+
                    this.http.post(this.API + '/Notcheckin30min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
-                   +'/' + this.report[i].bookMeetingRoom.starttime,{})
+                   +'/' + this.report[i].bookMeetingRoom.starttime + '/'+this.latetime,{})
                              .subscribe(
                                data => {
                                    console.log('PUT Request is successful');
@@ -401,11 +408,12 @@ setTimeout(() => {
 
               }
           }
-          if( this.fulltime != 'undefined.undefined' && this.fulltime > '08.59'){
-              if(this.report[i].bookMeetingRoom.starttime == '08.30' && this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' && this.report[i].bookMeetingRoom.latetime == 15){
+          if( this.fulltime != 'undefined.undefined' && this.fulltime > '09.'+latetimestring){
+              if(this.report[i].bookMeetingRoom.starttime == '09.00' && (this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' ||
+              this.report[i].bookMeetingRoom.statusbooking == 'Booking') && (this.report[i].bookMeetingRoom.latetime == 15 || this.report[i].bookMeetingRoom.latetime == 0)){
 
                    this.http.post(this.API + '/Notcheckin30min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
-                   +'/' + this.report[i].bookMeetingRoom.starttime,{})
+                   +'/' + this.report[i].bookMeetingRoom.starttime + '/'+this.latetime,{})
                              .subscribe(
                                data => {
                                    console.log('PUT Request is successful');
@@ -421,11 +429,12 @@ setTimeout(() => {
 
               }
           }
-          if( this.fulltime != 'undefined.undefined' && this.fulltime > '09.29'){
-              if(this.report[i].bookMeetingRoom.starttime == '09.00' && this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' && this.report[i].bookMeetingRoom.latetime == 15){
+          if( this.fulltime != 'undefined.undefined' && this.fulltime > '10.'+latetimestring){
+              if(this.report[i].bookMeetingRoom.starttime == '10.00' && (this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' ||
+              this.report[i].bookMeetingRoom.statusbooking == 'Booking') && (this.report[i].bookMeetingRoom.latetime == 15 || this.report[i].bookMeetingRoom.latetime == 0)){
 
                    this.http.post(this.API + '/Notcheckin30min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
-                   +'/' + this.report[i].bookMeetingRoom.starttime,{})
+                   +'/' + this.report[i].bookMeetingRoom.starttime + '/'+this.latetime,{})
                              .subscribe(
                                data => {
                                    console.log('PUT Request is successful');
@@ -441,11 +450,12 @@ setTimeout(() => {
 
               }
           }
-          if( this.fulltime != 'undefined.undefined' && this.fulltime > '09.59'){
-              if(this.report[i].bookMeetingRoom.starttime == '09.30' && this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' && this.report[i].bookMeetingRoom.latetime == 15){
+          if( this.fulltime != 'undefined.undefined' && this.fulltime > '11.'+latetimestring){
+              if(this.report[i].bookMeetingRoom.starttime == '11.00' && (this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' ||
+              this.report[i].bookMeetingRoom.statusbooking == 'Booking') && (this.report[i].bookMeetingRoom.latetime == 15 || this.report[i].bookMeetingRoom.latetime == 0)){
 
                    this.http.post(this.API + '/Notcheckin30min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
-                   +'/' + this.report[i].bookMeetingRoom.starttime,{})
+                   +'/' + this.report[i].bookMeetingRoom.starttime + '/'+this.latetime,{})
                              .subscribe(
                                data => {
                                    console.log('PUT Request is successful');
@@ -461,11 +471,12 @@ setTimeout(() => {
 
               }
           }
-          if( this.fulltime != 'undefined.undefined' && this.fulltime > '10.29'){
-              if(this.report[i].bookMeetingRoom.starttime == '10.00' && this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' && this.report[i].bookMeetingRoom.latetime == 15){
+          if( this.fulltime != 'undefined.undefined' && this.fulltime > '12.'+latetimestring){
+              if(this.report[i].bookMeetingRoom.starttime == '12.00' && (this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' ||
+              this.report[i].bookMeetingRoom.statusbooking == 'Booking') && (this.report[i].bookMeetingRoom.latetime == 15 || this.report[i].bookMeetingRoom.latetime == 0)){
 
                    this.http.post(this.API + '/Notcheckin30min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
-                   +'/' + this.report[i].bookMeetingRoom.starttime,{})
+                   +'/' + this.report[i].bookMeetingRoom.starttime + '/'+this.latetime,{})
                              .subscribe(
                                data => {
                                    console.log('PUT Request is successful');
@@ -481,11 +492,12 @@ setTimeout(() => {
 
               }
           }
-          if( this.fulltime != 'undefined.undefined' && this.fulltime > '10.59'){
-              if(this.report[i].bookMeetingRoom.starttime == '10.30' && this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' && this.report[i].bookMeetingRoom.latetime == 15){
+          if( this.fulltime != 'undefined.undefined' && this.fulltime > '13.'+latetimestring){
+              if(this.report[i].bookMeetingRoom.starttime == '13.00' && (this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' ||
+              this.report[i].bookMeetingRoom.statusbooking == 'Booking') && (this.report[i].bookMeetingRoom.latetime == 15 || this.report[i].bookMeetingRoom.latetime == 0)){
 
                    this.http.post(this.API + '/Notcheckin30min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
-                   +'/' + this.report[i].bookMeetingRoom.starttime,{})
+                   +'/' + this.report[i].bookMeetingRoom.starttime + '/'+this.latetime,{})
                              .subscribe(
                                data => {
                                    console.log('PUT Request is successful');
@@ -501,11 +513,12 @@ setTimeout(() => {
 
               }
           }
-          if( this.fulltime != 'undefined.undefined' && this.fulltime > '11.29'){
-              if(this.report[i].bookMeetingRoom.starttime == '11.00' && this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' && this.report[i].bookMeetingRoom.latetime == 15){
+          if( this.fulltime != 'undefined.undefined' && this.fulltime > '14.'+latetimestring){
+              if(this.report[i].bookMeetingRoom.starttime == '14.00' && (this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' ||
+              this.report[i].bookMeetingRoom.statusbooking == 'Booking') && (this.report[i].bookMeetingRoom.latetime == 15 || this.report[i].bookMeetingRoom.latetime == 0)){
 
                    this.http.post(this.API + '/Notcheckin30min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
-                   +'/' + this.report[i].bookMeetingRoom.starttime,{})
+                   +'/' + this.report[i].bookMeetingRoom.starttime + '/'+this.latetime,{})
                              .subscribe(
                                data => {
                                    console.log('PUT Request is successful');
@@ -521,11 +534,12 @@ setTimeout(() => {
 
               }
           }
-          if( this.fulltime != 'undefined.undefined' && this.fulltime > '11.59'){
-              if(this.report[i].bookMeetingRoom.starttime == '11.30' && this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' && this.report[i].bookMeetingRoom.latetime == 15){
+          if( this.fulltime != 'undefined.undefined' && this.fulltime > '15.'+latetimestring){
+              if(this.report[i].bookMeetingRoom.starttime == '15.00' && (this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' ||
+              this.report[i].bookMeetingRoom.statusbooking == 'Booking') && (this.report[i].bookMeetingRoom.latetime == 15 || this.report[i].bookMeetingRoom.latetime == 0)){
 
                    this.http.post(this.API + '/Notcheckin30min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
-                   +'/' + this.report[i].bookMeetingRoom.starttime,{})
+                   +'/' + this.report[i].bookMeetingRoom.starttime + '/'+this.latetime,{})
                              .subscribe(
                                data => {
                                    console.log('PUT Request is successful');
@@ -541,11 +555,12 @@ setTimeout(() => {
 
               }
           }
-          if( this.fulltime != 'undefined.undefined' && this.fulltime > '12.29'){
-              if(this.report[i].bookMeetingRoom.starttime == '12.00' && this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' && this.report[i].bookMeetingRoom.latetime == 15){
+          if( this.fulltime != 'undefined.undefined' && this.fulltime > '16.'+latetimestring){
+              if(this.report[i].bookMeetingRoom.starttime == '16.00' && (this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' ||
+              this.report[i].bookMeetingRoom.statusbooking == 'Booking') && (this.report[i].bookMeetingRoom.latetime == 15 || this.report[i].bookMeetingRoom.latetime == 0)){
 
                    this.http.post(this.API + '/Notcheckin30min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
-                   +'/' + this.report[i].bookMeetingRoom.starttime,{})
+                   +'/' + this.report[i].bookMeetingRoom.starttime + '/'+this.latetime,{})
                              .subscribe(
                                data => {
                                    console.log('PUT Request is successful');
@@ -561,11 +576,12 @@ setTimeout(() => {
 
               }
           }
-          if( this.fulltime != 'undefined.undefined' && this.fulltime > '12.59'){
-              if(this.report[i].bookMeetingRoom.starttime == '12.30' && this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' && this.report[i].bookMeetingRoom.latetime == 15){
+          if( this.fulltime != 'undefined.undefined' && this.fulltime > '17.'+latetimestring){
+              if(this.report[i].bookMeetingRoom.starttime == '17.00' && (this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' ||
+              this.report[i].bookMeetingRoom.statusbooking == 'Booking') && (this.report[i].bookMeetingRoom.latetime == 15 || this.report[i].bookMeetingRoom.latetime == 0)){
 
                    this.http.post(this.API + '/Notcheckin30min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
-                   +'/' + this.report[i].bookMeetingRoom.starttime,{})
+                   +'/' + this.report[i].bookMeetingRoom.starttime + '/'+this.latetime,{})
                              .subscribe(
                                data => {
                                    console.log('PUT Request is successful');
@@ -581,11 +597,12 @@ setTimeout(() => {
 
               }
           }
-          if( this.fulltime != 'undefined.undefined' && this.fulltime > '13.29'){
-              if(this.report[i].bookMeetingRoom.starttime == '13.00' && this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' && this.report[i].bookMeetingRoom.latetime == 15){
+          if( this.fulltime != 'undefined.undefined' && this.fulltime > '18.'+latetimestring){
+              if(this.report[i].bookMeetingRoom.starttime == '18.00' && (this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' ||
+              this.report[i].bookMeetingRoom.statusbooking == 'Booking') && (this.report[i].bookMeetingRoom.latetime == 15 || this.report[i].bookMeetingRoom.latetime == 0)){
 
                    this.http.post(this.API + '/Notcheckin30min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
-                   +'/' + this.report[i].bookMeetingRoom.starttime,{})
+                   +'/' + this.report[i].bookMeetingRoom.starttime + '/'+this.latetime,{})
                              .subscribe(
                                data => {
                                    console.log('PUT Request is successful');
@@ -601,11 +618,12 @@ setTimeout(() => {
 
               }
           }
-          if( this.fulltime != 'undefined.undefined' && this.fulltime > '13.59'){
-              if(this.report[i].bookMeetingRoom.starttime == '13.30' && this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' && this.report[i].bookMeetingRoom.latetime == 15){
+          if( this.fulltime != 'undefined.undefined' && this.fulltime > '19.'+latetimestring){
+              if(this.report[i].bookMeetingRoom.starttime == '19.00' && (this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' ||
+              this.report[i].bookMeetingRoom.statusbooking == 'Booking') && (this.report[i].bookMeetingRoom.latetime == 15 || this.report[i].bookMeetingRoom.latetime == 0)){
 
                    this.http.post(this.API + '/Notcheckin30min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
-                   +'/' + this.report[i].bookMeetingRoom.starttime,{})
+                   +'/' + this.report[i].bookMeetingRoom.starttime + '/'+this.latetime,{})
                              .subscribe(
                                data => {
                                    console.log('PUT Request is successful');
@@ -621,11 +639,12 @@ setTimeout(() => {
 
               }
           }
-          if( this.fulltime != 'undefined.undefined' && this.fulltime > '14.29'){
-              if(this.report[i].bookMeetingRoom.starttime == '14.00' && this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' && this.report[i].bookMeetingRoom.latetime == 15){
+          if( this.fulltime != 'undefined.undefined' && this.fulltime > '20.'+latetimestring){
+              if(this.report[i].bookMeetingRoom.starttime == '20.00' && (this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' ||
+              this.report[i].bookMeetingRoom.statusbooking == 'Booking') && (this.report[i].bookMeetingRoom.latetime == 15 || this.report[i].bookMeetingRoom.latetime == 0)){
 
                    this.http.post(this.API + '/Notcheckin30min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
-                   +'/' + this.report[i].bookMeetingRoom.starttime,{})
+                   +'/' + this.report[i].bookMeetingRoom.starttime + '/'+this.latetime,{})
                              .subscribe(
                                data => {
                                    console.log('PUT Request is successful');
@@ -641,11 +660,12 @@ setTimeout(() => {
 
               }
           }
-          if( this.fulltime != 'undefined.undefined' && this.fulltime > '14.59'){
-              if(this.report[i].bookMeetingRoom.starttime == '14.30' && this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' && this.report[i].bookMeetingRoom.latetime == 15){
+          if( this.fulltime != 'undefined.undefined' && this.fulltime > '21.'+latetimestring){
+              if(this.report[i].bookMeetingRoom.starttime == '21.00' && (this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' ||
+              this.report[i].bookMeetingRoom.statusbooking == 'Booking') && (this.report[i].bookMeetingRoom.latetime == 15 || this.report[i].bookMeetingRoom.latetime == 0)){
 
                    this.http.post(this.API + '/Notcheckin30min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
-                   +'/' + this.report[i].bookMeetingRoom.starttime,{})
+                   +'/' + this.report[i].bookMeetingRoom.starttime + '/'+this.latetime,{})
                              .subscribe(
                                data => {
                                    console.log('PUT Request is successful');
@@ -661,11 +681,12 @@ setTimeout(() => {
 
               }
           }
-          if( this.fulltime != 'undefined.undefined' && this.fulltime > '15.29'){
-              if(this.report[i].bookMeetingRoom.starttime == '15.00' && this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' && this.report[i].bookMeetingRoom.latetime == 15){
+          if( this.fulltime != 'undefined.undefined' && this.fulltime > '22.'+latetimestring){
+              if(this.report[i].bookMeetingRoom.starttime == '22.00' && (this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' ||
+              this.report[i].bookMeetingRoom.statusbooking == 'Booking') && (this.report[i].bookMeetingRoom.latetime == 15 || this.report[i].bookMeetingRoom.latetime == 0)){
 
                    this.http.post(this.API + '/Notcheckin30min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
-                   +'/' + this.report[i].bookMeetingRoom.starttime,{})
+                   +'/' + this.report[i].bookMeetingRoom.starttime + '/'+this.latetime,{})
                              .subscribe(
                                data => {
                                    console.log('PUT Request is successful');
@@ -681,66 +702,7 @@ setTimeout(() => {
 
               }
           }
-          if( this.fulltime != 'undefined.undefined' && this.fulltime > '15.59'){
-              if(this.report[i].bookMeetingRoom.starttime == '15.30' && this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' && this.report[i].bookMeetingRoom.latetime == 15){
 
-                   this.http.post(this.API + '/Notcheckin30min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
-                   +'/' + this.report[i].bookMeetingRoom.starttime,{})
-                             .subscribe(
-                               data => {
-                                   console.log('PUT Request is successful');
-                                    window.location.reload();
-
-
-                               },
-                               error => {
-                                   console.log('Error', error);
-                                  window.location.reload();
-                               }
-                              );
-
-              }
-          }
-          if( this.fulltime != 'undefined.undefined' && this.fulltime > '16.29'){
-              if(this.report[i].bookMeetingRoom.starttime == '16.00' && this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' && this.report[i].bookMeetingRoom.latetime == 15){
-
-                   this.http.post(this.API + '/Notcheckin30min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
-                   +'/' + this.report[i].bookMeetingRoom.starttime,{})
-                             .subscribe(
-                               data => {
-                                   console.log('PUT Request is successful');
-                                    window.location.reload();
-
-
-                               },
-                               error => {
-                                   console.log('Error', error);
-                                  window.location.reload();
-                               }
-                              );
-
-              }
-          }
-          if( this.fulltime != 'undefined.undefined' && this.fulltime > '16.59'){
-              if(this.report[i].bookMeetingRoom.starttime == '16.30' && this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' && this.report[i].bookMeetingRoom.latetime == 15){
-
-                   this.http.post(this.API + '/Notcheckin30min/'+this.report[i].bookMeetingRoom.dateBookMeetingRoom +'/' + this.report[i].bookMeetingRoom.roomname.roomname_id
-                   +'/' + this.report[i].bookMeetingRoom.starttime,{})
-                             .subscribe(
-                               data => {
-                                   console.log('PUT Request is successful');
-                                    window.location.reload();
-
-
-                               },
-                               error => {
-                                   console.log('Error', error);
-                                  window.location.reload();
-                               }
-                              );
-
-              }
-          }
           //////////////////////////////////////////////
           ////////       checkoutby sys             /////////
            /////////////////////////////////////////////
@@ -1110,7 +1072,7 @@ setTimeout(() => {
           }
       }
 
-  }//for report*/
+  }//for report
 
     }, 1500); //interval
   }, 1500); //interval
