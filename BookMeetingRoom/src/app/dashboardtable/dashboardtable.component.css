@@ -56,10 +56,10 @@ table{
 
 }
 td {
-  min-width: 50px;
-  max-width: 50px;
-  max-height: 50px;
-  min-height: 50px;
+  min-width: 200px;
+  max-width: 200px;
+  max-height: 100px;
+  min-height: 100px;
   overflow: hidden;
   white-space: nowrap;
 }

@@ -427,6 +427,7 @@ public class BookMeetingRoomController {
         report.setBookMeetingRoom(bookMeetingRoom);
         report.setDate(date);
         report.setUsers(users);
+        report.setRoomnamebook(roomname);
         SimpleDateFormat formatter2=new SimpleDateFormat("dd-MM-yyyy");
         String[] dateSplit;
         dateSplit = date.split("-");

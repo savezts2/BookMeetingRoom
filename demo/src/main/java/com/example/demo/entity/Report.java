@@ -42,6 +42,15 @@ public class Report {
     private Date create_date;
     private String create_by;
     private String update_by;
+    private String roomnamebook;
+
+    public String getRoomnamebook() {
+        return roomnamebook;
+    }
+
+    public void setRoomnamebook(String roomnamebook) {
+        this.roomnamebook = roomnamebook;
+    }
 
     public Date getUpdate_date() {
         return update_date;
