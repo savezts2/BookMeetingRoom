@@ -46,7 +46,7 @@ roomnames : any[] = [];
 CurrentTime: any;
 numroom : number;
 duration : number;
-
+dateshow : string;
 constructor(public authService : AuthService , private router: Router, private service : ServiceService,
    private route:ActivatedRoute , private dashboardService : DashboardService,private excelService:ExcelService) {
         this.isLoggedIn = authService.isLoggedIn();
@@ -84,9 +84,10 @@ exportexcel(): void{
         Topic : this.report2[i].bookMeetingRoom.topic ,
          Tel : '\''+this.report2[i].bookMeetingRoom.telbookingby+'\'',
         Attendance : this.report2[i].bookMeetingRoom.attendees ,
-         Remark : this.report2[i].bookMeetingRoom.remark ,
+         Remark : this.report2[i].bookMeetingRoom.remark == 'null' ? null :  this.report2[i].bookMeetingRoom.remark,
          Status : this.report2[i].bookMeetingRoom.statusbooking,
-        Update_Date : this.report2[i].bookMeetingRoom.update_date,
+        Update_Date : this.report2[i].bookMeetingRoom.update_date == null ? this.report2[i].bookMeetingRoom.update_date :
+        this.report2[i].bookMeetingRoom.update_date.substring(8,10)+'/'+this.report2[i].bookMeetingRoom.update_date.substring(5,7)+'/'+this.report2[i].bookMeetingRoom.update_date.substring(0,4),
          Update_By : this.report2[i].bookMeetingRoom.update_by,
         Checkin_By : this.report2[i].bookMeetingRoom.checkinby,
         Checkin_Time : this.report2[i].bookMeetingRoom.checkintime,
@@ -134,8 +135,10 @@ exportexcel(): void{
       }, 1000); //interval
     })
 
-
-
+ // console.log(this.dateStart , this.dateEnd);
+  this.dateshow = this.dateStart.slice(8,10) + '/' + this.dateStart.slice(5,7) + '/' + this.dateStart.slice(0,4) + '  -  ' +
+  this.dateEnd.slice(8,10) + '/' + this.dateEnd.slice(5,7) + '/' + this.dateEnd.slice(0,4);
+ // console.log(this.dateshow);
   }
 
 
@@ -196,7 +199,7 @@ exportexcel(): void{
         }
     }
 
-    console.log( this.events);
+   // console.log( this.events);
 
 
   }
