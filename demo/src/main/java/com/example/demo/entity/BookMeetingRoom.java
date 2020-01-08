@@ -58,6 +58,15 @@ public class BookMeetingRoom {
         private String checkouttime;
         private String checkinby;
         private String checkoutby;
+        private String notify;
+
+    public String getNotify() {
+        return notify;
+    }
+
+    public void setNotify(String notify) {
+        this.notify = notify;
+    }
 
     public Roomname getRoomname() {
         return roomname;

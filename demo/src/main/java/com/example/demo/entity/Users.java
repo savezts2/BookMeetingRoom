@@ -38,6 +38,15 @@ public class Users {
     private Date create_date;
     private String create_by;
     private String update_by;
+    private String email;
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
     public Date getUpdate_date() {
         return update_date;

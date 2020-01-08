@@ -5,10 +5,7 @@ import com.example.demo.entity.BookMeetingRoom;
 import com.example.demo.entity.Report;
 import com.example.demo.entity.Roomname;
 import com.example.demo.entity.Users;
-import com.example.demo.repository.BookMeetingRoomRepository;
-import com.example.demo.repository.ReportRepository;
-import com.example.demo.repository.RoomnameRepository;
-import com.example.demo.repository.UsersRepository;
+import com.example.demo.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -32,6 +29,8 @@ public class BookMeetingRoomController {
     @Autowired
     private RoomnameRepository roomnameRepository;
 
+    @Autowired
+    private MailService notificationService;
 
     @GetMapping(path = "/getHourCurrent")
     public static String getHourCurrent() {
@@ -104,6 +103,9 @@ public class BookMeetingRoomController {
         bookMeetingRoom.setUpdate_by("Updatebysys");
         bookMeetingRoom.setUpdate_date(new Date());
         bookMeetingRoomRepository.save(bookMeetingRoom);
+
+        Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
+        notificationService.sendNotifyNotCheckin(report.getUsers().getEmail());
         return bookMeetingRoom;
     }
 
@@ -439,8 +441,18 @@ public class BookMeetingRoomController {
         report.setCreate_by(users.getFirstname());
         report.setCreate_date(date1);
         reportRepository.save(report);
-
+        notificationService.sendEmail(users , bookMeetingRoom);
         return bookMeetingRoom;
+    }
+
+    @PostMapping(path = "/Notify/{email}/{book_id}")
+    public BookMeetingRoom Notify(@PathVariable String email, @PathVariable Long book_id){
+
+
+        BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(book_id).get();
+        notificationService.sendNotify(email);
+        bookMeetingRoom.setNotify("1");
+        return bookMeetingRoomRepository.save(bookMeetingRoom);
     }
 
 

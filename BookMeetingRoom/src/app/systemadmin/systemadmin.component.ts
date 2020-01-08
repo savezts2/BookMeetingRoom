@@ -73,7 +73,7 @@ onEdituser(row : any){
   const dialogRef = this.dialog.open(EdituserbyadminComponent, {
         data: row,
         height: 'auto',
-        width:  'auto',
+        width:  '800px',
     });
 }
 
@@ -89,7 +89,7 @@ onAdduser(){
     const dialogRef = this.dialog.open(AdduserbyadminComponent, {
 
         height: 'auto',
-        width:  'auto',
+        width:  '800px',
     });
 
   }

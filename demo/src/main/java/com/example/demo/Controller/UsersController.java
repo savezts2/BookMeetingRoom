@@ -92,9 +92,9 @@ public class UsersController {
         return s_role.getIsActive().equals("1");
     }
 
-    @PostMapping(path = "/Adduser/{addby}/{firstname}/{lastname}/{department}/{position}/{username}/{password}/{status}")
+    @PostMapping(path = "/Adduser/{addby}/{firstname}/{lastname}/{department}/{position}/{username}/{password}/{status}/{email}")
     public Users users(@PathVariable String addby,@PathVariable String firstname, @PathVariable String lastname, @PathVariable String department, @PathVariable String position,
-                       @PathVariable String username,@PathVariable String password,@PathVariable String status) {
+                       @PathVariable String username,@PathVariable String password,@PathVariable String status,@PathVariable String email) {
         Users users = new Users();
         users.setFirstname(firstname);
         users.setLastname(lastname);
@@ -107,14 +107,15 @@ public class UsersController {
         users.setCreate_by(addby);
         Date date= new Date();
         users.setCreate_date(date);
+        users.setEmail(email);
         usersRepository.save(users);
         return users;
     }
 
 
-    @PostMapping(path = "/Edituser/{editby}/{firstname}/{lastname}/{department}/{position}/{username}/{password}/{status}")
+    @PostMapping(path = "/Edituser/{editby}/{firstname}/{lastname}/{department}/{position}/{username}/{password}/{status}/{email}")
     public Users edituser(@PathVariable String editby,@PathVariable String firstname, @PathVariable String lastname, @PathVariable String department, @PathVariable String position,
-                       @PathVariable String username,@PathVariable String password,@PathVariable String status) {
+                       @PathVariable String username,@PathVariable String password,@PathVariable String status,@PathVariable String email) {
         Users users = usersRepository.findByUsernameAndIsActive(username,"1");
         users.setFirstname(firstname);
         users.setRole(status);
@@ -125,6 +126,7 @@ public class UsersController {
         Date date = new Date();
         users.setUpdate_by(editby);
         users.setUpdate_date(date);
+        users.setEmail(email);
         usersRepository.save(users);
         return users;
     }

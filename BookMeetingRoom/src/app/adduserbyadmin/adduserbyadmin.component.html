@@ -32,12 +32,22 @@
         </mat-form-field>
       </div>
       <br/>
-      <div align="center">
 
-
+        <div align="center">
         <mat-form-field>
           <input matInput placeholder="Username" formControlName="userid" (keydown.enter)="submit()" required>
         </mat-form-field>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <mat-form-field>
+          <input matInput placeholder="Email" formControlName="email" (keydown.enter)="submit()" required>
+        </mat-form-field>
+        </div>
+
+        <br/>
+      <div align="center">
+
+
+
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <mat-form-field>
           <input matInput placeholder="Enter your password" [type]="hide ? 'text' : 'password'" formControlName="password" required

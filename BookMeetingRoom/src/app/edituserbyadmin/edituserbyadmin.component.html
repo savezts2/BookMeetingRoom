@@ -42,6 +42,11 @@
         </mat-form-field>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <mat-form-field>
+          <input matInput placeholder="Email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" (keydown.enter)="editUser()" >
+        </mat-form-field>
+        <br/><br/>
+
+        <mat-form-field>
           <input matInput placeholder="Enter your password" [type]="hide ? 'text' : 'password'" formControlName="password" required
                  (keydown.enter)="editUser()">
           <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"

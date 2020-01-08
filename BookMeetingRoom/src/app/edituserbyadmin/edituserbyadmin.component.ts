@@ -20,6 +20,7 @@ username: string;
 role: string;
 isActive: string;
 password: string;
+email: string;
 }
 
 
@@ -41,7 +42,7 @@ hide : boolean;
 departments : Array<any>;
 positions : Array<any>;
 roles : Array<any>;
-
+email: string;
 public API = '//localhost:8080/';   //for test
 //public API = 'http://172.27.209.27:8080/BookMeetingRoom';  //for build
 
@@ -52,6 +53,7 @@ private router: Router,private _formBuilder: FormBuilder, @Inject(MAT_DIALOG_DAT
     this.isLoggedInAdmin = authService.isLoggedInAdmin();
     this.isLoggedInHR = authService.isLoggedInHR();
     this.username = this.data.username;
+    this.email = this.data.email;
 }
 
   ngOnInit() {
@@ -85,11 +87,12 @@ this.service.getDepartment().subscribe(data => {
 editUser(){
     if(this.firstFormGroup.get('firstname').value == '' || this.firstFormGroup.get('lastname').value == '' ||
     this.firstFormGroup.get('department').value == '' || this.firstFormGroup.get('position').value == '' ||
-    this.firstFormGroup.get('password').value == '' || this.firstFormGroup.get('status').value == ''){
+    this.firstFormGroup.get('password').value == '' || this.firstFormGroup.get('status').value == '' || this.email == ''){
       alert("Please check your filled");
     }else{
        this.http.post(this.API + '/Edituser/'+localStorage.getItem('nameid')+'/'+this.firstFormGroup.get('firstname').value +'/' + this.firstFormGroup.get('lastname').value +'/' +
-                 this.firstFormGroup.get('department').value + '/' + this.firstFormGroup.get('position').value + '/' + this.username+ '/' + this.firstFormGroup.get('password').value+ '/' + this.firstFormGroup.get('status').value,{})
+                 this.firstFormGroup.get('department').value + '/' + this.firstFormGroup.get('position').value + '/' + this.username+ '/' + this.firstFormGroup.get('password').value+ '/' + this.firstFormGroup.get('status').value+
+                 '/' + this.email,{})
                              .subscribe(
                                data => {
                                    console.log('PUT Request is successful');
