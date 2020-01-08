@@ -37,7 +37,7 @@ constructor(private service : ServiceService,private http: HttpClient , public a
 
 
 ngOnInit() {
-
+/*
 
 this.service.getAllReport().subscribe(data=>{
     this.report = data;
@@ -1292,7 +1292,7 @@ setTimeout(() => {
 
 
 
-
+*/
 }//oninit
 
 
