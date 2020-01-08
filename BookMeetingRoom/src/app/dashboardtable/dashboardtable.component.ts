@@ -82,7 +82,7 @@ exportexcel(): void{
         Start_Time : this.report2[i].bookMeetingRoom.starttime.substring(0,2)+':'+ this.report2[i].bookMeetingRoom.starttime.substring(3,5),
          End_Time : this.report2[i].bookMeetingRoom.endtime.substring(0,2)+':'+ this.report2[i].bookMeetingRoom.endtime.substring(3,5),
         Topic : this.report2[i].bookMeetingRoom.topic ,
-         Tel : '\''+this.report2[i].bookMeetingRoom.telbookingby+'\'',
+         Tel : this.report2[i].bookMeetingRoom.telbookingby,
         Attendance : this.report2[i].bookMeetingRoom.attendees ,
          Remark : this.report2[i].bookMeetingRoom.remark == 'null' ? null :  this.report2[i].bookMeetingRoom.remark,
          Status : this.report2[i].bookMeetingRoom.statusbooking,

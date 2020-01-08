@@ -14,7 +14,7 @@ constructor() { }
 public exportAsExcelFile(json: any[], excelFileName: string): void {
 
 
-/*var wscols = [
+var wscols = [
     {wch:10},
     {wch:10},
     {wch:20},
@@ -29,18 +29,18 @@ public exportAsExcelFile(json: any[], excelFileName: string): void {
 ];
 
 
-
+  XLSX.SSF.format('$#,##0.00', 12345.6789)
   const worksheet: XLSX.WorkSheet = XLSX.utils.json_to_sheet(json);
   worksheet['!cols'] = wscols;
 
 
 
   const workbook: XLSX.WorkBook = { Sheets: { 'data': worksheet }, SheetNames: ['data'] };
-
+  console.log(worksheet,workbook);
 
   const excelBuffer: any = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
 
-  this.saveAsExcelFile(excelBuffer, excelFileName);*/
+  this.saveAsExcelFile(excelBuffer, excelFileName);
 
 
 

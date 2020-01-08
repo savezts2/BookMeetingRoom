@@ -78,7 +78,7 @@ dateshow : String;
 today=new Date();
 maxDate = new Date(new Date().getFullYear(),new Date().getMonth()+1,new Date().getDate() == 31 ? 31 : 31);
 dateSelect : String ='';
-
+latetime : number;
 splitted : Array<any>;
 dateFull : String ;
 myFilter = (d: Date): boolean => {
@@ -244,7 +244,11 @@ if(this.splitted.length == 1){
 
   }, 2500); //interval
 
+    this.service.getLatetime().subscribe(data=>{
+             // console.log(data);
+              this.latetime = data.latetimecheckout ;
 
+       })
 
   } // oninit
 
@@ -1427,7 +1431,8 @@ dateShow(datefull){
                   }
               }else{
                   if(localStorage.getItem('tokenidadmin') == "JWT"){
-                         if(parseInt(this.time4) >= parseInt(this.time2) && datestringeiei == this.day){
+                       //   console.log(parseInt(this.time4) , parseInt(this.time2) ,datestringeiei , this.day);
+                         if(parseInt(this.time4) >= parseInt(this.time2) && datestringeiei == this.day ){
                           alert("This time has passed");
                          }else{
 

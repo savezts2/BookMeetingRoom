@@ -68,19 +68,19 @@ public class BookMeetingRoomController {
         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findByDateBookMeetingRoomAndRoomnameAndStarttimeAndIsActive(dateBookMeetingRoom,roomname1,starttime,"1");
         if(starttime.equals("08.00")){
             endtime = "09.00";
-        }else if(starttime.equals("09.00")){endtime = "10.00";}
-        else if(starttime.equals("10.00")){endtime = "11.00";}
-        else if(starttime.equals("11.00")){endtime = "12.00";}
-        else if(starttime.equals("12.00")){endtime = "13.00";}
-        else if(starttime.equals("13.00")){endtime = "14.00";}
-        else if(starttime.equals("14.00")){endtime = "15.00";}
-        else if(starttime.equals("15.00")){endtime = "16.00";}
-        else if(starttime.equals("16.00")){endtime = "17.00";}
-        else if(starttime.equals("17.00")){endtime = "18.00";}
-        else if(starttime.equals("18.00")){endtime = "19.00";}
-        else if(starttime.equals("19.00")){endtime = "20.00";}
-        else if(starttime.equals("20.00")){endtime = "21.00";}
-        else {endtime = "22.00";}
+        }else if(starttime.equals("09.00")){endtime = "09.00";}
+        else if(starttime.equals("10.00")){endtime = "10.00";}
+        else if(starttime.equals("11.00")){endtime = "11.00";}
+        else if(starttime.equals("12.00")){endtime = "12.00";}
+        else if(starttime.equals("13.00")){endtime = "13.00";}
+        else if(starttime.equals("14.00")){endtime = "14.00";}
+        else if(starttime.equals("15.00")){endtime = "15.00";}
+        else if(starttime.equals("16.00")){endtime = "16.00";}
+        else if(starttime.equals("17.00")){endtime = "17.00";}
+        else if(starttime.equals("18.00")){endtime = "18.00";}
+        else if(starttime.equals("19.00")){endtime = "19.00";}
+        else if(starttime.equals("20.00")){endtime = "20.00";}
+        else {endtime = "21.00";}
 
 
 
