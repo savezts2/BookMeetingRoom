@@ -424,7 +424,7 @@ public class BookMeetingRoomController {
 
         Users users = usersRepository.findByUsernameAndIsActive(userid,"1");
         bookMeetingRoom.setCreate_by(users.getFirstname());
-
+        bookMeetingRoom.setNotify("0");
         Report report = new Report();
         report.setBookMeetingRoom(bookMeetingRoom);
         report.setDate(date);
@@ -445,15 +445,6 @@ public class BookMeetingRoomController {
         return bookMeetingRoom;
     }
 
-    @PostMapping(path = "/Notify/{email}/{book_id}")
-    public BookMeetingRoom Notify(@PathVariable String email, @PathVariable Long book_id){
-
-
-        BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(book_id).get();
-        notificationService.sendNotify(email);
-        bookMeetingRoom.setNotify("1");
-        return bookMeetingRoomRepository.save(bookMeetingRoom);
-    }
 
 
 

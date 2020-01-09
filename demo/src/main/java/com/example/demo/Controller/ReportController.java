@@ -1,19 +1,16 @@
 package com.example.demo.Controller;
 
 
-import com.example.demo.entity.BookMeetingRoom;
-import com.example.demo.entity.Latetime;
-import com.example.demo.entity.Report;
-import com.example.demo.entity.Users;
-import com.example.demo.repository.BookMeetingRoomRepository;
-import com.example.demo.repository.LatetimeRepository;
-import com.example.demo.repository.MailService;
-import com.example.demo.repository.ReportRepository;
+import com.example.demo.entity.*;
+import com.example.demo.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.awt.print.Book;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
@@ -34,6 +31,9 @@ public class ReportController {
     private LatetimeRepository latetimeRepository;
     @Autowired
     private MailService notificationService;
+    @Autowired
+    private TimeNotifyRepository timeNotifyRepository;
+
     @GetMapping("/Report")
     public Collection<Report> Actives() {
         return reportRepository.findAll().stream().filter(this::Reportactive).collect(Collectors.toList());
@@ -64,9 +64,15 @@ public class ReportController {
 
     @Scheduled(fixedRate = 3000)
     public void scheduleTaskWithFixedRate() {
+        LocalDate currentDate = LocalDate.now();
+        LocalTime localTime = LocalTime.now();
 
-        List<BookMeetingRoom> bookMeetingRooms = bookMeetingRoomRepository.findAll().stream().filter(this::Bookactive).collect(Collectors.toList());
+        Date Currentdatte = new Date(currentDate.getMonth().getValue()+"/"+currentDate.getDayOfMonth()+"/"+currentDate.getYear());
 
+        List<BookMeetingRoom> bookMeetingRooms = bookMeetingRoomRepository.findAll().stream().filter(bookMeetingRoom -> "1".equals(bookMeetingRoom.getIsActive())).
+                filter(bookMeetingRoom -> Currentdatte.equals(new Date(bookMeetingRoom.getDateBookMeetingRoom().substring(3,5)
+                +"/"+bookMeetingRoom.getDateBookMeetingRoom().substring(0,2)+"/"+bookMeetingRoom.getDateBookMeetingRoom().substring(6,10)))).collect(Collectors.toList());
+       // System.out.println(bookMeetingRooms.size());
         BookMeetingRoom[] itemsArray = new BookMeetingRoom[bookMeetingRooms.size()];
         itemsArray = bookMeetingRooms.toArray(itemsArray);
         String hour = "";
@@ -94,7 +100,11 @@ public class ReportController {
         long id = 1 ;
         String latetimeString ;
         Latetime latetime = latetimeRepository.findById(id).get();
+        TimeNotify timeNotify = timeNotifyRepository.findById(id).get();
        // System.out.println(latetime.getLatetimecheckout());
+        int timeno = timeNotify.getTimenotify();
+        //System.out.println(timeno);
+        //System.out.println(localTime.minusMinutes(timeno).toString().substring(0,2)+"."+localTime.minusMinutes(timeno).toString().substring(3,5));
         if(latetime.getLatetimecheckout() - 1 < 10){
             latetimeString = "0"+(latetime.getLatetimecheckout()-1);
         }else{
@@ -102,6 +112,7 @@ public class ReportController {
         }
 
         for(int i = 0 ; i < itemsArray.length ; i++){
+          //  System.out.println(new Date() + "    "+itemsArray[i].getCreate_date());
 
             Date date2 = new Date(itemsArray[i].getDateBookMeetingRoom().substring(3,5)+'/'+itemsArray[i].getDateBookMeetingRoom().substring(0,2) + "/"+
                     itemsArray[i].getDateBookMeetingRoom().substring(6,10));
@@ -109,12 +120,198 @@ public class ReportController {
 
 
 
+            String Currenttime = LocalTime.now().toString().substring(0,2)+"."+LocalTime.now().toString().substring(3,5);
+
+
+            if(((LocalTime.of(8,00).minusMinutes(timeno).toString().substring(0,2)) + "." +
+                    (LocalTime.of(8,00).minusMinutes(timeno).toString().substring(3,5))).equals(Currenttime)){
+
+                if(itemsArray[i].getStarttime().equals("08.00") && itemsArray[i].getNotify().equals("0")){
+                    BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
+                    bookMeetingRoom.setNotify("1");
+                    bookMeetingRoomRepository.save(bookMeetingRoom);
+                    Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
+                    notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook());
+                }
+
+
+            }
+            if(((LocalTime.of(9,00).minusMinutes(timeno).toString().substring(0,2)) + "." +
+                    (LocalTime.of(9,00).minusMinutes(timeno).toString().substring(3,5))).equals(Currenttime)){
+
+                if(itemsArray[i].getStarttime().equals("09.00") && itemsArray[i].getNotify().equals("0")){
+                    BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
+                    bookMeetingRoom.setNotify("1");
+                    bookMeetingRoomRepository.save(bookMeetingRoom);
+                    Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
+                    notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook());
+                }
+
+
+            }
+            if(((LocalTime.of(10,00).minusMinutes(timeno).toString().substring(0,2)) + "." +
+                    (LocalTime.of(10,00).minusMinutes(timeno).toString().substring(3,5))).equals(Currenttime)){
+
+                if(itemsArray[i].getStarttime().equals("10.00") && itemsArray[i].getNotify().equals("0")){
+                    BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
+                    bookMeetingRoom.setNotify("1");
+                    bookMeetingRoomRepository.save(bookMeetingRoom);
+                    Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
+                    notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook());
+                }
+
+
+            }
+            if(((LocalTime.of(11,00).minusMinutes(timeno).toString().substring(0,2)) + "." +
+                    (LocalTime.of(11,00).minusMinutes(timeno).toString().substring(3,5))).equals(Currenttime)){
+
+                if(itemsArray[i].getStarttime().equals("11.00") && itemsArray[i].getNotify().equals("0")){
+                    BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
+                    bookMeetingRoom.setNotify("1");
+                    bookMeetingRoomRepository.save(bookMeetingRoom);
+                    Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
+                    notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook());
+                }
+
+
+            }
+            if(((LocalTime.of(12,00).minusMinutes(timeno).toString().substring(0,2)) + "." +
+                    (LocalTime.of(12,00).minusMinutes(timeno).toString().substring(3,5))).equals(Currenttime)){
+
+                if(itemsArray[i].getStarttime().equals("12.00") && itemsArray[i].getNotify().equals("0")){
+                    BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
+                    bookMeetingRoom.setNotify("1");
+                    bookMeetingRoomRepository.save(bookMeetingRoom);
+                    Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
+                    notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook());
+                }
+
+
+            }
+            if(((LocalTime.of(13,00).minusMinutes(timeno).toString().substring(0,2)) + "." +
+                    (LocalTime.of(13,00).minusMinutes(timeno).toString().substring(3,5))).equals(Currenttime)){
+
+                if(itemsArray[i].getStarttime().equals("13.00") && itemsArray[i].getNotify().equals("0")){
+                    BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
+                    bookMeetingRoom.setNotify("1");
+                    bookMeetingRoomRepository.save(bookMeetingRoom);
+                    Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
+                    notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook());
+                }
+
+
+            }
+            if(((LocalTime.of(14,00).minusMinutes(timeno).toString().substring(0,2)) + "." +
+                    (LocalTime.of(14,00).minusMinutes(timeno).toString().substring(3,5))).equals(Currenttime)){
+
+                if(itemsArray[i].getStarttime().equals("14.00") && itemsArray[i].getNotify().equals("0")){
+                    BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
+                    bookMeetingRoom.setNotify("1");
+                    bookMeetingRoomRepository.save(bookMeetingRoom);
+                    Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
+                    notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook());
+                }
+
+
+            }
+            if(((LocalTime.of(15,00).minusMinutes(timeno).toString().substring(0,2)) + "." +
+                    (LocalTime.of(15,00).minusMinutes(timeno).toString().substring(3,5))).equals(Currenttime)){
+
+                if(itemsArray[i].getStarttime().equals("15.00") && itemsArray[i].getNotify().equals("0")){
+                    BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
+                    bookMeetingRoom.setNotify("1");
+                    bookMeetingRoomRepository.save(bookMeetingRoom);
+                    Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
+                    notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook());
+                }
+
+
+            }
+            if(((LocalTime.of(16,00).minusMinutes(timeno).toString().substring(0,2)) + "." +
+                    (LocalTime.of(16,00).minusMinutes(timeno).toString().substring(3,5))).equals(Currenttime)){
+
+                if(itemsArray[i].getStarttime().equals("16.00") && itemsArray[i].getNotify().equals("0")){
+                    BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
+                    bookMeetingRoom.setNotify("1");
+                    bookMeetingRoomRepository.save(bookMeetingRoom);
+                    Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
+                    notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook());
+                }
+
+
+            }
+            if(((LocalTime.of(17,00).minusMinutes(timeno).toString().substring(0,2)) + "." +
+                    (LocalTime.of(17,00).minusMinutes(timeno).toString().substring(3,5))).equals(Currenttime)){
+
+                if(itemsArray[i].getStarttime().equals("17.00") && itemsArray[i].getNotify().equals("0")){
+                    BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
+                    bookMeetingRoom.setNotify("1");
+                    bookMeetingRoomRepository.save(bookMeetingRoom);
+                    Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
+                    notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook());
+                }
+
+
+            }
+            if(((LocalTime.of(18,00).minusMinutes(timeno).toString().substring(0,2)) + "." +
+                    (LocalTime.of(18,00).minusMinutes(timeno).toString().substring(3,5))).equals(Currenttime)){
+
+                if(itemsArray[i].getStarttime().equals("18.00") && itemsArray[i].getNotify().equals("0")){
+                    BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
+                    bookMeetingRoom.setNotify("1");
+                    bookMeetingRoomRepository.save(bookMeetingRoom);
+                    Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
+                    notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook());
+                }
+
+
+            }
+            if(((LocalTime.of(19,00).minusMinutes(timeno).toString().substring(0,2)) + "." +
+                    (LocalTime.of(19,00).minusMinutes(timeno).toString().substring(3,5))).equals(Currenttime)){
+
+                if(itemsArray[i].getStarttime().equals("19.00") && itemsArray[i].getNotify().equals("0")){
+                    BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
+                    bookMeetingRoom.setNotify("1");
+                    bookMeetingRoomRepository.save(bookMeetingRoom);
+                    Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
+                    notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook());
+                }
+
+
+            }
+            if(((LocalTime.of(20,00).minusMinutes(timeno).toString().substring(0,2)) + "." +
+                    (LocalTime.of(20,00).minusMinutes(timeno).toString().substring(3,5))).equals(Currenttime)){
+
+                if(itemsArray[i].getStarttime().equals("20.00") && itemsArray[i].getNotify().equals("0")){
+                    BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
+                    bookMeetingRoom.setNotify("1");
+                    bookMeetingRoomRepository.save(bookMeetingRoom);
+                    Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
+                    notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook());
+                }
+
+
+            }
+            if(((LocalTime.of(21,00).minusMinutes(timeno).toString().substring(0,2)) + "." +
+                    (LocalTime.of(21,00).minusMinutes(timeno).toString().substring(3,5))).equals(Currenttime)){
+
+                if(itemsArray[i].getStarttime().equals("21.00") && itemsArray[i].getNotify().equals("0")){
+                    BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
+                    bookMeetingRoom.setNotify("1");
+                    bookMeetingRoomRepository.save(bookMeetingRoom);
+                    Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
+                    notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook());
+                }
+
+
+            }
+
             ////////////////////////////////////   ////////////////////
-            ///             late 15 To day                      ///
+            ///             late 15 min                         ///
             //////////////////////////////////////////////////////
             if(itemsArray[i].getStatusbooking().equals("Booking")){
 
-                if(fulltime.compareToIgnoreCase("08.14") == 1 && date2.before(date)){
+                if(fulltime.compareToIgnoreCase("08.14") == 1){
                     if(itemsArray[i].getStarttime().equals("08.00") && itemsArray[i].getStatusbooking().equals("Booking")){
                         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
                         bookMeetingRoom.setStatusbooking("Not Checkin");
@@ -125,7 +322,7 @@ public class ReportController {
                         bookMeetingRoomRepository.save(bookMeetingRoom);
                     }
                 }
-                 if(fulltime.compareToIgnoreCase("09.14") == 1 && date2.before(date)){
+                 if(fulltime.compareToIgnoreCase("09.14") == 1){
                     if(itemsArray[i].getStarttime().equals("09.00") && itemsArray[i].getStatusbooking().equals("Booking")){
                         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
                         bookMeetingRoom.setStatusbooking("Not Checkin");
@@ -136,7 +333,7 @@ public class ReportController {
                         bookMeetingRoomRepository.save(bookMeetingRoom);
                     }
                 }
-                if(fulltime.compareToIgnoreCase("10.14") == 1 && date2.before(date)){
+                if(fulltime.compareToIgnoreCase("10.14") == 1){
                     if(itemsArray[i].getStarttime().equals("10.00") && itemsArray[i].getStatusbooking().equals("Booking")){
                         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
                         bookMeetingRoom.setStatusbooking("Not Checkin");
@@ -147,7 +344,7 @@ public class ReportController {
                         bookMeetingRoomRepository.save(bookMeetingRoom);
                     }
                 }
-                if(fulltime.compareToIgnoreCase("11.14") == 1 && date2.before(date)){
+                if(fulltime.compareToIgnoreCase("11.14") == 1){
                     if(itemsArray[i].getStarttime().equals("11.00") && itemsArray[i].getStatusbooking().equals("Booking")){
                         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
                         bookMeetingRoom.setStatusbooking("Not Checkin");
@@ -158,7 +355,7 @@ public class ReportController {
                         bookMeetingRoomRepository.save(bookMeetingRoom);
                     }
                 }
-                if(fulltime.compareToIgnoreCase("12.14") == 1 && date2.before(date)){
+                if(fulltime.compareToIgnoreCase("12.14") == 1){
                     if(itemsArray[i].getStarttime().equals("12.00") && itemsArray[i].getStatusbooking().equals("Booking")){
                         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
                         bookMeetingRoom.setStatusbooking("Not Checkin");
@@ -169,7 +366,7 @@ public class ReportController {
                         bookMeetingRoomRepository.save(bookMeetingRoom);
                     }
                 }
-                if(fulltime.compareToIgnoreCase("13.14") == 1 && date2.before(date)){
+                if(fulltime.compareToIgnoreCase("13.14") == 1){
 
                     if(itemsArray[i].getStarttime().equals("13.00") && itemsArray[i].getStatusbooking().equals("Booking")){
                         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
@@ -181,7 +378,7 @@ public class ReportController {
                         bookMeetingRoomRepository.save(bookMeetingRoom);
                     }
                 }
-                if(fulltime.compareToIgnoreCase("14.14") == 1 && date2.before(date)){
+                if(fulltime.compareToIgnoreCase("14.14") == 1){
                     if(itemsArray[i].getStarttime().equals("14.00") && itemsArray[i].getStatusbooking().equals("Booking")){
                         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
                         bookMeetingRoom.setStatusbooking("Not Checkin");
@@ -192,7 +389,7 @@ public class ReportController {
                         bookMeetingRoomRepository.save(bookMeetingRoom);
                     }
                 }
-                if(fulltime.compareToIgnoreCase("15.14") == 1 && date2.before(date)){
+                if(fulltime.compareToIgnoreCase("15.14") == 1){
                     if(itemsArray[i].getStarttime().equals("15.00") && itemsArray[i].getStatusbooking().equals("Booking")){
                         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
                         bookMeetingRoom.setStatusbooking("Not Checkin");
@@ -203,7 +400,7 @@ public class ReportController {
                         bookMeetingRoomRepository.save(bookMeetingRoom);
                     }
                 }
-                if(fulltime.compareToIgnoreCase("16.14") == 1 && date2.before(date)){
+                if(fulltime.compareToIgnoreCase("16.14") == 1){
                     if(itemsArray[i].getStarttime().equals("16.00") && itemsArray[i].getStatusbooking().equals("Booking")){
                         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
                         bookMeetingRoom.setStatusbooking("Not Checkin");
@@ -214,7 +411,7 @@ public class ReportController {
                         bookMeetingRoomRepository.save(bookMeetingRoom);
                     }
                 }
-                if(fulltime.compareToIgnoreCase("17.14") == 1 && date2.before(date)){
+                if(fulltime.compareToIgnoreCase("17.14") == 1){
                     if(itemsArray[i].getStarttime().equals("17.00") && itemsArray[i].getStatusbooking().equals("Booking")){
                         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
                         bookMeetingRoom.setStatusbooking("Not Checkin");
@@ -225,7 +422,7 @@ public class ReportController {
                         bookMeetingRoomRepository.save(bookMeetingRoom);
                     }
                 }
-                if(fulltime.compareToIgnoreCase("18.14") == 1 && date2.before(date)){
+                if(fulltime.compareToIgnoreCase("18.14") == 1){
                     if(itemsArray[i].getStarttime().equals("18.00") && itemsArray[i].getStatusbooking().equals("Booking")){
                         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
                         bookMeetingRoom.setStatusbooking("Not Checkin");
@@ -236,7 +433,7 @@ public class ReportController {
                         bookMeetingRoomRepository.save(bookMeetingRoom);
                     }
                 }
-                if(fulltime.compareToIgnoreCase("19.14") == 1 && date2.before(date)){
+                if(fulltime.compareToIgnoreCase("19.14") == 1){
                     if(itemsArray[i].getStarttime().equals("19.00") && itemsArray[i].getStatusbooking().equals("Booking")){
                         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
                         bookMeetingRoom.setStatusbooking("Not Checkin");
@@ -247,7 +444,7 @@ public class ReportController {
                         bookMeetingRoomRepository.save(bookMeetingRoom);
                     }
                 }
-                if(fulltime.compareToIgnoreCase("20.14") == 1 && date2.before(date)){
+                if(fulltime.compareToIgnoreCase("20.14") == 1){
                     if(itemsArray[i].getStarttime().equals("20.00") && itemsArray[i].getStatusbooking().equals("Booking")){
                         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
                         bookMeetingRoom.setStatusbooking("Not Checkin");
@@ -258,7 +455,7 @@ public class ReportController {
                         bookMeetingRoomRepository.save(bookMeetingRoom);
                     }
                 }
-                if(fulltime.compareToIgnoreCase("21.14") == 1 && date2.before(date)){
+                if(fulltime.compareToIgnoreCase("21.14") == 1){
                     if(itemsArray[i].getStarttime().equals("21.00") && itemsArray[i].getStatusbooking().equals("Booking")){
                         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
                         bookMeetingRoom.setStatusbooking("Not Checkin");
@@ -269,7 +466,7 @@ public class ReportController {
                         bookMeetingRoomRepository.save(bookMeetingRoom);
                     }
                 }
-                if(fulltime.compareToIgnoreCase("22.14") == 1 && date2.before(date)){
+                if(fulltime.compareToIgnoreCase("22.14") == 1){
                     if(itemsArray[i].getStarttime().equals("22.00") && itemsArray[i].getStatusbooking().equals("Booking")){
                         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
                         bookMeetingRoom.setStatusbooking("Not Checkin");
@@ -288,7 +485,7 @@ public class ReportController {
 
            // System.out.println("08."+latetimeString);
 
-            if( fulltime.compareToIgnoreCase("08."+latetimeString) == 1 && date2.before(date)){
+            if( fulltime.compareToIgnoreCase("08."+latetimeString) == 1){
 
                 if(itemsArray[i].getStarttime().equals("08.00") && (itemsArray[i].getStatusbooking().equals("Not Checkin") ||
                         itemsArray[i].getStatusbooking().equals("Booking")) && (itemsArray[i].getLatetime() == 15 || itemsArray[i].getLatetime() == 0)){
@@ -309,7 +506,7 @@ public class ReportController {
                 }
 
             }
-            if( fulltime.compareToIgnoreCase("09."+latetimeString) == 1 && date2.before(date)){
+            if( fulltime.compareToIgnoreCase("09."+latetimeString) == 1){
 
                 if(itemsArray[i].getStarttime().equals("09.00") && (itemsArray[i].getStatusbooking().equals("Not Checkin") ||
                         itemsArray[i].getStatusbooking().equals("Booking")) && (itemsArray[i].getLatetime() == 15 || itemsArray[i].getLatetime() == 0)){
@@ -330,7 +527,7 @@ public class ReportController {
                 }
 
             }
-            if( fulltime.compareToIgnoreCase("10."+latetimeString) == 1 && date2.before(date)){
+            if( fulltime.compareToIgnoreCase("10."+latetimeString) == 1){
 
                 if(itemsArray[i].getStarttime().equals("10.00") && (itemsArray[i].getStatusbooking().equals("Not Checkin") ||
                         itemsArray[i].getStatusbooking().equals("Booking")) && (itemsArray[i].getLatetime() == 15 || itemsArray[i].getLatetime() == 0)){
@@ -350,7 +547,7 @@ public class ReportController {
                     notificationService.sendNotifyNotCheckin(report.getUsers().getEmail());
                 }
             }
-            if( fulltime.compareToIgnoreCase("11."+latetimeString) == 1 && date2.before(date)){
+            if( fulltime.compareToIgnoreCase("11."+latetimeString) == 1){
                 if(itemsArray[i].getStarttime().equals("11.00") && (itemsArray[i].getStatusbooking().equals("Not Checkin") ||
                         itemsArray[i].getStatusbooking().equals("Booking")) && (itemsArray[i].getLatetime() == 15 || itemsArray[i].getLatetime() == 0)){
                     System.out.println("Success");
@@ -370,7 +567,7 @@ public class ReportController {
                 }
 
             }
-            if( fulltime.compareToIgnoreCase("12."+latetimeString) == 1 && date2.before(date)){
+            if( fulltime.compareToIgnoreCase("12."+latetimeString) == 1){
 
                 if(itemsArray[i].getStarttime().equals("12.00") && (itemsArray[i].getStatusbooking().equals("Not Checkin") ||
                         itemsArray[i].getStatusbooking().equals("Booking")) && (itemsArray[i].getLatetime() == 15 || itemsArray[i].getLatetime() == 0)){
@@ -390,7 +587,7 @@ public class ReportController {
                     notificationService.sendNotifyNotCheckin(report.getUsers().getEmail());
                 }
             }
-            if( fulltime.compareToIgnoreCase("13."+latetimeString) == 1 && date2.before(date)){
+            if( fulltime.compareToIgnoreCase("13."+latetimeString) == 1){
 
                 if(itemsArray[i].getStarttime().equals("13.00") && (itemsArray[i].getStatusbooking().equals("Not Checkin") ||
                         itemsArray[i].getStatusbooking().equals("Booking")) && (itemsArray[i].getLatetime() == 15 || itemsArray[i].getLatetime() == 0)){
@@ -410,7 +607,7 @@ public class ReportController {
                     notificationService.sendNotifyNotCheckin(report.getUsers().getEmail());
                 }
             }
-            if( fulltime.compareToIgnoreCase("14."+latetimeString) == 1 && date2.before(date)){
+            if( fulltime.compareToIgnoreCase("14."+latetimeString) == 1){
                 if(itemsArray[i].getStarttime().equals("14.00") && (itemsArray[i].getStatusbooking().equals("Not Checkin") ||
                         itemsArray[i].getStatusbooking().equals("Booking")) && (itemsArray[i].getLatetime() == 15 || itemsArray[i].getLatetime() == 0)){
                     System.out.println("Success");
@@ -430,7 +627,7 @@ public class ReportController {
                 }
 
             }
-            if( fulltime.compareToIgnoreCase("15."+latetimeString) == 1 && date2.before(date)){
+            if( fulltime.compareToIgnoreCase("15."+latetimeString) == 1){
 
                 if(itemsArray[i].getStarttime().equals("15.00") && (itemsArray[i].getStatusbooking().equals("Not Checkin") ||
                         itemsArray[i].getStatusbooking().equals("Booking")) && (itemsArray[i].getLatetime() == 15 || itemsArray[i].getLatetime() == 0)){
@@ -450,11 +647,12 @@ public class ReportController {
                     notificationService.sendNotifyNotCheckin(report.getUsers().getEmail());
                 }
             }
-            if( fulltime.compareToIgnoreCase("16."+latetimeString) == 1 && date2.before(date)){
+            if( fulltime.compareToIgnoreCase("16."+latetimeString) == 1){
 
                 if(itemsArray[i].getStarttime().equals("16.00") && (itemsArray[i].getStatusbooking().equals("Not Checkin") ||
                         itemsArray[i].getStatusbooking().equals("Booking")) && (itemsArray[i].getLatetime() == 15 || itemsArray[i].getLatetime() == 0)){
                     System.out.println("Success");
+
                     BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
                     bookMeetingRoom.setStatusbooking("Not Checkin");
                     bookMeetingRoom.setEndtime("16.00");
@@ -467,10 +665,11 @@ public class ReportController {
                     bookMeetingRoom.setCheckouttime(fulltime);
                     bookMeetingRoomRepository.save(bookMeetingRoom);
                     Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
+
                     notificationService.sendNotifyNotCheckin(report.getUsers().getEmail());
                 }
             }
-            if( fulltime.compareToIgnoreCase("17."+latetimeString) == 1 && date2.before(date)){
+            if( fulltime.compareToIgnoreCase("17."+latetimeString) == 1){
 
                 if(itemsArray[i].getStarttime().equals("17.00") && (itemsArray[i].getStatusbooking().equals("Not Checkin") ||
                         itemsArray[i].getStatusbooking().equals("Booking")) && (itemsArray[i].getLatetime() == 15 || itemsArray[i].getLatetime() == 0)){
@@ -490,7 +689,7 @@ public class ReportController {
                     notificationService.sendNotifyNotCheckin(report.getUsers().getEmail());
                 }
             }
-            if( fulltime.compareToIgnoreCase("18."+latetimeString) == 1 && date2.before(date)){
+            if( fulltime.compareToIgnoreCase("18."+latetimeString) == 1){
 
                 if(itemsArray[i].getStarttime().equals("18.00") && (itemsArray[i].getStatusbooking().equals("Not Checkin") ||
                         itemsArray[i].getStatusbooking().equals("Booking")) && (itemsArray[i].getLatetime() == 15 || itemsArray[i].getLatetime() == 0)){
@@ -510,7 +709,7 @@ public class ReportController {
                     notificationService.sendNotifyNotCheckin(report.getUsers().getEmail());
                 }
             }
-            if( fulltime.compareToIgnoreCase("19."+latetimeString) == 1 && date2.before(date)){
+            if( fulltime.compareToIgnoreCase("19."+latetimeString) == 1){
 
                 if(itemsArray[i].getStarttime().equals("19.00") && (itemsArray[i].getStatusbooking().equals("Not Checkin") ||
                         itemsArray[i].getStatusbooking().equals("Booking")) && (itemsArray[i].getLatetime() == 15 || itemsArray[i].getLatetime() == 0)){
@@ -529,7 +728,7 @@ public class ReportController {
                     notificationService.sendNotifyNotCheckin(report.getUsers().getEmail());
                 }
             }
-            if( fulltime.compareToIgnoreCase("20."+latetimeString) == 1 && date2.before(date)){
+            if( fulltime.compareToIgnoreCase("20."+latetimeString) == 1){
 
                 if(itemsArray[i].getStarttime().equals("20.00") && (itemsArray[i].getStatusbooking().equals("Not Checkin") ||
                         itemsArray[i].getStatusbooking().equals("Booking")) && (itemsArray[i].getLatetime() == 15 || itemsArray[i].getLatetime() == 0)){
@@ -549,7 +748,7 @@ public class ReportController {
                     notificationService.sendNotifyNotCheckin(report.getUsers().getEmail());
                 }
             }
-            if( fulltime.compareToIgnoreCase("21."+latetimeString) == 1 && date2.before(date)){
+            if( fulltime.compareToIgnoreCase("21."+latetimeString) == 1){
 
                 if(itemsArray[i].getStarttime().equals("21.00") && (itemsArray[i].getStatusbooking().equals("Not Checkin") ||
                         itemsArray[i].getStatusbooking().equals("Booking")) && (itemsArray[i].getLatetime() == 15 || itemsArray[i].getLatetime() == 0)){
@@ -569,7 +768,7 @@ public class ReportController {
                     notificationService.sendNotifyNotCheckin(report.getUsers().getEmail());
                 }
             }
-            if( fulltime.compareToIgnoreCase("22."+latetimeString) == 1 && date2.before(date)){
+            if( fulltime.compareToIgnoreCase("22."+latetimeString) == 1){
 
                 if(itemsArray[i].getStarttime().equals("22.00") && (itemsArray[i].getStatusbooking().equals("Not Checkin") ||
                         itemsArray[i].getStatusbooking().equals("Booking")) && (itemsArray[i].getLatetime() == 15 || itemsArray[i].getLatetime() == 0)){
@@ -594,7 +793,7 @@ public class ReportController {
             ///             Checkout Auto                     ///
             //////////////////////////////////////////////////////
             if(itemsArray[i].getStatusbooking().equals("Checkin")){
-                if(fulltime.compareToIgnoreCase("08.59") == 1 && date2.before(date)){
+                if(fulltime.compareToIgnoreCase("08.59") == 1){
                     if(itemsArray[i].getEndtime().equals("09.00")){
                         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
                         bookMeetingRoom.setCheckinby("Checkoutsys");
@@ -604,7 +803,7 @@ public class ReportController {
                         bookMeetingRoom.setStatusbooking("Checkout");
                         bookMeetingRoomRepository.save(bookMeetingRoom);
                     }
-                } if(fulltime.compareToIgnoreCase("09.59") == 1 && date2.before(date)){
+                } if(fulltime.compareToIgnoreCase("09.59") == 1){
                     if(itemsArray[i].getEndtime().equals("10.00")){
                         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
                         bookMeetingRoom.setCheckinby("Checkoutsys");
@@ -614,7 +813,7 @@ public class ReportController {
                         bookMeetingRoom.setStatusbooking("Checkout");
                         bookMeetingRoomRepository.save(bookMeetingRoom);
                     }
-                } if(fulltime.compareToIgnoreCase("10.59") == 1 && date2.before(date)){
+                } if(fulltime.compareToIgnoreCase("10.59") == 1){
                     if(itemsArray[i].getEndtime().equals("11.00")){
                         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
                         bookMeetingRoom.setCheckinby("Checkoutsys");
@@ -624,7 +823,7 @@ public class ReportController {
                         bookMeetingRoom.setStatusbooking("Checkout");
                         bookMeetingRoomRepository.save(bookMeetingRoom);
                     }
-                } if(fulltime.compareToIgnoreCase("11.59") == 1 && date2.before(date)){
+                } if(fulltime.compareToIgnoreCase("11.59") == 1){
                     if(itemsArray[i].getEndtime().equals("12.00")){
                         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
                         bookMeetingRoom.setCheckinby("Checkoutsys");
@@ -634,7 +833,7 @@ public class ReportController {
                         bookMeetingRoom.setStatusbooking("Checkout");
                         bookMeetingRoomRepository.save(bookMeetingRoom);
                     }
-                } if(fulltime.compareToIgnoreCase("12.59") == 1 && date2.before(date)){
+                } if(fulltime.compareToIgnoreCase("12.59") == 1){
                     if(itemsArray[i].getEndtime().equals("13.00")){
                         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
                         bookMeetingRoom.setCheckinby("Checkoutsys");
@@ -644,7 +843,7 @@ public class ReportController {
                         bookMeetingRoom.setStatusbooking("Checkout");
                         bookMeetingRoomRepository.save(bookMeetingRoom);
                     }
-                } if(fulltime.compareToIgnoreCase("13.59") == 1 && date2.before(date)){
+                } if(fulltime.compareToIgnoreCase("13.59") == 1){
                     if(itemsArray[i].getEndtime().equals("14.00")){
                         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
                         bookMeetingRoom.setCheckinby("Checkoutsys");
@@ -654,7 +853,7 @@ public class ReportController {
                         bookMeetingRoom.setStatusbooking("Checkout");
                         bookMeetingRoomRepository.save(bookMeetingRoom);
                     }
-                } if(fulltime.compareToIgnoreCase("14.59") == 1 && date2.before(date)){
+                } if(fulltime.compareToIgnoreCase("14.59") == 1){
                     if(itemsArray[i].getEndtime().equals("15.00")){
                         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
                         bookMeetingRoom.setCheckinby("Checkoutsys");
@@ -664,7 +863,7 @@ public class ReportController {
                         bookMeetingRoom.setStatusbooking("Checkout");
                         bookMeetingRoomRepository.save(bookMeetingRoom);
                     }
-                } if(fulltime.compareToIgnoreCase("15.59") == 1 && date2.before(date)){
+                } if(fulltime.compareToIgnoreCase("15.59") == 1){
                     if(itemsArray[i].getEndtime().equals("16.00")){
                         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
                         bookMeetingRoom.setCheckinby("Checkoutsys");
@@ -674,7 +873,7 @@ public class ReportController {
                         bookMeetingRoom.setStatusbooking("Checkout");
                         bookMeetingRoomRepository.save(bookMeetingRoom);
                     }
-                } if(fulltime.compareToIgnoreCase("16.59") == 1 && date2.before(date)){
+                } if(fulltime.compareToIgnoreCase("16.59") == 1){
                     if(itemsArray[i].getEndtime().equals("17.00")){
                         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
                         bookMeetingRoom.setCheckinby("Checkoutsys");
@@ -684,7 +883,7 @@ public class ReportController {
                         bookMeetingRoom.setStatusbooking("Checkout");
                         bookMeetingRoomRepository.save(bookMeetingRoom);
                     }
-                } if(fulltime.compareToIgnoreCase("17.59") == 1 && date2.before(date)){
+                } if(fulltime.compareToIgnoreCase("17.59") == 1){
                     if(itemsArray[i].getEndtime().equals("18.00")){
                         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
                         bookMeetingRoom.setCheckinby("Checkoutsys");
@@ -694,7 +893,7 @@ public class ReportController {
                         bookMeetingRoom.setStatusbooking("Checkout");
                         bookMeetingRoomRepository.save(bookMeetingRoom);
                     }
-                } if(fulltime.compareToIgnoreCase("18.59") == 1 && date2.before(date)){
+                } if(fulltime.compareToIgnoreCase("18.59") == 1){
                     if(itemsArray[i].getEndtime().equals("19.00")){
                         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
                         bookMeetingRoom.setCheckinby("Checkoutsys");
@@ -705,7 +904,7 @@ public class ReportController {
                         bookMeetingRoomRepository.save(bookMeetingRoom);
                     }
                 }
-                if(fulltime.compareToIgnoreCase("19.59") == 1 && date2.before(date)){
+                if(fulltime.compareToIgnoreCase("19.59") == 1){
                     if(itemsArray[i].getEndtime().equals("20.00")){
                         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
                         bookMeetingRoom.setCheckinby("Checkoutsys");
@@ -716,7 +915,7 @@ public class ReportController {
                         bookMeetingRoomRepository.save(bookMeetingRoom);
                     }
                 }
-                if(fulltime.compareToIgnoreCase("20.59") == 1 && date2.before(date)){
+                if(fulltime.compareToIgnoreCase("20.59") == 1){
                     if(itemsArray[i].getEndtime().equals("21.00")){
                         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
                         bookMeetingRoom.setCheckinby("Checkoutsys");
@@ -726,7 +925,7 @@ public class ReportController {
                         bookMeetingRoom.setStatusbooking("Checkout");
                         bookMeetingRoomRepository.save(bookMeetingRoom);
                     }
-                } if(fulltime.compareToIgnoreCase("21.59") == 1 && date2.before(date)){
+                } if(fulltime.compareToIgnoreCase("21.59") == 1){
                     if(itemsArray[i].getEndtime().equals("22.00")){
                         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
                         bookMeetingRoom.setCheckinby("Checkoutsys");

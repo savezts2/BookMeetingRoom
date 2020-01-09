@@ -45,7 +45,7 @@ public class MailService {
 		javaMailSender.send(mail);
 	}
 
-	public void sendNotify(String email) throws MailException {
+	public void sendNotify(String email,int time,String roomname) throws MailException {
 
 
 		SimpleMailMessage mail = new SimpleMailMessage();
@@ -53,7 +53,7 @@ public class MailService {
 		mail.setTo(email);
 		mail.setSubject("แจ้งเตือนการจองห้องประชุม");
 
-		mail.setText("อีก 15 นาทีจะถึงเวลาเข้าห้องประชุม");
+		mail.setText("อีก " + time + " นาทีจะถึงเวลาเข้าห้องประชุมที่ห้อง "+roomname);
 
 		mail.setFrom("Book Meeting Room Notify! <myemail>");
 
