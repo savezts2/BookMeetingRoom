@@ -857,7 +857,17 @@ SubmitData(){
       }
       else{
 
-        //  console.log(this.fruits);
+
+          let emailcomma = '';
+          for(let i = 0 ; i < this.fruits.length ; i++){
+
+            if(i == this.fruits.length-1){
+              emailcomma = emailcomma+this.fruits[i].name;
+            }else{
+              emailcomma = emailcomma+this.fruits[i].name+',';
+            }
+          }
+
           this.select = {
               userid: this.userid3,
               fromtimeSelect: this.fromtimeSelect,
@@ -867,7 +877,8 @@ SubmitData(){
               atten: this.secondFormGroup.get('atten').value,
               remark: this.secondFormGroup.get('remark').value,
               roomname: this.roomname,
-              date: this.date
+              date: this.date,
+              email: emailcomma
           };
 
           if(this.roomnameandtime.slowtime == 'false'){

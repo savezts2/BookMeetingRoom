@@ -432,6 +432,9 @@ public class BookMeetingRoomController {
         String tel = body.get("tel").toString();
         String topic = body.get("topic").toString();
         String atten =  body.get("atten").toString();
+        String email = body.get("email").toString();
+        String[] emailArray = email.split(",");
+
         if( body.get("remark") == null){
             remark = "null";
         }else{
@@ -484,6 +487,11 @@ public class BookMeetingRoomController {
         report.setCreate_date(date1);
         reportRepository.save(report);
         notificationService.sendEmail(users , bookMeetingRoom);
+
+        for(int i = 0 ; i < emailArray.length ; i++){
+           // System.out.println(emailArray[i]);
+            notificationService.sendEmail2(users , bookMeetingRoom,emailArray[i]);
+        }
         return bookMeetingRoomRepository.findAll().stream().collect(Collectors.toList());
     }
 

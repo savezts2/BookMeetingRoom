@@ -90,5 +90,33 @@ public class MailService {
 	}
 
 
+	public void sendEmail2(Users user , BookMeetingRoom bookMeetingRoom, String email) throws MailException {
+
+
+		SimpleMailMessage mail = new SimpleMailMessage();
+
+		mail.setTo(email);
+		mail.setSubject("แจ้งการจองห้องประชุม");
+
+		if(bookMeetingRoom.getRemark().equals("null")){
+
+			mail.setText("คุณ " + user.getFirstname() + " " + user.getLastname() + "\nจองห้องประชุม " + bookMeetingRoom.getRoomname().getRoomnames()
+					+ "\nเวลา "+bookMeetingRoom.getStarttime() + " - " +bookMeetingRoom.getEndtime() +"\nหัวข้อเรื่อง " + bookMeetingRoom.getTopic()+
+					"\nจำนวน " + bookMeetingRoom.getAttendees() + " คน\n" + "เบอร์โทร " + bookMeetingRoom.getTelbookingby());
+			mail.setFrom("Book Meeting Room Notify! <myemail>");
+
+		}else{
+			mail.setText("คุณ " + user.getFirstname() + " " + user.getLastname() + "\nจองห้องประชุม " + bookMeetingRoom.getRoomname().getRoomnames()
+					+ "\nเวลา "+bookMeetingRoom.getStarttime() + " - " +bookMeetingRoom.getEndtime() +"\nหัวข้อเรื่อง " + bookMeetingRoom.getTopic()+
+					"\nจำนวน " + bookMeetingRoom.getAttendees() + " คน\n" +"หมายเหตุ "+ bookMeetingRoom.getRemark() + "\nเบอร์โทร " + bookMeetingRoom.getTelbookingby());
+			mail.setFrom("Book Meeting Room Notify! <myemail>");
+
+		}
+
+
+		javaMailSender.send(mail);
+	}
+
+
 
 }
