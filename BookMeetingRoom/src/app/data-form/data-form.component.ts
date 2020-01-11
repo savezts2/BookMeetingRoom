@@ -8,6 +8,13 @@ import { HttpClient} from '@angular/common/http';
 import { Router } from '@angular/router';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {MatSidenav} from '@angular/material/sidenav';
+import {MatChipInputEvent} from '@angular/material/chips';
+import {COMMA, ENTER} from '@angular/cdk/keycodes';
+
+export interface Fruit {
+name: string;
+}
+
 @Component({
   selector: 'app-data-form',
   templateUrl: './data-form.component.html',
@@ -823,6 +830,7 @@ public appendTime(){
 } // appendtime
 
 numnum : number ;
+ select: any;
 SubmitData(){
 
         let nan : number = 0 ;
@@ -849,43 +857,42 @@ SubmitData(){
       }
       else{
 
-            if(this.roomnameandtime.slowtime == 'false'){
+        //  console.log(this.fruits);
+          this.select = {
+              userid: this.userid3,
+              fromtimeSelect: this.fromtimeSelect,
+              totime: this.secondFormGroup.get('totime').value,
+              tel: this.secondFormGroup.get('tel').value,
+              topic: this.secondFormGroup.get('topic').value,
+              atten: this.secondFormGroup.get('atten').value,
+              remark: this.secondFormGroup.get('remark').value,
+              roomname: this.roomname,
+              date: this.date
+          };
 
-                                                                this.spiner = true;
-                                     this.http.post(this.API + '/'+this.userid3 +'/' + this.fromtimeSelect +'/' + this.secondFormGroup.get('totime').value +'/'+ this.secondFormGroup.get('tel').value
-                                    + '/' + this.secondFormGroup.get('topic').value + '/' + this.secondFormGroup.get('atten').value+ '/' + this.secondFormGroup.get('remark').value+ '/' + this.roomname+ '/' + this.date,{})
-                                  .subscribe(
-                                  data => {
-                                   console.log('PUT Request is successful');
-                                   alert("จองสำเร็จ");
-                                   this.router.navigate(['selectRoom',{datefull : this.date}]);
-
-                               },
-                               error => {
-                                   console.log('Error', error);
-                                  this.router.navigate(['selectRoom',{datefull : this.date}]);
-                               }
-                                    );
-
-                              }else{
-
-                                   this.spiner = true;
-                                      this.http.post(this.API + '/booklate/'+this.userid3 +'/' + this.fromtimeSelect +'/' + this.secondFormGroup.get('totime').value +'/'+ this.secondFormGroup.get('tel').value
-                                    + '/' + this.secondFormGroup.get('topic').value+ '/' + this.secondFormGroup.get('atten').value+ '/' + this.secondFormGroup.get('remark').value+ '/' + this.roomname+ '/' + this.date,{})
-                                  .subscribe(
-                                  data => {
-                                   console.log('PUT Request is successful');
-                                   alert("จองสำเร็จ");
-                                   this.router.navigate(['selectRoom',{datefull : this.date}]);
-
-                               },
-                               error => {
-                                   console.log('Error', error);
-                                  this.router.navigate(['selectRoom',{datefull : this.date}]);
-                               }
-                                    );
-
-                              }
+          if(this.roomnameandtime.slowtime == 'false'){
+                  this.spiner = true;
+                  this.http.post(this.API+'/dataform', JSON.stringify(this.select), {
+                       headers: {
+                          "Content-Type": "application/json"
+                        }
+                   })
+      .subscribe(data => {
+        alert("จองสำเร็จ");
+         this.router.navigate(['selectRoom',{datefull : this.date}]);
+      });
+          }else{
+              this.spiner = true;
+                  this.http.post(this.API+'/dataform/booklate', JSON.stringify(this.select), {
+                       headers: {
+                          "Content-Type": "application/json"
+                        }
+                   })
+      .subscribe(data => {
+        alert("จองสำเร็จ");
+         this.router.navigate(['selectRoom',{datefull : this.date}]);
+      });
+          }
 
       }
 
@@ -1192,6 +1199,39 @@ convertlengthTime(from , fromback , to , toback){
 
         return this.lengthtime ;
 
+  }
+
+
+visible = true;
+  selectable = true;
+  removable = true;
+  addOnBlur = true;
+  readonly separatorKeysCodes: number[] = [ENTER, COMMA];
+  fruits: Fruit[] = [
+
+  ];
+
+  add(event: MatChipInputEvent): void {
+    const input = event.input;
+    const value = event.value;
+
+    // Add our fruit
+    if ((value || '').trim()) {
+      this.fruits.push({name: value.trim()});
+    }
+
+    // Reset the input value
+    if (input) {
+      input.value = '';
+    }
+  }
+
+  remove(fruit: Fruit): void {
+    const index = this.fruits.indexOf(fruit);
+
+    if (index >= 0) {
+      this.fruits.splice(index, 1);
+    }
   }
 
 

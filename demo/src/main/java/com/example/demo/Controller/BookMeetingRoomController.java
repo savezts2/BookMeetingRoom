@@ -9,10 +9,15 @@ import com.example.demo.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.awt.print.Book;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
+import java.util.Collection;
 import java.util.Date;
 import java.util.Locale;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 
 @RestController
@@ -339,11 +344,26 @@ public class BookMeetingRoomController {
     }
 
 
+    @PostMapping("/dataform/booklate")
+    public Collection<BookMeetingRoom> postDataLate(@RequestBody Map<String,String> body) throws ParseException {
 
-    @PostMapping(path = "/booklate/{userid}/{fromtime}/{totime}/{tel}/{topic}/{atten}/{remark}/{roomname}/{date}")
-    public BookMeetingRoom booklate(@PathVariable String userid, @PathVariable String fromtime, @PathVariable String totime,
-                                           @PathVariable String  tel, @PathVariable String topic,@PathVariable String atten,@PathVariable String remark
-            ,@PathVariable String roomname ,@PathVariable String date) throws Exception {
+        String remark;
+        String userid = body.get("userid").toString();
+        String fromtime = body.get("fromtimeSelect").toString();
+        String totime = body.get("totime").toString();
+        String tel = body.get("tel").toString();
+        String topic = body.get("topic").toString();
+        String atten =  body.get("atten").toString();
+        if( body.get("remark") == null){
+            remark = "null";
+        }else{
+            remark =  body.get("remark").toString();
+        }
+
+        String roomname =  body.get("roomname").toString();
+        String date =  body.get("date").toString();
+
+
         BookMeetingRoom bookMeetingRoom = new BookMeetingRoom();
         bookMeetingRoom.setStarttime(fromtime);
         bookMeetingRoom.setEndtime(totime);
@@ -368,19 +388,22 @@ public class BookMeetingRoomController {
         bookMeetingRoom.setRoomname(roomname1);
         bookMeetingRoom.setDateBookMeetingRoom(date);
         bookMeetingRoom.setIsActive("1");
-        bookMeetingRoomRepository.save(bookMeetingRoom);
-
         bookMeetingRoom.setStatusbooking("Checkin");
         bookMeetingRoom.setCreate_date(date1);
-
         Users users = usersRepository.findByUsernameAndIsActive(userid,"1");
         bookMeetingRoom.setCreate_by(users.getFirstname());
+        bookMeetingRoomRepository.save(bookMeetingRoom);
+
+
+
+
+
 
         Report report = new Report();
         report.setBookMeetingRoom(bookMeetingRoom);
         report.setDate(date);
         report.setUsers(users);
-
+        report.setRoomnamebook(roomname);
         SimpleDateFormat formatter2=new SimpleDateFormat("dd-MM-yyyy");
         String[] dateSplit;
         dateSplit = date.split("-");
@@ -394,14 +417,31 @@ public class BookMeetingRoomController {
         report.setCreate_by(users.getFirstname());
         report.setCreate_date(date1);
         reportRepository.save(report);
-
-        return bookMeetingRoom;
+        notificationService.sendEmail(users , bookMeetingRoom);
+        return bookMeetingRoomRepository.findAll().stream().collect(Collectors.toList());
     }
 
-    @PostMapping(path = "/{userid}/{fromtime}/{totime}/{tel}/{topic}/{atten}/{remark}/{roomname}/{date}")
-    public BookMeetingRoom bookMeetingRoom(@PathVariable String userid, @PathVariable String fromtime, @PathVariable String totime,
-                                     @PathVariable String  tel, @PathVariable String topic,@PathVariable String atten,@PathVariable String remark
-            ,@PathVariable String roomname ,@PathVariable String date) throws Exception {
+
+    @PostMapping("/dataform")
+    public Collection<BookMeetingRoom> postData(@RequestBody Map<String,String> body) throws ParseException {
+
+        String remark;
+        String userid = body.get("userid").toString();
+        String fromtime = body.get("fromtimeSelect").toString();
+        String totime = body.get("totime").toString();
+        String tel = body.get("tel").toString();
+        String topic = body.get("topic").toString();
+        String atten =  body.get("atten").toString();
+        if( body.get("remark") == null){
+            remark = "null";
+        }else{
+            remark =  body.get("remark").toString();
+        }
+
+        String roomname =  body.get("roomname").toString();
+        String date =  body.get("date").toString();
+
+
         BookMeetingRoom bookMeetingRoom = new BookMeetingRoom();
         bookMeetingRoom.setStarttime(fromtime);
         bookMeetingRoom.setEndtime(totime);
@@ -417,7 +457,7 @@ public class BookMeetingRoomController {
         bookMeetingRoom.setRoomname(roomname1);
         bookMeetingRoom.setDateBookMeetingRoom(date);
         bookMeetingRoom.setIsActive("1");
-        bookMeetingRoomRepository.save(bookMeetingRoom);
+
 
         bookMeetingRoom.setStatusbooking("Booking");
         bookMeetingRoom.setCreate_date(date1);
@@ -425,6 +465,8 @@ public class BookMeetingRoomController {
         Users users = usersRepository.findByUsernameAndIsActive(userid,"1");
         bookMeetingRoom.setCreate_by(users.getFirstname());
         bookMeetingRoom.setNotify("0");
+        bookMeetingRoomRepository.save(bookMeetingRoom);
+
         Report report = new Report();
         report.setBookMeetingRoom(bookMeetingRoom);
         report.setDate(date);
@@ -442,7 +484,7 @@ public class BookMeetingRoomController {
         report.setCreate_date(date1);
         reportRepository.save(report);
         notificationService.sendEmail(users , bookMeetingRoom);
-        return bookMeetingRoom;
+        return bookMeetingRoomRepository.findAll().stream().collect(Collectors.toList());
     }
 
 

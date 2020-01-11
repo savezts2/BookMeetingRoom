@@ -36,7 +36,7 @@ var wscols = [
 
 
   const workbook: XLSX.WorkBook = { Sheets: { 'data': worksheet }, SheetNames: ['data'] };
-  console.log(worksheet,workbook);
+ // console.log(worksheet,workbook);
 
   const excelBuffer: any = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
 

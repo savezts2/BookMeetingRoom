@@ -54,6 +54,7 @@ import { SideNavComponent } from './side-nav/side-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { CancelbookbyhrComponent } from './cancelbookbyhr/cancelbookbyhr.component';
 import { SetlatetimeComponent ,SetLateTimeDialog} from './setlatetime/setlatetime.component';
+import {MatChipsModule} from '@angular/material/chips';
 @NgModule({
   declarations: [
     AppComponent,
@@ -107,7 +108,8 @@ SetLateTimeDialog
     MatExpansionModule,
     MatPaginatorModule,
     MatTooltipModule,
-    LayoutModule
+    LayoutModule,
+    MatChipsModule
   ],
     entryComponents: [ DialogOverviewExampleDialog,DialogSubmitRoom ,SetLateTimeDialog],
   providers: [],
