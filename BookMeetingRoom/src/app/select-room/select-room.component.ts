@@ -14,6 +14,7 @@ import {TooltipPosition} from '@angular/material/tooltip';
 import {FormControl} from '@angular/forms';
 import { NativeDateAdapter, DateAdapter, MAT_DATE_FORMATS } from "@angular/material";
 import { AppDateAdapter, APP_DATE_FORMATS} from './date.adapter';
+import { baseUrl } from '../app.component';
 export interface DialogData {
 room: string;
 time: string;
@@ -71,8 +72,7 @@ dt2 : any;
 timehour : string;
 timeminute : string;
 fulltime : string;
-    public API = '//localhost:8080';  //for test
-//public API = 'http://172.27.209.27:8080/BookMeetingRoom';  //for build
+
 
 dateshow : String;
 today=new Date();
@@ -341,7 +341,7 @@ public appendTime(){
                        this.events[j][k][10] = true;
                        this.events[j][k][9] = this.report[i].bookMeetingRoom.remark;
                    }}else{
-                        this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                        this.http.post(baseUrl+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
                                   .subscribe(
                                   data => {
                                    console.log('PUT Request is successful');
@@ -356,7 +356,7 @@ public appendTime(){
                 }
               }
               if(this.countrepeatroom == 0){
-                  this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                  this.http.post(baseUrl+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
                                   .subscribe(
                                   data => {
                                    console.log('PUT Request is successful');
@@ -408,7 +408,7 @@ public appendTime(){
                        this.events[j][k][10] = true;
                        this.events[j][k][9] = this.report[i].bookMeetingRoom.remark;
                    }}else{
-                        this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                        this.http.post(baseUrl+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
                                   .subscribe(
                                   data => {
                                    console.log('PUT Request is successful');
@@ -423,7 +423,7 @@ public appendTime(){
                 }
               }
 if(this.countrepeatroom == 0){
-                  this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                  this.http.post(baseUrl+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
                                   .subscribe(
                                   data => {
                                    console.log('PUT Request is successful');
@@ -474,7 +474,7 @@ if(this.countrepeatroom == 0){
                        this.events[j][k][10] = true;
                        this.events[j][k][9] = this.report[i].bookMeetingRoom.remark;
                    }}else{
-                            this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                            this.http.post(baseUrl+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
                                   .subscribe(
                                   data => {
                                    console.log('PUT Request is successful');
@@ -489,7 +489,7 @@ if(this.countrepeatroom == 0){
                 }
               }
 if(this.countrepeatroom == 0){
-                  this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                  this.http.post(baseUrl+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
                                   .subscribe(
                                   data => {
                                    console.log('PUT Request is successful');
@@ -540,7 +540,7 @@ if(this.countrepeatroom == 0){
                        this.events[j][k][10] = true;
                        this.events[j][k][9] = this.report[i].bookMeetingRoom.remark;
                    }}else{
-                        this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                        this.http.post(baseUrl+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
                                   .subscribe(
                                   data => {
                                    console.log('PUT Request is successful');
@@ -555,7 +555,7 @@ if(this.countrepeatroom == 0){
                 }
               }
 if(this.countrepeatroom == 0){
-                  this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                  this.http.post(baseUrl+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
                                   .subscribe(
                                   data => {
                                    console.log('PUT Request is successful');
@@ -606,7 +606,7 @@ if(this.countrepeatroom == 0){
                        this.events[j][k][10] = true;
                        this.events[j][k][9] = this.report[i].bookMeetingRoom.remark;
                    }}else{
-                        this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                        this.http.post(baseUrl+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
                                   .subscribe(
                                   data => {
                                    console.log('PUT Request is successful');
@@ -621,7 +621,7 @@ if(this.countrepeatroom == 0){
                 }
               }
 if(this.countrepeatroom == 0){
-                  this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                  this.http.post(baseUrl+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
                                   .subscribe(
                                   data => {
                                    console.log('PUT Request is successful');
@@ -672,7 +672,7 @@ if(this.countrepeatroom == 0){
                        this.events[j][k][10] = true;
                        this.events[j][k][9] = this.report[i].bookMeetingRoom.remark;
                    }}else{
-                        this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                        this.http.post(baseUrl+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
                                   .subscribe(
                                   data => {
                                    console.log('PUT Request is successful');
@@ -687,7 +687,7 @@ if(this.countrepeatroom == 0){
                 }
               }
 if(this.countrepeatroom == 0){
-                  this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                  this.http.post(baseUrl+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
                                   .subscribe(
                                   data => {
                                    console.log('PUT Request is successful');
@@ -739,7 +739,7 @@ if(this.countrepeatroom == 0){
                        this.events[j][k][10] = true;
                        this.events[j][k][9] = this.report[i].bookMeetingRoom.remark;
                    }}else{
-                        this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                        this.http.post(baseUrl+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
                                   .subscribe(
                                   data => {
                                    console.log('PUT Request is successful');
@@ -754,7 +754,7 @@ if(this.countrepeatroom == 0){
                 }
               }
 if(this.countrepeatroom == 0){
-                  this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                  this.http.post(baseUrl+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
                                   .subscribe(
                                   data => {
                                    console.log('PUT Request is successful');
@@ -807,7 +807,7 @@ if(this.countrepeatroom == 0){
                        this.events[j][k][10] = true;
                        this.events[j][k][9] = this.report[i].bookMeetingRoom.remark;
                    }}else{
-                        this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                        this.http.post(baseUrl+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
                                   .subscribe(
                                   data => {
                                    console.log('PUT Request is successful');
@@ -823,7 +823,7 @@ if(this.countrepeatroom == 0){
 
               }
 if(this.countrepeatroom == 0){
-                  this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                  this.http.post(baseUrl+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
                                   .subscribe(
                                   data => {
                                    console.log('PUT Request is successful');
@@ -874,7 +874,7 @@ if(this.countrepeatroom == 0){
                        this.events[j][k][10] = true;
                        this.events[j][k][9] = this.report[i].bookMeetingRoom.remark;
                    }}else{
-                        this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                        this.http.post(baseUrl+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
                                   .subscribe(
                                   data => {
                                    console.log('PUT Request is successful');
@@ -889,7 +889,7 @@ if(this.countrepeatroom == 0){
                 }
               }
 if(this.countrepeatroom == 0){
-                  this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                  this.http.post(baseUrl+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
                                   .subscribe(
                                   data => {
                                    console.log('PUT Request is successful');
@@ -940,7 +940,7 @@ if(this.countrepeatroom == 0){
                        this.events[j][k][10] = true;
                        this.events[j][k][9] = this.report[i].bookMeetingRoom.remark;
                    }}else{
-                        this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                        this.http.post(baseUrl+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
                                   .subscribe(
                                   data => {
                                    console.log('PUT Request is successful');
@@ -955,7 +955,7 @@ if(this.countrepeatroom == 0){
                 }
               }
 if(this.countrepeatroom == 0){
-                  this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                  this.http.post(baseUrl+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
                                   .subscribe(
                                   data => {
                                    console.log('PUT Request is successful');
@@ -1006,7 +1006,7 @@ if(this.countrepeatroom == 0){
                        this.events[j][k][10] = true;
                        this.events[j][k][9] = this.report[i].bookMeetingRoom.remark;
                    }}else{
-                        this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                        this.http.post(baseUrl+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
                                   .subscribe(
                                   data => {
                                    console.log('PUT Request is successful');
@@ -1021,7 +1021,7 @@ if(this.countrepeatroom == 0){
                 }
               }
 if(this.countrepeatroom == 0){
-                  this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                  this.http.post(baseUrl+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
                                   .subscribe(
                                   data => {
                                    console.log('PUT Request is successful');
@@ -1072,7 +1072,7 @@ if(this.countrepeatroom == 0){
                        this.events[j][k][10] = true;
                        this.events[j][k][9] = this.report[i].bookMeetingRoom.remark;
                    }}else{
-                        this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                        this.http.post(baseUrl+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
                                   .subscribe(
                                   data => {
                                    console.log('PUT Request is successful');
@@ -1087,7 +1087,7 @@ if(this.countrepeatroom == 0){
                 }
               }
 if(this.countrepeatroom == 0){
-                  this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                  this.http.post(baseUrl+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
                                   .subscribe(
                                   data => {
                                    console.log('PUT Request is successful');
@@ -1138,7 +1138,7 @@ if(this.countrepeatroom == 0){
                        this.events[j][k][10] = true;
                        this.events[j][k][9] = this.report[i].bookMeetingRoom.remark;
                    }}else{
-                        this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                        this.http.post(baseUrl+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
                                   .subscribe(
                                   data => {
                                    console.log('PUT Request is successful');
@@ -1153,7 +1153,7 @@ if(this.countrepeatroom == 0){
                 }
               }
 if(this.countrepeatroom == 0){
-                  this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                  this.http.post(baseUrl+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
                                   .subscribe(
                                   data => {
                                    console.log('PUT Request is successful');
@@ -1207,7 +1207,7 @@ if(this.countrepeatroom == 0){
                              this.events[j][k][9] = this.report[i].bookMeetingRoom.remark;
                          }
                     }else{
-                        this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                        this.http.post(baseUrl+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
                                   .subscribe(
                                   data => {
                                    console.log('PUT Request is successful');
@@ -1224,7 +1224,7 @@ if(this.countrepeatroom == 0){
 
               }
 if(this.countrepeatroom == 0){
-                  this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                  this.http.post(baseUrl+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
                                   .subscribe(
                                   data => {
                                    console.log('PUT Request is successful');
@@ -1275,7 +1275,7 @@ if(this.countrepeatroom == 0){
                        this.events[j][k][10] = true;
                        this.events[j][k][9] = this.report[i].bookMeetingRoom.remark;
                    }}else{
-                        this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                        this.http.post(baseUrl+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
                                   .subscribe(
                                   data => {
                                    console.log('PUT Request is successful');
@@ -1290,7 +1290,7 @@ if(this.countrepeatroom == 0){
                 }
               }
                 if(this.countrepeatroom == 0){
-                        this.http.post(this.API+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
+                        this.http.post(baseUrl+'/bookrepeat/'+this.report[i].bookMeetingRoom.book_id,{})
                                   .subscribe(
                                   data => {
                                    console.log('PUT Request is successful');

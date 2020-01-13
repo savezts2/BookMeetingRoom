@@ -10,9 +10,10 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {MatSidenav} from '@angular/material/sidenav';
 import {MatChipInputEvent} from '@angular/material/chips';
 import {COMMA, ENTER} from '@angular/cdk/keycodes';
-
+import { baseUrl } from '../app.component';
 export interface Fruit {
 name: string;
+invalid: boolean;
 }
 
 @Component({
@@ -40,8 +41,7 @@ fromtimesplited : Array<any>;
 totimesplited : Array<any>;
 countTime : number;
 spiner : boolean = false;
-public API = '//localhost:8080';  //for test
-//public API = 'http://172.27.209.27:8080/BookMeetingRoom';  //for build
+
 firstFormGroup: FormGroup;
 secondFormGroup: FormGroup;
 events: any[] = [];
@@ -833,6 +833,13 @@ numnum : number ;
  select: any;
 SubmitData(){
 
+        for(let i = 0 ; i < this.fruits.length ; i++){
+          if(this. fruits[i].invalid == true){
+              this.fruits.splice(i,1);
+              i = i - 1 ;
+          }
+        }
+      //  console.log(this.fruits);
         let nan : number = 0 ;
         for(let j = 0 ; j < this.roomnames.length ; j++){ //หาห้อง
 
@@ -883,7 +890,7 @@ SubmitData(){
 
           if(this.roomnameandtime.slowtime == 'false'){
                   this.spiner = true;
-                  this.http.post(this.API+'/dataform', JSON.stringify(this.select), {
+                  this.http.post(baseUrl+'/dataform', JSON.stringify(this.select), {
                        headers: {
                           "Content-Type": "application/json"
                         }
@@ -894,7 +901,7 @@ SubmitData(){
       });
           }else{
               this.spiner = true;
-                  this.http.post(this.API+'/dataform/booklate', JSON.stringify(this.select), {
+                  this.http.post(baseUrl+'/dataform/booklate', JSON.stringify(this.select), {
                        headers: {
                           "Content-Type": "application/json"
                         }
@@ -1222,14 +1229,28 @@ visible = true;
 
   ];
 
+
+
   add(event: MatChipInputEvent): void {
+
     const input = event.input;
     const value = event.value;
 
+     // console.log(event.value)
+
     // Add our fruit
+
     if ((value || '').trim()) {
-      this.fruits.push({name: value.trim()});
+      if (this.validateEmail(event.value)) {
+        this.fruits.push({name:value.trim(), invalid:false});
+      }else{
+        this.fruits.push({name:value.trim(), invalid:true});
+      }
     }
+
+   /* if ((value || '').trim()) {
+      this.fruits.push({name: value.trim()});
+    }*/
 
     // Reset the input value
     if (input) {
@@ -1246,6 +1267,9 @@ visible = true;
   }
 
 
-
+private validateEmail(email) {
+  var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
 
 }

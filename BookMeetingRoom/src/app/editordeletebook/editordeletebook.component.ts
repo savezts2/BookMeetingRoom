@@ -12,7 +12,7 @@ import {MatSidenav} from '@angular/material/sidenav';
 import {  MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { HttpClient} from '@angular/common/http';
 import {EditbookComponent} from '../editbook/editbook.component'
-
+import { baseUrl } from '../app.component';
 export interface DialogData {
 room: string;
 time : string;
@@ -39,8 +39,7 @@ export class EditordeletebookComponent implements OnInit {
 isLoggedIn : Observable<boolean>;
 isLoggedInAdmin : Observable<boolean>;
 isLoggedInHR : Observable<boolean>;
-public API = '//localhost:8080';   //for test
-//public API = 'http://172.27.209.27:8080/BookMeetingRoom';  //for build
+
 timenum : number;
 totimenum : number;
 datetimenow : number;
@@ -128,7 +127,7 @@ checkin(){
 
   }else{
       console.log(this.fulltime.substring(0,2)+':'+this.fulltime.substring(3,5));
-     this.http.post(this.API + '/CheckIn/'+this.nameuser+'/'+this.data.date+'/'+this.data.room+'/'+this.data.time+'/'+
+     this.http.post(baseUrl + '/CheckIn/'+this.nameuser+'/'+this.data.date+'/'+this.data.room+'/'+this.data.time+'/'+
      this.fulltime.substring(0,2)+':'+this.fulltime.substring(3,5),{})
                              .subscribe(
                                data => {
@@ -152,7 +151,7 @@ checkin(){
 
 delete(){
   this.spiner = true;
-  this.http.post(this.API + '/CancelBooking/'+this.nameuser+'/'+this.data.date+'/'+this.data.room+'/'+this.data.time,{})
+  this.http.post(baseUrl + '/CancelBooking/'+this.nameuser+'/'+this.data.date+'/'+this.data.room+'/'+this.data.time,{})
                              .subscribe(
                                data => {
                                    console.log('PUT Request is successful');

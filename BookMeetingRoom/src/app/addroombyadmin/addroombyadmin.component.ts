@@ -10,7 +10,7 @@ import { MatPaginator, MatTableDataSource, MatSort } from '@angular/material';
 import { HttpClient} from '@angular/common/http';
 import {EditroomnameComponent} from '../editroomname/editroomname.component'
 import {DeleteroomComponent} from '../deleteroom/deleteroom.component'
-
+import { baseUrl } from '../app.component';
 export interface PeriodicElement {
 roomnames : string;
 }
@@ -36,8 +36,7 @@ isLoggedInHR : Observable<boolean>;
 roomnames : Array<any>;
 roominput : string = '';
 firstname : string;
-public API = '//localhost:8080';  //for test
-//public API = 'http://172.27.209.27:8080/BookMeetingRoom';  //for build
+
 dataSource = new MatTableDataSource<PeriodicElement>(this.roomnames);
   constructor(public authService : AuthService , private router: Router , private service : ServiceService,public dialog: MatDialog
   ,private http: HttpClient) {
@@ -105,8 +104,7 @@ onEdit(row : any){
   templateUrl: 'dialog-submit-room-dialog.html',
 })
 export class DialogSubmitRoom {
-public API = '//localhost:8080';  //for test
-//public API = 'http://172.27.209.27:8080/BookMeetingRoom';  //for build
+
   constructor(
     public dialogRef: MatDialogRef<DialogSubmitRoom>, @Inject(MAT_DIALOG_DATA) public data: DialogData,
     private service : ServiceService, private http: HttpClient) {}
@@ -118,7 +116,7 @@ public API = '//localhost:8080';  //for test
               if(data != null){
                 alert("This room name already exists in the system.");
               }else{
-                  this.http.post(this.API + '/Addroom/'+this.data.firstname +'/' + this.data.roominput,{})
+                  this.http.post(baseUrl + '/Addroom/'+this.data.firstname +'/' + this.data.roominput,{})
                              .subscribe(
                                data => {
                                    console.log('PUT Request is successful');

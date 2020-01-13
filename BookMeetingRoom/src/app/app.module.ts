@@ -35,7 +35,7 @@ import { AdduserbyadminComponent } from './adduserbyadmin/adduserbyadmin.compone
 import {MatCardModule} from '@angular/material/card';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
-import { HeaderComponent } from './header/header.component';
+
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatExpansionModule} from '@angular/material/expansion';
@@ -53,8 +53,9 @@ import { DeleteroomComponent } from './deleteroom/deleteroom.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { CancelbookbyhrComponent } from './cancelbookbyhr/cancelbookbyhr.component';
-import { SetlatetimeComponent ,SetLateTimeDialog} from './setlatetime/setlatetime.component';
+import { SetlatetimeComponent ,SetLateTimeDialog , SetTimeNotifyDialog} from './setlatetime/setlatetime.component';
 import {MatChipsModule} from '@angular/material/chips';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -65,7 +66,6 @@ import {MatChipsModule} from '@angular/material/chips';
     DashboardComponent,
     DashboardtableComponent,
     AdduserbyadminComponent,
-    HeaderComponent,
     SystemadminComponent,
     EdituserbyadminComponent,
     DeleteuserbyadminComponent,
@@ -79,7 +79,8 @@ import {MatChipsModule} from '@angular/material/chips';
     DialogSubmitRoom,
     CancelbookbyhrComponent,
     SetlatetimeComponent,
-SetLateTimeDialog
+SetLateTimeDialog,
+SetTimeNotifyDialog
   ],
   imports: [
     BrowserModule,
@@ -111,7 +112,7 @@ SetLateTimeDialog
     LayoutModule,
     MatChipsModule
   ],
-    entryComponents: [ DialogOverviewExampleDialog,DialogSubmitRoom ,SetLateTimeDialog],
+    entryComponents: [ DialogOverviewExampleDialog,DialogSubmitRoom ,SetLateTimeDialog, SetTimeNotifyDialog],
   providers: [],
   bootstrap: [AppComponent]
 })

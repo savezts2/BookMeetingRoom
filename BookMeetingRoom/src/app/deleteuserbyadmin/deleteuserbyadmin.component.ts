@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {MatSidenav} from '@angular/material/sidenav';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
-
+import { baseUrl } from '../app.component';
 
 export interface DialogData {
 firstname: string;
@@ -35,8 +35,6 @@ isLoggedIn : Observable<boolean>;
 isLoggedInAdmin : Observable<boolean>;
 isLoggedInHR : Observable<boolean>;
 
-public API = '//localhost:8080';   //for test
-//public API = 'http://172.27.209.27:8080/BookMeetingRoom';  //for build
 
   constructor(public authService : AuthService, private route:ActivatedRoute, private service : ServiceService,private http: HttpClient,
 private router: Router,private _formBuilder: FormBuilder, @Inject(MAT_DIALOG_DATA) public data: DialogData, public dialogRef: MatDialogRef<DeleteuserbyadminComponent>) {
@@ -54,7 +52,7 @@ closed(){
 deleteUser(){
 
 
-     this.http.post(this.API + '/Deleteuser/'+localStorage.getItem('nameid')+'/'+this.data.username,{})
+     this.http.post(baseUrl + '/Deleteuser/'+localStorage.getItem('nameid')+'/'+this.data.username,{})
                              .subscribe(
                                data => {
                                    console.log('PUT Request is successful');

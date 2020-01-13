@@ -3,6 +3,10 @@ import { ServiceService } from './Service/service.service';
 import { HttpClient} from '@angular/common/http';
 import { Observable } from "rxjs";
 import { AuthService } from './auth.service';
+
+//export const baseUrl = 'http://172.27.209.27:8080/BookMeetingRoom';
+ //export const baseUrl = 'http://localhost:8080';
+export const baseUrl = 'http://192.168.1.47:8080/BookMeetingRoom';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,8 +16,7 @@ export class AppComponent{
   title = 'BookMeetingRoom';
 report : Array<any>;
 
-public API = '//localhost:8080';  //for test
-//public API = 'http://172.27.209.27:8080/BookMeetingRoom';  //for build
+
 timehour : string;
 timeminute : string;
 fulltime : string;
@@ -90,7 +93,7 @@ setTimeout(() => {
       latetimestring = String(this.latetime-1);
     }
    // console.log(latetimestring);
-
+  //console.log(this.fulltime);
   for(let i = 0 ; i < this.report.length ; i++){
 
       let GivenDate  = new Date(this.convertDate(this.report[i].bookMeetingRoom.dateBookMeetingRoom));
@@ -205,7 +208,7 @@ setTimeout(() => {
 
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '08.'+latetimestring){
               if(this.report[i].bookMeetingRoom.starttime == '08.00' && (this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' ||
-              this.report[i].bookMeetingRoom.statusbooking == 'Booking') && (this.report[i].bookMeetingRoom.latetime == 15 || this.report[i].bookMeetingRoom.latetime == 0)){
+              this.report[i].bookMeetingRoom.statusbooking == 'Booking') && this.report[i].bookMeetingRoom.checklate == '0'){
 
                  window.location.reload();
 
@@ -213,7 +216,7 @@ setTimeout(() => {
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '09.'+latetimestring){
               if(this.report[i].bookMeetingRoom.starttime == '09.00' && (this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' ||
-              this.report[i].bookMeetingRoom.statusbooking == 'Booking') && (this.report[i].bookMeetingRoom.latetime == 15 || this.report[i].bookMeetingRoom.latetime == 0)){
+              this.report[i].bookMeetingRoom.statusbooking == 'Booking') && this.report[i].bookMeetingRoom.checklate == '0'){
 
                    window.location.reload();
 
@@ -221,7 +224,7 @@ setTimeout(() => {
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '10.'+latetimestring){
               if(this.report[i].bookMeetingRoom.starttime == '10.00' && (this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' ||
-              this.report[i].bookMeetingRoom.statusbooking == 'Booking') && (this.report[i].bookMeetingRoom.latetime == 15 || this.report[i].bookMeetingRoom.latetime == 0)){
+              this.report[i].bookMeetingRoom.statusbooking == 'Booking') && this.report[i].bookMeetingRoom.checklate == '0'){
 
                    window.location.reload();
 
@@ -229,7 +232,7 @@ setTimeout(() => {
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '11.'+latetimestring){
               if(this.report[i].bookMeetingRoom.starttime == '11.00' && (this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' ||
-              this.report[i].bookMeetingRoom.statusbooking == 'Booking') && (this.report[i].bookMeetingRoom.latetime == 15 || this.report[i].bookMeetingRoom.latetime == 0)){
+              this.report[i].bookMeetingRoom.statusbooking == 'Booking') && this.report[i].bookMeetingRoom.checklate == '0'){
 
                    window.location.reload();
 
@@ -237,7 +240,7 @@ setTimeout(() => {
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '12.'+latetimestring){
               if(this.report[i].bookMeetingRoom.starttime == '12.00' && (this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' ||
-              this.report[i].bookMeetingRoom.statusbooking == 'Booking') && (this.report[i].bookMeetingRoom.latetime == 15 || this.report[i].bookMeetingRoom.latetime == 0)){
+              this.report[i].bookMeetingRoom.statusbooking == 'Booking') && this.report[i].bookMeetingRoom.checklate == '0'){
 
                    window.location.reload();
 
@@ -245,7 +248,7 @@ setTimeout(() => {
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '13.'+latetimestring){
               if(this.report[i].bookMeetingRoom.starttime == '13.00' && (this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' ||
-              this.report[i].bookMeetingRoom.statusbooking == 'Booking') && (this.report[i].bookMeetingRoom.latetime == 15 || this.report[i].bookMeetingRoom.latetime == 0)){
+              this.report[i].bookMeetingRoom.statusbooking == 'Booking') && this.report[i].bookMeetingRoom.checklate == '0'){
 
                    window.location.reload();
 
@@ -253,7 +256,7 @@ setTimeout(() => {
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '14.'+latetimestring){
               if(this.report[i].bookMeetingRoom.starttime == '14.00' && (this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' ||
-              this.report[i].bookMeetingRoom.statusbooking == 'Booking') && (this.report[i].bookMeetingRoom.latetime == 15 || this.report[i].bookMeetingRoom.latetime == 0)){
+              this.report[i].bookMeetingRoom.statusbooking == 'Booking') && this.report[i].bookMeetingRoom.checklate == '0'){
 
                    window.location.reload();
 
@@ -261,7 +264,7 @@ setTimeout(() => {
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '15.'+latetimestring){
               if(this.report[i].bookMeetingRoom.starttime == '15.00' && (this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' ||
-              this.report[i].bookMeetingRoom.statusbooking == 'Booking') && (this.report[i].bookMeetingRoom.latetime == 15 || this.report[i].bookMeetingRoom.latetime == 0)){
+              this.report[i].bookMeetingRoom.statusbooking == 'Booking') && this.report[i].bookMeetingRoom.checklate == '0'){
 
                    window.location.reload();
 
@@ -269,7 +272,7 @@ setTimeout(() => {
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '16.'+latetimestring){
               if(this.report[i].bookMeetingRoom.starttime == '16.00' && (this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' ||
-              this.report[i].bookMeetingRoom.statusbooking == 'Booking') && (this.report[i].bookMeetingRoom.latetime == 15 || this.report[i].bookMeetingRoom.latetime == 0)){
+              this.report[i].bookMeetingRoom.statusbooking == 'Booking') && this.report[i].bookMeetingRoom.checklate == '0'){
 
                    window.location.reload();
 
@@ -277,7 +280,7 @@ setTimeout(() => {
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '17.'+latetimestring){
               if(this.report[i].bookMeetingRoom.starttime == '17.00' && (this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' ||
-              this.report[i].bookMeetingRoom.statusbooking == 'Booking') && (this.report[i].bookMeetingRoom.latetime == 15 || this.report[i].bookMeetingRoom.latetime == 0)){
+              this.report[i].bookMeetingRoom.statusbooking == 'Booking') && this.report[i].bookMeetingRoom.checklate == '0'){
 
                   window.location.reload();
 
@@ -285,7 +288,7 @@ setTimeout(() => {
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '18.'+latetimestring){
               if(this.report[i].bookMeetingRoom.starttime == '18.00' && (this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' ||
-              this.report[i].bookMeetingRoom.statusbooking == 'Booking') && (this.report[i].bookMeetingRoom.latetime == 15 || this.report[i].bookMeetingRoom.latetime == 0)){
+              this.report[i].bookMeetingRoom.statusbooking == 'Booking') && this.report[i].bookMeetingRoom.checklate == '0'){
 
                   window.location.reload();
 
@@ -293,7 +296,7 @@ setTimeout(() => {
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '19.'+latetimestring){
               if(this.report[i].bookMeetingRoom.starttime == '19.00' && (this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' ||
-              this.report[i].bookMeetingRoom.statusbooking == 'Booking') && (this.report[i].bookMeetingRoom.latetime == 15 || this.report[i].bookMeetingRoom.latetime == 0)){
+              this.report[i].bookMeetingRoom.statusbooking == 'Booking') && this.report[i].bookMeetingRoom.checklate == '0'){
 
                   window.location.reload();
 
@@ -301,7 +304,7 @@ setTimeout(() => {
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '20.'+latetimestring){
               if(this.report[i].bookMeetingRoom.starttime == '20.00' && (this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' ||
-              this.report[i].bookMeetingRoom.statusbooking == 'Booking') && (this.report[i].bookMeetingRoom.latetime == 15 || this.report[i].bookMeetingRoom.latetime == 0)){
+              this.report[i].bookMeetingRoom.statusbooking == 'Booking') && this.report[i].bookMeetingRoom.checklate == '0'){
 
                   window.location.reload();
 
@@ -309,7 +312,7 @@ setTimeout(() => {
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '21.'+latetimestring){
               if(this.report[i].bookMeetingRoom.starttime == '21.00' && (this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' ||
-              this.report[i].bookMeetingRoom.statusbooking == 'Booking') && (this.report[i].bookMeetingRoom.latetime == 15 || this.report[i].bookMeetingRoom.latetime == 0)){
+              this.report[i].bookMeetingRoom.statusbooking == 'Booking') && this.report[i].bookMeetingRoom.checklate == '0'){
 
                    window.location.reload();
 
@@ -317,7 +320,7 @@ setTimeout(() => {
           }
           if( this.fulltime != 'undefined.undefined' && this.fulltime > '22.'+latetimestring){
               if(this.report[i].bookMeetingRoom.starttime == '22.00' && (this.report[i].bookMeetingRoom.statusbooking == 'Not Checkin' ||
-              this.report[i].bookMeetingRoom.statusbooking == 'Booking') && (this.report[i].bookMeetingRoom.latetime == 15 || this.report[i].bookMeetingRoom.latetime == 0)){
+              this.report[i].bookMeetingRoom.statusbooking == 'Booking') && this.report[i].bookMeetingRoom.checklate == '0'){
 
                    window.location.reload();
 

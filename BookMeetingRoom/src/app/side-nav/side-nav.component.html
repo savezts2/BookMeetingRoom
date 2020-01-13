@@ -12,9 +12,10 @@
     </div>
   </mat-toolbar>
 
+
   <mat-sidenav-container class="example-sidenav-container"
                          [style.marginTop.px]="mobileQuery.matches ? 56 : 0" >
-    <mat-sidenav opened #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
+    <mat-sidenav [opened]="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)" #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
                  [fixedInViewport]="mobileQuery.matches" fixedTopGap="56"
                  style="background-color: rgb(0, 176, 80); "
     >
@@ -67,7 +68,7 @@
 
             <button mat-button  routerLink="/systemadmin" class="but" style="text-align : left;font-size: 17px;font-family: 'Libre Franklin', sans-serif;">- System Admin</button>
             <button mat-button  routerLink="/addroom" class="but" style=" text-align : left;font-size: 17px;font-family: 'Libre Franklin', sans-serif;">- Add Meeting Room</button>
-            <button mat-button  routerLink="/setlatetime" class="but" style=" text-align : left;font-size: 17px;font-family: 'Libre Franklin', sans-serif;">- Set Late Time</button>
+            <button mat-button  routerLink="/setlatetime" class="but" style=" text-align : left;font-size: 17px;font-family: 'Libre Franklin', sans-serif;">- Set Time</button>
           </mat-expansion-panel>
 
         </mat-accordion>
@@ -81,6 +82,7 @@
       <router-outlet></router-outlet>
     </mat-sidenav-content>
   </mat-sidenav-container>
+
 </div>
 
 

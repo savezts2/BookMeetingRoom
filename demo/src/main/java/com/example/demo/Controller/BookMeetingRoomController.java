@@ -371,6 +371,7 @@ public class BookMeetingRoomController {
         bookMeetingRoom.setTopic(topic);
         bookMeetingRoom.setAttendees(atten);
         bookMeetingRoom.setRemark(remark);
+        bookMeetingRoom.setChecklate("0");
         bookMeetingRoom.setCheckinby("Checkinusr");
         int minutess = Integer.valueOf(getMinuteCurrent());
         String min ;
@@ -417,6 +418,7 @@ public class BookMeetingRoomController {
         report.setCreate_by(users.getFirstname());
         report.setCreate_date(date1);
         reportRepository.save(report);
+
         notificationService.sendEmail(users , bookMeetingRoom);
         return bookMeetingRoomRepository.findAll().stream().collect(Collectors.toList());
     }
@@ -452,6 +454,7 @@ public class BookMeetingRoomController {
         bookMeetingRoom.setTopic(topic);
         bookMeetingRoom.setAttendees(atten);
         bookMeetingRoom.setRemark(remark);
+        bookMeetingRoom.setChecklate("0");
         Date date1 = new Date();
         int length = convertLengthTime(fromtime,totime);
 
@@ -488,10 +491,19 @@ public class BookMeetingRoomController {
         reportRepository.save(report);
         notificationService.sendEmail(users , bookMeetingRoom);
 
-        for(int i = 0 ; i < emailArray.length ; i++){
-           // System.out.println(emailArray[i]);
-            notificationService.sendEmail2(users , bookMeetingRoom,emailArray[i]);
-        }
+
+
+            for(int i = 0 ; i < emailArray.length ; i++){
+                // System.out.println(emailArray[i]);
+                if(emailArray[i].isEmpty()){
+                    System.out.println("Email Invalid!");
+                }else{
+                    notificationService.sendEmail2(users , bookMeetingRoom,emailArray[i]);
+                }
+
+            }
+
+
         return bookMeetingRoomRepository.findAll().stream().collect(Collectors.toList());
     }
 

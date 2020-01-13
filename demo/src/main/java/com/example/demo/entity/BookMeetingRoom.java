@@ -59,6 +59,15 @@ public class BookMeetingRoom {
         private String checkinby;
         private String checkoutby;
         private String notify;
+        private String checklate;
+
+    public String getChecklate() {
+        return checklate;
+    }
+
+    public void setChecklate(String checklate) {
+        this.checklate = checklate;
+    }
 
     public String getNotify() {
         return notify;

@@ -26,7 +26,7 @@ import {MatSidenav} from '@angular/material/sidenav';
 
 
 export class BookMeetingRoom1Component implements OnInit {
-    @ViewChild('sidenav', {static: false}) sidenav: MatSidenav;
+    @ViewChild('sidenav', {static: true}) sidenav: MatSidenav;
 
     isLoggedIn : Observable<boolean>;
     isLoggedInAdmin : Observable<boolean>;

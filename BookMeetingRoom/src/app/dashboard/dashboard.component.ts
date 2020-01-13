@@ -52,7 +52,9 @@ constructor(public authService : AuthService , private router: Router , private 
     }
 
 
-
+close() {
+    this.sidenav.close();
+  }
 ngOnDestroy() {
 
   if(this.in){

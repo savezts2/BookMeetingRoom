@@ -87,6 +87,10 @@ THE SOFTWARE.
 
 @angular/material/button
 
+@angular/material/card
+
+@angular/material/chips
+
 @angular/material/core
 
 @angular/material/datepicker
@@ -108,8 +112,6 @@ THE SOFTWARE.
 @angular/material/select
 
 @angular/material/sidenav
-
-@angular/material/stepper
 
 @angular/material/table
 

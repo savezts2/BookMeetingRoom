@@ -12,7 +12,7 @@
   import {  MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
   import { HttpClient} from '@angular/common/http';
   import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-
+  import { baseUrl } from '../app.component';
   export interface DialogData {
   room: string;
   time : string;
@@ -54,8 +54,7 @@
   timehour : string;
   timeminute : string;
   fulltime : string;
-  public API = '//localhost:8080';   //for test
-  //public API = 'http://172.27.209.27:8080/BookMeetingRoom'; //for build
+
 
     constructor(public authService : AuthService , private router: Router , private service : ServiceService,public dialog: MatDialog,
     @Inject(MAT_DIALOG_DATA) public data: DialogData, public dialogRef: MatDialogRef<EditbookComponent>, private http: HttpClient,
@@ -158,7 +157,7 @@ this.service.getMinuteCurrent().subscribe(data=>{
               this.spiner = true;
 
               console.log("suc");
-                this.http.post(this.API + '/Editbook/'+this.nameuser+'/'+this.data.date+'/'+this.data.room+'/'+this.data.time+'/'+this.firstFormGroup.get('time').value+'/'+this.firstFormGroup.get('totime').value
+                this.http.post(baseUrl + '/Editbook/'+this.nameuser+'/'+this.data.date+'/'+this.data.room+'/'+this.data.time+'/'+this.firstFormGroup.get('time').value+'/'+this.firstFormGroup.get('totime').value
             +'/'+this.firstFormGroup.get('atten').value+'/'+this.firstFormGroup.get('topic').value+'/null/'+this.firstFormGroup.get('tel').value,{})
                                .subscribe(
                                  data => {
@@ -186,7 +185,7 @@ this.service.getMinuteCurrent().subscribe(data=>{
 
         this.spiner = true;
         console.log("suc");
-      this.http.post(this.API + '/Editbook/'+this.nameuser+'/'+this.data.date+'/'+this.data.room+'/'+this.data.time+'/'+this.firstFormGroup.get('time').value+'/'+this.firstFormGroup.get('totime').value
+      this.http.post(baseUrl + '/Editbook/'+this.nameuser+'/'+this.data.date+'/'+this.data.room+'/'+this.data.time+'/'+this.firstFormGroup.get('time').value+'/'+this.firstFormGroup.get('totime').value
      +'/'+this.firstFormGroup.get('atten').value+'/'+this.firstFormGroup.get('topic').value+'/'+this.firstFormGroup.get('remark').value+'/'+this.firstFormGroup.get('tel').value,{})
                                .subscribe(
                                  data => {

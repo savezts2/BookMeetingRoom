@@ -7,25 +7,29 @@
 
       <form [formGroup]="firstFormGroup">
       <div align="center">
-        <mat-form-field>
-          <input matInput placeholder="Firstname" formControlName="username" (keydown.enter)="submit()" required>
+        <mat-form-field appearance="outline">
+          <mat-label>Firstname</mat-label>
+          <input matInput  formControlName="username" (keydown.enter)="submit()" required>
         </mat-form-field>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <mat-form-field>
-          <input matInput placeholder="Lastname" formControlName="lastname" (keydown.enter)="submit()" required>
+        <mat-form-field appearance="outline">
+          <mat-label>Lastname</mat-label>
+          <input matInput formControlName="lastname" (keydown.enter)="submit()" required>
         </mat-form-field>
       </div>
       <br/>
       <div align="center">
-        <mat-form-field>
-          <mat-select placeholder="Department" formControlName="department" required>
+        <mat-form-field appearance="outline">
+          <mat-label>Department</mat-label>
+          <mat-select  formControlName="department" required>
             <mat-option *ngFor="let department of departments" [value]="department.departments">
               {{department.departments}}</mat-option>
           </mat-select>
         </mat-form-field>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <mat-form-field>
-          <mat-select placeholder="Position" formControlName="position" required>
+        <mat-form-field appearance="outline">
+          <mat-label>Position</mat-label>
+          <mat-select formControlName="position" required>
             <mat-option *ngFor="let position of positions" [value]="position.positions">
               {{position.positions}}</mat-option>
           </mat-select>
@@ -34,13 +38,16 @@
       <br/>
 
         <div align="center">
-        <mat-form-field>
-          <input matInput placeholder="Username" formControlName="userid" (keydown.enter)="submit()" required>
+        <mat-form-field appearance="outline">
+          <mat-label>Username</mat-label>
+          <input matInput formControlName="userid" (keydown.enter)="submit()" required>
         </mat-form-field>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <mat-form-field>
-          <input matInput placeholder="Email" formControlName="email" (keydown.enter)="submit()" required>
-        </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput [formControl]="email" required>
+            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+          </mat-form-field>
         </div>
 
         <br/>
@@ -49,8 +56,9 @@
 
 
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <mat-form-field>
-          <input matInput placeholder="Enter your password" [type]="hide ? 'text' : 'password'" formControlName="password" required
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input matInput [type]="hide ? 'text' : 'password'" formControlName="password" required
                  (keydown.enter)="submit()">
           <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
                   [attr.aria-pressed]="hide">
@@ -58,8 +66,9 @@
           </button>
         </mat-form-field>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <mat-form-field>
-          <mat-select placeholder="Role" formControlName="status" required>
+        <mat-form-field appearance="outline">
+          <mat-label>Role</mat-label>
+          <mat-select formControlName="status" required>
             <mat-option *ngFor="let role of roles" [value]="role.role">
               {{role.role}}</mat-option>
           </mat-select>

@@ -11,7 +11,7 @@ import {FormControl} from '@angular/forms';
 import {MatSidenav} from '@angular/material/sidenav';
 import {  MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { HttpClient} from '@angular/common/http';
-
+import { baseUrl } from '../app.component';
 export interface DialogData {
 room: string;
 time : string;
@@ -30,8 +30,7 @@ tel : String;
   styleUrls: ['./checkout.component.css']
 })
 export class CheckoutComponent implements OnInit {
-public API = '//localhost:8080';   //for test
-//public API = 'http://172.27.209.27:8080/BookMeetingRoom';  //for build
+
 nameuser : string;
   constructor(public authService : AuthService , private router: Router , private service : ServiceService,public dialog: MatDialog,
   @Inject(MAT_DIALOG_DATA) public data: DialogData, public dialogRef: MatDialogRef<CheckoutComponent>, private http: HttpClient) { }
@@ -46,7 +45,7 @@ closed(){
 
 checkOut(){
 
-   this.http.post(this.API + '/Checkout/'+ this.nameuser+'/'+this.data.date+'/'+this.data.room+'/'+this.data.time+'/'+new Date().getHours()+'/'+new Date().getMinutes()+'/'+
+   this.http.post(baseUrl + '/Checkout/'+ this.nameuser+'/'+this.data.date+'/'+this.data.room+'/'+this.data.time+'/'+new Date().getHours()+'/'+new Date().getMinutes()+'/'+
    new Date().toString().substring(16,18)+'.'+new Date().toString().substring(19,21),{})
                              .subscribe(
                                data => {

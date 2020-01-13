@@ -1,0 +1,5 @@
+<input class="input is-rounded" placeholder="Late time" onkeypress='return event.charCode >= 48 && event.charCode <= 57' [(ngModel)]="notify">
+<br/><br/>
+<div align="center">
+  <button class="button is-danger" (click)="edit()">Edit</button>  &nbsp;&nbsp;&nbsp;<button class="button is-info" (click)="cancel()">Cancel</button>
+</div>

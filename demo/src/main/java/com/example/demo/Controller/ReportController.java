@@ -494,6 +494,7 @@ public class ReportController {
                     bookMeetingRoom.setStatusbooking("Not Checkin");
                     bookMeetingRoom.setEndtime("08.00");
                     bookMeetingRoom.setLengthtime(1);
+                    bookMeetingRoom.setChecklate("1");
                     bookMeetingRoom.setLatetime(Integer.valueOf(latetimeString));
                     bookMeetingRoom.setLate("Late");
                     bookMeetingRoom.setUpdate_date(new Date());
@@ -514,6 +515,7 @@ public class ReportController {
                     BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
                     bookMeetingRoom.setStatusbooking("Not Checkin");
                     bookMeetingRoom.setEndtime("09.00");
+                    bookMeetingRoom.setChecklate("1");
                     bookMeetingRoom.setLengthtime(1);
                     bookMeetingRoom.setLatetime(Integer.valueOf(latetimeString));
                     bookMeetingRoom.setLate("Late");
@@ -535,6 +537,7 @@ public class ReportController {
                     BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
                     bookMeetingRoom.setStatusbooking("Not Checkin");
                     bookMeetingRoom.setEndtime("10.00");
+                    bookMeetingRoom.setChecklate("1");
                     bookMeetingRoom.setLengthtime(1);
                     bookMeetingRoom.setLatetime(Integer.valueOf(latetimeString));
                     bookMeetingRoom.setLate("Late");
@@ -558,6 +561,7 @@ public class ReportController {
                     bookMeetingRoom.setLatetime(Integer.valueOf(latetimeString));
                     bookMeetingRoom.setLate("Late");
                     bookMeetingRoom.setUpdate_date(new Date());
+                    bookMeetingRoom.setChecklate("1");
                     bookMeetingRoom.setUpdate_by("Updatesys");
                     bookMeetingRoom.setCheckoutby("Checkoutsys");
                     bookMeetingRoom.setCheckouttime(fulltime);
@@ -578,6 +582,7 @@ public class ReportController {
                     bookMeetingRoom.setLengthtime(1);
                     bookMeetingRoom.setLatetime(Integer.valueOf(latetimeString));
                     bookMeetingRoom.setLate("Late");
+                    bookMeetingRoom.setChecklate("1");
                     bookMeetingRoom.setUpdate_date(new Date());
                     bookMeetingRoom.setUpdate_by("Updatesys");
                     bookMeetingRoom.setCheckoutby("Checkoutsys");
@@ -596,6 +601,7 @@ public class ReportController {
                     bookMeetingRoom.setStatusbooking("Not Checkin");
                     bookMeetingRoom.setEndtime("13.00");
                     bookMeetingRoom.setLengthtime(1);
+                    bookMeetingRoom.setChecklate("1");
                     bookMeetingRoom.setLatetime(Integer.valueOf(latetimeString));
                     bookMeetingRoom.setLate("Late");
                     bookMeetingRoom.setUpdate_date(new Date());
@@ -615,6 +621,7 @@ public class ReportController {
                     bookMeetingRoom.setStatusbooking("Not Checkin");
                     bookMeetingRoom.setEndtime("14.00");
                     bookMeetingRoom.setLengthtime(1);
+                    bookMeetingRoom.setChecklate("1");
                     bookMeetingRoom.setLatetime(Integer.valueOf(latetimeString));
                     bookMeetingRoom.setLate("Late");
                     bookMeetingRoom.setUpdate_date(new Date());
@@ -636,6 +643,7 @@ public class ReportController {
                     bookMeetingRoom.setStatusbooking("Not Checkin");
                     bookMeetingRoom.setEndtime("15.00");
                     bookMeetingRoom.setLengthtime(1);
+                    bookMeetingRoom.setChecklate("1");
                     bookMeetingRoom.setLatetime(Integer.valueOf(latetimeString));
                     bookMeetingRoom.setLate("Late");
                     bookMeetingRoom.setUpdate_date(new Date());
@@ -660,6 +668,7 @@ public class ReportController {
                     bookMeetingRoom.setLatetime(Integer.valueOf(latetimeString));
                     bookMeetingRoom.setLate("Late");
                     bookMeetingRoom.setUpdate_date(new Date());
+                    bookMeetingRoom.setChecklate("1");
                     bookMeetingRoom.setUpdate_by("Updatesys");
                     bookMeetingRoom.setCheckoutby("Checkoutsys");
                     bookMeetingRoom.setCheckouttime(fulltime);
@@ -681,6 +690,7 @@ public class ReportController {
                     bookMeetingRoom.setLatetime(Integer.valueOf(latetimeString));
                     bookMeetingRoom.setLate("Late");
                     bookMeetingRoom.setUpdate_date(new Date());
+                    bookMeetingRoom.setChecklate("1");
                     bookMeetingRoom.setUpdate_by("Updatesys");
                     bookMeetingRoom.setCheckoutby("Checkoutsys");
                     bookMeetingRoom.setCheckouttime(fulltime);
@@ -701,6 +711,7 @@ public class ReportController {
                     bookMeetingRoom.setLatetime(Integer.valueOf(latetimeString));
                     bookMeetingRoom.setLate("Late");
                     bookMeetingRoom.setUpdate_date(new Date());
+                    bookMeetingRoom.setChecklate("1");
                     bookMeetingRoom.setUpdate_by("Updatesys");
                     bookMeetingRoom.setCheckoutby("Checkoutsys");
                     bookMeetingRoom.setCheckouttime(fulltime);
@@ -720,6 +731,7 @@ public class ReportController {
                     bookMeetingRoom.setLatetime(Integer.valueOf(latetimeString));
                     bookMeetingRoom.setLate("Late");
                     bookMeetingRoom.setUpdate_date(new Date());
+                    bookMeetingRoom.setChecklate("1");
                     bookMeetingRoom.setUpdate_by("Updatesys");
                     bookMeetingRoom.setCheckoutby("Checkoutsys");
                     bookMeetingRoom.setCheckouttime(fulltime);
@@ -740,6 +752,7 @@ public class ReportController {
                     bookMeetingRoom.setLatetime(Integer.valueOf(latetimeString));
                     bookMeetingRoom.setLate("Late");
                     bookMeetingRoom.setUpdate_date(new Date());
+                    bookMeetingRoom.setChecklate("1");
                     bookMeetingRoom.setUpdate_by("Updatesys");
                     bookMeetingRoom.setCheckoutby("Checkoutsys");
                     bookMeetingRoom.setCheckouttime(fulltime);
@@ -755,6 +768,7 @@ public class ReportController {
                     System.out.println("Success");
                     BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
                     bookMeetingRoom.setStatusbooking("Not Checkin");
+                    bookMeetingRoom.setChecklate("1");
                     bookMeetingRoom.setEndtime("21.00");
                     bookMeetingRoom.setLengthtime(1);
                     bookMeetingRoom.setLatetime(Integer.valueOf(latetimeString));
@@ -776,6 +790,7 @@ public class ReportController {
                     BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
                     bookMeetingRoom.setStatusbooking("Not Checkin");
                     bookMeetingRoom.setEndtime("22.00");
+                    bookMeetingRoom.setChecklate("1");
                     bookMeetingRoom.setLengthtime(1);
                     bookMeetingRoom.setLatetime(Integer.valueOf(latetimeString));
                     bookMeetingRoom.setLate("Late");
