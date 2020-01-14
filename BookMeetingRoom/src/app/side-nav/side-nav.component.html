@@ -32,8 +32,8 @@
           </div>
 
 
-          <mat-card-title>{{nameuser}} {{lastname}}</mat-card-title>
-          <mat-card-subtitle class="white">{{role}}</mat-card-subtitle>
+          <mat-card-title style="align:center;">{{nameuser}} {{lastname}}</mat-card-title>
+
         </mat-card-header>
 
         </mat-card>
@@ -48,7 +48,7 @@
           dashboard
         </i> &nbsp;Dashboard</button>
 
-        <button mat-button  routerLink="/addroom"  *ngIf="(isLoggedInHR | async)"
+        <button mat-button  routerLink="/addroom"  *ngIf="(isLoggedInHR | async) || (isLoggedInAdmin | async)"
                 class="but" style=" margin-top : 3px;border: 1px solid #3E7209;text-align: left;color:white; font-family: 'Libre Franklin', sans-serif;"><i class="material-icons">
           add_circle_outline
         </i> Add Meeting Room</button>
@@ -67,7 +67,6 @@
             </mat-expansion-panel-header >
 
             <button mat-button  routerLink="/systemadmin" class="but" style="text-align : left;font-size: 17px;font-family: 'Libre Franklin', sans-serif;">- System Admin</button>
-            <button mat-button  routerLink="/addroom" class="but" style=" text-align : left;font-size: 17px;font-family: 'Libre Franklin', sans-serif;">- Add Meeting Room</button>
             <button mat-button  routerLink="/setlatetime" class="but" style=" text-align : left;font-size: 17px;font-family: 'Libre Franklin', sans-serif;">- Set Time</button>
           </mat-expansion-panel>
 
