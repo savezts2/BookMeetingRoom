@@ -50,9 +50,9 @@ in : any ;
 timehour : string;
 timeminute : string;
 fulltime : string;
-
-
-
+datechecktime = new Date();
+datechecktime2 : string;
+todaychecktime : string;
   ngOnInit() {
 
       this.route.params.subscribe(prams=>{
@@ -80,6 +80,10 @@ fulltime : string;
 
 
 
+    this.datechecktime2 = (new Date(this.datechecktime.toString().substring(11,15)+'-'+this.convertMonth(this.datechecktime.toString().substring(4,7)) + '-'+this.datechecktime.toString().substring(8,10))).toString();
+    this.todaychecktime = (new Date(this.date.substring(6,10)+'-'+this.date.substring(3,5)+'-'+this.date.substring(0,2))).toString();
+
+
      this.service.getRoomname().subscribe(data => {
                                  this.roomnames = data;
                                // console.log(this.roomnames);
@@ -97,6 +101,32 @@ fulltime : string;
     });
   }
 
+convertMonth(month){
+  if(month == 'Jan')
+    return '01';
+  else if(month == 'Feb')
+    return '02';
+  else if(month == 'Mar')
+    return '03';
+  else if(month == 'Apr')
+    return '04';
+  else if(month == 'May')
+    return '05';
+  else if(month == 'Jun')
+    return '06';
+  else if(month == 'Jul')
+    return '07';
+  else if(month == 'Aug')
+    return '08';
+  else if(month == 'Sep')
+    return '09';
+  else if(month == 'Oct')
+    return '10';
+  else if(month == 'Nov')
+    return '11';
+  else
+    return '12';
+}
 constructor(public authService : AuthService, private route:ActivatedRoute, private service : ServiceService,private http: HttpClient,
 private router: Router,private _formBuilder: FormBuilder) {
     this.isLoggedIn = authService.isLoggedIn();

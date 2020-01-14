@@ -29,13 +29,16 @@ var wscols = [
 ];
 
 
-  XLSX.SSF.format('$#,##0.00', 12345.6789)
+
   const worksheet: XLSX.WorkSheet = XLSX.utils.json_to_sheet(json);
   worksheet['!cols'] = wscols;
 
 
 
   const workbook: XLSX.WorkBook = { Sheets: { 'data': worksheet }, SheetNames: ['data'] };
+
+console.log(worksheet,workbook);
+
  // console.log(worksheet,workbook);
 
   const excelBuffer: any = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });

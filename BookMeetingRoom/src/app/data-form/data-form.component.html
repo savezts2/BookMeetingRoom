@@ -15,21 +15,21 @@
         <mat-form-field  appearance="outline" style="width:250px">
           <mat-label>From Time</mat-label>
           <mat-select [(ngModel)]="fromtimeSelect" [ngModelOptions]="{standalone: true}" required>
-            <mat-option value="08.00" [disabled]="this.fulltime < '08.00' ?  false : true">08.00</mat-option>
-            <mat-option value="09.00" [disabled]="this.fulltime < '09.00' ?  false : true">09.00</mat-option>
-            <mat-option value="10.00" [disabled]="this.fulltime < '10.00' ?  false : true">10.00</mat-option>
-            <mat-option value="11.00" [disabled]="this.fulltime < '11.00' ?  false : true">11.00</mat-option>
-            <mat-option value="12.00" [disabled]="this.fulltime < '12.00' ?  false : true">12.00</mat-option>
-            <mat-option value="13.00" [disabled]="this.fulltime < '13.00' ?  false : true">13.00</mat-option>
-            <mat-option value="14.00" [disabled]="this.fulltime < '14.00' ?  false : true">14.00</mat-option>
-            <mat-option value="15.00" [disabled]="this.fulltime < '15.00' ?  false : true">15.00</mat-option>
-            <mat-option value="16.00" [disabled]="this.fulltime < '16.00' ?  false : true">16.00</mat-option>
-            <mat-option value="17.00" [disabled]="this.fulltime < '17.00' ?  false : true">17.00</mat-option>
-            <mat-option value="18.00" [disabled]="this.fulltime < '18.00' ?  false : true">18.00</mat-option>
-            <mat-option value="19.00" [disabled]="this.fulltime < '19.00' ?  false : true">19.00</mat-option>
-            <mat-option value="20.00" [disabled]="this.fulltime < '20.00' ?  false : true">20.00</mat-option>
-            <mat-option value="21.00" [disabled]="this.fulltime < '21.00' ?  false : true">21.00</mat-option>
-            <mat-option value="22.00" [disabled]="this.fulltime < '22.00' ?  false : true">22.00</mat-option>
+            <mat-option value="08.00" [disabled]="(this.fulltime < '08.00' ?  false : true) && this.datechecktime2 == this.todaychecktime">08.00</mat-option>
+            <mat-option value="09.00" [disabled]="this.fulltime < '09.00' ?  false : true && this.datechecktime2 == this.todaychecktime">09.00</mat-option>
+            <mat-option value="10.00" [disabled]="this.fulltime < '10.00' ?  false : true && this.datechecktime2 == this.todaychecktime">10.00</mat-option>
+            <mat-option value="11.00" [disabled]="this.fulltime < '11.00' ?  false : true && this.datechecktime2 == this.todaychecktime">11.00</mat-option>
+            <mat-option value="12.00" [disabled]="this.fulltime < '12.00' ?  false : true && this.datechecktime2 == this.todaychecktime">12.00</mat-option>
+            <mat-option value="13.00" [disabled]="this.fulltime < '13.00' ?  false : true && this.datechecktime2 == this.todaychecktime">13.00</mat-option>
+            <mat-option value="14.00" [disabled]="this.fulltime < '14.00' ?  false : true && this.datechecktime2 == this.todaychecktime">14.00</mat-option>
+            <mat-option value="15.00" [disabled]="this.fulltime < '15.00' ?  false : true && this.datechecktime2 == this.todaychecktime">15.00</mat-option>
+            <mat-option value="16.00" [disabled]="this.fulltime < '16.00' ?  false : true && this.datechecktime2 == this.todaychecktime">16.00</mat-option>
+            <mat-option value="17.00" [disabled]="this.fulltime < '17.00' ?  false : true && this.datechecktime2 == this.todaychecktime">17.00</mat-option>
+            <mat-option value="18.00" [disabled]="this.fulltime < '18.00' ?  false : true && this.datechecktime2 == this.todaychecktime">18.00</mat-option>
+            <mat-option value="19.00" [disabled]="this.fulltime < '19.00' ?  false : true && this.datechecktime2 == this.todaychecktime">19.00</mat-option>
+            <mat-option value="20.00" [disabled]="this.fulltime < '20.00' ?  false : true && this.datechecktime2 == this.todaychecktime">20.00</mat-option>
+            <mat-option value="21.00" [disabled]="this.fulltime < '21.00' ?  false : true && this.datechecktime2 == this.todaychecktime">21.00</mat-option>
+            <mat-option value="22.00" [disabled]="this.fulltime < '22.00' ?  false : true && this.datechecktime2 == this.todaychecktime">22.00</mat-option>
           </mat-select>
         </mat-form-field>
 
