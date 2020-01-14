@@ -4,8 +4,8 @@ import { HttpClient} from '@angular/common/http';
 import { Observable } from "rxjs";
 import { AuthService } from './auth.service';
 
-//export const baseUrl = 'http://172.27.209.27:8080/BookMeetingRoom';
- export const baseUrl = 'http://localhost:8080';
+export const baseUrl = 'http://172.27.209.27:8080/BookMeetingRoom';
+ //export const baseUrl = 'http://localhost:8080';
 //export const baseUrl = 'http://192.168.1.47:8080/BookMeetingRoom';
 @Component({
   selector: 'app-root',
