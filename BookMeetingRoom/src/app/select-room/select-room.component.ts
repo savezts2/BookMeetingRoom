@@ -96,10 +96,11 @@ countrepeatroom : number;
       this.isLoggedInHR = authService.isLoggedInHR();
 
        setInterval(() => {
-      this.CurrentTime = new Date().getHours() + ':' + new Date().getMinutes() + ':'+  new Date().getSeconds(),
-      this.hour = new Date().getHours(),this.minute = new Date().getMinutes(),this.sec = new Date().getSeconds(),
+
+      this.hour = new Date().getHours(),
+      this.minute = new Date().getMinutes(),this.sec = new Date().getSeconds(),
       this.days = new Date().getDay()
-      }, 1);
+      }, 1000);
 
       this.in = setInterval(() => {
 this.service.getHourCurrent().subscribe(data=>{
@@ -112,6 +113,11 @@ this.service.getMinuteCurrent().subscribe(data=>{
 
     })
 
+
+
+     this.CurrentTime =  this.timehour + ':' +  this.timeminute + ':'+  new Date().getSeconds();
+
+
   if(parseInt(this.timehour) < 10){
     this.timehour = '0'+ this.timehour;
   }if( parseInt(this.timeminute) < 10){
@@ -122,7 +128,7 @@ this.service.getMinuteCurrent().subscribe(data=>{
  // console.log(this.fulltime);
 
 
-  }, 100); //interval
+  }, 1000); //interval
 
    }
 close(){
