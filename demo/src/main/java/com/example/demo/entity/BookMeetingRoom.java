@@ -58,6 +58,7 @@ public class BookMeetingRoom {
         private String checkouttime;
         private String checkinby;
         private String checkoutby;
+
         private String notify;
         private String checklate;
 

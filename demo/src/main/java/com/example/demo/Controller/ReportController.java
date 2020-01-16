@@ -484,11 +484,28 @@ public class ReportController {
             ////////////////////////////////////////////////
 
            // System.out.println("08."+latetimeString);
+           /* System.out.println(fulltime);
+            System.out.println("08."+latetimeString);
+            System.out.println(fulltime.compareTo("08."+latetimeString) +"      1");
+            System.out.println(fulltime.compareTo("09."+latetimeString) +"      2");
+            System.out.println(fulltime.compareTo("10."+latetimeString) +"      3");
+            System.out.println(fulltime.compareTo("11."+latetimeString) +"      4");
+            System.out.println(fulltime.compareTo("12."+latetimeString) +"      5");
+            System.out.println(fulltime.compareTo("13."+latetimeString) +"      6");
+            System.out.println(fulltime.compareTo("14."+latetimeString) +"      7");
+            System.out.println(fulltime.compareTo("15."+latetimeString) +"      8");
+            System.out.println(fulltime.compareTo("16."+latetimeString) +"      9");
+            System.out.println(fulltime.compareTo("17."+latetimeString) +"      10");
+            System.out.println(fulltime.compareTo("18."+latetimeString) +"      11");
+            System.out.println(fulltime.compareTo("19."+latetimeString) +"      12");
+            System.out.println(fulltime.compareTo("20."+latetimeString) +"      13");
+            System.out.println(fulltime.compareTo("21."+latetimeString) +"      14");
+            System.out.println(fulltime.compareTo("22."+latetimeString) +"      15");*/
 
-            if( fulltime.compareToIgnoreCase("08."+latetimeString) == 1){
+            if( fulltime.compareToIgnoreCase("08."+latetimeString) > 0){
 
                 if(itemsArray[i].getStarttime().equals("08.00") && (itemsArray[i].getStatusbooking().equals("Not Checkin") ||
-                        itemsArray[i].getStatusbooking().equals("Booking")) && (itemsArray[i].getLatetime() == 15 || itemsArray[i].getLatetime() == 0)){
+                        itemsArray[i].getStatusbooking().equals("Booking")) && itemsArray[i].getChecklate().equals("0")){
                     System.out.println("Success");
                     BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
                     bookMeetingRoom.setStatusbooking("Not Checkin");
@@ -504,13 +521,15 @@ public class ReportController {
                     bookMeetingRoomRepository.save(bookMeetingRoom);
                     Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
                     notificationService.sendNotifyNotCheckin(report.getUsers().getEmail());
+                    System.out.println("Over time 08.00");
                 }
 
             }
-            if( fulltime.compareToIgnoreCase("09."+latetimeString) == 1){
+            if( fulltime.compareToIgnoreCase("09."+latetimeString) > 0){
+
 
                 if(itemsArray[i].getStarttime().equals("09.00") && (itemsArray[i].getStatusbooking().equals("Not Checkin") ||
-                        itemsArray[i].getStatusbooking().equals("Booking")) && (itemsArray[i].getLatetime() == 15 || itemsArray[i].getLatetime() == 0)){
+                        itemsArray[i].getStatusbooking().equals("Booking")) && itemsArray[i].getChecklate().equals("0")){
                     System.out.println("Success");
                     BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
                     bookMeetingRoom.setStatusbooking("Not Checkin");
@@ -526,13 +545,16 @@ public class ReportController {
                     bookMeetingRoomRepository.save(bookMeetingRoom);
                     Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
                     notificationService.sendNotifyNotCheckin(report.getUsers().getEmail());
+                    System.out.println("Over time 09.00");
                 }
 
             }
-            if( fulltime.compareToIgnoreCase("10."+latetimeString) == 1){
+
+
+            if( fulltime.compareToIgnoreCase("10."+latetimeString) > 0){
 
                 if(itemsArray[i].getStarttime().equals("10.00") && (itemsArray[i].getStatusbooking().equals("Not Checkin") ||
-                        itemsArray[i].getStatusbooking().equals("Booking")) && (itemsArray[i].getLatetime() == 15 || itemsArray[i].getLatetime() == 0)){
+                        itemsArray[i].getStatusbooking().equals("Booking")) && itemsArray[i].getChecklate().equals("0")){
                     System.out.println("Success");
                     BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
                     bookMeetingRoom.setStatusbooking("Not Checkin");
@@ -548,11 +570,13 @@ public class ReportController {
                     bookMeetingRoomRepository.save(bookMeetingRoom);
                     Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
                     notificationService.sendNotifyNotCheckin(report.getUsers().getEmail());
+                    System.out.println("Over time 10.00");
                 }
             }
-            if( fulltime.compareToIgnoreCase("11."+latetimeString) == 1){
+            if( fulltime.compareToIgnoreCase("11."+latetimeString) > 0){
+
                 if(itemsArray[i].getStarttime().equals("11.00") && (itemsArray[i].getStatusbooking().equals("Not Checkin") ||
-                        itemsArray[i].getStatusbooking().equals("Booking")) && (itemsArray[i].getLatetime() == 15 || itemsArray[i].getLatetime() == 0)){
+                        itemsArray[i].getStatusbooking().equals("Booking")) && itemsArray[i].getChecklate().equals("0")){
                     System.out.println("Success");
                     BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
                     bookMeetingRoom.setStatusbooking("Not Checkin");
@@ -568,13 +592,14 @@ public class ReportController {
                     bookMeetingRoomRepository.save(bookMeetingRoom);
                     Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
                     notificationService.sendNotifyNotCheckin(report.getUsers().getEmail());
+                    System.out.println("Over time 11.00");
                 }
 
             }
-            if( fulltime.compareToIgnoreCase("12."+latetimeString) == 1){
+            if( fulltime.compareToIgnoreCase("12."+latetimeString)> 0){
 
                 if(itemsArray[i].getStarttime().equals("12.00") && (itemsArray[i].getStatusbooking().equals("Not Checkin") ||
-                        itemsArray[i].getStatusbooking().equals("Booking")) && (itemsArray[i].getLatetime() == 15 || itemsArray[i].getLatetime() == 0)){
+                        itemsArray[i].getStatusbooking().equals("Booking")) && itemsArray[i].getChecklate().equals("0")){
                     System.out.println("Success");
                     BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
                     bookMeetingRoom.setStatusbooking("Not Checkin");
@@ -590,12 +615,13 @@ public class ReportController {
                     bookMeetingRoomRepository.save(bookMeetingRoom);
                     Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
                     notificationService.sendNotifyNotCheckin(report.getUsers().getEmail());
+                    System.out.println("Over time 12.00");
                 }
             }
-            if( fulltime.compareToIgnoreCase("13."+latetimeString) == 1){
+            if( fulltime.compareToIgnoreCase("13."+latetimeString)> 0){
 
                 if(itemsArray[i].getStarttime().equals("13.00") && (itemsArray[i].getStatusbooking().equals("Not Checkin") ||
-                        itemsArray[i].getStatusbooking().equals("Booking")) && (itemsArray[i].getLatetime() == 15 || itemsArray[i].getLatetime() == 0)){
+                        itemsArray[i].getStatusbooking().equals("Booking")) && itemsArray[i].getChecklate().equals("0")){
                     System.out.println("Success");
                     BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
                     bookMeetingRoom.setStatusbooking("Not Checkin");
@@ -611,11 +637,13 @@ public class ReportController {
                     bookMeetingRoomRepository.save(bookMeetingRoom);
                     Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
                     notificationService.sendNotifyNotCheckin(report.getUsers().getEmail());
+                    System.out.println("Over time 13.00");
                 }
             }
-            if( fulltime.compareToIgnoreCase("14."+latetimeString) == 1){
+            if( fulltime.compareToIgnoreCase("14."+latetimeString) > 0){
+
                 if(itemsArray[i].getStarttime().equals("14.00") && (itemsArray[i].getStatusbooking().equals("Not Checkin") ||
-                        itemsArray[i].getStatusbooking().equals("Booking")) && (itemsArray[i].getLatetime() == 15 || itemsArray[i].getLatetime() == 0)){
+                        itemsArray[i].getStatusbooking().equals("Booking")) && itemsArray[i].getChecklate().equals("0")){
                     System.out.println("Success");
                     BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
                     bookMeetingRoom.setStatusbooking("Not Checkin");
@@ -631,13 +659,14 @@ public class ReportController {
                     bookMeetingRoomRepository.save(bookMeetingRoom);
                     Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
                     notificationService.sendNotifyNotCheckin(report.getUsers().getEmail());
+                    System.out.println("Over time 14.00");
                 }
 
             }
-            if( fulltime.compareToIgnoreCase("15."+latetimeString) == 1){
+            if( fulltime.compareToIgnoreCase("15."+latetimeString) > 0){
 
                 if(itemsArray[i].getStarttime().equals("15.00") && (itemsArray[i].getStatusbooking().equals("Not Checkin") ||
-                        itemsArray[i].getStatusbooking().equals("Booking")) && (itemsArray[i].getLatetime() == 15 || itemsArray[i].getLatetime() == 0)){
+                        itemsArray[i].getStatusbooking().equals("Booking")) && itemsArray[i].getChecklate().equals("0")){
                     System.out.println("Success");
                     BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
                     bookMeetingRoom.setStatusbooking("Not Checkin");
@@ -653,12 +682,13 @@ public class ReportController {
                     bookMeetingRoomRepository.save(bookMeetingRoom);
                     Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
                     notificationService.sendNotifyNotCheckin(report.getUsers().getEmail());
+                    System.out.println("Over time 15.00");
                 }
             }
-            if( fulltime.compareToIgnoreCase("16."+latetimeString) == 1){
+            if( fulltime.compareToIgnoreCase("16."+latetimeString) > 0){
 
                 if(itemsArray[i].getStarttime().equals("16.00") && (itemsArray[i].getStatusbooking().equals("Not Checkin") ||
-                        itemsArray[i].getStatusbooking().equals("Booking")) && (itemsArray[i].getLatetime() == 15 || itemsArray[i].getLatetime() == 0)){
+                        itemsArray[i].getStatusbooking().equals("Booking")) && itemsArray[i].getChecklate().equals("0")){
                     System.out.println("Success");
 
                     BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
@@ -676,12 +706,13 @@ public class ReportController {
                     Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
 
                     notificationService.sendNotifyNotCheckin(report.getUsers().getEmail());
+                    System.out.println("Over time 16.00");
                 }
             }
-            if( fulltime.compareToIgnoreCase("17."+latetimeString) == 1){
+            if( fulltime.compareToIgnoreCase("17."+latetimeString) > 0){
 
                 if(itemsArray[i].getStarttime().equals("17.00") && (itemsArray[i].getStatusbooking().equals("Not Checkin") ||
-                        itemsArray[i].getStatusbooking().equals("Booking")) && (itemsArray[i].getLatetime() == 15 || itemsArray[i].getLatetime() == 0)){
+                        itemsArray[i].getStatusbooking().equals("Booking")) && itemsArray[i].getChecklate().equals("0")){
                     System.out.println("Success");
                     BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
                     bookMeetingRoom.setStatusbooking("Not Checkin");
@@ -697,12 +728,13 @@ public class ReportController {
                     bookMeetingRoomRepository.save(bookMeetingRoom);
                     Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
                     notificationService.sendNotifyNotCheckin(report.getUsers().getEmail());
+                    System.out.println("Over time 17.00");
                 }
             }
-            if( fulltime.compareToIgnoreCase("18."+latetimeString) == 1){
+            if( fulltime.compareToIgnoreCase("18."+latetimeString) > 0){
 
                 if(itemsArray[i].getStarttime().equals("18.00") && (itemsArray[i].getStatusbooking().equals("Not Checkin") ||
-                        itemsArray[i].getStatusbooking().equals("Booking")) && (itemsArray[i].getLatetime() == 15 || itemsArray[i].getLatetime() == 0)){
+                        itemsArray[i].getStatusbooking().equals("Booking")) && itemsArray[i].getChecklate().equals("0")){
                     System.out.println("Success");
                     BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
                     bookMeetingRoom.setStatusbooking("Not Checkin");
@@ -718,12 +750,13 @@ public class ReportController {
                     bookMeetingRoomRepository.save(bookMeetingRoom);
                     Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
                     notificationService.sendNotifyNotCheckin(report.getUsers().getEmail());
+                    System.out.println("Over time 18.00");
                 }
             }
-            if( fulltime.compareToIgnoreCase("19."+latetimeString) == 1){
+            if( fulltime.compareToIgnoreCase("19."+latetimeString) > 0){
 
                 if(itemsArray[i].getStarttime().equals("19.00") && (itemsArray[i].getStatusbooking().equals("Not Checkin") ||
-                        itemsArray[i].getStatusbooking().equals("Booking")) && (itemsArray[i].getLatetime() == 15 || itemsArray[i].getLatetime() == 0)){
+                        itemsArray[i].getStatusbooking().equals("Booking")) && itemsArray[i].getChecklate().equals("0")){
                     BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
                     bookMeetingRoom.setStatusbooking("Not Checkin");
                     bookMeetingRoom.setEndtime("19.00");
@@ -738,12 +771,13 @@ public class ReportController {
                     bookMeetingRoomRepository.save(bookMeetingRoom);
                     Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
                     notificationService.sendNotifyNotCheckin(report.getUsers().getEmail());
+                    System.out.println("Over time 19.00");
                 }
             }
-            if( fulltime.compareToIgnoreCase("20."+latetimeString) == 1){
+            if( fulltime.compareToIgnoreCase("20."+latetimeString) > 0){
 
                 if(itemsArray[i].getStarttime().equals("20.00") && (itemsArray[i].getStatusbooking().equals("Not Checkin") ||
-                        itemsArray[i].getStatusbooking().equals("Booking")) && (itemsArray[i].getLatetime() == 15 || itemsArray[i].getLatetime() == 0)){
+                        itemsArray[i].getStatusbooking().equals("Booking")) && itemsArray[i].getChecklate().equals("0")){
                     System.out.println("Success");
                     BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
                     bookMeetingRoom.setStatusbooking("Not Checkin");
@@ -759,12 +793,13 @@ public class ReportController {
                     bookMeetingRoomRepository.save(bookMeetingRoom);
                     Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
                     notificationService.sendNotifyNotCheckin(report.getUsers().getEmail());
+                    System.out.println("Over time 20.00");
                 }
             }
-            if( fulltime.compareToIgnoreCase("21."+latetimeString) == 1){
+            if( fulltime.compareToIgnoreCase("21."+latetimeString) > 0){
 
                 if(itemsArray[i].getStarttime().equals("21.00") && (itemsArray[i].getStatusbooking().equals("Not Checkin") ||
-                        itemsArray[i].getStatusbooking().equals("Booking")) && (itemsArray[i].getLatetime() == 15 || itemsArray[i].getLatetime() == 0)){
+                        itemsArray[i].getStatusbooking().equals("Booking")) && itemsArray[i].getChecklate().equals("0")){
                     System.out.println("Success");
                     BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
                     bookMeetingRoom.setStatusbooking("Not Checkin");
@@ -780,12 +815,13 @@ public class ReportController {
                     bookMeetingRoomRepository.save(bookMeetingRoom);
                     Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
                     notificationService.sendNotifyNotCheckin(report.getUsers().getEmail());
+                    System.out.println("Over time 21.00");
                 }
             }
-            if( fulltime.compareToIgnoreCase("22."+latetimeString) == 1){
+            if( fulltime.compareToIgnoreCase("22."+latetimeString)> 0){
 
                 if(itemsArray[i].getStarttime().equals("22.00") && (itemsArray[i].getStatusbooking().equals("Not Checkin") ||
-                        itemsArray[i].getStatusbooking().equals("Booking")) && (itemsArray[i].getLatetime() == 15 || itemsArray[i].getLatetime() == 0)){
+                        itemsArray[i].getStatusbooking().equals("Booking")) && itemsArray[i].getChecklate().equals("0")){
                     System.out.println("Success");
                     BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(itemsArray[i].getBook_id()).get();
                     bookMeetingRoom.setStatusbooking("Not Checkin");
@@ -801,6 +837,7 @@ public class ReportController {
                     bookMeetingRoomRepository.save(bookMeetingRoom);
                     Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
                     notificationService.sendNotifyNotCheckin(report.getUsers().getEmail());
+                    System.out.println("Over time 22.00");
                 }
             }
 
