@@ -7,6 +7,7 @@ import com.example.demo.entity.Roomname;
 import com.example.demo.entity.Users;
 import com.example.demo.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.MailException;
 import org.springframework.web.bind.annotation.*;
 
 import java.awt.print.Book;
@@ -19,6 +20,7 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import javax.mail.MessagingException;
 
 @RestController
 @CrossOrigin("*")
@@ -50,10 +52,13 @@ public class BookMeetingRoomController {
     }
 
     @PostMapping(path = "/Notcheckin15min/{dateBookMeetingRoom}/{roomname}/{starttime}")
-    public BookMeetingRoom updatenotcheckinbysys(@PathVariable String dateBookMeetingRoom,@PathVariable Long roomname, @PathVariable String starttime) {
+    public BookMeetingRoom updatenotcheckinbysys(@PathVariable String dateBookMeetingRoom, @PathVariable Long roomname,
+            @PathVariable String starttime) {
         Roomname roomname1 = roomnameRepository.findById(roomname).get();
 
-        BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findByDateBookMeetingRoomAndRoomnameAndStarttimeAndIsActive(dateBookMeetingRoom,roomname1,starttime,"1");
+        BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository
+                .findByDateBookMeetingRoomAndRoomnameAndStarttimeAndIsActive(dateBookMeetingRoom, roomname1, starttime,
+                        "1");
 
         bookMeetingRoom.setStatusbooking("Not Checkin");
         bookMeetingRoom.setLatetime(15);
@@ -65,28 +70,42 @@ public class BookMeetingRoomController {
     }
 
     @PostMapping(path = "/Notcheckin30min/{dateBookMeetingRoom}/{roomname}/{starttime}/{latetime}")
-    public BookMeetingRoom updatenotcheckin30minbysys(@PathVariable String dateBookMeetingRoom,@PathVariable Long roomname,
-                                                      @PathVariable String starttime,@PathVariable int latetime) {
+    public BookMeetingRoom updatenotcheckin30minbysys(@PathVariable String dateBookMeetingRoom,
+            @PathVariable Long roomname, @PathVariable String starttime, @PathVariable int latetime) throws MessagingException {
         Roomname roomname1 = roomnameRepository.findById(roomname).get();
         String endtime;
-        BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findByDateBookMeetingRoomAndRoomnameAndStarttimeAndIsActive(dateBookMeetingRoom,roomname1,starttime,"1");
-        if(starttime.equals("08.00")){
+        BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository
+                .findByDateBookMeetingRoomAndRoomnameAndStarttimeAndIsActive(dateBookMeetingRoom, roomname1, starttime,
+                        "1");
+        if (starttime.equals("08.00")) {
             endtime = "09.00";
-        }else if(starttime.equals("09.00")){endtime = "09.00";}
-        else if(starttime.equals("10.00")){endtime = "10.00";}
-        else if(starttime.equals("11.00")){endtime = "11.00";}
-        else if(starttime.equals("12.00")){endtime = "12.00";}
-        else if(starttime.equals("13.00")){endtime = "13.00";}
-        else if(starttime.equals("14.00")){endtime = "14.00";}
-        else if(starttime.equals("15.00")){endtime = "15.00";}
-        else if(starttime.equals("16.00")){endtime = "16.00";}
-        else if(starttime.equals("17.00")){endtime = "17.00";}
-        else if(starttime.equals("18.00")){endtime = "18.00";}
-        else if(starttime.equals("19.00")){endtime = "19.00";}
-        else if(starttime.equals("20.00")){endtime = "20.00";}
-        else {endtime = "21.00";}
-
-
+        } else if (starttime.equals("09.00")) {
+            endtime = "09.00";
+        } else if (starttime.equals("10.00")) {
+            endtime = "10.00";
+        } else if (starttime.equals("11.00")) {
+            endtime = "11.00";
+        } else if (starttime.equals("12.00")) {
+            endtime = "12.00";
+        } else if (starttime.equals("13.00")) {
+            endtime = "13.00";
+        } else if (starttime.equals("14.00")) {
+            endtime = "14.00";
+        } else if (starttime.equals("15.00")) {
+            endtime = "15.00";
+        } else if (starttime.equals("16.00")) {
+            endtime = "16.00";
+        } else if (starttime.equals("17.00")) {
+            endtime = "17.00";
+        } else if (starttime.equals("18.00")) {
+            endtime = "18.00";
+        } else if (starttime.equals("19.00")) {
+            endtime = "19.00";
+        } else if (starttime.equals("20.00")) {
+            endtime = "20.00";
+        } else {
+            endtime = "21.00";
+        }
 
         bookMeetingRoom.setStatusbooking("Not Checkin");
         bookMeetingRoom.setLatetime(latetime);
@@ -97,14 +116,14 @@ public class BookMeetingRoomController {
         bookMeetingRoom.setEndtime(endtime);
         bookMeetingRoom.setCheckoutby("Checkoutsys");
         int minutess = Integer.valueOf(getMinuteCurrent());
-        String min ;
-        if(minutess < 10){
-            min = "0"+minutess;
-        }else{
+        String min;
+        if (minutess < 10) {
+            min = "0" + minutess;
+        } else {
             min = String.valueOf(minutess);
         }
 
-        bookMeetingRoom.setCheckouttime(getHourCurrent() + ":" +min);
+        bookMeetingRoom.setCheckouttime(getHourCurrent() + ":" + min);
         bookMeetingRoom.setUpdate_by("Updatebysys");
         bookMeetingRoom.setUpdate_date(new Date());
         bookMeetingRoomRepository.save(bookMeetingRoom);
@@ -115,10 +134,13 @@ public class BookMeetingRoomController {
     }
 
     @PostMapping(path = "/checkoutauto/{dateBookMeetingRoom}/{roomname}/{starttime}")
-    public BookMeetingRoom checkoutbysys(@PathVariable String dateBookMeetingRoom,@PathVariable Long roomname, @PathVariable String starttime) {
+    public BookMeetingRoom checkoutbysys(@PathVariable String dateBookMeetingRoom, @PathVariable Long roomname,
+            @PathVariable String starttime) {
         Roomname roomname1 = roomnameRepository.findById(roomname).get();
         String endtime;
-        BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findByDateBookMeetingRoomAndRoomnameAndStarttimeAndIsActive(dateBookMeetingRoom,roomname1,starttime,"1");
+        BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository
+                .findByDateBookMeetingRoomAndRoomnameAndStarttimeAndIsActive(dateBookMeetingRoom, roomname1, starttime,
+                        "1");
         bookMeetingRoom.setCheckoutby("Checkoutsys");
         bookMeetingRoom.setCheckouttime(bookMeetingRoom.getEndtime());
         bookMeetingRoom.setUpdate_by("Updatesys");
@@ -129,7 +151,6 @@ public class BookMeetingRoomController {
         return bookMeetingRoom;
     }
 
-
     @PostMapping(path = "/bookrepeat/{id_book}")
     public BookMeetingRoom checkoutbysys(@PathVariable Long id_book) {
         BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findById(id_book).get();
@@ -139,13 +160,13 @@ public class BookMeetingRoomController {
         bookMeetingRoom.setUpdate_date(new Date());
         bookMeetingRoom.setCheckoutby("Checkoutsys");
         int minutess = Integer.valueOf(getMinuteCurrent());
-        String min ;
-        if(minutess < 10){
-            min = "0"+minutess;
-        }else{
+        String min;
+        if (minutess < 10) {
+            min = "0" + minutess;
+        } else {
             min = String.valueOf(minutess);
         }
-        bookMeetingRoom.setCheckouttime(getHourCurrent()+":"+min);
+        bookMeetingRoom.setCheckouttime(getHourCurrent() + ":" + min);
         bookMeetingRoomRepository.save(bookMeetingRoom);
 
         Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
@@ -157,8 +178,7 @@ public class BookMeetingRoomController {
         return bookMeetingRoom;
     }
 
-
- //8888888888888888888888888888888888888
+    // 8888888888888888888888888888888888888
 
     @PostMapping(path = "/Addroom/{firstname}/{roomname}")
     public Roomname AddRoom(@PathVariable String firstname, @PathVariable String roomname) {
@@ -176,8 +196,9 @@ public class BookMeetingRoomController {
     }
 
     @PostMapping(path = "/Editroom/{firstname}/{roomname}/{newroomname}")
-    public Roomname Editroom(@PathVariable String firstname, @PathVariable String roomname, @PathVariable String newroomname) {
-        Roomname roomname1 = roomnameRepository.findByRoomnamesAndIsActive(roomname,"1");
+    public Roomname Editroom(@PathVariable String firstname, @PathVariable String roomname,
+            @PathVariable String newroomname) {
+        Roomname roomname1 = roomnameRepository.findByRoomnamesAndIsActive(roomname, "1");
         roomname1.setRoomnames(newroomname);
         roomname1.setIsActive("1");
         Date date = new Date();
@@ -190,7 +211,7 @@ public class BookMeetingRoomController {
 
     @PostMapping(path = "/Deleteroom/{firstname}/{roomname}")
     public Roomname Deleteroom(@PathVariable String firstname, @PathVariable String roomname) {
-        Roomname roomname1 = roomnameRepository.findByRoomnamesAndIsActive(roomname,"1");
+        Roomname roomname1 = roomnameRepository.findByRoomnamesAndIsActive(roomname, "1");
         roomname1.setIsActive("0");
         Date date = new Date();
         roomname1.setUpdate_by(firstname);
@@ -200,13 +221,14 @@ public class BookMeetingRoomController {
         return roomname1;
     }
 
-
-
     @PostMapping(path = "/CancelBooking/{firstname}/{dateBookMeetingRoom}/{roomname}/{starttime}")
-    public BookMeetingRoom bookMeetingRoom2(@PathVariable String firstname,@PathVariable String dateBookMeetingRoom, @PathVariable Long roomname, @PathVariable String starttime) {
+    public BookMeetingRoom bookMeetingRoom2(@PathVariable String firstname, @PathVariable String dateBookMeetingRoom,
+            @PathVariable Long roomname, @PathVariable String starttime) {
 
         Roomname roomname1 = roomnameRepository.findById(roomname).get();
-        BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findByDateBookMeetingRoomAndRoomnameAndStarttimeAndIsActive(dateBookMeetingRoom,roomname1,starttime,"1");
+        BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository
+                .findByDateBookMeetingRoomAndRoomnameAndStarttimeAndIsActive(dateBookMeetingRoom, roomname1, starttime,
+                        "1");
         bookMeetingRoom.setIsActive("0");
         bookMeetingRoomRepository.save(bookMeetingRoom);
         Date date = new Date();
@@ -223,22 +245,25 @@ public class BookMeetingRoomController {
     }
 
     @PostMapping(path = "/CheckIn/{firstname}/{dateBookMeetingRoom}/{roomname}/{starttime}/{checkintime}")
-    public BookMeetingRoom bookMeetingRoom4(@PathVariable String firstname,@PathVariable String dateBookMeetingRoom, @PathVariable Long roomname, @PathVariable String starttime, @PathVariable String checkintime ) {
+    public BookMeetingRoom bookMeetingRoom4(@PathVariable String firstname, @PathVariable String dateBookMeetingRoom,
+            @PathVariable Long roomname, @PathVariable String starttime, @PathVariable String checkintime) {
 
         Roomname roomname1 = roomnameRepository.findById(roomname).get();
-        BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findByDateBookMeetingRoomAndRoomnameAndStarttimeAndIsActive(dateBookMeetingRoom,roomname1,starttime,"1");
+        BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository
+                .findByDateBookMeetingRoomAndRoomnameAndStarttimeAndIsActive(dateBookMeetingRoom, roomname1, starttime,
+                        "1");
         Date date = new Date();
         bookMeetingRoom.setStatusbooking("Checkin");
         bookMeetingRoom.setUpdate_date(date);
         bookMeetingRoom.setUpdate_by(firstname);
         int minutess = Integer.valueOf(getMinuteCurrent());
-        String min ;
-        if(minutess < 10){
-            min = "0"+minutess;
-        }else{
+        String min;
+        if (minutess < 10) {
+            min = "0" + minutess;
+        } else {
             min = String.valueOf(minutess);
         }
-        bookMeetingRoom.setCheckintime(getHourCurrent()+":"+min);
+        bookMeetingRoom.setCheckintime(getHourCurrent() + ":" + min);
         bookMeetingRoom.setCheckinby("Checkinusr");
         bookMeetingRoomRepository.save(bookMeetingRoom);
         Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
@@ -248,57 +273,57 @@ public class BookMeetingRoomController {
         return bookMeetingRoom;
     }
 
-
-
     @PostMapping(path = "/Checkout/{firstname}/{dateBookMeetingRoom}/{roomname}/{starttime}/{hour}/{minute}/{checkouttime}")
-    public BookMeetingRoom checkout(@PathVariable String firstname,@PathVariable String dateBookMeetingRoom, @PathVariable Long roomname, @PathVariable String starttime
-            , @PathVariable int hour, @PathVariable int minute, @PathVariable String checkouttime) {
+    public BookMeetingRoom checkout(@PathVariable String firstname, @PathVariable String dateBookMeetingRoom,
+            @PathVariable Long roomname, @PathVariable String starttime, @PathVariable int hour,
+            @PathVariable int minute, @PathVariable String checkouttime) {
         String endtime2;
 
-
-        if(hour == 8 && minute <= 30){
+        if (hour == 8 && minute <= 30) {
             endtime2 = "08.00";
-        }else if(hour == 8 && minute > 30){
+        } else if (hour == 8 && minute > 30) {
             endtime2 = "08.30";
-        }else if(hour == 9 && minute <= 30){
+        } else if (hour == 9 && minute <= 30) {
             endtime2 = "09.00";
-        }else if(hour == 9 && minute > 30){
+        } else if (hour == 9 && minute > 30) {
             endtime2 = "09.30";
-        }else if(hour == 10 && minute <= 30){
+        } else if (hour == 10 && minute <= 30) {
             endtime2 = "10.00";
-        }else if(hour == 10 && minute > 30){
+        } else if (hour == 10 && minute > 30) {
             endtime2 = "10.30";
-        }else if(hour == 11 && minute <= 30){
+        } else if (hour == 11 && minute <= 30) {
             endtime2 = "11.00";
-        }else if(hour == 11 && minute > 30){
+        } else if (hour == 11 && minute > 30) {
             endtime2 = "11.30";
-        }else if(hour == 12 && minute <= 30){
+        } else if (hour == 12 && minute <= 30) {
             endtime2 = "12.00";
-        }else if(hour == 12 && minute > 30){
+        } else if (hour == 12 && minute > 30) {
             endtime2 = "12.30";
-        }else if(hour == 13 && minute <= 30){
+        } else if (hour == 13 && minute <= 30) {
             endtime2 = "13.00";
-        }else if(hour == 13 && minute > 30){
+        } else if (hour == 13 && minute > 30) {
             endtime2 = "13.30";
-        }else if(hour == 14 && minute <= 30){
+        } else if (hour == 14 && minute <= 30) {
             endtime2 = "14.00";
-        }else if(hour == 14 && minute > 30){
+        } else if (hour == 14 && minute > 30) {
             endtime2 = "14.30";
-        }else if(hour == 15 && minute <= 30){
+        } else if (hour == 15 && minute <= 30) {
             endtime2 = "15.00";
-        }else if(hour == 15 && minute > 30){
+        } else if (hour == 15 && minute > 30) {
             endtime2 = "15.30";
-        }else if(hour == 16 && minute <= 30){
+        } else if (hour == 16 && minute <= 30) {
             endtime2 = "16.00";
-        }else{
+        } else {
             endtime2 = "16.30";
         }
 
         Roomname roomname1 = roomnameRepository.findById(roomname).get();
-        BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findByDateBookMeetingRoomAndRoomnameAndStarttimeAndIsActive(dateBookMeetingRoom,roomname1,starttime,"1");
+        BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository
+                .findByDateBookMeetingRoomAndRoomnameAndStarttimeAndIsActive(dateBookMeetingRoom, roomname1, starttime,
+                        "1");
         bookMeetingRoom.setCheckoutby("Checkoutusr");
         bookMeetingRoom.setCheckouttime(checkouttime);
-        int lengthh = convertLengthTime(starttime,endtime2);
+        int lengthh = convertLengthTime(starttime, endtime2);
         bookMeetingRoom.setLengthtime(lengthh);
         bookMeetingRoom.setEndtime(endtime2);
         bookMeetingRoom.setStatusbooking("Checkout");
@@ -313,17 +338,22 @@ public class BookMeetingRoomController {
     }
 
     @GetMapping("/Bookeiei/{dateBookMeetingRoom}/{roomname}/{starttime}")
-    public  BookMeetingRoom bookMeetingRoom(@PathVariable String dateBookMeetingRoom, @PathVariable Long roomname, @PathVariable String starttime){
+    public BookMeetingRoom bookMeetingRoom(@PathVariable String dateBookMeetingRoom, @PathVariable Long roomname,
+            @PathVariable String starttime) {
 
-        return this.bookMeetingRoomRepository.getBookday(dateBookMeetingRoom,roomname,starttime,"1","booking");
+        return this.bookMeetingRoomRepository.getBookday(dateBookMeetingRoom, roomname, starttime, "1", "booking");
     }
 
     @PostMapping(path = "/Editbook/{firstname}/{dateBookMeetingRoom}/{roomname}/{starttime}/{newstarttime}/{endtime}/{atten}/{topic}/{remark}/{tel}")
-    public BookMeetingRoom bookMeetingRoom3(@PathVariable String firstname,@PathVariable String dateBookMeetingRoom, @PathVariable Long roomname, @PathVariable String starttime,
-   @PathVariable String newstarttime,@PathVariable String endtime,@PathVariable String atten,@PathVariable String topic,@PathVariable String remark,@PathVariable String tel ) {
+    public BookMeetingRoom bookMeetingRoom3(@PathVariable String firstname, @PathVariable String dateBookMeetingRoom,
+            @PathVariable Long roomname, @PathVariable String starttime, @PathVariable String newstarttime,
+            @PathVariable String endtime, @PathVariable String atten, @PathVariable String topic,
+            @PathVariable String remark, @PathVariable String tel) {
 
         Roomname roomname1 = roomnameRepository.findById(roomname).get();
-        BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository.findByDateBookMeetingRoomAndRoomnameAndStarttimeAndIsActive(dateBookMeetingRoom,roomname1,starttime,"1");
+        BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository
+                .findByDateBookMeetingRoomAndRoomnameAndStarttimeAndIsActive(dateBookMeetingRoom, roomname1, starttime,
+                        "1");
         bookMeetingRoom.setStarttime(newstarttime);
         bookMeetingRoom.setEndtime(endtime);
         bookMeetingRoom.setAttendees(atten);
@@ -333,7 +363,7 @@ public class BookMeetingRoomController {
         Date date = new Date();
         bookMeetingRoom.setUpdate_by(firstname);
         bookMeetingRoom.setUpdate_date(date);
-        int length = convertLengthTime(newstarttime,endtime);
+        int length = convertLengthTime(newstarttime, endtime);
         bookMeetingRoom.setLengthtime(length);
         bookMeetingRoomRepository.save(bookMeetingRoom);
         Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
@@ -343,9 +373,9 @@ public class BookMeetingRoomController {
         return bookMeetingRoom;
     }
 
-
     @PostMapping("/dataform/booklate")
-    public Collection<BookMeetingRoom> postDataLate(@RequestBody Map<String,String> body) throws ParseException {
+    public Collection<BookMeetingRoom> postDataLate(@RequestBody Map<String, String> body)
+            throws ParseException, MailException, MessagingException {
 
         String remark;
         String userid = body.get("userid").toString();
@@ -354,7 +384,10 @@ public class BookMeetingRoomController {
         String tel = body.get("tel").toString();
         String topic = body.get("topic").toString();
         String atten =  body.get("atten").toString();
-        if( body.get("remark") == null){
+        String email = body.get("email").toString();
+        String[] emailArray = email.split(",");
+        if( body.get("remark") == null || body.get("remark") == "" || body.get("remark") == " " || body.get("remark") == "  "
+                ||body.get("remark") == "   "||body.get("remark") == "    "){
             remark = "null";
         }else{
             remark =  body.get("remark").toString();
@@ -393,6 +426,7 @@ public class BookMeetingRoomController {
         bookMeetingRoom.setCreate_date(date1);
         Users users = usersRepository.findByUsernameAndIsActive(userid,"1");
         bookMeetingRoom.setCreate_by(users.getFirstname());
+        bookMeetingRoom.setSendemailto(email);
         bookMeetingRoomRepository.save(bookMeetingRoom);
 
 
@@ -420,12 +454,22 @@ public class BookMeetingRoomController {
         reportRepository.save(report);
 
         notificationService.sendEmail(users , bookMeetingRoom);
+
+        for(int i = 0 ; i < emailArray.length ; i++){
+            // System.out.println(emailArray[i]);
+            if(emailArray[i].isEmpty()){
+                System.out.println("Email Invalid!");
+            }else{
+                notificationService.sendEmail2(users , bookMeetingRoom,emailArray[i]);
+            }
+
+        }
         return bookMeetingRoomRepository.findAll().stream().collect(Collectors.toList());
     }
 
 
     @PostMapping("/dataform")
-    public Collection<BookMeetingRoom> postData(@RequestBody Map<String,String> body) throws ParseException {
+    public Collection<BookMeetingRoom> postData(@RequestBody Map<String,String> body) throws ParseException, MailException, MessagingException {
 
         String remark;
         String userid = body.get("userid").toString();
@@ -437,7 +481,8 @@ public class BookMeetingRoomController {
         String email = body.get("email").toString();
         String[] emailArray = email.split(",");
 
-        if( body.get("remark") == null){
+        if( body.get("remark") == null || body.get("remark") == "" || body.get("remark") == " " || body.get("remark") == "  "
+                ||body.get("remark") == "   "||body.get("remark") == "    "){
             remark = "null";
         }else{
             remark =  body.get("remark").toString();
@@ -471,6 +516,7 @@ public class BookMeetingRoomController {
         Users users = usersRepository.findByUsernameAndIsActive(userid,"1");
         bookMeetingRoom.setCreate_by(users.getFirstname());
         bookMeetingRoom.setNotify("0");
+        bookMeetingRoom.setSendemailto(email);
         bookMeetingRoomRepository.save(bookMeetingRoom);
 
         Report report = new Report();
@@ -489,6 +535,8 @@ public class BookMeetingRoomController {
         report.setCreate_by(users.getFirstname());
         report.setCreate_date(date1);
         reportRepository.save(report);
+
+        
         notificationService.sendEmail(users , bookMeetingRoom);
 
 

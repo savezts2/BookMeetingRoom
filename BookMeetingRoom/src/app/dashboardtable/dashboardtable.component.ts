@@ -123,7 +123,7 @@ exportexcel(): void{
 
     this.service.getDateDashBoardReport(this.dateStart , this.dateEnd).subscribe(data=>{
        this.report2 = data;
-        //console.log(data);
+        console.log(data);
         this.appendRoomname();
     })
 
@@ -132,7 +132,7 @@ exportexcel(): void{
         //console.log(data);
       setTimeout(() => {
        this.appendTime();
-      }, 1000); //interval
+      }, 2000); //interval
     })
 
  // console.log(this.dateStart , this.dateEnd);
@@ -285,7 +285,7 @@ exportexcel(): void{
               i = i - 1;
         }
     }
-
+    //console.log(this.events)
   } // appendtime
 
  convertDayname(day){

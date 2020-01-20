@@ -8,6 +8,7 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import javax.mail.MessagingException;
 import java.awt.print.Book;
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -63,7 +64,7 @@ public class ReportController {
 
 
     @Scheduled(fixedRate = 3000)
-    public void scheduleTaskWithFixedRate() {
+    public void scheduleTaskWithFixedRate() throws MessagingException {
         LocalDate currentDate = LocalDate.now();
         LocalTime localTime = LocalTime.now();
 
@@ -131,6 +132,19 @@ public class ReportController {
                     bookMeetingRoom.setNotify("1");
                     bookMeetingRoomRepository.save(bookMeetingRoom);
                     Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
+
+                    String[] emailArray = report.getBookMeetingRoom().getSendemailto().split(",");
+
+                    for(int l = 0 ; l < emailArray.length ; l++){
+                        // System.out.println(emailArray[i]);
+                        if(emailArray[l].isEmpty()){
+                            System.out.println("Email Invalid!");
+                        }else{
+                            notificationService.sendNotify(emailArray[l] ,timeno,report.getRoomnamebook());
+                        }
+
+                    }
+
                     notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook());
                 }
 
@@ -144,6 +158,17 @@ public class ReportController {
                     bookMeetingRoom.setNotify("1");
                     bookMeetingRoomRepository.save(bookMeetingRoom);
                     Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
+                    String[] emailArray = report.getBookMeetingRoom().getSendemailto().split(",");
+
+                    for(int l = 0 ; l < emailArray.length ; l++){
+                        // System.out.println(emailArray[i]);
+                        if(emailArray[l].isEmpty()){
+                            System.out.println("Email Invalid!");
+                        }else{
+                            notificationService.sendNotify(emailArray[l] ,timeno,report.getRoomnamebook());
+                        }
+
+                    }
                     notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook());
                 }
 
@@ -157,6 +182,17 @@ public class ReportController {
                     bookMeetingRoom.setNotify("1");
                     bookMeetingRoomRepository.save(bookMeetingRoom);
                     Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
+                    String[] emailArray = report.getBookMeetingRoom().getSendemailto().split(",");
+
+                    for(int l = 0 ; l < emailArray.length ; l++){
+                        // System.out.println(emailArray[i]);
+                        if(emailArray[l].isEmpty()){
+                            System.out.println("Email Invalid!");
+                        }else{
+                            notificationService.sendNotify(emailArray[l] ,timeno,report.getRoomnamebook());
+                        }
+
+                    }
                     notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook());
                 }
 
@@ -170,6 +206,17 @@ public class ReportController {
                     bookMeetingRoom.setNotify("1");
                     bookMeetingRoomRepository.save(bookMeetingRoom);
                     Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
+                    String[] emailArray = report.getBookMeetingRoom().getSendemailto().split(",");
+
+                    for(int l = 0 ; l < emailArray.length ; l++){
+                        // System.out.println(emailArray[i]);
+                        if(emailArray[l].isEmpty()){
+                            System.out.println("Email Invalid!");
+                        }else{
+                            notificationService.sendNotify(emailArray[l] ,timeno,report.getRoomnamebook());
+                        }
+
+                    }
                     notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook());
                 }
 
@@ -183,6 +230,17 @@ public class ReportController {
                     bookMeetingRoom.setNotify("1");
                     bookMeetingRoomRepository.save(bookMeetingRoom);
                     Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
+                    String[] emailArray = report.getBookMeetingRoom().getSendemailto().split(",");
+
+                    for(int l = 0 ; l < emailArray.length ; l++){
+                        // System.out.println(emailArray[i]);
+                        if(emailArray[l].isEmpty()){
+                            System.out.println("Email Invalid!");
+                        }else{
+                            notificationService.sendNotify(emailArray[l] ,timeno,report.getRoomnamebook());
+                        }
+
+                    }
                     notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook());
                 }
 
@@ -196,6 +254,17 @@ public class ReportController {
                     bookMeetingRoom.setNotify("1");
                     bookMeetingRoomRepository.save(bookMeetingRoom);
                     Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
+                    String[] emailArray = report.getBookMeetingRoom().getSendemailto().split(",");
+
+                    for(int l = 0 ; l < emailArray.length ; l++){
+                        // System.out.println(emailArray[i]);
+                        if(emailArray[l].isEmpty()){
+                            System.out.println("Email Invalid!");
+                        }else{
+                            notificationService.sendNotify(emailArray[l] ,timeno,report.getRoomnamebook());
+                        }
+
+                    }
                     notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook());
                 }
 
@@ -209,6 +278,17 @@ public class ReportController {
                     bookMeetingRoom.setNotify("1");
                     bookMeetingRoomRepository.save(bookMeetingRoom);
                     Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
+                    String[] emailArray = report.getBookMeetingRoom().getSendemailto().split(",");
+
+                    for(int l = 0 ; l < emailArray.length ; l++){
+                        // System.out.println(emailArray[i]);
+                        if(emailArray[l].isEmpty()){
+                            System.out.println("Email Invalid!");
+                        }else{
+                            notificationService.sendNotify(emailArray[l] ,timeno,report.getRoomnamebook());
+                        }
+
+                    }
                     notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook());
                 }
 
@@ -222,6 +302,17 @@ public class ReportController {
                     bookMeetingRoom.setNotify("1");
                     bookMeetingRoomRepository.save(bookMeetingRoom);
                     Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
+                    String[] emailArray = report.getBookMeetingRoom().getSendemailto().split(",");
+
+                    for(int l = 0 ; l < emailArray.length ; l++){
+                        // System.out.println(emailArray[i]);
+                        if(emailArray[l].isEmpty()){
+                            System.out.println("Email Invalid!");
+                        }else{
+                            notificationService.sendNotify(emailArray[l] ,timeno,report.getRoomnamebook());
+                        }
+
+                    }
                     notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook());
                 }
 
@@ -235,6 +326,17 @@ public class ReportController {
                     bookMeetingRoom.setNotify("1");
                     bookMeetingRoomRepository.save(bookMeetingRoom);
                     Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
+                    String[] emailArray = report.getBookMeetingRoom().getSendemailto().split(",");
+
+                    for(int l = 0 ; l < emailArray.length ; l++){
+                        // System.out.println(emailArray[i]);
+                        if(emailArray[l].isEmpty()){
+                            System.out.println("Email Invalid!");
+                        }else{
+                            notificationService.sendNotify(emailArray[l] ,timeno,report.getRoomnamebook());
+                        }
+
+                    }
                     notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook());
                 }
 
@@ -248,6 +350,17 @@ public class ReportController {
                     bookMeetingRoom.setNotify("1");
                     bookMeetingRoomRepository.save(bookMeetingRoom);
                     Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
+                    String[] emailArray = report.getBookMeetingRoom().getSendemailto().split(",");
+
+                    for(int l = 0 ; l < emailArray.length ; l++){
+                        // System.out.println(emailArray[i]);
+                        if(emailArray[l].isEmpty()){
+                            System.out.println("Email Invalid!");
+                        }else{
+                            notificationService.sendNotify(emailArray[l] ,timeno,report.getRoomnamebook());
+                        }
+
+                    }
                     notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook());
                 }
 
@@ -261,6 +374,17 @@ public class ReportController {
                     bookMeetingRoom.setNotify("1");
                     bookMeetingRoomRepository.save(bookMeetingRoom);
                     Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
+                    String[] emailArray = report.getBookMeetingRoom().getSendemailto().split(",");
+
+                    for(int l = 0 ; l < emailArray.length ; l++){
+                        // System.out.println(emailArray[i]);
+                        if(emailArray[l].isEmpty()){
+                            System.out.println("Email Invalid!");
+                        }else{
+                            notificationService.sendNotify(emailArray[l] ,timeno,report.getRoomnamebook());
+                        }
+
+                    }
                     notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook());
                 }
 
@@ -274,6 +398,17 @@ public class ReportController {
                     bookMeetingRoom.setNotify("1");
                     bookMeetingRoomRepository.save(bookMeetingRoom);
                     Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
+                    String[] emailArray = report.getBookMeetingRoom().getSendemailto().split(",");
+
+                    for(int l = 0 ; l < emailArray.length ; l++){
+                        // System.out.println(emailArray[i]);
+                        if(emailArray[l].isEmpty()){
+                            System.out.println("Email Invalid!");
+                        }else{
+                            notificationService.sendNotify(emailArray[l] ,timeno,report.getRoomnamebook());
+                        }
+
+                    }
                     notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook());
                 }
 
@@ -287,6 +422,17 @@ public class ReportController {
                     bookMeetingRoom.setNotify("1");
                     bookMeetingRoomRepository.save(bookMeetingRoom);
                     Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
+                    String[] emailArray = report.getBookMeetingRoom().getSendemailto().split(",");
+
+                    for(int l = 0 ; l < emailArray.length ; l++){
+                        // System.out.println(emailArray[i]);
+                        if(emailArray[l].isEmpty()){
+                            System.out.println("Email Invalid!");
+                        }else{
+                            notificationService.sendNotify(emailArray[l] ,timeno,report.getRoomnamebook());
+                        }
+
+                    }
                     notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook());
                 }
 
@@ -300,6 +446,17 @@ public class ReportController {
                     bookMeetingRoom.setNotify("1");
                     bookMeetingRoomRepository.save(bookMeetingRoom);
                     Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
+                    String[] emailArray = report.getBookMeetingRoom().getSendemailto().split(",");
+
+                    for(int l = 0 ; l < emailArray.length ; l++){
+                        // System.out.println(emailArray[i]);
+                        if(emailArray[l].isEmpty()){
+                            System.out.println("Email Invalid!");
+                        }else{
+                            notificationService.sendNotify(emailArray[l] ,timeno,report.getRoomnamebook());
+                        }
+
+                    }
                     notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook());
                 }
 

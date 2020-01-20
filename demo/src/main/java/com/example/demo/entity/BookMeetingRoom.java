@@ -61,6 +61,15 @@ public class BookMeetingRoom {
 
         private String notify;
         private String checklate;
+        private String sendemailto;
+
+    public String getSendemailto() {
+        return sendemailto;
+    }
+
+    public void setSendemailto(String sendemailto) {
+        this.sendemailto = sendemailto;
+    }
 
     public String getChecklate() {
         return checklate;
