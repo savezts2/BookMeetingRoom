@@ -26,6 +26,9 @@ lastname: string;
 role: string;
 mobileQuery: MediaQueryList;
 
+roleadmin : boolean = false;
+rolehr : boolean = false;
+roleuser : boolean  = false;
 
 
   constructor(private breakpointObserver: BreakpointObserver,public authService : AuthService , private router: Router , private service : ServiceService,
@@ -40,6 +43,14 @@ mobileQuery: MediaQueryList;
     this.nameuser = localStorage.getItem('nameid');
     this.lastname = localStorage.getItem('lastname');
     this.role = localStorage.getItem('roleid');
+
+ if(sessionStorage.getItem('tokenidadmin') == 'JWT'){
+      this.roleadmin=true;
+    }else if(sessionStorage.getItem('tokenidhr') == 'JWT'){
+      this.rolehr=true;
+    }else if(sessionStorage.getItem('tokenid') == 'JWT'){
+      this.roleuser=true;
+    }
 
   }
 

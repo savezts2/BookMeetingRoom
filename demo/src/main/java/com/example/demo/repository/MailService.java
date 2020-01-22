@@ -31,7 +31,7 @@ public class MailService {
 
 
 
-	public void sendNotifyNotCheckin(String email) throws MailException, MessagingException {
+	public void sendNotifyNotCheckin(String email,String tel) throws MailException, MessagingException {
 
 
 		SimpleMailMessage mail = new SimpleMailMessage();
@@ -41,21 +41,21 @@ public class MailService {
 		helper.setFrom("Book Meeting Room Notify! <myemail>");
 		helper.setSubject("แจ้งเตือนห้องประชุม");
 		helper.setText("<html><head></head><body>" +
-
-				"<p>คุณไม่ได้เช็คอินตามเวลาที่กำหนดเวลาของท่านถูกตัด</p><br>"+
+				"<font style=\'color: rgb(103,114,196);\' size=\"4\"><b>Dear</b></font><br>"+
+				"<p>Time is out : You check in on time fail to. Please book again.</p><br>"+
 				"<p></p><br><font>Book Meeting Room ILS</font><br>" +
 				"<font style=\'color: rgb(0, 176, 80);\'><i><b>Logistics and Beyond</b></i></font><br>" +
 				"<a href=\"https://www.youtube.com/watch?v=8UJFII55u48\">https://www.youtube.com/watch?v=8UJFII55u48</a><br>"+
 				"<img src=\"http://www.ils.co.th/wp-content/themes/ils/images/logo.png\"><br>" +
 				"<font style=\'color: rgb(0, 176, 80);\'><b>I.L.S. CO., LTD.</b> ( <i>Integrated Logistics Services</i> )</font><br>" +
-				"<font>Tel. 803,804</font><br>" +
+				"<a href=\""+tel+"\">Tel." +" " +tel+"</a><br>"+
 				"<a href=\"http://www.ils.co.th\">Website : http://www.ils.co.th</a><br>"+
 				"</body>", true);
 
 		javaMailSender.send(message);
 	}
 
-	public void sendNotify(String email,int time,String roomname) throws MailException, MessagingException {
+	public void sendNotify(String email,int time,String roomname,String tel) throws MailException, MessagingException {
 
 
 		SimpleMailMessage mail = new SimpleMailMessage();
@@ -65,14 +65,14 @@ public class MailService {
 		helper.setFrom("Book Meeting Room Notify! <myemail>");
 		helper.setSubject("แจ้งเตือนห้องประชุม");
 		helper.setText("<html><head></head><body>" +
-				"<font style=\'color: rgb(103,114,196);\'><b>เรียนผู้เกี่ยวข้อง</b></font><br>"+
-				"อีก "+time+" นาทีถึงเวลาเข้าประชุมที่ห้อง "+roomname +"<br>"+
+				"<font style=\'color: rgb(103,114,196);\' size=\"4\"><b>Dear</b></font><br>"+
+				"<font>Your reserved meeting at "+roomname+" is starting in "+time +"minutes.</font><br>"+
 				"<p></p><br><font>Book Meeting Room ILS</font><br>" +
 				"<font style=\'color: rgb(0, 176, 80);\'><i><b>Logistics and Beyond</b></i></font><br>" +
 				"<a href=\"https://www.youtube.com/watch?v=8UJFII55u48\">https://www.youtube.com/watch?v=8UJFII55u48</a><br>"+
 				"<img src=\"http://www.ils.co.th/wp-content/themes/ils/images/logo.png\"><br>" +
 				"<font style=\'color: rgb(0, 176, 80);\'><b>I.L.S. CO., LTD.</b> ( <i>Integrated Logistics Services</i> )</font><br>" +
-				"<font>Tel. 803,804</font><br>" +
+				"<a href=\""+tel+"\">Tel." +" " +tel+"</a><br>"+
 				"<a href=\"http://www.ils.co.th\">Website : http://www.ils.co.th</a><br>"+
 				"</body>", true);
 
@@ -92,9 +92,9 @@ public class MailService {
 
 		if(bookMeetingRoom.getRemark().equals("null")) {
 			helper.setText("<html><head></head><body>" +
-					"<font style=\'color: rgb(103,114,196);\'><b>เรียน คุณ "+user.getFirstname()+" "+user.getLastname()+"</b></font><br>"+
-					"<font style=\'color: rgb(103,114,196);\'> <b>ได้จองห้องประชุมรายละเอียดตามด้านล่าง</b></font><p></p><br>"+
-					"<table border=\'1\' cellspacing=\'0\'>" +
+					"<font style=\'color: rgb(103,114,196);\' size=\"4\"><b>Dear K. "+user.getFirstname()+" "+user.getLastname()+"</b></font><br>"+
+					"<font style=\'color: rgb(103,114,196); margin-left: 50px;\' size=\"4\"> <b>Book Detail</b></font><br>"+
+					"<table border=\'1\' cellspacing=\'0\' style=\'margin-left: 50px;\'>" +
 					"<tr><th style=\'background-color: rgb(255, 192, 0); text-align: right;\'>Meeting Room :</th>" +
 					"<th style=\'background-color: white; text-align: left;\'>"+bookMeetingRoom.getRoomname().getRoomnames()+"</th></tr>" +
 					"<tr><th style=\'background-color: rgb(255, 192, 0); text-align: right;\'>Time :</th>" +
@@ -111,14 +111,14 @@ public class MailService {
 					"<a href=\"https://www.youtube.com/watch?v=8UJFII55u48\">https://www.youtube.com/watch?v=8UJFII55u48</a><br>"+
 					"<img src=\"http://www.ils.co.th/wp-content/themes/ils/images/logo.png\"><br>" +
 					"<font style=\'color: rgb(0, 176, 80);\'><b>I.L.S. CO., LTD.</b> ( <i>Integrated Logistics Services</i> )</font><br>" +
-					"<font>Tel. 803,804</font><br>" +
+					"<a href=\""+bookMeetingRoom.getTelbookingby()+"\">Tel." +" " +bookMeetingRoom.getTelbookingby()+"</a><br>"+
 					"<a href=\"http://www.ils.co.th\">Website : http://www.ils.co.th</a><br>"+
 					"</body>", true);
 		}else{
 			helper.setText("<html><head></head><body>" +
-					"<font style=\'color: rgb(103,114,196);\'><b>เรียน คุณ "+user.getFirstname()+" "+user.getLastname()+"</b></font><br>"+
-					"<font style=\'color: rgb(103,114,196);\'> <b>ได้จองห้องประชุมรายละเอียดตามด้านล่าง</b></font><p></p><br>"+
-					"<table border=\'1\' cellspacing=\'0\'>" +
+					"<font style=\'color: rgb(103,114,196);\' size=\"4\"><b>Dear K. "+user.getFirstname()+" "+user.getLastname()+"</b></font><br>"+
+					"<font style=\'color: rgb(103,114,196); margin-left: 50px;\' size=\"4\"> <b>Book Detail</b></font><br>"+
+					"<table border=\'1\' cellspacing=\'0\' style=\'margin-left: 50px;\'>" +
 					"<tr><th style=\'background-color: rgb(255, 192, 0); text-align: right;\'>Meeting Room :</th>" +
 					"<th style=\'background-color: white; text-align: left;\'>"+bookMeetingRoom.getRoomname().getRoomnames()+"</th></tr>" +
 					"<tr><th style=\'background-color: rgb(255, 192, 0); text-align: right;\'>Time :</th>" +
@@ -137,7 +137,7 @@ public class MailService {
 					"<a href=\"https://www.youtube.com/watch?v=8UJFII55u48\">https://www.youtube.com/watch?v=8UJFII55u48</a><br>"+
 					"<img src=\"http://www.ils.co.th/wp-content/themes/ils/images/logo.png\"><br>" +
 					"<font style=\'color: rgb(0, 176, 80);\'><b>I.L.S. CO., LTD.</b> ( <i>Integrated Logistics Services</i> )</font><br>" +
-					"<font>Tel. 803,804</font><br>" +
+					"<a href=\""+bookMeetingRoom.getTelbookingby()+"\">Tel." +" " +bookMeetingRoom.getTelbookingby()+"</a><br>"+
 					"<a href=\"http://www.ils.co.th\">Website : http://www.ils.co.th</a><br>"+
 					"</body>", true);
 		}
@@ -159,9 +159,9 @@ public class MailService {
 		if(bookMeetingRoom.getRemark().equals("null")){
 
 			helper.setText("<html><head></head><body>" +
-					"<font style=\'color: rgb(103,114,196);\'><b>เรียน คุณ "+user.getFirstname()+" "+user.getLastname()+"</b></font><br>"+
-					"<font style=\'color: rgb(103,114,196);\'> <b>ได้จองห้องประชุมรายละเอียดตามด้านล่าง</b></font><p></p><br>"+
-					"<table border=\'1\' cellspacing=\'0\'>" +
+					"<font style=\'color: rgb(103,114,196);\' size=\"4\"><b>Dear K. "+user.getFirstname()+" "+user.getLastname()+"</b></font><br>"+
+					"<font style=\'color: rgb(103,114,196); margin-left: 50px;\' size=\"4\"> <b>Book Detail</b></font><br>"+
+					"<table border=\'1\' cellspacing=\'0\' style=\'margin-left: 50px;\'>" +
 					"<tr><th style=\'background-color: rgb(255, 192, 0); text-align: right;\'>Meeting Room :</th>" +
 					"<th style=\'background-color: white; text-align: left;\'>"+bookMeetingRoom.getRoomname().getRoomnames()+"</th></tr>" +
 					"<tr><th style=\'background-color: rgb(255, 192, 0); text-align: right;\'>Time :</th>" +
@@ -178,15 +178,15 @@ public class MailService {
 					"<a href=\"https://www.youtube.com/watch?v=8UJFII55u48\">https://www.youtube.com/watch?v=8UJFII55u48</a><br>"+
 					"<img src=\"http://www.ils.co.th/wp-content/themes/ils/images/logo.png\"><br>" +
 					"<font style=\'color: rgb(0, 176, 80);\'><b>I.L.S. CO., LTD.</b> ( <i>Integrated Logistics Services</i> )</font><br>" +
-					"<font>Tel. 803,804</font><br>" +
+					"<a href=\""+bookMeetingRoom.getTelbookingby()+"\">Tel." +" " +bookMeetingRoom.getTelbookingby()+"</a><br>"+
 					"<a href=\"http://www.ils.co.th\">Website : http://www.ils.co.th</a><br>"+
 					"</body>", true);
 
 		}else{
 			helper.setText("<html><head></head><body>" +
-					"<font style=\'color: rgb(103,114,196);\'><b>เรียน คุณ "+user.getFirstname()+" "+user.getLastname()+"</b></font><br>"+
-					"<font style=\'color: rgb(103,114,196);\'> <b>ได้จองห้องประชุมรายละเอียดตามด้านล่าง</b></font><p></p><br>"+
-					"<table border=\'1\' cellspacing=\'0\'>" +
+					"<font style=\'color: rgb(103,114,196);\' size=\"4\"><b>Dear K. "+user.getFirstname()+" "+user.getLastname()+"</b></font><br>"+
+					"<font style=\'color: rgb(103,114,196); margin-left: 50px;\' size=\"4\"> <b>Book Detail</b></font><br>"+
+					"<table border=\'1\' cellspacing=\'0\' style=\'margin-left: 50px;\'>" +
 					"<tr><th style=\'background-color: rgb(255, 192, 0); text-align: right;\'>Meeting Room :</th>" +
 					"<th style=\'background-color: white; text-align: left;\'>"+bookMeetingRoom.getRoomname().getRoomnames()+"</th></tr>" +
 					"<tr><th style=\'background-color: rgb(255, 192, 0); text-align: right;\'>Time :</th>" +
@@ -205,7 +205,7 @@ public class MailService {
 					"<a href=\"https://www.youtube.com/watch?v=8UJFII55u48\">https://www.youtube.com/watch?v=8UJFII55u48</a><br>"+
 					"<img src=\"http://www.ils.co.th/wp-content/themes/ils/images/logo.png\"><br>" +
 					"<font style=\'color: rgb(0, 176, 80);\'><b>I.L.S. CO., LTD.</b> ( <i>Integrated Logistics Services</i> )</font><br>" +
-					"<font>Tel. 803,804</font><br>" +
+					"<a href=\""+bookMeetingRoom.getTelbookingby()+"\">Tel." +" " +bookMeetingRoom.getTelbookingby()+"</a><br>"+
 					"<a href=\"http://www.ils.co.th\">Website : http://www.ils.co.th</a><br>"+
 					"</body>", true);
 

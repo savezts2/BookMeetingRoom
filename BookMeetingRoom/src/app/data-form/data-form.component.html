@@ -1,7 +1,7 @@
 
 <body class="bgimg">
 
-<mat-sidenav-container *ngIf="(isLoggedInAdmin | async) || (isLoggedIn | async) || (isLoggedInHR | async)"
+<mat-sidenav-container *ngIf="(roleuser) || (roleadmin) || (rolehr)"
                        class="card" (backdropClick)="close()">
 
   <br/><br/>

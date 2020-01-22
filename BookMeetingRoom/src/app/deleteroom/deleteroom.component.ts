@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {MatSidenav} from '@angular/material/sidenav';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
-
+import { baseUrl } from '../app.component';
 
 export interface DialogData {
 roomnames : string;
@@ -25,8 +25,7 @@ export class DeleteroomComponent implements OnInit {
 
 roomnames : string ;
 firstname : string;
-public API = '//localhost:8080';   //for test
-//public API = 'http://172.27.209.27:8080/BookMeetingRoom';  //for build
+
 constructor(public authService : AuthService, private route:ActivatedRoute, private service : ServiceService,private http: HttpClient,
 private router: Router,private _formBuilder: FormBuilder, @Inject(MAT_DIALOG_DATA) public data: DialogData, public dialogRef: MatDialogRef<DeleteroomComponent>) { }
 
@@ -43,7 +42,7 @@ cancel(){
 
 Delete(){
 
-    this.http.post(this.API + '/Deleteroom/'+this.firstname +'/' + this.data.roomnames+'/',{})
+    this.http.post(baseUrl + '/Deleteroom/'+this.firstname +'/' + this.data.roomnames+'/',{})
                              .subscribe(
                                data => {
                                    console.log('PUT Request is successful');

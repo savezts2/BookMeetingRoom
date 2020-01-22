@@ -28,8 +28,8 @@ export class DashboardComponent implements OnInit {
 isLoggedIn : Observable<boolean>;
 isLoggedInAdmin : Observable<boolean>;
 isLoggedInHR : Observable<boolean>;
-serializedDate = new FormControl();
-serializedDate2 = new FormControl();
+serializedDate = new FormControl(new Date());
+serializedDate2 = new FormControl(new Date());
 frommonthnum : string;
 tomonthnum : string;
 DateStartDashboard: string;
@@ -37,11 +37,20 @@ DateEndDashboard: string;
 in : any;
 year: string;
 mindate : any;
+roleadmin : boolean = false;
+rolehr : boolean = false;
+roleuser : boolean  = false;
 constructor(public authService : AuthService , private router: Router , private service : ServiceService) {
       this.isLoggedIn = authService.isLoggedIn();
       this.isLoggedInAdmin = authService.isLoggedInAdmin();
       this.isLoggedInHR = authService.isLoggedInHR();
-
+       if(sessionStorage.getItem('tokenidadmin') == 'JWT'){
+      this.roleadmin=true;
+    }else if(sessionStorage.getItem('tokenidhr') == 'JWT'){
+      this.rolehr=true;
+    }else if(sessionStorage.getItem('tokenid') == 'JWT'){
+      this.roleuser=true;
+    }
    }
 
   ngOnInit() {

@@ -81,8 +81,13 @@ dateSelect : String ='';
 latetime : number;
 splitted : Array<any>;
 dateFull : String ;
+roleadmin : boolean = false;
+rolehr : boolean = false;
+roleuser : boolean  = false;
+
 myFilter = (d: Date): boolean => {
 const day = d.getDay();
+
 
 // Prevent Saturday and Sunday from being selected.
 return day !== 0 ;
@@ -94,6 +99,14 @@ countrepeatroom : number;
       this.isLoggedIn = authService.isLoggedIn();
       this.isLoggedInAdmin = authService.isLoggedInAdmin();
       this.isLoggedInHR = authService.isLoggedInHR();
+
+ if(sessionStorage.getItem('tokenidadmin') == 'JWT'){
+      this.roleadmin=true;
+    }else if(sessionStorage.getItem('tokenidhr') == 'JWT'){
+      this.rolehr=true;
+    }else if(sessionStorage.getItem('tokenid') == 'JWT'){
+      this.roleuser=true;
+    }
 
        setInterval(() => {
 
@@ -1405,7 +1418,7 @@ dateShow(datefull){
        this.service.getBookMeetingRoom(this.datefull.datefull,room,time).subscribe(data=>{
 
               if(data == null){
-                  if(localStorage.getItem('tokenidadmin') == "JWT"){
+                  if(sessionStorage.getItem('tokenidadmin') == "JWT"){
                          if(parseInt(this.time4) >= parseInt(this.time2) && datestringeiei == this.day){
                           alert("This time has passed");
                          }else{
@@ -1436,7 +1449,7 @@ dateShow(datefull){
                       alert("It's not your book.");
                   }
               }else{
-                  if(localStorage.getItem('tokenidadmin') == "JWT"){
+                  if(sessionStorage.getItem('tokenidadmin') == "JWT"){
                        //   console.log(parseInt(this.time4) , parseInt(this.time2) ,datestringeiei , this.day);
                          if(parseInt(this.time4) >= parseInt(this.time2) && datestringeiei == this.day ){
                           alert("This time has passed");
@@ -1463,13 +1476,17 @@ dateShow(datefull){
                            });
                           }
 
-                  }else if(localStorage.getItem('tokenidhr') == "JWT"){
+                  }else if(sessionStorage.getItem('tokenidhr') == "JWT"){
+
+                       if(parseInt(this.time4) >= parseInt(this.time2) && datestringeiei == this.day){
+                          alert("This time has passed");
+                         }else{
                       const dialogRef = this.dialog.open(CancelbookbyhrComponent, {
                            data: {room:room , time:time , date : this.datefull.datefull,atten:atten,topic:topic,remark:remark,totime:totime,tel:tel},
                            height: 'auto',
                            width:  'auto',
                            });
-
+                    }
 
                   }else{
 

@@ -3,7 +3,7 @@
 
 
 
-<mat-sidenav-container *ngIf="(isLoggedInAdmin | async) || (isLoggedInHR| async)"
+<mat-sidenav-container *ngIf="(roleadmin) || (rolehr)"
                        class="card" (backdropClick)="close()">
 
 

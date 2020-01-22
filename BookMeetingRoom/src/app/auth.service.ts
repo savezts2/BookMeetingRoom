@@ -57,49 +57,48 @@ isLoggedInHR() : Observable<boolean> {
                   else{
                   if(data.role == "ADMIN"){
                       alert("Login Success !");
-                      localStorage.setItem('tokenidadmin', 'JWT');
+                      sessionStorage.setItem('tokenidadmin', 'JWT');
                       this.isLoginAdmin.next(true);
                       localStorage.setItem('userid', data.username);
                       localStorage.setItem('nameid', data.firstname);
                       localStorage.setItem('lastname', data.lastname);
                       localStorage.setItem('roleid', data.role);
-                      localStorage.removeItem('tokenid');
-                      localStorage.removeItem('tokenidhr');
+                      sessionStorage.removeItem('tokenid');
+                      sessionStorage.removeItem('tokenidhr');
                       this.isLoginSubject.next(false);
                       this.isLoginHR.next(false);
-                      this.router.navigate(['selectDate']);
                       console.log("admin");
                       window.location.href='#/';
                       window.location.reload()
                   }else if(data.role == "HR"){
                       alert("Login Success !");
-                      localStorage.setItem('tokenidhr', 'JWT');
+                      sessionStorage.setItem('tokenidhr', 'JWT');
                       this.isLoginHR.next(true);
                       localStorage.setItem('userid', data.username);
                       localStorage.setItem('nameid', data.firstname);
                       localStorage.setItem('lastname', data.lastname);
                       localStorage.setItem('roleid', data.role);
-                      localStorage.removeItem('tokenid');
-                      localStorage.removeItem('tokenidadmin');
+                      sessionStorage.removeItem('tokenid');
+                      sessionStorage.removeItem('tokenidadmin');
                       this.isLoginSubject.next(false);
                       this.isLoginAdmin.next(false);
-                      console.log("HR");this.router.navigate(['selectDate']);
+                      console.log("HR");
                       window.location.href='#/';
                       window.location.reload()
                   }
                   else{
                     alert("Login Success !");
-                     localStorage.setItem('tokenid', 'JWT');
+                     sessionStorage.setItem('tokenid', 'JWT');
                      this.isLoginSubject.next(true);
                      localStorage.setItem('userid', data.username);
                      localStorage.setItem('nameid', data.firstname);
                       localStorage.setItem('lastname', data.lastname);
                       localStorage.setItem('roleid', data.role);
-                      localStorage.removeItem('tokenidadmin');
-                      localStorage.removeItem('tokenidhr');
+                      sessionStorage.removeItem('tokenidadmin');
+                      sessionStorage.removeItem('tokenidhr');
                       this.isLoginHR.next(false);
                       this.isLoginAdmin.next(false);
-                     console.log("user");this.router.navigate(['selectDate']);
+                     console.log("user");
                     window.location.href='#/';
                       window.location.reload()
                   }
@@ -127,14 +126,14 @@ isLoggedInHR() : Observable<boolean> {
    * Log out the user then tell all the subscribers about the new status
    */
   logout() : void {
-    this.router.navigate(['']);
+
     this.isLoginSubject.next(false);
     this.isLoginHR.next(false);
     this.isLoginAdmin.next(false);
 
-    localStorage.clear()
-
-
+    sessionStorage.clear();
+    window.location.href='#/';
+    window.location.reload()
   }
 
   /**

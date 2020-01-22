@@ -36,13 +36,22 @@ isLoggedInHR : Observable<boolean>;
 roomnames : Array<any>;
 roominput : string = '';
 firstname : string;
-
+roleadmin : boolean = false;
+rolehr : boolean = false;
+roleuser : boolean  = false;
 dataSource = new MatTableDataSource<PeriodicElement>(this.roomnames);
   constructor(public authService : AuthService , private router: Router , private service : ServiceService,public dialog: MatDialog
   ,private http: HttpClient) {
       this.isLoggedIn = authService.isLoggedIn();
     this.isLoggedInAdmin = authService.isLoggedInAdmin();
     this.isLoggedInHR = authService.isLoggedInHR();
+       if(sessionStorage.getItem('tokenidadmin') == 'JWT'){
+      this.roleadmin=true;
+    }else if(sessionStorage.getItem('tokenidhr') == 'JWT'){
+      this.rolehr=true;
+    }else if(sessionStorage.getItem('tokenid') == 'JWT'){
+      this.roleuser=true;
+    }
   }
 
   ngOnInit() {

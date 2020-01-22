@@ -1,12 +1,12 @@
 <div class="example-container" [class.example-is-mobile]="mobileQuery.matches" >
   <mat-toolbar style="background-color: rgb(0, 176, 80); " class="example-toolbar" >
-    <button mat-icon-button (click)="snav.toggle()" *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)"><mat-icon style="color:white;">menu</mat-icon></button>
+    <button mat-icon-button (click)="snav.toggle()" *ngIf="(isLoggedIn | async) || (roleadmin) || (isLoggedInHR | async)"><mat-icon style="color:white;">menu</mat-icon></button>
     <h1 class="example-app-name" style="color:white;">Book Meeting Room </h1>&nbsp;<i class="material-icons" style="color:white;">
     menu_book
   </i>
     <div class="botton1">
       <button mat-raised-button
-              *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)"
+              *ngIf="(roleuser) || (roleadmin) || (rolehr)"
               (click)="logout()" (click)="snav.toggle()" color="white">LogOut
       </button>
     </div>
@@ -15,13 +15,13 @@
 
   <mat-sidenav-container class="example-sidenav-container"
                          [style.marginTop.px]="mobileQuery.matches ? 56 : 0" >
-    <mat-sidenav [opened]="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)" #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
+    <mat-sidenav [opened]="(roleuser) || (roleadmin) || (rolehr)" #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
                  [fixedInViewport]="mobileQuery.matches" fixedTopGap="56"
                  style="background-color: rgb(0, 176, 80); "
     >
       <mat-nav-list style="width:250px">
 
-        <mat-card class="example-card" *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)">
+        <mat-card class="example-card" *ngIf="(roleuser) || (roleadmin) || (rolehr)">
 
         <mat-card-header>
           <div mat-card-avatar style="font-size:40px">
@@ -37,24 +37,24 @@
 
         </mat-card>
 
-        <button mat-button *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)"  routerLink="/"
+        <button mat-button *ngIf="(roleuser) || (roleadmin) || (rolehr)"  routerLink="/"
                 class="but" style=" text-align:left;margin-top : 3px;border: 1px solid #3E7209;color:white; font-family: 'Libre Franklin', sans-serif;" ><i class="material-icons" >
           meeting_room
         </i>&nbsp;Book Meeting Room</button>
         <br>
-        <button mat-button *ngIf="(isLoggedIn | async) || (isLoggedInAdmin | async) || (isLoggedInHR | async)"  routerLink="/dashboard"
+        <button mat-button *ngIf="(roleuser) || (roleadmin) || (rolehr)"  routerLink="/dashboard"
                 class="but" style=" margin-top : 3px;border: 1px solid #3E7209;text-align: left;color:white; font-family: 'Libre Franklin', sans-serif;"><i class="material-icons">
           dashboard
         </i> &nbsp;Dashboard</button>
 
-        <button mat-button  routerLink="/addroom"  *ngIf="(isLoggedInHR | async) || (isLoggedInAdmin | async)"
+        <button mat-button  routerLink="/addroom"  *ngIf="(rolehr) || (roleadmin)"
                 class="but" style=" margin-top : 3px;border: 1px solid #3E7209;text-align: left;color:white; font-family: 'Libre Franklin', sans-serif;"><i class="material-icons">
           add_circle_outline
         </i> Add Meeting Room</button>
 
 
 
-        <mat-accordion *ngIf="(isLoggedInAdmin | async)" style="color:white; font-family: 'Libre Franklin', sans-serif;">
+        <mat-accordion *ngIf="(roleadmin)" style="color:white; font-family: 'Libre Franklin', sans-serif;">
           <mat-expansion-panel style="border: 1px solid #3E7209;margin-top : 3px;width:95% ; margin-left:2.5%;background-color: rgb(0, 176, 80); color:white; font-family: 'Libre Franklin', sans-serif;">
             <mat-expansion-panel-header class="but">
               <mat-panel-title style=" color:white"><i class="material-icons">

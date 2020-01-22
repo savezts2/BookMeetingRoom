@@ -55,7 +55,9 @@ isLoginSubject = new BehaviorSubject<boolean>(false);
     minute: any;
     sec: any;
 
-
+    roleadmin : boolean = false;
+    rolehr : boolean = false;
+    roleuser : boolean  = false;
 
 
 
@@ -63,6 +65,13 @@ constructor(public authService : AuthService , private router: Router , private 
     this.isLoggedIn = authService.isLoggedIn();
     this.isLoggedInAdmin = authService.isLoggedInAdmin();
     this.isLoggedInHR = authService.isLoggedInHR();
+    if(sessionStorage.getItem('tokenidadmin') == 'JWT'){
+      this.roleadmin=true;
+    }else if(sessionStorage.getItem('tokenidhr') == 'JWT'){
+      this.rolehr=true;
+    }else if(sessionStorage.getItem('tokenid') == 'JWT'){
+      this.roleuser=true;
+    }
 
     setInterval(() => {
       this.CurrentTime = new Date().getHours() + ':' + new Date().getMinutes() + ':'+  new Date().getSeconds(),

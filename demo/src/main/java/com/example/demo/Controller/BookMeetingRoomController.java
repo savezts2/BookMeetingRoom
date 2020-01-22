@@ -69,69 +69,7 @@ public class BookMeetingRoomController {
         return bookMeetingRoom;
     }
 
-    @PostMapping(path = "/Notcheckin30min/{dateBookMeetingRoom}/{roomname}/{starttime}/{latetime}")
-    public BookMeetingRoom updatenotcheckin30minbysys(@PathVariable String dateBookMeetingRoom,
-            @PathVariable Long roomname, @PathVariable String starttime, @PathVariable int latetime) throws MessagingException {
-        Roomname roomname1 = roomnameRepository.findById(roomname).get();
-        String endtime;
-        BookMeetingRoom bookMeetingRoom = bookMeetingRoomRepository
-                .findByDateBookMeetingRoomAndRoomnameAndStarttimeAndIsActive(dateBookMeetingRoom, roomname1, starttime,
-                        "1");
-        if (starttime.equals("08.00")) {
-            endtime = "09.00";
-        } else if (starttime.equals("09.00")) {
-            endtime = "09.00";
-        } else if (starttime.equals("10.00")) {
-            endtime = "10.00";
-        } else if (starttime.equals("11.00")) {
-            endtime = "11.00";
-        } else if (starttime.equals("12.00")) {
-            endtime = "12.00";
-        } else if (starttime.equals("13.00")) {
-            endtime = "13.00";
-        } else if (starttime.equals("14.00")) {
-            endtime = "14.00";
-        } else if (starttime.equals("15.00")) {
-            endtime = "15.00";
-        } else if (starttime.equals("16.00")) {
-            endtime = "16.00";
-        } else if (starttime.equals("17.00")) {
-            endtime = "17.00";
-        } else if (starttime.equals("18.00")) {
-            endtime = "18.00";
-        } else if (starttime.equals("19.00")) {
-            endtime = "19.00";
-        } else if (starttime.equals("20.00")) {
-            endtime = "20.00";
-        } else {
-            endtime = "21.00";
-        }
 
-        bookMeetingRoom.setStatusbooking("Not Checkin");
-        bookMeetingRoom.setLatetime(latetime);
-        bookMeetingRoom.setLate("late");
-        bookMeetingRoom.setLengthtime(1);
-        bookMeetingRoom.setUpdate_date(new Date());
-        bookMeetingRoom.setUpdate_by("Updatesys");
-        bookMeetingRoom.setEndtime(endtime);
-        bookMeetingRoom.setCheckoutby("Checkoutsys");
-        int minutess = Integer.valueOf(getMinuteCurrent());
-        String min;
-        if (minutess < 10) {
-            min = "0" + minutess;
-        } else {
-            min = String.valueOf(minutess);
-        }
-
-        bookMeetingRoom.setCheckouttime(getHourCurrent() + ":" + min);
-        bookMeetingRoom.setUpdate_by("Updatebysys");
-        bookMeetingRoom.setUpdate_date(new Date());
-        bookMeetingRoomRepository.save(bookMeetingRoom);
-
-        Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
-        notificationService.sendNotifyNotCheckin(report.getUsers().getEmail());
-        return bookMeetingRoom;
-    }
 
     @PostMapping(path = "/checkoutauto/{dateBookMeetingRoom}/{roomname}/{starttime}")
     public BookMeetingRoom checkoutbysys(@PathVariable String dateBookMeetingRoom, @PathVariable Long roomname,

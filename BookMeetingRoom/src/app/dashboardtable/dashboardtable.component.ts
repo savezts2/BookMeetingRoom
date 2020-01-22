@@ -31,7 +31,9 @@ report2 : Array < any>;
 dateStart: string;
 dateEnd: string;
 counting: number ;
-
+roleadmin : boolean = false;
+rolehr : boolean = false;
+roleuser : boolean  = false;
 dateSelectMonth: Array < any>;
 
 
@@ -52,7 +54,13 @@ constructor(public authService : AuthService , private router: Router, private s
         this.isLoggedIn = authService.isLoggedIn();
         this.isLoggedInAdmin = authService.isLoggedInAdmin();
         this.isLoggedInHR = authService.isLoggedInHR();
-
+             if(sessionStorage.getItem('tokenidadmin') == 'JWT'){
+      this.roleadmin=true;
+    }else if(sessionStorage.getItem('tokenidhr') == 'JWT'){
+      this.rolehr=true;
+    }else if(sessionStorage.getItem('tokenid') == 'JWT'){
+      this.roleuser=true;
+    }
          setInterval(() => {
       this.CurrentTime = new Date().getHours() + ':' + new Date().getMinutes() + ':'+  new Date().getSeconds()
       }, 1);
@@ -123,7 +131,7 @@ exportexcel(): void{
 
     this.service.getDateDashBoardReport(this.dateStart , this.dateEnd).subscribe(data=>{
        this.report2 = data;
-        console.log(data);
+        //console.log(data);
         this.appendRoomname();
     })
 
@@ -132,7 +140,7 @@ exportexcel(): void{
         //console.log(data);
       setTimeout(() => {
        this.appendTime();
-      }, 2000); //interval
+      }, 1000); //interval
     })
 
  // console.log(this.dateStart , this.dateEnd);

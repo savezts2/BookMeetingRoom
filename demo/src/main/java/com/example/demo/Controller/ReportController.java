@@ -140,12 +140,12 @@ public class ReportController {
                         if(emailArray[l].isEmpty()){
                             System.out.println("Email Invalid!");
                         }else{
-                            notificationService.sendNotify(emailArray[l] ,timeno,report.getRoomnamebook());
+                            notificationService.sendNotify(emailArray[l] ,timeno,report.getRoomnamebook(),report.getBookMeetingRoom().getTelbookingby());
                         }
 
                     }
 
-                    notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook());
+                    notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook(),report.getBookMeetingRoom().getTelbookingby());
                 }
 
 
@@ -165,11 +165,11 @@ public class ReportController {
                         if(emailArray[l].isEmpty()){
                             System.out.println("Email Invalid!");
                         }else{
-                            notificationService.sendNotify(emailArray[l] ,timeno,report.getRoomnamebook());
+                            notificationService.sendNotify(emailArray[l] ,timeno,report.getRoomnamebook(),report.getBookMeetingRoom().getTelbookingby());
                         }
 
                     }
-                    notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook());
+                    notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook(),report.getBookMeetingRoom().getTelbookingby());
                 }
 
 
@@ -189,11 +189,11 @@ public class ReportController {
                         if(emailArray[l].isEmpty()){
                             System.out.println("Email Invalid!");
                         }else{
-                            notificationService.sendNotify(emailArray[l] ,timeno,report.getRoomnamebook());
+                            notificationService.sendNotify(emailArray[l] ,timeno,report.getRoomnamebook(),report.getBookMeetingRoom().getTelbookingby());
                         }
 
                     }
-                    notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook());
+                    notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook(),report.getBookMeetingRoom().getTelbookingby());
                 }
 
 
@@ -213,11 +213,11 @@ public class ReportController {
                         if(emailArray[l].isEmpty()){
                             System.out.println("Email Invalid!");
                         }else{
-                            notificationService.sendNotify(emailArray[l] ,timeno,report.getRoomnamebook());
+                            notificationService.sendNotify(emailArray[l] ,timeno,report.getRoomnamebook(),report.getBookMeetingRoom().getTelbookingby());
                         }
 
                     }
-                    notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook());
+                    notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook(),report.getBookMeetingRoom().getTelbookingby());
                 }
 
 
@@ -237,11 +237,11 @@ public class ReportController {
                         if(emailArray[l].isEmpty()){
                             System.out.println("Email Invalid!");
                         }else{
-                            notificationService.sendNotify(emailArray[l] ,timeno,report.getRoomnamebook());
+                            notificationService.sendNotify(emailArray[l] ,timeno,report.getRoomnamebook(),report.getBookMeetingRoom().getTelbookingby());
                         }
 
                     }
-                    notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook());
+                    notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook(),report.getBookMeetingRoom().getTelbookingby());
                 }
 
 
@@ -261,11 +261,11 @@ public class ReportController {
                         if(emailArray[l].isEmpty()){
                             System.out.println("Email Invalid!");
                         }else{
-                            notificationService.sendNotify(emailArray[l] ,timeno,report.getRoomnamebook());
+                            notificationService.sendNotify(emailArray[l] ,timeno,report.getRoomnamebook(),report.getBookMeetingRoom().getTelbookingby());
                         }
 
                     }
-                    notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook());
+                    notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook(),report.getBookMeetingRoom().getTelbookingby());
                 }
 
 
@@ -285,11 +285,11 @@ public class ReportController {
                         if(emailArray[l].isEmpty()){
                             System.out.println("Email Invalid!");
                         }else{
-                            notificationService.sendNotify(emailArray[l] ,timeno,report.getRoomnamebook());
+                            notificationService.sendNotify(emailArray[l] ,timeno,report.getRoomnamebook(),report.getBookMeetingRoom().getTelbookingby());
                         }
 
                     }
-                    notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook());
+                    notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook(),report.getBookMeetingRoom().getTelbookingby());
                 }
 
 
@@ -309,11 +309,11 @@ public class ReportController {
                         if(emailArray[l].isEmpty()){
                             System.out.println("Email Invalid!");
                         }else{
-                            notificationService.sendNotify(emailArray[l] ,timeno,report.getRoomnamebook());
+                            notificationService.sendNotify(emailArray[l] ,timeno,report.getRoomnamebook(),report.getBookMeetingRoom().getTelbookingby());
                         }
 
                     }
-                    notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook());
+                    notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook(),report.getBookMeetingRoom().getTelbookingby());
                 }
 
 
@@ -333,11 +333,11 @@ public class ReportController {
                         if(emailArray[l].isEmpty()){
                             System.out.println("Email Invalid!");
                         }else{
-                            notificationService.sendNotify(emailArray[l] ,timeno,report.getRoomnamebook());
+                            notificationService.sendNotify(emailArray[l] ,timeno,report.getRoomnamebook(),report.getBookMeetingRoom().getTelbookingby());
                         }
 
                     }
-                    notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook());
+                    notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook(),report.getBookMeetingRoom().getTelbookingby());
                 }
 
 
@@ -357,11 +357,11 @@ public class ReportController {
                         if(emailArray[l].isEmpty()){
                             System.out.println("Email Invalid!");
                         }else{
-                            notificationService.sendNotify(emailArray[l] ,timeno,report.getRoomnamebook());
+                            notificationService.sendNotify(emailArray[l] ,timeno,report.getRoomnamebook(),report.getBookMeetingRoom().getTelbookingby());
                         }
 
                     }
-                    notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook());
+                    notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook(),report.getBookMeetingRoom().getTelbookingby());
                 }
 
 
@@ -381,11 +381,11 @@ public class ReportController {
                         if(emailArray[l].isEmpty()){
                             System.out.println("Email Invalid!");
                         }else{
-                            notificationService.sendNotify(emailArray[l] ,timeno,report.getRoomnamebook());
+                            notificationService.sendNotify(emailArray[l] ,timeno,report.getRoomnamebook(),report.getBookMeetingRoom().getTelbookingby());
                         }
 
                     }
-                    notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook());
+                    notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook(),report.getBookMeetingRoom().getTelbookingby());
                 }
 
 
@@ -405,11 +405,11 @@ public class ReportController {
                         if(emailArray[l].isEmpty()){
                             System.out.println("Email Invalid!");
                         }else{
-                            notificationService.sendNotify(emailArray[l] ,timeno,report.getRoomnamebook());
+                            notificationService.sendNotify(emailArray[l] ,timeno,report.getRoomnamebook(),report.getBookMeetingRoom().getTelbookingby());
                         }
 
                     }
-                    notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook());
+                    notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook(),report.getBookMeetingRoom().getTelbookingby());
                 }
 
 
@@ -429,11 +429,11 @@ public class ReportController {
                         if(emailArray[l].isEmpty()){
                             System.out.println("Email Invalid!");
                         }else{
-                            notificationService.sendNotify(emailArray[l] ,timeno,report.getRoomnamebook());
+                            notificationService.sendNotify(emailArray[l] ,timeno,report.getRoomnamebook(),report.getBookMeetingRoom().getTelbookingby());
                         }
 
                     }
-                    notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook());
+                    notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook(),report.getBookMeetingRoom().getTelbookingby());
                 }
 
 
@@ -453,11 +453,11 @@ public class ReportController {
                         if(emailArray[l].isEmpty()){
                             System.out.println("Email Invalid!");
                         }else{
-                            notificationService.sendNotify(emailArray[l] ,timeno,report.getRoomnamebook());
+                            notificationService.sendNotify(emailArray[l] ,timeno,report.getRoomnamebook(),report.getBookMeetingRoom().getTelbookingby());
                         }
 
                     }
-                    notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook());
+                    notificationService.sendNotify(report.getUsers().getEmail(),timeno,report.getRoomnamebook(),report.getBookMeetingRoom().getTelbookingby());
                 }
 
 
@@ -677,7 +677,7 @@ public class ReportController {
                     bookMeetingRoom.setCheckouttime(fulltime);
                     bookMeetingRoomRepository.save(bookMeetingRoom);
                     Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
-                    notificationService.sendNotifyNotCheckin(report.getUsers().getEmail());
+                    notificationService.sendNotifyNotCheckin(report.getUsers().getEmail(),report.getBookMeetingRoom().getTelbookingby());
                     System.out.println("Over time 08.00");
                 }
 
@@ -701,7 +701,7 @@ public class ReportController {
                     bookMeetingRoom.setCheckouttime(fulltime);
                     bookMeetingRoomRepository.save(bookMeetingRoom);
                     Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
-                    notificationService.sendNotifyNotCheckin(report.getUsers().getEmail());
+                    notificationService.sendNotifyNotCheckin(report.getUsers().getEmail(),report.getBookMeetingRoom().getTelbookingby());
                     System.out.println("Over time 09.00");
                 }
 
@@ -726,7 +726,7 @@ public class ReportController {
                     bookMeetingRoom.setCheckouttime(fulltime);
                     bookMeetingRoomRepository.save(bookMeetingRoom);
                     Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
-                    notificationService.sendNotifyNotCheckin(report.getUsers().getEmail());
+                    notificationService.sendNotifyNotCheckin(report.getUsers().getEmail(),report.getBookMeetingRoom().getTelbookingby());
                     System.out.println("Over time 10.00");
                 }
             }
@@ -748,7 +748,7 @@ public class ReportController {
                     bookMeetingRoom.setCheckouttime(fulltime);
                     bookMeetingRoomRepository.save(bookMeetingRoom);
                     Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
-                    notificationService.sendNotifyNotCheckin(report.getUsers().getEmail());
+                    notificationService.sendNotifyNotCheckin(report.getUsers().getEmail(),report.getBookMeetingRoom().getTelbookingby());
                     System.out.println("Over time 11.00");
                 }
 
@@ -771,7 +771,7 @@ public class ReportController {
                     bookMeetingRoom.setCheckouttime(fulltime);
                     bookMeetingRoomRepository.save(bookMeetingRoom);
                     Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
-                    notificationService.sendNotifyNotCheckin(report.getUsers().getEmail());
+                    notificationService.sendNotifyNotCheckin(report.getUsers().getEmail(),report.getBookMeetingRoom().getTelbookingby());
                     System.out.println("Over time 12.00");
                 }
             }
@@ -793,7 +793,7 @@ public class ReportController {
                     bookMeetingRoom.setCheckouttime(fulltime);
                     bookMeetingRoomRepository.save(bookMeetingRoom);
                     Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
-                    notificationService.sendNotifyNotCheckin(report.getUsers().getEmail());
+                    notificationService.sendNotifyNotCheckin(report.getUsers().getEmail(),report.getBookMeetingRoom().getTelbookingby());
                     System.out.println("Over time 13.00");
                 }
             }
@@ -815,7 +815,7 @@ public class ReportController {
                     bookMeetingRoom.setCheckouttime(fulltime);
                     bookMeetingRoomRepository.save(bookMeetingRoom);
                     Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
-                    notificationService.sendNotifyNotCheckin(report.getUsers().getEmail());
+                    notificationService.sendNotifyNotCheckin(report.getUsers().getEmail(),report.getBookMeetingRoom().getTelbookingby());
                     System.out.println("Over time 14.00");
                 }
 
@@ -838,7 +838,7 @@ public class ReportController {
                     bookMeetingRoom.setCheckouttime(fulltime);
                     bookMeetingRoomRepository.save(bookMeetingRoom);
                     Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
-                    notificationService.sendNotifyNotCheckin(report.getUsers().getEmail());
+                    notificationService.sendNotifyNotCheckin(report.getUsers().getEmail(),report.getBookMeetingRoom().getTelbookingby());
                     System.out.println("Over time 15.00");
                 }
             }
@@ -862,7 +862,7 @@ public class ReportController {
                     bookMeetingRoomRepository.save(bookMeetingRoom);
                     Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
 
-                    notificationService.sendNotifyNotCheckin(report.getUsers().getEmail());
+                    notificationService.sendNotifyNotCheckin(report.getUsers().getEmail(),report.getBookMeetingRoom().getTelbookingby());
                     System.out.println("Over time 16.00");
                 }
             }
@@ -884,7 +884,7 @@ public class ReportController {
                     bookMeetingRoom.setCheckouttime(fulltime);
                     bookMeetingRoomRepository.save(bookMeetingRoom);
                     Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
-                    notificationService.sendNotifyNotCheckin(report.getUsers().getEmail());
+                    notificationService.sendNotifyNotCheckin(report.getUsers().getEmail(),report.getBookMeetingRoom().getTelbookingby());
                     System.out.println("Over time 17.00");
                 }
             }
@@ -906,7 +906,7 @@ public class ReportController {
                     bookMeetingRoom.setCheckouttime(fulltime);
                     bookMeetingRoomRepository.save(bookMeetingRoom);
                     Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
-                    notificationService.sendNotifyNotCheckin(report.getUsers().getEmail());
+                    notificationService.sendNotifyNotCheckin(report.getUsers().getEmail(),report.getBookMeetingRoom().getTelbookingby());
                     System.out.println("Over time 18.00");
                 }
             }
@@ -927,7 +927,7 @@ public class ReportController {
                     bookMeetingRoom.setCheckouttime(fulltime);
                     bookMeetingRoomRepository.save(bookMeetingRoom);
                     Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
-                    notificationService.sendNotifyNotCheckin(report.getUsers().getEmail());
+                    notificationService.sendNotifyNotCheckin(report.getUsers().getEmail(),report.getBookMeetingRoom().getTelbookingby());
                     System.out.println("Over time 19.00");
                 }
             }
@@ -949,7 +949,7 @@ public class ReportController {
                     bookMeetingRoom.setCheckouttime(fulltime);
                     bookMeetingRoomRepository.save(bookMeetingRoom);
                     Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
-                    notificationService.sendNotifyNotCheckin(report.getUsers().getEmail());
+                    notificationService.sendNotifyNotCheckin(report.getUsers().getEmail(),report.getBookMeetingRoom().getTelbookingby());
                     System.out.println("Over time 20.00");
                 }
             }
@@ -971,7 +971,7 @@ public class ReportController {
                     bookMeetingRoom.setCheckouttime(fulltime);
                     bookMeetingRoomRepository.save(bookMeetingRoom);
                     Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
-                    notificationService.sendNotifyNotCheckin(report.getUsers().getEmail());
+                    notificationService.sendNotifyNotCheckin(report.getUsers().getEmail(),report.getBookMeetingRoom().getTelbookingby());
                     System.out.println("Over time 21.00");
                 }
             }
@@ -993,7 +993,7 @@ public class ReportController {
                     bookMeetingRoom.setCheckouttime(fulltime);
                     bookMeetingRoomRepository.save(bookMeetingRoom);
                     Report report = reportRepository.findByBookMeetingRoom(bookMeetingRoom);
-                    notificationService.sendNotifyNotCheckin(report.getUsers().getEmail());
+                    notificationService.sendNotifyNotCheckin(report.getUsers().getEmail(),report.getBookMeetingRoom().getTelbookingby());
                     System.out.println("Over time 22.00");
                 }
             }

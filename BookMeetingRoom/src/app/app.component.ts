@@ -13,6 +13,8 @@ export const baseUrl = 'http://192.168.1.40:8081';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent{
+
+
   title = 'BookMeetingRoom';
 report : Array<any>;
 
@@ -65,12 +67,12 @@ this.service.getMinuteCurrent().subscribe(data=>{
   }
 
   this.fulltime =  this.timehour+'.'+ this.timeminute;
- // console.log(this.fulltime);
+
 
 
   }, 100); //interval
 
-
+  console.log(this.fulltime);
   this.service.getLatetime().subscribe(data=>{
              // console.log(data);
               this.latetime = data.latetimecheckout ;
