@@ -35,7 +35,7 @@ checkWidthMobile : boolean = true;
 getScreenSize(event?) {
           this.screenHeight = window.innerHeight;
           this.screenWidth = window.innerWidth;
-          console.log(this.screenHeight, this.screenWidth,this.checkWidthMobile);
+         // console.log(this.screenHeight, this.screenWidth,this.checkWidthMobile);
           if(this.screenWidth < 600){
               this.checkWidthMobile = false;
           }else{
