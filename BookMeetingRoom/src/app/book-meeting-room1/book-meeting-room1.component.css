@@ -123,9 +123,9 @@ h1.example-app-name {
 .bgimg{
   background-image:url(src/app/img/ILS-LOGO.jpg);
     border: thin silver solid;
-    background-attachment: fixed;
-    background-size: 100% 100%;
 
+    background-size: 100% 100%;
+    background-attachment: fixed;
 }
 
 .example-container {
@@ -169,6 +169,22 @@ h1.example-app-name {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
+.card2{
+  background-color: white;
+  box-shadow: rgba(0,0,0,0.2);
+  transition: 0.3s;
+  margin-top: 50px;
+  margin-bottom: auto;
+  margin-right: auto;
+  margin-left: auto;
+  width : 90%;
+  height : auto;
+  opacity: 0.9;
+
+}
+.card2:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
 
 
 

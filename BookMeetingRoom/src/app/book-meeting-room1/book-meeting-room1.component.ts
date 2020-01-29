@@ -1,4 +1,4 @@
-import { Component, OnInit ,ViewChild} from '@angular/core';
+import { Component, OnInit ,ViewChild,HostListener} from '@angular/core';
 import { BehaviorSubject } from 'rxjs/Rx';
 import { AuthService } from '../auth.service';
 import { Observable } from "rxjs";
@@ -27,6 +27,22 @@ import {MatSidenav} from '@angular/material/sidenav';
 
 export class BookMeetingRoom1Component implements OnInit {
     @ViewChild('sidenav', {static: true}) sidenav: MatSidenav;
+
+screenHeight: number;
+screenWidth: number;
+checkWidthMobile : boolean = true;
+@HostListener('window:resize', ['$event'])
+getScreenSize(event?) {
+          this.screenHeight = window.innerHeight;
+          this.screenWidth = window.innerWidth;
+          console.log(this.screenHeight, this.screenWidth,this.checkWidthMobile);
+          if(this.screenWidth < 600){
+              this.checkWidthMobile = false;
+          }else{
+              this.checkWidthMobile = true;
+          }
+    }
+
 
     isLoggedIn : Observable<boolean>;
     isLoggedInAdmin : Observable<boolean>;
@@ -78,7 +94,7 @@ constructor(public authService : AuthService , private router: Router , private 
       this.hour = new Date().getHours(),this.minute = new Date().getMinutes(),this.sec = new Date().getSeconds(),
       this.days = new Date().getDay()
       }, 1);
-
+     this.getScreenSize();
   }
 
 

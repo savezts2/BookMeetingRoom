@@ -7,13 +7,15 @@ import { AuthService } from './auth.service';
 //export const baseUrl = 'http://172.27.209.27:8080/BookMeetingRoom';
  //export const baseUrl = 'http://localhost:8081';
 export const baseUrl = 'http://192.168.1.40:8081';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent{
-
+screenHeight: number;
+screenWidth: number;
 
   title = 'BookMeetingRoom';
 report : Array<any>;
@@ -28,13 +30,18 @@ isLoggedInHR : Observable<boolean>;
 latetime : number;
 
 
-
+@HostListener('window:resize', ['$event'])
+getScreenSize(event?) {
+          this.screenHeight = window.innerHeight;
+          this.screenWidth = window.innerWidth;
+          //console.log(this.screenHeight, this.screenWidth);
+    }
 
 constructor(private service : ServiceService,private http: HttpClient , public authService : AuthService) {
   this.isLoggedIn = authService.isLoggedIn();
       this.isLoggedInAdmin = authService.isLoggedInAdmin();
       this.isLoggedInHR = authService.isLoggedInHR();
-
+       this.getScreenSize();
 }
 
 
@@ -72,7 +79,7 @@ this.service.getMinuteCurrent().subscribe(data=>{
 
   }, 100); //interval
 
-  console.log(this.fulltime);
+ // console.log(this.fulltime);
   this.service.getLatetime().subscribe(data=>{
              // console.log(data);
               this.latetime = data.latetimecheckout ;
