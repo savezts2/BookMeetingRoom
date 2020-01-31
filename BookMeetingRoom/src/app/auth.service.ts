@@ -56,7 +56,7 @@ isLoggedInHR() : Observable<boolean> {
                   }
                   else{
                   if(data.role == "ADMIN"){
-                      alert("Login Success !");
+
                       sessionStorage.setItem('tokenidadmin', 'JWT');
                       this.isLoginAdmin.next(true);
                       localStorage.setItem('userid', data.username);
@@ -71,7 +71,7 @@ isLoggedInHR() : Observable<boolean> {
                       window.location.href='#/';
                       window.location.reload()
                   }else if(data.role == "HR"){
-                      alert("Login Success !");
+
                       sessionStorage.setItem('tokenidhr', 'JWT');
                       this.isLoginHR.next(true);
                       localStorage.setItem('userid', data.username);
@@ -87,7 +87,7 @@ isLoggedInHR() : Observable<boolean> {
                       window.location.reload()
                   }
                   else{
-                    alert("Login Success !");
+
                      sessionStorage.setItem('tokenid', 'JWT');
                      this.isLoginSubject.next(true);
                      localStorage.setItem('userid', data.username);

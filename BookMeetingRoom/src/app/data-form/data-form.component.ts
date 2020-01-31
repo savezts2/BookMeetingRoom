@@ -938,7 +938,7 @@ SubmitData(){
                         }
                    })
       .subscribe(data => {
-        alert("จองสำเร็จ");
+        alert("Book Complete !");
          this.router.navigate(['selectRoom',{datefull : this.date}]);
       });
           }else{
@@ -949,7 +949,7 @@ SubmitData(){
                         }
                    })
       .subscribe(data => {
-        alert("จองสำเร็จ");
+        alert("Book Complete !");
          this.router.navigate(['selectRoom',{datefull : this.date}]);
       });
           }
