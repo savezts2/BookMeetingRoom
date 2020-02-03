@@ -23,4 +23,9 @@ public interface ReportRepository extends JpaRepository<Report,Long> {
 
     @Query(value = "SELECT * FROM report WHERE date_book BETWEEN :datestart AND :dateend ORDER BY date_book DESC",nativeQuery = true)
     Collection<Report> getDateDashBoardReport(@Param("datestart") String datestart , @Param("dateend") String dateend );
+
+    @Query(value = "SELECT TOP 1 report_id,create_by,create_date,\n" +
+            "date,date_book,is_active,update_by,update_date,book_meeting_room_book_id,\n" +
+            "users_user_id,roomnamebook FROM report WHERE is_active = '1' ORDER BY date_book desc\n",nativeQuery = true)
+    Collection<Report> getreportdesc();
 }

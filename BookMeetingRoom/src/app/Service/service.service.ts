@@ -31,6 +31,10 @@ export class ServiceService {
       return this.http.get(baseUrl+'/Getroomname/'+roomnames,{})
   }
 
+getDatedesc(){
+  return this.http.get(baseUrl+'/datereportdesc/',{})
+}
+
 
 getUsers(): Observable<any>{
       return this.http.get(baseUrl+'/Users',{})

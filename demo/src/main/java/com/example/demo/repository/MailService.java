@@ -43,6 +43,7 @@ public class MailService {
 		helper.setText("<html><head></head><body>" +
 				"<font style=\'color: rgb(103,114,196);\' size=\"4\"><b>Dear</b></font><br>"+
 				"<p>Time is out : You check in on time fail to. Please book again.</p><br>"+
+				"<p></p><br><a href='http://192.168.1.40:8081'>www.bookmeetingroom.co.th</a><br>"+
 				"<p></p><br><font>Book Meeting Room ILS</font><br>" +
 				"<font style=\'color: rgb(0, 176, 80);\'><i><b>Logistics and Beyond</b></i></font><br>" +
 				"<a href=\"https://www.youtube.com/watch?v=8UJFII55u48\">https://www.youtube.com/watch?v=8UJFII55u48</a><br>"+
@@ -67,6 +68,7 @@ public class MailService {
 		helper.setText("<html><head></head><body>" +
 				"<font style=\'color: rgb(103,114,196);\' size=\"4\"><b>Dear</b></font><br>"+
 				"<font>Your reserved meeting at "+roomname+" is starting in "+time +"minutes.</font><br>"+
+				"<p></p><br><a href='http://192.168.1.40:8081'>www.bookmeetingroom.co.th</a><br>"+
 				"<p></p><br><font>Book Meeting Room ILS</font><br>" +
 				"<font style=\'color: rgb(0, 176, 80);\'><i><b>Logistics and Beyond</b></i></font><br>" +
 				"<a href=\"https://www.youtube.com/watch?v=8UJFII55u48\">https://www.youtube.com/watch?v=8UJFII55u48</a><br>"+
@@ -106,7 +108,8 @@ public class MailService {
 					"<tr><th style=\'background-color: rgb(255, 192, 0); text-align: right;\'>Tel. :</th>" +
 					"<th style=\'background-color: white; text-align: left;\'>"+bookMeetingRoom.getTelbookingby()+"</th></tr>" +
 					"</table>" +
-					"<p></p><br><font>Book Meeting Room ILS</font><br>" +
+					"<p></p><br><a href='http://192.168.1.40:8081'>www.bookmeetingroom.co.th</a><br>"+
+					"<font>Book Meeting Room ILS</font><br>" +
 					"<font style=\'color: rgb(0, 176, 80);\'><i><b>Logistics and Beyond</b></i></font><br>" +
 					"<a href=\"https://www.youtube.com/watch?v=8UJFII55u48\">https://www.youtube.com/watch?v=8UJFII55u48</a><br>"+
 					"<img src=\"http://www.ils.co.th/wp-content/themes/ils/images/logo.png\"><br>" +
@@ -132,6 +135,7 @@ public class MailService {
 					"<tr><th style=\'background-color: rgb(255, 192, 0); text-align: right;\'>Tel. :</th>" +
 					"<th style=\'background-color: white; text-align: left;\'>"+bookMeetingRoom.getTelbookingby()+"</th></tr>" +
 					"</table>" +
+					"<p></p><br><a href='http://192.168.1.40:8081'>www.bookmeetingroom.co.th</a><br>"+
 					"<p></p><br><font>Book Meeting Room ILS</font><br>" +
 					"<font style=\'color: rgb(0, 176, 80);\'><i><b>Logistics and Beyond</b></i></font><br>" +
 					"<a href=\"https://www.youtube.com/watch?v=8UJFII55u48\">https://www.youtube.com/watch?v=8UJFII55u48</a><br>"+
@@ -173,6 +177,7 @@ public class MailService {
 					"<tr><th style=\'background-color: rgb(255, 192, 0); text-align: right;\'>Tel. :</th>" +
 					"<th style=\'background-color: white; text-align: left;\'>"+bookMeetingRoom.getTelbookingby()+"</th></tr>" +
 					"</table>" +
+					"<p></p><br><a href='http://192.168.1.40:8081'>www.bookmeetingroom.co.th</a><br>"+
 					"<p></p><br><font>Book Meeting Room ILS</font><br>" +
 					"<font style=\'color: rgb(0, 176, 80);\'><i><b>Logistics and Beyond</b></i></font><br>" +
 					"<a href=\"https://www.youtube.com/watch?v=8UJFII55u48\">https://www.youtube.com/watch?v=8UJFII55u48</a><br>"+
@@ -200,6 +205,7 @@ public class MailService {
 					"<tr><th style=\'background-color: rgb(255, 192, 0); text-align: right;\'>Tel. :</th>" +
 					"<th style=\'background-color: white; text-align: left;\'>"+bookMeetingRoom.getTelbookingby()+"</th></tr>" +
 					"</table>" +
+					"<p></p><br><a href='http://192.168.1.40:8081'>www.bookmeetingroom.co.th</a><br>"+
 					"<p></p><br><font>Book Meeting Room ILS</font><br>" +
 					"<font style=\'color: rgb(0, 176, 80);\'><i><b>Logistics and Beyond</b></i></font><br>" +
 					"<a href=\"https://www.youtube.com/watch?v=8UJFII55u48\">https://www.youtube.com/watch?v=8UJFII55u48</a><br>"+

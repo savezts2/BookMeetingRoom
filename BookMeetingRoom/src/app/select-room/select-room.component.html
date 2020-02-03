@@ -81,14 +81,15 @@
                             (cell[3] == '#006633' ? 'Status: Checkout' : '' )+
                             (cell[3] == '#C0C0C0' ? 'Status: Booking On Time' : '' )+
                             (cell[3] == '#A0FF7D' ? 'Status: Checkin' : '' )+
-                            (cell[3] == '#FF4040' ? 'Status: Not Checkin' : '' ): '' "
+                            (cell[3] == '#FF4040' ? 'Status: Not Checkin' : '' )+
+                            (cell[3] == '#FF4041' ? 'Status: Checkout Sys' : '' ): '' "
               [matTooltipPosition]="position.value"
 
           >
 
 
             <div *ngIf="cell[5]">
-              <font [ngStyle]="{'color':cell[3] === '#006633' || cell[3] === '#FF4040'  ? 'white' : 'black' }">
+              <font [ngStyle]="{'color':cell[3] === '#006633' || cell[3] === '#FF4040' || cell[3] === '#FF4041' ? 'white' : 'black' }">
 
                 Booking by: {{cell[6]}}<br>
                 Attendees: {{cell[7]}}<br>

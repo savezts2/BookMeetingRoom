@@ -17,7 +17,29 @@
 
     <div *ngIf="(roleuser) || (roleadmin) || (rolehr)">
 
-      <h2 style="margin-left:5%; font-family: 'Anton', sans-serif;">{{dateshow}}</h2>
+
+
+      <div align="center">
+
+        <mat-form-field>
+          <input matInput   [matDatepicker]="picker" placeholder="From Date" readonly="readonly"
+                 [formControl]="serializedDate">
+          <mat-datepicker-toggle matSuffix [for]="picker" ></mat-datepicker-toggle >
+          <mat-datepicker #picker ></mat-datepicker>
+        </mat-form-field>
+        &nbsp;&nbsp;
+        <mat-form-field>
+          <input matInput  [min]="mindate"  [matDatepicker]="picker2" placeholder="To Date" readonly="readonly"
+                 [formControl]="serializedDate2">
+          <mat-datepicker-toggle matSuffix [for]="picker2" ></mat-datepicker-toggle >
+          <mat-datepicker #picker2 ></mat-datepicker>
+        </mat-form-field>
+
+        &nbsp;&nbsp; &nbsp;&nbsp;
+        <button mat-raised-button color="primary" (click)="SearchDashBoard()">Search</button>
+      </div>
+
+
 
       <button class="button is-success is-rounded" style="margin-left:5%;" (click)="exportexcel()"><font color="black">Export</font></button>
      <br/><br/>
@@ -76,12 +98,13 @@
                             (cel[3] == '#006633' ? 'Status: Checkout' : '' )+
                             (cel[3] == '#C0C0C0' ? 'Status: Booking On Time' : '' )+
                             (cel[3] == '#A0FF7D' ? 'Status: Checkin' : '' )+
-                            (cel[3] == '#FF4040' ? 'Status: Not Checkin' : '' ): '' "
+                            (cel[3] == '#FF4040' ? 'Status: Not Checkin' : '' )+
+                            (cel[3] == '#FF4041' ? 'Status: Checkout Sys' : '' ): '' "
                 [matTooltipPosition]="position.value">
 
 
               <div *ngIf="cel[5]">
-                <font [ngStyle]="{'color':cel[3] === '#006633' || cel[3] === '#FF4040'  ? 'white' : 'black' }">
+                <font [ngStyle]="{'color':cel[3] === '#006633' || cel[3] === '#FF4040' || cel[3] === '#FF4041' ? 'white' : 'black' }">
 
                   Booking by: {{cel[6]}}<br>
                   Attendees: {{cel[7]}}<br>

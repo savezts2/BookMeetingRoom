@@ -3,7 +3,8 @@ import {AuthService}from '../auth.service';
 import {Observable}from "rxjs";
 import {Router}from '@angular/router';
 import {ServiceService}from '../Service/service.service';
-
+import { NativeDateAdapter, DateAdapter, MAT_DATE_FORMATS } from "@angular/material";
+import { AppDateAdapter, APP_DATE_FORMATS} from '../book-meeting-room1/date.adapter';
 import {DashboardService}from './dashboard.service';
 import {ActivatedRoute}from "@angular/router";
 import {MatSidenav}from '@angular/material/sidenav';
@@ -14,7 +15,15 @@ import {ExcelService} from '../excel.service';
 @Component({
 selector: 'app-dashboardtable',
 templateUrl: './dashboardtable.component.html',
-styleUrls: ['./dashboardtable.component.css']
+styleUrls: ['./dashboardtable.component.css'],
+providers: [
+{
+provide: DateAdapter, useClass: AppDateAdapter
+},
+{
+provide: MAT_DATE_FORMATS, useValue: APP_DATE_FORMATS
+}
+]
 })
 export class DashboardtableComponent implements OnInit {
 @ViewChild('sidenav', {static: false}) sidenav: MatSidenav;
@@ -35,7 +44,8 @@ roleadmin : boolean = false;
 rolehr : boolean = false;
 roleuser : boolean  = false;
 dateSelectMonth: Array < any>;
-
+serializedDate = new FormControl(new Date());
+serializedDate2 = new FormControl(new Date());
 
 checkdelete : number = 0;
 
@@ -49,6 +59,13 @@ CurrentTime: any;
 numroom : number;
 duration : number;
 dateshow : string;
+frommonthnum : string;
+tomonthnum : string;
+DateStartDashboard: string;
+DateEndDashboard: string;
+mindate : any;
+datedesc : any;
+dateeee : string;
 constructor(public authService : AuthService , private router: Router, private service : ServiceService,
    private route:ActivatedRoute , private dashboardService : DashboardService,private excelService:ExcelService) {
         this.isLoggedIn = authService.isLoggedIn();
@@ -112,11 +129,9 @@ exportexcel(): void{
 
 
 
+
+
   ngOnInit() {
-
-
-
-
 
     this.route.params.subscribe(prams=>{
                 this.dateFull = prams;
@@ -127,11 +142,24 @@ exportexcel(): void{
                 let date2 = new Date(this.dateEnd).getTime();
                 this.duration = (date1 - date2) / (1000*60*60*24) *(-1) + 1;
                // console.log(this.duration);
+             //   console.log( this.dateStart,this.dateEnd);
               })
+
+
+    //console.log(this.serializedDate.value);
+
+
+ this.service.getDatedesc().subscribe(data=>{
+    this.datedesc = data;
+    this.getdatedesc();
+   // console.log(this.datedesc);
+    })
+
+
 
     this.service.getDateDashBoardReport(this.dateStart , this.dateEnd).subscribe(data=>{
        this.report2 = data;
-        //console.log(data);
+        console.log(data);
         this.appendRoomname();
     })
 
@@ -144,10 +172,53 @@ exportexcel(): void{
     })
 
  // console.log(this.dateStart , this.dateEnd);
-  this.dateshow = this.dateStart.slice(8,10) + '/' + this.dateStart.slice(5,7) + '/' + this.dateStart.slice(0,4) + '  -  ' +
-  this.dateEnd.slice(8,10) + '/' + this.dateEnd.slice(5,7) + '/' + this.dateEnd.slice(0,4);
+  /*this.dateshow = this.dateStart.slice(8,10) + '/' + this.dateStart.slice(5,7) + '/' + this.dateStart.slice(0,4) + '  -  ' +
+  this.dateEnd.slice(8,10) + '/' + this.dateEnd.slice(5,7) + '/' + this.dateEnd.slice(0,4);*/
  // console.log(this.dateshow);
   }
+
+
+
+SearchDashBoard(){
+  let fromdatesplit : Array<any>;
+  let todatesplit : Array<any>;
+
+  if(this.serializedDate.value == null  ||  this.serializedDate2.value == null){
+      alert('Please Check Field Date.');
+  }else if(this.serializedDate.value  >  this.serializedDate2.value){
+      alert('Please Check From Date.');
+      this.serializedDate2 = new FormControl();
+  }else{
+      fromdatesplit = this.serializedDate.value.toString().split(' ');
+      todatesplit = this.serializedDate2.value.toString().split(' ');
+
+      this.frommonthnum = this.convertMonth(fromdatesplit[1]);
+      this.tomonthnum = this.convertMonth(todatesplit[1]);
+
+      this.DateStartDashboard = fromdatesplit[3]+'-'+ this.frommonthnum +'-'+ fromdatesplit[2];
+      this.DateEndDashboard = todatesplit[3]+'-'+ this.tomonthnum +'-'+ todatesplit[2];
+     // console.log( this.DateStartDashboard ,this.DateEndDashboard);
+
+      this.router.navigate(['dashboardTable',{dateStart : this.DateStartDashboard , dateEnd: this.DateEndDashboard , month: fromdatesplit[1], year: fromdatesplit[3]}]);
+      window.location.href= '#/dashboardTable;dateStart='+this.DateStartDashboard +';dateEnd='+this.DateEndDashboard+
+      ';month'+ fromdatesplit[1]+';year='+fromdatesplit[3];
+       window.location.reload()
+  }
+
+
+}
+
+
+
+getdatedesc(){
+
+      for(let i = 0 ; i < this.datedesc.length ; i++){
+        this.dateeee = this.datedesc[i].dateBook;
+      }
+  //console.log(new Date(" ' "+this.dateeee+" ' "));
+  this.serializedDate2 = new FormControl(new Date(" ' "+this.dateeee+" ' "));
+}
+
 
 
   appendRoomname(){
@@ -212,6 +283,8 @@ exportexcel(): void{
 
   }
 
+
+
   public appendTime(){
 
     for(let i = 0 ; i < this.report2.length ; i++){
@@ -230,6 +303,8 @@ exportexcel(): void{
                                 this.events[j][k][l][3] = '#C0C0C0' ;
                               }else if(this.report2[i].bookMeetingRoom.statusbooking == 'Checkin'){
                                 this.events[j][k][l][3] = '#A0FF7D' ;
+                              }else if(this.report2[i].bookMeetingRoom.checkoutby == 'Checkoutsys'){
+                                this.events[j][k][l][3] = '#FF4041' ;
                               }else if(this.report2[i].bookMeetingRoom.statusbooking == 'Checkout'){
                                 this.events[j][k][l][3] = '#006633' ;
                               }else{

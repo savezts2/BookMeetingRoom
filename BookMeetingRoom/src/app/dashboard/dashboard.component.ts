@@ -10,6 +10,7 @@ import { ServiceService } from '../Service/service.service';
 import {MatSidenav} from '@angular/material/sidenav';
 import {FormControl} from '@angular/forms';
 
+
 @Component({
 selector: 'app-dashboard',
 templateUrl: './dashboard.component.html',
@@ -40,6 +41,7 @@ mindate : any;
 roleadmin : boolean = false;
 rolehr : boolean = false;
 roleuser : boolean  = false;
+datedesc : any;
 constructor(public authService : AuthService , private router: Router , private service : ServiceService) {
       this.isLoggedIn = authService.isLoggedIn();
       this.isLoggedInAdmin = authService.isLoggedInAdmin();
@@ -58,12 +60,34 @@ constructor(public authService : AuthService , private router: Router , private 
               this.mindate = this.serializedDate.value;
               //console.log(this.serializedDate.value);
         }, 1000); //interval
+
+      this.service.getDatedesc().subscribe(data=>{
+    this.datedesc = data;
+    this.getdatedesc();
+   // console.log(this.datedesc);
+    })
+
+
     }
+
+
+dateeee : string;
+getdatedesc(){
+
+      for(let i = 0 ; i < this.datedesc.length ; i++){
+        this.dateeee = this.datedesc[i].dateBook;
+      }
+  //console.log(new Date(" ' "+this.dateeee+" ' "));
+  this.serializedDate2 = new FormControl(new Date(" ' "+this.dateeee+" ' "));
+}
+
 
 
 close() {
     this.sidenav.close();
   }
+
+
 ngOnDestroy() {
 
   if(this.in){
@@ -71,6 +95,8 @@ ngOnDestroy() {
   }
 
 }
+
+
 
 SearchDashBoard(){
   let fromdatesplit : Array<any>;

@@ -42,7 +42,7 @@
           meeting_room
         </i>&nbsp;Book Meeting Room</button>
         <br>
-        <button mat-button *ngIf="(roleuser) || (roleadmin) || (rolehr)"  routerLink="/dashboard"
+        <button mat-button *ngIf="(roleuser) || (roleadmin) || (rolehr)"  (click)="goToDashboard()"
                 class="but" style=" margin-top : 3px;border: 1px solid #3E7209;text-align: left;color:white; font-family: 'Libre Franklin', sans-serif;"><i class="material-icons">
           dashboard
         </i> &nbsp;Dashboard</button>

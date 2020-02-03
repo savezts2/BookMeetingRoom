@@ -236,7 +236,7 @@ if(this.splitted.length == 1){
     this.serializedDate = new FormControl( (new Date(this.datefull.datefull.substring(6,10)+'-'+this.datefull.datefull.substring(3,5)+'-'+this.datefull.datefull.substring(0,2)) ).toISOString());
     this.service.findDate(this.datefull.datefull).subscribe(data=>{
     this.report = data;
-
+      //console.log(data);
     setTimeout(() => {
      this.appendTime();
        }, 500); //interval
@@ -333,6 +333,8 @@ public appendTime(){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.checkoutby == 'Checkoutsys'){
+                        this.events[j][k][3] = '#FF4041' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkout'){
                          this.events[j][k][3] = '#006633' ;
                     }else{
@@ -400,6 +402,8 @@ public appendTime(){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.checkoutby == 'Checkoutsys'){
+                        this.events[j][k][3] = '#FF4041' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkout'){
                          this.events[j][k][3] = '#006633' ;
                     }else{
@@ -466,6 +470,8 @@ if(this.countrepeatroom == 0){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.checkoutby == 'Checkoutsys'){
+                        this.events[j][k][3] = '#FF4041' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkout'){
                          this.events[j][k][3] = '#006633' ;
                     }else{
@@ -532,6 +538,8 @@ if(this.countrepeatroom == 0){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.checkoutby == 'Checkoutsys'){
+                        this.events[j][k][3] = '#FF4041' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkout'){
                          this.events[j][k][3] = '#006633' ;
                     }else{
@@ -598,6 +606,8 @@ if(this.countrepeatroom == 0){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.checkoutby == 'Checkoutsys'){
+                        this.events[j][k][3] = '#FF4041' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkout'){
                          this.events[j][k][3] = '#006633' ;
                     }else{
@@ -664,6 +674,8 @@ if(this.countrepeatroom == 0){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.checkoutby == 'Checkoutsys'){
+                        this.events[j][k][3] = '#FF4041' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkout'){
                          this.events[j][k][3] = '#006633' ;
                     }else{
@@ -730,6 +742,8 @@ if(this.countrepeatroom == 0){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.checkoutby == 'Checkoutsys'){
+                        this.events[j][k][3] = '#FF4041' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkout'){
                          this.events[j][k][3] = '#006633' ;
                     }else{
@@ -797,6 +811,8 @@ if(this.countrepeatroom == 0){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.checkoutby == 'Checkoutsys'){
+                        this.events[j][k][3] = '#FF4041' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkout'){
                          this.events[j][k][3] = '#006633' ;
                     }else{
@@ -866,6 +882,8 @@ if(this.countrepeatroom == 0){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.checkoutby == 'Checkoutsys'){
+                        this.events[j][k][3] = '#FF4041' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkout'){
                          this.events[j][k][3] = '#006633' ;
                     }else{
@@ -932,6 +950,8 @@ if(this.countrepeatroom == 0){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.checkoutby == 'Checkoutsys'){
+                        this.events[j][k][3] = '#FF4041' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkout'){
                          this.events[j][k][3] = '#006633' ;
                     }else{
@@ -998,6 +1018,8 @@ if(this.countrepeatroom == 0){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.checkoutby == 'Checkoutsys'){
+                        this.events[j][k][3] = '#FF4041' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkout'){
                          this.events[j][k][3] = '#006633' ;
                     }else{
@@ -1064,6 +1086,8 @@ if(this.countrepeatroom == 0){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.checkoutby == 'Checkoutsys'){
+                        this.events[j][k][3] = '#FF4041' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkout'){
                          this.events[j][k][3] = '#006633' ;
                     }else{
@@ -1130,6 +1154,8 @@ if(this.countrepeatroom == 0){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.checkoutby == 'Checkoutsys'){
+                        this.events[j][k][3] = '#FF4041' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkout'){
                          this.events[j][k][3] = '#006633' ;
                     }else{
@@ -1267,6 +1293,8 @@ if(this.countrepeatroom == 0){
                         this.events[j][k][3] = '#C0C0C0' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkin'){
                         this.events[j][k][3] = '#A0FF7D' ;
+                    }else if(this.report[i].bookMeetingRoom.checkoutby == 'Checkoutsys'){
+                        this.events[j][k][3] = '#FF4041' ;
                     }else if(this.report[i].bookMeetingRoom.statusbooking == 'Checkout'){
                          this.events[j][k][3] = '#006633' ;
                     }else{
@@ -1327,7 +1355,7 @@ if(this.countrepeatroom == 0){
       } //if active
   } //for report
 
- // console.log(this.events);
+  //console.log(this.events);
 
 } // appendtime
 
@@ -1350,9 +1378,9 @@ selectTable(room,time){
        if(parseInt(this.fulltime.substring(0,2)) > parseInt(timesplit[0]) ){
          alert("Cannot make a previous Booking.");
        }else if( parseInt(this.fulltime.substring(0,2)) == parseInt(timesplit[0]) ){
-          if( parseInt(this.fulltime.substring(3,5)) - parseInt(timesplit[1])  < 30 && parseInt(this.fulltime.substring(3,5)) - parseInt(timesplit[1])  >= 0){
+          if( parseInt(this.fulltime.substring(3,5)) - parseInt(timesplit[1])  < 60 && parseInt(this.fulltime.substring(3,5)) - parseInt(timesplit[1])  >= 0){
               this.router.navigate(['data-form',{roomname:room,roomtime:time,date:this.datefull.datefull,slowtime:true}]);
-           }else if(parseInt(this.fulltime.substring(3,5)) - parseInt(timesplit[1])  >= 30){
+           }else if(parseInt(this.fulltime.substring(3,5)) - parseInt(timesplit[1])  >= 59){
                alert("Cannot make a previous Booking.");
             }else{
                 this.router.navigate(['data-form',{roomname:room,roomtime:time,date:this.datefull.datefull,slowtime:false}]);
