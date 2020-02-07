@@ -157,6 +157,7 @@ exportexcel(): void{
 
 
 
+
     this.service.getDateDashBoardReport(this.dateStart , this.dateEnd).subscribe(data=>{
        this.report2 = data;
         console.log(data);
@@ -170,7 +171,9 @@ exportexcel(): void{
        this.appendTime();
       }, 1000); //interval
     })
-
+setTimeout(() => {
+this.serializedDate2 = new FormControl(new Date(" ' "+this.dateEnd+" ' "));
+}, 2000); //interval
  // console.log(this.dateStart , this.dateEnd);
   /*this.dateshow = this.dateStart.slice(8,10) + '/' + this.dateStart.slice(5,7) + '/' + this.dateStart.slice(0,4) + '  -  ' +
   this.dateEnd.slice(8,10) + '/' + this.dateEnd.slice(5,7) + '/' + this.dateEnd.slice(0,4);*/
@@ -189,6 +192,7 @@ SearchDashBoard(){
       alert('Please Check From Date.');
       this.serializedDate2 = new FormControl();
   }else{
+
       fromdatesplit = this.serializedDate.value.toString().split(' ');
       todatesplit = this.serializedDate2.value.toString().split(' ');
 
@@ -203,6 +207,7 @@ SearchDashBoard(){
       window.location.href= '#/dashboardTable;dateStart='+this.DateStartDashboard +';dateEnd='+this.DateEndDashboard+
       ';month'+ fromdatesplit[1]+';year='+fromdatesplit[3];
        window.location.reload()
+
   }
 
 

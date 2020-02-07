@@ -45,12 +45,12 @@ isLoggedInHR() : Observable<boolean> {
    */
 
 
-
-  login(id: String, password: String) : void {
+  login(id: String, password: String) : any {
 
     this.service.getUserPassword(id,password).subscribe(data=>{
               //console.log(data);
               if(data!=null){
+
                   if(data.isActive == "0"){
                       alert("this id hasn't active please contact IT Support");
                   }
@@ -105,14 +105,16 @@ isLoggedInHR() : Observable<boolean> {
                   }
               }
               else{
-                alert("id/password incorrect !");
-                window.location.reload()
+
+               // alert("id/password incorrect !");
+               // window.location.reload()
+                  sessionStorage.setItem('checkLogin', 'false');
               }
        })
 
 
 
-  }
+  } // login
 
   callDialog() : void{
       const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {

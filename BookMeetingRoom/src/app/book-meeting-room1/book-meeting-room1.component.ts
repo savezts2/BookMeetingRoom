@@ -76,8 +76,13 @@ isLoginSubject = new BehaviorSubject<boolean>(false);
     roleuser : boolean  = false;
 
 
-
+checkLogin : string;
+checklogininterval : any;
 constructor(public authService : AuthService , private router: Router , private service : ServiceService) {
+      this.checklogininterval = setInterval(() => {
+    this.checkLogin = sessionStorage.getItem('checkLogin');
+  }, 100); //interval
+    console.log(this.checkLogin);
     this.isLoggedIn = authService.isLoggedIn();
     this.isLoggedInAdmin = authService.isLoggedInAdmin();
     this.isLoggedInHR = authService.isLoggedInHR();
@@ -97,6 +102,13 @@ constructor(public authService : AuthService , private router: Router , private 
      this.getScreenSize();
   }
 
+ngOnDestroy() {
+
+  if(this.checklogininterval){
+      clearInterval(this.checklogininterval);
+  }
+
+}
 
 close(){
   this.sidenav.close();
@@ -160,6 +172,7 @@ login(){
     alert("please check your field");
   }else{
     this.authService.login(this.username,this.password);
+
   }
 }
 
