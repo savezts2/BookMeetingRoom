@@ -238,7 +238,7 @@ public appendTime(){
 
   for(let i = 0 ; i < this.report.length ; i++){
 
-      if(this.report[i].isActive == "1"){
+      if(this.report[i].isActive == "1" && (this.report[i].bookMeetingRoom.lengthtime != 0 && this.report[i].bookMeetingRoom.lengthtime != 1)){
 
           for(let j = 0 ; j < this.roomnames.length ; j++){ //หาห้อง
 
@@ -868,6 +868,7 @@ public appendTime(){
   } //for report
 
   //console.log(this.events);
+
 
 } // appendtime
 

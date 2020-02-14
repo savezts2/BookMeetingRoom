@@ -293,7 +293,7 @@ getdatedesc(){
   public appendTime(){
 
     for(let i = 0 ; i < this.report2.length ; i++){
-      if(this.report2[i].isActive == "1"){
+      if(this.report2[i].isActive == "1" && (this.report[i].bookMeetingRoom.lengthtime != 0)){
            for(let j = 0 ; j < this.events.length ; j++){ //หาห้อง
                 for(let k = 0 ; k < this.events[j].length ; k++){
                     for(let l = 0 ; l < this.events[j][k].length ; l++){

@@ -5,22 +5,22 @@
 <div align ="center">
   <label>From Time :
     <mat-form-field>
-      <mat-select formControlName="time" required placeholder=" " [disabled]="this.firstFormGroup.get('time').value > this.fulltime ?  false : true">
-        <mat-option value="08.00" [disabled]="this.fulltime < '08.00' ?  false : true">08.00</mat-option>
-        <mat-option value="09.00" [disabled]="this.fulltime < '09.00' ?  false : true">09.00</mat-option>
-        <mat-option value="10.00" [disabled]="this.fulltime < '10.00' ?  false : true">10.00</mat-option>
-        <mat-option value="11.00" [disabled]="this.fulltime < '11.00' ?  false : true">11.00</mat-option>
-        <mat-option value="12.00" [disabled]="this.fulltime < '12.00' ?  false : true">12.00</mat-option>
-        <mat-option value="13.00" [disabled]="this.fulltime < '13.00' ?  false : true">13.00</mat-option>
-        <mat-option value="14.00" [disabled]="this.fulltime < '14.00' ?  false : true">14.00</mat-option>
-        <mat-option value="15.00" [disabled]="this.fulltime < '15.00' ?  false : true">15.00</mat-option>
-        <mat-option value="16.00" [disabled]="this.fulltime < '16.00' ?  false : true">16.00</mat-option>
-        <mat-option value="17.00" [disabled]="this.fulltime < '17.00' ?  false : true">17.00</mat-option>
-        <mat-option value="18.00" [disabled]="this.fulltime < '18.00' ?  false : true">18.00</mat-option>
-        <mat-option value="19.00" [disabled]="this.fulltime < '19.00' ?  false : true">19.00</mat-option>
-        <mat-option value="20.00" [disabled]="this.fulltime < '20.00' ?  false : true">20.00</mat-option>
-        <mat-option value="21.00" [disabled]="this.fulltime < '21.00' ?  false : true">21.00</mat-option>
-        <mat-option value="22.00" [disabled]="this.fulltime < '22.00' ?  false : true">22.00</mat-option>
+      <mat-select formControlName="time" required placeholder=" " [disabled]="(this.firstFormGroup.get('time').value > this.fulltime ?  false : true ) && this.dateCurrent == this.data.date">
+        <mat-option value="08.00" [disabled]="(this.fulltime < '08.00' ?  false : true )&& this.dateCurrent == this.data.date">08.00</mat-option>
+        <mat-option value="09.00" [disabled]="(this.fulltime < '09.00' ?  false : true)&& this.dateCurrent == this.data.date">09.00</mat-option>
+        <mat-option value="10.00" [disabled]="(this.fulltime < '10.00' ?  false : true)&& this.dateCurrent == this.data.date">10.00</mat-option>
+        <mat-option value="11.00" [disabled]="(this.fulltime < '11.00' ?  false : true)&& this.dateCurrent == this.data.date">11.00</mat-option>
+        <mat-option value="12.00" [disabled]="(this.fulltime < '12.00' ?  false : true)&& this.dateCurrent == this.data.date">12.00</mat-option>
+        <mat-option value="13.00" [disabled]="(this.fulltime < '13.00' ?  false : true)&& this.dateCurrent == this.data.date">13.00</mat-option>
+        <mat-option value="14.00" [disabled]="(this.fulltime < '14.00' ?  false : true)&& this.dateCurrent == this.data.date">14.00</mat-option>
+        <mat-option value="15.00" [disabled]="(this.fulltime < '15.00' ?  false : true)&& this.dateCurrent == this.data.date">15.00</mat-option>
+        <mat-option value="16.00" [disabled]="(this.fulltime < '16.00' ?  false : true)&& this.dateCurrent == this.data.date">16.00</mat-option>
+        <mat-option value="17.00" [disabled]="(this.fulltime < '17.00' ?  false : true)&& this.dateCurrent == this.data.date">17.00</mat-option>
+        <mat-option value="18.00" [disabled]="(this.fulltime < '18.00' ?  false : true)&& this.dateCurrent == this.data.date">18.00</mat-option>
+        <mat-option value="19.00" [disabled]="(this.fulltime < '19.00' ?  false : true)&& this.dateCurrent == this.data.date">19.00</mat-option>
+        <mat-option value="20.00" [disabled]="(this.fulltime < '20.00' ?  false : true)&& this.dateCurrent == this.data.date">20.00</mat-option>
+        <mat-option value="21.00" [disabled]="(this.fulltime < '21.00' ?  false : true)&& this.dateCurrent == this.data.date">21.00</mat-option>
+        <mat-option value="22.00" [disabled]="(this.fulltime < '22.00' ?  false : true)&& this.dateCurrent == this.data.date">22.00</mat-option>
       </mat-select>
     </mat-form-field>
   </label>

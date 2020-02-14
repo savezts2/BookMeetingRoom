@@ -21,6 +21,7 @@ topic : String;
 remark : String;
 totime : String;
 tel : String;
+idbook : string ;
 }
 
 
@@ -33,7 +34,9 @@ export class CheckoutComponent implements OnInit {
 
 nameuser : string;
   constructor(public authService : AuthService , private router: Router , private service : ServiceService,public dialog: MatDialog,
-  @Inject(MAT_DIALOG_DATA) public data: DialogData, public dialogRef: MatDialogRef<CheckoutComponent>, private http: HttpClient) { }
+  @Inject(MAT_DIALOG_DATA) public data: DialogData, public dialogRef: MatDialogRef<CheckoutComponent>, private http: HttpClient) {
+
+   }
 
   ngOnInit() {
      this.nameuser = localStorage.getItem('nameid');
@@ -46,7 +49,7 @@ closed(){
 checkOut(){
 
    this.http.post(baseUrl + '/Checkout/'+ this.nameuser+'/'+this.data.date+'/'+this.data.room+'/'+this.data.time+'/'+new Date().getHours()+'/'+new Date().getMinutes()+'/'+
-   new Date().toString().substring(16,18)+'.'+new Date().toString().substring(19,21),{})
+   new Date().toString().substring(16,18)+'.'+new Date().toString().substring(19,21)+'/'+this.data.idbook,{})
                              .subscribe(
                                data => {
                                    console.log('PUT Request is successful');

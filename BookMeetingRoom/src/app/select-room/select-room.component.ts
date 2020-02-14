@@ -236,7 +236,7 @@ if(this.splitted.length == 1){
     this.serializedDate = new FormControl( (new Date(this.datefull.datefull.substring(6,10)+'-'+this.datefull.datefull.substring(3,5)+'-'+this.datefull.datefull.substring(0,2)) ).toISOString());
     this.service.findDate(this.datefull.datefull).subscribe(data=>{
     this.report = data;
-      //console.log(data);
+      console.log(data);
     setTimeout(() => {
      this.appendTime();
        }, 500); //interval
@@ -277,35 +277,35 @@ appendRoomname(){
     for(let j = 0 ; j < 19 ; j++){
 
       if(j == 0){
-        this.events[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+        this.events[i].push([j,'08.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true,'']);
       }else if(j == 1){
-        this.events[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+        this.events[i].push([j,'09.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true,'']);
       }else if(j == 2){
-        this.events[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+        this.events[i].push([j,'10.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true,'']);
       }else if(j == 3){
-        this.events[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+        this.events[i].push([j,'11.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true,'']);
       }else if(j == 4){
-        this.events[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+        this.events[i].push([j,'12.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true,'']);
       }else if(j == 5){
-        this.events[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+        this.events[i].push([j,'13.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true,'']);
       }else if(j == 6){
-        this.events[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+        this.events[i].push([j,'14.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true,'']);
       }else if(j == 7){
-        this.events[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+        this.events[i].push([j,'15.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true,'']);
       }else if(j == 8){
-        this.events[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+        this.events[i].push([j,'16.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true,'']);
       }else if(j == 9){
-        this.events[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+        this.events[i].push([j,'17.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true,'']);
       }else if(j == 10){
-        this.events[i].push([j,'18.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+        this.events[i].push([j,'18.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true,'']);
       }else if(j == 11){
-        this.events[i].push([j,'19.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+        this.events[i].push([j,'19.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true,'']);
       }else if(j == 12){
-        this.events[i].push([j,'20.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+        this.events[i].push([j,'20.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true,'']);
       }else if(j == 13){
-        this.events[i].push([j,'21.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+        this.events[i].push([j,'21.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true,'']);
       }else if(j == 14){
-        this.events[i].push([j,'22.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true]);
+        this.events[i].push([j,'22.00',1,'white',this.roomnames[i].roomnames,false,'',0,'','',false,false,'','','',true,'']);
       }
 
     }
@@ -318,7 +318,7 @@ public appendTime(){
 
   for(let i = 0 ; i < this.report.length ; i++){
 
-      if(this.report[i].isActive == "1"){
+      if(this.report[i].isActive == "1" && (this.report[i].bookMeetingRoom.lengthtime != 0)){
 
           for(let j = 0 ; j < this.roomnames.length ; j++){ //หาห้อง
 
@@ -348,7 +348,7 @@ public appendTime(){
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-
+                  this.events[j][k][16] = this.report[i].bookMeetingRoom.book_id ;
 
                    if(this.events[j][k][2] > 1){
                       this.counting = k + 1;
@@ -417,7 +417,7 @@ public appendTime(){
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-
+                  this.events[j][k][16] = this.report[i].bookMeetingRoom.book_id ;
 
                    if(this.events[j][k][2] > 1){
                       this.counting = k + 1;
@@ -485,7 +485,7 @@ if(this.countrepeatroom == 0){
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-
+                  this.events[j][k][16] = this.report[i].bookMeetingRoom.book_id ;
 
                    if(this.events[j][k][2] > 1){
                       this.counting = k + 1;
@@ -553,7 +553,7 @@ if(this.countrepeatroom == 0){
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-
+                  this.events[j][k][16] = this.report[i].bookMeetingRoom.book_id ;
 
                    if(this.events[j][k][2] > 1){
                       this.counting = k + 1;
@@ -621,7 +621,7 @@ if(this.countrepeatroom == 0){
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-
+                  this.events[j][k][16] = this.report[i].bookMeetingRoom.book_id ;
 
                    if(this.events[j][k][2] > 1){
                       this.counting = k + 1;
@@ -689,7 +689,7 @@ if(this.countrepeatroom == 0){
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-
+                  this.events[j][k][16] = this.report[i].bookMeetingRoom.book_id ;
 
                    if(this.events[j][k][2] > 1){
                       this.counting = k + 1;
@@ -758,7 +758,7 @@ if(this.countrepeatroom == 0){
 
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-
+                  this.events[j][k][16] = this.report[i].bookMeetingRoom.book_id ;
 
                    if(this.events[j][k][2] > 1){
                       this.counting = k + 1;
@@ -826,7 +826,7 @@ if(this.countrepeatroom == 0){
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-
+                  this.events[j][k][16] = this.report[i].bookMeetingRoom.book_id ;
 
 
 
@@ -897,7 +897,7 @@ if(this.countrepeatroom == 0){
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-
+                  this.events[j][k][16] = this.report[i].bookMeetingRoom.book_id ;
 
                    if(this.events[j][k][2] > 1){
                       this.counting = k + 1;
@@ -965,7 +965,7 @@ if(this.countrepeatroom == 0){
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-
+                  this.events[j][k][16] = this.report[i].bookMeetingRoom.book_id ;
 
                    if(this.events[j][k][2] > 1){
                       this.counting = k + 1;
@@ -1033,7 +1033,7 @@ if(this.countrepeatroom == 0){
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-
+                  this.events[j][k][16] = this.report[i].bookMeetingRoom.book_id ;
 
                    if(this.events[j][k][2] > 1){
                       this.counting = k + 1;
@@ -1101,7 +1101,7 @@ if(this.countrepeatroom == 0){
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-
+                  this.events[j][k][16] = this.report[i].bookMeetingRoom.book_id ;
 
                    if(this.events[j][k][2] > 1){
                       this.counting = k + 1;
@@ -1169,7 +1169,7 @@ if(this.countrepeatroom == 0){
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-
+                  this.events[j][k][16] = this.report[i].bookMeetingRoom.book_id ;
 
                    if(this.events[j][k][2] > 1){
                       this.counting = k + 1;
@@ -1237,7 +1237,7 @@ if(this.countrepeatroom == 0){
                        this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                          this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                         this.events[j][k][11] = true ;
-
+                  this.events[j][k][16] = this.report[i].bookMeetingRoom.book_id ;
 
                            if(this.events[j][k][2] > 1){
                                 this.counting = k + 1;
@@ -1308,7 +1308,7 @@ if(this.countrepeatroom == 0){
                   this.events[j][k][8] = this.report[i].bookMeetingRoom.topic ;
                   this.events[j][k][13] = this.report[i].bookMeetingRoom.endtime ;
                   this.events[j][k][11] = true ;
-
+                  this.events[j][k][16] = this.report[i].bookMeetingRoom.book_id ;
 
                    if(this.events[j][k][2] > 1){
                       this.counting = k + 1;
@@ -1355,7 +1355,8 @@ if(this.countrepeatroom == 0){
       } //if active
   } //for report
 
-  //console.log(this.events);
+  console.log(this.events);
+
 
 } // appendtime
 
@@ -1420,7 +1421,7 @@ dateShow(datefull){
         time3 = new Date();
         time4 : string;
 
-   Reserved(room,time,username,atten,topic,remark,totime,tel){
+   Reserved(room,time,username,atten,topic,remark,totime,tel,idbook){
 
         for(let i = 0 ; i < this.roomnames.length ; i++){
 
@@ -1452,7 +1453,7 @@ dateShow(datefull){
                          }else{
 
                              const dialogRef = this.dialog.open(CheckoutComponent, {
-                               data: {room:room , time:time , date : this.datefull.datefull,atten:atten,topic:topic,remark:remark,totime:totime,tel:tel},
+                               data: {room:room , time:time , date : this.datefull.datefull,atten:atten,topic:topic,remark:remark,totime:totime,tel:tel,idbook:idbook},
                               height: 'auto',
                                width:  'auto',
                                });
@@ -1466,7 +1467,7 @@ dateShow(datefull){
                          }else{
 
                              const dialogRef = this.dialog.open(CheckoutComponent, {
-                               data: {room:room , time:time , date : this.datefull.datefull,atten:atten,topic:topic,remark:remark,totime:totime,tel:tel},
+                               data: {room:room , time:time , date : this.datefull.datefull,atten:atten,topic:topic,remark:remark,totime:totime,tel:tel,idbook:idbook},
                               height: 'auto',
                                width:  'auto',
                                });
@@ -1484,7 +1485,7 @@ dateShow(datefull){
                          }else{
 
                                 const dialogRef = this.dialog.open(EditordeletebookComponent, {
-                           data: {room:room , time:time , date : this.datefull.datefull,atten:atten,topic:topic,remark:remark,totime:totime,tel:tel},
+                           data: {room:room , time:time , date : this.datefull.datefull,atten:atten,topic:topic,remark:remark,totime:totime,tel:tel,idbook:idbook},
                            height: 'auto',
                            width:  'auto',
                            });
@@ -1498,7 +1499,7 @@ dateShow(datefull){
                          }else{
 
                               const dialogRef = this.dialog.open(EditordeletebookComponent, {
-                           data: {room:room , time:time , date : this.datefull.datefull,atten:atten,topic:topic,remark:remark,totime:totime,tel:tel},
+                           data: {room:room , time:time , date : this.datefull.datefull,atten:atten,topic:topic,remark:remark,totime:totime,tel:tel,idbook:idbook},
                            height: 'auto',
                            width:  'auto',
                            });

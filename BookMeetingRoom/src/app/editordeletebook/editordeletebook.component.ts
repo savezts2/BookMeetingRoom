@@ -13,6 +13,7 @@ import {  MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dial
 import { HttpClient} from '@angular/common/http';
 import {EditbookComponent} from '../editbook/editbook.component'
 import { baseUrl } from '../app.component';
+
 export interface DialogData {
 room: string;
 time : string;
@@ -22,6 +23,7 @@ topic : String;
 remark : String;
 totime : String;
 tel : String;
+idbook : string;
 }
 
 
@@ -79,6 +81,8 @@ this.service.getMinuteCurrent().subscribe(data=>{
 
 
   }, 100); //interval
+
+
   }
 
   ngOnInit() {
@@ -128,7 +132,7 @@ checkin(){
   }else{
       console.log(this.fulltime.substring(0,2)+':'+this.fulltime.substring(3,5));
      this.http.post(baseUrl + '/CheckIn/'+this.nameuser+'/'+this.data.date+'/'+this.data.room+'/'+this.data.time+'/'+
-     this.fulltime.substring(0,2)+':'+this.fulltime.substring(3,5),{})
+     this.fulltime.substring(0,2)+':'+this.fulltime.substring(3,5)+'/'+this.data.idbook,{})
                              .subscribe(
                                data => {
                                    console.log('PUT Request is successful');
@@ -151,7 +155,7 @@ checkin(){
 
 delete(){
   this.spiner = true;
-  this.http.post(baseUrl + '/CancelBooking/'+this.nameuser+'/'+this.data.date+'/'+this.data.room+'/'+this.data.time,{})
+  this.http.post(baseUrl + '/CancelBooking/'+this.nameuser+'/'+this.data.date+'/'+this.data.room+'/'+this.data.time+'/'+this.data.idbook,{})
                              .subscribe(
                                data => {
                                    console.log('PUT Request is successful');
@@ -172,7 +176,7 @@ edit(){
     this.dialogRef.close();
      const dialogRef = this.dialog.open(EditbookComponent, {
         data: {room:this.data.room , time:this.data.time , date : this.data.date,atten:this.data.atten,
-        topic:this.data.topic,remark:this.data.remark,totime:this.data.totime,tel:this.data.tel},
+        topic:this.data.topic,remark:this.data.remark,totime:this.data.totime,tel:this.data.tel,idbook:this.data.idbook},
         height: 'auto',
         width:  '750px',
     });

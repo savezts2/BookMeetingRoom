@@ -13,6 +13,7 @@
   import { HttpClient} from '@angular/common/http';
   import {FormBuilder, FormGroup, Validators} from '@angular/forms';
   import { baseUrl } from '../app.component';
+  import { DatePipe } from '@angular/common';
   export interface DialogData {
   room: string;
   time : string;
@@ -22,13 +23,15 @@
   remark : String;
   totime : String;
   tel : String;
+  idbook : string;
   }
 
 
   @Component({
     selector: 'app-editbook',
     templateUrl: './editbook.component.html',
-    styleUrls: ['./editbook.component.css']
+    styleUrls: ['./editbook.component.css'],
+  providers: [DatePipe]
   })
 
 
@@ -54,15 +57,14 @@
   timehour : string;
   timeminute : string;
   fulltime : string;
-
+  dateCurrent : any ;
 
     constructor(public authService : AuthService , private router: Router , private service : ServiceService,public dialog: MatDialog,
     @Inject(MAT_DIALOG_DATA) public data: DialogData, public dialogRef: MatDialogRef<EditbookComponent>, private http: HttpClient,
-    private _formBuilder: FormBuilder) {
+    private _formBuilder: FormBuilder ,  public datepipe: DatePipe) {
           this.isLoggedIn = authService.isLoggedIn();
       this.isLoggedInAdmin = authService.isLoggedInAdmin();
       this.isLoggedInHR = authService.isLoggedInHR();
-
 
          this.in = setInterval(() => {
 this.service.getHourCurrent().subscribe(data=>{
@@ -86,6 +88,9 @@ this.service.getMinuteCurrent().subscribe(data=>{
 
 
   }, 100); //interval
+
+
+  this.dateCurrent = this.datepipe.transform(new Date(), 'dd-MM-yyyy');
 
      }
 
@@ -138,7 +143,9 @@ this.service.getMinuteCurrent().subscribe(data=>{
 }
 
   cancel(){
+     //  console.log(this.firstFormGroup.get('time').value , this.data.date );
       this.dialogRef.close();
+
   }
 
 
@@ -158,7 +165,7 @@ this.service.getMinuteCurrent().subscribe(data=>{
 
               console.log("suc");
                 this.http.post(baseUrl + '/Editbook/'+this.nameuser+'/'+this.data.date+'/'+this.data.room+'/'+this.data.time+'/'+this.firstFormGroup.get('time').value+'/'+this.firstFormGroup.get('totime').value
-            +'/'+this.firstFormGroup.get('atten').value+'/'+this.firstFormGroup.get('topic').value+'/null/'+this.firstFormGroup.get('tel').value,{})
+            +'/'+this.firstFormGroup.get('atten').value+'/'+this.firstFormGroup.get('topic').value+'/null/'+this.firstFormGroup.get('tel').value+'/'+this.data.idbook,{})
                                .subscribe(
                                  data => {
                                      console.log('PUT Request is successful');
@@ -186,7 +193,7 @@ this.service.getMinuteCurrent().subscribe(data=>{
         this.spiner = true;
         console.log("suc");
       this.http.post(baseUrl + '/Editbook/'+this.nameuser+'/'+this.data.date+'/'+this.data.room+'/'+this.data.time+'/'+this.firstFormGroup.get('time').value+'/'+this.firstFormGroup.get('totime').value
-     +'/'+this.firstFormGroup.get('atten').value+'/'+this.firstFormGroup.get('topic').value+'/'+this.firstFormGroup.get('remark').value+'/'+this.firstFormGroup.get('tel').value,{})
+     +'/'+this.firstFormGroup.get('atten').value+'/'+this.firstFormGroup.get('topic').value+'/'+this.firstFormGroup.get('remark').value+'/'+this.firstFormGroup.get('tel').value+'/'+this.data.idbook,{})
                                .subscribe(
                                  data => {
                                      console.log('PUT Request is successful');
@@ -332,7 +339,7 @@ appendRoomname(){
 
   for(let i = 0 ; i < this.report.length ; i++){
 
-      if(this.report[i].isActive == "1"){
+      if(this.report[i].isActive == "1" && (this.report[i].bookMeetingRoom.lengthtime != 0 && this.report[i].bookMeetingRoom.lengthtime != 1)){
 
           for(let j = 0 ; j < this.roomnames.length ; j++){ //หาห้อง
 

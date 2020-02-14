@@ -76,7 +76,7 @@ onAddroom(){
   }else{
 
       const dialogRef = this.dialog.open(DialogSubmitRoom, {
-      width: '250px',
+      width: '400px',
       data: {roominput: this.roominput , firstname : this.firstname}
     });
 
