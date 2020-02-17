@@ -160,7 +160,7 @@ exportexcel(): void{
 
     this.service.getDateDashBoardReport(this.dateStart , this.dateEnd).subscribe(data=>{
        this.report2 = data;
-        console.log(data);
+      //  console.log(data);
         this.appendRoomname();
     })
 
@@ -172,8 +172,10 @@ exportexcel(): void{
       }, 1000); //interval
     })
 setTimeout(() => {
+//console.log(this.dateStart , this.dateEnd);
+this.serializedDate = new FormControl(new Date(" ' "+this.dateStart+" ' "));
 this.serializedDate2 = new FormControl(new Date(" ' "+this.dateEnd+" ' "));
-}, 2000); //interval
+}, 1000); //interval
  // console.log(this.dateStart , this.dateEnd);
   /*this.dateshow = this.dateStart.slice(8,10) + '/' + this.dateStart.slice(5,7) + '/' + this.dateStart.slice(0,4) + '  -  ' +
   this.dateEnd.slice(8,10) + '/' + this.dateEnd.slice(5,7) + '/' + this.dateEnd.slice(0,4);*/
@@ -293,7 +295,7 @@ getdatedesc(){
   public appendTime(){
 
     for(let i = 0 ; i < this.report2.length ; i++){
-      if(this.report2[i].isActive == "1" && (this.report[i].bookMeetingRoom.lengthtime != 0)){
+      if(this.report2[i].isActive == "1" && (this.report2[i].bookMeetingRoom.lengthtime != 0)){
            for(let j = 0 ; j < this.events.length ; j++){ //หาห้อง
                 for(let k = 0 ; k < this.events[j].length ; k++){
                     for(let l = 0 ; l < this.events[j][k].length ; l++){
