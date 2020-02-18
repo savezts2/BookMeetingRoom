@@ -63,9 +63,11 @@ frommonthnum : string;
 tomonthnum : string;
 DateStartDashboard: string;
 DateEndDashboard: string;
-mindate : any;
+mindate  = new Date();
 datedesc : any;
 dateeee : string;
+
+
 constructor(public authService : AuthService , private router: Router, private service : ServiceService,
    private route:ActivatedRoute , private dashboardService : DashboardService,private excelService:ExcelService) {
         this.isLoggedIn = authService.isLoggedIn();
@@ -83,7 +85,17 @@ constructor(public authService : AuthService , private router: Router, private s
       }, 1);
 
 
+     setInterval(() => {
+      this.mindate = this.serializedDate.value ;
 
+
+         if(this.serializedDate.value > this.serializedDate2.value){
+
+            this.serializedDate2 = new FormControl();
+
+         }
+
+      }, 1000);
 
 
    }

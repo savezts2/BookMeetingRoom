@@ -11,6 +11,11 @@ export class ServiceService {
 
   constructor( private http: HttpClient ) { }
 
+
+  getEmailmaster(){
+    return this.http.get(baseUrl+'/Emailmaster/',{})
+  }
+
   findDate(date : String) : Observable<any>{
       return this.http.get(baseUrl+'/Report/'+date,{})
   }

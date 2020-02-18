@@ -236,7 +236,7 @@ if(this.splitted.length == 1){
     this.serializedDate = new FormControl( (new Date(this.datefull.datefull.substring(6,10)+'-'+this.datefull.datefull.substring(3,5)+'-'+this.datefull.datefull.substring(0,2)) ).toISOString());
     this.service.findDate(this.datefull.datefull).subscribe(data=>{
     this.report = data;
-      console.log(data);
+      //console.log(data);
     setTimeout(() => {
      this.appendTime();
        }, 500); //interval
@@ -1355,7 +1355,7 @@ if(this.countrepeatroom == 0){
       } //if active
   } //for report
 
-  console.log(this.events);
+  //console.log(this.events);
 
 
 } // appendtime

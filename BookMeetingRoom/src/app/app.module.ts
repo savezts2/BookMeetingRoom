@@ -20,7 +20,7 @@ import { FormsModule ,ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SelectRoomComponent } from './select-room/select-room.component';
 import {MatDialogModule} from '@angular/material/dialog';
-
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {DialogOverviewExampleDialog} from './auth.service';
 
 import {DialogSubmitRoom} from './addroombyadmin/addroombyadmin.component';
@@ -110,7 +110,8 @@ SetTimeNotifyDialog
     MatPaginatorModule,
     MatTooltipModule,
     LayoutModule,
-    MatChipsModule
+    MatChipsModule,
+    MatAutocompleteModule
   ],
     entryComponents: [ DialogOverviewExampleDialog,DialogSubmitRoom ,SetLateTimeDialog, SetTimeNotifyDialog],
   providers: [],

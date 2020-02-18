@@ -1,4 +1,4 @@
-import { Component, OnInit ,ViewChild} from '@angular/core';
+import { Component, OnInit ,ViewChild,ElementRef} from '@angular/core';
 import { BehaviorSubject } from 'rxjs/Rx';
 import { AuthService } from '../auth.service';
 import { Observable } from "rxjs";
@@ -11,10 +11,10 @@ import {MatSidenav} from '@angular/material/sidenav';
 import {MatChipInputEvent} from '@angular/material/chips';
 import {COMMA, ENTER} from '@angular/cdk/keycodes';
 import { baseUrl } from '../app.component';
-export interface Fruit {
-name: string;
-invalid: boolean;
-}
+import {MatAutocompleteSelectedEvent, MatAutocomplete} from '@angular/material/autocomplete';
+import {map, startWith} from 'rxjs/operators';
+import {FormControl} from '@angular/forms';
+
 
 @Component({
   selector: 'app-data-form',
@@ -41,11 +41,11 @@ fromtimesplited : Array<any>;
 totimesplited : Array<any>;
 countTime : number;
 spiner : boolean = false;
-
 firstFormGroup: FormGroup;
 secondFormGroup: FormGroup;
 events: any[] = [];
 roomnames : Array<any>;
+emailmasters : any;
 in : any ;
 timehour : string;
 timeminute : string;
@@ -53,8 +53,9 @@ fulltime : string;
 datechecktime = new Date();
 datechecktime2 : string;
 todaychecktime : string;
-  ngOnInit() {
+emailmasterCurrent = [] ;
 
+  ngOnInit() {
       this.route.params.subscribe(prams=>{
 
                 this.roomnameandtime = prams;
@@ -76,10 +77,6 @@ todaychecktime : string;
 
     })
 
-
-
-
-
     this.datechecktime2 = (new Date(this.datechecktime.toString().substring(11,15)+'-'+this.convertMonth(this.datechecktime.toString().substring(4,7)) + '-'+this.datechecktime.toString().substring(8,10))).toString();
     this.todaychecktime = (new Date(this.date.substring(6,10)+'-'+this.date.substring(3,5)+'-'+this.date.substring(0,2))).toString();
 
@@ -90,6 +87,11 @@ todaychecktime : string;
                                 this.appendRoomname();
                                });
 
+  this.service.getEmailmaster().subscribe(data => {
+                                 this.emailmasters = data;
+                                //console.log(this.emailmasters);
+                                this.setEmailmaster();
+                               });
 
 
      this.secondFormGroup = this._formBuilder.group({
@@ -100,6 +102,19 @@ todaychecktime : string;
       remark: null
     });
   }
+
+
+
+
+setEmailmaster(){
+    for(let i = 0 ; i < this.emailmasters.length ; i++){
+        this.emailmasterCurrent.push(this.emailmasters[i].email);
+    }
+    this.emailmasterCurrent.sort();
+  // console.log(this.emailmasterCurrent);
+}
+
+
 
 convertMonth(month){
   if(month == 'Jan')
@@ -128,13 +143,38 @@ convertMonth(month){
     return '12';
 }
 
+
+
 roleadmin : boolean = false;
 rolehr : boolean = false;
 roleuser : boolean  = false;
 
+////Email////////
+  visible = true;
+  selectable = true;
+  removable = true;
+  separatorKeysCodes: number[] = [ENTER, COMMA];
+  fruitCtrl = new FormControl();
+  filteredFruits: Observable<string[]>;
+  fruits: string[] = [];
+  allFruits: string[] = ['Apple', 'Lemon', 'Lime', 'Orange', 'Strawberry'];
+  @ViewChild('fruitInput', {static: false}) fruitInput: ElementRef<HTMLInputElement>;
+  @ViewChild('auto', {static: false}) matAutocomplete: MatAutocomplete;
+
+
+////////////////
+
+
 
 constructor(public authService : AuthService, private route:ActivatedRoute, private service : ServiceService,private http: HttpClient,
 private router: Router,private _formBuilder: FormBuilder) {
+
+
+       this.filteredFruits = this.fruitCtrl.valueChanges.pipe(
+        startWith(null),
+        map((fruit: string | null) => fruit ? this._filter(fruit) : this.emailmasterCurrent.slice()));
+
+
     this.isLoggedIn = authService.isLoggedIn();
     this.isLoggedInAdmin = authService.isLoggedInAdmin();
     this.isLoggedInHR = authService.isLoggedInHR();
@@ -171,7 +211,57 @@ this.service.getMinuteCurrent().subscribe(data=>{
 
   }, 100); //interval
 
+  } //Contrucstor
+
+
+
+//Email forward////
+
+  add(event: MatChipInputEvent): void {
+    const input = event.input;
+    const value = event.value;
+
+    // Add our fruit
+    if ((value || '').trim()) {
+      this.fruits.push(value.trim());
+    }
+
+    // Reset the input value
+    if (input) {
+      input.value = '';
+    }
+
+    this.fruitCtrl.setValue(null);
   }
+
+  remove(fruit: string): void {
+    const index = this.fruits.indexOf(fruit);
+
+    if (index >= 0) {
+      this.fruits.splice(index, 1);
+    }
+  }
+
+
+selected(event: MatAutocompleteSelectedEvent): void {
+    this.fruits.push(event.option.viewValue);
+    this.fruitInput.nativeElement.value = '';
+    this.fruitCtrl.setValue(null);
+  }
+
+  private _filter(value: string): string[] {
+    const filterValue = value.toLowerCase();
+
+    return this.emailmasterCurrent.filter(fruit => fruit.toLowerCase().indexOf(filterValue) === 0);
+  }
+
+
+
+
+/////////////////
+
+
+
 
 close() {
     this.sidenav.close();
@@ -874,15 +964,16 @@ public appendTime(){
 
 numnum : number ;
  select: any;
+
 SubmitData(){
 
         for(let i = 0 ; i < this.fruits.length ; i++){
-          if(this. fruits[i].invalid == true){
+          if(!(this.validateEmail(this.fruits[i]))){
+              //console.log(this.validateEmail(this.fruits[i]));
               this.fruits.splice(i,1);
               i = i - 1 ;
           }
         }
-      //  console.log(this.fruits);
         let nan : number = 0 ;
         for(let j = 0 ; j < this.roomnames.length ; j++){ //หาห้อง
 
@@ -907,14 +998,13 @@ SubmitData(){
       }
       else{
 
-
-          let emailcomma = '';
+         let emailcomma = '';
           for(let i = 0 ; i < this.fruits.length ; i++){
 
             if(i == this.fruits.length-1){
-              emailcomma = emailcomma+this.fruits[i].name;
+              emailcomma = emailcomma+this.fruits[i];
             }else{
-              emailcomma = emailcomma+this.fruits[i].name+',';
+              emailcomma = emailcomma+this.fruits[i]+',';
             }
           }
 
@@ -958,6 +1048,7 @@ SubmitData(){
       }
 
    }
+
 
 
 checkReserved (fromtime: String , totime: String , roomname){
@@ -1263,56 +1354,10 @@ convertlengthTime(from , fromback , to , toback){
   }
 
 
-visible = true;
-  selectable = true;
-  removable = true;
-  addOnBlur = true;
-  readonly separatorKeysCodes: number[] = [ENTER, COMMA];
-  fruits: Fruit[] = [
-
-  ];
-
-
-
-  add(event: MatChipInputEvent): void {
-
-    const input = event.input;
-    const value = event.value;
-
-     // console.log(event.value)
-
-    // Add our fruit
-
-    if ((value || '').trim()) {
-      if (this.validateEmail(event.value)) {
-        this.fruits.push({name:value.trim(), invalid:false});
-      }else{
-        this.fruits.push({name:value.trim(), invalid:true});
-      }
-    }
-
-   /* if ((value || '').trim()) {
-      this.fruits.push({name: value.trim()});
-    }*/
-
-    // Reset the input value
-    if (input) {
-      input.value = '';
-    }
-  }
-
-  remove(fruit: Fruit): void {
-    const index = this.fruits.indexOf(fruit);
-
-    if (index >= 0) {
-      this.fruits.splice(index, 1);
-    }
-  }
-
-
 private validateEmail(email) {
   var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
 }
+
 
 }
