@@ -25,6 +25,7 @@ provide: MAT_DATE_FORMATS, useValue: APP_DATE_FORMATS
 }
 ]
 })
+
 export class DashboardtableComponent implements OnInit {
 @ViewChild('sidenav', {static: false}) sidenav: MatSidenav;
 

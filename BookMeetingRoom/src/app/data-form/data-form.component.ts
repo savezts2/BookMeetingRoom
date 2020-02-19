@@ -1021,7 +1021,7 @@ SubmitData(){
               email: emailcomma
           };
 
-          if(this.roomnameandtime.slowtime == 'false'){
+          if(this.fromtimeSelect > this.fulltime){
                   this.spiner = true;
                   this.http.post(baseUrl+'/dataform', JSON.stringify(this.select), {
                        headers: {
@@ -1039,10 +1039,10 @@ SubmitData(){
                           "Content-Type": "application/json"
                         }
                    })
-      .subscribe(data => {
-        alert("Book Complete !");
-         this.router.navigate(['selectRoom',{datefull : this.date}]);
-      });
+          .subscribe(data => {
+           alert("Book Complete !");
+             this.router.navigate(['selectRoom',{datefull : this.date}]);
+           });
           }
 
       }
